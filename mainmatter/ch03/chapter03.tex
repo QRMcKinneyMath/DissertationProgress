@@ -1,0 +1,58 @@
+\chapter{Smoothness And Convexity}
+\label{ch:thisChapterLabel}
+\section{Convexity And Smoothness Of A Space}
+\begin{prop}[Smoothness and Strict Convexity]
+Let X be a seminormed space and J be $X's$ normalized duality mapping. 
+\begin{enumerate} 
+\item If $X^*$ is smooth, then X is strictly convex.
+\item If $X^*$ is strictly convex, then X is smooth. 
+\item If X is reflexive, then $X$ is strictly convex if and only if $X^*$ is smooth. 
+\item If X is reflexive, then $X$ is smooth if and only if $X^*$ is strictly convex. 
+\item If $X^*$ is strictly convex, then J is single valued and norm to $weak-*$ continuous. 
+\item X is smooth and strictly convex if and only if J is single valued and strictly monotone. 
+\end{enumerate} 
+%Cioranescu 2.1.3, 2.1.4, 2.1.5, 2.1.10, 2.1.11, 2.1.12 (As corollary of 2.1.12), 
+\end{prop} 
+
+\begin{prop}[Lindenstraus Duality Formula] %2.2.12 Cioranescu (Lindenstrauss Duality Formula)
+\end{prop} 
+\begin{prop}[Very Smooth and Weak Local convexity]
+\end{prop} 
+\begin{prop}[Local Uniform Smoothness and Local Uniform Convexity]
+Let X be a seminormed space and J be $X's$ normalized duality mapping. 
+\end{prop} 
+\begin{prop}[Uniform Smoothness and Convexity]
+Let X be a (possibly complete) seminormed space and J be X's normalized duality mapping.  
+\begin{enumerate}
+\item X is uniformly convex if and only if $X^*$ is uniformly smooth. 
+\item X is uniformly smooth if and only if $X^*$ is uniformly convex. 
+\item $X^*$ is uniformly convex if and only if J is single valued and uniformly continuous on bounded subsets of X. 
+\end{enumerate} 
+%Cioranescu 2.2.13, 2.2.14,2.2.16)
+\end{prop}
+\begin{cor} Uniformly Smooth Banach Spaces are Reflexive %(Cioranescu 2.2.15) 
+\end{cor}
+\begin{prop}[Normalized Convergence]
+Let X be a smooth locally uniformly convex seminormed space with normalized duality mapping J. If $\{x_n\}_{n \in \N} \subset X$, $x \in X$, $j_x \in Jx$, and $j_n \in Jx_n$ for each $n \in \N$, then 
+\begin{equation} 
+\ip{x_n-x, j_n-j} \to 0 \implies x_n \to x
+\end{equation} 
+\end{prop} 
+%Include Diestel Corollary 1, p.32
+
+\section{Convexity, Smoothness, and High Order Duals}
+If you start with a poorly behaved Space, then things can only get worse. 
+
+\begin{thm} %(Diestel Theorem 1 p.32)
+If X is a seminormed space and $X^* $ is very smooth, then X is reflexive.
+\end{thm} 
+
+\begin{cor}
+Let X be a seminormed space. 
+\begin{enumerate}
+\item If $X^*$'s norm is Frechet differentiable, then X is reflexive. 
+\item If $X^{**}$ is weakly locally uniformly convex, then X is reflexive. 
+\item If $X^{***}$ is smooth, then X is reflexive. 
+\item If $X^{****}$ is strictly convex, then X is reflexive.
+\end{enumerate}
+\end{cor} 

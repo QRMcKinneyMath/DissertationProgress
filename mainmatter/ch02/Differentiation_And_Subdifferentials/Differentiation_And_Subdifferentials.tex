@@ -1,0 +1,53 @@
+
+\section{Differentiation And SubDifferentials}
+\begin{df}[Types Of Differentiability]
+    \label{df:typesofdifferentiability}
+    Let X be a topological vector space, Y a Hausdorff topological vector space, $C \subset X$, $f:C \to X$, and $x_0 \in C$. 
+    \begin{enumerate}
+        \item If $y \in X$ such that $x_0$ is an accumulation point of $[x_0,x_0+y] \cap C$, then we say that the \bf directional derivative in the direction of y \rm exists at $x_0$ and we write 
+        \begin{equation}
+            \lim\limits_{t \to 0^+} \frac{f(x_0+ty)-f(x_0)}{t} = f_+'(x_0,y)
+        \end{equation}
+        if the limit above actually exists.
+        \item If $f$ is differentiable at $x_0$ in the direction of $-y$, then we denote $f_-'(x_0,y):=-f_+'(x,-y)$. 
+        \item If there exists $f'(x_0) \in BL(X,Y)$ such that for every $y \in X$, $f_+'(x_0,y)=f'(x_0)y$ then we call $f'(x_0)$ the \bf Gateaux derivative \rm of f at $x_0$ and we call $f$ \bf Gateaux differentiable \rm. 
+        \item If $f$ is Gateaux differentiable at $x_0$ and $\frac{f(x_0+ty)-f(x_0)}{t} \to f'(x_0)y$ uniformly for y in some neighborhood of 0 in X, then we say that $f$ is \bf Frechet differentiable \rm at $x_0$ and we call $f'(x_0)$ the \bf Frechet derivative \rm of $f$ at $x_0$.  
+        \item If $h:X \to (-\infty,\infty]$ and there is an $x^* \in X^*$ such that 
+        \begin{equation}
+            \label{eq:subgradientdf}
+            \ip{y-x,x^*} \leq h(y)-h(x) \tab[1cm] (\forall y \in X)
+        \end{equation} 
+        then we say that h is \bf subdifferentiable \rm at $x_0$, call $x^*$ a \bf subgradient \rm of h at $x_0$, and denote the set of all subgradients of h at $x_0$ with $\partial h \pa{x_0}$. if $D$ is the set on which h is subdifferentiable, then we call $\partial h: D \to 2^{X^*}$ the \bf subdifferential \rm of $h$. 
+    \end{enumerate}
+\end{df} 
+
+
+
+
+One useful feature of convex functions is how they interact with the various forms of differentiability. 
+\begin{prop}[Gateaux]
+    \label{prop:gateaux}
+    Let X be a topological vector space, Y a Hausdorff topological vector space, $f:X \to Y$ Gateaux differentiable at $x_0 \in X$, and $y \in X$. The following are true. 
+    \begin{enumerate}
+        \item $f_+'(x_0,y)=f_+'(x_0,-y)=f_-'(x_0,y).$
+        \item $ \ip{y,f'(x_0)} = \frac{d}{dt} f\pa{x_0+ty} |_{t=0}$
+        \item If f is Gateaux differentiable on a neighborhood of $x_0$ and $f':X \to BL(X,Y)$ is Gateaux Differentiable at $x_0$, then $f'':X \to BL(X,BL(X,Y))$ satisfies
+        \begin{equation}
+            \ip{y,f''(x)y}=\frac{d^2}{dt^2} f\pa{x_0+ty}|_{t=0}
+        \end{equation}
+    \end{enumerate}
+    \begin{proof}(1)
+    \end{proof}
+    \begin{proof}(2)
+    \end{proof}
+    \begin{proof}(3)
+    \end{proof} 
+\end{prop}
+
+\begin{prop}[Convex Differentiable]
+    \label{prop:convexdifferentiable}
+    Let X be a seminormed space and $f:X \to (-\infty,\infty]$ be convex. Then for each $y \in X$ and each $x_0$ in the interior of $D(f)$, the directional derivative in the direction of y at $x_0$ exists and $f_-'(x,y) \leq f_+'(x,y)$, and for any $t>0$, 
+    \begin{equation}
+        f_+'(x,y) \leq \frac{f(x+ty)-f(x+ty)}{t} \leq f_-'(x+ty,y)
+    \end{equation}
+\end{prop} 

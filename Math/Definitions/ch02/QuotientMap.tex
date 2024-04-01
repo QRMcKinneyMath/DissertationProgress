@@ -1,0 +1,19 @@
+\label{df:quotient_map}
+\newcommand{\QuotientMap}[0]{
+        \bf \hyperref[df:quotient_map]{Quotient Map} \rm
+    }
+    
+ \newcommand{\QuotientMapInstance}[3]{
+     #1 : #2\to #2/#3
+}
+\begin{df}[Quotient Map]
+
+    Let $X \neq \emptyset$.
+    Let $\cong$ be an equivalence relation on X.
+    \LetBeQuotientSet{X}{$\cong$}
+    Define $T:X \to X/\cong$ by setting, for each $x \in X$, 
+    \begin{equation}
+        T(x)=[x]
+    \end{equation}    
+    We call T the \QuotientMap of X under the relation $\cong$. 
+\end{df} 

@@ -1,0 +1,21 @@
+\label{def:QuotientSet}
+\newcommand{\QuotientSet}[0]{
+    \bf \hyperref[def:QuotientSet]{Quotient Set} \rm
+}
+\newcommand{\QuoSet}[2]{
+    #1
+    /
+    #2
+}
+\newcommand{\LetBeQuotientSet}[2]{
+    Let \QuoSet{#1}{#2} be the \QuotientSet of #1 with respect to the relation #2.
+}
+\begin{df}[Quotient Set]  
+    Let $X \neq \emptyset$.
+    Let $\cong$ be an equivalence relation defined on X.
+    We define the set $X/\cong$ by 
+    \begin{equation}
+        \QuoSet{X}{\cong} = \{ [x] : x \in X\}
+    \end{equation}
+    We call $\QuoSet{X}{\cong}$ the \QuotientSet of X under the relation $\cong$. 
+\end{df} 

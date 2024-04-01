@@ -1,0 +1,40 @@
+\label{prop:pseudometrictopology}
+\begin{prop}
+    Let $(X,d)$ by  \PseudometricSpace and let $\scB$ be the set of \OpenBall's in $(X,d)$. 
+    The following are true. 
+    \begin{enumerate}
+        \item There exists a unique topology $\T_d$ on X which $\scB$ is a basis of. That is, the \PseudometricTopology $\T_d$ is well defined. 
+        \item The \PseudometricInducedTopology is first countable
+    \end{enumerate}
+    \begin{proof}[Proof of 1]
+        Uniqueness is guaranteed by closure under arbitrary unions of a topology. 
+        For existense, it is sufficient to show that the collection of arbitrary unions
+        of elements of $\scB$ is closed under finite intersections. 
+        Suppose that for $1\leq i \leq n$, we have $\{U_{\alpha_i} | \alpha_i \in A_i\} \subset \scB$
+        and consider the set
+        \begin{equation}
+            U=\bigcap_{i=1}^n \bigcup_{\alpha_i \in A_i} U_{\alpha_i}
+        \end{equation}
+        Let $x_0 \in U$. 
+        For each $i \in \{1, ..., n\}$, there exists $\alpha_i \in A_i$ such that 
+        \begin{equation}
+            x_0 \in U_{\alpha_i} = B_d(x_i; \epsilon_i)
+        \end{equation}
+        For each $i \in \{1, ..., n \}$, define $\delta_i = d(x_0, x_i)$. Then $0 < \delta_i < \epsilon_i$. 
+        Then, for each $i \in \{1, ..., n \}$, 
+        \begin{equation}
+            B_d(x_0; \epsilon_i-\delta_i) \subset U_{\alpha_i} \subset \bigcup_{\alpha_i \in A_i} U_{\alpha_i}
+        \end{equation}
+        Define 
+        \begin{equation}
+            \delta_{x_0} = \min\limits_{i=1}^n \pa{ \epsilon_i-\delta_i}
+        \end{equation}
+        Then $x_0 \in B(x_0; \delta_{x_0} ) \subset U$. 
+        If $U=\{x_{\alpha} | \alpha \in A\}$, then the arbitrary nature of $x_0$ above means 
+        we can repeat this construction, writing 
+        \begin{equation}
+            U \subset \bigcup_{\alpha \in A} B(x_{\alpha} ; \delta_{x_{\alpha}} )\subset \bigcup_{\alpha \in A} U = U
+        \end{equation}
+        Hence, $U \in B$ and the proof is complete. 
+    \end{proof}
+\end{prop}

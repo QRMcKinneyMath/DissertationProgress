@@ -1,0 +1,65 @@
+
+\documentclass[12pt,oneside,letterpaper]{book}
+
+
+%\usepackage[]{uahdis,chngpage,units,bm,hhline,rotating,verbatim,amsfonts,amssymb,xspace}
+%\usepackage[]{indentfirst,layouts, booktabs, enumerate, gensymb}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\usepackage{etoolbox}
+
+
+\include{./Definitions/definitions.tex}
+
+\title{Geometry of TVS's}
+\author{Ryan McKinney}
+
+
+
+\begin{document}
+
+
+	\newtheorem{thm}{Theorem}[section]
+	\newtheorem{cor}[thm]{Corollary}
+	\newtheorem{lem}[thm]{Lemma}
+	\newtheorem{prop}[thm]{Proposition}
+	\newtheorem{example}[thm]{Example}
+	\newtheorem{rmk}[thm]{Remark}
+	\newtheorem{df}[thm]{Definition}
+
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+%   Make a "Chapter" header in TOC, per UAH style
+%   issue command after last frontmatter TOC
+\mainmatter
+\include{./mainmatter/ch01/chapter01.tex}
+\include{./mainmatter/ch02/chapter02.tex}
+\include{./mainmatter/ch03/chapter03.tex}
+\include{./mainmatter/ch04/chapter04.tex}
+\include{./mainmatter/ch05/chapter05.tex}
+
+\backmatter
+\include{./bibliography.tex}
+
+\end{document}

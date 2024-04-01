@@ -1,0 +1,21 @@
+\label{def:TopologicalSpace}
+\newcommand{\TopologicalSpaceRef}[0]{
+    \bf \hyperref[def:TopologicalSpace]{Topological Space} \rm
+}
+\newcommand{\TopologyRef}[0]{
+        \bf \hyperref[def:TopologicalSpace]{Topology} \rm
+}
+%A topology named #2 on the space #1 is given by \Topology{#1}{#2}
+\newcommand{\Topology}[2]{
+    #2_{#1}
+}
+%A Topological space (#1, #2_#1) is given by \TopologicalSpace{#1}{#2}
+\newcommand{\TopologicalSpace}[2]{
+    \pa{#1, \Topology{#1}{#2}}
+}
+\newcommand{\LetBeTopologicalSpace}[2]{
+    Let $\TopologicalSpace{#1}{#2}$ be a \TopologicalSpaceRef.
+}
+\begin{df}[Topological Space]
+$\TopologicalSpace{Z}{\T}$
+\end{df}

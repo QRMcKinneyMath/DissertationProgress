@@ -1,0 +1,109 @@
+
+\section{Convexity Of A Space}
+\begin{df}[Uniform Convexity, Weak Uniform Convexity, Local Uniform Convexity, Weak Local Uniform Convexity, Strict Convexity]
+    Let $(X,\norm{\cdot})$ be a seminormed space. 
+    \begin{enumerate}
+        \item We call the local modulus of uniform covexity of $\norm{\cdot}$, denoted by the symbol $\tilde{\Delta}$, the \bf local modulus of uniform convexity \rm  of X. 
+        \item If $\Delta$ is the modulus of uniform convexity of $\norm{\cdot}$, then we call $\Delta$ the \bf modulus of uniform convexity \rm  of X. 
+        \item We define $\tilde{\Delta}_w:(0,\infty) \times \partial B_{X}(0;1) \to (0,\infty)$ by 
+        \begin{equation}
+            \tilde{\Delta}_w(\epsilon,x) = \inf\left\{ 2- \ip{x+y,x^*} : x^* \in \partial B_{X^*}(0;1),y \in \partial B_X(0;1), \norm{x-y} \geq \epsilon \right\}
+        \end{equation}
+        We call $\tilde{\Delta_w}$ the \bf modulus of weak local uniform convexity \rm of X.
+        \item We define $\Delta_w:(0,\infty) \to (0,\infty)$ by 
+        \begin{equation}
+            \Delta_w(\epsilon) = \inf\limits_{x \in\partial B_{X}(0;1)} \tilde{\Delta}_w(\epsilon,x)
+        \end{equation}
+        We call this the \bf modulus of weak uniform convexity \rm of X. 
+    \end{enumerate}
+    \begin{enumerate}
+        \item We say that X is \bf strictly convex \rm if for each $x,y \in X$ such that $\norm{x-y} \neq 0$, $\norm{x+y} < \norm{x}+\norm{y}$. 
+        \item We say that X is \bf uniformly convex at \rm x if $\norm{\cdot}$ is uniformly convex at x. 
+        \item We say that X is \bf locally uniformly convex \rm if $\norm{\cdot}$ is locally uniformly convex. 
+        \item We say that X is \bf uniformly convex \rm if $\norm{\cdot}$ is uniformly convex. 
+        \item We say that X is \bf weakly uniformly convex at \rm $x \in \partial B_{X}(0;1)$ if for each $\epsilon > 0$, $\tilde{\Delta}_w(\epsilon,x) > 0$.
+        \item We say that X is \bf locally weakly uniformly convex \rm if it is weakly uniformly convex at each point on the boundary of $X's$ unit sphere. 
+        \item We say that X is \bf weakly uniformly convex \rm if for each $\epsilon > 0$, $\Delta_w(\epsilon) > 0$. 
+    \end{enumerate} 
+\end{df} 
+\begin{prop}[Strictly Convex Spaces]
+    \label{prop:strictlyconvexspaces}
+    Let X be a normed space. and let J be a duality mapping on X of weight $\phi$. Then the following are equivalent. 
+    \begin{enumerate}
+        \item X is strictly convex.
+        \item If $x,y \in X$ and $\norm{x+y} = \norm{x}+\norm{y}$, then for some $\alpha \geq 0$,  $\norm{x-\alpha y} = 0$. 
+        \item If $\norm{x}=\norm{y}=1$ where $0 \neq \norm{x-y}$, then $\norm{x+y} < 2$. 
+        \item If $x,y,z \in X$ and $\norm{x-y}= \norm{x-z}+\norm{z-y}$, $\norm{z-z_0}=0$ for some $z_0 \in [x,y]$. 
+        \item If $x^* \in X^*$ and $\norm{x}=\norm{y}=1$ such that $\ip{x,x^*}=\ip{y,y^*} = \sup\limits_{\norm{z}=1}\ip{z,x^*}$, then $\norm{x-y}=0$. 
+        \item $\norm{\cdot}^2$ is strictly convex. 
+        \item J is strictly monotone. That is, if $x,y \in X$, $\norm{x-y} \neq 0$, $x^* \in Jx$, and $y^* \in Jy$, then 
+        \begin{equation}
+            \ip{x-y,x^*-y^*} > 0
+        \end{equation}
+        \item Orthogonality in X is left-unique. That is, for $x,y \in X$, there is a unique $\alpha \in \mathbb{F}$ such that $\pa{\alpha x + y} \perp x$. 
+    \end{enumerate} 
+    
+    
+    %Cioranescu 2.1.2 and Cioranescu 2.1.6, and Cioranescu 2.1.8 (Petryshyn ), 2.1.11, Then 2.1.13 (Using 2.1.11) Diestel THeorem 5 p.27
+\end{prop}
+\begin{prop}[Locally Uniformly Convex Spaces]
+    \label{prop:locallyuniformlyconvexspaces}
+    Let X be a Banach Space. Then the following are equivalent. 
+    \begin{enumerate}
+        \item X is locally uniformly convex
+        \item For each $\epsilon > 0$ and $x\in X$ with $\norm{x}=1$, there is a $\delta > 0$ such that if $y \in X$ satisfies $\norm{y}=1$ and $\norm{x-y} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+        \item If $x \in \partial B_X(0;1)$, $\{x_n\}_{n \in \N} \subset \partial B_X(0;1)$, and $\norm{x+x_n} \to 2$, then $x_n \to x$. 
+        \item $\frac{1}{2}\norm{\cdot}^2$ is locally uniformly convex.
+    \end{enumerate} 
+    %Cioranescu 2.2.3, 2.2.6, 2.2.4, Cioranescu 2.2.11
+\end{prop}
+\begin{prop}[Uniformly Convex Spaces]
+    \label{prop:uniformlyconvexspaces}
+    Let X be a Banach space. The following are equivalent. 
+    \begin{enumerate}
+        \item X is uniformly Convex.
+        \item For each $\epsilon > 0$, there is a $\delta > 0$ such that if $x,y \in \overline{B_X(0;1)}$ and $\norm{x-y} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+        \item If $\{x_i\}_{i \in \N} , \{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ and $\norm{x_n+y_n} \to 2$, then $x_n-y_n \to 0$. 
+        \item $\frac{1}{2} \norm{\cdot}^2$ is uniformly convex. 
+    \end{enumerate} 
+\end{prop} 
+\begin{prop}[Weakly Locally Uniformly Convex Spaces]
+    \label{prop:weaklylocallyuniformlyconvexspaces}
+    Let X be a Banach space. The following conditions are equivalent. 
+    \begin{enumerate}
+        \item X is weakly locally uniformly convex. 
+        \item For each $\epsilon > 0$, $^* \in \partial B_{X^*}(0;1)$, and $x \in \overline{B_X(0;1)}$ there is a $\delta > 0$ such that if $y \in \overline{B_X(0;1)}$ and $\ip{x-y,x^*} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+        \item If $x \in \overline{ B_X(0;1)}$ and $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ such that $\norm{x+x_n} \to 2$, then $x_n \overset{w}{\to} x$. 
+    \end{enumerate} 
+\end{prop}
+\begin{prop}[Weakly Uniformly Convex Spaces]
+    \label{prop:weaklyuniformlyconvexspaces}
+    Let X be a Banach space. The following conditions are equivalent. 
+    \begin{enumerate}
+        \item X is weakly uniformly convex. 
+        \item For each $\epsilon > 0$ and $x^* \in \overline{ B_{X^*}(0;1)}$, there is a $\delta > 0$ such that if $x,y \in \overline{B_X(0;1)}$ such that $\ip{x-y,x^*} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+        \item If $\{x_n\}_{n \in \N} , \{y_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ and $\norm{x_n+y_n} \to 2$, then $x_n-y_n \overset{w}{\to} 0$. 
+    \end{enumerate}
+\end{prop} 
+\begin{prop}[Degrees Of Convexity]
+    \label{prop:degreesofconvexity}
+    Let $X$ be a seminormed space. 
+    \begin{enumerate}
+        \item If $X$ is uniformly convex, then $X$ is weakly uniformly convex. 
+        \item If $X$ is uniformly convex, then $X$ is locally uniformly convex. 
+        \item if $X$ is locally uniformly convex, then $X$ is weakly locally uniformly convex. 
+        \item if $X$ is weakly locally uniformly convex, then X is strictly convex. 
+    \end{enumerate} 
+    %Cioranescu 2.2.7, 2.2.2
+    %Diestel Theorem 3 p.31
+\end{prop} 
+\begin{prop}[Local Weak To Strong]
+    If a seminormed space X is locally uniformly convex and $\{x_n\} \subset X$ satisfies $x_n \overset{w}{\to} x$ and $\norm{x_n} \to \norm{x}$, then $x_n \to x$. 
+    \begin{proof}
+    \end{proof} 
+\end{prop} 
+\begin{thm} (Milman Pettis)
+    A complete uniformly convex seminormed space X is reflexive. 
+\end{thm} 
+
+%Diestel p.32 Theorem 4

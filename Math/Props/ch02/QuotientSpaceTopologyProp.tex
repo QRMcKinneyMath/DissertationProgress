@@ -1,0 +1,126 @@
+
+\begin{prop}[Quotient Space Topology]
+    \label{prop:QuotientSpaceTopology}
+    
+    Let $(Z,\T_Z)$ be a topological space 
+    with \QuotientTopologicalSpace  $\pa{Z/\cong, \T_{Z/\cong}}$
+    and \QuotientMap T.
+    
+    Then the following are true. 
+    \begin{enumerate}
+        \item $\T_{Z/\cong}$ is a topology on $Z/\cong$. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is continuous. 
+        \item If U is open (closed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ partition $Z/\cong$. 
+        \item If U is open in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
+        \item If K is closed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is an open mapping. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is a  closed mapping.
+        
+    \end{enumerate} 
+    \begin{proof}[Proof of 1]
+        Since $\emptyset \in \T_Z$, we have 
+        \begin{equation}
+            \emptyset = \bigcup\limits_{x \in \emptyset} \{Tx\} \in \T_{Z/\cong}
+        \end{equation}
+        Since $Z \in \T_Z$, and by \ref{rmk:quotientsetpartition}, 
+        \begin{equation} 
+            Z/\cong = \bigcup_{x \in Z} \{[x]\}= \bigcup\limits_{x \in Z} \{T(x)\} \in \T_{Z/\cong}
+        \end{equation} 
+        
+        Let $\{U_{\alpha} | \alpha \in A\} \subset \T_{Z/\cong}$. 
+        For each $\alpha \in A$, there exists $B_{\alpha} \in \T_{Z}$ such that we have
+        \begin{equation} 
+            U_{\alpha } = \bigcup_{x \in B_{\alpha}} \{Tx\}
+        \end{equation} 
+        Since $\bigcup_{\alpha \in A} B_\alpha \in \T_{Z}$, we have 
+        \begin{equation}
+            \bigcup_{\alpha \in A} U_{\alpha}= \bigcup\limits_{\alpha \in A} \bigcup\limits_{x \in U_\alpha} \{T(x)\} = \bigcup\limits_{x \in \bigcup\limits_{\alpha \in A} B_{\alpha}} \{T(x)\} \in \T_{Z/\cong}
+        \end{equation} 
+        Let $\{U_i\}_{i=1}^n \subset \T_{Z/\cong}$. 
+        For each $i \in \{1, ..., n\}$, there exists $B_i \in \T_{Z}$ such that
+        \begin{equation}
+            U_i = \bigcup_{x \in B_{i}} \{T(x)\}
+        \end{equation}
+        Suppose 
+        \begin{equation}
+            [x_0] \in \bigcap\limits_{i=1}^n \bigcup\limits_{x \in B_i} \{T(x)\}
+        \end{equation}
+        Then for each $i \in \{1,..., n\}$, there is a $y_i \in B_i$ such that $ y_i \cong x_0$. 
+        Since each $B_i$ is open, the definition of $\cong$ implies that $x_0 \in B_i$ for every i. Hence, 
+        \begin{equation} 
+            x_0 \in \bigcap_{i=1}^n B_i
+        \end{equation} 
+        Implying 
+        \begin{equation}
+            [x_0] \in  \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{[x]\}
+        \end{equation} 
+        Hence, 
+        \begin{equation} 
+            \bigcap\limits_{i=1}^n \bigcup\limits_{x \in B_i} \{T(x)\}
+            \subset
+            \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{[x]\}
+        \end{equation} 
+        Furthermore, since the reverse inclusion is obvious, 
+        and since $\bigcap_{i=1}^n B_i \in \T_{Z}$, we have 
+        \begin{equation}
+            \bigcap_{i=1}^n U_i = \bigcap_{i=1}^n \bigcup_{x \in B_i} \{T(x)\}= \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{T(x)\} \in \T_{Z/\cong}
+        \end{equation}
+    \end{proof}
+    \begin{proof}[Proof of 2]
+        Let $V \in \T_{Z/\cong}$. 
+        Let $x_0 \in T^{-1}V$. 
+        Then $[x_0] \in V$. 
+        By definition, there is a $U \in \T_Z$ such that 
+        \begin{equation}
+            T(U) \subset \bigcup\limits_{x \in U} \{T(x)\}=V
+        \end{equation}
+        Hence there is a $y_0 \in U$  such that 
+        \begin{equation}
+            [x_0] \in T(y_0) = \{[y_0]\}
+        \end{equation}
+        Therefore, $x \cong y$. 
+        Definition of the relation of equal neighborhood filters implies $\scU(x_0)=\scU(y_0)$. 
+        Hence, $x_0 \in U \subset T^{-1}(V)$.
+    \end{proof}
+    \begin{proof}[Proof of 3]
+        Let $K$ be closed in $(Z,\T_Z)$. 
+        Then each point $x_0$ in $Z\setminus K$ has some $U_{x_0} \in \scU_{\T_Z}(x_0)$ which is disjoint from K.
+        Hence $y_0 \not \cong x_0$ for any $y_0 \in K$, $x_0 \in Z\setminus K$. 
+        Hence $T(K)$ is disjoint from $T\pa{Z \setminus K}$. 
+        This fact, paired with \ref{prop:QuotientMapSurjective}, implies $T(Z\setminus K)$ and T(K) partition $Z/\cong$.
+    \end{proof}
+    \begin{proof}[Proof of 4]
+        Let $U \in \T_Z$. 
+        The nontrivial direction to prove is $T^{-1}\pa{T(U)} \subset U$.
+        Let $y \in T^{-1}\pa{T(U)}$. 
+        Then $[y]=Ty \in T(U)$.
+        Hence, $[y]=T(x)=[x]$ for some $x \in U$. 
+        Since $y \cong x$ and $x \in U \in \scU_{\T_Z}(x)$, we have $U \in \scU_{\T_Z}(y)$. 
+        Hence $y \in U$.
+        Since y was arbitrary, $T^{-1}\pa{T(U)} \subset U$, and equality is obvious because the other direction of inclusion is trivial. 
+    \end{proof}
+    \begin{proof}[Proof of 5]
+        Let K be closed in $(Z,\T_Z)$. Part 3 Of this result implies $Z/\cong$ is partitioned by $T(K)$ and $T(Z\setminus K)$. 
+        
+        By part 4 of this proposition, 
+        \begin{align*}
+            T^{-1}\pa{T(K)}&=T^{-1} \pa{T(Z) \setminus T(Z \setminus K)} \\
+            &= T^{-1}\pa{Z/\cong \setminus T(Z \setminus K)}\\
+            &=T^{-1}(Z/\cong) \setminus T^{-1}(T(Z\setminus K)) \\
+            &= Z \setminus \pa{Z \setminus K} \\
+            &= K
+        \end{align*}      
+    \end{proof}
+    \begin{proof}[Proof of 6]
+        Let $U \in \T_Z$.
+        Then by definition of the \QuotientSpaceTopology
+        \begin{equation}
+            TU= \bigcup_{x \in U} \{T(x)\}  \in \T_{Z/\cong}
+        \end{equation}
+    \end{proof}  
+    \begin{proof}[Proof of 7] 
+        Let K be closed in $(Z,\T_Z)$. 
+        Then $Z \setminus K \in \T_Z$. 
+        By Parts 3 and five of this proposition, we know $T(K) = Z/\cong \setminus T(Z\setminus K)$ and also that $T(Z\setminus K) \in \T_{Z/\cong}$. Hence $T(K)$ is closed in $(Z/\cong, \T_{Z/\cong})$. 
+    \end{proof} 
+\end{prop} 

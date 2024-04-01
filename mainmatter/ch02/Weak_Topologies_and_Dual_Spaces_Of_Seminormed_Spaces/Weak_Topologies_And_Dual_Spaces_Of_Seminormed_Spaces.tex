@@ -1,0 +1,93 @@
+\section{Weak Topologies And Dual Spaces Of Seminormed Spaces}
+\subsection{Quotient Maps}
+\input{./Math/Definitions/ch02/TopologicalLatexDefinitions.tex}
+
+\input{./Math/Definitions/ch02/NeighborhoodFilter.tex}
+
+\input{./Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex}
+
+\input{./Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex}
+
+\input{./Math/Definitions/ch02/EquivalenceClass.tex}
+
+\input{./Math/Props/ch02/EquivalenceClassPartition.tex} 
+
+\input{./Math/Definitions/ch02/QuotientSet.tex}
+
+\input{./Math/Remarks/ch02/QuotientSetPartition.tex} 
+
+\input{./Math/Definitions/ch02/QuotientMap.tex}
+
+\input{./Math/Props/ch02/QuotientMapSurjective.tex}
+
+\input{./Math/Props/ch02/QuotientSpaceTopologyDefinition.tex}
+
+\input{./Math/Props/ch02/QuotientSpaceTopologyProp.tex}
+
+\subsection{Pseudometrics}
+
+\input{./Math/Definitions/ch02/SymmetricMap.tex}
+
+\input{./MathDefinitions/ch02/TriangleInequality.tex}
+
+\input{./Math/Definitions/ch02/Pseudometric.tex}
+
+\input{./Math/Definitions/ch02/PseudometricBalls.tex}
+
+\input{./Math/Definitions/ch02/PseudometricTopology.tex}
+
+\input{./Math/Props/ch02/PseudometricTopologyProperties.tex}
+
+Similar to metrics, pseudometrics induce topologies on spaces which are first countable, but such to contrast from the case of a metric, such topologies are not necessarily Hausdorff, or even $T_1$. If $\tilde{d}$ a pseudometric on Y, then for $x,y \in Y$, we define $x \cong y \iff \tilde{d}(x,y)=0$. Defining $d:Y/\cong \times Y/\cong \to [0,\infty)$ by $d\pa{[x],[y]} = \tilde{d}(x,y)$ is easily seen to be a well defined metric on $Y/\cong$. We define Cauchy sequences and completeness in a pseudometric space as in a metric space. A useful relationship between a pseudometric space and the metric space it induces is as follows. 
+\begin{prop}[Pseudometric Embedding]
+    \label{prop:pseudometricembedding}
+    Let $(Y,\T)$ be a topological space and define $x \cong y$ if their neighborhood filters are the same. If T is the quotient map from $Y$ to $Y/\cong$, then T is a surjection which is continuous, open, and closed, and if $U \subset Y$ is open or closed, then $T^{-1} T U = U$. 
+    Further, if $\T$ is created by a pseudometric d, then T is an isometry using the induced metric on $Y/\cong$.
+    \begin{proof}
+        That T is surjective, open, and continuous is obvious. Further, if $U \subset Y$ is open and $x \in U$, then $y \in U$ for any $x \cong y$, so $[x] \subset U$. Hence if $z_0 \in T^{-1} T U$, then $Tz_0 \in TU$, so $z_1 \in U$ for some $z_1 \in [z_0]$. The above discussion however implies $z_0 \in [z_1] \subset U$, so $z_0 \in U$, implying $T^{-1}T U \subset U$. As the other direction always holds, we have equality. 
+        If K is closed then $\complement K$ is open, so for any z, we either have $[z] \subset \complement K$ or $[z] \subset K$, so we can apply the same argument as above to have $T^{-1}TK =K$. 
+        Also, by this, if K is closed, then $\complement T(K) = T(\complement K)$ is open, so $TK$ is closed. 
+        For the final claim, note that in a pseudometric space, $x \cong y \iff d(x,y) = 0$. 
+    \end{proof} 
+\end{prop} 
+
+
+\begin{prop}[Pseudometrizable Prequotient]
+    \label{prop:pseudometrizableprequotient}
+    If a quotient of a topological space X is pseudometrizable, then X is pseudometrizable.
+    \begin{proof}
+        If $\tilde{d}$ is a pseudometric on $d/\cong$ then it is easy to see that defining $d(x,y)=\tilde{d}\pa{[x],[y]}$ results in a pseudometric on X which produces the topology on X. 
+    \end{proof} 
+\end{prop} 
+If $(X,\norm{\cdot})$ is a seminormed space, that is a vector space on which $\norm{\cdot}$ would be a norm if not for the fact that it allows some nonzero vector x to have $\norm{x}=0$, then $\norm{\cdot}$ induces a pseudometric on X. 
+If $K=\norm{\cdot}^{-1}(\{0\})$, then if $x-y \in K$ and $z \in X$, then $\norm{(z+x)-(z+y)}=0$ by the triangle inequality, so since K is a vector subspace, $X/\norm{\cdot}=\{x+K: x \in X\}$.
+Hence $X/K$ is clearly a normed space with norm $\norm{[x]} = \norm{x}$, and $X/K$ will preserve completeness and incompleteness of X. 
+
+\begin{prop}[Seminorm Linear Operators]
+    \label{prop:seminormlinearoperators}
+    Let $(X,\norm{\cdot}_X)$ be a seminormed space and $(Y,\norm{\cdot}_Y)$ a normed space.
+    For each continuous linear operator $T:X \to Y$, define 
+    \begin{equation}
+        \norm{T} = \sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Tx}_Y}{\norm{x}_X}
+    \end{equation}
+    Then $\norm{\cdot}$ is a norm on the space of continuous linear operators from X to Y, which we shall denote with $BL(X,Y)$. 
+    Further, if $Q:BL(X,Y) \to BL(X/\norm{\cdot}_X^{-1}\{0\},Y)$ is defined by $QT[x]=Tx$, then Q is a well defined linear bijective isometry. 
+    \begin{proof}
+    \end{proof} 
+\end{prop} 
+As a consequence of the above proposition, even if $X$ is just a seminormed space, $X^*$ is still a Banach space which is isomorphic to $(X/K)^*$, implying the possibility of extending several results known for normed spaces into the context of seminorms. Further, since $X/K$ can be embedded into X, several existence results, such as Helly's theorem, can also be generalized to the case of a seminormed space. In the context of a seminormed space, the canonical embedding $c:X \to X^{**}$ ceases to be injective but remains a linear isometry, and we shall continue to use the nomenclature that X is \bf reflexive \rm if $c$ is surjective. Since $X^{**}=(X/\norm{\cdot}^{-1}\{0\})^{**}$, it is no surprise that $c(X)=c(X/\norm{\cdot}^{-1}\{0\})$. Hence, a seminormed space is reflexive if and only if it's induced normed space is reflexive.  The weak topology on a set X induced by set of mappings $\{\phi_\alpha:X \to Y_\alpha\}$ where each $Y_\alpha$ is a topological space is the coarsest topology on X which makes each $\phi_\alpha$ continuous. Similar to in the context of a normed space, if X is a seminormed space, we define the weak topology on X to be the topology on X generated by $X^*$, and the $weak^*$ topology on $X^*$ to be the topology generated by $c(X)$.
+Before moving on to the classical theory revamped, I present on more useful result about weak topologies of seminormed spaces. 
+\begin{prop}[Weak Quotients]
+    \label{prop:weakquotients}
+    Let X be a seminormed space and $\{Y_\alpha\}_{\alpha \in A}$ be a collection of topological spaces. For each $\alpha \in A$ let $\phi_\alpha:X \to Y_\alpha$ have the property that for every $x,y \in X$, for every $\alpha \in A$, $\norm{x-y}=0 \implies \phi_\alpha(x)=\phi_\alpha(y)$. 
+    For each $\alpha \in A$, define $\tilde{\phi}_\alpha:X/\norm{\cdot}^{-1}\{0\} \to Y_\alpha$ by
+    $\tilde{\phi}_{\alpha}[x] = \phi_\alpha x$. Let $\T_w$ denote the weak topology on X induced by $\{\phi_\alpha\}_{\alpha \in A}$, and $\T_{\tilde{w}}$ denote the weak topology on $X/\norm{\cdot}^{-1}\{0\}$ induced by $\{\tilde{\phi}_{\alpha}\}_{\alpha \in A}$. Then 
+    \begin{equation}
+        (X,\T_w)/\norm{\cdot}^{-1}\{0\} = (X/\norm{\cdot}^{-1}\{0\}, \T_{\tilde{w}})
+    \end{equation}
+    \begin{proof}
+    \end{proof} 
+\end{prop} 
+
+
+Finally, before we move on, recall that if $X,Y$ are Topological vector spaces, we can topologize the set of continuous linear operators from X to Y, denoted $BL(X,Y)$ by saying that $\{T_\alpha\}_{\alpha \in A} \subset BL(X,Y)$ converges to $T \in BL(X,Y)$ if there is a neighborhood U of 0 in X such that $T_{\alpha}x \to Tx$ uniformly for $x \in U$. 
