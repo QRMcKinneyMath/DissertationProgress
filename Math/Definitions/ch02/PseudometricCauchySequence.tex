@@ -1,0 +1,14 @@
+\label{def:pseudometriccauchysequence}
+\newcommand{\PseudometricCauchySequence}[0]{
+    \bf \hyperref[def:pseudometriccauchysequence]{Pseudometric Cauchy Sequence} \rm
+}
+\begin{df}[Pseudometric Cauchy Sequence]
+
+    Let $(X,d)$ be a \PseudometricSpace.
+    We say that a sequence $\{x_i\}_{i \in \N}$ is a \PseudometricCauchySequence
+    if, for each $\epsilon > 0$, there exists an $N \in \N$, sucht that for 
+    each pair $m,n \in \N$ such that $m>N$ and $n>N$, we have 
+    \begin{equation}
+        d(x_m,x_n) < \epsilon
+    \end{equation}
+\end{df}

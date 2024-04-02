@@ -32,13 +32,23 @@
 
 \input{./Math/Definitions/ch02/Pseudometric.tex}
 
+\input{./Math/Definitions/ch02/PseudometricCauchySequence.tex}
+
+\input{./Math/Definitions/ch02/PseudometricSequenceConvergence.tex}
+
+\input{./Math/Definitions/ch02/PseudometricComplete.tex}
+
 \input{./Math/Definitions/ch02/PseudometricBalls.tex}
 
 \input{./Math/Definitions/ch02/PseudometricTopology.tex}
 
 \input{./Math/Props/ch02/PseudometricTopologyProperties.tex}
 
-Similar to metrics, pseudometrics induce topologies on spaces which are first countable, but such to contrast from the case of a metric, such topologies are not necessarily Hausdorff, or even $T_1$. If $\tilde{d}$ a pseudometric on Y, then for $x,y \in Y$, we define $x \cong y \iff \tilde{d}(x,y)=0$. Defining $d:Y/\cong \times Y/\cong \to [0,\infty)$ by $d\pa{[x],[y]} = \tilde{d}(x,y)$ is easily seen to be a well defined metric on $Y/\cong$. We define Cauchy sequences and completeness in a pseudometric space as in a metric space. A useful relationship between a pseudometric space and the metric space it induces is as follows. 
+\input{./Math/Definitions/ch02/PseudometricElementEquivalence.tex}
+
+\input{./Math/Props/ch02/PseudometricElementEquivalence.tex}
+ 
+  Defining $d:Y/\cong \times Y/\cong \to [0,\infty)$ by $d\pa{[x],[y]} = \tilde{d}(x,y)$ is easily seen to be a well defined metric on $Y/\cong$. We define Cauchy sequences and completeness in a pseudometric space as in a metric space. A useful relationship between a pseudometric space and the metric space it induces is as follows. 
 \begin{prop}[Pseudometric Embedding]
     \label{prop:pseudometricembedding}
     Let $(Y,\T)$ be a topological space and define $x \cong y$ if their neighborhood filters are the same. If T is the quotient map from $Y$ to $Y/\cong$, then T is a surjection which is continuous, open, and closed, and if $U \subset Y$ is open or closed, then $T^{-1} T U = U$. 
