@@ -15,6 +15,7 @@
         \item If K is closed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
         \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is an open mapping. 
         \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is a  closed mapping.
+        \item $(Z, \T_Z)$ is a compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a compact space
         
     \end{enumerate} 
     \begin{proof}[Proof of 1]
@@ -123,4 +124,21 @@
         Then $Z \setminus K \in \T_Z$. 
         By Parts 3 and five of this proposition, we know $T(K) = Z/\cong \setminus T(Z\setminus K)$ and also that $T(Z\setminus K) \in \T_{Z/\cong}$. Hence $T(K)$ is closed in $(Z/\cong, \T_{Z/\cong})$. 
     \end{proof} 
+    \begin{proof}[Proof of 8]
+        Let $(Z,\T_Z)$ be compact. 
+        Let $\{U_{\alpha}\}_{\alpha \in A}$ be an open covering of $(Z/\cong, \T_{Z/\cong})$. 
+        Then $\{T^{-1}\pa{U_{\alpha}} | \alpha \in A\}$ is an open covering of $(Z, \T_Z)$. 
+        Compactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}} | i \in \{1, ..., n\}\}$. 
+        Hence
+        $\{U_{\alpha_i} | i \in \{1, ..., n\}\}=\{TT^{-1}(U_{\alpha_i}) | i \in \{1, ..., n\}\}$ is an open covering of $(Z/\cong, \T_{Z/\cong})$. 
+         And the compactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
+         
+         
+         Now, suppose $(Z/\cong, \T_{Z/\cong})$ is compact. 
+         Let $\{V_{\beta} | \beta \in B\}$ be an open covering of $(Z, \T_Z)$. 
+         Since T is an open mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an open covering of $(Z/\cong, \T_{Z/\cong})$ which by compactness has a finite subcover $\{T(V_{\beta_i}) | i \in \{1, ..., n\}\}$. 
+         By part 4 of \ref{prop:QuotientSpaceTopology}, 
+         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an open subcovering of $(Z, \T_Z)$. 
+     %    
+    \end{proof}
 \end{prop} 

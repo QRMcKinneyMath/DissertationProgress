@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  2 APR 2024 05:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  3 APR 2024 05:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,54 +174,13 @@ and I'll forget about whatever was undefined.
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 2--6
-[]
- []
-
-
-Overfull \hbox (25.94095pt too wide) in paragraph at lines 2--6
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (12.47632pt too wide) in paragraph at lines 2--6
-[][]$
- []
-
-
-Overfull \hbox (25.39896pt too wide) in paragraph at lines 2--6
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X;[] \OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (12.44067pt too wide) in paragraph at lines 2--6
-[][]$
- []
-
-
-Overfull \hbox (25.94095pt too wide) in paragraph at lines 2--6
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$ 
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8     L
-         et $\cong_{\T_d} = \cong_d$.
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no L in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.8     Let $\cong_{\T
-                      _d} = \cong_d$.
+l.6     Then $\cong_{\T
+                       _d} = \cong_d$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -236,7 +195,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9     \begin{proof}
+l.7     \begin{proof}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -260,8 +219,8 @@ Missing character: There is no L in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.11         Let $U \in \scU
-                            _{\T_d}(x_0)$. Then for some $\epsilon > 0$,
+l.9         Let $U \in \scU
+                           _{\T_d}(x_0)$. Then for some $\epsilon > 0$,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -269,8 +228,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.11         Let $U \in \scU_{\T
-                                _d}(x_0)$. Then for some $\epsilon > 0$,
+l.9         Let $U \in \scU_{\T
+                               _d}(x_0)$. Then for some $\epsilon > 0$,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -307,7 +266,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.14         Hence $U \in \scU
+l.12         Hence $U \in \scU
                               _{\T_d}(y_0)$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -316,7 +275,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.14         Hence $U \in \scU_{\T
+l.12         Hence $U \in \scU_{\T
                                   _d}(y_0)$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -346,7 +305,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 ! Undefined control sequence.
-l.15         The arbitrary nature of $U \in \scU
+l.13         The arbitrary nature of $U \in \scU
                                                 _{\T_d}(x_0)$ implies
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -355,7 +314,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.15 ...   The arbitrary nature of $U \in \scU_{\T
+l.13 ...   The arbitrary nature of $U \in \scU_{\T
                                                   _d}(x_0)$ implies
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -371,130 +330,155 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 8--16
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--14
 []
  []
 
 
-Overfull \hbox (32.6948pt too wide) in paragraph at lines 8--16
+Overfull \hbox (25.94095pt too wide) in paragraph at lines 2--14
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (12.47632pt too wide) in paragraph at lines 2--14
+[][]$
+ []
+
+
+Overfull \hbox (25.39896pt too wide) in paragraph at lines 2--14
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X;[] \OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (12.44067pt too wide) in paragraph at lines 2--14
+[][]$
+ []
+
+
+Overfull \hbox (25.94095pt too wide) in paragraph at lines 2--14
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (32.6948pt too wide) in paragraph at lines 2--14
 [][]\OT1/cmr/m/n/10 =[][]$
  []
 
 
-Overfull \hbox (24.86568pt too wide) in paragraph at lines 8--16
+Overfull \hbox (24.86568pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 x; y \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (9.06943pt too wide) in paragraph at lines 8--16
+Overfull \hbox (9.06943pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 X$
  []
 
 
-Overfull \hbox (25.41978pt too wide) in paragraph at lines 8--16
+Overfull \hbox (25.41978pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 x[] [][]
  []
 
 
-Overfull \hbox (9.38895pt too wide) in paragraph at lines 8--16
+Overfull \hbox (9.38895pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 y[]$
  []
 
 
-Overfull \hbox (22.06094pt too wide) in paragraph at lines 8--16
+Overfull \hbox (22.06094pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 2[]
  []
 
 
-Overfull \hbox (17.9792pt too wide) in paragraph at lines 8--16
+Overfull \hbox (17.9792pt too wide) in paragraph at lines 2--14
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (14.61455pt too wide) in paragraph at lines 8--16
+Overfull \hbox (14.61455pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 ^^O >
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 8--16
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 2--14
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (19.6458pt too wide) in paragraph at lines 8--16
+Overfull \hbox (19.6458pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (45.12497pt too wide) in paragraph at lines 8--16
+Overfull \hbox (45.12497pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ; \OML/c
 mm/m/it/10 ^^O\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^Z
  []
 
 
-Overfull \hbox (7.91803pt too wide) in paragraph at lines 8--16
+Overfull \hbox (7.91803pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 U$
  []
 
 
-Overfull \hbox (25.41978pt too wide) in paragraph at lines 8--16
+Overfull \hbox (25.41978pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 x[] [][]
  []
 
 
-Overfull \hbox (9.38895pt too wide) in paragraph at lines 8--16
+Overfull \hbox (9.38895pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 y[]$
  []
 
 
-Overfull \hbox (47.57294pt too wide) in paragraph at lines 8--16
+Overfull \hbox (47.57294pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 ) =
 
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 8--16
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 2--14
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (18.83334pt too wide) in paragraph at lines 8--16
+Overfull \hbox (18.83334pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (45.12497pt too wide) in paragraph at lines 8--16
+Overfull \hbox (45.12497pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 B\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ; \OML/c
 mm/m/it/10 ^^O\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^Z
  []
 
 
-Overfull \hbox (7.91803pt too wide) in paragraph at lines 8--16
+Overfull \hbox (7.91803pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 U$
  []
 
 
-Overfull \hbox (22.06094pt too wide) in paragraph at lines 8--16
+Overfull \hbox (22.06094pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 2[]
  []
 
 
-Overfull \hbox (17.16675pt too wide) in paragraph at lines 8--16
+Overfull \hbox (17.16675pt too wide) in paragraph at lines 2--14
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (22.06094pt too wide) in paragraph at lines 8--16
+Overfull \hbox (22.06094pt too wide) in paragraph at lines 2--14
 \OML/cmm/m/it/10 U \OMS/cmsy/m/n/10 2[]
  []
 
 
-Overfull \hbox (17.9792pt too wide) in paragraph at lines 8--16
+Overfull \hbox (17.9792pt too wide) in paragraph at lines 2--14
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )$
  []
 
 ! Undefined control sequence.
-l.17             \scU
+l.15             \scU
                      _{\T_d}(x_0) \subset \scU_{\T_d}(y_0)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -503,7 +487,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.17             \scU_{\T
+l.15             \scU_{\T
                          _d}(x_0) \subset \scU_{\T_d}(y_0)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -512,7 +496,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.17             \scU_{\T_d}(x_0) \subset \scU
+l.15             \scU_{\T_d}(x_0) \subset \scU
                                               _{\T_d}(y_0)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -521,7 +505,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.17             \scU_{\T_d}(x_0) \subset \scU_{\T
+l.15             \scU_{\T_d}(x_0) \subset \scU_{\T
                                                   _d}(y_0)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -530,7 +514,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (57.8762pt too wide) detected at line 18
+Overfull \hbox (57.8762pt too wide) detected at line 16
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^Z[]
  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )
  []
@@ -613,8 +597,8 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.19 ...nclusion, so we conclude that $x \cong_{\T
-                                                  _d} y$.
+l.17 ...lusion, so we conclude that $x_0 \cong_{\T
+                                                  _d} y_0$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -633,8 +617,8 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.20         Now suppose $x \cong_{\T
-                                     _d} y $. Then or each $n \in \N$,
+l.18         Now suppose $x_0 \cong_{\T
+                                       _d} y $. Then or each $n \in \N$,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -653,7 +637,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 ! Undefined control sequence.
-l.20 ...x \cong_{\T_d} y $. Then or each $n \in \N
+l.18 ...0 \cong_{\T_d} y $. Then or each $n \in \N
                                                   $,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -663,33 +647,33 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no , in font nullfont!
 
-Overfull \hbox (20.9693pt too wide) in paragraph at lines 18--21
-               $\OML/cmm/m/it/10 x [][]
+Overfull \hbox (25.45543pt too wide) in paragraph at lines 16--19
+               $\OML/cmm/m/it/10 x[] [][]
  []
 
 
-Overfull \hbox (5.2616pt too wide) in paragraph at lines 18--21
+Overfull \hbox (9.38895pt too wide) in paragraph at lines 16--19
+\OML/cmm/m/it/10 y[]$
+ []
+
+
+Overfull \hbox (25.45543pt too wide) in paragraph at lines 16--19
+\OML/cmm/m/it/10 x[] [][]
+ []
+
+
+Overfull \hbox (5.2616pt too wide) in paragraph at lines 16--19
 \OML/cmm/m/it/10 y$
  []
 
 
-Overfull \hbox (20.9693pt too wide) in paragraph at lines 18--21
-\OML/cmm/m/it/10 x [][]
- []
-
-
-Overfull \hbox (5.2616pt too wide) in paragraph at lines 18--21
-\OML/cmm/m/it/10 y$
- []
-
-
-Overfull \hbox (15.44675pt too wide) in paragraph at lines 18--21
+Overfull \hbox (15.44675pt too wide) in paragraph at lines 16--19
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2$ 
  []
 
 ! Undefined control sequence.
-l.22             y \in B_{d} \pa
-                                {x_0 ; \frac{1}{n}}
+l.20             y_0 \in B_{d} \pa
+                                  {x_0 ; \frac{1}{n}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -697,10 +681,44 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (52.77982pt too wide) detected at line 23
-\OML/cmm/m/it/10 y \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 B[][]
+Overfull \hbox (56.90717pt too wide) detected at line 21
+\OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 B[][]
  []
 
+Missing character: There is no H in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no . in font nullfont!
 
 ! LaTeX Error: \begin{document} ended by \end{proof}.
 
@@ -708,7 +726,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24     \end{proof}
+l.23     \end{proof}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -721,7 +739,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 \end{prop}
+l.24 \end{prop}
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -741,5 +759,5 @@ Here is how much of TeX's memory you used:
  21654 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,8n,20p,159b,90s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 18i,8n,19p,163b,90s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!
