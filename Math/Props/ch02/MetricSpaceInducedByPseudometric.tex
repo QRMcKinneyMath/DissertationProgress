@@ -7,10 +7,71 @@
     \begin{enumerate}
         \item $\tilde{d}$ is in fact well defined, and is a metric on $X/\cong$, justifying calling it the \MetricInducedByPseudometric d.
         \item $\T_{X/\cong} = \T_{\tilde{d}}$
-        \item T is an isometry from $(X,d)$ to $(X/\cong, \tilde{d})$
+        \item T is an isometric surjection from $(X,d)$ to $(X/\cong, \tilde{d})$
         \item $(X/\cong, \tilde{d})$ is complete if and only if $(X, d)$ is \PseudometricComplete.
         \item If $T:$
     \end{enumerate}
-
-
+    \begin{proof}[Proof of 01]
+        First we show that $\tilde{d}$ is well defined as a mapping, that is, that if
+        $x_0,y_0 \in X$ and $x_1 \cong x_0$ and $y_1 \cong y_0$, then we should have 
+        \begin{equation}
+            \tilde{d}\pa{\bra{x_0},\bra{y_0}}=\tilde{d}\pa{\bra{x_1},\bra{y_1}}
+        \end{equation}
+        
+        This is easy, as
+        \begin{align*}
+            d(x_0,y_0) & \leq d(x_0,x_1)+d(x_1,y_1)+d(y_1,y_0)\\
+            & = d(x_1,y_1)\\
+            & \leq d(x_1,x_0)+d(x_0,y_0)+d(y_0,y_1)\\
+            &=d(x_0,y_0)
+         \end{align*}
+         Nonnegativity falls directly from the nonnegativity of d. 
+         Proving that $\tilde{d}$ is a \SymmetricMap is equally trivial
+         \begin{align*}
+             \tilde{d}\pa{\bra{x}, \bra{y}}= d(x,y) = d(y,x) = \tilde{d}\pa{\bra{y}, \bra{x}}
+         \end{align*}
+         Proving that $\tilde{d}$ satisfies the \TriangleInequality is similarly simple, letting $x_0,y_0,z_0 \in X$, we have
+         \begin{align*}
+             \tilde{d}\pa{\bra{x_0}, \bra{z_0}} & = d(x_0,z_0) \\
+             & \leq d(x_0, y_0)+d(y_0, z_0)\\
+             & = \tilde{d}\pa{\bra{x_0}, \bra{y_0}}+ \tilde{d}\pa{ \bra{y_0}, \bra{z_0}}
+         \end{align*}
+         
+         All that remains is to show positivity on nonequal arguements. Let $x_0, y_0 \in X$ such that $\bra{x_0} \neq \bra{y_0}$. Then $x_0 \not \cong y_0$. Hence \begin{equation*}
+             \tilde{d}\pa{\bra{x_0}, \bra{y_0}}=d(x_0,y_0) \neq 0
+             \end{equation*}
+    \end{proof}
+    \begin{proof}[Proof of 02]
+        By \ref{prop:QuotientSpaceTopology}, part 9, $\scB_{\cong}:=\{T(B_d(x;\epsilon)) | x \in X, \epsilon > 0\}$ is a basis for $\T_{X/\cong}$. 
+        By definition, $\scB_{\tilde{d}}:=\{B_{\tilde{d}}(\bra{x}; \epsilon) | x \in X , \epsilon > 0 \}$ is a basis for $\T_{\tilde{x}}$. 
+        
+        To prove this result, I claim (and then justify) that for each $x \in X$ and $\epsilon > 0$, 
+        \begin{equation}
+            T\pa{B_d(x;\epsilon)} = B_{\tilde{d}} \pa{\bra{x}; \epsilon}
+        \end{equation}
+        Suppose $\tilde{y} \in T\pa{B_d(x;\epsilon)}$. Then $\tilde{y}=T(y)$ for some $y \in B_d(x;\epsilon)$. Hence 
+        \begin{align*}
+            \tilde{d}(\tilde{y},\bra{x})& =\tilde{d}(T(y),\bra{x})\\
+            &=\tilde{d}(\bra{y},\bra{x})\\
+            & = d(y,x) \\
+            & < \epsilon
+        \end{align*}
+        Hence $\tilde{y} \in B_d(\bra{x} ; \epsilon)$, and so 
+                \begin{equation}
+            T\pa{B_d(x;\epsilon)} \subset  B_{\tilde{d}} \pa{\bra{x}; \epsilon}
+        \end{equation}
+        Suppose $\bra{y} \in B_{\tilde{d}}\pa{\bra{x} ; \epsilon}$. 
+        Then $d(x,y) = \tilde{d}()\bra{x},\bra{y}) < \epsilon$, so $y \in B_d(x; \epsilon)$. 
+        Hence $[y]=T(y) \in T\pa{B_d(x;\epsilon)}$, so the reverse inclusion also holds, and we are done. 
+    \end{proof}
+    \begin{proof}[Proof of 03]
+        Falls directly from the definition $T(x)=\bra{x}$, hence
+        \begin{equation}
+            d(x,y) = \tilde{d}\pa{\bra{x}, \bra{y}} = \tilde{d}\pa{T(x), T(y)}
+        \end{equation}
+    \end{proof}
+    \begin{proof}[Proof of 04]
+        Direct consequence of part 3 of this result. 
+        Suppose 
+    \end{proof}
 \end{prop}

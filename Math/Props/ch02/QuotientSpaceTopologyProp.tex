@@ -15,7 +15,8 @@
         \item If K is closed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
         \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is an open mapping. 
         \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is a  closed mapping.
-        \item $(Z, \T_Z)$ is a compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a compact space
+        \item $(Z, \T_Z)$ is a compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a compact space.
+        \item If $\scB$ is a basis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a basis for $\T_{Z/\cong}$. 
         
     \end{enumerate} 
     \begin{proof}[Proof of 1]
@@ -141,4 +142,14 @@
          $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an open subcovering of $(Z, \T_Z)$. 
      %    
     \end{proof}
+    \begin{proof}[Proof of 9]
+        Let $\scB$ be a basis for $\T_z$ and let $V \in \T_{Z/\cong}$. 
+        Then $T^{-1}(Z) \in \T_Z$, and so there is a subcollection $\{U_{\alpha}\}_{\alpha \in A} \subset \scB$ such that $T^{-1}(V) = \bigcup_{\alpha \in A} U_{\alpha}$. 
+        Hence, 
+        \begin{align*}
+            V& =T(T^{-1}(V))\\
+            & = T\pa{\bigcup_{\alpha \in A} U_{\alpha}}\\
+            & = \bigcup_{\alpha \in A} T(U_{\alpha})
+        \end{align*}
+     \end{proof} 
 \end{prop} 
