@@ -1,0 +1,56 @@
+\begin{prop}[Pseudometrizable Prequotient]
+    \label{prop:pseudometrizableprequotient}
+    Let $(X,\T_X)$ be a topological space 
+    with \QuotientTopologicalSpace  $\pa{X/\cong, \T_{X/\cong}}$
+    and \QuotientMap T. Let $\pa{X/\cong, \T_{X/\cong}}$ be \Pseudometrizable with \Pseudometric $\tilde{d}$. 
+    
+    The following hold. 
+    \begin{enumerate}
+        \item  $(X,\T_X)$ is \Pseudometrizable. 
+        \item $(X/\cong, \T_{X/\cong})$ is \Metrizable. 
+        \item If T is injective, then $(X,\T_X)$ is metrizable. 
+    \end{enumerate}
+    \begin{proof}[Proof Of One]
+        Define $d:X \times X \to [0,\infty)]$ by 
+        \begin{equation*}
+            d(x,y) = \tilde{d}\pa{[x], [y]}.
+        \end{equation*}
+        Then
+        \begin{equation*}
+            d(x,y) =\tilde{d}([x],[y]) \in [0,\infty)
+        \end{equation*}
+        so that d is well defined. 
+        
+        Also, 
+        \begin{equation*}
+            d(x,y) = \tilde{d}([x],[y])=\tilde{d}([y],[x])=d(y,x)
+        \end{equation*}
+        , so d is a \SymmetricMap.
+        
+        Also, 
+        \begin{align*}
+            d(x,z) & = \tilde{d}([x],[z])\\
+            & \leq \tilde{d}([x],[y])+\tilde{d}([y], [z])\\
+            & = d(x,y)+d(y,z)
+        \end{align*}
+        so d satisfies the \TriangleInequality. 
+        Also, 
+        \begin{equation}
+            d(x,x)=\tilde{d}([x],[x])=0
+        \end{equation}
+        and so d is a \Pseudometric on X. 
+        
+        Let $\T_d$ denote the \PseudometricTopology on $(X,d)$. What remains to show is that $\T_X=\T_d$. 
+        
+        
+           By \ref{def:pseudometricinducedmetric} paired with how d is defined, $\tilde{d}$ is the \PseudometricInducedMetric of $(X,d)$. Let $\cong_d$ denote the \RelationOfZeroDistance on $(X,d)$, and 
+           let $\cong_{\T_X}$ denote the \RelationOfEqualNeighborhoodFilters on $(X,\T_X)$. 
+           
+           %claim: $\cong_d=\cong_{\T_X}$ to use a theormem. 
+
+    \end{proof} 
+    \begin{proof}[Proof of Two]
+    \end{proof}
+    \begin{proof}[Proof of Three]
+    \end{proof} 
+\end{prop} 

@@ -4,12 +4,37 @@
     Let $X \neq \emptyset$. 
     Let $\cong$ be an equivalence relation defined on X. 
     Let $x,y \in X$. 
-    The following are true.
-    \begin{equation}
-        [x]_{\cong}  \cap [y]_{\cong} \neq \emptyset \iff [x]_{\cong} = [y]_{\cong}  \iff x \cong y \iff [x]_{\cong} \subset [y]_{\cong} \iff [y]_{\cong} \subset [x]_{\cong} 
-    \end{equation}
-    \begin{equation}
-        x \in [x]_{\cong} 
-    \end{equation}
-    \begin{proof} OBVIOUS \end{proof}
+    The following statements are equivalent. 
+    \begin{enumerate}
+        \item $[x]_{\cong}  \cap [y]_{\cong} \neq \emptyset$
+        \item $x \cong y$
+        \item $[x]_{\cong} = [y]_{\cong}$
+        \item $[x]_{\cong} \subset [y]_{\cong}$
+        \item $[y]_{\cong} \subset [x]_{\cong}$ 
+    \end{enumerate}
+    
+    Also
+\begin{proof}[Proof That $1 \implies 2$]
+Suppose $M:=[x]_{\cong} \cap [y]_{\cong} \neq \emptyset$. 
+Then there exists $z \in M$.
+Then $z \cong x$, so by symmetry, $x \cong z$. 
+But by transitivity, pair with $z \cong y$, we conclude $x \cong y$. 
+\end{proof}
+\begin{proof}[Proof That $2 \implies 4$]
+    Let $x \cong y$ and let $z \in [x]_{\cong}$. 
+    Then $z \cong x \cong y$, so $z \cong y$ and $z \in [y]_{\cong}$.
+    Since z was arbitrary, we're done. 
+\end{proof}
+\begin{proof}[Proof That $2 \implies 5$]
+    Let $x \cong y$. By symmetry, $y \cong x$, so by $(2 \implies 4)$, we are done. 
+\end{proof}
+\begin{proof}[Proof That $2 \implies 3$]
+    Since  $2 \implies 4$ and $2 \implies 5$ and 5 and 4 together imply 3, we have this. 
+\end{proof}
+\begin{proof}[Proof That $5 \implies 1$]
+    Let $[y]_{\cong} \subset [x]_{\cong}$. 
+    Then $y \in [y]_{\cong} = [y]_{\cong} \cap [x]_{\cong} $.
+    Hence 1 holds. 
+\end{proof}
+
 \end{prop} 

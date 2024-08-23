@@ -17,7 +17,7 @@
         \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is a  closed mapping.
         \item $(Z, \T_Z)$ is a compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a compact space.
         \item If $\scB$ is a basis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a basis for $\T_{Z/\cong}$. 
-        
+        \item If T is injective, then it is a \Homeomorphism. 
     \end{enumerate} 
     \begin{proof}[Proof of 1]
         Since $\emptyset \in \T_Z$, we have 
@@ -70,7 +70,7 @@
     \end{proof}
     \begin{proof}[Proof of 2]
         Let $V \in \T_{Z/\cong}$. 
-        Let $x_0 \in T^{-1}V$. 
+        Let $x_0 \in T^{-1}(V)$. 
         Then $[x_0] \in V$. 
         By definition, there is a $U \in \T_Z$ such that 
         \begin{equation}
@@ -152,4 +152,7 @@
             & = \bigcup_{\alpha \in A} T(U_{\alpha})
         \end{align*}
      \end{proof} 
+     \begin{proof} [Proof of 10]
+            If T is Injective, then since it is Continuous Part 2 of this result, open by part 6 of this result, and surjective by \ref{prop:QuotientMapSurjective}, it is a bicontinous bijection, that is, a \Homeomorphism. 
+         \end{proof}
 \end{prop} 
