@@ -1,0 +1,37 @@
+\label{def:seminormtopology}
+\newcommand{\SeminormTopology}[0]{
+    \bf \hyperref[def:seminormtopology]{Seminorm Topology} \rm
+}
+
+\newcommand{\SeminormInducedPseudometric}[0]{
+    \bf \hyperref[def:seminormtopology]{Pseudometric induced by the Seminorm} \rm
+}
+
+\newcommand{\SeminormSpaceInducedPseudometricSpace}[0]{
+    \bf \hyperref[def:seminormtopology]{Pseudometric Space induced by the Seminormed Space} \rm
+}
+
+
+\begin{df}[Seminorm Topology]
+    Let $(X,\norm{\cdot})$ be a \SeminormedSpace.
+    define $d_{\norm{\cdot}}:V \times V \to [0,\infty)$  by setting,
+    for $x,y \in X$, 
+    \begin{equation}
+    d_{\norm{\cdot}}(x,y) = \norm{x-y}
+    \end{equation}
+    Observe the following: 
+    \begin{enumerate}
+        \item \ref{rmk:seminorm} guarantees that $d_{\norm{\cdot}}(x,x)=0$ for $x \in X$. 
+        \item 
+        \ref{prop:subadditiveinducestriangleinequality} guarantees that d satisfies the \TriangleInequality. 
+        \item d is a \SymmetricMap, as we have 
+    \begin{equation}
+        d(x,y)_{\norm{\cdot}}=\norm{x-y}=|-1|\norm{x-y}=\norm{y-x}=d(y,x)
+    \end{equation}
+    \end{enumerate}
+
+    Hence, $d_{\norm{\cdot}}$  is a \Pseudometric on X, which we call the \SeminormInducedPseudometric on X. 
+    We refer to $(X, d_{\norm{\cdot}})$ as the \SeminormSpaceInducedPseudometricSpace $(X,\norm{\cdot}$. 
+    We refer to the \PseudometricTopology induced by $d_{\norm{\cdot}}$ as the \SeminormTopology induced by $\norm{\cdot}$, and unless otherwise specified, when we reference $(X,\norm{\cdot})$, we consider it to be endowed with this topology. 
+
+\end{df}

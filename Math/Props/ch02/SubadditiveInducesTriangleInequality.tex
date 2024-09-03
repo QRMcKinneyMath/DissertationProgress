@@ -1,0 +1,23 @@
+\begin{prop}[Subadditive Operator On a Group Induces a Metric]
+    \label{prop:subadditiveinducestriangleinequality}
+    Let $(G,+, e)$ be a group and let $(H,+,\leq)$ be a totally ordered magma. 
+    Let $p:G \to H$ be \Subadditive. 
+    define $d:G \times G \to H$ by setting, for each $x,y \in G$, 
+    \begin{equation}
+        d(x,y) =  p(x+(-y))
+    \end{equation}
+
+    Then d satisfies the triangle inequality. 
+
+    \begin{proof}
+    let $x,y, z \in G$. Then
+    \begin{align*}
+        d(x,z) &= p(x+(-z))\\
+        & = p(x+e+(-z))\\
+        & = p(x+(-y)+y+(-z))\\
+        & \leq p(x+(-y))+p(y+(-z))\\
+        & = d(x,y)+d(y,z)
+    \end{align*}
+    completing the proof. 
+    \end{proof} 
+\end{prop}

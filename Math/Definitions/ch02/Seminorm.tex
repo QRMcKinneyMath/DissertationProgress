@@ -1,0 +1,32 @@
+\label{def:seminorm}
+\newcommand{\Seminorm}[0]{
+    \bf \hyperref[def:seminorm]{Seminorm} \rm
+}
+\label{def:seminormedspace}
+\newcommand{\SeminormedSpace}[0]{
+    \bf \hyperref[def:seminormedspace]{Seminormed Space} \rm
+}
+\begin{df}[Seminorm]
+    Let V be a vector space over a field $\F \in \{ \R, \C\}$.  
+    We say that a map $\norm{\cdot}:V \to [0,\infty)$ is a \Seminorm on V if it is both \Subadditive and \ScalarHomogeneous. In this case, we refer to $(V, \norm{\cdot})$ as a \SeminormedSpace. 
+\end{df} 
+
+
+
+
+
+\label{def:norm}
+\newcommand{\Norm}[0]{
+    \bf \hyperref[def:norm]{Norm} \rm
+}
+\label{def:normedspace}
+\newcommand{\NormedSpace}[0]{
+    \bf \hyperref[def:normedspace]{Normed Space} \rm
+}
+\begin{df}[Norm]
+    Let $(V,\norm{\cdot})$ be a \SeminormedSpace.
+    If the following implication is true for $x \in V$, then we refer to $\norm{\cdot}$ as a \Norm on V, and we call $(V, \norm{\cdot})$ a \NormedSpace.
+    \begin{equation}
+    x \neq 0 \implies \norm{x} \neq 0
+    \end{equation}
+\end{df}

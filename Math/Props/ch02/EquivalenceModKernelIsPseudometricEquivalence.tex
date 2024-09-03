@@ -1,0 +1,23 @@
+\label{prop:equivalencemodkernelispseudometricequivalence}
+\begin{prop}[Equivalence Mod Kernel is Pseudometric Equivalence]
+    Let $(X,\norm{\cdot})$ be a seminromed space.
+    with \SeminormKernel $\Ker$.
+    Let $d$ denote the \SeminormInducedPseudometric.
+    
+    Then $\cong_{\Ker}=\cong_{d}$. 
+    \begin{proof}
+        Let $x,y \in X$ and let $x \cong_{\Ker}y$.
+        Then, since $x-y \in \Ker$, 
+        Then $d(x,y) := \norm{x-y} =0$, so $x \cong_d y$. 
+        Hence $\cong_{\Ker} \subset \cong_{d}$ 
+
+
+        Now let $x,y \in X$ with $x \cong_d y$. 
+        Then $\norm{x-y}=d(x,y) = 0$, so $x-y \in \Ker$
+        , and therefore $x \cong_{\Ker} y$. 
+        Hence, $\cong_{d} \subset \cong_{\Ker}$. 
+
+        Since inclusion goes both directions, $\cong_{\Ker} = \cong_d$.
+
+    \end{proof} 
+\end{prop}

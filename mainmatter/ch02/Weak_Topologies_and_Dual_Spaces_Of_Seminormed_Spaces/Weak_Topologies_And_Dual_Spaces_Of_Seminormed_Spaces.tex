@@ -1,69 +1,59 @@
 \section{Weak Topologies And Dual Spaces Of Seminormed Spaces}
 \subsection{Quotient Maps}
 \input{./Math/Definitions/ch02/TopologicalLatexDefinitions.tex}
-
 \input{./Math/Definitions/ch02/NeighborhoodFilter.tex}
-
 \input{./Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex}
-
 \input{./Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex}
-
 \input{./Math/Definitions/ch02/EquivalenceClass.tex}
-
 \input{./Math/Props/ch02/EquivalenceClassPartition.tex} 
-
 \input{./Math/Definitions/ch02/QuotientSet.tex}
-
 \input{./Math/Remarks/ch02/QuotientSetPartition.tex} 
-
 \input{./Math/Definitions/ch02/QuotientMap.tex}
-
 \input{./Math/Props/ch02/QuotientMapSurjective.tex}
-
 \input{./Math/Props/ch02/QuotientSpaceTopologyDefinition.tex}
-
 \input{./Math/Props/ch02/QuotientSpaceTopologyProp.tex}
 
 \subsection{Pseudometrics}
-
 \input{./Math/Definitions/ch02/SymmetricMap.tex}
-
 \input{./MathDefinitions/ch02/TriangleInequality.tex}
-
 \input{./Math/Definitions/ch02/Pseudometric.tex}
-
 \input{./Math/Definitions/ch02/PseudometricCauchySequence.tex}
-
 \input{./Math/Definitions/ch02/PseudometricSequenceConvergence.tex}
-
 \input{./Math/Definitions/ch02/PseudometricComplete.tex}
-
 \input{./Math/Definitions/ch02/PseudometricBalls.tex}
-
 \input{./Math/Definitions/ch02/PseudometricTopology.tex}
-
 \input{./Math/Props/ch02/PseudometricTopologyProperties.tex}
-
 \input{./Math/Definitions/ch02/PseudometricElementEquivalence.tex}
-
 \input{./Math/Props/ch02/PseudometricElementEquivalence.tex}
-
 \input{./Math/Definitions/ch02/MetricSpaceInducedByPseudometric}
-
 \input{./Math/Props/ch02/MetricSpaceInducedByPseudometric}
-
 \input{./Math/Definitions/ch02/Pseudometrizable}
-
 \input{./Math/Props/ch02/PseudometrizablePrequotient}
 
-
-
+\subsection{Topological Vector Spaces} 
+\input{./Math/Definitions/ch02/TopologicalVectorSpace}
+\input{./Math/Definitions/ch02/TVSBoundedSet}
+\input{./Math/Definitions/ch02/SpaceOfBoundedLinearOperators}
+\input{./Math/Props/ch02/BLOContinuous}
 
 
 
 \subsection{Seminormed Spaces}
-If $(X,\norm{\cdot})$ is a seminormed space, that is a vector space on which $\norm{\cdot}$ would be a norm if not for the fact that it allows some nonzero vector x to have $\norm{x}=0$, then $\norm{\cdot}$ induces a pseudometric on X. 
-If $K=\norm{\cdot}^{-1}(\{0\})$, then if $x-y \in K$ and $z \in X$, then $\norm{(z+x)-(z+y)}=0$ by the triangle inequality, so since K is a vector subspace, $X/\norm{\cdot}=\{x+K: x \in X\}$.
+\input{./Math/Definitions/ch02/Subadditive}
+\input{./Math/Definitions/ch02/ScalarHomogeneous}
+\input{./Math/Definitions/ch02/Seminorm}
+\input{./Math/Props/ch02/SubadditiveInducesTriangleInequality} 
+\input{./Math/Definitions/ch02/SeminormTopology}
+\input{./Math/Definitions/ch02/SeminormKernel}
+\input{./Math/Props/ch02/SeminormKernel}
+\input{./Math/Definitions/ch02/EquivalenceModKernel}
+\input{./Math/Props/ch02/EquivalenceModKernelIsPseudometricEquivalence}
+\input{./Math/Definitions/ch02/SeminormQuotient}
+\input{./Math/Props/ch02/QuotientNormedSpace}
+\input{./Math/Props/ch02/QuotientsPreserveCompleteness}
+\input{./Math/Definitions/ch02/SpaceOfContinuousLinearOperators}
+\input{./Math/Props/ch02/SpaceOfContinuousLinearOperators}
+since K is a vector subspace, $X/\norm{\cdot}=\{x+K: x \in X\}$.
 Hence $X/K$ is clearly a normed space with norm $\norm{[x]} = \norm{x}$, and $X/K$ will preserve completeness and incompleteness of X. 
 
 \begin{prop}[Seminorm Linear Operators]

@@ -11,8 +11,8 @@
         \begin{equation*}
             d(x,y) = \tilde{d}\pa{[x], [y]}.
         \end{equation*}
-        \item $\tilde{d}$ is a Metric $(X/\cong, \T_{X/\cong})$, and so this space is \Metrizable.
-        \item If T is injective, then d as defined above is a metric on X, so that $(X,\T_X)$ is \Metrizable. 
+        \item $\tilde{d}$ is a \Metric $(X/\cong, \T_{X/\cong})$, and so this space is \Metrizable.
+        \item If T is injective, then $(X,\T_X)$ is metrizable. 
     \end{enumerate}
     \begin{proof}[Proof Of One]
         First, observe that 
@@ -55,13 +55,8 @@
         Hence, $\T_X \subset \T_d$. As part of the preceeding arguement we also showed that an  arbitrary d-\OpenBall was in $\T_X$, so $\T_d \subset \T_X$, and so equality holds and we're done. 
     \end{proof} 
     \begin{proof}[Proof of Two]
-        Let $x,y \in X$ wtih $[x] \neq [y]$. 
-        Then $x \not \cong y$. By \ref{prop:relationofzerodistance}, $x \not \cong_d y$. 
-        Hence $\tilde{d}([x],[y])=d(x,y) > 0$. 
+It is sufficient to show that for $x,y \in X$ with $[x] \neq [y]$, we have $\tilde{d}
     \end{proof}
     \begin{proof}[Proof of Three]
-        Let T be injective, and suppose $x,y \in X$ with $x \neq y$. 
-        Then $[x]=Tx\neq Ty=[y]$, so by part 2 of this result, $d(x,y) = \tilde{d}([x],[y]) > 0$. 
-        
     \end{proof} 
 \end{prop} 

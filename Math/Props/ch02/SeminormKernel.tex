@@ -1,0 +1,25 @@
+\begin{prop}[Seminorm Kernel is a vector Subspace]
+\label{prop:seminormkernelisavectorsubspace}
+    Let $(X,\norm{\cdot})$ be a \SeminormedSpace over a field $\F \in \{\R, \C\}$  
+    with corresponding \SeminormKernel $\Ker$. 
+    Then the following are true. 
+    \begin{enumerate}
+        \item $\Ker$ is a vector subspace of X. 
+        \item $\Ker$ is closed in the \SeminormTopology on X.
+        \item By part 1 of this result, $\Ker$ is a subgroup of the additive structure of $X$. Hence, we can talk about the 
+    \end{enumerate}
+
+
+    \begin{proof}[Proof of One]
+        \Subadditivity implies that, if $x,y \in \Ker$, then $\norm{x+y} \leq \norm{x}+\norm{y}=0$. 
+        By \ScalarHomogeneity, if $x \in \Ker$  and $\alpha \in \F$, $\norm{\alpha x} =|\alpha| \norm{x}=0$
+        so $\Ker$ is in fact a vector subspace of X. 
+    \end{proof}
+    \begin{proof}[Proof of Two]
+        
+        If $x \in X \setminus  \Ker$
+        then $\norm{x} = \alpha > 0$ for some positive $\alpha$. 
+        Hence $B(x;\alpha/2)$ is an open set containing x disjoint from $\Ker$. 
+       We can then write $X \setminus \Ker$ as the union of all such open sets to see that $\Ker$ is closed. 
+    \end{proof}
+\end{prop}
