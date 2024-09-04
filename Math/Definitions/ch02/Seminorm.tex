@@ -1,6 +1,14 @@
 \label{def:seminorm}
 \newcommand{\Seminorm}[0]{
     \bf \hyperref[def:seminorm]{Seminorm} \rm
+}\newcommand{\Seminorms}[0]{
+    \bf \hyperref[def:seminorm]{Seminorms} \rm
+}
+\newcommand{\NonDegenerate}[0]{
+	\bf \hyperref[def:seminorm]{Non-Degenerate} \rm
+}
+\newcommand{\Degenerate}[0]{
+	\bf \hyperref[def:seminorm]{Degenerate} \rm
 }
 \label{def:seminormedspace}
 \newcommand{\SeminormedSpace}[0]{
@@ -8,7 +16,15 @@
 }
 \begin{df}[Seminorm]
     Let V be a vector space over a field $\F \in \{ \R, \C\}$.  
-    We say that a map $\norm{\cdot}:V \to [0,\infty)$ is a \Seminorm on V if it is both \Subadditive and \ScalarHomogeneous. In this case, we refer to $(V, \norm{\cdot})$ as a \SeminormedSpace. 
+    We say that a map $\norm{\cdot}:V \to [0,\infty)$ is a \Seminorm on V 
+	if it is both \Subadditive and \ScalarHomogeneous. 
+	In this case, we refer to $(V, \norm{\cdot})$ as a \SeminormedSpace. 
+	We say that $\norm{\cdot}$ is \NonDegenerate if there is at least one $v \in V$ with $\norm{v}>0$. 
+	We say that $\norm{\cdot}$ is \Degenerate if it is not \NonDegenerate.  
+	We may also refer to the \SeminormedSpace $(V, \norm{\cdot})$ as being
+	\Degenerate
+	or
+	\NonDegenerate. 
 \end{df} 
 
 

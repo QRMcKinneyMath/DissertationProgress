@@ -1,28 +1,63 @@
 \begin{prop} 
 \label{prop:BLO} 
 Let $(X,\norm{\cdot}_X)$ be a \SeminormedSpace. 
-Let $(Y, \norm{\cdot}_Y)$ be a Normed space.
+Let $(Y, \norm{\cdot}_Y)$ be a \SeminormedSpace.
 Let $BL(X,Y)$ denote the \SpaceOfBoundedLinearOperators from X to Y. 
-Let $\norm{\cdot}$ denote the \OperatorNorm. 
+Let $\norm{\cdot}$ denote the \OperatorSeminorm. 
 
 The following are true. 
 \begin{enumerate}
 %For Item 1, may have to prove result connecting 
 %pseudometric topology continuity to $\epsilon-delta$ cotninuity wrt the pseudometric. 
-\item $\norm{\cdot}$ is in fact a well-defined \Norm on $BL(X,Y)$. 
-\item $BL(X,Y)$ is complete if an d only if Y is. 
+\item $\norm{\cdot}$ is in fact a well-defined \Seminorm on $BL(X,Y)$. 
+\item If $\norm{\cdot}_Y$ is a \Norm, then so is $\norm{\cdot}$. 
+\item $\norm{\cdot}$ is \NonDegenerate if and only if Y is. 
+\item $BL(X,Y)$ is complete if and only if Y is. 
 \item Convergence of a sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ with respect to $\norm{\cdot}$
 is equivalent to the following condition: $T_ix \to Tx$ uniformly for $x \in B_X(0;1)$. 
 \end{enumerate}
 
 
 \begin{proof}[Proof of 1] 
+    Since X is nondegenerate, there exists at least 1 $x \in X$ with $\norm{x}_X \neq 0$, 
+    so for each $T \in BL(X,Y)$, the set that the supremum is being taken over is nonempty.
+    Also, it is clear that $Range(\norm{\cdot}) \subset [0,\infty)$, 
 
+    For \Subadditivity, let $T_i \in BL(X,Y)$ for $i \in \{0,1\}$. and $x \in X$ with $\norm{x} > 0$.
+    Then, since $\norm{\cdot}_Y$ is \Subadditive, 
+    \begin{align*}
+    \frac{\norm{(T_0+T_1)x}_Y}{\norm{x}_X} \leq \frac{\norm{T_0x}_Y}{\norm{x}_X}+ \frac{\norm{T_1x}_Y}{\norm{x}_X}
+    \end{align*}
+    Since this is true for each x with $\norm{x}_X \neq 0$, taking the supremum of each side yields
+
+    \begin{align*}
+    \sup\limits_{\norm{x}_X \neq 0} \pa{\frac{\norm{(T_0+T_1)x}_Y}{\norm{x}_X}} & \leq\sup\limits_{\norm{x}_X \neq 0} \pa{ \frac{\norm{T_0x}_Y}{\norm{x}_X}+ \frac{\norm{T_1x}_Y}{\norm{x}_X}}\\
+& \leq\sup\limits_{\norm{x}_X \neq 0} \pa{ \frac{\norm{T_0x}_Y}{\norm{x}_X}} + \sup\limits_{\norm{x}_X \neq 0} \pa{\frac{\norm{T_1x}_Y}{\norm{x}_X}}\\
+    \end{align*}
+    Hence, $\norm{T_0+T_1} \leq \norm{T_0}+\norm{T_1}$ so that $\norm{\cdot}$ is \Subadditive. 
+    For \ScalarHomogeneity, let $T \in BL(X,Y)$, $\alpha \in \F$, and $x \in X$ with $\norm{x}_X \neq 0$. 
+    Then 
+    \begin{align*}
+        \frac{\norm{(\alpha T)x}_Y}{\norm{x}_X} = \frac{\norm{\alpha (Tx)}_Y}{\norm{x}_X} = \abs{\alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}
+    \end{align*}
+    Hence taking the supremum finishes the proof.
 \end{proof}
 \begin{proof}[Proof of 2] 
+   Let $T \neq 0 \in BL(X,Y)$. Then for some $x \in X$, $Tx \neq 0$. 
+   Then $Tx$ has a neighborhood U disjoint from $0_Y$, 
+   Hence $x \in T^{-1}(U)$ but not $0_X \in T^{-1}(U)$, since $T0_X = 0_Y$.
+   Since U is a neighborhood of x disjoint from 0, 
+   there is an $\epsilon > 0$ such that $0_X \subset \complement U \subset \complement B_X(x;\epsilon)$,
+   and therefore $\norm{x}_X > \epsilon$. 
+   Since $\norm{x}_X > 0$, it is ranged over in the supremum defining $\norm{T}$, and so
+   \begin{equation}
+   0 < \frac{\norm{Tx}_Y}{\norm{x}_X} \leq \sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Tx}_X}{\norm{x}_X}=\norm{T}
+   \end{equation}
 \end{proof}
 \begin{proof}[Proof of 3] 
 \end{proof}
-
+\begin{proof}[Proof of 4] 
+\end{proof}
 
 \end{prop}
+
