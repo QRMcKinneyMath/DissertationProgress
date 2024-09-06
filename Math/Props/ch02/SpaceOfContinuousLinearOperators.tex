@@ -1,4 +1,4 @@
-\begin{prop} 
+\begin{prop}[Space of Bounded Linear Operators On Seminormed Spaces]
 \label{prop:BLO} 
 Let $(X,\norm{\cdot}_X)$ be a \SeminormedSpace. 
 Let $(Y, \norm{\cdot}_Y)$ be a \SeminormedSpace.
@@ -11,10 +11,36 @@ The following are true.
 %pseudometric topology continuity to $\epsilon-delta$ cotninuity wrt the pseudometric. 
 \item $\norm{\cdot}$ is in fact a well-defined \Seminorm on $BL(X,Y)$. 
 \item If $\norm{\cdot}_Y$ is a \Norm, then so is $\norm{\cdot}$. 
-\item $\norm{\cdot}$ is \NonDegenerate if and only if Y is. 
+\item If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, then $\norm{T} = \sup\limits_{\norm{x}_X =\alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
+\item If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, , then $\norm{T} = \sup\limits_{0<\norm{x}_X \leq \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}= \sup\limits_{0<\norm{x}_X < \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
+\item If $T \in BL(X,Y)$ and $x \in X$, then $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$. 
+\item $S:X \to Y$ is linear
+, $S(\Ker_X) \subset \Ker_Y$
+, and $\sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Sx}_Y}{\norm{x}_X} < \infty$
+, if and only if $S \in BL(X,Y)$. 
+\item A sequence $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence
+    if and only if
+    there exists an $\alpha > 0$ 
+    such that the collection of sequences 
+    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\alpha)\}$ is
+    \UniformlyCauchy
+    if and only if
+    for every $\beta > 0$, 
+    the collection of sequences 
+    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\beta)\}$ is
+    is \UniformlyCauchy
+\item If $T_i \to T$ with respect to $\norm{\cdot}$, then $T_ix \to Tx$ with respect to $\norm{\cdot}_Y$ for each $x \in X$
+\item A sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ 
+    converges %TODO: Turn converges into a macro (net based) referenced via \Coverges, and insert that here. 
+    with respect to $\norm{\cdot}$ 
+    if and only if it is a \PseudometricCauchySequence 
+    and for each $x_\alpha$ 
+    in some Hamel basis $\{x_\alpha\}_{\alpha \in A} \subset X$,
+    the sequence $\{T_ix_\alpha\}_{\alpha \in A}$
+    converges with respect to $\norm{\cdot}_Y$. 
 \item $BL(X,Y)$ is complete if and only if Y is. 
-\item Convergence of a sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ with respect to $\norm{\cdot}$
-is equivalent to the following condition: $T_ix \to Tx$ uniformly for $x \in B_X(0;1)$. 
+
+\item $\norm{\cdot}$ is \NonDegenerate if and only if Y is. \bf THIS WILL NEED TO BER MOVED LATER, UNTIL AFTER THE SEMINORMED HAHN BANACH THEOREM \rm
 \end{enumerate}
 
 
@@ -47,7 +73,7 @@ is equivalent to the following condition: $T_ix \to Tx$ uniformly for $x \in B_X
    Then $Tx$ has a neighborhood U disjoint from $0_Y$, 
    Hence $x \in T^{-1}(U)$ but not $0_X \in T^{-1}(U)$, since $T0_X = 0_Y$.
    Since U is a neighborhood of x disjoint from 0, 
-   there is an $\epsilon > 0$ such that $0_X \subset \complement U \subset \complement B_X(x;\epsilon)$,
+   there is an $\epsilon > 0$ such that $0_X \subset \complement U \subset \complement \overline{B_X}(x;\epsilon)$,
    and therefore $\norm{x}_X > \epsilon$. 
    Since $\norm{x}_X > 0$, it is ranged over in the supremum defining $\norm{T}$, and so
    \begin{equation}
@@ -55,8 +81,209 @@ is equivalent to the following condition: $T_ix \to Tx$ uniformly for $x \in B_X
    \end{equation}
 \end{proof}
 \begin{proof}[Proof of 3] 
+    Let $\alpha \in (0,\infty)$
+   Let $T \in BL(X,Y)$. 
+   Then, there is a sequence $\{x_i\} \subset X$ with each $\norm{x_i}_X \neq 0$ 
+   such that 
+   \begin{equation}
+    \frac{\norm{Tx_i}_Y}{\norm{x_i}_X} \to \norm{T}
+    \end{equation}
+    For each $i \in \N$, define $y_i =\alpha  x_i/\norm{x_i}_X$. 
+    then each $\norm{y_i} = \alpha$, 
+    and by \ScalarHomogeneity
+    of T, we have 
+    \begin{equation}
+    \frac{\norm{Ty_i}_Y}{\norm{y_i}_X} = \frac{\norm{Tx_i}_Y}{\norm{x_i}_X} \to \norm{T}
+    \end{equation}
+    , completing the proof. 
 \end{proof}
 \begin{proof}[Proof of 4] 
+If we define, for 
+$T \in BL(X,Y)$, 
+$f(T) = \sup\limits_{0 < norm{x}_X \leq \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$, then
+since $\norm{\cdot}^{-1}((0,\alpha))\subset \norm{\cdot}^{-1}((0,\infty))$, we have $f(T) \leq \norm{T} $
+and since $\norm{\cdot}^{-1}(\{\alpha\})\subset \norm{\cdot}^{-1}((0,\alpha))$, we have $\norm{T} \leq f(T)$. proving the first equality.
+The second is found by applying the same arguement to $\alpha/2$ and realizing that $(0,\alpha/2] \subset (0,\alpha)$. 
+\end{proof}
+\begin{proof}[Proof of 5]
+Let $T \in BL(X,Y)$ and $x \in X$. 
+If $\norm{Tx}_Y \neq 0$, then $B_Y(Tx, \frac{\norm{Tx}_Y}{2})$ is a neighborhood of $Tx$ disjoint from 0.
+Continuity of T impliese $x$ then has a neighborhood disjoint from $0 \in T^{-1}(0)$, implying
+that $\norm{x}_X \neq 0$. 
+
+Hence if $\norm{x}_X = 0$, then we know $\norm{Tx}_Y = 0$, so that the relation
+\begin{equation}
+\norm{Tx}_Y \leq \norm{T} \norm{x}_X
+\end{equation}
+
+If $\norm{x}_X \neq 0$, then by definition of supremum, 
+\begin{equation*} 
+\frac{\norm{Tx}_Y}{\norm{x}_X} \leq \norm{T}
+\end{equation*}
+so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$. 
+\end{proof}
+\begin{proof}[Proof of 6]
+    I assume the first 3 conditions
+    and show that $S \in BL(X,Y)$.
+    It is necessary and sufficient to 
+    show that S is continuous.
+    Let $F= \sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Sx}_Y}{\norm{x}_X}$.
+    If $F=0$, then $S(X) \subset \Ker_Y$. 
+    Every neighborhood of every point in $\Ker_Y$
+    contains $\Ker_Y$, so in that case continuity holds. 
+    Suppose $F \neq 0$. 
+    By translation invariance of the topology, 
+    it is sufficient to consider neighborhoods of $0_Y \in Y$. 
+    Let $\epsilon > 0$. 
+    Define $V=B_X\pa{0; \frac{\epsilon}{F}}$. 
+    Let $x_0 \in V$. 
+    If $\norm{x_0}_X = 0$, then
+    $S(x_0) \in S(\Ker_X) \subset \Ker_Y \subset B_Y(0;\epsilon)$. 
+    If $\norm{x_0}_X \neq 0$, then 
+    $\norm{Sx}_Y \leq F \norm{x}_X < \epsilon$, so
+    $s(x_0) \in B_Y(0;\epsilon)$. 
+    Hence $S\pa{B_X\pa{0;\frac{\epsilon}{F}}} \subset B_Y(0; \epsilon)$.
+    so S is continuous,and this direction fo the proof is complete.
+
+    Suppose conversely that $S \in BL(X,Y)$. 
+    Then S is linear by definition
+    , and the supremum expression is finite by part 1 
+    of this result. 
+    Since S is linear, $S0_X = 0_Y$. 
+    Since S is continuous, 
+    \begin{align*}
+        S(\Ker_X) &= S\pa{\overline{\{0_X\}}}\\
+        & \subset \overline{S\pa{\{0_X\}}}\\
+        & =\overline{\{0_Y\}} \\
+        & = \Ker_Y
+    \end{align*}
+
+
+
+\end{proof}
+\begin{proof}[Proof of 7]
+    $(3 \implies 2)$ is trivial, as is $(2 \implies 3)$.
+    
+    I now prove $(1\implies 3)$. 
+    Let $\{T_i\}_{i \in \N}$ be a 
+    \PseudometricCauchySequence.
+    Let $\beta > 0$. 
+    Let $\epsilon > 0$. 
+    Then there exists $N \in \N$
+    such that for $m,n > N$, 
+    \begin{equation*}
+    \norm{T_n-T_m} < \frac{\epsilon}{\beta}
+    \end{equation*}
+    Let $x \in B_X(0;\beta)$. 
+    Then 
+    \begin{align*}
+        \norm{T_mx-T_nx}_Y & = \norm{(T_m-T_n)x}_Y\\
+        & \leq \norm{T_m-T_n} \norm{x}_X\\
+        & < \epsilon
+    \end{align*}
+    Since $x \in B_X(0;\beta)$ was arbitrary,
+    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\beta)\}$ is
+    \UniformlyCauchy.
+
+    I now prove $(3 \implies 1)$. 
+    Let $\epsilon > 0$.
+    Then there is an $N \in \N$ 
+    such that for $m,n>N$, 
+    for each $x \in B_X(0;2)$, 
+    \begin{equation*}
+    \norm{T_mx-T_nx} < \epsilon
+    \end{equation*}
+    In particular, if $\norm{x}=1$, then 
+    \begin{equation}
+    \frac{\norm{(T_m-T-n)x}_Y}{\norm{x}_X} =\norm{(T_m-T_n)x}_Y < \epsilon
+    \end{equation}
+    Hence, by taking the supremum over such x
+    and applying part 3 of this result, 
+    $\norm{T_m-T_n} < \epsilon$. 
+\end{proof}
+\begin{proof}[Proof of 8]
+    Let $T_i \to T$. 
+    Let $x \in X$. 
+    If $x \in \Ker_X$, then $T_i(x) \in \Ker_Y$ for $i \in \N$ and $T_x \in \Ker_Y$, 
+    so convergence is obvious. 
+    Suppose $\norm{x}_X > 0$. 
+    Let $\epsilon > 0$. 
+    Then there exists $N \in \N$ such that
+    for $n>N$, $\norm{T_n-T} < \frac{\epsilon}{\norm{x}_X}$.
+    For such n, 
+    \begin{equation*}
+    \norm{T_ix-T_x}_Y \leq \norm{T_i-T} \norm{x}_X < \epsilon
+    \end{equation*}
+\end{proof}
+\begin{proof}[Proof of 9]
+%Pick up here, and prove it
+\end{proof}
+\begin{proof}[Proof of 6] %Remove
+    Let $T_i \subset BL(X,Y)$ conveerge, say $T_i \to T \in BL(X,Y)$. 
+    Let $\epsilon > 0$. 
+    Then there is an $N \in \N$
+    such that for $n>N$, 
+    we have 
+    $\norm{T_i-T} < \epsilon$. 
+    For these n, for any $x \in \overline{B_X}(0;1)$, we have
+    \begin{align*}
+    \norm{T_ix-Tx}_Y& = \norm{(T_i-T)x}_Y \\
+    & \leq \norm{T_i-T} \norm{x}_X\\
+    & < \epsilon 
+    \end{align*}
+    So that $T_ix \to Tx$ uniformly for $x \in \overline{B_X}(0;1)$. 
+
+    Suppose conversely that we have a sequence
+    $\{T_i\}_{i \in \N}$ 
+    such that $T_ix \to y(x)$ for each $x \in \overline{B_X}(0;1)$. 
+    I proceed through three separate claims.
+    
+    \bf claim 01 \rm if $T_ix \to y(x)$ uniformly for $x \in \overline{B_X}(0;1)$, then
+    there is a linear operator $T:X \to Y$ such that pointiwise everywhere in X, $T_ix \to Tx$. 
+    \bf FOR CLAIM 01 \rm: Take a hamel bnasis $\{x_\alpha\}$, normalize it to get $y(z_\alpha)$ define T in terms of linear combinations. SHow that T is linear. Then work on the boundedness arguement. 
+    
+
+    \bf claim 02 \rm The linear operator T guaranteed to exist in claim 01 is bounded, that is, 
+    that $\norm{T}$ is well defined and finite.
+
+    \bf claim 03 \rm  $\norm{T_i-T} \to 0$.
+
+
+    \bf Proof of claim 01 \rm Let $x \in X$.
+    Define $z=x/\norm{x}_X$. 
+    Then $z \in \overline{B_X}(0;1)$. 
+    Hence, by assumption, there is a (not necessisarily unique)
+    $y(z) \in Y$ such that 
+    $T_iz \to y(z)$. 
+    Let $\epsilon > 0$. 
+    Then, there is an $N \in \N$ such that for $n>N$, we have
+    $\norm{T_nz-y(z)}_Y < \frac{\epsilon}{\norm{x}_X}$. 
+    For these n, 
+    \begin{align*}
+    \norm{T_nx-\norm{x}_Xy(z)}_Y & = \norm{x}_X \norm{T_nz-y(z)} \\
+    & < \epsilon
+    \end{align*}
+    Hence $T_i(x) \to \norm{x}_Xy(z)$
+    , so our candidate map is $T:X \to Y$ defined by 
+    \begin{equation*}
+        \begin{dcases}
+            T(x) = y(x)  & x \in \overline{B_X}0;1
+        \end{dcases}
+    \end{equation*}
+    Hence there is a map $T:X \to Y$ such that $T_ix \to Tx$ pointwise for $x \in X$. 
+    %This map is linear, 
+    %as if $\alpha\in \F$ 
+    %and $x,y \in X$, and 
+    %$\epsilon > 0$, then
+    %There is an $N \in \N$ 
+    %such that for $n>N$, we have
+    %\begin{equation}
+    %FILL IN CONDITION
+    %\end{equation}
+    %and for these n, we have 
+    %\begin{align*}
+    %T(\alpha x + y)
+    %\end{align*}
 \end{proof}
 
 \end{prop}
