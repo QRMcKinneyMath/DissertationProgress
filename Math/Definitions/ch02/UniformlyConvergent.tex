@@ -1,0 +1,39 @@
+\label{def:uniformlyconvergent}
+\newcommand{\UniformlyConvergent}[0]{
+    \bf \hyperref[def:uniformlyconvergent]{Uniformly Convergent} \rm
+}
+\newcommand{\ConvergesUniformly}[0]{
+    \bf \hyperref[def:uniformlyconvergent]{Converges Uniformly} \rm
+}
+\newcommand{\UniformConvergence}[0]{
+    \bf \hyperref[def:uniformlyconvergent]{Uniform Convergence} \rm
+}
+
+\begin{df}[Uniform Convergence]
+	Let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
+	for $\alpha \in A$ where A is some indexing set. 
+	For each $\alpha \in A$
+	, let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
+	be a sequence. 
+	We say that the collection $\{\phi_\alpha\}_{\alpha \in A}$ 
+    is \UniformlyConvergent to 
+    $\{x_\alpha\}_{\alpha \in A} \in \prod\limits_{\alpha \in A} X_\alpha$
+    if for each $\epsilon > 0$, 
+    there is an $N \in \N$
+    such that for each $n>N$, 
+    and for every $\alpha \in A$, 
+    we have 
+    \begin{equation}
+        d_\alpha(x^{\alpha}_i,x_\alpha) < \epsilon
+    \end{equation}
+
+    In this scenario, we may equivalently say that
+    $\{\phi_\alpha\}$ demonstrates \UniformConvergence
+    to $\{x_\alpha\}_{\alpha \in A}$ 
+    or that it \ConvergesUniformly. 
+
+    When we mention \UniformConvergence without
+    reference to what the convergence is to, 
+    we are merely claiming the existence of 
+    such a limit. 
+\end{df}

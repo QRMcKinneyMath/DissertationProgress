@@ -1,0 +1,45 @@
+\label{prop:uniformlycauchyplusconvergenceimpliesuniformconvergence}
+\begin{prop}[Uniform Cauchy and Pointwise Convergence implies Uniform Convergence]
+
+	Let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
+	for $\alpha \in A$ where A is some indexing set. 
+	For each $\alpha \in A$
+	, let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
+	be a sequence. 
+    Suppose the collection $\{\phi_\alpha\}_{\alpha \in A}$ 
+    is \UniformlyCauchy
+    and that each $\phi_\alpha$ 
+    is \PseudometricConvergent
+    , say $x_i^{\alpha} \to x_\alpha$. 
+    Then $\{\phi_\alpha\}_{\alpha \in A}$
+    is \UniformlyConvergent
+    to $\{x_\alpha\}_{\alpha \in A}$. 
+    \begin{proof}
+        Let $\epsilon > 0$. 
+        Then, since $\{\phi_\alpha\}_{\alpha \in A}$ 
+        is \UniformlyCauchy, 
+        there is an 
+        $N \in \N$
+        such that 
+        for $m, n>N$, we have
+        $d_{\alpha}(x^{\alpha}_n,x^{\alpha}_m) < \frac{\epsilon}{2}$. 
+        Also, since each $\phi_\alpha$ converges to $x_\alpha$, 
+        there are $N_{\alpha} \in \N$. 
+        such that for any $n_\alpha > N_\alpha$, 
+        we have
+        $d_\alpha(x^{\alpha}_{n_\alpha}, x_\alpha) < \frac{\epsilon }{2}$. 
+        Define $M_{\alpha}=max(N+1, N_{\alpha}+1)$ for $\alpha \in A$. 
+        Let $n>N$. 
+        Then, for any $\alpha \in A$, we have. 
+        \begin{align*}
+            d_{\alpha}(x_n^{\alpha} , x_\alpha) & \leq d_{\alpha}(x_n^{\alpha} , x^{\alpha}_{M_{\alpha}}) + d_{\alpha}(x_{M_{\alpha}}, x_\alpha)\\
+            & < \frac{\epsilon}{2}+\frac{\epsilon}{2} \\
+            & = \epsilon
+        \end{align*}
+        completing the proof. 
+
+
+
+    \end{proof} 
+\end{prop}
+

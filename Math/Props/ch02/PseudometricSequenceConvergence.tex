@@ -1,0 +1,25 @@
+\begin{prop}[Convergent Implies Cauchy]
+\label{prop:pseudometricconvergenceimpliespseudometriccauchy}
+
+    Let $(X,d)$ be a
+    \PseudometricSpace.
+    Let $\{x_i\}_{i \in \N}$ be a 
+    \PseudometricConvergent sequence. 
+    Then $\{x_i\}_{i \in \N}$
+    is a \PseudometricCauchySequence.
+
+    \begin{proof}
+        Since $\{x_i\}$ converges, let 
+        $x_i \to x$. 
+        Let $\epsilon > 0$. 
+        Then there exists $N \in \N$ 
+        such that for $n>N$, we have
+        $d(x_i, x) < \frac{\epsilon}{2}$. 
+        For this N, if $m,n > N$, then we have 
+        \begin{equation}
+        d(x_m,x_n) \leq d(x_m,x) + d(x,x_n) < \epsilon
+        \end{equation}
+        and so the sequence is a
+        \PseudometricCauchySequence, as advertised. 
+    \end{proof}
+\end{prop}

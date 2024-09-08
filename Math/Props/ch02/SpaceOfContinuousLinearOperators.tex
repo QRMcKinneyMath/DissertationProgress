@@ -38,14 +38,13 @@ The following are true.
     in some Hamel basis $\{x_\alpha\}_{\alpha \in A} \subset X$,
     the sequence $\{T_ix_\alpha\}_{\alpha \in A}$
     converges with respect to $\norm{\cdot}_Y$. 
-\item $BL(X,Y)$ is complete if and only if Y is. 
-
-\item $\norm{\cdot}$ is \NonDegenerate if and only if Y is. \bf THIS WILL NEED TO BER MOVED LATER, UNTIL AFTER THE SEMINORMED HAHN BANACH THEOREM \rm
+\item Let X be \NonDegenerate. Then $BL(X,Y)$ is complete if Y is complete. 
+\item Let X be \NonDegenerate. If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
 \end{enumerate}
 
 
 \begin{proof}[Proof of 1] 
-    Since X is nondegenerate, there exists at least 1 $x \in X$ with $\norm{x}_X \neq 0$, 
+    Since X is \NonDegenerate, there exists an $x \in X$ with $\norm{x}_X \neq 0$, 
     so for each $T \in BL(X,Y)$, the set that the supremum is being taken over is nonempty.
     Also, it is clear that $Range(\norm{\cdot}) \subset [0,\infty)$, 
 
@@ -195,7 +194,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     \end{equation*}
     In particular, if $\norm{x}=1$, then 
     \begin{equation}
-    \frac{\norm{(T_m-T-n)x}_Y}{\norm{x}_X} =\norm{(T_m-T_n)x}_Y < \epsilon
+    \frac{\norm{(T_m-T_n)x}_Y}{\norm{x}_X} =\norm{(T_m-T_n)x}_Y < \epsilon
     \end{equation}
     Hence, by taking the supremum over such x
     and applying part 3 of this result, 
@@ -212,79 +211,101 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     for $n>N$, $\norm{T_n-T} < \frac{\epsilon}{\norm{x}_X}$.
     For such n, 
     \begin{equation*}
-    \norm{T_ix-T_x}_Y \leq \norm{T_i-T} \norm{x}_X < \epsilon
+    \norm{T_ix-Tx}_Y \leq \norm{T_i-T} \norm{x}_X < \epsilon
     \end{equation*}
 \end{proof}
 \begin{proof}[Proof of 9]
-%Pick up here, and prove it
+    
+    $(\implies)$ 
+    Suppose $T_i \to T$.
+    Then, by \ref{prop:pseudometricconvergenceimpliespseudometriccauchy}, 
+    $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence.
+    An application of part 8 of this result implies
+    the pointwise convergence on a hamel basis. 
+
+
+    $(\impliedby)$
+    Let $\{x_\alpha\}_{\alpha \in A}$ be a Hamel basis for X. 
+    Let $T_ix_\alpha \to y_\alpha$ for $\alpha \in A$. 
+    Define $T: X \to Y$ by setting, for $x \in X$, 
+    for any $\{\alpha_i\}_{i=1}^n \subset A$
+    $\{\beta_i\}_{i=1}^n \subset \F$, 
+    \begin{equation}
+    T\pa{\sum_{i=1}^n \beta_i x_{\alpha_i}} = \sum_{i=1}^n \beta_i y_{\alpha_i}
+    \end{equation}
+    The uniqueness of a hamel basis representation implies
+    that T is well defined. 
+    It is clear also that T is linear, 
+    and that $T\pa{\Ker_X} \subset \Ker_Y$. 
+
+    Let $x \in X$. 
+    Then we can find a unique representation, 
+    $x=\sum_{j=1}^n \beta_j x_{\alpha_j}$ where $x_{\alpha_j} \in A$ and $\beta_j \in \F$ for every j. 
+    For each $j \in \{1, ..., n\}$, there is an $N_j$ such that if
+    $n_j > N_j$, the 
+    \begin{equation}
+    \norm{T_{n_j} x_{\alpha_j} -y_{\alpha_j}} < \frac{\epsilon}{n(\abs{\beta_j}+1)}
+    \end{equation}
+    Let $N=max\{N_j\}_{j=1}^n$. 
+    Let $m>N$. 
+    Then, we have 
+    \begin{align*}
+        \norm{T_mx-Tx} & = \norm{T_m\pa{\sum_{j=1}^n \beta_j x_{\alpha_j}}-T\pa{\sum_{j=1}^n \beta_j x_{\alpha_j}}}\\
+        & = \norm{\sum_{j=1}^n \beta_j \pa{T_mx_{\alpha_j}-Tx_{\alpha_j}}}\\
+        & = \sum_{j=1}^n \abs{\beta_j} \norm{T_mx_{\alpha_j}-y_{\alpha_j}}\\
+        & < \epsilon 
+    \end{align*}
+    Since $m>N$ was arbitrtary , 
+    $T_ix \to Tx$ for $x \in X$. 
+
+    Since $T_ix \to Tx$ for $x \in B_X(0;2)$, 
+    and since part 7 of this result, 
+    paried with the assumption that
+    $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence, 
+    $\left\{\{T_ix\}_{i \in \N}\right\}_{x \in B_X(0;2)}$ 
+    is \UniformlyConvergent
+    to $\{Tx\}_{x \in B_X(0;2)}$. 
+
+    Let $\epsilon > 0$. 
+    By \UniformConvergence, 
+    there is an $N \in \N$ such that 
+    for $n>N$, $x \in B_X(0;2)$, we have
+    \begin{equation}
+    \norm{T_nx-Tx} < \epsilon
+    \end{equation}
+    In particular, if $\norm{x} = 1$, 
+    \begin{equation}
+    \frac{\norm{(T_n-T)x}_Y}{\norm{x}_X} < \epsilon
+    \end{equation}
+    Implying first through part 6 of this result
+    that $T \in BL(X,Y)$, and second that
+    Hence $T_i \to T$ with respect to $\norm{\cdot}$. 
 \end{proof}
-\begin{proof}[Proof of 6] %Remove
-    Let $T_i \subset BL(X,Y)$ conveerge, say $T_i \to T \in BL(X,Y)$. 
-    Let $\epsilon > 0$. 
-    Then there is an $N \in \N$
-    such that for $n>N$, 
-    we have 
-    $\norm{T_i-T} < \epsilon$. 
-    For these n, for any $x \in \overline{B_X}(0;1)$, we have
-    \begin{align*}
-    \norm{T_ix-Tx}_Y& = \norm{(T_i-T)x}_Y \\
-    & \leq \norm{T_i-T} \norm{x}_X\\
-    & < \epsilon 
-    \end{align*}
-    So that $T_ix \to Tx$ uniformly for $x \in \overline{B_X}(0;1)$. 
+\begin{proof}[Proof of 10]
+    Let Y be Pseudometric Complete. 
+    and let $X$ be \NonDegenerate. 
+    Let $\{T_\alpha\}_{\alpha \in A} \subset BL(X,Y)$ 
+    be a \PseudometricCauchySequence.
+    Let $\{x_{\alpha}\}_{\alpha \in A}$ be a Hamel basis for X. 
+    Let $\alpha \in A$. 
+    If $\norm{x_\alpha}_X=0$, then $T_ix_{\alpha} \in \Ker$ for $i \in \N$, 
+    and so $T_ix_{\alpha} \to 0$. 
+    If $\norm{x_{\alpha}}_X > 0$, then 
+    \begin{equation}
+    \frac{(T_m-T_n)x_{\alpha}}{\norm{x_{\alpha}}} < 
+    \end{equation}
 
-    Suppose conversely that we have a sequence
-    $\{T_i\}_{i \in \N}$ 
-    such that $T_ix \to y(x)$ for each $x \in \overline{B_X}(0;1)$. 
-    I proceed through three separate claims.
-    
-    \bf claim 01 \rm if $T_ix \to y(x)$ uniformly for $x \in \overline{B_X}(0;1)$, then
-    there is a linear operator $T:X \to Y$ such that pointiwise everywhere in X, $T_ix \to Tx$. 
-    \bf FOR CLAIM 01 \rm: Take a hamel bnasis $\{x_\alpha\}$, normalize it to get $y(z_\alpha)$ define T in terms of linear combinations. SHow that T is linear. Then work on the boundedness arguement. 
-    
-
-    \bf claim 02 \rm The linear operator T guaranteed to exist in claim 01 is bounded, that is, 
-    that $\norm{T}$ is well defined and finite.
-
-    \bf claim 03 \rm  $\norm{T_i-T} \to 0$.
+%FINISH THIS RESULT
+    I
 
 
-    \bf Proof of claim 01 \rm Let $x \in X$.
-    Define $z=x/\norm{x}_X$. 
-    Then $z \in \overline{B_X}(0;1)$. 
-    Hence, by assumption, there is a (not necessisarily unique)
-    $y(z) \in Y$ such that 
-    $T_iz \to y(z)$. 
-    Let $\epsilon > 0$. 
-    Then, there is an $N \in \N$ such that for $n>N$, we have
-    $\norm{T_nz-y(z)}_Y < \frac{\epsilon}{\norm{x}_X}$. 
-    For these n, 
-    \begin{align*}
-    \norm{T_nx-\norm{x}_Xy(z)}_Y & = \norm{x}_X \norm{T_nz-y(z)} \\
-    & < \epsilon
-    \end{align*}
-    Hence $T_i(x) \to \norm{x}_Xy(z)$
-    , so our candidate map is $T:X \to Y$ defined by 
-    \begin{equation*}
-        \begin{dcases}
-            T(x) = y(x)  & x \in \overline{B_X}0;1
-        \end{dcases}
-    \end{equation*}
-    Hence there is a map $T:X \to Y$ such that $T_ix \to Tx$ pointwise for $x \in X$. 
-    %This map is linear, 
-    %as if $\alpha\in \F$ 
-    %and $x,y \in X$, and 
-    %$\epsilon > 0$, then
-    %There is an $N \in \N$ 
-    %such that for $n>N$, we have
-    %\begin{equation}
-    %FILL IN CONDITION
-    %\end{equation}
-    %and for these n, we have 
-    %\begin{align*}
-    %T(\alpha x + y)
-    %\end{align*}
+
 \end{proof}
 
 \end{prop}
+
+
+\begin{rmk}
+
+\end{rmk}
 
