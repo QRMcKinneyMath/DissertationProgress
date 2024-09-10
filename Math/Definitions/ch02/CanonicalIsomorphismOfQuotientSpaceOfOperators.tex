@@ -1,0 +1,25 @@
+\label{def:canonicalisomorphism}
+\newcommand{\CanonicalIso}[0]{
+    \bf \hyperref[def:canonicalisomorphism]{Canonical Isomorphism Of The Quotient Space Of Continuous Linear Operators} \rm
+}
+
+\begin{df}[Canonical Isomorphism Of The Quotient Space Of Continuous Linear Operators]
+    Let $X,Y$ be \SeminormedSpaces
+    with \SeminormKernels $\Ker_X$, $\Ker_Y$.
+    Let $\Ker$ denote the \SeminormKernel of $BL(X,Y)$. 
+    Let Q denote the \OperatorQuotientMap of X and Y.
+    Define $\Theta_{(X,Y)}:BL(X,Y)/\Ker \to BL(X/\Ker_X, Y/\Ker_Y)$ by 
+    setting, for each $T \in BL(X,Y)$. 
+    \begin{equation}
+        \Theta_{(X,Y)}(\bra{T}) = QT
+    \end{equation}
+    We call $\Theta_{(X,Y)}$ the \CanonicalIso from X to Y. 
+    When X and Y are understood, we may denote the
+    \CanonicalIso simply with $\Theta$. 
+    By \ref{prop:canonicalisomorphism}, $\Theta_{(X,Y)}$
+    is an isomorphism of \NormedSpaces.
+    That is, $\Theta$ is Linear, Bijective, Bicontinuous, and an isometry. 
+\end{df}
+
+
+

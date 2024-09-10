@@ -39,7 +39,7 @@ The following are true.
     the sequence $\{T_ix_\alpha\}_{\alpha \in A}$
     converges with respect to $\norm{\cdot}_Y$. 
 \item Let X be \NonDegenerate. Then $BL(X,Y)$ is complete if Y is complete. 
-\item Let X be \NonDegenerate. If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
+\item  If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
 \end{enumerate}
 
 
@@ -288,24 +288,43 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     be a \PseudometricCauchySequence.
     Let $\{x_{\alpha}\}_{\alpha \in A}$ be a Hamel basis for X. 
     Let $\alpha \in A$. 
-    If $\norm{x_\alpha}_X=0$, then $T_ix_{\alpha} \in \Ker$ for $i \in \N$, 
+    If $x_\alpha  \in \Ker_X$, then $T_ix_{\alpha} \in \Ker_Y$ for $i \in \N$, 
     and so $T_ix_{\alpha} \to 0$. 
-    If $\norm{x_{\alpha}}_X > 0$, then 
-    \begin{equation}
-    \frac{(T_m-T_n)x_{\alpha}}{\norm{x_{\alpha}}} < 
-    \end{equation}
-
-%FINISH THIS RESULT
-    I
-
-
-
+    Otherwise,  $\norm{x_{\alpha}}_X > 0$, so
+    for $\epsilon > 0$, 
+    there exists $N \in \N$ such that
+    for $m,n>N$, we have 
+    $\norm{T_m-T_n} < \frac{\epsilon}{\norm{x_\alpha}}$.
+    For such m and n, 
+    \begin{align*}
+        \frac{\norm{T_mx_\alpha-T_nx_\alpha}_Y}{\norm{x_\alpha}_X}  &= \frac{\norm{\pa{T_m-T_n}x_\alpha}_Y}{\norm{x_\alpha}_X} \\
+        & \leq \norm{T_n-T_m}\\ 
+        & < \frac{\epsilon}{\norm{x_\alpha}}\\
+    \end{align*}
+    By multiplyging by $\norm{x_\alpha}_X$, 
+    we see that $\{T_ix_\alpha\}_{i \in \N}$ 
+    is a \PseudometricCauchySequence.
+    Since Y is \Complete, these sequences converge, say
+    $T_ix_\alpha \to y_\alpha$. 
+    This allows us apply part 9 of  this result
+    to claim that $\{T_i\}_{i \in \N}$ converges in $\norm{\cdot}$. 
 \end{proof}
-
+\begin{proof}[Proof of 11]
+    If $BL(X,Y)$ is nondegenerate, then
+    for some $T \in BL(X,Y)$, 
+    for some $x \in X$, 
+    $\norm{Tx}_Y \neq 0$. 
+\end{proof}
 \end{prop}
 
 
-\begin{rmk}
-
+\begin{rmk}[Converses]
+The converses to parts 10 and 11 of 
+\ref{prop:BLO} 
+are true, but their proof relies upon
+the Hahn Banach theorem for Seminormed spaces, 
+and so their official claim
+is delayed until later in the narrative. 
 \end{rmk}
+
 

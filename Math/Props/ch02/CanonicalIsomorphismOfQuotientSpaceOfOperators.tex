@@ -1,0 +1,37 @@
+\begin{prop}[Canonical Isomorphism Of The Quotient Space Of Continuous Linear Operators]
+\label{prop:canonicalisomorphism}
+    Let $X,Y$ be \SeminormedSpaces.
+    Let $\Theta$ denote the \CanonicalIso
+    from X to Y. 
+    Then $\Theta$ is
+    a bijective, bicontinuous, linear, isometry. 
+    \begin{proof}
+       By \ref{prop:quotientnormspace}, part 1, 
+       $Y/\Ker_Y$ is a \NormedSpace, 
+       Hence by \ref{prop:BLO}, part 2, 
+       \newline
+       $BL(X/\Ker_X, Y/\Ker_Y)$ is a \NormedSpace. 
+       Similarly, by \ref{prop:quotientnormspace}, part 1, 
+       $BL(X,Y)/\Ker$ is a normed space. 
+       Hence, it is sufficient to show that $\Theta$ is a
+       well-defined surjective linear isometry. 
+
+       For well definedness, let $T,S \in BL(X,Y)$ with $[T]=[S]$. 
+       Then, $\norm{T-S}=0$, so 
+       if $x \in X$, $\norm{Tx-Sx}=0$. 
+       Hence $Tx \cong Sx$ and since x was arbitrary, 
+       $QT=QS$. 
+        
+       Let q denote the \QuotientMap $q:BL(X,Y) \to BL(X,Y)/\Ker$. 
+       By parts 4, 5, and 6 of \ref{prop:quotientnormspace}, 
+       q is a linear surjective isometry. 
+       Also, by definition, $\Theta \circ q = Q$. 
+       Since Q is surjective, $\Theta$ is surjective. 
+       Since $Q$ is an isometry, and $q$ is a surjecive isometry, 
+       $Theta$ is an isometry. 
+       Since Q is linear, and since q is surjective and linear, 
+       $\Theta$ is linear. 
+    \end{proof}
+
+
+\end{prop}
