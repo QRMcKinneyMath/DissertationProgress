@@ -1,0 +1,43 @@
+\begin{thm}[\TopDualSpace Isomorphism]
+\label{thm:dualspaceisomorphism}
+    Let X be a 
+    \SeminormedSpace.
+    Define $\Omega:X^* \to \pa{X/\Ker_X}^*$
+    by setting, for $x^* \in X$, 
+    and for $x \in X$, 
+    \begin{equation}
+        \ip{x, x^*} = \ip{[x], \Omega x^*}
+    \end{equation}
+    Then $\Omega$ is a 
+    Linear, 
+    Bijective, 
+    Isometric, 
+    Bicontinuous operator. 
+    That is, $X^*$ and $(X/\Ker_X)^*$ are 
+    isomorphic, and that isomorphism is explicitly
+    given by $\Omega$. 
+    \begin{proof}
+        Consider the following
+        \begin{equation}
+            BL(X,\F) \overset{q}{\to} BL(X,\F)/\Ker_{BL(X/\F)} \overset{\Theta}{\to} BL(X/\Ker_X, \F/\Ker_{\F}) \overset{\scQ_{\F}^{-1}}{\to} BL(X/\Ker_X,\F)
+        \end{equation}
+        where
+        q is the \QuotientMap, 
+        which is an linear bijective bicontinuous isometry in this case
+        by parts 4, 5, 6, and 7 of 
+        of \ref{prop:quotientnormspace}, 
+        $\Theta$ is the \CanonicalIso, 
+        which is a linear bijective bicontinuous isometry by 
+        \ref{prop:canonicalisomorphism}
+        and $\scQ_{\F}$ is the \CodomainQuotientMap.
+        which is in this case a linear, bijective, bicontinuous isometry
+        by \ref{prop:handedquotientoperators}
+
+
+        Since $\Omega=\scQ_{\F}^{-1} \circ \Theta \circ q$, 
+        and since each of the described properties
+        are preserved under composition, 
+        $\Omega$ is also a 
+        linear bijective bicontinuous isometry. 
+    \end{proof}
+\end{thm}

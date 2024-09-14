@@ -1,0 +1,104 @@
+\label{thm:hahnbanach}
+\begin{thm}[Hahn Banach Theorem For Seminormed Spaces]
+Let $(X,\norm{\cdot})$ be a \SeminormedSpace,
+let $x_i \in X$ for $i \in \{0,1\}$ such that 
+$\norm{x_0-x_1}_X \neq 0$, and
+let $X^*$ denote $X's$
+\TopDualSpace. 
+The following are true. 
+\begin{enumerate}
+    \item If $Z \subset X$ is a subspace
+        and $z^* \in Z^*$, then there 
+        is an extension $x^*$ of $z^*$, 
+        $x^* \in X^*$ such that 
+        \begin{equation}
+        \norm{z^*}_{Z^*} = \norm{x^*}_{X^*}
+        \end{equation}
+     \item If $x \in X$, 
+        with $\norm{x} \neq 0$, 
+        then there exists an
+        $x^* \in X$ with 
+        $\norm{x^*}=1$ and 
+        $\ip{x,x^*} = \norm{x}_X$. 
+    \item If $x \in X$, then 
+    \begin{equation}
+        \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}}
+    \end{equation}
+\end{enumerate}
+
+
+\begin{proof}[Proof of 01]
+    For $\alpha \in \{Z,X\}$, let 
+    $\Omega_\alpha:\alpha^* \to (\alpha/\Ker_\alpha)^*$ denote the isomorphism
+    defined in 
+    \ref{thm:dualspaceisomorphism}.
+    Let $q$ denote the quotient operator $q:X \to X/\Ker$. 
+    Define $T:Z/\Ker_Z \to q(Z)$ bv $T([z]_{\cong_Z} ) = [z]_{\cong_X}$. %Make a separate Result
+    Since Z is endowed with the subspace Topology,                       %Make a separate Result
+    T is obviously a Linear Bijective Bicontinuous Isometry.          %Make a separate Result
+    
+    %Then $\Omega_Zz^* \in (Z/\Ker_Z)^*$ satisfies
+    %$\norm{\Omega_Zz^*}_{Z/\Ker_Z}=\norm{z^*}_{Z^*}$ an 
+    Define $\Gamma_Z:(Z/\Ker_Z)^* \to q(Z)^*$ by setting, 
+    for $\phi^* \in (Z/\Ker_Z)^*$, 
+    for $[z]_Z \in Z/\Ker_Z$, 
+    \begin{equation}
+        \ip{T[z]_Z, \Gamma_Z \phi^*} = \ip{[z]_Z, \phi^*}
+    \end{equation}
+    Then $\Gamma_Z$ is a Linear Bijective Isometry. 
+    Hence $\Gamma_Z \circ \Omega_Z z^* \in q(Z)^*$ with 
+    $\norm{\Gamma_Z \circ \Omega_Z z^*}_{q(Z)^*} = \norm{z^*}_{Z^*}$. 
+
+    Thus we can apply the Hahn Banach theorem for \NormedSpaces to claim 
+    the existence of $x_q^* \in (X/\Ker_X)^*$ where
+    $x_q^*$ is an extension of $\Gamma_Z \circ \Omega_Z z^*$ and
+    \begin{equation}
+        \norm{x_q^*}_{(X/\Ker_X)^*} = \norm{\Gamma_Z \circ \Omega_Z z^*}_{(q(Z))^*} = \norm{z^*}_{Z^*}
+    \end{equation}
+    Finally, letting $x^* = \Omega_X^{-1} x_q^*$, we have 
+    $x^* \in X^*$, 
+    $\norm{x^*}_{X^*} = \norm{x_q^*}_{(X/\Ker_X)^*} =\norm{z^*}_{Z^*}$, 
+    and 
+    if $z \in Z$, then 
+    \begin{align*}
+        \ip{z, x^*} & = \ip{[z]_X, x_q^*} \\
+        & = \ip{[z]_X, \Gamma_Z \circ \Omega_Zz^*}\\
+        & = \ip{[z]_Z, \Omega_Z z^*}\\
+        & = \ip{z, z^*}
+    \end{align*}
+\end{proof}
+
+\begin{proof}[Proof of 2]
+    Let $Z=span(x)$. 
+    Define $z^* \in Z^*$ by 
+    $\ip{\alpha x, z^*} = \alpha \norm{x}$. 
+    Then $\norm{z^*} = 1$. 
+    Also, by part 1 of this result, 
+    it has an extension $x^* \in X^*$ with 
+    $\norm{x^*} = \norm{z^*} =1$ 
+    and $\ip{x,x^*} = \norm{x}$. 
+\end{proof}
+\begin{proof}[Proof of 3]
+    If $\norm{x} = 0$, then
+    for every $x^* \in X$, $\ip{x,x^*} = 0$.
+    Hence 
+    \begin{equation} 
+    \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} = \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}}=0
+    \end{equation}
+
+    Otherwise, let  $x^* \in X^*$ guaranteed to 
+    exist by part 2 which satisfies $\norm{x^*}=1$, 
+    $\ip{x,x^*} = \norm{x}$. 
+    Then 
+    \begin{align*}
+    \norm{x} & = \frac{\ip{x,x^*}}{\norm{x^*}} \\
+    & \leq \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}} \\
+    & \leq    \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} 
+    \end{align*}
+    The other direction of the inequality
+    falls directly from the definition of 
+    the norm on $X^*$, and is trivial, so 
+    we are done. 
+\end{proof}
+\end{thm}
+

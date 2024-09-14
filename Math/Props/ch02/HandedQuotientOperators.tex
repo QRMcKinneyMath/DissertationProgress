@@ -1,0 +1,85 @@
+\begin{prop}[Codomain Quotient Operator]
+\label{prop:handedquotientoperators}
+    Let X and Y be 
+    \SeminormedSpaces
+    with \CodomainQuotientMap $\scQ_Y$. 
+    The following are true. 
+    \begin{enumerate}
+        \item $\scQ_Y$ is a well defined continuous linear surjective isometry. 
+        \item If Y is a \NormedSpace, then $\scQ_Y$ is invertible with a continuous inverse. 
+    \end{enumerate}
+    \begin{proof}[Proof Of 1]
+        Since $Tx \in Y$ for any $x \in X$, 
+        $[Tx]_Y$ is defined for any $x \in X$. 
+        Furthermore, if $q_y:Y \to Y/\Ker$
+        is the \QuotientMap of Y under 
+        \EquivalenceModKernel, then 
+        $\scQ_YT = q_y \circ T$. 
+        By \ref{prop:quotientnormspace}, 
+        $q_y$ is linear and an isometryu, and hence continuous.
+        Therefore, 
+        $q_y \in BL(Y, Y/\Ker)$. 
+        Hence $\scQ_Y$ is well defined. 
+
+        For linearity, let $\alpha \in \F$
+        and $S,T \in BL(X,Y)$. 
+        Let $x \in X$. 
+        Then, 
+        \begin{align*}
+            \scQ_Y\pa{\alpha T+S}x & = \bra{\pa{\alpha T+S}x}_Y\\
+            & = \bra{\alpha Tx+ Sx}_Y\\
+            & = \bra{\alpha Tx}_Y+ \bra{Sx}_Y\\
+            & = \alpha \bra{Tx}_Y+\bra{Sx_Y}\\
+            & = \alpha \scQ_YTx+ \scQ_YSx\\
+            & = \pa{\alpha \scQ_YT+\scQ_YS}x
+        \end{align*}
+
+        For being an isometry, 
+        let $T \in BL(X,Y)$ and 
+        let $x \in X$. Then, since $\norm{\bra{Tx}_Y}_{Y/\Ker} = \norm{Tx}_Y$, 
+        \begin{align*}
+            \frac{\norm{\scQ Tx}_{Y/\Ker}}{\norm{x}_X} & = \frac{\norm{\bra{Tx}_Y}_{Y/\Ker}}{\norm{x}_X} \\
+            & = \frac{\norm{Tx}_Y}{\norm{x}_X} 
+        \end{align*}
+        and thus taking the norm over
+        x with $\norm{x}_X \neq 0$ will yield the
+        same result. Hence $\norm{T} = \norm{\scQ_Y T}$. 
+
+        For surjectivity, let $\tilde{T} \in BL(X, Y/\Ker_Y)$. 
+        Let $\{x_{\alpha}\}_{\alpha \in A}$ be a hamel basis for $X$. 
+        For each $\alpha \in A$, let $y_{\alpha} \in \tilde{T}x_{\alpha}$. 
+        Define $T:X \to Y$ by 
+        \begin{equation}
+            T\pa{\sum_{i=1}^n \beta_{\alpha_i} x_{\alpha_i}} = \sum_{i=1}^n \beta_{\alpha_i} y_{\alpha_i}
+        \end{equation}
+        T is obviously linear
+        and has the property $[Tx]=\tilde{T}x$. 
+        and since $\tilde{T} \in BL(X,Y/\Ker)$, 
+        $\tilde{T}\Ker_X \subset \Ker_{ (Y/\Ker_Y)}=0$. 
+        Hence $T \Ker_X \subset \Ker_Y$. 
+        Furthermore, if $x \in X$ with $\norm{x}_X \neq 0$, then
+        \begin{align*}
+        \frac{\norm{Tx}_Y}{\norm{x}_X} & = \frac{\norm{\bra{Tx}_Y}_{Y/\Ker}}{\norm{x}_X}\\
+        & = \frac{\norm{\tilde{T}x}_{Y/\Ker}}{\norm{x}_X}
+        \end{align*}
+        Therefore $T$ is bounded.
+        Hence $T \in BL(X,Y)$, and $\scQ_YT=\tilde{T}$. 
+        Thus we have surjectivity, and are done.
+    \end{proof}
+    \begin{proof}[Proof Of 2]
+        If $Y$ is a \NormedSpace, 
+        %then $q_y:Y \to Y/\Ker_Y$ is 
+        a linear isometric homeomorphism by 
+        \ref{prop:quotientnormspace}. 
+        In particular, in this case, 
+        $q_y$ is injective, meaning that 
+        if $T,S \in BL(X,Y)$ where
+        $T \neq S$, then 
+        $Tx_0 \neq Sx_0$ for some $x_0 \in X$. 
+        For this $x_0$, $q_yTx_0 \neq q_ySx_0$, so 
+        $\scQ_YT \neq \scQ_YS$. 
+        Therefore $\scQ_Y$ is injective, and therefore a bijection. 
+        The inverse of an isometry is also an isometry 
+        and therefore continuous, finishing this proof. 
+    \end{proof}
+\end{prop}

@@ -1,0 +1,38 @@
+\label{def:topologicaldualspace}
+\newcommand{\SemiTopDualSpace}[0]{
+    \bf \hyperref[def:topologicaldualspace]{Topological Dual Space} \rm
+}
+\begin{df}[Seminorm Topological Dual Space]
+    Let $(X,\norm{\cdot})$ be a 
+    \SeminormedSpace
+    over a field $\F$. 
+    We denote with $X^*$ 
+    \NormedSpace $BL(X,\F)$, 
+    and we call $X^*$ the
+    \SemiTopDualSpace of $X$. 
+    If $x^* \in X^*$, then we may denote, 
+    for $x \in X$, 
+    $x^*(x)$
+    with 
+    $\ip{x,x^*}$. 
+
+
+    
+    Since $\F$ is a \NormedSpace, 
+    by \ref{prop:BLO}, 
+    part 02, $X^*$ is as well. 
+
+    Since $X^*$ is a normed space 
+
+    Also, $q:\F \to \F/\Ker_F$ 
+    is a linear bijective isometry by 
+    \ref{prop:quotientnormspace}, so
+    if $Q:X^* \to BL(X/\Ker_X, \F/\Ker_{\F})$ is the \OperatorQuotientMap
+    and if $\Theta:BL(X,\F)/\Ker \to BL(X/\Ker_X, \F/\Ker_\F)$ 
+    is the \CanonicalIso, then we have 
+    \begin{equation}
+    \Theta=Q \circ q^{-1}
+    \end{equation}
+
+
+\end{df}

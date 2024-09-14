@@ -1,0 +1,34 @@
+Finished canonical isomorphism resutl. Next time
+Define dual space of a seminormed space
+and state and prove representation therem 
+of the dual space as corollary of the 
+canonical isomorphism theorem.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+new file:   '
+new file:   Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex
+modified:   Math/Definitions/ch02/Pseudometric.tex
+modified:   Math/Definitions/ch02/PseudometricComplete.tex
+new file:   Math/Definitions/ch02/QuotientOperator.tex
+modified:   Math/Definitions/ch02/Seminorm.tex
+modified:   Math/Definitions/ch02/SeminormKernel.tex
+new file:   Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex
+new file:   Math/Props/ch02/QuotientOperator.tex
+modified:   Math/Props/ch02/SpaceOfContinuousLinearOperators.tex
+modified:   bibliography.aux
+modified:   mainmatter/ch02/Weak_Topologies_and_Dual_Spaces_Of_Seminormed_Spaces/Weak_Topologies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
+modified:   mainmatter/ch02/chapter02.aux
+modified:   mainmatter/ch03/chapter03.aux
+modified:   mainmatter/ch04/chapter04.aux
+modified:   mainmatter/ch05/chapter05.aux
+modified:   thesis.aux
+modified:   thesis.log
+modified:   thesis.pdf
+modified:   thesis.synctex.gz
+modified:   thesis.toc
+#
