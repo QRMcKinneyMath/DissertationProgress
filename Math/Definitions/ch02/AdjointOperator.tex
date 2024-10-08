@@ -1,0 +1,26 @@
+\label{def:adjointoperator}
+\newcommand{\AdjointOperator}[0]{
+    \bf \hyperref[def:adjointoperator]{Adjoint Operator} \rm
+}
+\begin{df}[\AdjointOperator]
+    Let X, Y, and Z be \SeminormedSpaces
+    over a field $\F \in \{\R, \C\}$. .
+    Let $T \in BL(X,Y)$. 
+    We define the operator
+    $T^{\times}_Z:BL(Y,Z) \to BL(X,Z)$ by 
+    setting, for $S \in BL(Y,Z)$ 
+    and $x \in X$, 
+    \begin{equation}
+        \ip{x , \T^{\times}_{Z}S } = \ip{Tx, S}
+    \end{equation}
+    or, equivalently, 
+    \begin{equation}
+    \T^{\times}_Z S = S \circ T
+    \end{equation}
+
+    We call $T^\times_Z$ the \AdjointOperator
+    of T relative to the space Z, we denote
+    $T^\times_{\F}=T^\times$, and
+    we refer to $T^\times:Y^* \to X^*$ as 
+    simply the \AdjointOperator of T. 
+\end{df}

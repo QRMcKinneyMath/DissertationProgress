@@ -40,6 +40,15 @@ The following are true.
     converges with respect to $\norm{\cdot}_Y$. 
 \item Let X be \NonDegenerate. Then $BL(X,Y)$ is complete if Y is complete. 
 \item  If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
+\item If $S:X \to Y$ is linear
+	, then $S \in BL(X,Y)$ if and only if 
+	there exists a constant $c \in (0,\infty)$ 
+	such that for every 
+	$x \in X$. 
+	$\norm{Tx} \leq c \norm{x}$. 
+\item If $T \in BL(X,Y)$, 
+	and $A=\{c \in (0,\infty) | \norm{Tx} \leq c \norm{x} (\forall x \in X)\}$, then
+	$\norm{T}=\inf(A)$.
 \end{enumerate}
 
 
@@ -314,6 +323,47 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     for some $T \in BL(X,Y)$, 
     for some $x \in X$, 
     $\norm{Tx}_Y \neq 0$. 
+\end{proof}
+\begin{proof}[Proof of 12]
+	Let $S \in BL(X,Y)$. 
+	Let $c=\norm{S}+1$. %adding 1 accounts for case where $\norm{S} =0$.  
+	Then, if $\norm{x} \neq 0$, we have 
+	\begin{equation}
+		\frac{\norm{Sx}}{\norm{x}} \leq \sup\limits_{\norm{x} \neq 0} \frac{\norm{Sx}}{\norm{x}} = \norm{S}=c
+	\end{equation}
+	so multiplying by $\norm{x}$ gives $\norm{Sx} \leq c \norm{x}$. 
+	If $\norm{x} = 0$, then $x \in \Ker_X$, so by part 6 of this result, $Sx \in \Ker_X$, so 
+	\begin{equation}
+		\norm{Sx} =0 = c 0  = c \norm{Sx}
+	\end{equation}
+	finishing this direction of the proof. 
+	
+	Suppose instead, now, that there was a constant $c \in (0,1)$ such that 
+	for each $x \in X$, we had $\norm{Sx} \leq c\norm{x}$. 
+	Then, if $\norm{x} = 0$, we must have 
+	$\norm{Sx} \leq c \norm{x} =0$, and so 
+	$S(\Ker_X) \subset \Ker_Y$. 
+	Furthermore, if $\norm{x} \neq 0$, then we can 
+	divide by $\norm{x}$ to get 
+	\begin{equation}
+	\frac{\norm{Sx}}{\norm{x}} \leq c
+	\end{equation}
+	Taking the supremum over all x with $\norm{x} \neq 0$ gives us the desired result. 
+\end{proof}
+\begin{proof}[Proof of 13]
+	By part 5 of this result, $\norm{T}$ is one possible value
+	for c, so $\norm{T} \in A$. 
+	That is, $inf(A) \leq \norm{T}$. 
+	Furthermore, if $\epsilon > 0$, then there
+	is an $x \in X$ with 
+	\begin{equation}
+	\frac{\norm{Tx}}{\norm{x}} > \norm{T}-\epsilon
+	\end{equation}
+	implying $\norm{Tx} > (\norm{T}-\epsilon) \norm{x}$ so that
+	$\norm{T} - \epsilon \not \in A$. 
+	Hence $\norm{T} - \epsilon < inf(A)$. 
+	Since this is true for every positive epsilon, 
+	$\norm{T} < inf(A)$. 
 \end{proof}
 \end{prop}
 

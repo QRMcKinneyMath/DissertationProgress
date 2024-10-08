@@ -24,6 +24,17 @@ The following are true.
     \begin{equation}
         \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}}
     \end{equation}
+    \item If $Y$ is a 
+        \NonDegenerate
+        \SeminormedSpace, and if 
+        $x_0 \in X$, with 
+        $\norm{x_0} \neq 0$, 
+        then there exists
+        an $S \in BL(X,Y)$ with 
+        $\norm{S} = 1$ and 
+        \begin{equation}
+            \norm{Sx_0} = \norm{x_0}
+        \end{equation}
 \end{enumerate}
 
 
@@ -99,6 +110,18 @@ The following are true.
     falls directly from the definition of 
     the norm on $X^*$, and is trivial, so 
     we are done. 
+\end{proof}
+\begin{proof}[Proof of 4]
+    By part 2 of this result, there exists $x_0^* \in X^*$ with 
+    $\norm{x_0^*} = 1$ and $\ip{x_0, x_0^*}=\norm{x_0}$. 
+    Since Y is \NonDegenerate, there
+    exists $y_0 \in Y$ with $\norm{y_0} = 1$. 
+    Define $T: \F \to Y$ by $T \alpha = \alpha y$.
+    Then $\norm{T} = \norm{y} = 1$. 
+    Define $S: X \to Y$ by $S=T \circ x_0^*$. 
+    Then $\norm{S} \leq \norm{T} \norm{x_0^*} = 1$, and
+    $\norm{S x_0} = \norm{\ip{x_0, x_0^*} y} = \ip{x_0, x_0^*} = \norm{x_0}$. 
+    Hence $\norm{S} \geq 1$ and therefore $\norm{S} = 1$. 
 \end{proof}
 \end{thm}
 

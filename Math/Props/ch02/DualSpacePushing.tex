@@ -1,0 +1,79 @@
+\begin{prop}
+    \label{prop:dualspacepushing}
+    Let $X,Y$ be \SeminormedSpaces.
+    Let $T:X \to Y$ be a
+    linear, 
+    surjective
+    isometry. 
+    Define $T^*:X^* \to Y^*$ by 
+    setting, for $x^* \in X^*$ and
+    $x \in X$, 
+    \begin{equation}
+    \ip{Tx, T^*x^*} = \ip{x,x^*}
+    \end{equation}
+    Then $T^*$ is a Linear Bijective Isometry. 
+    \begin{proof} 
+        I first need to show that $T^*$ is well defined.
+        Suppose $Tx \cong Ty$. 
+        Since T is an isometry, $x \cong y$. 
+        Hence, $\ip{x,x^*} = \ip{y,x^*}$ for all 
+        $x^* \in X^*$. so the equation 
+        defining $T^*x^*$ is at least consistent. 
+        Is $T^*x^*$ linear? Yes, as 
+        if $x_1,y_1 \in Y$ and $\alpha \in \F$, 
+        then there are $x,y \in X$ such that 
+        $Tx=x_1$, $Ty=y_1$, and 
+        \begin{align*}
+            \ip{\alpha x_1+y_1, T^*x^*} & = \ip{\alpha x+y, x^*}\\
+            & = \alpha \ip{x,x^*}+\ip{y,x^*}\\
+            & = \alpha \ip{x_1, T^*x^*}+ \ip{y_1, T^*x^*}
+        \end{align*}
+        Boundedness of $T^*x^*$ will be shown during the 
+        proof that $T^*$ is an isometry. 
+
+
+
+    For linearity, let $x_i^* \in X^*$ for 
+    $i \in \{0,1\}$ and let $\alpha \in \F$. 
+    Let $y \in Y$. 
+    Since T is surjective, there exists $x \in X$ 
+    such that $y=Tx$.
+    Then
+    \begin{align*}
+        \ip{y, T^*\pa{\alpha x_0^*+x_1^*}} & = \ip{x, \alpha x_0^*+x_1^*} \\
+        & = \alpha \ip{x, x_0^*} + \ip{x, x_1^*} \\
+        & = \alpha \ip{y, Tx_0^*}+ \ip{y, Tx_1^*}\\
+        & = \ip{y, \alpha T^* x_0^* + T^* x_1^*}
+    \end{align*}
+
+    For surjectivity, let $y^* \in Y^*$. 
+    To prove the existence of $x^* \in X^*$ 
+    such that $T^*x^* = y^*$, 
+    it is sufficient to find$ x^*\in X$
+    with $Kernel(T x^*)=Kernel(y^*)$. 
+
+
+    To see that $T^*$ is an isometry, 
+    let $x^* \in X^*$. Then, 
+    since T is surjective and an isometry, 
+    \begin{equation*}
+    \{y \in Y| \norm{y} \neq 0  \} = \{Tx | \norm{x} \neq 0\}
+    \end{equation*}
+    , which allows us to say that
+    \begin{align*}
+    \norm{T^*x^*} &= \sup\limits_{\norm{y} \neq 0} \frac{\abs{\ip{y, T^*x}}}{\norm{y}}\\
+    &= \sup\limits_{\norm{x} \neq 0} \frac{\abs{\ip{Tx, T^*x^*}}}{\norm{Tx}} \\
+    & = \sup\limits_{\norm{x} \neq 0} \frac{\abs{\ip{x,x^*}}}{\norm{x}}\\
+    & = \norm{x^*}
+    \end{align*}
+    so $T^*$ is an isometry. 
+    Since $T^*$ is an isometry, and 
+    $X^*$ and $Y^*$ are both normed spaces by 
+    \ref{thm:dualspaceisomorphism}, 
+    $T^*$ is surjective. 
+
+    \end{proof}
+
+
+
+\end{prop}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  14 SEP 2024 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  8 OCT 2024 07:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -590,14 +590,14 @@ m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 (Math/Props/ch02/QuotientsPreserveCompleteness.tex [20])
 (Math/Definitions/ch02/SpaceOfContinuousLinearOperators.tex)
 (Math/Props/ch02/SpaceOfContinuousLinearOperators.tex [21] [22]
-Overfull \hbox (16.98431pt too wide) in paragraph at lines 100--106
+Overfull \hbox (16.98431pt too wide) in paragraph at lines 109--115
 []\OT1/cmr/m/n/12 If we de-fine, for $\OML/cmm/m/it/12 T \OMS/cmsy/m/n/12 2 \OM
 L/cmm/m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 )$, $\OML
 /cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 ) = [] []$, th
 en since $[][] ((0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ^^Z
  []
 
-[23] [24] [25]) (Math/Definitions/ch02/HandedQuotientOperators.tex)
+[23] [24] [25]) (Math/Definitions/ch02/HandedQuotientOperators.tex [26])
 (Math/Props/ch02/HandedQuotientOperators.tex
 Overfull \hbox (1.5653pt too wide) in paragraph at lines 3--8
 [][]\OT1/cmr/bx/n/12 Proposition 2.1.58 \OT1/cmr/m/n/12 (Codomain Quo-tient Op-
@@ -605,11 +605,11 @@ er-a-tor)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let X and Y be  [][]\OT1/cmr/bx/
 n/12 Semi-normed Spaces[][]
  []
 
-[26]) (Math/Definitions/ch02/QuotientOperator.tex)
-(Math/Props/ch02/QuotientOperator.tex [27])
+[27]) (Math/Definitions/ch02/QuotientOperator.tex)
+(Math/Props/ch02/QuotientOperator.tex [28])
 (Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
-(Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex [28])
-(Math/Definitions/ch02/TopologicalDualOfSeminormedSpace.tex
+(Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
+(Math/Definitions/ch02/TopologicalDualOfSeminormedSpace.tex [29]
 Overfull \hbox (47.55653pt too wide) in paragraph at lines 27--33
 []\OT1/cmr/m/n/12 Also, $\OML/cmm/m/it/12 q \OT1/cmr/m/n/12 : \U/msb/m/n/12 F \
 OMS/cmsy/m/n/12 ! \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]$ \OT1/c
@@ -620,20 +620,30 @@ m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X=\OMS/cmsy/m/n/12 K[]\OML/cmm/m/it
  []
 
 ) (Math/Definitions/ch02/TopologicalDualSpace.tex)
-(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex [29])
-(Math/Theorems/ch02/HahnBanachSeminormed.tex [30]))
+(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex)
+(Math/Theorems/ch02/HahnBanachSeminormed.tex [30] [31])
+(Math/Remarks/ch02/LinearOperationNotation.tex)
+(Math/Definitions/ch02/AdjointOperator.tex)
+(Math/Props/ch02/AdjointOperator.tex [32] [33])
+(Math/Definitions/ch02/CanonicalEmbedding.tex)
+(Math/Props/ch02/CanonicalEmbedding.tex
+
+LaTeX Warning: Reference `rmk:doubledualnotation' on page 34 undefined on input
+ line 13.
+
+[34]))
 (mainmatter/ch02/Classical_Results_With_A_Twist/Classical_Results_With_A_Twist.
 tex
 
-LaTeX Warning: Reference `prop:seminormlinearoperators' on page 31 undefined on
+LaTeX Warning: Reference `prop:seminormlinearoperators' on page 35 undefined on
  input line 4.
 
-[31] [32] [33] [34] [35] [36]
+[35] [36] [37] [38] [39] [40]
 
-LaTeX Warning: Reference `prop:pseudometricembedding' on page 37 undefined on i
+LaTeX Warning: Reference `prop:pseudometricembedding' on page 41 undefined on i
 nput line 250.
 
-[37]
+[41]
 Overfull \hbox (96.12717pt too wide) in paragraph at lines 272--274
 []$\OT1/cmr/m/n/12 . Hence, given $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$, t
 here ex-ists $\OML/cmm/m/it/12 N > \OT1/cmr/m/n/12 0$ such that for $\OML/cmm/m
@@ -647,7 +657,7 @@ Overfull \hbox (6.40353pt too wide) in paragraph at lines 282--284
 m/n/12 such that $2\OML/cmm/m/it/12 = [] <
  []
 
-[38] [39]) (mainmatter/ch02/Reflexivity/Reflexivity.tex [40] [41] [42] [43]
+[42] [43]) (mainmatter/ch02/Reflexivity/Reflexivity.tex [44] [45] [46] [47]
 Overfull \hbox (11.55055pt too wide) in paragraph at lines 135--137
 \OML/cmm/m/it/12 CoLim\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 ^^^[]\OMS/cmsy/m/n/12 
 g[]$\OT1/cmr/m/n/12 , we ex-tract a sub-se-quence $\OMS/cmsy/m/n/12 f\OML/cmm/m
@@ -657,7 +667,7 @@ it/12 w \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 CoLim\OMS/cmsy/m/n/12 f\OML/cmm/m/i
 t/12 x[]\OMS/cmsy/m/n/12 g[]$\OT1/cmr/m/n/12 ,
  []
 
-[44] [45]
+[48] [49]
 Overfull \hbox (22.11562pt too wide) in paragraph at lines 206--207
 []\OT1/cmr/m/it/12 For ev-ery $\OML/cmm/m/it/12  \OMS/cmsy/m/n/12 2 \OT1/cmr/m
 /n/12 (0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)$ \OT1/cmr/m/it/12 there is some s
@@ -665,9 +675,9 @@ e-quence $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 g[] ^^Z []$ \O
 T1/cmr/m/it/12 sat-is-fy-ing $\OML/cmm/m/it/12 d [] \OMS/cmsy/m/n/12 ^^U
  []
 
-[46] [47] [48])
+[50] [51] [52])
 (mainmatter/ch02/Convexity_Of_Functions_And_Sets/Convexity_Of_Functions_And_Set
-s.tex [49] [50] [51] [52])
+s.tex [53] [54] [55] [56])
 (mainmatter/ch02/Differentiation_And_Subdifferentials/Differentiation_And_Subdi
 fferentials.tex
 Overfull \hbox (3.27159pt too wide) in paragraph at lines 12--13
@@ -679,22 +689,22 @@ at $\OML/cmm/m/it/12 x[]$ \OT1/cmr/m/n/12 in the di-rec-tion of $\OMS/cmsy/m/n/
 @\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )$. 
  []
 
-[53])
+[57])
 (mainmatter/ch02/Normalized_Duality_Mapping/Normalized_Duality_Mapping.tex
-[54]) (mainmatter/ch02/Orthogonality/Orthogonality.tex [55])
-(mainmatter/ch02/Convexity_Of_A_Space/Convexity_Of_A_Space.tex [56] [57])
-(mainmatter/ch02/Smoothness_Of_A_Space/Smoothness_Of_A_Space.tex [58] [59]))
-[60]
+[58]) (mainmatter/ch02/Orthogonality/Orthogonality.tex [59])
+(mainmatter/ch02/Convexity_Of_A_Space/Convexity_Of_A_Space.tex [60] [61])
+(mainmatter/ch02/Smoothness_Of_A_Space/Smoothness_Of_A_Space.tex [62] [63]))
+[64]
 \openout2 = `./mainmatter/ch03/chapter03.aux'.
 
  (mainmatter/ch03/chapter03.tex
 Chapter 3.
-[61
+[65
 
 
 
 
-]) [62]
+]) [66]
 \openout2 = `./mainmatter/ch04/chapter04.aux'.
 
  (mainmatter/ch04/chapter04.tex
@@ -705,7 +715,7 @@ Overfull \hbox (3.40268pt too wide) in paragraph at lines 7--7
 s 
  []
 
-) [63
+) [67
 
 
 
@@ -715,7 +725,7 @@ s
 
  (mainmatter/ch05/chapter05.tex
 Chapter 5.
-) [64
+) [68
 
 
 
@@ -723,7 +733,7 @@ Chapter 5.
 ]
 \openout2 = `./bibliography.aux'.
 
- (bibliography.tex (thesis.bbl)) [65
+ (bibliography.tex (thesis.bbl)) [69
 
 
 
@@ -748,10 +758,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6F46E6FB655607E70154EB0D36A434F4;5457.
  ) 
 Here is how much of TeX's memory you used:
- 12887 strings out of 475247
- 224941 string characters out of 5758264
+ 12958 strings out of 475247
+ 227003 string characters out of 5758264
  1947785 words of memory out of 5000000
- 33342 multiletter control sequences out of 15000+600000
+ 33367 multiletter control sequences out of 15000+600000
  568758 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,79p,1240b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -775,9 +785,9 @@ public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts
 eX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/User/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/User/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (69 pages, 671360 bytes).
+Output written on thesis.pdf (73 pages, 697427 bytes).
 PDF statistics:
- 1631 PDF objects out of 1728 (max. 8388607)
- 632 named destinations out of 1000 (max. 500000)
+ 1720 PDF objects out of 1728 (max. 8388607)
+ 666 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
