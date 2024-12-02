@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  9 OCT 2024 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  2 DEC 2024 04:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,15 +551,23 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (MathDefinitions/ch02/TriangleInequality.tex)
 (Math/Definitions/ch02/Pseudometric.tex)
 (Math/Definitions/ch02/PseudometricCauchySequence.tex
-Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--11
+Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--22
 [][]\OT1/cmr/bx/n/12 Definition 2.1.18 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
 Se-quence)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 -do-met-ric Space[][]
  []
 
-) (Math/Definitions/ch02/PseudometricSequenceConvergence.tex [7])
-(Math/Props/ch02/PseudometricSequenceConvergence.tex)
+) (Math/Definitions/ch02/PseudometricSequenceConvergence.tex
+Overfull \hbox (7.57043pt too wide) in paragraph at lines 12--42
+\OT1/cmr/m/n/12 Let $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 g[]
+$ \OT1/cmr/m/n/12 be a se-quence in $(\OML/cmm/m/it/12 X; d\OT1/cmr/m/n/12 )$. 
+Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
+ . We say that $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 g[]$ \OT
+1/cmr/m/n/12 ex-hibits  [][]\OT1/cmr/bx/n/12 Pseudometric-
+ []
+
+[7]) (Math/Props/ch02/PseudometricSequenceConvergence.tex)
 (Math/Definitions/ch02/UniformlyCauchy.tex)
 (Math/Definitions/ch02/UniformlyConvergent.tex)
 (Math/Props/ch02/UniformlyConvergent.tex [8])
@@ -626,39 +634,40 @@ m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X=\OMS/cmsy/m/n/12 K[]\OML/cmm/m/it
 (Math/Definitions/ch02/AdjointOperator.tex)
 (Math/Props/ch02/AdjointOperator.tex [32] [33])
 (Math/Definitions/ch02/HigherOrderDualSpaces.tex)
-(Math/Definitions/ch02/CanonicalEmbedding.tex)
+(Math/Definitions/ch02/HigherOrderDualSpaceIsomorphism.tex)
+(Math/Definitions/ch02/CanonicalEmbedding.tex [34])
 (Math/Props/ch02/CanonicalEmbedding.tex
 
-LaTeX Warning: Reference `rmk:doubledualnotation' on page 34 undefined on input
+LaTeX Warning: Reference `rmk:doubledualnotation' on page 35 undefined on input
  line 13.
 
-[34]))
+) [35])
 (mainmatter/ch02/Classical_Results_With_A_Twist/Classical_Results_With_A_Twist.
 tex
 
-LaTeX Warning: Reference `prop:seminormlinearoperators' on page 35 undefined on
+LaTeX Warning: Reference `prop:seminormlinearoperators' on page 36 undefined on
  input line 4.
 
-[35] [36] [37] [38] [39] [40]
+[36] [37] [38] [39] [40] [41]
 
-LaTeX Warning: Reference `prop:pseudometricembedding' on page 41 undefined on i
+LaTeX Warning: Reference `prop:pseudometricembedding' on page 42 undefined on i
 nput line 250.
 
-[41]
+
 Overfull \hbox (96.12717pt too wide) in paragraph at lines 272--274
 []$\OT1/cmr/m/n/12 . Hence, given $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$, t
 here ex-ists $\OML/cmm/m/it/12 N > \OT1/cmr/m/n/12 0$ such that for $\OML/cmm/m
 /it/12 n > N$ \OT1/cmr/m/n/12 we have $\OML/cmm/m/it/12 max [] <
  []
 
-
+[42]
 Overfull \hbox (6.40353pt too wide) in paragraph at lines 282--284
 []\OT1/cmr/m/n/12 (2) By def-i-ni-tion of the norm on $\OML/cmm/m/it/12 X[]$\OT
 1/cmr/m/n/12 , there is an $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 []$ \OT1/cmr/
 m/n/12 such that $2\OML/cmm/m/it/12 = [] <
  []
 
-[42] [43]) (mainmatter/ch02/Reflexivity/Reflexivity.tex [44] [45] [46] [47]
+[43]) (mainmatter/ch02/Reflexivity/Reflexivity.tex [44] [45] [46] [47]
 Overfull \hbox (11.55055pt too wide) in paragraph at lines 135--137
 \OML/cmm/m/it/12 CoLim\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 ^^^[]\OMS/cmsy/m/n/12 
 g[]$\OT1/cmr/m/n/12 , we ex-tract a sub-se-quence $\OMS/cmsy/m/n/12 f\OML/cmm/m
@@ -759,10 +768,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6F46E6FB655607E70154EB0D36A434F4;5457.
  ) 
 Here is how much of TeX's memory you used:
- 12970 strings out of 475247
- 227451 string characters out of 5758264
- 1947785 words of memory out of 5000000
- 33375 multiletter control sequences out of 15000+600000
+ 12982 strings out of 475247
+ 227928 string characters out of 5758264
+ 1952785 words of memory out of 5000000
+ 33381 multiletter control sequences out of 15000+600000
  568758 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,79p,1240b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -786,9 +795,9 @@ public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts
 eX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/User/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/User/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (73 pages, 701882 bytes).
+Output written on thesis.pdf (73 pages, 704505 bytes).
 PDF statistics:
- 1741 PDF objects out of 2073 (max. 8388607)
- 667 named destinations out of 1000 (max. 500000)
+ 1753 PDF objects out of 2073 (max. 8388607)
+ 671 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
