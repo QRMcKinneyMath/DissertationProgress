@@ -8,25 +8,50 @@
 }
 \begin{df}[Scalar Homogeneous]
     Let V be a vector space over a field $\F \in \{\R, \C\}$. 
+    
     We say that a map $p:V \to V$ is \ScalarHomogeneous, if
+    , for each $\alpha \in \F$ and each $x \in V$, we have 
+    \begin{equation}
+        p(\alpha x) = \alpha p(x)
+    \end{equation}
+    Under these circumstances, we may instead say that the operator 
+    p posesses \ScalarHomogeneity.
+\end{df}
+
+\label{def:absolutevaluescalarhomogeneous}
+\newcommand{\AbsScalarHomogeneous}[0]{
+    \bf \hyperref[def:absolutevaluescalarhomogeneous]{Absolutely Scalar Homogeneous} \rm
+}
+
+\newcommand{\AbsScalarHomogeneity}[0]{
+    \bf \hyperref[def:absolutevaluescalarhomogeneous]{Absolute Scalar Homogeneity} \rm
+}
+\begin{df}[Scalar Homogeneous]
+    Let V be a vector space over a field $\F \in \{\R, \C\}$. 
+    
+    We say that a map $p:V \to V$ is \AbsScalarHomogeneous, if
     , for each $\alpha \in \F$ and each $x \in V$, we have 
     \begin{equation}
         p(\alpha x) = \abs{\alpha} p(x)
     \end{equation}
-    Under these circumstances, we may instead say that the operator p posesses \ScalarHomogeneity.
-    
+    Under these circumstances, we may instead say that the operator 
+    p posesses \AbsScalarHomogeneity.
 \end{df}
 
 
 \label{rmk:seminorm}
-\begin{rmk}[Scalar Homogeneous operator at 0 is 0]
+\begin{rmk}[\ScalarHomogeneous or \AbsScalarHomogeneous operator at 0 is 0]
 
 If V is a vector space over $\mathbb{F} \in \{\R, \C\}$, then for each $x \in V$, $0x=0$.
-Hence, if p is a \ScalarHomogeneous operator on v, then for any $x \in V$
+Hence, if p is a \AbsScalarHomogeneous operator on v, then for any $x \in V$
 \begin{equation}
 p(0)=p(0x)=|0|p(x)=0p(x)=0
 \end{equation}
-that is, p(0)=0. 
+If instead p is \ScalarHomogeneous operator on V, then we have
+\begin{equation}
+p(0)=p(0x)=0p(x)=0
+\end{equation}
+that is, in either case,  p(0)=0. 
 \end{rmk}
 
 

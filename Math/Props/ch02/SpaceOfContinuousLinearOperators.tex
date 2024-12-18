@@ -69,7 +69,7 @@ The following are true.
 & \leq\sup\limits_{\norm{x}_X \neq 0} \pa{ \frac{\norm{T_0x}_Y}{\norm{x}_X}} + \sup\limits_{\norm{x}_X \neq 0} \pa{\frac{\norm{T_1x}_Y}{\norm{x}_X}}\\
     \end{align*}
     Hence, $\norm{T_0+T_1} \leq \norm{T_0}+\norm{T_1}$ so that $\norm{\cdot}$ is \Subadditive. 
-    For \ScalarHomogeneity, let $T \in BL(X,Y)$, $\alpha \in \F$, and $x \in X$ with $\norm{x}_X \neq 0$. 
+    For \AbsScalarHomogeneity, let $T \in BL(X,Y)$, $\alpha \in \F$, and $x \in X$ with $\norm{x}_X \neq 0$. 
     Then 
     \begin{align*}
         \frac{\norm{(\alpha T)x}_Y}{\norm{x}_X} = \frac{\norm{\alpha (Tx)}_Y}{\norm{x}_X} = \abs{\alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}
@@ -98,7 +98,7 @@ The following are true.
     \end{equation}
     For each $i \in \N$, define $y_i =\alpha  x_i/\norm{x_i}_X$. 
     then each $\norm{y_i} = \alpha$, 
-    and by \ScalarHomogeneity
+    and by \AbsScalarHomogeneity
     of T, we have 
     \begin{equation}
     \frac{\norm{Ty_i}_Y}{\norm{y_i}_X} = \frac{\norm{Tx_i}_Y}{\norm{x_i}_X} \to \norm{T}

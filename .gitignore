@@ -1,9 +1,11 @@
+thesis.log
 Math/Props/ch*/*.log
 Math/Props/ch*/*.aux
 Math/Definitions/ch*/*.log
 Math/Definitions/ch*/*.aux
-mainmatter/ch*/*.log
-mainmatter/ch*/*.aux
+mainmatter/ch0*/*.log
+mainmatter/ch0*/*.aux
 thesis.log
 thesis.aux
 abstract.aux
+bibliography.aux

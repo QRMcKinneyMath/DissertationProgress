@@ -1,8 +1,0 @@
-\label{def:seminorm}
-\newcommand{\Seminorm}[0]{
-    \bf \hyperref[def:seminorm]{Seminorm} \rm
-}
-\begin{df}[Seminorm]
-    Let V be a vector space over a field $\F \in \{ \R, \C\}$.  
-    We say that a map $\norm{\cdot}:V \to [0,\infty)$ is a \Seminorm on V if it is both \Subadditive and \ScalarHomogeneous. 
-\end{df}

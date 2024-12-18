@@ -7,9 +7,10 @@
 \contentsline {subsection}{\numberline {2.1.4}Quotient Space Topology}{4}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Weak Topologies}{7}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Pseudometrics}{7}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Topological Vector Spaces}{15}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Seminormed Spaces}{15}{subsection.2.1.8}%
-\contentsline {section}{\numberline {2.2}Classical Results With A Twist}{37}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.7}Vector Spaces}{15}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Topological Vector Spaces}{16}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Seminormed Spaces}{16}{subsection.2.1.9}%
+\contentsline {section}{\numberline {2.2}Classical Results With A Twist}{38}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Helly}{38}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Goldstine}{40}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{40}{subsection.2.2.3}%
