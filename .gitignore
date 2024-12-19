@@ -3,9 +3,13 @@ Math/Props/ch*/*.log
 Math/Props/ch*/*.aux
 Math/Definitions/ch*/*.log
 Math/Definitions/ch*/*.aux
+Math/*/*/*.log
+Math/*/*/*.aux
+Math/*/*/*.swo
+Math/*/*/*.swp
 mainmatter/ch0*/*.log
 mainmatter/ch0*/*.aux
-thesis.log
-thesis.aux
+./thesis.log
+./thesis.aux
 abstract.aux
 bibliography.aux
