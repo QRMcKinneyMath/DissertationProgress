@@ -1,0 +1,24 @@
+\label{def:TopologyOfUniformConvergence}
+\newcommand{\TopologyOfUniformConvergence}[0]{
+    \bf \hyperref[def:TopologyOfUniformConvergence]{Topology of Uniform Convergence} \rm
+}
+\begin{df}[\TopologyOfUniformConvergence]
+    Let X be a set and 
+    $(Y, \T_Y)$ be a \TVS.
+    Let $\NbhFilter{\T_Y}{0}$ denote the 
+    \NeighborhoodFilter of $0 \in (Y, \T_Y)$.
+    Suppose $\scF$ is a 
+    \VectorSubspace of the set of 
+    functions  $T:X \to Y$. 
+    Suppose
+    $\scG \subset 2^X$ has the property that 
+    if $a,b \in \scG$ then there is a $c \in \scG$ such that 
+    $a \cup b \subset c$. 
+    For each $x \subset X$ and $y \subset Y$, and  define 
+    $M(x, y) = \{f \in F | f(x) \subset y\}$
+    Now we define 
+    $\T= \{f+ M(x,y) | x \in \scG \wedge y \in \NbhFilter{\T_Y}{0} \wedge f \in F\}$
+    $\T$ is a \TopologyRef on $\scF$ that we call the 
+    \TopologyOfUniformConvergence of $\scF$ on $\scG$. 
+    
+\end{df}
