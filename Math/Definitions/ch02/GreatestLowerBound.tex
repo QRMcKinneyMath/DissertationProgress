@@ -4,6 +4,10 @@
     \bf \hyperref[def:GreatestLowerBound]{Greatest Lower Bound} \rm
 }
 
+\newcommand{\GreatestLowerBounds}[0]{
+    \bf \hyperref[def:GreatestLowerBound]{Greatest Lower Bounds} \rm
+}
+
 \newcommand{\Inf}[0]{
     \bf \hyperref[def:GreatestLowerBound]{Inf} \rm
 }
@@ -12,15 +16,28 @@
     \bf \hyperref[def:GreatestLowerBound]{Infimum} \rm
 }
 
-\begin{df}[Upper Bound]
+\newcommand{\Infima}[0]{
+    \bf \hyperref[def:GreatestLowerBound]{Infima} \rm
+}
+
+\newcommand{\GLB}[0]{
+	\bf \hyperref[def:GreatestLowerBound]{GLB} \rm
+}
+
+\begin{df}[\GreatestLowerBound]
     Let $X \neq \emptyset$ be a set. 
     Let $R$ be a \Relation on X. 
     Let $Y \subset X$.
-    Let $a \in X$ be a \LowerBound for $Y$
-    such that for any other
-    \LowerBound $b \in X$ for $Y$, if 
-    $a \leq b$, then $a = b$.
-    
-    Under these circumstances, we say that $a$ 
-    is a \GreatestLowerBound for $Y$. 
+	Let $a \in X$. 
+	We say that $a$ is a
+	\GreatestLowerBound of $Y$ if 
+	$a \in \Maxima(\LB(Y))$.
+	We denote the set of \GreatestLowerBounds
+	for $Y$ with $\GLB(Y)$.
+	If $b \in \GLB(Y)$, then we 
+	also call $b$ a 
+	\Infimum of $Y$. 
+	The Plural of \Infimum is \Infima. 
+	If $\GLB(Y)=\{c\}$, then 
+	we write $c=\Inf(Y)$.  
 \end{df}

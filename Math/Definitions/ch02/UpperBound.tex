@@ -3,11 +3,19 @@
     \bf \hyperref[def:UpperBound]{Upper Bound} \rm
 }
 
+\newcommand{\UpperBounds}[0]{
+    \bf \hyperref[def:UpperBound]{Upper Bounds} \rm
+}
+
 \newcommand{\BoundedFromAbove}[0]{
     \bf \hyperref[def:UpperBound]{Bounded From Above} \rm
 }
 
-\begin{df}[Upper Bound]
+\newcommand{\UB}[0]{
+	\bf \hyperref[def:UpperBound]{UpperBound} \rm
+}
+
+\begin{df}[\UpperBound]
     Let $X \neq \emptyset$ be a set. 
     Let $R$ be a \Relation on X. 
     Let $Y \subset X$.
@@ -16,9 +24,13 @@
     \UpperBound for $Y$ if
     for every $x \in Y$, 
     we have $x R a$. 
-    
     If $a$ is an \UpperBound
     then we also say that 
     the set Y is \BoundedFromAbove
     by a. 
+	We denote the set of \UpperBounds of 
+	$Y$ with respect to the relation $R$ with
+	$\UB_R(Y)$. 
+	When $R$ is understood, we denote this set with
+	$\UB(Y)$. 
 \end{df}

@@ -1,0 +1,55 @@
+\label{def:MinimalElement}
+\newcommand{\MinimalElement}[0]{
+    \bf \hyperref[def:MinimalElement]{Minimal Element} \rm
+}
+
+\newcommand{\Minimum}[0]{
+    \bf \hyperref[def:MinimalElement]{Minimum} \rm
+}
+
+\newcommand{\Minima}[0]{
+    \bf \hyperref[def:MinimalElement]{Minima} \rm
+}
+
+\begin{df}[\MinimalElement]
+    Let $X \neq \emptyset$ be a set. 
+    Let $R$ be an 
+    \Relation on $X$. 
+    Let $Y \subset X$.
+    Let $a \in Y$. 
+    We say that $a$ is a 
+    \MinimalElement of $Y$, 
+    or equivalently we say that 
+    $a$ is a \Minimum of Y 
+    if for every $b \in Y$, 
+    we have $a \leq b$. 
+	The Plural of \Minimum is \Minima, 
+	and we represent the set of \Minima of Y with 
+	respect to the relation $R$ with 
+	$\Minima_R(Y)$, or if $R$ is understood, 
+	we represent the set of $\Minima$ of Y with 
+	$\Minima(Y)$. 
+	
+	
+\end{df}
+
+\begin{prop}[\MinimalElement unique if R is \AntiSymmetricRelation]
+	Let $X \neq \emptyset$ be a set. 
+	Let $R$ be an
+	\AntiSymmetricRelation
+	\Relation
+	on X. 
+	Let $Y \subset X$.
+	Let $a$ and $b$ be 
+	each be a \MinimalElement
+	of Y. 
+	Then $a=b$. 
+	\begin{proof}
+		Since $a \in \Minima(Y)$, 
+		$a \leq b$. 
+		Since $b \in \Minima(Y)$, 
+		$b \leq a$. 
+		By \RelationAntiSymmetry, 
+		$b = a$. 
+	\end{proof}
+\end{prop}

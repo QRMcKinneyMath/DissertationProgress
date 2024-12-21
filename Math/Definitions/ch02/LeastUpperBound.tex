@@ -4,6 +4,10 @@
     \bf \hyperref[def:LeastUpperBound]{Least Upper Bound} \rm
 }
 
+\newcommand{\LeastUpperBounds}[0]{
+    \bf \hyperref[def:LeastUpperBound]{Least Upper Bounds} \rm
+}
+
 \newcommand{\Sup}[0]{
     \bf \hyperref[def:LeastUpperBound]{Sup} \rm
 }
@@ -12,15 +16,28 @@
     \bf \hyperref[def:LeastUpperBound]{Supremum} \rm
 }
 
-\begin{df}[Upper Bound]
+\newcommand{\Suprema}[0]{
+    \bf \hyperref[def:LeastUpperBound]{Suprema} \rm
+}
+
+\newcommand{\LUB}[0]{
+	\bf \hyperref[def:LeastUpperBound]{LUB} \rm
+}
+
+\begin{df}[\LeastUpperBound]
     Let $X \neq \emptyset$ be a set. 
     Let $R$ be a \Relation on X. 
     Let $Y \subset X$.
-    Let $a \in X$ be an \UpperBound for $Y$
-    such that for any other
-    \UpperBound $b \in X$ for $Y$, if 
-    $b \leq a$, then $a = b$.
-    
-    Under these circumstances, we say that $a$ 
-    is a \LeastUpperBound for $Y$. 
+	Let $a \in X$. 
+	We say that $a$ is a
+	\LeastUpperBound of $Y$ if 
+	$a \in \Minima(\UB(Y))$.
+	We denote the set of \LeastUpperBounds
+	for $Y$ with $\LUB(Y)$.
+	If $b \in \LUB(Y)$, then we 
+	also call $b$ a 
+	\Supremum of $Y$. 
+	The Plural of \Supremum is \Suprema.
+	If $\LUB(Y)=\{c\}$, 
+	then we write $c=\Sup(Y)$. 
 \end{df}

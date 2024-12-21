@@ -7,9 +7,14 @@
     \bf \hyperref[def:MaximalElement]{Maximum} \rm
 }
 
-\begin{df}[Upper Bound]
+\newcommand{\Maxima}[0]{
+    \bf \hyperref[def:MaximalElement]{Maxima} \rm
+}
+
+\begin{df}[\MaximalElement]
     Let $X \neq \emptyset$ be a set. 
-    Let $R$ be a \Relation on X. 
+    Let $R$ be an 
+    \Relation on $X$. 
     Let $Y \subset X$.
     Let $a \in Y$. 
     We say that $a$ is a 
@@ -18,9 +23,33 @@
     $a$ is a \Maximum of Y 
     if for every $b \in Y$, 
     we have $b \leq a$. 
-    
-    If we further assume that 
-    Y has exactly 1 \MaximalElement 
-    then we write 
-    $a=max(Y)$. 
+	The Plural of \Maximum is a \Maxima, 
+	and we represent the set of \Maxima of Y with 
+	respect to the relation $R$ with 
+	$\Maxima_R(Y)$, or if $R$ is understood, 
+	we represent the set of $\Maxima$ of Y with 
+	$\Maxima(Y)$. 
+	
+	
 \end{df}
+
+\begin{prop}[\MaximalElement unique if R is \AntiSymmetricRelation]
+	Let $X \neq \emptyset$ be a set. 
+	Let $R$ be an
+	\AntiSymmetricRelation
+	\Relation
+	on X. 
+	Let $Y \subset X$.
+	Let $a$ and $b$ be 
+	each be a \MaximalElement
+	of Y. 
+	Then $a=b$. 
+	\begin{proof}
+		Since $a \in \Maxima(Y)$, 
+		$b \leq a$. 
+		Since $b \in \Maxima(Y)$, 
+		$a \leq b$. 
+		By \RelationAntiSymmetry, 
+		$b = a$. 
+	\end{proof}
+\end{prop}

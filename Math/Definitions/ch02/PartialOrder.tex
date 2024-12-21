@@ -1,5 +1,9 @@
 \label{def:PartialOrder}
 \newcommand{\PartialOrder}[0]{
+    \bf \hyperref[def:PartialOrder]{Partial Order} \rm
+}
+
+\newcommand{\PartialOrdering}[0]{
     \bf \hyperref[def:PartialOrder]{Partial Ordering} \rm
 }
 
@@ -9,12 +13,10 @@
 
 \begin{df}[\PartialOrder]
     Let $X \neq \emptyset$ be a set.
-    Let $\leq$ be a \Relation on X. 
-    We say that $\leq$ is an \PartialOrder on X
-    if $\leq$ is
-    \ReflexiveRelation
-    , \AntiSymmetricRelation
-    , and \TransitiveRelation.
+    Let $\leq$ be a \Preorder on X. 
+    We say that $\leq$ is a \PartialOrder on $X$
+    and we say that $\leq$ is a \PartialOrdering of $X$ 
+    if $\leq$ is \AntiSymmetricRelation.
     Let $\leq$ is a \PartialOrder on X, the we 
     refer to the pair $(X,\leq)$ as a 
     \Poset.    

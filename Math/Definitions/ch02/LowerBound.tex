@@ -6,8 +6,14 @@
 \newcommand{\BoundedFromBelow}[0]{
     \bf \hyperref[def:LowerBound]{Bounded From Below} \rm
 }
+\newcommand{\LowerBounds}[0]{
+	\bf \hyperref[def:LowerBound]{Lower Bounds} \rm
+}
+\newcommand{\LB}[0]{
+	\bf \hyperref[def:LowerBound]{LowerBound} \rm
+}
 
-\begin{df}[Lower Bound]
+\begin{df}[\LowerBound]
     Let $X \neq \emptyset$ be a set. 
     Let $R$ be a \Relation on X. 
     Let $Y \subset X$.
@@ -16,9 +22,13 @@
     \LowerBound for $Y$ if
     for every $x \in Y$, 
     we have $a R x$. 
-    
     If $a$ is an \LowerBound
     then we also say that 
     the set Y is \BoundedFromBelow
     by a. 
+	We denote the set of \LowerBounds of 
+	$Y$ with respect to the relation $R$ with
+	$\LB_R(Y)$. 
+	When $R$ is understood, we denote this set with
+	$\LB(Y)$. 
 \end{df}
