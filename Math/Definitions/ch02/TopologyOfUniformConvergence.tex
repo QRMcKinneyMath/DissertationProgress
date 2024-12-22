@@ -11,14 +11,14 @@
     \VectorSubspace of the set of 
     functions  $T:X \to Y$. 
     Suppose
-    $\scG \subset 2^X$ has the property that 
-    if $a,b \in \scG$ then there is a $c \in \scG$ such that 
-    $a \cup b \subset c$. 
+    $\scG \subset 2^X$  such that 
+	$(\scG, \subset)$ is a \DirectedSet.
     For each $x \subset X$ and $y \subset Y$, and  define 
-    $M(x, y) = \{f \in F | f(x) \subset y\}$
+    $M(x, y) = \{f \in \scF | f(x) \subset y\}$
     Now we define 
-    $\T= \{f+ M(x,y) | x \in \scG \wedge y \in \NbhFilter{\T_Y}{0} \wedge f \in F\}$
-    $\T$ is a \TopologyRef on $\scF$ that we call the 
-    \TopologyOfUniformConvergence of $\scF$ on $\scG$. 
-    
+    $\T(\scF, \T_Y, \scG)= \{f+ M(x,y) | x \in \scG \wedge y \in \NbhFilter{\T_Y}{0} \wedge f \in \scF\}$.
+	We call $\T(\scF, \T_Y, \scG)$ the \TopologyOfUniformConvergence of $\scF$ on $\scG$ with respect to $\T_Y$. 
+	When $\scF$, $\T_Y$ or $\scG$ are understood they may be omitted from the reference. 
+	By \ref{prop:TopologyOfUniformConvergence}, $\T$ is a 
+	\TopologyRef on $\scF$. 
 \end{df}

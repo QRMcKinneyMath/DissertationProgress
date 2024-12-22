@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  21 DEC 2024 07:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  22 DEC 2024 06:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,19 +534,20 @@ Chapter 2.
 
 (mainmatter/ch02/Weak_Topologies_and_Dual_Spaces_Of_Seminormed_Spaces/Weak_Topo
 logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
+(Math/Definitions/ch02/SetTheoryDefinitions.tex)
 (Math/Definitions/ch02/TopologicalLatexDefinitions.tex)
 (Math/Definitions/ch02/Relation.tex)
 (Math/Definitions/ch02/ReflexiveRelation.tex)
 (Math/Definitions/ch02/TransitiveRelation.tex)
 (Math/Definitions/ch02/PreOrder.tex)
 (Math/Definitions/ch02/SymmetricRelation.tex)
-(Math/Definitions/ch02/AntisymmetricRelation.tex)
-(Math/Definitions/ch02/MaximalElement.tex [2
+(Math/Definitions/ch02/AntisymmetricRelation.tex [2
 
 
 
 
 ])
+(Math/Definitions/ch02/MaximalElement.tex)
 (Math/Definitions/ch02/MinimalElement.tex)
 (Math/Definitions/ch02/UpperBound.tex) (Math/Definitions/ch02/LowerBound.tex)
 (Math/Definitions/ch02/LeastUpperBound.tex)
@@ -564,13 +565,22 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (Math/Props/ch02/QuotientMapSurjective.tex [5])
 (Math/Props/ch02/QuotientSpaceTopologyDefinition.tex)
 (Math/Props/ch02/QuotientSpaceTopologyProp.tex [6] [7] [8])
-(Math/Definitions/ch02/WeakTopology.tex)
-(Math/Definitions/ch02/SymmetricMap.tex)
+(Math/Definitions/ch02/WeakTopology.tex
+! Undefined control sequence.
+l.13 	\TopologyCoarsest
+                        possible
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) (Math/Definitions/ch02/SymmetricMap.tex)
 (MathDefinitions/ch02/TriangleInequality.tex)
 (Math/Definitions/ch02/Pseudometric.tex [9])
 (Math/Definitions/ch02/PseudometricCauchySequence.tex
 Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--22
-[][]\OT1/cmr/bx/n/12 Definition 2.1.36 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
+[][]\OT1/cmr/bx/n/12 Definition 2.1.37 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
 Se-quence)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 -do-met-ric Space[][]
@@ -604,24 +614,25 @@ Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
 (Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Additive.tex)
 (Math/Definitions/ch02/Linear.tex)
 (Math/Definitions/ch02/SpaceOfLinearOperators.tex [17])
-(Math/Definitions/ch02/TopologicalVectorSpace.tex)
+(Math/Definitions/ch02/BalancedSet.tex) (Math/Definitions/ch02/AbsorbingSet.tex
+) (Math/Definitions/ch02/TopologicalVectorSpace.tex)
 (Math/Definitions/ch02/TVSBoundedSet.tex)
 (Math/Definitions/ch02/SpaceOfBoundedLinearOperators.tex)
 (Math/Definitions/ch02/TVSContinuousLinearOperator.tex)
-(Math/Definitions/ch02/TopologyOfUniformConvergence.tex)
-(Math/Definitions/ch02/Seminorm.tex [18])
+(Math/Definitions/ch02/TopologyOfUniformConvergence.tex [18])
+(Math/Props/ch02/TopologyOfUniformConvergence.tex)
+(Math/Definitions/ch02/Seminorm.tex)
 (Math/Props/ch02/SubadditiveInducesTriangleInequality.tex)
-(Math/Definitions/ch02/SeminormTopology.tex)
-(Math/Definitions/ch02/SeminormKernel.tex [19])
-(Math/Props/ch02/SeminormKernel.tex)
+(Math/Definitions/ch02/SeminormTopology.tex [19])
+(Math/Definitions/ch02/SeminormKernel.tex) (Math/Props/ch02/SeminormKernel.tex)
 (Math/Definitions/ch02/EquivalenceModKernel.tex [20])
 (Math/Props/ch02/EquivalenceModKernelIsPseudometricEquivalence.tex)
-(Math/Definitions/ch02/SeminormQuotient.tex)
-(Math/Props/ch02/QuotientNormedSpace.tex [21] [22])
-(Math/Remarks/ch02/QuotientNormedSpace.tex)
-(Math/Props/ch02/QuotientsPreserveCompleteness.tex [23])
-(Math/Definitions/ch02/SpaceOfContinuousLinearOperators.tex)
-(Math/Props/ch02/SpaceOfContinuousLinearOperators.tex [24] [25]
+(Math/Definitions/ch02/SeminormQuotient.tex [21])
+(Math/Props/ch02/QuotientNormedSpace.tex [22])
+(Math/Remarks/ch02/QuotientNormedSpace.tex [23])
+(Math/Props/ch02/QuotientsPreserveCompleteness.tex)
+(Math/Definitions/ch02/SpaceOfContinuousLinearOperators.tex [24])
+(Math/Props/ch02/SpaceOfContinuousLinearOperators.tex [25]
 Overfull \hbox (16.98431pt too wide) in paragraph at lines 109--115
 []\OT1/cmr/m/n/12 If we de-fine, for $\OML/cmm/m/it/12 T \OMS/cmsy/m/n/12 2 \OM
 L/cmm/m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 )$, $\OML
@@ -632,32 +643,32 @@ en since $[][] ((0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ^^Z
 [26] [27] [28] [29]) (Math/Definitions/ch02/HandedQuotientOperators.tex)
 (Math/Props/ch02/HandedQuotientOperators.tex
 Overfull \hbox (1.5653pt too wide) in paragraph at lines 3--8
-[][]\OT1/cmr/bx/n/12 Proposition 2.1.82 \OT1/cmr/m/n/12 (Codomain Quo-tient Op-
+[][]\OT1/cmr/bx/n/12 Proposition 2.1.86 \OT1/cmr/m/n/12 (Codomain Quo-tient Op-
 er-a-tor)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let X and Y be  [][]\OT1/cmr/bx/
 n/12 Semi-normed Spaces[][]
  []
 
-[30]) (Math/Definitions/ch02/QuotientOperator.tex)
-(Math/Props/ch02/QuotientOperator.tex [31])
-(Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
-(Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex [32])
+[30]) (Math/Definitions/ch02/QuotientOperator.tex [31])
+(Math/Props/ch02/QuotientOperator.tex)
+(Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex
+[32]) (Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
 (Math/Definitions/ch02/TopologicalDualOfSeminormedSpace.tex
 Overfull \hbox (47.55653pt too wide) in paragraph at lines 27--33
 []\OT1/cmr/m/n/12 Also, $\OML/cmm/m/it/12 q \OT1/cmr/m/n/12 : \U/msb/m/n/12 F \
 OMS/cmsy/m/n/12 ! \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]$ \OT1/c
-mr/m/n/12 is a lin-ear bi-jec-tive isom-e-try by [][]2.1.75[][], so if $\OML/cm
+mr/m/n/12 is a lin-ear bi-jec-tive isom-e-try by [][]2.1.79[][], so if $\OML/cm
 m/m/it/12 Q \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 X[] \OMS/cmsy/m/n/12 ! \OML/cmm/
 m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X=\OMS/cmsy/m/n/12 K[]\OML/cmm/m/it
 /12 ; \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]\OT1/cmr/m/n/12 )$
  []
 
-) (Math/Definitions/ch02/TopologicalDualSpace.tex)
-(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex [33])
+) (Math/Definitions/ch02/TopologicalDualSpace.tex [33])
+(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex)
 (Math/Theorems/ch02/HahnBanachSeminormed.tex [34])
 (Math/Remarks/ch02/LinearOperationNotation.tex [35])
 (Math/Definitions/ch02/AdjointOperator.tex)
-(Math/Props/ch02/AdjointOperator.tex [36])
-(Math/Definitions/ch02/HigherOrderDualSpaces.tex [37])
+(Math/Props/ch02/AdjointOperator.tex [36] [37])
+(Math/Definitions/ch02/HigherOrderDualSpaces.tex)
 (Math/Definitions/ch02/HigherOrderDualSpaceIsomorphism.tex)
 (Math/Definitions/ch02/CanonicalEmbedding.tex)
 (Math/Props/ch02/CanonicalEmbedding.tex [38] [39])
@@ -667,19 +678,20 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 26.
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)))
+))
+[40])
 (mainmatter/ch02/Classical_Results_With_A_Twist/Classical_Results_With_A_Twist.
 tex
 
-LaTeX Warning: Reference `prop:seminormlinearoperators' on page 40 undefined on
+LaTeX Warning: Reference `prop:seminormlinearoperators' on page 41 undefined on
  input line 4.
 
-[40] [41] [42] [43] [44] [45]
+[41] [42] [43] [44] [45] [46]
 
-LaTeX Warning: Reference `prop:pseudometricembedding' on page 46 undefined on i
+LaTeX Warning: Reference `prop:pseudometricembedding' on page 47 undefined on i
 nput line 250.
 
-[46]
+
 Overfull \hbox (96.12717pt too wide) in paragraph at lines 272--274
 []$\OT1/cmr/m/n/12 . Hence, given $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$, t
 here ex-ists $\OML/cmm/m/it/12 N > \OT1/cmr/m/n/12 0$ such that for $\OML/cmm/m
@@ -794,13 +806,13 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: F1AC9B668A4F8BDE9BBC398D03952A76;6559.
  ) 
 Here is how much of TeX's memory you used:
- 13277 strings out of 475247
- 237500 string characters out of 5758264
- 1948785 words of memory out of 5000000
- 33567 multiletter control sequences out of 15000+600000
+ 13355 strings out of 475247
+ 239590 string characters out of 5758264
+ 1949785 words of memory out of 5000000
+ 33632 multiletter control sequences out of 15000+600000
  569466 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,20n,79p,1127b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,20n,79p,1127b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -823,9 +835,9 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/User/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
 sers/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
 m7.pfb>
-Output written on thesis.pdf (79 pages, 770988 bytes).
+Output written on thesis.pdf (79 pages, 788594 bytes).
 PDF statistics:
- 2034 PDF objects out of 2073 (max. 8388607)
- 710 named destinations out of 1000 (max. 500000)
+ 2124 PDF objects out of 2487 (max. 8388607)
+ 714 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

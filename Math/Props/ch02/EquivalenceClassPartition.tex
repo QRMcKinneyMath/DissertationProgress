@@ -2,7 +2,9 @@
     \label{prop:EquivalenceClassesPartition}
     
     Let $X \neq \emptyset$. 
-    Let $\cong$ be an equivalence relation defined on X. 
+    Let $\cong$ be an 
+	\EquivalenceRelation
+	defined on X. 
     Let $x,y \in X$. 
     The following statements are equivalent. 
     \begin{enumerate}
@@ -16,8 +18,8 @@
 \begin{proof}[Proof That $1 \implies 2$]
 Suppose $M:=[x]_{\cong} \cap [y]_{\cong} \neq \emptyset$. 
 Then there exists $z \in M$.
-Then $z \cong x$, so by symmetry, $x \cong z$. 
-But by transitivity, pair with $z \cong y$, we conclude $x \cong y$. 
+Then $z \cong x$, so by \RelationSymmetry, $x \cong z$. 
+But by \RelationTransitivity, pair with $z \cong y$, we conclude $x \cong y$. 
 \end{proof}
 \begin{proof}[Proof That $2 \implies 4$]
     Let $x \cong y$ and let $z \in [x]_{\cong}$. 
@@ -25,7 +27,8 @@ But by transitivity, pair with $z \cong y$, we conclude $x \cong y$.
     Since z was arbitrary, we're done. 
 \end{proof}
 \begin{proof}[Proof That $2 \implies 5$]
-    Let $x \cong y$. By symmetry, $y \cong x$, so by $(2 \implies 4)$, we are done. 
+    Let $x \cong y$. By 
+	\RelationSymmetry, $y \cong x$, so by $(2 \implies 4)$, we are done. 
 \end{proof}
 \begin{proof}[Proof That $2 \implies 3$]
     Since  $2 \implies 4$ and $2 \implies 5$ and 5 and 4 together imply 3, we have this. 

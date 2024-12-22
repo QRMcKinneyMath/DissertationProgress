@@ -2,28 +2,38 @@
 \begin{prop}[\RelationOfEqualNeighborhoodFilters]
     \label{prop:EqualNeighborhoodFiltersEquivalenceRelation}
     
-    The relation of equal neighborhood filters $\cong$ on a topological space $(Z,\T_Z)$ forms an equivalence relation on Z. 
+    The
+	\RelationOfEqualNeighborhoodFilters
+	$\cong$ on a \TopologicalSpaceRef $(Z,\T_Z)$ forms an 
+	\EquivalenceRelation	
+	on Z. 
     \begin{proof}
         
         Let $x \in (Z,\T_Z)$. 
         Then $\NbhFilter{\Topology{Z}{\T}}{x}$=$\NbhFilter{\Topology{Z}{\T}}{x}$, so $x \cong x$.
-        Thus $\cong$ is reflexive. 
+        Thus $\cong$ is 
+		\ReflexiveRelation. 
         
         Let $x,y \in (Z,\T_Z)$. 
         Suppose $x \cong y$. 
         Then  $\NbhFilter{\Topology{Z}{\T}}{x} = \NbhFilter{\Topology{Z}{\T}}{y}$
         , so trivially  $\NbhFilter{\Topology{Z}{\T}}{y} =\NbhFilter{\Topology{Z}{\T}}{x}$
         , and thus $y \cong x$.
-        Hence, $\cong$ is symmetic. . 
+        Hence, $\cong$ is 
+		\SymmetricRelation
         
         Let $x,y,z \in (Z,\T_Z)$.
         Let $x \cong y$ and $y \cong z$. 
         Then, 
          $\NbhFilter{\Topology{Z}{\T}}{x}= \NbhFilter{\Topology{Z}{\T}}{y} =  \NbhFilter{\Topology{Z}{\T}}{z}$
          so that $x \cong z$.
-         Thus $\cong$ is transitive. 
+         Thus $\cong$ is \TransitiveRelation
          
-         Since $\cong$ is Reflexive, Symmetric, and Transitive, it is an equivalence relation. 
+         Since $\cong$ is 
+		 \ReflexiveRelation
+		, \SymmetricRelation
+		, and \TransitiveRelation, it is an 
+		\EquivalenceRelation. 
         
     \end{proof}
 \end{prop}

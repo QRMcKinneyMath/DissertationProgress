@@ -1,0 +1,46 @@
+\label{def:AbsorbingSet}
+\newcommand{\Absorbing}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorbing} \rm
+}
+\newcommand{\AbsorbingSet}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorbing Set} \rm
+}
+\newcommand{\AbsorbingSets}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorbing Sets} \rm
+}
+\newcommand{\Absorbed}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorbed} \rm
+}
+\newcommand{\Absorb}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorb} \rm
+}
+\newcommand{\Absorbs}[0] {
+    \bf \hyperref[def:AbsorbingSet]{Absorbs} \rm
+}
+
+\begin{df}[\Absorbing]
+    Let V be a \VectorSpace
+    over a 
+    \Field
+    $\F \in \{\R, \C\}$. 
+    Let $A, B \subset V$. 
+    We say that $A$ 
+    \Absorbs
+    $B$ if 
+    there exists a 
+    $c > 0$ 
+    such that
+    for every $d \in \F$ 
+    with $\abs{d} > c$ 
+    we have 
+    $B \subset dA$. 
+    In such a Scenario, 
+    $A$ is also said to 
+    \Absorb $B$, 
+    and we say that $B$ is 
+    \Absorbed by $A$.
+    If $A$ \Absorbs every Singleton in $V$, 
+    then we call $A$ an 
+    \AbsorbingSet or we say that $A$
+    is \Absorbing. 
+\end{df}

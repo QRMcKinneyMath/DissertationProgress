@@ -2,22 +2,23 @@
 \begin{prop}[Quotient Space Topology]
     \label{prop:QuotientSpaceTopology}
     
-    Let $(Z,\T_Z)$ be a topological space 
+    Let $(Z,\T_Z)$ be a 
+	\TopologicalSpaceRef
     with \QuotientTopologicalSpace  $\pa{Z/\cong, \T_{Z/\cong}}$
     and \QuotientMap T.
     
     Then the following are true. 
     \begin{enumerate}
-        \item $\T_{Z/\cong}$ is a topology on $Z/\cong$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is continuous. 
-        \item If U is open (closed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ partition $Z/\cong$. 
-        \item If U is open in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
-        \item If K is closed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is an open mapping. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is a  closed mapping.
-        \item $(Z, \T_Z)$ is a compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a compact space.
-        \item If $\scB$ is a basis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a basis for $\T_{Z/\cong}$. 
-        \item If T is injective, then it is a \Homeomorphism. 
+        \item $\T_{Z/\cong}$ is a \TopologyRef on $Z/\cong$. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \Continuous. 
+        \item If U is \SetOpen (\SetClosed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ \Partition $Z/\cong$. 
+        \item If U is \SetOpen in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
+        \item If K is \SetClosed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \MapOpen. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \MapClosed.
+        \item $(Z, \T_Z)$ is a \Compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a \Compact space.
+        \item If $\scB$ is a \TopologyBasis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a \TopologyBasis for $\T_{Z/\cong}$. 
+        \item If T is \Injective, then it is a \Homeomorphism. 
     \end{enumerate} 
     \begin{proof}[Proof of 1]
         Since $\emptyset \in \T_Z$, we have 
@@ -48,7 +49,7 @@
             [x_0] \in \bigcap\limits_{i=1}^n \bigcup\limits_{x \in B_i} \{T(x)\}
         \end{equation}
         Then for each $i \in \{1,..., n\}$, there is a $y_i \in B_i$ such that $ y_i \cong x_0$. 
-        Since each $B_i$ is open, the definition of $\cong$ implies that $x_0 \in B_i$ for every i. Hence, 
+        Since each $B_i$ is \SetOpen, the definition of $\cong$ implies that $x_0 \in B_i$ for every i. Hence, 
         \begin{equation} 
             x_0 \in \bigcap_{i=1}^n B_i
         \end{equation} 
@@ -81,15 +82,22 @@
             [x_0] \in T(y_0) = \{[y_0]\}
         \end{equation}
         Therefore, $x \cong y$. 
-        Definition of the relation of equal neighborhood filters implies $\scU(x_0)=\scU(y_0)$. 
+        Definition of the 
+		\RelationOfEqualNeighborhoodFilters 
+		implies $\scU(x_0)=\scU(y_0)$. 
         Hence, $x_0 \in U \subset T^{-1}(V)$.
     \end{proof}
     \begin{proof}[Proof of 3]
         Let $K$ be closed in $(Z,\T_Z)$. 
-        Then each point $x_0$ in $Z\setminus K$ has some $U_{x_0} \in \scU_{\T_Z}(x_0)$ which is disjoint from K.
+        Then each point $x_0$ in $Z\setminus K$ has some $U_{x_0} \in \scU_{\T_Z}(x_0)$ which is 
+		\Disjoint 
+		from K.
         Hence $y_0 \not \cong x_0$ for any $y_0 \in K$, $x_0 \in Z\setminus K$. 
-        Hence $T(K)$ is disjoint from $T\pa{Z \setminus K}$. 
-        This fact, paired with \ref{prop:QuotientMapSurjective}, implies $T(Z\setminus K)$ and T(K) partition $Z/\cong$.
+        Hence $T(K)$ is 
+		\Disjoint 
+		from $T\pa{Z \setminus K}$. 
+        This fact, paired with \ref{prop:QuotientMapSurjective}, implies $T(Z\setminus K)$ and T(K) 
+		is a \Partition of $Z/\cong$.
     \end{proof}
     \begin{proof}[Proof of 4]
         Let $U \in \T_Z$. 
@@ -102,7 +110,9 @@
         Since y was arbitrary, $T^{-1}\pa{T(U)} \subset U$, and equality is obvious because the other direction of inclusion is trivial. 
     \end{proof}
     \begin{proof}[Proof of 5]
-        Let K be closed in $(Z,\T_Z)$. Part 3 Of this result implies $Z/\cong$ is partitioned by $T(K)$ and $T(Z\setminus K)$. 
+        Let K be 
+		\SetClosed 
+		in $(Z,\T_Z)$. Part 3 Of this result implies $Z/\cong$ is partitioned by $T(K)$ and $T(Z\setminus K)$. 
         
         By part 4 of this proposition, 
         \begin{align*}
@@ -121,25 +131,28 @@
         \end{equation}
     \end{proof}  
     \begin{proof}[Proof of 7] 
-        Let K be closed in $(Z,\T_Z)$. 
+        Let K be \SetClosed in $(Z,\T_Z)$. 
         Then $Z \setminus K \in \T_Z$. 
         By Parts 3 and five of this proposition, we know $T(K) = Z/\cong \setminus T(Z\setminus K)$ and also that $T(Z\setminus K) \in \T_{Z/\cong}$. Hence $T(K)$ is closed in $(Z/\cong, \T_{Z/\cong})$. 
     \end{proof} 
     \begin{proof}[Proof of 8]
-        Let $(Z,\T_Z)$ be compact. 
+        Let $(Z,\T_Z)$ be \SetCompact. 
         Let $\{U_{\alpha}\}_{\alpha \in A}$ be an open covering of $(Z/\cong, \T_{Z/\cong})$. 
         Then $\{T^{-1}\pa{U_{\alpha}} | \alpha \in A\}$ is an open covering of $(Z, \T_Z)$. 
-        Compactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}} | i \in \{1, ..., n\}\}$. 
+        \SetCompactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}} | i \in \{1, ..., n\}\}$. 
         Hence
-        $\{U_{\alpha_i} | i \in \{1, ..., n\}\}=\{TT^{-1}(U_{\alpha_i}) | i \in \{1, ..., n\}\}$ is an open covering of $(Z/\cong, \T_{Z/\cong})$. 
-         And the compactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
+        $\{U_{\alpha_i} | i \in \{1, ..., n\}\}=\{TT^{-1}(U_{\alpha_i}) | i \in \{1, ..., n\}\}$ is an 
+		\OpenCover of $(Z/\cong, \T_{Z/\cong})$. 
+         And the \SetCompactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
          
          
-         Now, suppose $(Z/\cong, \T_{Z/\cong})$ is compact. 
-         Let $\{V_{\beta} | \beta \in B\}$ be an open covering of $(Z, \T_Z)$. 
-         Since T is an open mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an open covering of $(Z/\cong, \T_{Z/\cong})$ which by compactness has a finite subcover $\{T(V_{\beta_i}) | i \in \{1, ..., n\}\}$. 
+         Now, suppose $(Z/\cong, \T_{Z/\cong})$ is \SetCompact. 
+         Let $\{V_{\beta} | \beta \in B\}$ be an \OpenCover of $(Z, \T_Z)$. 
+         Since T is an \MapOpen mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an 
+		 \OpenCover of $(Z/\cong, \T_{Z/\cong})$ which by 
+		 \SetCompactness has a \Finite \SubCover $\{T(V_{\beta_i}) | i \in \{1, ..., n\}\}$. 
          By part 4 of \ref{prop:QuotientSpaceTopology}, 
-         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an open subcovering of $(Z, \T_Z)$. 
+         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an \OpenSubCover of $(Z, \T_Z)$. 
      %    
     \end{proof}
     \begin{proof}[Proof of 9]
@@ -153,6 +166,9 @@
         \end{align*}
      \end{proof} 
      \begin{proof} [Proof of 10]
-            If T is Injective, then since it is Continuous Part 2 of this result, open by part 6 of this result, and surjective by \ref{prop:QuotientMapSurjective}, it is a bicontinous bijection, that is, a \Homeomorphism. 
+            If T is \Injective
+			, then since it is \Continuous Part 2 of this result, open by part 6 of this result, and \Surjective by \ref{prop:QuotientMapSurjective}, it is a 
+			\Bicontinuous 
+			\Bijection, that is, a \Homeomorphism. 
          \end{proof}
 \end{prop} 
