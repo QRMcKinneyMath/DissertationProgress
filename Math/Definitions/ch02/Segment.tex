@@ -1,0 +1,55 @@
+\label{def:Interval}
+\newcommand{\Interval}[0]{
+    \bf \hyperref[def:Interval]{Interval} \rm
+}
+\newcommand{\Intervals}[0]{
+    \bf \hyperref[def:Interval]{Intervals} \rm
+}
+\newcommand{\ClosedInterval}[0]{
+    \bf \hyperref[def:Interval]{Closed Interval} \rm
+}
+\newcommand{\ClosedIntervals}[0]{
+    \bf \hyperref[def:Interval]{Closed Intervals} \rm
+}
+\newcommand{\OpenInterval}[0]{
+    \bf \hyperref[def:Interval]{Open Interval} \rm
+}
+\newcommand{\OpenIntervals}[0]{
+    \bf \hyperref[def:Interval]{Open Intervals} \rm
+}
+\newcommand{\HalfClosedInterval}[0]{
+    \bf \hyperref[def:Interval]{Half-Closed Interval} \rm
+}
+\newcommand{\HalfClosedIntervals}[0]{
+    \bf \hyperref[def:Interval]{Half-Closed Intervals} \rm
+}
+\newcommand{\HalfOpenInterval}[0]{
+    \bf \hyperref[def:Interval]{Half-Open Interval} \rm
+}
+\newcommand{\HalfOpenIntervals}[0]{
+    \bf \hyperref[def:Interval]{Half-Open Intervals} \rm
+}
+\begin{df}[\Interval]
+    Let $V$ be a 
+    \VectorSpace 
+    over a 
+    \Field
+    $\F$. 
+    Let $x,y \in V$. 
+    We define the following sets:
+    \begin{align*} 
+        [x,y] = \{tx+(1-t)y | t \in [0,1] \} \\
+        [x,y) = \{tx+(1-t)y | t \in [0,1) \} \\
+        (x,y] = \{tx+(1-t)y | t \in (0,1] \} \\
+        (x,y) = \{tx+(1-t)y | t \in (0,1) \}
+    \end{align*}
+    We refer to any of these sets as 
+    \Intervals in $V$.
+    Even in the absence of a topological structure, 
+    we use the following language:
+    \begin{enumerate}
+        \item $[x,y]$ is called a \ClosedInterval.
+        \item $(x,y)$ is called an \OpenInterval.
+        \item $(x,y]$ and $[x,y)$ are called \HalfOpenIntervals or \HalfClosedIntervals.
+    \end{enumerate}
+\end{df}

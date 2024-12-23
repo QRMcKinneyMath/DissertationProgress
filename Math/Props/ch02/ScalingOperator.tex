@@ -1,0 +1,25 @@
+\begin{prop}[\ScalingOperator]
+    \label{prop:ScalingOperatorAlgebraicProperties}
+    Let $V$
+    be a 
+    \VectorSpace
+    over a 
+    \Field
+    $\F$. 
+    The following are true:
+    \begin{enumerate}
+        \item If $\alpha, \beta \in \F$, then $M_\alpha \circ M_\beta = M_{\alpha * \beta}$. 
+    \end{enumerate}
+
+
+    \begin{proof}[Proof of 01]
+        Let $v \in V$. Then 
+        \begin{align*}
+            M_{\alpha} \circ M_{\beta} v & = M_\alpha \pa{\beta * v } \\
+            & = \alpha * (\beta * v) \\
+            & = (\alpha * \beta) * v \\
+            & = M_{\alpha*\beta}v
+        \end{align*}
+    \end{proof} 
+
+\end{prop}

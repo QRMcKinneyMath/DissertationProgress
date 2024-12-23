@@ -1,0 +1,25 @@
+\begin{prop}[\TranslationOperator]
+    \label{prop:TranslationOperatorAlgebraicProperties}
+    Let $V$
+    be a 
+    \VectorSpace
+    over a 
+    \Field
+    $\F$. 
+    The following are true:
+    \begin{enumerate}
+        \item If $\alpha, \beta \in \F$, then $T_\alpha \circ T_\beta = T_{\alpha + \beta}$. 
+    \end{enumerate}
+
+
+    \begin{proof}[Proof of 01]
+        Let $v \in V$. Then 
+        \begin{align*}
+            T_{\alpha} \circ T_{\beta} v & = T_\alpha \pa{\beta + v } \\
+            & = \alpha + (\beta + v) \\
+            & = (\alpha + \beta) + v \\
+            & = T_{\alpha+\beta}+v
+        \end{align*}
+    \end{proof} 
+
+\end{prop}
