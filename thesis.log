@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  26 DEC 2024 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  27 DEC 2024 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,23 +605,45 @@ Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
 (Math/Props/ch02/PseudometrizablePrequotient.tex [15])
 (Math/Definitions/ch02/AlgebraicDeclarations.tex)
 (Math/Definitions/ch02/BinaryOperation.tex [16])
-(Math/Definitions/ch02/IdentityElement.tex)
-(Math/Definitions/ch02/InverseElement.tex)
-(Math/Definitions/ch02/VectorSpace.tex)
-(Math/Definitions/ch02/ScalarHomogeneous.tex [17])
-(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Additive.tex)
-(Math/Definitions/ch02/Linear.tex)
-(Math/Definitions/ch02/SpaceOfLinearOperators.tex [18])
+(Math/Definitions/ch02/Magma.tex) (Math/Definitions/ch02/IdentityElement.tex
+
+LaTeX Warning: Hyper reference `dsef:Magma' on page 17 undefined on input line 
+25.
+
+) (Math/Definitions/ch02/UnitalMagma.tex
+
+LaTeX Warning: Hyper reference `dsef:Magma' on page 17 undefined on input line 
+21.
+
+) (Math/Definitions/ch02/InverseElement.tex)
+(Math/Definitions/ch02/AssociativeFunction.tex
+
+LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
+n input line 14.
+
+
+LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
+n input line 20.
+
+
+LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
+n input line 22.
+
+[17]) (Math/Definitions/ch02/VectorSpace.tex)
+(Math/Definitions/ch02/ScalarHomogeneous.tex)
+(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Additive.tex
+[18]) (Math/Definitions/ch02/Linear.tex)
+(Math/Definitions/ch02/SpaceOfLinearOperators.tex)
 (Math/Definitions/ch02/BalancedSet.tex) (Math/Definitions/ch02/AbsorbingSet.tex
 ) (Math/Definitions/ch02/TranslationOperator.tex)
 (Math/Props/ch02/TranslationOperator.tex)
-(Math/Definitions/ch02/ScalingOperator.tex)
-(Math/Props/ch02/ScalingOperator.tex [19]) (Math/Definitions/ch02/Segment.tex)
+(Math/Definitions/ch02/ScalingOperator.tex [19])
+(Math/Props/ch02/ScalingOperator.tex) (Math/Definitions/ch02/Segment.tex)
 (Math/Definitions/ch02/ConvexSet.tex)
 (Math/Definitions/ch02/TopologicalGroup.tex)
 (Math/Definitions/ch02/LocalBasis.tex)
-(Math/Definitions/ch02/TopologicalVectorSpace.tex)
-(Math/Definitions/ch02/LocallyConvex.tex [20])
+(Math/Definitions/ch02/TopologicalVectorSpace.tex [20])
+(Math/Definitions/ch02/LocallyConvex.tex)
 (Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex)
 (Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex)
 (Math/Definitions/ch02/TVSBoundedSet.tex [21])
@@ -658,7 +680,7 @@ en since $[][] ((0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ^^Z
 Overfull \hbox (47.55653pt too wide) in paragraph at lines 27--33
 []\OT1/cmr/m/n/12 Also, $\OML/cmm/m/it/12 q \OT1/cmr/m/n/12 : \U/msb/m/n/12 F \
 OMS/cmsy/m/n/12 ! \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]$ \OT1/c
-mr/m/n/12 is a lin-ear bi-jec-tive isom-e-try by [][]2.1.96[][], so if $\OML/cm
+mr/m/n/12 is a lin-ear bi-jec-tive isom-e-try by [][]2.1.98[][], so if $\OML/cm
 m/m/it/12 Q \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 X[] \OMS/cmsy/m/n/12 ! \OML/cmm/
 m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X=\OMS/cmsy/m/n/12 K[]\OML/cmm/m/it
 /12 ; \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]\OT1/cmr/m/n/12 )$
@@ -807,10 +829,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 646C2B2382C1F5426176D6828FD97F72;6881.
  ) 
 Here is how much of TeX's memory you used:
- 13560 strings out of 475247
- 246780 string characters out of 5758264
+ 13601 strings out of 475247
+ 248170 string characters out of 5758264
  1948785 words of memory out of 5000000
- 33758 multiletter control sequences out of 15000+600000
+ 33787 multiletter control sequences out of 15000+600000
  569466 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,79p,1127b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -836,9 +858,9 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/User/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
 sers/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
 m7.pfb>
-Output written on thesis.pdf (83 pages, 828797 bytes).
+Output written on thesis.pdf (83 pages, 830171 bytes).
 PDF statistics:
- 2321 PDF objects out of 2487 (max. 8388607)
- 753 named destinations out of 1000 (max. 500000)
+ 2324 PDF objects out of 2487 (max. 8388607)
+ 756 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

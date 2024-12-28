@@ -1,0 +1,27 @@
+\label{def:AssociativeFunction}
+\newcommand{\AssociativeFunction}[0]{
+    \bf \hyperref[def:AssociativeFunction]{Associative} \rm
+}
+\newcommand{\AssociativeOperation}[0]{
+    \bf \hyperref[def:AssociativeFunction]{Associative} \rm
+}
+\newcommand{\FunctionAssociativity}[0]{
+    \bf \hyperref[def:AssociativeFunction]{Associativity} \rm
+}
+\newcommand{\OperationAssociativity}[0]{
+    \bf \hyperref[def:AssociativeFunction]{Associativity} \rm
+}
+\begin{df}[\AssociativeOperation]
+    Let $X\neq \emptyset$ 
+    and $Y \neq \emptyset$ 
+    be sets. 
+    Let $T:X \times X \to Y$.
+    We say that T is 
+    \AssociativeFunction 
+    and we say that T posses
+    \FunctionAssociativity
+    if for each $x,y,z \in X$, we have 
+    \begin{equation*}
+        T\pa{x,T\pa{y,z}}=T\pa{T\pa{x,y},z}
+    \end{equation*}
+\end{df}
