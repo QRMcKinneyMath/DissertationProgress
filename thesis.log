@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  27 DEC 2024 20:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  30 DEC 2024 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,6 +543,7 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (Math/Definitions/ch02/ReflexiveRelation.tex)
 (Math/Definitions/ch02/TransitiveRelation.tex)
 (Math/Definitions/ch02/PreOrder.tex)
+(Math/Definitions/ch02/ComparableElement.tex)
 (Math/Definitions/ch02/SymmetricRelation.tex)
 (Math/Definitions/ch02/AntisymmetricRelation.tex [2
 
@@ -553,28 +554,29 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (Math/Definitions/ch02/MaximalElement.tex)
 (Math/Definitions/ch02/MinimalElement.tex)
 (Math/Definitions/ch02/UpperBound.tex) (Math/Definitions/ch02/LowerBound.tex)
-(Math/Definitions/ch02/LeastUpperBound.tex)
-(Math/Definitions/ch02/GreatestLowerBound.tex [3])
+(Math/Definitions/ch02/LeastUpperBound.tex [3])
+(Math/Definitions/ch02/GreatestLowerBound.tex)
 (Math/Definitions/ch02/EquivalenceRelation.tex)
-(Math/Definitions/ch02/PartialOrder.tex) (Math/Definitions/ch02/DirectedSet.tex
-) (Math/Definitions/ch02/NeighborhoodFilter.tex)
+(Math/Definitions/ch02/PartialOrder.tex) (Math/Definitions/ch02/TotalOrder.tex)
+(Math/Definitions/ch02/DirectedSet.tex)
+(Math/Definitions/ch02/NeighborhoodFilter.tex)
 (Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex)
-(Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex)
-(Math/Definitions/ch02/EquivalenceClass.tex [4])
+(Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex [4])
+(Math/Definitions/ch02/EquivalenceClass.tex)
 (Math/Props/ch02/EquivalenceClassPartition.tex)
 (Math/Definitions/ch02/QuotientSet.tex)
 (Math/Remarks/ch02/QuotientSetPartition.tex)
-(Math/Definitions/ch02/QuotientMap.tex)
-(Math/Props/ch02/QuotientMapSurjective.tex [5])
+(Math/Definitions/ch02/QuotientMap.tex [5])
+(Math/Props/ch02/QuotientMapSurjective.tex)
 (Math/Props/ch02/QuotientSpaceTopologyDefinition.tex)
 (Math/Props/ch02/QuotientSpaceTopologyProp.tex [6] [7] [8])
 (Math/Definitions/ch02/WeakTopology.tex)
 (Math/Definitions/ch02/SymmetricMap.tex)
-(MathDefinitions/ch02/TriangleInequality.tex)
-(Math/Definitions/ch02/Pseudometric.tex [9])
+(MathDefinitions/ch02/TriangleInequality.tex [9])
+(Math/Definitions/ch02/Pseudometric.tex)
 (Math/Definitions/ch02/PseudometricCauchySequence.tex
 Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--22
-[][]\OT1/cmr/bx/n/12 Definition 2.1.37 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
+[][]\OT1/cmr/bx/n/12 Definition 2.1.39 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
 Se-quence)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 -do-met-ric Space[][]
@@ -590,79 +592,65 @@ Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
  []
 
 ) (Math/Props/ch02/PseudometricSequenceConvergence.tex)
-(Math/Definitions/ch02/UniformlyCauchy.tex)
+(Math/Definitions/ch02/UniformlyCauchy.tex [10])
 (Math/Definitions/ch02/UniformlyConvergent.tex)
-(Math/Props/ch02/UniformlyConvergent.tex [10])
+(Math/Props/ch02/UniformlyConvergent.tex)
 (Math/Definitions/ch02/PseudometricComplete.tex)
-(Math/Definitions/ch02/PseudometricBalls.tex)
+(Math/Definitions/ch02/PseudometricBalls.tex [11])
 (Math/Definitions/ch02/PseudometricTopology.tex)
-(Math/Props/ch02/PseudometricTopologyProperties.tex [11])
+(Math/Props/ch02/PseudometricTopologyProperties.tex [12])
 (Math/Definitions/ch02/PseudometricElementEquivalence.tex)
-(Math/Props/ch02/PseudometricElementEquivalence.tex [12])
+(Math/Props/ch02/PseudometricElementEquivalence.tex)
 (Math/Definitions/ch02/MetricSpaceInducedByPseudometric.tex)
-(Math/Props/ch02/MetricSpaceInducedByPseudometric.tex [13] [14])
+(Math/Props/ch02/MetricSpaceInducedByPseudometric.tex [13] [14] [15])
 (Math/Definitions/ch02/Pseudometrizable.tex)
-(Math/Props/ch02/PseudometrizablePrequotient.tex [15])
+(Math/Props/ch02/PseudometrizablePrequotient.tex [16])
 (Math/Definitions/ch02/AlgebraicDeclarations.tex)
-(Math/Definitions/ch02/BinaryOperation.tex [16])
-(Math/Definitions/ch02/Magma.tex) (Math/Definitions/ch02/IdentityElement.tex
+(Math/Definitions/ch02/BinaryOperation.tex) (Math/Definitions/ch02/Magma.tex)
+(Math/Definitions/ch02/MagmaHomomorphism.tex)
+(Math/Definitions/ch02/IdentityElement.tex [17])
+(Math/Definitions/ch02/UnitalMagma.tex)
+(Math/Definitions/ch02/UnitalMagmaHomomorphism.tex
 
-LaTeX Warning: Hyper reference `dsef:Magma' on page 17 undefined on input line 
-25.
-
-) (Math/Definitions/ch02/UnitalMagma.tex
-
-LaTeX Warning: Hyper reference `dsef:Magma' on page 17 undefined on input line 
-21.
+LaTeX Warning: Hyper reference `dsef:UnitalMagma' on page 18 undefined on input
+ line 14.
 
 ) (Math/Definitions/ch02/InverseElement.tex)
-(Math/Definitions/ch02/AssociativeFunction.tex
-
-LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
-n input line 14.
-
-
-LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
-n input line 20.
-
-
-LaTeX Warning: Hyper reference `def:AssociativeFunction' on page 17 undefined o
-n input line 22.
-
-[17]) (Math/Definitions/ch02/VectorSpace.tex)
-(Math/Definitions/ch02/ScalarHomogeneous.tex)
-(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Additive.tex
-[18]) (Math/Definitions/ch02/Linear.tex)
+(Math/Definitions/ch02/AssociativeFunction.tex)
+(Math/Definitions/ch02/Semigroup.tex) (Math/Definitions/ch02/Monoid.tex)
+(Math/Definitions/ch02/Group.tex) (Math/Definitions/ch02/VectorSpace.tex)
+(Math/Definitions/ch02/ScalarHomogeneous.tex [18])
+(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Linear.tex)
 (Math/Definitions/ch02/SpaceOfLinearOperators.tex)
 (Math/Definitions/ch02/BalancedSet.tex) (Math/Definitions/ch02/AbsorbingSet.tex
-) (Math/Definitions/ch02/TranslationOperator.tex)
+[19]) (Math/Definitions/ch02/TranslationOperator.tex)
 (Math/Props/ch02/TranslationOperator.tex)
-(Math/Definitions/ch02/ScalingOperator.tex [19])
-(Math/Props/ch02/ScalingOperator.tex) (Math/Definitions/ch02/Segment.tex)
-(Math/Definitions/ch02/ConvexSet.tex)
+(Math/Definitions/ch02/ScalingOperator.tex)
+(Math/Props/ch02/ScalingOperator.tex) (Math/Definitions/ch02/Segment.tex
+[20]) (Math/Definitions/ch02/ConvexSet.tex)
 (Math/Definitions/ch02/TopologicalGroup.tex)
 (Math/Definitions/ch02/LocalBasis.tex)
-(Math/Definitions/ch02/TopologicalVectorSpace.tex [20])
+(Math/Definitions/ch02/TopologicalVectorSpace.tex)
 (Math/Definitions/ch02/LocallyConvex.tex)
+(Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex [21])
 (Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex)
-(Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex)
-(Math/Definitions/ch02/TVSBoundedSet.tex [21])
+(Math/Definitions/ch02/TVSBoundedSet.tex)
 (Math/Definitions/ch02/SpaceOfBoundedLinearOperators.tex)
-(Math/Definitions/ch02/TVSContinuousLinearOperator.tex)
+(Math/Definitions/ch02/TVSContinuousLinearOperator.tex [22])
 (Math/Definitions/ch02/TopologyOfUniformConvergence.tex)
 (Math/Props/ch02/TopologyOfUniformConvergence.tex)
-(Math/Definitions/ch02/Seminorm.tex [22])
-(Math/Props/ch02/SubadditiveInducesTriangleInequality.tex)
+(Math/Definitions/ch02/Seminorm.tex)
+(Math/Props/ch02/SubadditiveInducesTriangleInequality.tex [23])
 (Math/Definitions/ch02/SeminormTopology.tex)
 (Math/Definitions/ch02/SeminormKernel.tex) (Math/Props/ch02/SeminormKernel.tex
-[23]) (Math/Definitions/ch02/EquivalenceModKernel.tex [24])
-(Math/Props/ch02/EquivalenceModKernelIsPseudometricEquivalence.tex)
+[24]) (Math/Definitions/ch02/EquivalenceModKernel.tex)
+(Math/Props/ch02/EquivalenceModKernelIsPseudometricEquivalence.tex [25])
 (Math/Definitions/ch02/SeminormQuotient.tex)
-(Math/Props/ch02/QuotientNormedSpace.tex [25] [26])
+(Math/Props/ch02/QuotientNormedSpace.tex [26] [27])
 (Math/Remarks/ch02/QuotientNormedSpace.tex)
-(Math/Props/ch02/QuotientsPreserveCompleteness.tex [27])
-(Math/Definitions/ch02/SpaceOfContinuousLinearOperators.tex)
-(Math/Props/ch02/SpaceOfContinuousLinearOperators.tex [28] [29]
+(Math/Props/ch02/QuotientsPreserveCompleteness.tex)
+(Math/Definitions/ch02/SpaceOfContinuousLinearOperators.tex [28])
+(Math/Props/ch02/SpaceOfContinuousLinearOperators.tex [29] [30]
 Overfull \hbox (16.98431pt too wide) in paragraph at lines 109--115
 []\OT1/cmr/m/n/12 If we de-fine, for $\OML/cmm/m/it/12 T \OMS/cmsy/m/n/12 2 \OM
 L/cmm/m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 )$, $\OML
@@ -670,29 +658,20 @@ L/cmm/m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; Y\OT1/cmr/m/n/12 )$, $\OML
 en since $[][] ((0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ^^Z
  []
 
-[30] [31] [32] [33]) (Math/Definitions/ch02/HandedQuotientOperators.tex)
+[31] [32] [33]) (Math/Definitions/ch02/HandedQuotientOperators.tex)
 (Math/Props/ch02/HandedQuotientOperators.tex [34])
-(Math/Definitions/ch02/QuotientOperator.tex)
-(Math/Props/ch02/QuotientOperator.tex [35])
-(Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
-(Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex [36])
-(Math/Definitions/ch02/TopologicalDualOfSeminormedSpace.tex
-Overfull \hbox (47.55653pt too wide) in paragraph at lines 27--33
-[]\OT1/cmr/m/n/12 Also, $\OML/cmm/m/it/12 q \OT1/cmr/m/n/12 : \U/msb/m/n/12 F \
-OMS/cmsy/m/n/12 ! \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]$ \OT1/c
-mr/m/n/12 is a lin-ear bi-jec-tive isom-e-try by [][]2.1.98[][], so if $\OML/cm
-m/m/it/12 Q \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 X[] \OMS/cmsy/m/n/12 ! \OML/cmm/
-m/it/12 BL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X=\OMS/cmsy/m/n/12 K[]\OML/cmm/m/it
-/12 ; \U/msb/m/n/12 F\OML/cmm/m/it/12 =\OMS/cmsy/m/n/12 K[]\OT1/cmr/m/n/12 )$
- []
-
-) (Math/Definitions/ch02/TopologicalDualSpace.tex)
-(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex [37])
+(Math/Definitions/ch02/QuotientOperator.tex [35])
+(Math/Props/ch02/QuotientOperator.tex)
+(Math/Definitions/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex
+[36]) (Math/Props/ch02/CanonicalIsomorphismOfQuotientSpaceOfOperators.tex)
+(Math/Definitions/ch02/TopologicalDualOfSeminormedSpace.tex)
+(Math/Definitions/ch02/TopologicalDualSpace.tex [37])
+(Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex)
 (Math/Theorems/ch02/HahnBanachSeminormed.tex [38])
 (Math/Remarks/ch02/LinearOperationNotation.tex [39])
 (Math/Definitions/ch02/AdjointOperator.tex)
-(Math/Props/ch02/AdjointOperator.tex [40])
-(Math/Definitions/ch02/HigherOrderDualSpaces.tex [41])
+(Math/Props/ch02/AdjointOperator.tex [40] [41])
+(Math/Definitions/ch02/HigherOrderDualSpaces.tex)
 (Math/Definitions/ch02/HigherOrderDualSpaceIsomorphism.tex)
 (Math/Definitions/ch02/CanonicalEmbedding.tex)
 (Math/Props/ch02/CanonicalEmbedding.tex [42] [43])
@@ -702,19 +681,20 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 26.
 
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)))
+))
+[44])
 (mainmatter/ch02/Classical_Results_With_A_Twist/Classical_Results_With_A_Twist.
 tex
 
-LaTeX Warning: Reference `prop:seminormlinearoperators' on page 44 undefined on
+LaTeX Warning: Reference `prop:seminormlinearoperators' on page 45 undefined on
  input line 4.
 
-[44] [45] [46] [47] [48] [49]
+[45] [46] [47] [48] [49] [50]
 
-LaTeX Warning: Reference `prop:pseudometricembedding' on page 50 undefined on i
+LaTeX Warning: Reference `prop:pseudometricembedding' on page 51 undefined on i
 nput line 250.
 
-[50]
+
 Overfull \hbox (96.12717pt too wide) in paragraph at lines 272--274
 []$\OT1/cmr/m/n/12 . Hence, given $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$, t
 here ex-ists $\OML/cmm/m/it/12 N > \OT1/cmr/m/n/12 0$ such that for $\OML/cmm/m
@@ -829,38 +809,39 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 646C2B2382C1F5426176D6828FD97F72;6881.
  ) 
 Here is how much of TeX's memory you used:
- 13601 strings out of 475247
- 248170 string characters out of 5758264
- 1948785 words of memory out of 5000000
- 33787 multiletter control sequences out of 15000+600000
+ 13670 strings out of 475247
+ 250680 string characters out of 5758264
+ 1950785 words of memory out of 5000000
+ 33833 multiletter control sequences out of 15000+600000
  569466 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,20n,79p,1127b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,20n,79p,1127b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cmextra/cmex8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/User/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/User/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/User/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/User/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Use
-r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
-rs/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl
-12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/User/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/User/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/User/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
-sers/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
-m7.pfb>
-Output written on thesis.pdf (83 pages, 830171 bytes).
+nts/cm/cmbx8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/User/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/User/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/User/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/User/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Use
+r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
+ers/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+<C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsl12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy6.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/User/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/User/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/User/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/U
+ser/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
+ols/msbm7.pfb>
+Output written on thesis.pdf (83 pages, 849577 bytes).
 PDF statistics:
- 2324 PDF objects out of 2487 (max. 8388607)
- 756 named destinations out of 1000 (max. 500000)
+ 2378 PDF objects out of 2487 (max. 8388607)
+ 761 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

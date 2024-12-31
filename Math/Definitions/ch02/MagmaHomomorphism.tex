@@ -1,0 +1,40 @@
+\label{def:MagmaHomomorphism}
+\newcommand{\MagmaHomomorphism}[0]{
+    \bf \hyperref[def:MagmaHomomorphism]{Magma Homomorphism} \rm
+}
+\newcommand{\MagmaHomomorphisms}[0]{
+    \bf \hyperref[def:MagmaHomomorphism]{Magma Homomorphisms} \rm
+}
+\newcommand{\scMagma}[0]{
+    \bf \hyperref[def:MagmaHomomorphism]{Magma} \rm
+}
+\newcommand{\Additive}[0]{
+    \bf \hyperref[def:MagmaHomomorphism]{Additive} \rm
+}
+\newcommand{\Additivity}[0]{
+    \bf \hyperref[def:MagmaHomomorphism]{Additivity} \rm
+}
+\begin{df}[\MagmaHomomorphism]
+    Let $(X,\oplus_X)$
+    and $(Y,\oplus_Y)$
+    be \Magmas.
+    Let $T:X \to Y$ satisfy, 
+    for each $x_1, x_2 \in X$. 
+    \begin{equation*}
+        T\pa{x_1 \oplus_X x_2} = T\pa{x_1} \oplus_Y T\pa{x_2}
+    \end{equation*}
+    Then we call 
+    T a \MagmaHomomorphism.
+    We represent the collection of
+    \MagmaHomomorphisms
+    from $(X,\oplus_X)$ 
+    to $(Y,\oplus_Y)$
+    with 
+    $H_{\scMagma}\pa{\pa{X, \oplus_X}, \pa{Y, \oplus_Y}}$, 
+    or, when $\oplus_X$ and $\oplus_Y$ are clear, 
+    $H_{\scMagma}\pa{X, Y}$. 
+    A \MagmaHomomorphism
+    is called \Additive
+    and posseses the property 
+    \Additivity. 
+\end{df}

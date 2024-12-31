@@ -7,12 +7,12 @@
 \contentsline {subsection}{\numberline {2.1.4}Equivalence Relations, Quotient Sets, and Quotient Maps}{5}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Quotient Space Topology}{6}{subsection.2.1.5}%
 \contentsline {subsection}{\numberline {2.1.6}Weak Topologies}{9}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Pseudometrics}{9}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.7}Pseudometrics}{10}{subsection.2.1.7}%
 \contentsline {subsection}{\numberline {2.1.8}Algebraic Structures}{17}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Vector Spaces}{18}{subsection.2.1.9}%
-\contentsline {subsection}{\numberline {2.1.10}Topological Groups}{20}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.9}Vector Spaces}{19}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Topological Groups}{21}{subsection.2.1.10}%
 \contentsline {subsection}{\numberline {2.1.11}Topological Vector Spaces}{21}{subsection.2.1.11}%
-\contentsline {subsection}{\numberline {2.1.12}Seminormed Spaces}{22}{subsection.2.1.12}%
+\contentsline {subsection}{\numberline {2.1.12}Seminormed Spaces}{23}{subsection.2.1.12}%
 \contentsline {section}{\numberline {2.2}Classical Results With A Twist}{45}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Helly}{45}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Goldstine}{47}{subsection.2.2.2}%
