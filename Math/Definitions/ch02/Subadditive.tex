@@ -7,13 +7,18 @@
     \bf \hyperref[def:subadditive]{Subadditivity} \rm
 }
 \begin{df}[\Subadditive]
-Let $G$ be a Magma and 
-$H$ be a Totally ordered Magma. 
-Represent the operation of $G$ and 
-$H$ both with $+$. 
+Let $(G, \oplus_G)$ be a 
+\Magma 
+and 
+$(H, \oplus_H, \leq)$ 
+be a 
+\TotallyOrderedMagma. 
 We call a mapping $p:G \to H$ \Subadditive if, for every $x,y \in G$, we have 
 \begin{equation}
-    p(x+y) \leq p(x)+p(y)
+    p(x\oplus_G y) \leq p(x)\oplus_H p(y)
 \end{equation}
-Under these circumstances, we may also say that the operator p posesses $\Subadditivity$. 
+Under these circumstances, 
+we may also say that
+$p$
+ posesses $\Subadditivity$. 
 \end{df}

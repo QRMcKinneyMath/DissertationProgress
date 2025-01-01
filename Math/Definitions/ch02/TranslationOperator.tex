@@ -1,21 +1,96 @@
 \label{def:TranslationOperator}
+\newcommand{\RightTranslation}[0]{
+    \bf \hyperref[def:TranslationOperator]{Right Translation} \rm
+}
+\newcommand{\LeftTranslation}[0]{
+    \bf \hyperref[def:TranslationOperator]{Left Translation} \rm
+}
+\newcommand{\Translation}[0]{
+    \bf \hyperref[def:TranslationOperator]{Translation} \rm
+}
+\newcommand{\scRightTranslationOperator}[0] {
+    \bf\hyperref[def:TranslationOperator]{T^R}\rm
+}
+\newcommand{\scLeftTranslationOperator}[0] {
+    \bf \hyperref[def:TranslationOperator]{T^L} \rm
+}
+\newcommand{\scTranslationOperator}[0] {
+    \bf \hyperref[def:TranslationOperator]{T} \rm
+}
+\newcommand{\RightTranslationOperator}[0] {
+    \bf\hyperref[def:TranslationOperator]{Right Translation Operator}\rm
+}
+\newcommand{\LeftTranslationOperator}[0] {
+    \bf \hyperref[def:TranslationOperator]{Left Translation Operator} \rm
+}
 \newcommand{\TranslationOperator}[0] {
     \bf \hyperref[def:TranslationOperator]{Translation Operator} \rm
 }
+\newcommand{\RightTranslationOperators}[0] {
+    \bf\hyperref[def:TranslationOperator]{Right Translation Operators}\rm
+}
+\newcommand{\LeftTranslationOperators}[0] {
+    \bf \hyperref[def:TranslationOperator]{Left Translation Operators} \rm
+}
+\newcommand{\TranslationOperators}[0] {
+    \bf \hyperref[def:TranslationOperator]{Translation Operators} \rm
+}
+%
+%%%Vector Space Version
+%
+%\begin{df}[\TranslationOperator]
+%    Let $V$ be a 
+%    \VectorSpace
+%    over a 
+%    \Field $\F$. 
+%    Let $\alpha \in \F$. 
+%    We define $T_\alpha:V \to V$ by 
+%    setting, for each 
+%    $x \in V$, 
+%    \begin{equation}
+%    T_\alpha(x)=\alpha+x
+%    \end{equation}
+%    We call $T_\alpha$ 
+%    the 
+%    \TranslationOperator
+%\end{df}
 
+
+%
+%%
+%%%Magma Version
+%%
+%
 \begin{df}[\TranslationOperator]
-    Let $V$ be a 
-    \VectorSpace 
-    over a 
-    \Field $\F$. 
-    Let $\alpha \in \F$. 
-    We define $T_\alpha:V \to V$ by 
-    setting, for each 
-    $x \in V$, 
-    \begin{equation}
-    T_\alpha(x)=\alpha+x
-    \end{equation}
-    We call $T_\alpha$ 
-    the 
-    \TranslationOperator
+    Let $(G,\oplus)$ be a 
+    \Magma. 
+    Let $g \in G$. 
+    We define 
+    $\scRightTranslationOperator_g:G \to G$
+    and
+    $\scLeftTranslationOperator_g:G \to G$
+    by setting, for each 
+    $x \in G$, 
+    \begin{equation*}
+        \scRightTranslationOperator_g (x) = x \oplus g
+    \end{equation*}
+    \begin{equation*}
+        \scLeftTranslationOperator_g (x) = g \oplus x
+    \end{equation*}
+    We call $\scRightTranslationOperator_g$
+    the \RightTranslation
+    of $(G,\oplus)$
+    by $g$, 
+    and we call 
+    $\scLeftTranslationOperator_g$
+    the \LeftTranslation
+    of 
+    $(G, \oplus)$ 
+    by $g$. 
+    If $\oplus$ is 
+    \CommutativeFunction,
+    then we define 
+    $\scTranslationOperator_g=\scRightTranslationOperator_g=\scLeftTranslationOperator_g$
+    which we call 
+    \Translation of $(G, \oplus)$ by $g$.
 \end{df}
