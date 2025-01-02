@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  1 JAN 2025 06:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  2 JAN 2025 06:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,22 +586,23 @@ LaTeX Warning: Hyper reference `dsef:UnitalMagma' on page 10 undefined on input
 (Math/Definitions/ch02/Semigroup.tex) (Math/Definitions/ch02/Monoid.tex)
 (Math/Definitions/ch02/AlgebraicConsistentRelation.tex)
 (Math/Definitions/ch02/OrderedMagma.tex) (Math/Definitions/ch02/Group.tex)
-(Math/Definitions/ch02/SymmetricMap.tex)
-(Math/Definitions/ch02/TranslationOperator.tex [11])
-(Math/Definitions/ch02/VectorSpace.tex)
-(Math/Definitions/ch02/ScalarHomogeneous.tex)
-(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Linear.tex
-[12]) (Math/Definitions/ch02/SpaceOfLinearOperators.tex)
+(Math/Definitions/ch02/GroupInverseOperator.tex)
+(Math/Definitions/ch02/SymmetricMap.tex [11])
+(Math/Definitions/ch02/TranslationOperator.tex)
+(Math/Definitions/ch02/TopologicalGroup.tex)
+(Math/Definitions/ch02/LocalBasis.tex) (Math/Definitions/ch02/VectorSpace.tex)
+(Math/Definitions/ch02/ScalarHomogeneous.tex [12])
+(Math/Definitions/ch02/Subadditive.tex) (Math/Definitions/ch02/Linear.tex)
+(Math/Definitions/ch02/SpaceOfLinearOperators.tex)
 (Math/Definitions/ch02/BalancedSet.tex) (Math/Definitions/ch02/AbsorbingSet.tex
-) (Math/Props/ch02/TranslationOperator.tex)
-(Math/Definitions/ch02/ScalingOperator.tex)
+) (Math/Definitions/ch02/ScalingOperator.tex)
 (Math/Props/ch02/ScalingOperator.tex [13]) (Math/Definitions/ch02/Segment.tex)
 (Math/Definitions/ch02/ConvexSet.tex)
 (MathDefinitions/ch02/TriangleInequality.tex)
 (Math/Definitions/ch02/Pseudometric.tex [14])
 (Math/Definitions/ch02/PseudometricCauchySequence.tex
 Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--22
-[][]\OT1/cmr/bx/n/12 Definition 2.1.69 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
+[][]\OT1/cmr/bx/n/12 Definition 2.1.71 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
 Se-quence)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 -do-met-ric Space[][]
@@ -618,20 +619,18 @@ Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
 
 ) (Math/Props/ch02/PseudometricSequenceConvergence.tex)
 (Math/Definitions/ch02/UniformlyCauchy.tex)
-(Math/Definitions/ch02/UniformlyConvergent.tex)
-(Math/Props/ch02/UniformlyConvergent.tex [15])
+(Math/Definitions/ch02/UniformlyConvergent.tex [15])
+(Math/Props/ch02/UniformlyConvergent.tex)
 (Math/Definitions/ch02/PseudometricComplete.tex)
-(Math/Definitions/ch02/PseudometricBalls.tex)
+(Math/Definitions/ch02/PseudometricBalls.tex [16])
 (Math/Definitions/ch02/PseudometricTopology.tex)
-(Math/Props/ch02/PseudometricTopologyProperties.tex [16])
+(Math/Props/ch02/PseudometricTopologyProperties.tex [17])
 (Math/Definitions/ch02/PseudometricElementEquivalence.tex)
-(Math/Props/ch02/PseudometricElementEquivalence.tex [17])
+(Math/Props/ch02/PseudometricElementEquivalence.tex)
 (Math/Definitions/ch02/MetricSpaceInducedByPseudometric.tex)
-(Math/Props/ch02/MetricSpaceInducedByPseudometric.tex [18] [19])
+(Math/Props/ch02/MetricSpaceInducedByPseudometric.tex [18] [19] [20])
 (Math/Definitions/ch02/Pseudometrizable.tex)
-(Math/Props/ch02/PseudometrizablePrequotient.tex [20])
-(Math/Definitions/ch02/TopologicalGroup.tex)
-(Math/Definitions/ch02/LocalBasis.tex [21])
+(Math/Props/ch02/PseudometrizablePrequotient.tex [21])
 (Math/Definitions/ch02/TopologicalVectorSpace.tex)
 (Math/Definitions/ch02/LocallyConvex.tex)
 (Math/Props/ch02/ExistenceOfBalancedNeighborhoods.tex)
@@ -639,13 +638,12 @@ Let $\OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 X$\OT1/cmr/m/n/12
 (Math/Definitions/ch02/TVSBoundedSet.tex)
 (Math/Definitions/ch02/SpaceOfBoundedLinearOperators.tex)
 (Math/Definitions/ch02/TVSContinuousLinearOperator.tex)
-(Math/Definitions/ch02/TopologyOfUniformConvergence.tex)
+(Math/Definitions/ch02/TopologyOfUniformConvergence.tex [23])
 (Math/Props/ch02/TopologyOfUniformConvergence.tex)
-(Math/Definitions/ch02/Seminorm.tex [23])
+(Math/Definitions/ch02/Seminorm.tex)
 (Math/Props/ch02/SubadditiveInducesTriangleInequality.tex)
-(Math/Definitions/ch02/SeminormTopology.tex)
-(Math/Definitions/ch02/SeminormKernel.tex [24])
-(Math/Props/ch02/SeminormKernel.tex)
+(Math/Definitions/ch02/SeminormTopology.tex [24])
+(Math/Definitions/ch02/SeminormKernel.tex) (Math/Props/ch02/SeminormKernel.tex)
 (Math/Definitions/ch02/EquivalenceModKernel.tex [25])
 (Math/Props/ch02/EquivalenceModKernelIsPseudometricEquivalence.tex)
 (Math/Definitions/ch02/SeminormQuotient.tex)
@@ -808,16 +806,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 01300C8A1FF197F75333CD692496840F;6881.
+(rerunfilecheck)             Checksum: 1D70F34925BA527C6E755364DA0342B6;6886.
  ) 
 Here is how much of TeX's memory you used:
- 13711 strings out of 475247
- 252060 string characters out of 5758264
+ 13715 strings out of 475247
+ 252184 string characters out of 5758264
  1948785 words of memory out of 5000000
- 33866 multiletter control sequences out of 15000+600000
+ 33869 multiletter control sequences out of 15000+600000
  569466 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,20n,79p,1127b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,20n,79p,1127b,886s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx8.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/publi
@@ -841,9 +839,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/U
 ser/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on thesis.pdf (84 pages, 860975 bytes).
+Output written on thesis.pdf (84 pages, 861602 bytes).
 PDF statistics:
  2417 PDF objects out of 2487 (max. 8388607)
- 763 named destinations out of 1000 (max. 500000)
+ 762 named destinations out of 1000 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
