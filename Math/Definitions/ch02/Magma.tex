@@ -5,6 +5,12 @@
 \newcommand{\Magmas}[0]{
     \bf \hyperref[def:Magma]{Magmas} \rm
 }
+\newcommand{\CommutativeMagma}[0]{
+    \bf \hyperref[def:Magma]{Commutative Magma} \rm
+}
+\newcommand{\CommutativeMagmas}[0]{
+    \bf \hyperref[def:Magma]{Commutative Magmas} \rm
+}
 
 \begin{df}[\Magma]
     Let $X$ be a set and
@@ -16,5 +22,16 @@
     When it is clear what operation is being referred to, 
     we may simply refer to $X$
     as the 
-    \Magma. 
+    \Magma.
+	If 
+	$T$
+	is
+	\CommutativeFunction, 
+	then we call 
+	$(X,T)$ (or simply just $X$)
+	a \CommutativeMagma.
+	In general, this naming convention is used 
+	for any algebraic structure defined on a set 
+	via a \BinaryOperation with
+	particular properties. 
 \end{df}

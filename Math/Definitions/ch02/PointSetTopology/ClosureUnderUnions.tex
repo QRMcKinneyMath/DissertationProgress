@@ -1,0 +1,53 @@
+\label{def:ClosureUnderUnion}
+\newcommand{\ClosureUnderFiniteUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closure Under Finite Unions} \rm
+}
+\newcommand{\ClosureUnderCountableUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closure Under Countable Unions} \rm
+}
+\newcommand{\ClosureUnderUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closure Under Unions} \rm
+}
+\newcommand{\ClosureUnderArbitraryUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closure Under Aribtrary Unions} \rm
+}
+\newcommand{\ClosedUnderFiniteUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closed Under Finite Unions} \rm
+}
+\newcommand{\ClosedUnderCountableUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closed Under Countable Unions} \rm
+}
+\newcommand{\ClosedUnderUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closed Under Unions} \rm
+}
+\newcommand{\ClosedUnderArbitraryUnions}[0]{
+    \bf \hyperref[def:ClosureUnderUnion]{Closed Under Aribtrary Unions} \rm
+}
+
+\begin{df}[\ClosureUnderUnions]
+    Let $S$ be a set such that 
+    \begin{equation*}
+    \{ S_\alpha | \alpha \in A\} \subset S \implies \bigcup_{\alpha \in A} S_{\alpha}   \in S
+    \end{equation*}
+    for all index sets $A$. 
+    Then we say that $S$ is 
+    \ClosedUnderUnions
+    or
+    \ClosedUnderArbitraryUnions
+    and that $S$ posesses 
+    \ClosureUnderUnions
+    or
+    \ClosureUnderArbitraryUnions.
+    If this relation only holds when A is a 
+    \Countable set then we say that 
+    $S$ is 
+    \ClosedUnderCountableUnions
+    and that $S$ posesses
+    \ClosureUnderCountableUnions. 
+    If this relation only holds when A is a 
+    \Finite set then we say that 
+    $S$ is 
+    \ClosedUnderFiniteUnions
+    and that $S$ posesses
+    \ClosureUnderFiniteUnions    
+\end{df}

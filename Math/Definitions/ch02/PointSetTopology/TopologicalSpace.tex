@@ -1,0 +1,26 @@
+
+\newcommand{\TopologicalSpace}[2]{
+    \pa{#1, \Topology{#1}{#2}}
+}
+\newcommand{\Topology}[2]{
+    #2_{#1}
+}
+\newcommand{\TopologicalSpaceRef}[0]{
+    \bf \hyperref[def:TopologicalSpace]{Topological Space} \rm
+}
+\newcommand{\TopologyRef}[0]{
+        \bf \hyperref[def:TopologicalSpace]{Topology} \rm
+}
+
+\begin{df}[Topological Space]
+    \label{def:TopologicalSpace}
+    Let $X \neq \emptyset$ be a set 
+    and let $\{\emptyset, X\} \subset \T \subset 2^X$ such that
+    $\T$ is 
+    \ClosedUnderArbitraryUnions and \ClosedUnderFiniteIntersections. 
+    Then we call $\T$ a \TopologyRef on $X$ and we call 
+    $(X,\T)$ a \TopologicalSpaceRef. 
+\end{df}
+
+
+
