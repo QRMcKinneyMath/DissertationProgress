@@ -1,0 +1,58 @@
+\label{def:AccumulationClosureInterior}
+\newcommand{\AccumulationPoint}[0]{ 
+    \bf \hyperref[def:AccumulationClosureInterior]{Accumulation Point} \rm 
+}
+\newcommand{\AccumulationPoints}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Accumulation Points} \rm 
+}
+\newcommand{\AccumulationPointMark}[1]{
+    #1'
+}
+\newcommand{\Closure}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Closure} \rm 
+}
+\newcommand{\Closures}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Closures} \rm 
+}
+\newcommand{\ClosureMark}[1]{
+    \overline{#1}
+}
+\newcommand{\Interior}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Interior} \rm 
+}
+\newcommand{\Interiors}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Interiors} \rm 
+}
+\newcommand{\InteriorMark}[1]{
+    \overset{\circ}{#1}
+}
+\newcommand{\Boundary}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Boundary} \rm
+}
+\newcommand{\Boundaries}[0]{
+    \bf \hyperref[def:AccumulationClosureInterior]{Boundaries} \rm
+}
+\newcommand{\BoundaryMark}[1]{
+    \partial\pa{#1}
+}
+\begin{df}[\AccumulationPoint, \Closure, \Interior, \Boundary]
+    Let $(X,\T)$ be a \TopologicalSpaceRef.
+    Let $A \subset X$. We define the following. 
+    \begin{enumerate}
+        \item $\AccumulationPointMark{A}=\{x \in X | (\forall U \in \NeighborhoodFilterInstance_{\T}(A))((U \setminus A) \cap \{x\} \neq \emptyset)\} $
+        \item $\ClosureMark{A}= A \cup \AccumulationPointMark{A}$
+        \item $\BoundaryMark{A} = \ClosureMark{A} \cap \ClosureMark{X \setminus A}$
+        \item $\InteriorMark{A} = A \setminus \ClosureMark{X \setminus A}$
+    \end{enumerate}
+    We call 
+    an element of $\AccumulationPointMark{A}$ 
+    an \AccumulationPoint of $A$. 
+    We call $\ClosureMark{A}$ the 
+    \Closure 
+    of $A$. 
+    We call $\InteriorMark{A}$ 
+    the \Interior 
+    of $A$. 
+    We call $\BoundaryMark{A}$ 
+    the \Boundary of $A$. 
+\end{df}
