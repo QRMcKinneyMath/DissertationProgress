@@ -10,14 +10,21 @@
     \begin{proof}
         
         Let $x \in (Z,\T_Z)$. 
-        Then $\NbhFilter{\Topology{Z}{\T}}{x}$=$\NbhFilter{\Topology{Z}{\T}}{x}$, so $x \cong x$.
+        Then $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{x}$
+        $=i$
+        $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{x}$
+        , so $x \cong x$.
         Thus $\cong$ is 
 		\ReflexiveRelation. 
         
         Let $x,y \in (Z,\T_Z)$. 
         Suppose $x \cong y$. 
-        Then  $\NbhFilter{\Topology{Z}{\T}}{x} = \NbhFilter{\Topology{Z}{\T}}{y}$
-        , so trivially  $\NbhFilter{\Topology{Z}{\T}}{y} =\NbhFilter{\Topology{Z}{\T}}{x}$
+        Then  $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{x}$
+        $=$
+        $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{y}$
+        , so trivially  $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{y}$
+        $=i$
+        $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{x}$
         , and thus $y \cong x$.
         Hence, $\cong$ is 
 		\SymmetricRelation
@@ -25,10 +32,13 @@
         Let $x,y,z \in (Z,\T_Z)$.
         Let $x \cong y$ and $y \cong z$. 
         Then, 
-         $\NbhFilter{\Topology{Z}{\T}}{x}= \NbhFilter{\Topology{Z}{\T}}{y} =  \NbhFilter{\Topology{Z}{\T}}{z}$
+         $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{x}$
+         $=i$
+         $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{y}$
+         $=$
+         $\NeighborhoodFilterInstance_{\Topology{Z}{\T}}\pa{z}$
          so that $x \cong z$.
          Thus $\cong$ is \TransitiveRelation
-         
          Since $\cong$ is 
 		 \ReflexiveRelation
 		, \SymmetricRelation
