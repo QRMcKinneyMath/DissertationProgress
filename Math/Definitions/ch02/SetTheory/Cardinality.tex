@@ -1,0 +1,82 @@
+\label{def:Cardinality}
+\newcommand{\Cardinal}[0]{
+    \bf \hyperref[def:Cardinality]{Cardinal} \rm
+}
+\newcommand{\Cardinals}[0]{
+    \bf \hyperref[def:Cardinality]{Cardinals} \rm
+}
+\newcommand{\Cardinality}[0]{
+    \bf \hyperref[def:Cardinality]{Cardinality} \rm
+}
+\newcommand{\Cardinalities}[0]{
+    \bf \hyperref[def:Cardinality]{Cardinalities} \rm
+}
+\newcommand{\FirstNaturals}[1]{
+    N_{#1}
+}
+\newcommand{\CardinalityFunction}[1]{
+    \bf
+    Card
+    \rm
+    \pa{#1}
+}
+\newcommand{\Finite}[0]{
+    \bf \hyperref[def:Cardinality]{Finitje} \rm
+}
+\newcommand{\Infinite}[0]{
+    \bf \hyperref[def:Cardinality]{Infinitje} \rm
+}
+\newcommand{\Denumerable}[0]{
+    \bf \hyperref[def:Cardinality]{Denumerable} \rm
+}
+\newcommand{\Countable}[0]{
+    \bf \hyperref[def:Cardinality]{Countable} \rm
+}
+\newcommand{\Uncountable}[0]{
+    \bf \hyperref[def:Cardinality]{Uncountable} \rm
+}
+\begin{df}[\Cardinality]
+    Let $n \in \N$. We define 
+    \begin{equation*}
+        \FirstNaturals{n}=\{ k \in \N | k \leq n\}
+    \end{equation*}
+    Let $X$ be a set.
+    Let $f:X \to \FirstNaturals{n}$ 
+    be a 
+    \Bijection. 
+    Then, we say that 
+    $X$ has 
+    \Cardinality
+    $n$
+    and we write 
+    $\CardinalityFunction{X}=n$.
+    More generaly, if there exists a 
+    \Bijection
+    between two sets 
+    $Y$ and $Z$, then we write
+    $\CardinalityFunction{Y}=\CardinalityFunction{Z}$
+    and we say that they have the same 
+    \Cardinalities. 
+    Define
+    $X_0=\N$
+    and for $k \in \N$, define 
+    $X_{k+1} = \scPowerSet{X_k}$. 
+    Then for $k \in \N$, we define 
+    $\aleph_k = \CardinalityFunction{X_k}$.
+    If $\CardinalityFunction{X} \in \N$, then 
+    we say that $X$ is \Finite. 
+    If $\CardinalityFunction{Z} \in \N$ or 
+    $\CardinalityFunction{Z} = \aleph_0$, 
+    then we say that $Z$ is \Denumerable.
+    If $\CardinalityFunction{Y} = \aleph_0$, then
+    we say that $Y$ is \Countable.
+    If $\CardinalityFunction{W}= \alpha_k$ for $k \geq 1$, 
+    then we say that $W$ is \Uncountable. 
+    If $\CardinalityFunction{V} = \alpha_j$ for $j \in \N$, 
+    then we say that $V$ is \Infinite. 
+
+
+\end{df}
+
+
+

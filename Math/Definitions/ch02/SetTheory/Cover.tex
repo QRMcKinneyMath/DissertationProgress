@@ -1,0 +1,42 @@
+\label{def:Cover}
+\newcommand{\Cover}[0]{
+    \bf \hyperref[def:Cover]{Cover} \rm
+}
+\newcommand{\Covers}[0]{
+    \bf \hyperref[def:Cover]{Covers} \rm
+}
+\newcommand{\Subcover}[0]{
+    \bf \hyperref[def:Cover]{Subcover} \rm
+}
+\newcommand{\Subcovers}[0]{
+    \bf \hyperref[def:Cover]{Subcovers} \rm
+}
+\begin{df}[\Cover, \Subcover]
+    Let $X$ be a set and let 
+    $Y=\{Y_\alpha\}_{\alpha \in A}$ 
+    such that 
+    \begin{equation*}
+        X \subset \bigcup_{\alpha \in A} Y_{\alpha}
+    \end{equation*}
+    Then we say that 
+    $Y$ 
+    is a 
+    \Cover
+    for $X$ 
+    or that $Y$ 
+    \Covers $X$. 
+    In the context of talking about a 
+    \Cover, if every member of a 
+    \Cover posses a certain property
+    then we may say that the \Cover 
+    has that property. 
+    If $Z \subset Y$ \Covers $X$, then
+    we call $Z$ a \Subcover of $Y$. 
+    One exception to this is that 
+    when talking about the 
+    \Cardinality
+    or \Disjointedness 
+    of a \Cover, we are 
+    talking about \Cover itself, 
+    not each of its constituent sets. 
+\end{df}
