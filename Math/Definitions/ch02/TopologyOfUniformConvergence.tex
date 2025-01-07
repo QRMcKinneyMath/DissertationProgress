@@ -5,8 +5,9 @@
 \begin{df}[\TopologyOfUniformConvergence]
     Let X be a set and 
     $(Y, \T_Y)$ be a \TVS.
-    Let $\NeighborhoodFilterInstance_{\T_Y}\pa{0}$ denote the 
-    \NeighborhoodFilter of $0 \in (Y, \T_Y)$.
+    Let $\NeighborhoodFilterInstance_{\T_Y}\pa{0}$ be a 
+    \LocalBasis
+    for $Y$. 
     Suppose $\scF$ is a 
     \VectorSubspace of the set of 
     functions  $T:X \to Y$. 
@@ -14,9 +15,13 @@
     $\scG \subset 2^X$  such that 
 	$(\scG, \subset)$ is a \DirectedSet.
     For each $x \subset X$ and $y \subset Y$, and  define 
-    $M(x, y) = \{f \in \scF | f(x) \subset y\}$
+    \begin{equation*}
+    M(x, y) = \{f \in \scF | f(x) \subset y\}
+    \end{equation*}
     Now we define 
-    $\T(\scF, \T_Y, \scG)= \{f+ M(x,y) | x \in \scG \wedge y \in \NeighborhoodFilterInstance_{\T_Y}\pa{0} \wedge f \in \scF\}$.
+    \begin{equation*}
+    \T(\scF, \T_Y, \scG)= \{f+ M(x,y) | x \in \scG \wedge y \in \NeighborhoodFilterInstance_{\T_Y}\pa{0} \wedge f \in \scF\}
+    \end{equation*}
 	We call $\T(\scF, \T_Y, \scG)$ the \TopologyOfUniformConvergence of $\scF$ on $\scG$ with respect to $\T_Y$. 
 	When $\scF$, $\T_Y$ or $\scG$ are understood they may be omitted from the reference. 
 	By \ref{prop:TopologyOfUniformConvergence}, $\T$ is a 

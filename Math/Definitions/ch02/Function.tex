@@ -1,0 +1,106 @@
+\label{def:Function}
+\newcommand{\Function}[0]{
+    \textbf{\hyperref[def:Function]{Function}}
+}
+\newcommand{\Functions}[0]{
+    \textbf{\hyperref[def:Function]{Functions}}
+}
+\newcommand{\Map}[0]{
+    \textbf{\hyperref[def:Function]{Map}}
+}
+\newcommand{\Maps}[0]{
+    \textbf{\hyperref[def:Function]{Maps}}
+}
+\newcommand{\Mapping}[0]{
+    \textbf{\hyperref[def:Function]{Mapping}}
+}
+\newcommand{\Mappings}[0]{
+    \textbf{\hyperref[def:Function]{Mappings}}
+}
+
+\newcommand{\FunctionDomain}[0]{
+    \textbf{\hyperref[def:Function]{Domain}}
+}
+\newcommand{\FunctionDomains}[0]{
+    \textbf{\hyperref[def:Function]{Domains}}
+}
+\newcommand{\FunctionCodomain}[0]{
+    \textbf{\hyperref[def:Function]{Codomain}}
+}
+\newcommand{\FunctionCodomains}[0]{
+    \textbf{\hyperref[def:Function]{Codomains}}
+}
+\newcommand{\FunctionRange}[0]{
+    \textbf{\hyperref[def:Function]{Range}}
+}
+\newcommand{\FunctionRanges}[0]{
+    \textbf{\hyperref[def:Function]{Ranges}}
+}
+
+\newcommand{\FunctionImage}[0]{
+    \textbf{\hyperref[def:Function]{Image}}
+}
+\newcommand{\FunctionImages}[0]{
+    \textbf{\hyperref[def:Function]{Images}}
+}
+\newcommand{\FunctionPreimage}[0]{
+    \textbf{\hyperref[def:Function]{Preimage}}
+}
+\newcommand{\FunctionPreimages}[0]{
+    \textbf{\hyperref[def:Function]{Preimages}}
+}
+
+\begin{df}[\Function]
+    Let $X \neq \emptyset$ 
+    and $Y \neq \emptyset$.
+    Let $f \subset X \times Y$ 
+    such that for each $x \in X$ 
+    there is a Unique $y \in Y$ 
+    such that 
+    $(x,y) \in f$. 
+    Then we say that $f$ 
+    is a \Function
+    from $X$ into $Y$. 
+    and we write 
+    $f:X \to Y$. 
+    We may also call $f$ 
+    a 
+    \Map
+    or a 
+    \Mapping 
+    from $X$ 
+    into $Y$. 
+    Primarily, though 
+    we will rely on the notation 
+    $f:X \to Y$ to indicate
+    that 
+    $f$ is a 
+    \Function
+    with 
+    \FunctionDomain
+    $X$
+    and 
+    \FunctionCodomain
+    $Y$.
+    If $A \subset X$ 
+    and $B \subset Y$, 
+    then we denote 
+    \begin{equation*}
+    f\pa{A}= \{f(x)\in Y | x \in A\} \\
+    \; \; \;
+    f^{-1}\pa{B} = \{x \in X | f(x) \in B \}
+    \end{equation*}
+    We call 
+    $f(A)$ 
+    the \FunctionImage
+    of $A$ under $f$
+    and we call
+    $f^{-1}\pa{B}$ 
+    the 
+    \FunctionPreimage
+    of $B$ under
+    $f$. 
+    we call $f(X)$ 
+    the \FunctionRange
+    of $f$. 
+\end{df}
