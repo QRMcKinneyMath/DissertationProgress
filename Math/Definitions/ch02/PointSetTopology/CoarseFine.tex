@@ -1,55 +1,83 @@
 \label{def:TopologyCoarseFine}
-\newcommand{\TopologyCoarse}[0]{foo}
+\newcommand{\TopologyCoarse}[0]{\textbf{\hyperref[def:TopologicalSpace]{Coarse}}}
+\newcommand{\TopologyFine}[0]{\textbf{\hyperref[def:TopologicalSpace]{Fine}}}
+\newcommand{\TopologyCoarser}[0]{\textbf{\hyperref[def:TopologicalSpace]{Coarser}}}
+\newcommand{\TopologyFiner}[0]{\textbf{\hyperref[def:TopologicalSpace]{Finer}}}
+\newcommand{\TopologyCoarsest}[0]{\textbf{\hyperref[def:TopologicalSpace]{Coarsest}}}
+\newcommand{\TopologyFinest}[0]{\textbf{\hyperref[def:TopologicalSpace]{Finest}}}
+\newcommand{\TopologyFineness}[0]{\textbf{\hyperref[def:TopologicalSpace]{Fineness}}}
+\newcommand{\TopologyCoarseness}[0]{\textbf{\hyperref[def:TopologicalSpace]{Coarseness}}}
 
-\newcommand{\TopologyFine}[0]{foo}
-
-\newcommand{\TopologyCoarser}[0]{foo}
-
-\newcommand{\TopologyFiner}[0]{foo}
-
-\newcommand{\TopologyCoarsest}[0]{foo}
-
-\newcommand{\TopologyFinest}[0]{}
 \newcommand{\scTopologyCoarsenessRelation}[1]{
-    %\hyperref[def:TopologyCoarseFine]{\ensuremath{\leq_{Top(#1)}}}
-    foo
+    \hyperref[def:TopologyCoarseFine]{\ensuremath{\leq_{TopCoarse(#1)}}}
 }
-%
-%\begin{df}[\TopologyCoarse, \TopologyFine]
-%    Let $X$ be a set. 
-%    Let $\T_1, \T_2$ be 
-%    \TopologyRef s
-%    on $X$
-%    such that $\T_1 \subset \T_2$. 
-%    In this case, we say that
-%    $\T_1$ is more 
-%    \TopologyCoarse
-%    than 
-%    $\T_2$, 
-%    that $\T_1$
-%    is 
-%    \TopologyCoarser
-%    than $\T_2$, 
-%    that
-%    $\T_2$ is more 
-%    \TopologyFine
-%    than $\T_1$, 
-%    and that $\T_2$ is 
-%    \TopologyFiner
-%    than $\T_1$. 
-%    
-%    If $X$ is a set 
-%    W
-%    %Topology Coarseness partially orderes the set of topolgoies on X
-%    %Intersection of elements of a subset of set of topologies is maximal element of that set. 
-%    %Notation Defined Above
-%   
-%    Observe that the intersection of 
-%%    any colleciton of \TopologyRef 's 
-%    on $X$ 
-%    is a \TopologyRef
-%    on $X$. 
-%
-%    
-%\end{df}
+\newcommand{\scTopologyFinenessRelation}[1]{
+    \hyperref[def:TopologyCoarseFine]{\ensuremath{\leq_{TopFine(#1)}}}
+}
+
+\begin{df}[\TopologyCoarse, \TopologyFine]
+    Let $X$ be a set. 
+    Let $\T_1, \T_2$ be 
+    \TopologyRef s
+    on $X$
+    such that $\T_1 \subset \T_2$. 
+    In this case, we say that
+    $\T_1$ is more 
+    \TopologyCoarse
+    than 
+    $\T_2$, 
+    that $\T_1$
+    is 
+    \TopologyCoarser
+    than $\T_2$, 
+    that
+    $\T_2$ is more 
+    \TopologyFine
+    than $\T_1$, 
+    that $\T_2$ is 
+    \TopologyFiner
+    than $\T_1$,
+    and we write
+    $\T_1 \scTopologyFinenessRelation{X} \T_2$
+    and we write
+    $\T_2 \scTopologyCoarsenessRelation{X} \T_1$.
+    
+    Let $K$ denote the collection of topologies on $X$. 
+    Let $A\subset K$. 
+    If one exists, a  
+    \Maximum
+    of 
+    $A$
+    with respect to $\scTopologyFinenessRelation{X}$
+    is called the 
+    \TopologyFinest
+    topology in $A$. 
+    If one exists, a
+    \Maximum
+    of 
+    $A$
+    with respect to 
+    $\scTopologyCoarsenessRelation{X}$
+    is called the 
+    \TopologyCoarsest
+    topology in $A$. 
+
+
+
+    Since $\subset$ defines a 
+    \PartialOrder
+    on the power set of $X$, 
+    \TopologyFineness
+    defines a 
+    \PartialOrder
+    on the set of 
+    \TopologyRef 's
+    of $X$. 
+
+    The intersection of any 2 topologies on $X$ 
+    is a topology on $X$, so that 
+    $\scTopologyCoarsenessRelation{X}$
+    is a \Direction 
+    on $X$. 
+\end{df}
 %

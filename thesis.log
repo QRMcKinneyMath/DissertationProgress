@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  8 JAN 2025 06:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  9 JAN 2025 06:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -570,9 +570,9 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (Math/Definitions/ch02/PointSetTopology/OpenSetClosedSet.tex)
 (Math/Definitions/ch02/PointSetTopology/CoarseFine.tex)
 (Math/Definitions/ch02/PointSetTopology/Neighborhood.tex)
-(Math/Definitions/ch02/PointSetTopology/AccumulationPointClosureInterior.tex)
-(Math/Definitions/ch02/PointSetTopology/SubBasis.tex)
-(Math/Definitions/ch02/PointSetTopology/Basis.tex [6])
+(Math/Definitions/ch02/PointSetTopology/AccumulationPointClosureInterior.tex
+[6]) (Math/Definitions/ch02/PointSetTopology/SubBasis.tex)
+(Math/Definitions/ch02/PointSetTopology/Basis.tex)
 (Math/Definitions/ch02/TopologicalLatexDefinitions.tex)
 (Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex)
 (Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex)
@@ -581,15 +581,15 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 (Math/Definitions/ch02/QuotientSet.tex)
 (Math/Remarks/ch02/QuotientSetPartition.tex)
 (Math/Definitions/ch02/QuotientMap.tex)
-(Math/Props/ch02/QuotientMapSurjective.tex)
+(Math/Props/ch02/QuotientMapSurjective.tex [8])
 (Math/Props/ch02/QuotientSpaceTopologyDefinition.tex)
-(Math/Props/ch02/QuotientSpaceTopologyProp.tex [8] [9] [10] [11])
+(Math/Props/ch02/QuotientSpaceTopologyProp.tex [9] [10] [11])
 (Math/Definitions/ch02/WeakTopology.tex)
 (Math/Definitions/ch02/Algebra/AlgebraicDeclarations.tex)
 (Math/Definitions/ch02/Algebra/SymmetricMap.tex)
 (Math/Definitions/ch02/Algebra/BinaryOperation.tex)
-(Math/Definitions/ch02/Algebra/Magma.tex)
-(Math/Definitions/ch02/Algebra/MagmaHomomorphism.tex [12])
+(Math/Definitions/ch02/Algebra/Magma.tex [12])
+(Math/Definitions/ch02/Algebra/MagmaHomomorphism.tex)
 (Math/Definitions/ch02/Algebra/IdentityElement.tex)
 (Math/Definitions/ch02/Algebra/UnitalMagma.tex)
 (Math/Definitions/ch02/Algebra/UnitalMagmaHomomorphism.tex
@@ -597,17 +597,17 @@ logies_And_Dual_Spaces_Of_Seminormed_Spaces.tex
 LaTeX Warning: Hyper reference `dsef:UnitalMagma' on page 13 undefined on input
  line 14.
 
-) (Math/Definitions/ch02/Algebra/InverseElement.tex)
+) (Math/Definitions/ch02/Algebra/InverseElement.tex [13])
 (Math/Definitions/ch02/Algebra/AssociativeFunction.tex)
-(Math/Definitions/ch02/Algebra/Semigroup.tex [13])
+(Math/Definitions/ch02/Algebra/Semigroup.tex)
 (Math/Definitions/ch02/Algebra/Monoid.tex)
 (Math/Definitions/ch02/Algebra/AlgebraicConsistentRelation.tex)
 (Math/Definitions/ch02/Algebra/OrderedMagma.tex)
 (Math/Definitions/ch02/Algebra/Group.tex)
 (Math/Definitions/ch02/Algebra/GroupInverseOperator.tex)
 (Math/Definitions/ch02/Algebra/TranslationOperator.tex)
-(Math/Definitions/ch02/TopologicalGroup.tex)
-(Math/Definitions/ch02/LocalBasis.tex [14])
+(Math/Definitions/ch02/TopologicalGroup.tex [14])
+(Math/Definitions/ch02/LocalBasis.tex)
 (Math/Definitions/ch02/VectorSpace/VectorSpace.tex)
 (Math/Definitions/ch02/VectorSpace/ScalarHomogeneous.tex)
 (Math/Definitions/ch02/VectorSpace/Subadditive.tex)
@@ -623,7 +623,7 @@ LaTeX Warning: Hyper reference `dsef:UnitalMagma' on page 13 undefined on input
 (Math/Definitions/ch02/Pseudometric.tex)
 (Math/Definitions/ch02/PseudometricCauchySequence.tex
 Overfull \hbox (0.55792pt too wide) in paragraph at lines 7--22
-[][]\OT1/cmr/bx/n/12 Definition 2.1.85 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
+[][]\OT1/cmr/bx/n/12 Definition 2.1.86 \OT1/cmr/m/n/12 (Pseu-do-met-ric Cauchy 
 Se-quence)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/
 m/it/12 X; d\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a  [][]\OT1/cmr/bx/n/12 Pseu
 -do-met-ric Space[][]
@@ -831,10 +831,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: B9342D119B4EBF7ED774E47578AD0870;7045.
  ) 
 Here is how much of TeX's memory you used:
- 13961 strings out of 475247
- 263210 string characters out of 5758264
+ 13965 strings out of 475247
+ 263281 string characters out of 5758264
  1950785 words of memory out of 5000000
- 34036 multiletter control sequences out of 15000+600000
+ 34039 multiletter control sequences out of 15000+600000
  569825 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,79p,1127b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -862,9 +862,9 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/User
 C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (86 pages, 912713 bytes).
+Output written on thesis.pdf (86 pages, 918746 bytes).
 PDF statistics:
- 2578 PDF objects out of 2984 (max. 8388607)
- 779 named destinations out of 1000 (max. 500000)
+ 2602 PDF objects out of 2984 (max. 8388607)
+ 780 named destinations out of 1000 (max. 500000)
  305 words of extra memory for PDF output out of 10000 (max. 10000000)
 
