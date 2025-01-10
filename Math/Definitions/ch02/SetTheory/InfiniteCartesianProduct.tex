@@ -1,0 +1,32 @@
+\label{def:InfiniteCartesianProduct}
+\newcommand{\InfiniteCartesianProduct}[0]{
+    \textbf{\hyperref[def:InfiniteCartesianProduct]{Cartesian Product}}
+}
+\newcommand{\InfiniteCartesianProducts}[0]{
+    \textbf{\hyperref[def:InfiniteCartesianProduct]{Cartesian Products}}
+}
+\newcommand{\scCartesianProduct}[3]{
+    \ensuremath{\prod\limits_{#1 \in #2}#3_{#1}}
+}
+\newcommand{\ProjectionMap}[0]{
+    \textbf{\hyperref[def:InfiniteCartesianProduct]{Projection Map}}
+}
+
+\begin{df}[\InfiniteCartesianProduct]
+    Let $A \neq \emptyset$. 
+    For each $\alpha \in A$, let 
+    $X_{\alpha} \neq \emptyset$. 
+    Define 
+    \begin{equation*}
+        \prod\limits_{\alpha \in A} X_{\alpha } = \left\{f:A \to \bigcup\limits_{\alpha \in A} X_{\alpha} | (\forall \alpha \in A)(f(\alpha) \in X_{\alpha} ) \right\}
+    \end{equation*}
+    We call this the 
+    \InfiniteCartesianProduct
+    of $\{X_\alpha\}_{\alpha \in A}$. 
+    For each $\alpha \in A$, we define 
+    \begin{equation*}
+        \pi_\alpha : \scCartesianProduct{\alpha}{A}{X} \to X_{\alpha }\tab[2cm] \pi_\alpha(f) = f(\alpha)
+    \end{equation*}
+    We call $\pi_\alpha$ the
+    $\alpha-$\ProjectionMap.
+\end{df}

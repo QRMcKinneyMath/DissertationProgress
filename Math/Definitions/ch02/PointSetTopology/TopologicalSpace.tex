@@ -1,15 +1,21 @@
 
-\newcommand{\TopologicalSpace}[2]{
-    \pa{#1, \Topology{#1}{#2}}
+\newcommand{\scTopologicalSpace}[2]{
+    \pa{#1, \scTopology{#1}{#2}}
 }
-\newcommand{\Topology}[2]{
+\newcommand{\scTopology}[2]{
     #2_{#1}
 }
-\newcommand{\TopologicalSpaceRef}[0]{
+\newcommand{\TopologicalSpace}[0]{
     \bf \hyperref[def:TopologicalSpace]{Topological Space} \rm
 }
-\newcommand{\TopologyRef}[0]{
+\newcommand{\Topology}[0]{
         \bf \hyperref[def:TopologicalSpace]{Topology} \rm
+}
+\newcommand{\TopologicalSpaces}[0]{
+    \bf \hyperref[def:TopologicalSpace]{Topological Spaces} \rm
+}
+\newcommand{\Topologies}[0]{
+        \bf \hyperref[def:TopologicalSpace]{Topologies} \rm
 }
 
 \begin{df}[Topological Space]
@@ -18,8 +24,8 @@
     and let $\{\emptyset, X\} \subset \T \subset 2^X$ such that
     $\T$ is 
     \ClosedUnderArbitraryUnions and \ClosedUnderFiniteIntersections. 
-    Then we call $\T$ a \TopologyRef on $X$ and we call 
-    $(X,\T)$ a \TopologicalSpaceRef. 
+    Then we call $\T$ a \Topology on $X$ and we call 
+    $(X,\T)$ a \TopologicalSpace. 
 \end{df}
 
 
