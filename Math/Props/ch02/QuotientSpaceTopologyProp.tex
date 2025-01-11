@@ -10,7 +10,8 @@
     Then the following are true. 
     \begin{enumerate}
         \item $\T_{Z/\cong}$ is a \Topology on $Z/\cong$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \Continuous. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+        \ContinuousFunction. 
         \item If U is \SetOpen (\SetClosed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ \Partition $Z/\cong$. 
         \item If U is \SetOpen in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
         \item If K is \SetClosed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
@@ -167,7 +168,9 @@
      \end{proof} 
      \begin{proof} [Proof of 10]
             If T is \Injective
-			, then since it is \Continuous Part 2 of this result, open by part 6 of this result, and \Surjective by \ref{prop:QuotientMapSurjective}, it is a 
+			, then since it is 
+            \ContinuousFunction
+            Part 2 of this result, open by part 6 of this result, and \Surjective by \ref{prop:QuotientMapSurjective}, it is a 
 			\Bicontinuous 
 			\Bijection, that is, a \Homeomorphism. 
          \end{proof}

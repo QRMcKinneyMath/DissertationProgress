@@ -6,11 +6,11 @@
 \contentsline {subsection}{\numberline {2.1.3}Point Set Topology}{6}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Neighborhood Filter Of A Point}{8}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Equivalence Relations, Quotient Sets, and Quotient Maps}{8}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Quotient Space Topology}{9}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.6}Quotient Space Topology}{10}{subsection.2.1.6}%
 \contentsline {subsection}{\numberline {2.1.7}Weak Topologies}{13}{subsection.2.1.7}%
 \contentsline {subsection}{\numberline {2.1.8}Algebraic Structures}{13}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Topological Algebra}{15}{subsection.2.1.9}%
-\contentsline {subsection}{\numberline {2.1.10}Vector Spaces}{15}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.9}Topological Algebra}{16}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Vector Spaces}{16}{subsection.2.1.10}%
 \contentsline {subsection}{\numberline {2.1.11}Pseudometrics}{18}{subsection.2.1.11}%
 \contentsline {subsection}{\numberline {2.1.12}Topological Vector Spaces}{25}{subsection.2.1.12}%
 \contentsline {subsection}{\numberline {2.1.13}Seminormed Spaces}{27}{subsection.2.1.13}%
