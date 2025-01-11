@@ -15,9 +15,11 @@
         \item If U is \SetOpen (\SetClosed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ \Partition $Z/\cong$. 
         \item If U is \SetOpen in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
         \item If K is \SetClosed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \MapOpen. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is \MapClosed.
-        \item $(Z, \T_Z)$ is a \Compact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a \Compact space.
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+            \OpenFunction. 
+        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+        \ClosedFunction.
+        \item $(Z, \T_Z)$ is a \SetCompact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a \SetCompact space.
         \item If $\scB$ is a \TopologyBasis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a \TopologyBasis for $\T_{Z/\cong}$. 
         \item If T is \Injective, then it is a \Homeomorphism. 
     \end{enumerate} 
@@ -143,17 +145,23 @@
         \SetCompactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}} | i \in \{1, ..., n\}\}$. 
         Hence
         $\{U_{\alpha_i} | i \in \{1, ..., n\}\}=\{TT^{-1}(U_{\alpha_i}) | i \in \{1, ..., n\}\}$ is an 
-		\OpenCover of $(Z/\cong, \T_{Z/\cong})$. 
+		\SetOpen
+        \Cover of $(Z/\cong, \T_{Z/\cong})$. 
          And the \SetCompactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
          
          
          Now, suppose $(Z/\cong, \T_{Z/\cong})$ is \SetCompact. 
-         Let $\{V_{\beta} | \beta \in B\}$ be an \OpenCover of $(Z, \T_Z)$. 
-         Since T is an \MapOpen mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an 
-		 \OpenCover of $(Z/\cong, \T_{Z/\cong})$ which by 
+         Let $\{V_{\beta} | \beta \in B\}$ be an 
+         \SetOpen
+         \Cover of $(Z, \T_Z)$. 
+         Since T is an 
+         \OpenFunction
+         mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an 
+		 \SetOpen
+         \Cover of $(Z/\cong, \T_{Z/\cong})$ which by 
 		 \SetCompactness has a \Finite \Subcover $\{T(V_{\beta_i}) | i \in \{1, ..., n\}\}$. 
          By part 4 of \ref{prop:QuotientSpaceTopology}, 
-         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an \OpenSubCover of $(Z, \T_Z)$. 
+         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an \SetOpen \Subcover of $(Z, \T_Z)$. 
      %    
     \end{proof}
     \begin{proof}[Proof of 9]
