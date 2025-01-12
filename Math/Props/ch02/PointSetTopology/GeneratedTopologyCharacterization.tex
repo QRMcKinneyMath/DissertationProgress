@@ -1,0 +1,59 @@
+\begin{prop}[Characterization Of Generated Topology]
+    \label{prop:CharacterizationOfGeneratedTopoology}
+    Let $X \neq \emptyset$ 
+    and $F \subset \scPowerSet{X}$. 
+    Define 
+    \begin{equation*}
+    \T_{Prop}=\left\{\bigcup\limits_{\alpha \in A} \bigcap\limits_{i=1}^{N_\alpha} U_{i, \alpha} |(\forall \alpha \in A)\left((N_\alpha \in \N)\wedge \pa{(\forall i \in \{1, \cdots, N_\alpha\}} \pa{U_{i, \alpha} \in F}\right) \right\}\cup \{X, \emptyset\}
+    \end{equation*}
+    Then 
+    $\scGeneratedTopology{X}{F} = \T_{Prop}$.
+    \begin{proof}
+        We first show that $\T_{Prop}$ is a
+        \Topology
+        on $X$. 
+        For 
+        \ClosureUnderUnions, 
+        Let $B \neq \emptyset$ 
+        and $\{B_\beta\}_{\beta \in B} \subset \T_{Prop}$
+        Then for each $\beta \in B$, we can find $A_{\beta}$
+        such that for each $\alpha_{\beta} \in A_{\beta}$, 
+        there is an $N_{\alpha_{\beta}} \in \N$ 
+        such that for each $i \in \{1, \cdots, N_{\alpha_\beta}\}$, 
+        $U_{i, \alpha_\beta} \in F$ and
+        \begin{equation}
+            B_{\beta} = \bigcup\limits_{\alpha \in A_\beta} \bigcap\limits_{i=1}^{N_{\alpha_\beta}}U_{i, \alpha_\beta}
+        \end{equation}
+        Hence, we can write
+         
+        \begin{align*}
+            \bigcup\limits_{\beta \in B} B_{\beta} & = \bigcup\limits_{\beta \in B} \bigcup\limits_{\alpha_\beta \in A_{\beta}} \bigcap\limits_{i=1}^{N_{\alpha_\beta}} U_{i, \alpha_\beta}\\
+            & = \bigcup\limits_{\alpha_\beta \in \bigcup\limits_{\beta \in B} A_{\beta}} \bigcap\limits_{i =1 }^{N_{\alpha_\beta}} U_{i, \alpha_\beta} \in \T_{Prop}
+        \end{align*}
+        For \ClosureUnderFiniteIntersections, 
+        let $N \in \N$ and 
+        $\{B_j\}_{j=1}^N \subset \T_{Prop}$. 
+        Then for each $j \in \{1, \cdots, N\}$, there 
+        is an $A_{j}$
+        such that for each $\alpha_{j} \in A_{j}$, 
+        there is an $N_{\alpha_{j}} \in \N$ 
+        such that for each $i \in \{1, \cdots, N_{\alpha_j}\}$, 
+        $U_{i, \alpha_j} \in F$ and
+        \begin{align*}
+            \bigcap\limits_{j=1}^N B_j & = \bigcap\limits_{j=1}^N \bigcup\limits_{\alpha_j \in A_j} \bigcap\limits_{i=1}^{N_{\alpha_j}} U_{\alpha_j, i}\\
+            & = \bigcup\limits_{\{\alpha_j\}_{j=1}^N \in \scCartesianProduct{j}{\{1, \cdots, N\}}{A}}\pa{\bigcap\limits_{j=1}^{N} \bigcap_{i=1}^{N_{\alpha_j}} U_{\alpha_j, i}} \in \T_{Prop}
+        \end{align*}
+        By construction, $X \in \T_{Prop}$ and $\emptyset \in \T_{Prop}$, so 
+        $\T_{Prop}$ is in fact a 
+        \Topology on 
+        $X$. 
+        By taking the union over the intersection of a single element, we have $F \subset \T_{Prop}$, so that 
+        $\scGeneratedTopology{X}{F} \subset \T_{Prop}$. 
+        Furthermore, $\scGeneratedTopology{X}{F}$ is closed under finite intersections and arbitrary unions
+        so that it must contain $\T_{Prop}$. 
+        Hence, equality holds. 
+
+
+
+    \end{proof}
+\end{prop}

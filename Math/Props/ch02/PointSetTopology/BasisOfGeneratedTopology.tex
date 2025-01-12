@@ -1,0 +1,50 @@
+\begin{prop}[Bassis Of Generated Topology]
+\label{prop:BasisOfGeneratedTopology}
+    Let $X \neq \emptyset$ and let 
+    $B \subset \scPowerSet{X}$
+    Then $B$ is a 
+    \TopologyBasis 
+    for 
+    \scGeneratedTopology{X}{B}
+    if and only if 
+    the following hold
+    \begin{enumerate}
+        \item $X \in B$
+        \item $\emptyset \in B$. 
+        \item For each $U,V \in B$, For each $x \in U \cap V$, there is a $W \in B$ with $x \in W \subset U \cap V$. 
+    \end{enumerate}
+    \begin{proof}
+        I first claim that 
+        it is sufficient to show that any finite intersection of elements of $B$ can 
+        be written as a union of elements of $B$.
+        By Induction, proving for a binary intersection is sufficient. 
+        Hence, let $U,V \in B$ with $U \cap V \neq \emptyset$. 
+        Then for each $x \in U \cap V$, by assumption, 
+        there exists a $W_x \in B$ such that 
+        $x \in W_x \subset U \cap V$. 
+        Hence, we can write 
+        \begin{equation*}
+            U \cap V \subset \bigcup_{x \in U \cap V} W_x \subset U \cap V
+        \end{equation*}
+        showign that finite intersctions of 
+        elements of $B$ can be written as unions of 
+        elements of $B$. 
+        Hence, by
+        \ref{prop:CharacterizationOfGeneratedTopoology}, 
+        $\scGeneratedTopology{X}{B}$ 
+        consists of exactly the unions of elements of $B$, finishing one direction.
+        For the other direction, 
+        if $B$ is a 
+        \TopologyBasis
+        for $\scGeneratedTopology{X}{B}$, 
+        then 
+        by 
+        \ref{prop:TopologyBasisCharacterization}, 
+        sicnce $\scGeneratedTopology{X}{B}$ 
+        contains finite intersections of elements of $B$, 
+        the given properties hold. 
+       
+        
+
+    \end{proof}
+\end{prop}
