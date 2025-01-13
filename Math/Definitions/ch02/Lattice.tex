@@ -1,0 +1,52 @@
+\label{def:Lattice}
+\newcommand{\Lattice}[0]{
+    \textbf{\hyperref[def:Lattice]{Lattice}}
+}
+\newcommand{\Lattices}[0]{
+    \textbf{\hyperref[def:Lattice]{Lattices}}
+}
+\newcommand{\CompleteLattice}[0]{
+    \textbf{\hyperref[def:Lattice]{Complete Lattice}}
+}
+\newcommand{\CompleteLattices}[0]{
+    \textbf{\hyperref[def:Lattice]{Complete Lattices}}
+}
+\newcommand{\LatticeJoin}[0]{
+    \textbf{\hyperref[def:Lattice]{Join}}
+}
+\newcommand{\LatticeJoins}[0]{
+    \textbf{\hyperref[def:Lattice]{Joins}}
+}    
+\newcommand{\LatticeMeet}[0]{
+    \textbf{\hyperref[def:Lattice]{Meet}}
+}
+\newcommand{\LatticeMeets}[0]{
+    \textbf{\hyperref[def:Lattice]{Meets}}
+}    
+\begin{df}[\Lattice, \LatticeJoin, \LatticeMeet]
+    Let $(X, \leq)$ be a 
+    \Poset
+    such that, 
+    for every $x,y \in X$, 
+    the set 
+    $\{x,y\}$ has both a 
+    \Supremum 
+    and an
+    \Infimum. 
+    Then we call $(X,\leq)$ 
+    \Lattice. 
+    Furthermore, we call 
+    $\Sup\{x,y\}$
+    the 
+    \LatticeJoin of $x$ and $y$ 
+    and we call
+    $\Inf\{x,y\}$ the 
+    \LatticeMeet
+    of $x$ and $y$. 
+    If every nonempty subset of 
+    $X$ has both a 
+    \Supremum
+    and \Infimum 
+    then we call $(X,\leq)$
+    a \CompleteLattice. 
+\end{df}

@@ -1,0 +1,26 @@
+\label{def:FunctionRestriction}
+\newcommand{\Restriction}[0]{
+    \textbf{\hyperref[def:FunctionRestriction]{Restriction}}
+}
+\newcommand{\scRestriction}[2]{
+    \ensuremath{\pa{#1}|_{#2}}
+}
+\begin{df}[\Restriction]
+    Let $X,Y$ be sets and 
+    let $R$ be a 
+    \Relation from 
+    $X$ to $Y$. 
+    Let $A \subset X$. 
+    We define 
+    \begin{equation*}
+        \scRestriction{R}{A} = \{(x,y)\in R| x \in A \}
+    \end{equation*}
+    We call 
+    \scRestriction{R}{A}
+    the 
+    \Restriction 
+    of the \Relation
+    $R$
+    to the set 
+    $A$. 
+\end{df}
