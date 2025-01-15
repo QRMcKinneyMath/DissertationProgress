@@ -1,0 +1,23 @@
+label{def:FilterBase}
+\newcommand{\FilterBase}[0]{
+    \textbf{\hyperref[def:FilterBase]{Filter Base}}
+}
+\newcommand{\FilterBases}[0]{
+    \textbf{\hyperref[def:FilterBase]{Filter Bases}}
+}
+
+\begin{df}[\FilterBase]
+    Let $X \neq \emptyset$. 
+    Let $\emptyset \neq \scB \subset \scPowerSet{X}$
+    such that 
+    \begin{enumerate}
+        \item $\emptyset \not \in \scB$. 
+        \item If $\{U,V\} \subset \scB$ with $U \cap V \neq \emptyset$, then there exists
+        a $W \in \scB$ with $W \subset U \cap V$. 
+    \end{enumerate}
+    Then we call 
+    $\scB$ 
+    a
+    \FilterBase
+    on $X$. 
+\end{df}

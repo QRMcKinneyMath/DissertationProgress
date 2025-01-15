@@ -1,0 +1,20 @@
+\label{def:Filter}
+\newcommand{\Filter}[0]{
+    \textbf{\hyperref[def:Filter]{Filter}}
+}
+\newcommand{\Filters}[0]{
+    \textbf{\hyperref[def:Filter]{Filters}}
+}
+\begin{df}[\Filter]
+    Let $X \neq \emptyset$. 
+    Let $\emptyset \neq \scF \subset \scPowerSet{X}$ 
+    satisfy the following.
+    \begin{enumerate}
+        \item $\emptyset \not \in \scF$
+        \item If $G_1 \in \scF$ and $G_1 \subset G_2 \subset X$, then $G_2 \in \scF$. 
+        \item If $\{G_1,G_2\} \subset \scF$, then $G_1 \cap G_2 \in \scF$. 
+    \end{enumerate}
+    Then we call $\scF$ 
+    a \Filter
+    on $X$. 
+\end{df}

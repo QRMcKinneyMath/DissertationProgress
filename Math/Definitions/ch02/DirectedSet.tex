@@ -21,6 +21,12 @@
 \newcommand{\DirectedSets}[0]{
     \bf \hyperref[def:Direction]{Directed Sets} \rm
 }
+\newcommand{\DirectedSection}[0]{
+    \textbf{\hyperref[def:Direction]{Section}}
+}
+\newcommand{\DirectedSections}[0]{
+    \textbf{\hyperref[def:Direction]{Sections}}
+}
 
 \begin{df}[\Direction]
     Let $X \neq \emptyset$ be a set.
@@ -30,4 +36,8 @@
     we call $\leq$ is a \Direction on $X$, 
 	, we call $\leq$ is a \Directing of $X$
 	, and we call $(X,\leq)$ is a \DirectedSet.
+    If $x_0 \in X$, then we call
+    $\{x \in X : x_0 \leq x\}$ the 
+    \DirectedSection
+    of $x_0$ under $\leq$. 
 \end{df}

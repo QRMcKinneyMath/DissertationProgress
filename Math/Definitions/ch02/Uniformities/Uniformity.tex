@@ -1,0 +1,31 @@
+\label{def:Uniformity}
+\newcommand{\Uniformity}[0]{
+    \textbf{\hyperref[def:Uniformity]{Uniformity}}
+}
+\newcommand{\Uniformities}[0]{
+    \textbf{\hyperref[def:Uniformity]{Uniformities}}
+}
+
+\newcommand{\Entourage}[0]{
+    \textbf{\hyperref[def:Uniformity]{Entourage}}
+}
+\newcommand{\Entourages}[0]{
+    \textbf{\hyperref[def:Uniformity]{Entourages}}
+}
+\begin{df}[\Uniformity]
+    Let $X$ be a st and let $\scW$
+    be a \Filter on 
+    $X \times X$ such that 
+    \begin{enumerate}
+    \item For each $W \in \scW$, $\scSetDiagonal{X} \subset W$. 
+    \item $W \in \scW \implies W^{-1} \in \scW$. 
+    \item For each $W \in \scW$, there exists $V \in \scW$ such that $V \circ V \subset W$. 
+    \end{enumerate}
+    Then we call $\scW$ a \Uniformity
+    on $X$. 
+    Furthermore, if $W \in \scW$, then we call 
+    $W$ an \Entourage 
+    of $W$. 
+\end{df}
+
+
