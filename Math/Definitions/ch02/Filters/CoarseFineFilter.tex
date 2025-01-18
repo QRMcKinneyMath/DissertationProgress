@@ -1,0 +1,54 @@
+\label{def:CoarseFineFilter}
+\newcommand{\CoarserFilter}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Coarser}}
+}
+\newcommand{\CoarsestFilter}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Coarsest}}
+}
+\newcommand{\FinerFilter}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Finer}}
+}
+\newcommand{\FinestFilter}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Finest}}
+}
+\newcommand{\FilterFineness}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Filter Fineness}}
+}
+\newcommand{\FilterCoarseness}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Filter Coarseness}}
+}
+\newcommand{\UltraFilter}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Ultrafilter}}
+}
+\newcommand{\UltraFilters}[0]{
+    \textbf{\hyperref[def:CoarseFineFilter]{Ultrafilters}}
+}
+
+
+\begin{df}[\CoarserFilter, \FinerFilter]
+    Let $X$ be a set and let $\scF_1$ 
+    and $\scF_2$ be \Filters
+    on $X$ such that 
+    $\scF_1 \subset \scF_2$. 
+    Then we say that 
+    $\scF_1$ is \CoarserFilter
+    than $\scF_2$ and we say that 
+    $\scF_2$ is \FinerFilter than 
+    $\scF_1$. 
+    Let $A \subset X$ be a collection of filters
+    and let $\scF_2 \in A$ be \FinerFilter 
+    than every element of $A$. 
+    Then we say that $\scF_2$ is the \FinestFilter
+    element of $A$. 
+    Let $\scF_3 \in A$ be \CoarserFilter
+    than every element of $A$. 
+    Then we say that $\scF_3$ is the \CoarsestFilter
+    in $A$. 
+    \FilterFineness
+    defines a \PartialOrdering on
+    the collection of \Filters on $X$, where 
+    $\scF_1 \leq \scF_2$ if $\scF_2$ is a \FinerFilter than $\scF_1$. 
+    A \Maximum
+    of \FilterFineness is called an 
+    \UltraFilter on $X$. 
+\end{df}

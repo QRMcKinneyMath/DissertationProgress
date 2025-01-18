@@ -1,11 +1,37 @@
 \begin{prop}
     \label{prop:FilterBaseGeneratesFilter}
     Let $\scB$ be a \FilterBase on a 
-    nonemptyset set $X$. 
+    set $X \neq \emptyset$. 
     Define 
-    $\scF=\{U \in \scPowerSet{X} | (\exists B \in \scB)(B \subset U) \}$
-    Then $\scF$ is a \Filter on $X$
-    which we call the 
-    \textbf{TODOTODO}
-    
+    \begin{equation*}
+    \scF=\{U \in \scPowerSet{X} | (\exists B \in \scB)(B \subset U) \}
+    \end{equation*}
+    Then the following are true. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterBaseGeneratesFilter}.~\roman*}]
+        \item \label{prop:FilterBaseGeneratesFilter:IsAFilter} $\scF$ is a \Filter on $X$. 
+        \item \label{prop:FilterBaseGeneratesFilter:IsCoarsest} $\scF$ is the \CoarsestFilter \Filter on $X$ which contain $\scB$. 
+    \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:FilterBaseGeneratesFilter:IsAFilter}]
+        By \ref{def:FilterBase:IsNotEmpty}, since $\scB \subset \scF$, we have $\ref{def:Filter:IsNonempty}$ holds for $\scF$. 
+        Let $U \in \scF$. 
+        Then, by definition, there is a $B \in \scB$ with $B \subset U$. 
+            By \ref{def:FilterBase:DoesntContainEmptySet}, $B \neq \emptyset$, so $U \neq \emptyset$. 
+            Hence $\emptyset \not \in \scF$, so 
+            \ref{def:Filter:DoesntContainEmpty} holds for $\scF$. 
+        Let $G_1,G_2 \in \scF$. Then there are 
+        $B_1 \subset G_1$ and $B_2 \subset G_2$ with $B_i \in \scB$ for $i \in \{1,2\}$. 
+        By \ref{def:FilterBase:IntersectionProperty}, there exists 
+        $B \in \scB$ with $B \subset B_1 \cap B_2 \subset G_1 \cap G_2$. 
+        By definition of $\scF$, then, $G_1 \cap G_2 \in \scF$, so that 
+        \ref{def:Filter:FiniteIntersectionProperty}
+        holds for $\scF$. 
+        Since \ref{def:Filter:SubsetProperty} obviously holds for 
+        $\scF$, we are done. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterBaseGeneratesFilter:IsCoarsest}]
+        Any $\scF_1 \subset 2^X$ containing $\scB$ which satisfies
+        \ref{def:Filter:SubsetProperty} must by definition contain 
+        $\scF$. By definition, all filters satisfy 
+        \ref{def:Filter:SubsetProperty}, so we are done. 
+    \end{proof}
 \end{prop}

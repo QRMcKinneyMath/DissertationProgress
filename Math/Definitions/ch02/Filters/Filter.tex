@@ -7,12 +7,13 @@
 }
 \begin{df}[\Filter]
     Let $X \neq \emptyset$. 
-    Let $\emptyset \neq \scF \subset \scPowerSet{X}$ 
+    Let $\scF \subset \scPowerSet{X}$ 
     satisfy the following.
-    \begin{enumerate}
-        \item $\emptyset \not \in \scF$
-        \item If $G_1 \in \scF$ and $G_1 \subset G_2 \subset X$, then $G_2 \in \scF$. 
-        \item If $\{G_1,G_2\} \subset \scF$, then $G_1 \cap G_2 \in \scF$. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:Filter}.~\roman*}]
+        \item \label{def:Filter:IsNonempty} $\scF \neq \emptyset$. 
+        \item \label{def:Filter:DoesntContainEmpty} $\emptyset \not \in \scF$
+        \item \label{def:Filter:SubsetProperty} If $G_1 \in \scF$ and $G_1 \subset G_2 \subset X$, then $G_2 \in \scF$. 
+        \item \label{def:Filter:FiniteIntersectionProperty} If $\{G_1,G_2\} \subset \scF$, then $G_1 \cap G_2 \in \scF$. 
     \end{enumerate}
     Then we call $\scF$ 
     a \Filter

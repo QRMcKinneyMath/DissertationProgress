@@ -22,8 +22,14 @@
     \label{def:TopologicalSpace}
     Let $X \neq \emptyset$ be a set 
     and let $\{\emptyset, X\} \subset \T \subset 2^X$ such that
-    $\T$ is 
-    \ClosedUnderArbitraryUnions and \ClosedUnderFiniteIntersections. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:TopologicalSpace}~/roman*}]
+    \item \label{def:TopologicalSpace:ContainsX} $X \in \T$. 
+    \item \label{def:TopologicalSpace:ContainsEmptyset} $\emptyset \in \T$. 
+    \item \label{def:TopologicalSpace:ClosureUnderUnions} $\T$ is 
+    \ClosedUnderArbitraryUnions.
+    \item \label{def:TopologicalSpace:ClosureUnderFiniteIntersections} $\T$
+    is \ClosedUnderFiniteIntersections. 
+    \end{enumerate}
     Then we call $\T$ a \Topology on $X$ and we call 
     $(X,\T)$ a \TopologicalSpace. 
 \end{df}

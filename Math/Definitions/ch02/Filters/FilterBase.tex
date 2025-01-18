@@ -1,18 +1,25 @@
-label{def:FilterBase}
+\label{def:FilterBase}
 \newcommand{\FilterBase}[0]{
     \textbf{\hyperref[def:FilterBase]{Filter Base}}
 }
 \newcommand{\FilterBases}[0]{
     \textbf{\hyperref[def:FilterBase]{Filter Bases}}
 }
+\newcommand{\FilterGenerated}[0]{
+    \textbf{\hyperref[def:FilterBase]{Generated}}
+}
 
 \begin{df}[\FilterBase]
     Let $X \neq \emptyset$. 
-    Let $\emptyset \neq \scB \subset \scPowerSet{X}$
+    Let $\scB \subset \scPowerSet{X}$
     such that 
-    \begin{enumerate}
-        \item $\emptyset \not \in \scB$. 
-        \item If $\{U,V\} \subset \scB$ with $U \cap V \neq \emptyset$, then there exists
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:FilterBase}.~\roman*}]
+        \item \label{def:FilterBase:IsNotEmpty}$
+        \emptyset \neq \scB$. 
+        \item \label{def:FilterBase:DoesntContainEmptySet}$
+        \emptyset \not \in \scB$. 
+        \item \label{def:FilterBase:IntersectionProperty}
+        If $\{U,V\} \subset \scB$ with $U \cap V \neq \emptyset$, then there exists
         a $W \in \scB$ with $W \subset U \cap V$. 
     \end{enumerate}
     Then we call 
@@ -20,4 +27,12 @@ label{def:FilterBase}
     a
     \FilterBase
     on $X$. 
+    By \ref{prop:FilterBaseGeneratesFilter}, if 
+    $\scB$ is a \FilterBase on $X$, then there is a 
+    unique \CoarsestFilter \Filter containing $\scB$, and we call this 
+    the 
+    \Filter 
+    \FilterGenerated
+    by 
+    $\scB$. 
 \end{df}
