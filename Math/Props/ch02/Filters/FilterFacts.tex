@@ -1,0 +1,21 @@
+\begin{prop}
+\label{prop:FilterFacts}
+    Let $X \neq \emptyset$ and let $\scF$ be a 
+    \Filter on $X$. The following are true. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterFacts}~\roman*}]
+        \item \label{prop:FilterFacts:ContainsX} $X \in \scF$. 
+        \item \label{prop:FilterFacts:ClosureUnderFiniteIntersections} $\scF$ is \ClosedUnderFiniteIntersections
+    \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:FilterFacts:ContainsX}]
+        By \ref{def:Filter:IsNonempty}, 
+        $\exists B \neq \emptyset \in \scF$. 
+        Since $B \subset X \subset X$, by 
+        \ref{def:Filter:SubsetProperty}, 
+        $X \in \scF$, so \ref{prop:FilterFacts:ContainsX} is proven. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}]
+        Direct application of \ref{def:Filter:FiniteIntersectionProperty} paired with 
+        \ref{prop:FiniteClosure:Union}.
+    \end{proof}
+\end{prop}
+
