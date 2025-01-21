@@ -1,0 +1,30 @@
+\begin{prop}
+    \label{prop:FilterBase}
+    Let $X$ be a set and let 
+    $A \subset \scPowerSet{X}$. 
+    and define 
+    $\scU=\{U \subset X | (\exists a \in A ) ( a \subset U ) \}$. 
+    The following are equivalent. 
+    \begin{enumerate}
+    \item $A$ is a \FilterBase on $X$. 
+    \item $\scU$ is a \Filter on $X$. 
+    \end{enumerate}
+    \begin{proof}[$\implies$]
+    Supose $A$ is a \FilterBase on $X$.
+    By $\ref{def:FilterBase:DoesntContainEmptySet}$, $\emptyset \not \in A$, so 
+    $\emptyset \not \in \scU$, implying that $\scU$ satisfies
+    \ref{def:Filter:DoesntContainEmpty}. 
+    Also, by \ref{def:FilterBaseIsNotEmpty} $\emptyset \neq A \subset \scU$, so $\scU$ satisfies
+    \ref{def:Filter:IsNonempty}. That $\scU$ satisfies \ref{def:Filter:SubsetProperty} is obvious. 
+    Finally, if $G_1,G_2 \in \scU$, then there exists $U_1,U_2 \in A$ such that $A_i \subset G_i$. 
+    By \ref{def:FilterBase:IntersectionProperty}, there is $B \in A$ satisfying 
+    $B \subset U_1 \cap U_2 \subset G_1 \cap G_2$, so $G_1 \cap G_2 \in \scU$, implying $\scU$ is a \Filter on $X$. 
+    \end{proof}
+    \begin{proof}[$\impliedby$]
+        If $A = \emptyset$, then $\scU=\emptyset$, so $A$ failing $\ref{def:FilterBase:IsNotEmpty}$ implies $\scU$ fails \ref{def:Filter:IsNonempty}. 
+        If $\emptyset \in A$, then $\emptyset \in \scU$, so $A$ failing $\ref{def:FilterBase:DoesntContainEmptySet}$ implies $\scU$ fails \ref{def:Filter:DoesntContainEmpty}. 
+        Finally, if $\scA$ fails \ref{def:FilterBase:IntersectionProperty}, then 
+        we can find $B,C \in A$ such that $B \cap C \not \in \scU$, implying $\scU$ fails $\ref{def:Filter:FiniteIntersectionProperty}$. 
+        Hence necessity has been proven. 
+    \end{proof}
+\end{prop}

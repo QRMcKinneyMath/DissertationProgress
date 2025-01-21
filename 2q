@@ -13,7 +13,7 @@
     \Finite intersection of elements of $A$. 
     \begin{proof}
         The given condition is necessary by a combination 
-        of \ref{prop:FilterFacts:ContainsX} and \ref{def:Filter:DoesntContainEmpty}.
+        of \ref{prop:Filter:ContainsX} and \ref{def:Filter:DoesntContainEmpty}.
         For sufficiency,
         let $K$ be the collection of finite intersections
         of elements of $A$. 

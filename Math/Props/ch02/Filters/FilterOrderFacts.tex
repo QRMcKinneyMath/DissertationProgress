@@ -1,0 +1,14 @@
+\begin{prop}
+    \label{prop:FilterOrderFacts}
+    Let $X \neq \emptyset$. The following are true. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterOrderFacts}.~\roman*}]
+    \item \label{prop:FilterOrderFacts:ContainingFilter} Let $\scF$ be a \Filter on $X$ and let $A \subset X$. Then there is a \Filter containing $A$ on $X$ which is $\FinerFilter$ than $\scF$ if and only if $A \cap U \neq \emptyset$ for each $U \in \scF$. 
+    \item \label{prop:FilterOrderFacts:FinestFilterExistence}
+    Let $\sc{K}=\{\scF_\alpha\}_{\alpha \in A}$ be a collection of $\Filters$ on $X$. 
+    There exists a \Filter on $X$ which is \FinerFilter than each $\scF_\alpha$ if and only if, for every \Finite subset $\{\scF_{\alpha_i}\}_{i=1}^n \subset \scK$, 
+    for each $\{U_i\}_{i=1}^n \in \prod\limits_{i=1}^n \scF_{\alpha_i}$
+    , $\bigcap\limits_{i=1}^n U_i \neq \emptyset$.
+    \item \label{prop:FilterOrderFacts:FiltersAreInductive}
+
+    \end{enumerate}
+\end{prop}

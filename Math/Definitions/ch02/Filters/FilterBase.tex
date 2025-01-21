@@ -5,8 +5,8 @@
 \newcommand{\FilterBases}[0]{
     \textbf{\hyperref[def:FilterBase]{Filter Bases}}
 }
-\newcommand{\FilterGenerated}[0]{
-    \textbf{\hyperref[def:FilterBase]{Generated}}
+\newcommand{\FilterBaseEquivalent}[0]{
+    \textbf{\hyperref[def:FilterBase]{Equivalent}}
 }
 
 \begin{df}[\FilterBase]
@@ -27,12 +27,20 @@
     a
     \FilterBase
     on $X$. 
-    By \ref{prop:FilterBaseGeneratesFilter}, if 
-    $\scB$ is a \FilterBase on $X$, then there is a 
-    unique \CoarsestFilter \Filter containing $\scB$, and we call this 
-    the 
-    \Filter 
-    \FilterGenerated
-    by 
-    $\scB$. 
+    By \ref{prop:FilterBase}, the 
+    \Filter
+    \FilterGeneratedBy
+    a 
+    \FilterBase
+    $A$ 
+    is given by 
+    $\{U \subset X | (\exists Y \subset A ) ( Y \subset U ) \}$. 
+    If $A,B$ are \FilterBases
+    on $X$ and they 
+    \FilterGenerate
+    the same 
+    \Filter, 
+    then we call them 
+    \FilterBaseEquivalent. 
 \end{df}
+
