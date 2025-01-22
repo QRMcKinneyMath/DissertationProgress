@@ -1,4 +1,4 @@
-\begin{prop}
+\begin{prop}[Filter Order Facts]
     \label{prop:FilterOrderFacts}
     Let $X \neq \emptyset$. The following are true. 
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterOrderFacts}.~\roman*}]
@@ -8,7 +8,108 @@
     There exists a \Filter on $X$ which is \FinerFilter than each $\scF_\alpha$ if and only if, for every \Finite subset $\{\scF_{\alpha_i}\}_{i=1}^n \subset \scK$, 
     for each $\{U_i\}_{i=1}^n \in \prod\limits_{i=1}^n \scF_{\alpha_i}$
     , $\bigcap\limits_{i=1}^n U_i \neq \emptyset$.
-    \item \label{prop:FilterOrderFacts:FiltersAreInductive}
-
+    \item \label{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}
+        The union of a \Chain of \Filters on $X$ is a \Filter on $X$ which is \FinerFilter
+        than each element of the \Chain.
+    \item \label{prop:FilterOrderFacts:IntersectionOfChainOfFiltersIsAFilter}
+        The intersection of a \Chain of \Filters on $X$ is a \Filter on $X$ which is 
+        \CoarserFilter than each element of the \Chain.
+    \item \label{prop:FilterOrderFacts:FilterFinenessIsInductive}
+        \FilterFineness is an \InductiveOrder on the collection of \Filters on $X$. 
+    \item \label{prop:FilterOrderFacts:FilterCoarsenessIsInductive}
+        \FilterCoarseness is an \InductiveOrder on the collection of \Filters on $X$. 
     \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:ContainingFilter}]
+        By 
+        \ref{prop:FilterFacts:ClosureUnderFiniteIntersections} 
+        the collection of 
+        \Finite intersections of elements of $\scK := \{A\} \cup \scF$ is given by 
+        \begin{equation*}
+            \scL:=\scF \cup \{ A \cap F | F \in \scF\}
+        \end{equation*}
+        By \ref{def:Filter:DoesntContainEmpty}, $\emptyset \not \in \scF$. 
+        Hence, $\emptyset \not \in \scL$ if and only if 
+        $\emptyset \not \in \{A \cap F | F \in \scF\}$
+        By
+        \ref{prop:FilterExistence}, 
+        $\emptyset \not \in \scL$ is equivalent to 
+        there existing a \Filter on $X$ containing $\scK$, 
+        and so there existing a \Filter on $X$ containing $\scK$ 
+        is equivalent to 
+        $\emptyset \not \in \{A \cap F | F \in \scF\}$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FinestFilterExistence}]
+        By 
+        \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}, 
+        each $\scF_\alpha$ 
+        \ClosedUnderFiniteIntersections.
+        Therefore, the collection of all 
+        \Finite intersections of elements of 
+        \begin{equation*}
+            \bigcup\limits_{\alpha \in A} \scF_\alpha
+        \end{equation*}
+        is given by the collection intersections single 
+        element each of a \Finite collection of $\scF_\alpha's$. 
+        An application of \ref{prop:FilterExistence} finishes the result. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}]
+        Let $\{\scF_\alpha\}_{\alpha \in A}$ be a \Chain of \Filters on $X$ and let 
+        \begin{equation*}
+            \scF = \bigcup\limits_{\alpha \in A} \scF_\alpha
+        \end{equation*}
+        Since each $\scF_\alpha \neq \emptyset$, $\scF \neq \emptyset$, so $\scF$ satisfies 
+        \ref{def:Filter:IsNonempty}. 
+        Furthermore, $\emptyset \not \in \scF_\alpha$ for any $\alpha \in A$, so $\scF$ satisfies
+        \ref{def:Filter:DoesntContainEmpty}
+        Let $G \in \scF$ and let $G \subset H \subset X$. 
+        Then for some $\alpha \in A$, $G \in \scF_\alpha$. Since $\scF_\alpha$ is a 
+        \Filter, 
+        by \ref{def:Filter:SubsetProperty}, $H \in \scF_\alpha \subset \scF$, so $H \in \scF$. 
+        Hence $\scF$ satisfies $\ref{def:Filter:SubsetProperty}$
+        Finally, let $G_1,G_2 \in \scF$. 
+        Then there are $\alpha_1,\alpha_2 \in A$ such that 
+        $G_i \in \scF_{\alpha_i}$ for $i \in \{1,2\}$. 
+        Either $\scF_{\alpha_1} \subset \scF_{\alpha_2}$ or 
+        $\scF_{\alpha_2} \subset \scF_{\alpha_1}$, so without loss of generality, 
+        let $\scF_{\alpha_1} \subset \scF_{\alpha_2}$. 
+        Then $G_1 \in \scF_{\alpha_2}$, implying 
+        $G_1 \cap G_2 \in \scF_{\alpha_2} \subset \scF$, so $G_1 \cap G_2 \in \scF$, so 
+        \scF satisfies \ref{def:Filter:FiniteIntersectionProperty}
+        Hence $\scF$ is a \Filter on $X$ which is \FinerFilter
+        than each $\scF_\alpha$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:IntersectionOfChainOfFiltersIsAFilter}]
+        Define 
+        \begin{equation*}
+            \scF = \bigcap\limits_{\alpha \in A} \scF_\alpha
+        \end{equation*}
+        $\emptyset \not \in \scF_\alpha$ for any $\alpha \in A$, so $\emptyset \not \in \scF$, 
+        implying $\scF$ satisfies $\ref{def:Filter:DoesntContainEmpty}$. 
+        Furthermore, $X \in \scF_\alpha$ for each $\alpha \in A$, so $X \in \scF$, implying
+        $\scF$ satisfies $\ref{def:Filter:IsNonempty}$. 
+        If $G \in \scF$ and $G \subset H\subset X$, then for every $\alpha \in A$, 
+        $G \in \scF_\alpha$.
+        This implies, that by \ref{def:Filter:SubsetProperty}, 
+        that for every $\alpha \in A$, $H \in \scF_\alpha$. 
+        Hence $H \in \scF$, so $\scF$ satisfies \ref{def:Filter:SubsetProperty}. 
+        Finally, let $G_1,G_2 \in \scF$. Then $G_1,G_2 \in \scF_\alpha$ for every $\alpha \in A$,
+        so for every $\alpha \in A$, by \ref{def:Filter:FiniteIntersectionProperty}, 
+        $G_1 \cap G_2 \in \scF_\alpha$ for every $\alpha \in A$, 
+        hence $G_1 \cap G_2 \in \scF$. 
+        Hence, $\scF$ is a \Filter on $X$. 
+        Also, $\scF \subset \scF_\alpha$ for every $\alpha \in A$, and so is 
+        \CoarserFilter than every $\scF_\alpha$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FilterFinenessIsInductive}]
+        Direct application of  
+        \ref{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}
+        to the collection of all \Chains 
+        of \Filters in $X$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FilterCoarsenessIsInductive}]
+        Direct application of 
+        \ref{prop:FilterOrderFacts:IntersectionOfChainOfFiltersIsAFilter}
+        to the collection of all \Chains
+        of \Filters on $X$. 
+    \end{proof}
 \end{prop}
