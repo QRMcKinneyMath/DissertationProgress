@@ -1,4 +1,12 @@
 thesis.log
+thesis.out
+thesis.aux
+thesis.synctex.gz
+bibliography.aux
+mainmatter/ch02/chapter02.aux
+mainmatter/ch03/chapter03.aux
+mainmatter/ch04/chapter04.aux
+mainmatter/ch05/chapter05.aux
 Math/Props/ch*/*.log
 Math/Props/ch*/*.aux
 Math/Definitions/ch*/*.log
