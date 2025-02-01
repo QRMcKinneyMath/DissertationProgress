@@ -1,0 +1,22 @@
+\label{def:NetSection}
+\newcommand{\NetSection}[0]{
+    \textbf{\hyperref[def:NetSection]{Section}}
+}
+\newcommand{\NetSections}[0]{
+    \textbf{\hyperref[def:NetSection]{Sections}}
+}
+
+\begin{df}[\NetSection of a \Net]
+Let $X \neq \emptyset$, let $(A,\leq)$ be a \DirectedSet
+and let $\sigma = \{x_\alpha\}_{\alpha \in A}$ be a 
+\Net in $X$.
+Let $\gamma \in A$. 
+Let $S(\gamma, \leq)$ be the 
+\DirectedSection of $\leq$ 
+corresponding to $\gamma$. 
+We define 
+\begin{equation}
+   \{x_\alpha | \alpha \in S(\gamma, \leq) \}
+\end{equation}
+the \NetSection of $x_\gamma$ in $\sigma$. 
+\end{df}

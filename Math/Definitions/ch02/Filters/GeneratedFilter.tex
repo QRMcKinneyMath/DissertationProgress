@@ -14,11 +14,13 @@
 
 \begin{df}[\FilterSubbasis]
     Let $X$ be a set and $A \subset X$ such that 
-    \Finite intersections of elements of $A$ 
-    are nonempty. 
-    Then we define 
-    Let $K$ denote the collection of 
-    finite intersections of elements of $A$. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:GeneratedFilter}.~\roman*}]
+       \item \label{def:FilterSubbase:IsNotEmpty} $\emptyset \not \in A$.
+       \item \label{def:FilterSubbase:FiniteIntersectionsNonempty} 
+       \begin{equation}
+        \emptyset \not \in K:=\left\{ \bigcap\limits_{i=1}^n A_i | \{A_i\}_{i=1}^n \subset A \wedge n \in \bbN\right\}
+       \end{equation}
+    \end{enumerate}
     Define 
     \begin{equation*}
         \scK=\left\{ U \cup P | U \in K \wedge P \subset X \right\}

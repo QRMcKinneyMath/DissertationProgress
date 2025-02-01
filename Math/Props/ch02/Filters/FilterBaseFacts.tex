@@ -1,4 +1,4 @@
-\begin{prop}
+\begin{prop}[FilterBaseFacts]
 \label{prop:FilterBaseFacts}
    Let $X \neq \emptyset$. 
    Let $\scF$ and $\scG$ be \Filters on $X$. 
@@ -28,11 +28,44 @@
     $f \in F$ with $f \subset g$. 
    \end{enumerate}
    \begin{proof}[Proof of \ref{prop:FilterBaseFacts:BaseFromSubbasis}]
+   Let 
+   \begin{equation}
+    \scB = \left\{ \bigcap\limits_{i=1}^n A_i | \{A_i\}_{i=1}^n \subset A \wedge n \in \bbN\right\}
+   \end{equation}
+   By \ref{def:FilterSubbase:FiniteIntersectionsNonempty}, $\emptyset \not \in \scB$, so $\scB$ satisfies \ref{def:FilterBaseDoesntContainEmptySet}. 
+   By \ref{def:FilterSubbase:IsNotEmpty}, $\emptyset \neq A \subset \scB$, so $\scB$ satisfies \ref{def:FilterBase:IsNotEmpty}. 
+   Since $\emptyset \not \in \scB$ is \ClosedUnderFiniteIntersections, if $U,V \in \scB$, then $\emptyset \neq U \cap V \in \scB$, so $\scB$ can be seen to satisfy $\ref{def:FilterBase:IntersectionProperty}$. Hence $\scB$ is a \FilterBase. 
+   Since $A \subset \scB$, $\scB$ is a \FilterBase for a \FinerFilter than $\scF$. 
+   However, since $A \subset \scF$, 
+   by \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}, $\scB \subset \scF$. 
+   Hence $\scF$ is the \Filter
+   \FilterGeneratedBy $\scB$. 
    \end{proof}
    \begin{proof}[Proof of \ref{prop:FilterBaseFacts:BaseCondition}]
+    $(\impliedby)$. Let $\scG$ denote the \Filter \FilterGeneratedBy $B$. 
+    Then since $B \subset \scF$, $\scG \subset \scF$. 
+    If for each $Y \in \scF$ there exists $b \in B$ with $b \subset Y$, then 
+    \begin{equation}
+    \scF \subset \{U \subset X | (\exists b \in B) (b \subset U) \} \subset \scG \subset \scF
+    \end{equation}
+    so that $\scF = \scG$ and 
+    $\{U \subset X | (\exists b \in B) (b \subset U)\}= \scF$ is a \Filter on $X$. 
+    Hence, by  \ref{prop:FilterBase}, $B$ is a \Filter. 
+
+    $(\implies)$. If $B$ is a \FilterBase for $\scF$, then by 
+    \ref{prop:FilterBase}, $\scF= \{Y \subset X | (\exists b \in B) ( b \subset Y) \}$
+    so the desired property holds
    \end{proof}
    \begin{proof}[Proof of \ref{prop:FilterBaseFacts:FinerCondition}]
+   Let $\scF$ be finer than $\scG$. Then 
+   by applying \ref{prop:FilterBase}
+   $\scG \subset \scF = \{ U \subset X | (\exists f \in F) (f \subset U) \}$, which is the desired result in one direction. 
+   The other direction is equivalent again applying \ref{prop:FilterBase}
+   to claim
+   $\scG \subset \{U \subset X | (\exists f \in F) ( f \subset U ) \}$.
    \end{proof}
    \begin{proof}[Proof of \ref{prop:FilterBaseFact:EquivalenceCondition}]
+   This is a result of two applications of \ref{prop:FilterBaseFacts:FinerCondition}, 
+   one in each direction. 
    \end{proof}
 \end{prop}

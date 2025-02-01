@@ -1,0 +1,41 @@
+\begin{prop}[\Net \NetSections form a \FilterBase]
+    \label{prop:NetSectionsFormFilterBase}
+    Let $X \neq \emptyset$
+    and let $\sigma=\{x_\alpha\}_{\alpha \in A}$
+    be a \Net in $X$. 
+    For each 
+    $\alpha \in A$, denote  with
+    $S(\sigma, \alpha ) $ 
+    the \NetSection of $x_\alpha$ in $\sigma$. 
+    Define 
+    \begin{equation*}
+        \scB=\{S(\sigma, \alpha ) | \alpha \in A\}
+    \end{equation*}
+    Then $\scB$ is a \FilterBase on $X$. 
+    \begin{proof}
+        Since $\sigma$ is a \Net, 
+        $(A,\leq)$ is a \DirectedSet, 
+        implying that $(A,\leq)$ is a \PreorderedSet.
+        Hence, $\leq$ is \ReflexiveRelation so that
+        if $\alpha \in A$, then $x_\alpha \in S(\sigma, \alpha)$. 
+        Hence, $\emptyset \not \in \scB$, so 
+        $\scB$ satisfies 
+        \ref{def:FilterBase:DoesntContainEmptySet}.
+        Furthermore, since 
+        $(A,\leq)$ is a \PreorderedSet, 
+        $A$ is nonempty, so 
+        $\emptyset \neq \scB$, implying $\scB$ satisfeis 
+        \ref{def:FilterBase:IsNotEmpty}. 
+        Finally, let $U,V \in \scB$. 
+        Then we can find $u,v \in A$ such that 
+        $U = S(\sigma, U)$, $V=S(\sigma, V)$. 
+        Since $A$ is a \DirectedSet, 
+        there exists $w \in A$ with $u \leq w$ and $v \leq w$. 
+        Hence by \ref{def:NetSection}, 
+        $S(\sigma, w ) \subset S(\sigma, u) \cap S(\sigma, v)$. 
+        Since $S(\sigma, w ) \in \scB$, 
+        $\scB$ satisfies 
+        \ref{def:FilterBase:IntersectionProperty}, 
+        and we're done. 
+    \end{proof}
+\end{prop}

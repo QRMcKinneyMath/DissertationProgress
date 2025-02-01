@@ -1,0 +1,26 @@
+\label{def:Ultrafilter}
+\newcommand{\Ultrafilter}[0]{
+    \textbf{\hyperref[def:Ultrafilter]{Ultrafilter}}
+}
+\newcommand{\Ultrafilters}[0]{
+    \textbf{\hyperref[def:Ultrafilter]{Ultrafilters}}
+}
+\begin{df}[\Ultrafilter]
+    Let $X \neq \emptyset$. 
+    An \Ultrafilter 
+    on $X$ is a \Maximum
+    of the relation of \FilterFineness
+    on $X$. 
+\end{df}
+\begin{rmk}[\Ultrafilter Existence]
+    Let $\scF$ be a \Filter on $X \neq \emptyset$. 
+    By 
+    \ref{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}
+    Not only is \FilterFineness an \InductiveOrder 
+    on the set of \Filters of $X$, 
+    (as stated in \ref{prop:FilterOrderFacts:FilterFinenessIsInductive})
+    , but \FilterFineness is also an \InductiveOrder
+    on the set of \Filters \FinerFilter than $\scF$. 
+    Hence by \ref{Axiom:ZornsLemma}, 
+    $\scF$ is contained in an \UltraFilter on $X$. 
+\end{rmk}
