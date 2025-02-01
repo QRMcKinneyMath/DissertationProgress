@@ -1,0 +1,107 @@
+\begin{prop}[Ultrafilter Facts]
+\label{prop:UltrafilterFacts}
+    Suppose the following
+    \begin{enumerate}[label=(\Roman*), ref={\ref{prop:UltrafilterFacts}.~\Roman*}]
+        \item \label{prop:UltrafilterFacts:Ass1} $X \neq \emptyset$. 
+        \item \label{prop:UltrafilterFacts:Ass2} $\scF$ is an \Ultrafilter on $X$. 
+        \item \label{prop:UltrafilterFacts:Ass3} $\scG$ is a \Filter on $X$. 
+        \item \label{prop:UltrafilterFacts:Ass4} $\scK$ is a \FilterSubbasis on $X$. 
+        \item \label{prop:UltrafilterFacts:Ass5} 
+        $\scM=\scK \cup \{K \subset X | X \setminus K \in \scK\}$. 
+    \end{enumerate}
+
+    Then the following are true
+    \begin{enumerate}
+        \item \label{prop:UltrafilterFacts:BinaryUnion} 
+        If $\{A,B\} \subset \scPowerSet{X}$ and 
+        $A \cup B \in \scF$, 
+        then  $A \in \scF$ or $B \in \scF$. 
+        \item \label{prop:UltrafilterFacts:FiniteUnion}
+        If $\{A_i\}_{i=1}^n \subset \scPowerSet{X}$ such that 
+        $\bigcup\limits_{i=1}^n A_i \in \scF$, 
+        then for some $j \in \{1, \cdots, n\}$, 
+        $A_j \in \scF$. 
+        \item \label{prop:UltraFilterFacts:UltrafilterCondition}
+        If $\scM = \scPowerSet{X}$, then $\scK$ is an \UltraFilter on $X$. 
+        \item \label{prop:UltraFilterFacts:UltrafilterIntersection} 
+        $\scG$ is the intersection of all $\Ultrafilters$ on $X$ which contain $\scG$.
+    \end{enumerate}
+
+
+    \begin{proof}[Proof of \ref{prop:UltrafilterFacts:BinaryUnion}]
+        We use contradiction.
+        Suppose $A \not \in \scF$ and $B \not \in \scF$. 
+        Define $\scT=\{G \in \scPowerSet{X} | A \cup G \in \scF\}$. 
+        Then $B \in \scT$, so $\scT$ satisfies 
+        \ref{def:Filter:IsNonempty}.
+        Furthermore, if $G_1 \in \scT$ and $G_1 \subset G_2 \subset X$, then 
+        by \ref{def:Filter:SubsetProperty},  
+        $A \cup G_1 \subset A \cup G_2 \in \scF$. Hence $G_2 \in \scT$ so 
+        $\scT$ satisfies \ref{def:Filter:SubsetProperty}.
+        Let $G_3,G_4 \in \scT$ 
+        \begin{align*}
+            A \cup \pa{G_3 \cap G_4} & = \pa{A \cup G_3} \cap \pa{A \cup G_4} \in \scF
+        \end{align*}
+        so that $G_3 \cap G_4 \in \scT$ and therefore $\scT$ satisfies
+        \ref{def:Filter:FiniteIntersectionProperty}.
+        Finally since $A \not \in \scF$, $\emptyset \not \in \scT$, so 
+        $\scT$ satisfeis $\ref{def:Filter:DoesntContainEmpty}$, and therefore 
+        $\scT$ is a \Filter on $X$. 
+        Trivially, $\scF \subset \scT$ but since $B \in \scT \setminus \scF$, 
+        this contradicts
+        \ref{prop:UltrafilterFacts:Ass2}
+        Hence the result holds. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:UltrafilterFacts:FiniteUnion}]
+        We use induction on $n$. Obviously the result holds for $n=1$ 
+        and by \ref{prop:UltrafilterFacts:BinaryUnion}, the result
+        also holds for $n=2$. 
+        Suppose the result holds for $n=k$ 
+        Let $\{A_i\}_{i=1}^{k+1} \subset \scPowerSet{X}$ such that
+        $\bigcup\limits_{i=1}^{k+1} A_i \in \scF$. 
+        Then since the result holds for $n=2$, either 
+        $A_{k+1} \in \scF$ or $\bigcup\limits_{i=1}^k A_i \in \scF$. 
+        Since the result holds for $n=k$, either
+        $A_{k+1} \in \scF$ or $A_i \in \scF$ for $i \in \{1, \cdots, k\}$. 
+        Hence the result holds for $n=k+1$.
+        Hence the result holds in general. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:UltraFilterFacts:UltrafilterCondition}]
+        I first prove that $\scM=\scPowerSet{X}$, 
+        paired with 
+        \ref{prop:UltrafilterFacts:Ass4} and 
+        \ref{prop:UltrafilterFacts:Ass5} 
+        implies $\scK$ is a \Filter
+        on $X$.
+        By \ref{prop:UltrafilterFacts:Ass1}, $\scM \neq \emptyset$. 
+        By \ref{prop:UltrafilterFacts:Ass5}, then $\scK \neq \emptyset$, so 
+        $\scK$ satisfies \ref{def:Filter:IsNonempty}.
+        By \ref{def:FilterSubbase:IsNotEmpty}, $\scK$ satisfies \ref{def:Filter:DoesntContainEmpty}.
+        Let $G_1 \in \scK$ and let $G_1 \subset G_2 \subset X$. 
+        Then $G_1 \cap \pa{X \setminus G_2} = \emptyset$, 
+        which by 
+        \ref{def:FilterSubbase:FiniteIntersectionsNonempty}
+        implies $X \setminus G_2 \not \in \scK$. 
+        Since $\scM = \scPowerSet{X}$, we conclude $G_2 \in \scK$, so
+        $\scK$ satisfies \ref{def:Filter:SubsetProperty}. 
+        Finally, let 
+        $G_1,G_2 \in \scK$. 
+        By assumption, either $G_1 \cap G_2 \in \scK$  or $X \setminus \pa{G_1 \cap G_2 } \in \scK$. 
+        If $X \setminus \pa{G_1 \cap _G2} \in \scK$, then by 
+        \ref{def:FilterSubbase:FiniteIntersectionsNonempty}, 
+        $G_1 \cap G_2 \cap \pa{X \setminus \pa{G_1 \cap G_2}} \neq \emptyset$, a contradiction.
+        Hence, $G_1 \cap G_2 \in \scK$, so that \ref{def:Filter:FiniteIntersectionProperty}
+        is satisfied by $\scK$. 
+        Hence $\scK$ is a \Filter on $X$. 
+        By \ref{rmk:Ultrafilter}, there is an \Ultrafilter $\scL$ containing $\scK$. 
+        If $\scK$ is not an \Ultrafilter, then $\exists B \in \scL \setminus \scK$. 
+        Since $\scM = \scPowerSet{X}$, $X \setminus B \in \scK \subset \scL$, 
+        implying $\emptyset =B \cap \pa{X \setminus B}  \in \scL$, contradicting 
+        \ref{def:Filter:DoesntContainEmpty}, thus
+        $\scK$ is an \Ultrafilter. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:UltraFilterFacts:UltrafilterIntersection}]
+    Obviously 
+
+    \end{proof}
+\end{prop}
