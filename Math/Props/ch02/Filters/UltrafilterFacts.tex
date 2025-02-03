@@ -11,7 +11,7 @@
     \end{enumerate}
 
     Then the following are true
-    \begin{enumerate}
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:UltrafilterFacts}.~\roman*}]
         \item \label{prop:UltrafilterFacts:BinaryUnion} 
         If $\{A,B\} \subset \scPowerSet{X}$ and 
         $A \cup B \in \scF$, 
@@ -101,7 +101,30 @@
         $\scK$ is an \Ultrafilter. 
     \end{proof}
     \begin{proof}[Proof of \ref{prop:UltraFilterFacts:UltrafilterIntersection}]
-    Obviously 
-
+    Let $\{\scP_\alpha\}_{\alpha \in A}$ be the collection of all 
+    \Ultrafilters on $X$ containing $\scG$. 
+    Define $\scP=\bigcap\limits_{\alpha \in A} \scP_\alpha$. 
+    I must schow $\scP=\scG$. 
+    By \ref{prop:FilterFacts:IntersectionOfFiltersIsAFilter}, 
+    $\scP$ is a \Filter on $X$, and by construction
+    $\scG \subset \scP$.
+    Let $B \subset X \setminus \scG$. 
+    Then, by 
+    \ref{def:Filter:SubsetProperty}, 
+    there is no $G \in \scG$ with $G \subset A$. 
+    Hence, for each $G \in \scG$, $G \cap \pa{X \setminus A} \neq \emptyset$. 
+    Therefore, we can apply \ref{prop:FilterOrderFacts:ContainingFilter}
+    to claim that there is a \Filter $\scG_1$ on $X$ which is \FinerFilter
+    than $\scG$ satisfying $X \setminus A \in \scG_1$. 
+    By \ref{rmk:Ultrafilter}, there is an $\alpha \in A$ such that 
+    $X \setminus A \in \scG_1 \subset \scP_\alpha$, so 
+    $X \setminus A \in \scP$. 
+    Since 
+    $\scP$ satisfies \ref{def:Filter:DoesntContainEmpty}
+    and \ref{def:Filter:FiniteIntersectionProperty}, 
+    $X \setminus A \in \scP $
+    implies $A \not \in \scP$
+    and so $\scP \subset \scG$. 
+    This completes the proof. 
     \end{proof}
 \end{prop}

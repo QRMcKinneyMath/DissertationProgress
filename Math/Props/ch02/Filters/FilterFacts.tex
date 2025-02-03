@@ -5,6 +5,7 @@
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterFacts}~\roman*}]
         \item \label{prop:FilterFacts:ContainsX} $X \in \scF$. 
         \item \label{prop:FilterFacts:ClosureUnderFiniteIntersections} $\scF$ is \ClosedUnderFiniteIntersections
+        \item \label{prop:FilterFacts:IntersectionOfFiltersIsAFilter} The intersection of a collection of \Filters on $X$ is a \Filter on $X$. 
     \end{enumerate}
     \begin{proof}[Proof of \ref{prop:FilterFacts:ContainsX}]
         By \ref{def:Filter:IsNonempty}, 
@@ -17,5 +18,26 @@
         Direct application of \ref{def:Filter:FiniteIntersectionProperty} paired with 
         \ref{prop:FiniteClosure:Union}.
     \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterFacts:IntersectionOfFiltersIsAFilter}]
+        Let $\{\scF_\alpha\}_{\alpha \in A}$ be a collection of \Filters on $X$. 
+        Define $\scF=\bigcap\limits_{\alpha \in A} \scF_\alpha$. 
+        By \ref{prop:FilterFacts:ContainsX}, for each $\alpha \in A$, 
+        $X \in \scF_\alpha$, so $X \in \scF$.
+        Hence $\scF$ satisfies $\ref{def:Filter:IsNonempty}$.
+        Furthermore, by $\ref{def:Filter:DoesntContainEmpty}$, for each 
+        $\alpha \in A$, $\emptyset \not \in \scF_\alpha$, so 
+        $\emptyset \not \in \scF$. Therefore $\scF$ satisfies \ref{def:Filter:DoesntContainEmpty}.
+        Since $G_1 \in \scF$ and $G_1 \subset G_2 \subset X$. 
+        Then for each $\alpha \in A$, $G_1 \in \scF_\alpha$, so by 
+        \ref{def:Filter:SubsetProperty}, $G_2 \in \scF_\alpha$.
+        Hence $G_2 \in \scF$, so $\scF$ satisfies \ref{def:Filter:SubsetProperty}. 
+        Finally, let $\{G_1,G_2\} \subset \scF$. 
+        Then for each $\alpha \in A$, $\{G_1,G_2\} \subset \scF_\alpha$, 
+        implying by $\ref{def:Filter:FiniteIntersectionProperty}$ that 
+        $G_1 \cap G_2 \in \scF_\alpha$, so $G_1\cap G_2 \in \scF$, 
+        implying $\scF$ satisfies $\ref{def:Filter:FiniteIntersectionProperty}$. 
+        This concludes the proof of this result. 
+    \end{proof}
+    
 \end{prop}
 
