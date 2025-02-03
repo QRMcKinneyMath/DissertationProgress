@@ -1,0 +1,57 @@
+\begin{prop}[\InducedFilter \Filter facts]
+\label{prop:InducedFilter}
+    Let $X \neq \emptyset$ 
+    Let $\scF$ be a \Filter on $X$. 
+    Let $\scB$ be a \FilterBase for $\scF$. 
+    Let $\scG$ be an \Ultrafilter on $X$. 
+    Let $A \subset X$. 
+    Define $\scF_A =\{A \cap U | U \in \scF\}$. 
+    Define $\scB_A =\{A \cap U | U \in \scB\}$. 
+    Define $\scG_A= \{A \cap U | U \in \scG\}$. 
+    The following are true
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:InducedFilter}.~\roman*}]
+    \item  \label{prop:InducedFilter:Base} If $\scF_A$ is a \Filter on $A$, then $\scB_A$ is a \FilterBase for $\scF_A$. 
+    \item  \label{prop:InducedFilter:Ultrafilter} $\scG_A$ is a \Filter on $A$ if and only if $A \in \scG$. In this case, $\scG_A$ is an \Ultrafilter on $A$. 
+    \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:InducedFilter:Base}]
+       Let $U \in \scF_\alpha$. 
+       Then there exists $V \in \scF$ such that $U = A \cap V$. 
+       Since $\scB$ is a \FilterBase for $\scF$, 
+       by \ref{prop:FilterBaseFacts:BaseCondition}, 
+       there exists $B \in \scB$ satisfying $B \subset V$. 
+       Then $B \cap A \subset A \cap V = U$. 
+       But $B \cap A \in \scB_A$, so since $\scB_A \subset \scF_A$, 
+       we can the apply $\ref{prop:FilterBaseFacts:BaseCondition}$ 
+       to claim that $\scB_A$ is a \FilterBase for $\scF_A$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:InducedFilter:Ultrafilter}]
+        Even if $\scG$ was merely a \Filter on $X$, by
+        \ref{def:Filter:DoesntContainEmpty}
+        and
+        \ref{prop:filterFacts:ClosureUnderFiniteIntersections}
+        $A \in \scG$ is sufficient to guarantee that $\scG_A$ is a \Filter
+        on $A$. 
+        Now suppose $\scG_A$ is a \Filter on $A$
+        Then $A \cap U \neq \emptyset$ for $U \in \scG$, 
+        Since  $\scG$ is an \Ultrafilter on $X$, 
+        we can apply maximality with 
+        \ref{prop:FilterOrderFacts:ContainingFilter}, 
+        to see that
+        $A \in \scG$. 
+        Finally, if $P \subset A$ satisfies 
+        $P \not \in \scG_A$, then 
+        $P \not \in \scG$. 
+        Since $\scG$ is an \Ultrafilter, 
+        by \ref{prop:FilterOrderFacts:ContainingFilter}, 
+        $P \cap U = \emptyset$ for some $U \in \scG$. 
+        This implies $P \cap \pa{U \cap A} = \emptyset$, 
+        and since $U \cap A \in \scG_A$, 
+        we can apply \ref{prop:FilterOrderFacts:ContainingFilter}
+        to conclude that there is no \Filter \FinerFilter 
+        than $\scG_A$ on $A$ which contains $P$. 
+        Since $P \subset A$ was arbitrary, 
+        $\scG_A$ is an \Ultrafilter on $A$. 
+
+
+    \end{proof}
+\end{prop}

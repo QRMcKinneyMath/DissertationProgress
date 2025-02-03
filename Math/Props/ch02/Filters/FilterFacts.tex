@@ -1,11 +1,16 @@
 \begin{prop}
 \label{prop:FilterFacts}
     Let $X \neq \emptyset$ and let $\scF$ be a 
-    \Filter on $X$. The following are true. 
+    \Filter on $X$. 
+    Let $B \subset X$. 
+    The following are true. 
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterFacts}~\roman*}]
         \item \label{prop:FilterFacts:ContainsX} $X \in \scF$. 
         \item \label{prop:FilterFacts:ClosureUnderFiniteIntersections} $\scF$ is \ClosedUnderFiniteIntersections
         \item \label{prop:FilterFacts:IntersectionOfFiltersIsAFilter} The intersection of a collection of \Filters on $X$ is a \Filter on $X$. 
+        \item \label{prop:FilterFacts:InducedFilterExistence}
+        $\scF_B$ defined by $\{U \cap B | U \in \scF\}$ is a \Filter on $B$ 
+        if and only if $\emptyset \not \in \scF_B$. 
     \end{enumerate}
     \begin{proof}[Proof of \ref{prop:FilterFacts:ContainsX}]
         By \ref{def:Filter:IsNonempty}, 
@@ -38,6 +43,28 @@
         implying $\scF$ satisfies $\ref{def:Filter:FiniteIntersectionProperty}$. 
         This concludes the proof of this result. 
     \end{proof}
-    
+    \begin{proof}[Proof of \ref{prop:FilterFacts:InducedFilterExistence}]
+       Since $\scF$ satisfies \ref{def:Filter:IsNonempty}, 
+       no matter what $\emptyset \neq \scF_B$, 
+       so $\scB$ satisfies $\ref{def:Filter:IsNonempty}$.
+       If $G_1 \in \scF_B$, then there is an $H_1 \in \scF$ with $G_1 = H_1 \cap B$. 
+       If $G_1 \subset G_2 \subset B$, 
+       then $H_1 \cap B \subset G_2$ 
+       and $H_1 \cap (X \setminus B) \subset (X \setminus B)$, 
+       so $H_1 \subset G_2 \cup (X \setminus B)$, 
+       which implies $G_2 \cup (X \setminus B) \in \scF$ by \ref{def:Filter:SubsetProperty}.
+       By construction, then, $G_2 = \pa{G_2 \cup (X \setminus B) } \cap B \in \scF_B$.
+       Hence $\scF_B$ satisfies $\ref{def:Filter:SubsetProperty}$, no matter what. 
+       Next, if $\{G_1, G_2 \} \subset \scF_B$, then there are $H_1,H_2 \in \scF$ 
+       with $G_i = H_i \cap B$. 
+       Since $\scF$ satisfies $\ref{def:Filter:FiniteIntersectionProperty}$, 
+       $H_1 \cap H_2 \in \scF$. 
+       This implies by construction that $B \cap \pa{H_1 \cap H_2} \in \scF_B$, but 
+       $B \cap \pa{H_1 \cap H_2} = G_1 \cap G_2 $, so $\scF_B$ satisfies 
+       \ref{def:Filter:FiniteIntersectionProperty}. 
+       Finally, 
+       $\scF_B$ satisfies $\ref{def:Filter:DoesntContainEmpty}$ 
+       if and only if it satisfies that same assumption, concluding the proof of this result. 
+    \end{proof}
 \end{prop}
 
