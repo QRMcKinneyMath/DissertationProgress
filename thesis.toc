@@ -8,41 +8,42 @@
 \contentsline {subsubsection}{Filter Base}{12}{section*.4}%
 \contentsline {subsubsection}{Ultrafilters}{14}{section*.5}%
 \contentsline {subsubsection}{Induced Filters}{15}{section*.6}%
-\contentsline {subsection}{\numberline {2.1.5}Point Set Topology}{16}{subsection.2.1.5}%
-\contentsline {subsubsection}{Open Sets, Closed Sets, and Neighborhoods}{16}{section*.7}%
-\contentsline {subsubsection}{Neighborhood}{17}{section*.8}%
-\contentsline {subsubsection}{Countability Axioms}{20}{section*.9}%
-\contentsline {subsubsection}{Separation Axioms}{21}{section*.10}%
-\contentsline {subsubsection}{Uniformities}{21}{section*.11}%
-\contentsline {subsection}{\numberline {2.1.6}Neighborhood Filter Of A Point}{21}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Equivalence Relations, Quotient Sets, and Quotient Maps}{22}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Quotient Space Topology}{23}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Weak Topologies}{26}{subsection.2.1.9}%
-\contentsline {subsection}{\numberline {2.1.10}Algebraic Structures}{26}{subsection.2.1.10}%
-\contentsline {subsection}{\numberline {2.1.11}Topological Algebra}{29}{subsection.2.1.11}%
-\contentsline {subsection}{\numberline {2.1.12}Vector Spaces}{29}{subsection.2.1.12}%
-\contentsline {subsection}{\numberline {2.1.13}Pseudometrics}{31}{subsection.2.1.13}%
-\contentsline {subsection}{\numberline {2.1.14}Topological Vector Spaces}{38}{subsection.2.1.14}%
-\contentsline {subsection}{\numberline {2.1.15}Seminormed Spaces}{40}{subsection.2.1.15}%
-\contentsline {section}{\numberline {2.2}Classical Results With A Twist}{62}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Helly}{62}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Goldstine}{64}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{64}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Eberlein-Smulian}{65}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Bishop-Phelps}{68}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Reflexivity}{70}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}James}{71}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{79}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Convexity Of Functions And Sets}{80}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Differentiation And SubDifferentials}{83}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Normalized Duality Mapping}{85}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Orthogonality}{85}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Convexity Of A Space}{86}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Smoothness Of A Space}{88}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{91}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{91}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{92}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{93}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{93}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{93}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{94}{chapter.5}%
+\contentsline {subsubsection}{Direct and Inverse Images of a Filter Base}{16}{section*.7}%
+\contentsline {subsection}{\numberline {2.1.5}Point Set Topology}{17}{subsection.2.1.5}%
+\contentsline {subsubsection}{Open Sets, Closed Sets, and Neighborhoods}{17}{section*.8}%
+\contentsline {subsubsection}{Neighborhood}{18}{section*.9}%
+\contentsline {subsubsection}{Countability Axioms}{21}{section*.10}%
+\contentsline {subsubsection}{Separation Axioms}{22}{section*.11}%
+\contentsline {subsubsection}{Uniformities}{22}{section*.12}%
+\contentsline {subsection}{\numberline {2.1.6}Neighborhood Filter Of A Point}{22}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Equivalence Relations, Quotient Sets, and Quotient Maps}{23}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Quotient Space Topology}{24}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Weak Topologies}{27}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}Algebraic Structures}{27}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}Topological Algebra}{30}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}Vector Spaces}{30}{subsection.2.1.12}%
+\contentsline {subsection}{\numberline {2.1.13}Pseudometrics}{32}{subsection.2.1.13}%
+\contentsline {subsection}{\numberline {2.1.14}Topological Vector Spaces}{39}{subsection.2.1.14}%
+\contentsline {subsection}{\numberline {2.1.15}Seminormed Spaces}{41}{subsection.2.1.15}%
+\contentsline {section}{\numberline {2.2}Classical Results With A Twist}{63}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Helly}{63}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Goldstine}{65}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{65}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Eberlein-Smulian}{66}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Bishop-Phelps}{69}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Reflexivity}{71}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}James}{72}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{80}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Convexity Of Functions And Sets}{81}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Differentiation And SubDifferentials}{84}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Normalized Duality Mapping}{86}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Orthogonality}{86}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Convexity Of A Space}{87}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Smoothness Of A Space}{89}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{92}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{92}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{93}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{94}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{94}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{94}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{95}{chapter.5}%
