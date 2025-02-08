@@ -12,14 +12,100 @@
     \item $\scG:=\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}(\scG_\alpha)$. 
     \item $\scB$ is the collection of finite intersections of elements of 
         $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scB_\alpha)$
-    \item $\scF$ is the \ProductFilter. 
+    \item $\scF$ is the \ProductFilter on $\prod\limits_{\alpha \in A} (X_\alpha, \scF_\alpha)$
 \end{enumerate}
 Then the following are true 
-\begin{enumerate}
-\item  $\scF$ is in fact a filter on $\prod\limits_{\alpha\in A} X_\alpha$. 
-\item $\scG$ is a \FilterSubbasis for $\scF$. 
-\item $\scB$ is a \FilterBase for $\scF$. 
-\item $\scF$ is the \CoarsestFilter \Filter on $\prod\limits_{\alpha \in A} X_\alpha$ such that 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:ProductFilterFacts}.~\roman*}]
+\item \label{prop:ProductFilterFacts:Existence} $\scF$ is well defined. 
+\item \label{prop:ProductFilterFacts:Subbasis} $\scG$ is a \FilterSubbasis for $\scF$. 
+\item \label{prop:ProductFilterFacts:Base} $\scB$ is a \FilterBase for $\scF$. 
+\item \label{prop:ProductFilterFacts:Characterization} $\scF$ is the \CoarsestFilter \Filter on $\prod\limits_{\alpha \in A} X_\alpha$ such that 
 for every $\alpha \in A$, $\pi_\alpha (\scF) = \scF_\alpha$. 
 \end{enumerate}
+\begin{proof}[Proof of \ref{prop:ProductFilterFacts:Existence}]
+    Since $A \neq \emptyset$, there exists a $\gamma \in A$. 
+    By \ref{def:Filter:IsNonempty}, $\scF_\gamma \neq \emptyset$. 
+    Hence 
+    \begin{equation*}
+       \emptyset \neq \pi_\gamma^{-1}\pa{\scF_\gamma} \subset  \bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}\pa{\scF_\alpha}
+    \end{equation*}
+    so that $\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}\pa{\scF_\alpha}$ 
+    satisfies \ref{def:FilterSubbase:IsNotEmpty}.
+    Additionally, let $\{U_i\}_{i=1}^n \subset \bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}\pa{\scF_\alpha}$.
+    Then for each $1 \leq i \leq n$, there exists an $\alpha_i \in A$ 
+    and a $V_i \in \scF_{\alpha_i}$ such that 
+    $U_i = \pi_{\alpha_i}^{-1}(V_i)$.
+    For $i,j \in \{1,\cdots,n\}$, define $i \equiv j \iff \alpha_i = \alpha_j$.
+    It is clear that $\equiv$ is an \EquivalenceRelation on $\{1,\cdots,n\}$.
+    Let $k \in \{1, \cdots, n\} / \equiv$. Then 
+    \begin{align*}
+        \bigcap\limits_{p \in k} U_p & = \bigcap\limits_{p \in k} \pi_{\alpha_p}^{-1}\pa{V_{\alpha_p}} \\
+        & =\bigcap\limits_{p \in k} \pi_{\alpha_{min(k)}}^{-1}\pa{V_{p}} \\
+        & = \pi_{\alpha_{min(k)}}^{-1} \pa{\bigcap\limits_{p \in k} V_{p}}
+    \end{align*}
+    Since $\{V_p\}_{p \in k} \subset \scF_{\alpha_{min(k)}}$, 
+    \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}, 
+    $\bigcap\limits_{p \in k} V_p  \in \scF_{\alpha_{min(k)}}$, so 
+    by \ref{def:Filter:DoesntContainEmpty}, $\bigcap\limits_{p \in k} V_p \neq \emptyset$. 
+    For each $k \in \{1,\cdots,n\}/\equiv$, let
+    $x_k \in \pi_{\alpha_{min(k)}}^{-1}\pa{\bigcap\limits_{p \in k}V_p}$.
+    Partition $A= A' \cup \pa{A \setminus A'}$ where 
+    $A' = \{\alpha_{min(k)} | k \in \{1,\cdots,n\} /\equiv\}$. 
+    For each $\alpha \in A \setminus A'$, Define $F_\alpha = X_\alpha$.
+    For each $\alpha_{min(k)} \in A'$, define $F_{\alpha_{min(k)}} = \{x_k\}$.
+    Then by the axiom of choice, 
+    \begin{equation*}
+    \emptyset \neq \prod\limits_{\alpha \in A} F_\alpha \subset \bigcap\limits_{i=1}^n U_i
+    \end{equation*}
+    so that $\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}\pa{\scF_\alpha}$
+    satisfies \ref{def:FilterSubbase:FiniteIntersectionsNonempty}.
+    Hence $\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}\pa{\scF_\alpha}$ is a \FilterSubbasis
+    on $X$, and the \Filter that it \FilterGenerates is $\scF$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ProductFilterFacts:Base}]
+    Let $\alpha \in A$. 
+    By \ref{prop:InverseFilterImage:Baqse}, both 
+    $\pi_\alpha^{-1}(\scF_\alpha)$ and $\pi_{\alpha}^{-1}(\scB_\alpha)$ are \FilterBases 
+    for a \Filter on the product set. 
+    Let $U \in \pi_\alpha^{-1}(\scF_\alpha)$. 
+    Then, by 
+    \ref{prop:FilterBaseFacts:BaseCondition}, there is a $b \in \scB_\alpha$ such that 
+    $b \subset U$. Hence $f^{-1}(b) \subset f^{-1}(U)$.
+    Which implies by \ref{prop:FilterBaseFacts:FinerCondition} that
+    $\pi_\alpha^{-1}(\scB_\alpha)$ is a \FilterBase for a \FinerFilter \Filter 
+    than $\pi_{\alpha}^{-1}(\scB_\alpha)$. 
+    In particular, any $\Filter$ containing $\pi_{\alpha}^{-1}(\scB_\alpha)$ also contains 
+    $\pi_{\alpha}^{-1}(\scF_\alpha)$. 
+    However, we also have $\pi_{\alpha}^{-1}(\scB_\alpha) \subset \pi_{\alpha}^{-1}(\scF_\alpha)$, so any $Filter$ on the product set will contain one if and only if it contains the other. 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Let $\alpha \in A$. Then, since $\pi_\alpha$ is surjective, $\emptyset \not \in \pi_\alpha^{-1}\pa{\scB_\alpha}$, so we can leverage  \ref{prop:InverseFilterImage:Base}
+    and \ref{prop:InverseFilterImage:Finer} to claim that 
+    $f\pa{f^{-1}\pa{\scB_{\alpha}}}$ is a \FilterBase for a \Filter on $X_\alpha$ which is 
+    \FinerFilter than $\scF_\alpha$. 
+    However, viewing $\scF_\alpha$ as a \FilterBase, we have $f\pa{f^{-1}\pa{\scF_\alpha}}=\scF_\alpha$ 
+    $f\pa{f^{-1}(\scF_\alpha)}$
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ProductFilterFacts:Subbasis}]
+    By \ref{def:GeneratedFilter}, for each $\alpha \in A$, 
+    $\scF_\alpha \{P \cup U | P \in X_\alpha \wedge U \in \scK_\alpha\}$ 
+    where $\scK_\alpha$ is the collection of finite intersections of 
+    elements of $\scG_\alpha$.
+
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ProductFilterFacts:Characterization}]
+\end{proof}
 \end{prop}
