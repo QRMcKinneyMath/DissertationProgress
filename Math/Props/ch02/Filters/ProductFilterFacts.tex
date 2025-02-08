@@ -1,0 +1,25 @@
+\begin{prop}
+    \label{prop:ProductFilterFacts}
+    Suppose the following
+\begin{enumerate}
+    \item $A \neq \emptyset$.
+    \item $\{X_\alpha\}_{\alpha \in A}$ is a collection of nonemptyset sets. 
+    \item For each $\alpha \in A$
+    , $\scB_\alpha$ is a \FilterBase for a \Filter $\scF_\alpha$ on $X_\alpha$.
+    \item For each $\alpha \in A$, $\scG_\alpha$ is a \FilterSubbasis
+    which \FilterGenerates $\scF_\alpha$. 
+    \item For each $\gamma \in A$, $\pi_\gamma : \prod\limits_{\alpha \in A} X_\alpha \to  X_\gamma$ represents the \ProjectionMap. 
+    \item $\scG:=\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}(\scG_\alpha)$. 
+    \item $\scB$ is the collection of finite intersections of elements of 
+        $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scB_\alpha)$
+    \item $\scF$ is the \ProductFilter. 
+\end{enumerate}
+Then the following are true 
+\begin{enumerate}
+\item  $\scF$ is in fact a filter on $\prod\limits_{\alpha\in A} X_\alpha$. 
+\item $\scG$ is a \FilterSubbasis for $\scF$. 
+\item $\scB$ is a \FilterBase for $\scF$. 
+\item $\scF$ is the \CoarsestFilter \Filter on $\prod\limits_{\alpha \in A} X_\alpha$ such that 
+for every $\alpha \in A$, $\pi_\alpha (\scF) = \scF_\alpha$. 
+\end{enumerate}
+\end{prop}

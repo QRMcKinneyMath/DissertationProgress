@@ -1,0 +1,54 @@
+\begin{prop}[Inverse Filter Image]
+\label{prop:InverseFilterImage}
+Suppose the following
+\begin{enumerate}
+\item $X,Y \neq \emptyset$
+\item $f:X \to Y$. 
+\item $\scB$ is a \FilterBase for a \Filter $\scF$ on $Y$. 
+\item $\scF_{f(X)}:=\{U \cap f(X) | U \in \scF\}$
+\end{enumerate}
+Then the following are true
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:InverseFilterImage}.~\roman*}]
+    \item \label{prop:InverseFilterImage:Base}
+    $f^{-1}\pa{\scB}$ is a \FilterBase on $X$ if and only if 
+    $\emptyset \not \in f^{-1}\pa{\scB}$. 
+    \item \label{prop:InverseFilterImage:Finer} If $f^{-1}\pa{\scB}$ is a \FilterBase on $X$, 
+    then $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase for a \Filter on $Y$ finer than $\scF$. 
+    \item \label{prop:InverseFilterImage:Subspace} If $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase for a \Filter
+    $\scG$ on $Y$, then $\scG_{f(X)}=\scF_{f(X)}$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:InverseFilterImage:Base}]
+    Necessity of $\emptyset \not \in f^{-1}\pa{\scB}$ is obvious by 
+    \ref{def:FilterBase:DoesntContainEmptySet}.
+    For sufficiency, suppose $\emptyset \not \i f^{-1}\pa{\scB}$. 
+    Then $f^{-1}\pa{\scB}$ satisfies \ref{def:FilterBase:DoesntContainEmptySet} trivially.
+    Furthermore, by $\ref{def:FilterBase:IsNotEmpty}$, 
+    $\scB \neq \emptyset$, so $f^{-1}\pa{\scB} \neq \emptyset$, so 
+    $f^{-1}\pa{\scB}$ satisfies \ref{def:FilterBase:IsNotEmpty}. 
+    Finally, let $U_1,U_2 \in f^{-1}\pa{\scB}$. 
+    Then there exist $V_1,V_2 \in \scB$ such that 
+    $U_i = f^{-1}(V_i)$. 
+    By \ref{def:FilterBase:IntersectionProperty}, there exists $W \in \scB$ such that
+    $W \subset V_1 \cap V_2$, and $f^{-1}(W) \in f^{-1}\pa{\scB}$. 
+    Clearly, 
+    \begin{equation*}
+        f^{-1}(W) \subset f^{-1}\pa{V_1 \cap V_2} = f^{-1}(V_1) \cap f^{-1}(V_2) = U_1 \cap U_2
+    \end{equation*}
+    Hence $f^{-1}(\scB)$ satisfies \ref{def:FilterBase:IntersectionProperty}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:InverseFilterImage:Finer}]
+    If $f^{-1}\pa{\scB}$ is a \FilterBase on $X$, 
+    then we can leverage \ref{prop:DirectFilterImage:Base} to 
+    claim that $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase for a \Filter on $f(X)$, 
+    and therefore also a \FilterBase for a \Filter on $Y$. 
+    In particular, $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase. 
+    Furthermore, if $b \in \scB$, then $f(f^{-1}(b)) \in f(f^{-1}\pa{\scB})$ and 
+    $f(f^{-1}(b))= f(X) \cap b \subset b$, so by \ref{prop:FilterBaseFacts:FinerCondition}, 
+    $f(f^{-1}\pa{\scB})$ is a \FilterBase for a \FinerFilter \Filter than $\scF$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:InverseFilterImage:Subspace}]
+   This is because given the assumptions, 
+   $f\pa{f^{-1}\pa{\scB}} = \{f(X) \cap \scB | x \in \scB\}$, 
+   which lets us apply \ref{prop:FilterBaseFacts:EquivalenceCondition}
+\end{proof}
+\end{prop}

@@ -1,0 +1,29 @@
+\newcommand{\ProductFilter}[0]{
+    \textbf{\hyperref[def:ProductFilter]{Product Filter}}
+}
+\newcommand{\ProductFilters}[0]{
+    \textbf{\hyperref[def:ProductFilter]{Product Filters}}
+}
+\newcommand{\ProductFilterBase}[0]{
+    \textbf{\hyperref[def:ProductFilter]{Product Filter Base}}
+}
+\newcommand{\ProductFilterBases}[0]{
+    \textbf{\hyperref[def:ProductFilter]{Product Filter Bases}}
+}
+\begin{df}[\ProductFilter]
+\label{def:ProductFilter}
+Suppose the following
+\begin{enumerate}
+    \item $A \neq \emptyset$.
+    \item $\{X_\alpha\}_{\alpha \in A}$ is a collection of nonemptyset sets. 
+    \item For each $\alpha \in A$, $\scF_\alpha$ is a \Filter on $X_\alpha$. 
+    \item For each $\gamma \in A$, $\pi_\gamma : \prod\limits_{\alpha \in A} X_\alpha \to  X_\gamma$ represents the \ProjectionMap. 
+\end{enumerate}
+Then we define the \Filter on $\prod\limits_{\alpha \in A} X_\alpha$ 
+\FilterGeneratedBy 
+\begin{equation*}
+\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}(\scF_\alpha)
+\end{equation*}
+to be the \ProductFilter on $\prod\limits_{\alpha \in A}(X_\alpha, \scF_\alpha)$
+
+\end{df}
