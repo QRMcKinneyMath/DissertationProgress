@@ -12,19 +12,19 @@
 \contentsline {subsubsection}{Filter Products}{18}{section*.8}%
 \contentsline {subsection}{\numberline {2.1.5}Point Set Topology}{20}{subsection.2.1.5}%
 \contentsline {subsubsection}{Open Sets, Closed Sets, and Neighborhoods}{20}{section*.9}%
-\contentsline {subsubsection}{Neighborhood}{21}{section*.10}%
-\contentsline {subsubsection}{Countability Axioms}{24}{section*.11}%
+\contentsline {subsubsection}{Neighborhood}{22}{section*.10}%
+\contentsline {subsubsection}{Countability Axioms}{25}{section*.11}%
 \contentsline {subsubsection}{Separation Axioms}{25}{section*.12}%
 \contentsline {subsubsection}{Uniformities}{25}{section*.13}%
 \contentsline {subsection}{\numberline {2.1.6}Neighborhood Filter Of A Point}{25}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Equivalence Relations, Quotient Sets, and Quotient Maps}{25}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.7}Equivalence Relations, Quotient Sets, and Quotient Maps}{26}{subsection.2.1.7}%
 \contentsline {subsection}{\numberline {2.1.8}Quotient Space Topology}{27}{subsection.2.1.8}%
 \contentsline {subsection}{\numberline {2.1.9}Weak Topologies}{30}{subsection.2.1.9}%
 \contentsline {subsection}{\numberline {2.1.10}Algebraic Structures}{30}{subsection.2.1.10}%
 \contentsline {subsection}{\numberline {2.1.11}Topological Algebra}{33}{subsection.2.1.11}%
 \contentsline {subsection}{\numberline {2.1.12}Vector Spaces}{33}{subsection.2.1.12}%
 \contentsline {subsection}{\numberline {2.1.13}Pseudometrics}{35}{subsection.2.1.13}%
-\contentsline {subsection}{\numberline {2.1.14}Topological Vector Spaces}{42}{subsection.2.1.14}%
+\contentsline {subsection}{\numberline {2.1.14}Topological Vector Spaces}{43}{subsection.2.1.14}%
 \contentsline {subsection}{\numberline {2.1.15}Seminormed Spaces}{44}{subsection.2.1.15}%
 \contentsline {section}{\numberline {2.2}Classical Results With A Twist}{66}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Helly}{66}{subsection.2.2.1}%
