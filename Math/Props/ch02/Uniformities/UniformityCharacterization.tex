@@ -1,0 +1,49 @@
+\begin{prop}[\Uniformity Characterization]
+\label{prop:UniformityCharacterization}
+The definition for a \Uniformity $\scW$ on a nonemptyset $X$ 
+is unchanged if 
+\ref{def:Uniformity:ContainsInverse} and 
+\ref{def:Uniformity:ContainsCompositionSubset} are replaced by 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:UniformityCharacterization}~\roman*}]
+\item \label{def:Uniformity:ContainsInverseComposition} For each $W \in \scW$, there exists $V \in \scW$ such that $V \circ V^{-1} \subset W$. 
+\end{enumerate}
+\begin{proof}
+For this whole proof, let $\scW \subset \scPowerSet{X \times X}$ satisfy
+\ref{def:Uniformity:IsFilter} and 
+\ref{def:Uniformity:ContainsDiagonal}.
+
+$(\implies)$ Let $\scW$ satisfy $\ref{def:Uniformity:ContainsInverse}$ 
+and \ref{def:Uniformity:ContainsCompositionSubset}
+Let $W \in \scW$.
+Then, by \ref{def:Uniformity:ContainsCompositionSubset}, there is a $V \in \scW$,
+such that $V \circ V \subset W$. 
+Also,  by \ref{def:Uniformity:ContainsInverse}, $V^{-1} \in \scW$. 
+Hence, by \ref{def:Uniformity:IsFilter} and \ref{def:Filter:FiniteIntersectionProperty}, 
+$\tilde{V}:=V \cap V^{-1} \in \scW$. 
+Note that $\tilde{V}^{-1}=\tilde{V}$, and 
+\begin{equation*}
+\tilde{V} \circ \tilde{V}^{-1} = \tilde{V} \circ \tilde{V} \subset V \circ V \subset W
+\end{equation*}
+Since $W$ was arbitrary, \ref{def:Uniformity:ContainsInverseComposition} is satisfied. 
+
+$(\impliedby)$ Let $\scW$ satisfy \ref{def:Uniformity:ContainsInverseComposition}.
+Let $W \in \scW$. Then by \ref{def:Uniformity:ContainsInverseComposition}, there is a 
+$V \in \scW$ such that $V \circ V^{-1} \subset W$. 
+By \ref{def:Filter:ContainsDiagonal}, $\scSetDiagonal{X} \subset V$, so 
+\begin{equation*}
+    V^{-1} = \scSetDiagonal{X} \circ V^{-1} \subset V \circ V^{-1} \subset W
+\end{equation*}
+This implies $V \subset W^{-1}$. By \ref{def:Filter:SubsetProperty} and \ref{def:Uniformity:IsFilter}, $W^{-1} \in \scW$, so \ref{def:Uniformity:ContainsInverse} is satisfied. 
+Now, letting 
+$\tilde{V} = V \cap V^{-1}$, we have $\tilde{V} \in \scW$ by 
+\ref{def:Filter:FiniteIntersectionProperty} and \ref{def:Uniformity:ContainsInverse}
+, and also $\tilde{V}^{-1} = \tilde{V}$ so 
+\begin{equation*}
+\tilde{V} \circ \tilde{V} = \tilde{V} \circ \tilde{V}^{-1} \subset V \circ V^{-1} \subset W
+\end{equation*}
+so that \ref{def:Uniformity:ContainsCompositionSubset} is verified and we're done. 
+
+
+
+\end{proof}
+\end{prop}

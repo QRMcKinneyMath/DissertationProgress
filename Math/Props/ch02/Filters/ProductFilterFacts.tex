@@ -131,7 +131,13 @@ Hence $\pi_{\gamma}(V') \in \scF_\gamma$ and $\pi_{\gamma}(V') \subset \pi_\gamm
 so by  \ref{def:Filter:SubsetProperty}, $U \in \scF_\gamma$, implying
 $\pi_\gamma(\scF) \subset \scF_\gamma$. 
 Since the inclusion goes both ways, $\pi_{\gamma}(\scF) = \scF_\gamma$. 
-
+To see that $\scF$ is the \CoarsestFilter with this filter, not that 
+if $\scH$ is a \Filter on the product set such that 
+$\pi_{\gamma}(\scH)=\scF_\gamma$, then 
+\begin{equation*}
+\pi_{\gamma}^{-1}(\scF_\gamma) = \pi_{\gamma}^{-1}\pa{\pi_{\gamma}\pa{\scH}} \subset \scH
+\end{equation*}
+Hence if this occurs for every $\gamma$ then $\scF \subset \scH$, exactly what we are trying to show.
 
 \end{proof}
 \end{prop}

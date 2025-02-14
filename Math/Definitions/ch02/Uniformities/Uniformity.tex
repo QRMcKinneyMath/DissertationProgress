@@ -1,4 +1,3 @@
-\label{def:Uniformity}
 \newcommand{\Uniformity}[0]{
     \textbf{\hyperref[def:Uniformity]{Uniformity}}
 }
@@ -12,20 +11,32 @@
 \newcommand{\Entourages}[0]{
     \textbf{\hyperref[def:Uniformity]{Entourages}}
 }
+\newcommand{\UniformityClose}[0]{
+    \textbf{\hyperref[def:Uniformity]{Close}}
+}
+\newcommand{\UniformityCloseEnough}[0]{
+    \textbf{\hyperref[def:Uniformity]{Close Enough}}
+}
 \begin{df}[\Uniformity]
-    Let $X$ be a st and let $\scW$
-    be a \Filter on 
-    $X \times X$ such that 
-    \begin{enumerate}
-    \item For each $W \in \scW$, $\scSetDiagonal{X} \subset W$. 
-    \item $W \in \scW \implies W^{-1} \in \scW$. 
-    \item For each $W \in \scW$, there exists $V \in \scW$ such that $V \circ V \subset W$. 
+\label{def:Uniformity}
+    Let $X$ be a set and let $\scW \subset \scPowerSet{X \times X}$ such that
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:Uniformity}~\roman*}]
+    \item \label{def:Uniformity:IsFilter} $\scW$ is a \Filter on $X \times X$. 
+    \item \label{def:Uniformity:ContainsDiagonal} For each $W \in \scW$, $\scSetDiagonal{X} \subset W$. 
+    \item \label{def:Uniformity:ContainsInverse} $W \in \scW \implies W^{-1} \in \scW$. 
+    \item \label{def:Uniformity:ContainsCompositionSubset} For each $W \in \scW$, there exists $V \in \scW$ such that $V \circ V \subset W$. 
     \end{enumerate}
     Then we call $\scW$ a \Uniformity
     on $X$. 
     Furthermore, if $W \in \scW$, then we call 
     $W$ an \Entourage 
-    of $W$. 
+    of $\scW$. 
+    If $(x,y) \in W$ is an \Entourage of $\scW$, 
+    then we say that $x$ and $y$ are W-\UniformityClose.
+    If $R$ is a \Relation on $X$ 
+    then saying that $x_0Ry_0$ is true whenever
+    $x_0$ and $y_0$ are \UniformityCloseEnough
+    means that there exists an \Entourage $V$ such that $V \subset R$. 
 \end{df}
 
 
