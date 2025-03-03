@@ -1,22 +1,42 @@
 \begin{prop}[\NeighborhoodFilter is a \Filter]
 \label{prop:NeighborhoodFilter}
 Let $(X,\T)$ be a \TopologicalSpace 
-and let $x \in X$. 
-Then $\NeighborhoodFilterInstance{\T}(x)$, the
-\NeighborhoodFilter of $x$, is in fact a 
-\Filter on $X$. 
-\begin{proof}
-For part 1 of 
-\ref{def:Filter:DoesntContainEmpty}
-, since $x \not \in \emptyset$, $\emptyset \not \in\NeighborhoodFilterInstance{\T}(x)$
+For each $x \in X$, 
+let $\NeighborhoodFilterInstance{\T}(x)$ denote the 
+\NeighborhoodFilter of $x$.
+The following are true 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:NeighborhoodFilter}~\roman*}]
+\item \label{prop:NeighbhorhoodFilter:IsFilter} \NeighborhoodFilterInstance{\T}(x) is a \Filter on $X$. 
+\item \label{prop:NeighborhoodFilter:Containsx} For each $U \in \NeighborhoodFilterInstance{\T}(x)$, $x \in U$. 
+\item \label{prop:NeighborhoodFilter:CharacteristicProperty} 
+Let $x,y \in X$. Then, if $U \in \NeighborhoodFilterInstance{\T}(x)$, then there exists 
+$V \in \NeighborhoodFilterInstance{\T}(x)$ such that for each $y \in V$, $U \in \NeighborhoodFilterInstance{\T}(y)$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:NeighbhorhoodFilter:IsFilter}]
+Clearly $x \in X \subset X \subset X \subset X \in \T$, so $X \in \NeighborhoodFilterInstance{\T}(x)$. 
+Thus $\NeighborhoodFilterInstance{\T}(x)$ satisfies \ref{def:Filter:IsNonempty}. 
+Also, since $x \not \in \emptyset$
+, $\emptyset \not \in\NeighborhoodFilterInstance{\T}(x)$.
+Hence $\NeighborhoodFilterInstance{\T}(x)$ satisfies \ref{def:Filter:DoesntContainEmpty}.
 If $\{G_1, G_2\} \subset \NeighborhoodFilterInstance{\T}(x)$ with 
 $G_1 \cap G_2 \neq \emptyset$
-then there are \SetOpen $x \in U_i \subset G_i$ and we have
-$x \in U_1 \cap U_2 \subset U_1 \cap U_2 \subset G_1 \cap G_2$ with 
-$U_1 \cap U_2 \in \T$. Hence, 
-\ref{def:Filter:FiniteIntersectionProperty}
-holds. 
-\ref{def:Filter:SubsetProperty} is obvious
+then there are \SetOpen $U_i$ with $x \in U_i \subset G_i$.
+For these $U_i$, 
+$x \in U_1 \cap U_2 \subset U_1 \cap U_2 \subset G_1 \cap G_2$ and $U_1 \cap U_2 \in \T$. 
+Hence, \NeighborhoodFilterInstance{\T} satifies
+\ref{def:Filter:FiniteIntersectionProperty}.
+It is obvious that $\NeighborhoodFilterInstance{\T}(x)$ satisfies
+\ref{def:Filter:SubsetProperty}. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NeighborhoodFilter:Containsx}]
+Painfully Obvious
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NeighborhoodFilter:CharacteristicProperty}]
+Let $U \in \NeighborhoodFilterInstance{\T}(x)$. 
+Then there exists \SetOpen $V$ with $x \in V \subset U$. 
+Since $V$ is \SetOpen, $V \in \NeighborhoodFilterInstance{\T}(x)$. 
+Let $Y \in V$. Then, $y \in V \subset V \subset U$, so $U \in \NeighborhoodFilterInstance{\T}(y)$. 
+Hence $\ref{prop:NeighborhoodFilter:CharacteristicProperty}$ is satisfied. 
 \end{proof}
 \end{prop}
 

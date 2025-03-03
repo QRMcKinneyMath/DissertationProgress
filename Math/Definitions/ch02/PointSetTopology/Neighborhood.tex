@@ -3,7 +3,7 @@
 \newcommand{\Neighborhoods}[0]{ \bf \hyperref[def:Neighborhood]{Neighborhoods} \rm }
 \newcommand{\NeighborhoodFilter}[0]{ \bf \hyperref[def:Neighborhood]{Neighborhood Filter} \rm }
 \newcommand{\NeighborhoodFilters}[0]{ \bf \hyperref[def:Neighborhood]{Neighborhood Filters} \rm }
-\newcommand{\NeighborhoodFilterInstance}[0]{\scU}
+\newcommand{\NeighborhoodFilterInstance}[1]{\ensuremath{\scU_{#1}}}
 \begin{df}[\Neighborhood, \NeighborhoodFilter]
     Let $(X, \T)$ be a \TopologicalSpace.
     Let $A \subset B \subset C \subset X$ 
@@ -15,8 +15,9 @@
     \Neighborhood of $x$. 
     We denote the collection of all \Neighborhoods 
     of $x \in X$ with 
-    $\NeighborhoodFilterInstance_{\T}(x)$.
+    $\NeighborhoodFilterInstance{\T}(x)$.
     and we call this the 
+	\NeighborhoodFilter of $x$.
     By 
     \ref{prop:NeighborhoodFilter}, 
     is a \Filter

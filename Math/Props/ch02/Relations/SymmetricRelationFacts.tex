@@ -1,0 +1,25 @@
+\begin{prop}
+    \label{prop:SymmetricRelation}
+    Let $X \neq \emptyset$ 
+    and let $R$ be a \Relation on $X$. 
+    The following are true. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:SymmetricRelation}~\roman*}]
+    \item \label{prop:SymmetricRelation:IntersectionSymmetric} $R \cap R^{-1}$ is \SymmetricRelation.
+    \item \label{prop:SymmetricRelation:UnionSymmetric}$R \cup R^{-1}$ is \SymmetricRelation.
+    \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:SymmetricRelation:IntersectionSymmetric}]
+    If $R \cap R^{-1} = \emptyset$ then it is trivally \SymmetricRelation.
+    Suppose $R \cap R^{-1} \neq \emptyset$ and let $(x,y) \in R \cap R^{-1}$. 
+    Then $(x,y) \in R$, implying by \ref{def:SymmetricRelation} that $(y,x) \in R$. 
+    Also this implies $(x,y) \in R^{-1}$ so by \ref{def:SymmetricRelation} we have 
+    $(y,x) \in \pa{R^{-1}}^{-1}=R$. Hence $(y,x) \in R \cap R^{-1}$, so \RelationSymmetry is 
+    verified.
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:SymmetricRelation:UnionSymmetric}]
+    Let $(x,y) \in R \cup R^{-1}$. Then either $(x,y) \in R$ 
+    or $(x,y) \in R^{-1}$. 
+    In the former case, $(y,x) \in R^{-1} \subset R \cup R^{-1}$. 
+    In the latter case, $(y,x) \in R \subset R \cup R^{-1}$. 
+    Hence in either case $(y, x) \in R \cup R^{-1}$ and \RelationSymmetry is verified.
+    \end{proof}
+\end{prop}

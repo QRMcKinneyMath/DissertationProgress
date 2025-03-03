@@ -1,0 +1,15 @@
+\begin{prop}[Fundamental System Characterization]
+\label{prop:FundamentalSystemOfEntouragesCharacterization}
+Let $X \neq \emptyset$ and $\scB \subset \scPowerSet{X \times X}$. 
+Then there exists a \Uniformity \scW on $X$
+such that $\scB$  is a \FundamentalSystemOfEntourages for $\scW$ if and only if 
+the following hold.
+\begin{enumerate}
+   \item $\scB$ satisfies \ref{def:FilterBase:IntersectionProperty}.
+   \item $\scB$ satisfies \ref{def:Uniformity:ContainsDiagonal}
+   \item $\scB$ satisfies \ref{def:Uniformity:ContainsCompositionSubset}
+   \item For each $U \in \scB$, there exists $V \in B$ such that $V \subset U^{-1}$. 
+\end{enumerate}
+
+Furthermore, in this case $\scB$ is a \FilterBase for $\scW$. 
+\end{prop}

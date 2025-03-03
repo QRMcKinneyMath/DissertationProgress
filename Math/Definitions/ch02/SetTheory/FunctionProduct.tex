@@ -1,0 +1,24 @@
+\newcommand{\FunctionProduct}[0]{
+    \textbf{\hyperref[def:FunctionProduct]{Function Product}}    
+}
+\newcommand{\FunctionProducts}[0]{
+    \textbf{\hyperref[def:FunctionProduct]{Function Products}}    
+}
+\begin{df}[Function Product]
+\label{def:FunctionProduct}
+    For $\alpha \in A$, let $f_\alpha : X_\alpha \to Y_\alpha$. 
+    Define
+    \begin{equation*}
+    f: \prod\limits_{\alpha \in A} X_\alpha \to \prod\limits_{\alpha \in A} Y_{\alpha}
+    \end{equation*}
+    by 
+    \begin{equation*}
+      f\pa{\left\{x_\alpha\right\}_{\alpha \in A}} = \left\{f_\alpha \pa{x_\alpha} \right\}_{\alpha \in A}
+    \end{equation*}
+    Then we call $f$ the \FunctionProduct of $\{f_\alpha\}_{\alpha \in A}$
+    and we denote 
+    $\prod\limits_{\alpha \in A} f_\alpha:=f$.
+    or in the case where $\{X_\alpha\}_{\alpha \in A} =\{X_1, \cdots, X_n\}$, 
+    we may denote 
+    $f=f_1 \times f_2 \times \cdot \times f_n$. 
+\end{df}
