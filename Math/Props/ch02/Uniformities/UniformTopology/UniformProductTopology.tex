@@ -3,17 +3,33 @@
 Let $(X,\scW, \scT_{\scW})$ be a \UniformSpace. 
 Let $\scU$ denote the collection of \SymmetricRelation \Entourages.
 Let $M \subset X \times X$. 
+Let $N \subset X$. 
 Let $X \times X$ be endowed with the \ProductTopology.
 Then the following are true
-\begin{enumerate}[label=(\roman*), ref={\ref{prop:UniformProductTOpology}~\roman*}]
-\item \label{prop:UniformProductTopology:Neighborhood} If $U \in \scU$, then $UMU$ is a \Neighborhood of $M$ in $X \times X$. 
-\item \label{prop:UniformProductTopology:Closure} 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:UniformProductTopology}~\roman*}]
+\item 
+\label{prop:UniformTopology:ProductNeighborhood} 
+If $U \in \scU$, 
+then $UMU$ is a \Neighborhood of $M$ in $X \times X$. 
+\item \label{prop:UniformTopology:ProductClosure} 
 \begin{equation*}
-\overline{M} = \bigcap_{U \in \scU} U M U
+\ClosureMark{M} = \bigcap_{U \in \scU} U M U
+\end{equation*}
+\item 
+\label{prop:UniformTopology:Neighborhood} 
+If $U \in \scU$, then $U(A)$ is a \Neighborhood of $A$.
+\item 
+\item \label{prop:UniformTopology:Closure} 
+\begin{equation*}
+\ClosureMark{N}=\bigcap\limits_{U \in \scU} U(N) = \bigcap\limits_{U \in \scW} U(N)
 \end{equation*}
 \end{enumerate}
-\begin{proof}[Proof of \ref{prop:UniformProductTopology:Neighborhood}]
+\begin{proof}[Proof of \ref{prop:UniformTopology:ProductNeighborhood}]
 \end{proof}
-\begin{proof}[Proof of \ref{prop:UniformProductTopology:Closure}]
+\begin{proof}[Proof of \ref{prop:UniformTopology:ProductClosure}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformTopology:Neighborhood}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformTopology:Closure}]
 \end{proof}
 \end{prop}

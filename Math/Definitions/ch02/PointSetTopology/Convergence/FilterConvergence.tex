@@ -1,0 +1,37 @@
+\newcommand{\FilterLimit}[0]{
+    \textbf{\hyperref[def:FilterConvergence]{Limit}}
+}
+\newcommand{\FilterLimits}[0]{
+    \textbf{\hyperref[def:FilterConvergence]{Limits}}
+}
+\newcommand{\FilterConvergent}[0]{
+    \textbf{\hyperref[def:FilterConvergence]{Convergent}}
+}
+\newcommand{\FilterConvergence}[0]{
+    \textbf{\hyperref[def:FilterConvergence]{Convergence}}
+}
+\newcommand{\FilterConverges}[0]{
+    \textbf{\hyperref[def:FilterConvergence]{Converges}}
+}
+\begin{df}[\FilterConvergence]
+\label{def:FilterConvergence}
+    Let $(X,\T)$ be a \TopologicalSpace. 
+    Let $\scF$ be a \Filter on $X$. 
+    Let $\scB$ be a \FilterBase for $\scF$. 
+    Let \NeighborhoodFilterInstance{\T}(x) 
+    denote the \NeighborhoodFilter of $\T$ at $x$. 
+    Let \scF be \FinerFilter 
+    than 
+    \NeighborhoodFilterInstance{\T}(x).
+    Then we say the following. 
+    \begin{enumerate}
+    \item $x$ is a \FilterLimit of $\scF$.
+    \item $x$ is a \FilterLimit of $\scB$. 
+    \item $\scF$ \FilterConverges to $x$. 
+    \item $\scB$ \FilterConverges to $x$.
+    \item $\scF$ is \FilterConvergent to $x$. 
+    \item $\scB$ is \FilterConvergent to $x$.
+    \item $\scF$ posesses \FilterConvergence to $x$. 
+    \item $\scB$ posesses \FilterConvergence to $x$. 
+    \end{enumerate}
+\end{df}
