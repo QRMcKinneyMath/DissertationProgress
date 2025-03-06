@@ -1,0 +1,20 @@
+\newcommand{\FundamentalSystemOfNeighborhoods}[0]{
+    \textbf{\hyperref[def:FundamentalSystemOfNeighborhoods]{Fundamental System Of Neighborhoods}}
+}
+\newcommand{\FundamentalSystemsOfNeighborhoods}[0]{
+    \textbf{\hyperref[def:FundamentalSystemOfNeighborhoods]{Fundamental Systems Of Neighborhoods}}
+}
+\begin{df}[\FundamentalSystemOfNeighborhoods]
+\label{def:FundamentalSystemOfNeighborhoods}
+    Let $(X,\scT)$ be a \TopologicalSpace.
+    Let $x \in X$. 
+    Let $\NeighborhoodFilterInstance{\scT}(x)$ denote
+    the \NeighborhoodFilter of $\scT$ at $x$. 
+    We say that $\scK$ is a \FundamentalSystemOfNeighborhoods for $X$ at $x$ if 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:FundamentalSystemOfNeighborhoods}~\roman*}]
+    \item \label{def:FundamentalSystemOfNeighborhoods:AreNeighborhoods}
+    $\scK \subset \NeighborhoodFilterInstance{\scT}(x)$. 
+    \item \label{def:FundamentalSystemOfNeighborhoods:Nesting}. 
+    For each $U \in \NeighborhoodFilterInstance{\scT}(x)$, there exists $V \in \scK$ such that $V \subset U$.
+    \end{enumerate}
+\end{df}

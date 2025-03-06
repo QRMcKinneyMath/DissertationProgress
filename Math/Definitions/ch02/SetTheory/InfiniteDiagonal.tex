@@ -1,0 +1,22 @@
+\newcommand{\InfiniteSetDiagonal}[0]{
+    \textbf{\ hyperref[def:InfiniteSetDiagonal]{Diagonal}}
+}
+\newcommand{\InfiniteSetDiagonals}[0]{
+    \textbf{\ hyperref[def:InfiniteSetDiagonal]{Diagonals}}
+}
+
+\newcommand{\scInfiniteSetDiagonal}[2]{
+    \ensuremath{\hyperref[def:InfiniteSetDiagonal]{\Delta_{#1}\pa{#2}}}
+}
+\begin{df}[\InfiniteSetDiagonal]
+    \label{def:InfiniteSetDiagonal}
+    rm
+    Let $X$ be a set.
+    Let $A \neq \emptyset$. 
+    We define 
+    \begin{equation*}
+    \scInfiniteSetDiagonal{A}{X}= \left\{ \{x\}_{\alpha \in A} \in \prod\limits_{\alpha \in A} X | x \in X\right\}
+    \end{equation*}
+    We call this the \InfiniteSetDiagonal of $X$ with respect to $A$, 
+    or, when $A$ is understood, the \InfiniteSetDiagonal of $X$.
+\end{df}
