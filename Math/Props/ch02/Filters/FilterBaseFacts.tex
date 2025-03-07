@@ -12,20 +12,14 @@
         forms a \FilterBase for $\scF$. 
     \item \label{prop:FilterBaseFacts:BaseCondition}
     $B \subset \scF$ is a \FilterBase for $\scF$ 
-    if and only if for each $Y \in \scF$, there exists
-    $b \in B$ with $b \subset Y$. 
+    if and only if \scNested{B}{\scF} holds. 
     \item \label{prop:FilterBaseFacts:FinerCondition}
        $\scF$ 
-       is \FinerFilter than $\scG$ if and only if
-       for each $g \in G$, there is an $f \in F$ with $f \subset g$. 
+       is \FinerFilter than $\scG$ if and only if \scNested{F}{G} holds. 
     \item  \label{prop:FilterBaseFact:EquivalenceCondition} 
     $F$ is 
     \FilterBaseEquivalent to 
-    $G$ if and only if for each 
-    $f \in F$ there  is a 
-    $g \in G$ with $g \subset f$ 
-    and for each $g \in G$ there is an 
-    $f \in F$ with $f \subset g$. 
+    $G$ if and only if \scNested{F}{G} and \scNested{G}{F} both hold.- 
    \end{enumerate}
    \begin{proof}[Proof of \ref{prop:FilterBaseFacts:BaseFromSubbasis}]
    Let 

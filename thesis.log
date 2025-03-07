@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  6 MAR 2025 07:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2024.1.22)  7 MAR 2025 07:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -600,6 +600,7 @@ cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X; Y\OMS/cmsy/m/n/12 gg 2
 (Math/Definitions/ch02/PointSetTopology/ClosureUnderUnions.tex [4])
 (Math/Definitions/ch02/PointSetTopology/ClosureUnderIntersections.tex)
 (Math/Props/ch02/SetTheory/FiniteClosure.tex [5])
+(Math/Definitions/ch02/SetTheory/Nesting.tex)
 (Math/Definitions/ch02/ReflexiveRelation.tex)
 (Math/Definitions/ch02/TransitiveRelation.tex)
 (Math/Definitions/ch02/PreOrder.tex)
@@ -610,8 +611,8 @@ cmm/m/it/12 ; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X; Y\OMS/cmsy/m/n/12 gg 2
 (Math/Definitions/ch02/MaximalElement.tex [6])
 (Math/Definitions/ch02/MinimalElement.tex)
 (Math/Definitions/ch02/UpperBound.tex) (Math/Definitions/ch02/LowerBound.tex)
-(Math/Definitions/ch02/LeastUpperBound.tex)
-(Math/Definitions/ch02/GreatestLowerBound.tex [7])
+(Math/Definitions/ch02/LeastUpperBound.tex [7])
+(Math/Definitions/ch02/GreatestLowerBound.tex)
 (Math/Definitions/ch02/EquivalenceRelation.tex)
 (Math/Definitions/ch02/PartialOrder.tex) (Math/Definitions/ch02/TotalOrder.tex)
 (Math/Definitions/ch02/Chain.tex) (Math/Definitions/ch02/DirectedSet.tex)
@@ -705,7 +706,7 @@ ex [26]) (Math/Definitions/ch02/PointSetTopology/FirstCountable.tex)
 (Math/Props/ch02/Uniformities/UniformityCharacterization.tex
 
 LaTeX Warning: Reference `def:Filter:ContainsDiagonal' on page 28 undefined on 
-input line 32.
+input line 33.
 
 ) (Math/Definitions/ch02/Uniformities/FundamentalSystemOfEntourages.tex)
 (Math/Props/ch02/Uniformities/FundamentalSystemOfEntouragesFacts.tex)
@@ -760,7 +761,7 @@ LaTeX Warning: Hyper reference `dsef:UnitalMagma' on page 36 undefined on input
 
 
 Overfull \hbox (6.56583pt too wide) in paragraph at lines 13--24
-[][]\OT1/cmr/bx/n/12 Definition 2.1.141 \OT1/cmr/m/n/12 ( ` [][]\OT1/cmr/bx/n/1
+[][]\OT1/cmr/bx/n/12 Definition 2.1.142 \OT1/cmr/m/n/12 ( ` [][]\OT1/cmr/bx/n/1
 2 Uni-tal Magma Ho-mo-mor-phism[][] \OT1/cmr/m/n/12 )\OT1/cmr/bx/n/12 . []\OT1/
 cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \OMS/cmsy/m/n/12 ^^H[]\OM
 L/cmm/m/it/12 ; e[]\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 and $\OT1/cmr/m/n/12 (\O
@@ -995,10 +996,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 4F33CF2A1008D7BD2C13C3C30CAD5797;7425.
  ) 
 Here is how much of TeX's memory you used:
- 15060 strings out of 475247
- 304318 string characters out of 5758264
+ 15070 strings out of 475247
+ 304675 string characters out of 5758264
  1950785 words of memory out of 5000000
- 34621 multiletter control sequences out of 15000+600000
+ 34627 multiletter control sequences out of 15000+600000
  571244 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,79p,1127b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1026,9 +1027,9 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/User
 C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (110 pages, 1242443 bytes).
+Output written on thesis.pdf (110 pages, 1244734 bytes).
 PDF statistics:
- 4028 PDF objects out of 4296 (max. 8388607)
- 1037 named destinations out of 1200 (max. 500000)
+ 4042 PDF objects out of 4296 (max. 8388607)
+ 1038 named destinations out of 1200 (max. 500000)
  329 words of extra memory for PDF output out of 10000 (max. 10000000)
 

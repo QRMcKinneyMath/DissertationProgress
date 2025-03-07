@@ -24,7 +24,8 @@
     \item \label{def:Uniformity:IsFilter} $\scW$ is a \Filter on $X \times X$. 
     \item \label{def:Uniformity:ContainsDiagonal} For each $W \in \scW$, $\scSetDiagonal{X} \subset W$. 
     \item \label{def:Uniformity:ContainsInverse} $W \in \scW \implies W^{-1} \in \scW$. 
-    \item \label{def:Uniformity:ContainsCompositionSubset} For each $W \in \scW$, there exists $V \in \scW$ such that $V \circ V \subset W$. 
+    \item \label{def:Uniformity:ContainsCompositionSubset} 
+	\scNested{\{V \circ V | V \in \scW\}}{\scW} holds. 
     \end{enumerate}
     Then we call $\scW$ a \Uniformity
     on $X$. 

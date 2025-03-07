@@ -1,0 +1,14 @@
+\newcommand{\scNested}[2]{
+    \textbf{\hyperref[def:NestingCondition]{Nested}}\ensuremath{\pa{#1, #2}}
+}
+\newcommand{\Nested}[0]{
+    \textbf{\hyperref[def:NestingCondition]{Nested}}
+    
+}
+\begin{df}[\Nested]
+\label{def:NestingCondition}
+    Let $F,G \neq \emptyset$. 
+    We say that \scNested{F}{G} holds if, 
+    for each $g \in G$, there exists $f \in F$ 
+    such that $f \subset g$. 
+\end{df}
