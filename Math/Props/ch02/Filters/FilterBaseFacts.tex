@@ -19,7 +19,9 @@
     \item  \label{prop:FilterBaseFact:EquivalenceCondition} 
     $F$ is 
     \FilterBaseEquivalent to 
-    $G$ if and only if \scNested{F}{G} and \scNested{G}{F} both hold.- 
+    $G$ if and only if \scNested{F}{G} and \scNested{G}{F} both hold.
+    \item \label{prop:FilterBaseFacts:FiltersAreFilterBases}
+    $\scF$ is a \FilterBase for $\scF$. 
    \end{enumerate}
    \begin{proof}[Proof of \ref{prop:FilterBaseFacts:BaseFromSubbasis}]
    Let 
@@ -61,5 +63,15 @@
    \begin{proof}[Proof of \ref{prop:FilterBaseFact:EquivalenceCondition}]
    This is a result of two applications of \ref{prop:FilterBaseFacts:FinerCondition}, 
    one in each direction. 
+   \end{proof}
+   \begin{proof}[Proof of \ref{prop:FilterBaseFacts:FiltersAreFilterBases}]
+    Define $\scU = \{U \subset X | (\exists f \in \scF) \pitchfork(f \subset U )\}$. 
+    By construction $\scF \subset \scU$. 
+    By \ref{def:Filter:SubsetProperty}, $\scU \subset \scF$.
+    Hence, by \ref{prop:FilterBase}, 
+    $\scU = \scF$ is a \FilterBase on $X$. 
+    Clearly $\scF \subset \scF$ and \scNested{\scF}{\scF} hold, so we can apply
+    \ref{prop:FilterBaseFacts:BaseCondition} so see that $\scF$ is a \FilterBase
+    for $\scF$. 
    \end{proof}
 \end{prop}

@@ -1,0 +1,40 @@
+\begin{prop}[\FilterConvergence Facts]
+\label{prop:FilterConvergenceFacts}
+    Let $(X,\scT)$ be a \TopologicalSpace. 
+    Let $x \in X$. 
+    Let \NeighborhoodFilterInstance{\scT}(x) denote the 
+    \NeighborhoodFilter for $\scT$ at $x$. 
+    Let $\scF$ be a \Filter on $X$. 
+    Let $\scB$ be a \FilterBase for $\scF$. 
+    The following are true. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterConvergenceFacts}.~\roman*}]
+    \item 
+    \label{prop:FilterConvergenceFacts:BaseEquivalence}
+    $x$ is a \FilterLimit of $\scF$ if and only if $x$ is a \FilterLimit of $\scB$. 
+    \item 
+    \label{prop:FilterConvergenceFacts:FundamentalSystemExistence}
+    $x$ is a \FilterLimit of $\scB$ if and only if, for some 
+    \FundamentalSystemOfNeighborhoods $\scU$ of $x$, 
+    \scNested{\scB}{\scU} holds. 
+    \item 
+    \label{prop:FilterConvergenceFacts:FundamentalSystemForAll}
+    $x$ is a \FilterLimit of $\scB$ if and only if, 
+    for every 
+    \FundamentalSystemOfNeighborhoods $\scU$ of $x$, 
+    \scNested{\scB}{\scU} holds. 
+    \item 
+    \label{prop:FilterConvergenceFacts:FinerFilter}
+    If $x$ is a \FilterLimit of $\scF$ and $\scG$ is \FinerFilter
+    than $\scF$ then $x$ is a \FilterLimit of $\scG$. 
+    \item 
+    \label{prop:FilterConvergenceFacts:CoarserTopology}
+    If $x$ is a \FilterLimit of $\scF$ in $(X,\scT)$, and 
+    $\scT_1$ is a \TopologyCoarser \Topology on $X$, then 
+    $x$ is a \FilterLimit of $\scF$ in $(X, \scT_1)$. 
+    \item 
+    \label{prop:FilterConvergenceFacts:UltrafilterCondition}
+    $x$ is a \FilterLimit of $\scF$ if and only if 
+    $x$ is a \FilterLimit of every $\UltraFilter$ 
+    which is \FinerFilter than $\scF$. 
+    \end{enumerate}
+\end{prop}
