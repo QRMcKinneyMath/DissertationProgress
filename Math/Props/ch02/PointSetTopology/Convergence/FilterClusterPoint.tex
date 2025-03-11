@@ -1,0 +1,43 @@
+\begin{prop}[\FilterClusterPoint Facts]
+\label{prop:FilterClusterPoint}
+Let $(X,\scT)$ be a \TopologicalSpace.
+Let $\scB$ and $\scD$ be \FilterBaseEquivalent \FilterBases. 
+Let $\scF$ be the \FilterGeneratedBy $\scB$.
+Let $\scG$ be an \UltraFilter in $X$. 
+Let $x \in X$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterClusterPoint}.~\roman*}]
+\item 
+\label{prop:FilterClusterPoint:Closed}
+The set of $\FilterClusterPoints$ of $\scB$ is \SetClosed in $(X,\scT)$. 
+\item
+\label{prop:FilterClusterPoint:Equivalent}
+$x$ is a \FilterClusterPoint of $\scB$ 
+if and only if 
+$x$ is a \FilterClusterPoint of $\scD$.
+\item 
+\label{prop:FilterClusterPoint:Filter}
+$x$ is a \FilterClusterPoint of $\scB$ 
+if and only if 
+$x$ is a \FilterClusterPoint of $\scF$, viewed as a \FilterBase.
+
+\item 
+\label{prop:FilterClusterPoint:FundamentalSystem}
+Let $\scU$ be a \FundamentalSystemOfNeighborhoods for $\scT$ at $x$. 
+Then $x$ is a \FilterClusterPoint for $\scB$ if and only if for each $U \in \scU$ and 
+for each $B \in \scB$, $U \cap B\neq \emptyset$. 
+\item 
+\label{prop:FilterClusterPoint:Finer}
+$x$ is a \FilterClusterPoint for $\scF$ if and only if there is a 
+\Filter \FinerFilter than $\scF$ for which $x$ is a \FilterLimit. 
+\item 
+\label{prop:FilterClusterPoint:FilterLimit}
+If $x$ is a \FilterLimit of $\scF$, then it is a \FilterClusterPoint of $x$. 
+\item 
+\label{prop:FilterClusterPoint:Ultrafilter}
+$x$ is a \FilterClusterPoint of $\scG$ if and only if $x$ is a \FilterLimit of $\scG$. 
+
+
+
+\end{enumerate}
+\end{prop}

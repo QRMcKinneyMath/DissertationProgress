@@ -1,0 +1,17 @@
+\newcommand{\FilterClusterPoint}[0]{
+    \textbf{\hyperref[def:FilterClusterPoint]{Cluster Point}}
+}
+\newcommand{\FilterClusterPoints}[0]{
+    \textbf{\hyperref[def:FilterClusterPoint]{Cluster Points}}
+}
+\begin{df}[\FilterClusterPoint]
+\label{def:FilterClusterPoint}
+    Let $(X,\scT)$ be a \TopologicalSpace. 
+    Let $x \in X$. 
+    Let $\scB$ be a \FilterBase in $X$. 
+    We say that $x$ is a \FilterClusterPoint of $\scB$ if 
+    \begin{equation}
+        x \in \bigcap\limits_{U \in \scB} \ClosureMark{U}
+    \end{equation}
+\end{df}
+
