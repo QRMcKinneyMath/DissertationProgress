@@ -1,0 +1,33 @@
+\newcommand{\NetSectionFilter}[0]{
+    \textbf{\hyperref[def:SectionFilter]{Section Filter}}
+}
+\newcommand{\NetSectionFilters}[0]{
+    \textbf{\hyperref[def:SectionFilter]{Section Filters}}
+}
+\newcommand{\DirectedSectionFilter}[0]{
+    \textbf{\hyperref[def:SectionFilter]{Section Filter}}
+}
+\newcommand{\DirectedSectionFilters}[0]{
+    \textbf{\hyperref[def:SectionFilter]{Section Filters}}
+}
+\newcommand{\scSectionFilter}[1]{
+    \ensuremath{\scF_{#1}}
+}
+\begin{df}[\NetSectionFilter]
+    \label{def:SectionFilter}
+    \rm
+    Let $X \neq \emptyset$. 
+    Let $\sigma=\{x_{\alpha}\}_{\alpha \in A}$ be a 
+    \Net in $X$. 
+    For each $\alpha \in A$, let $S(\sigma, \alpha)$ 
+    denote the \NetSection of $x_{\alpha}$ in $\sigma$. 
+    Define $\scB=\{S(\sigma, \alpha) | \alpha \in A\}$. 
+    By \ref{prop:NetSectionFormFilterBase}, $\scB$ is a 
+    \FilterBase on $X$. 
+    We call the \FilterGeneratedBy $\scB$ the 
+    \NetSectionFilter of $\sigma$. 
+    We call 
+    the \NetSectionFilter of the 
+    identity \Net in $A$ the \DirectedSectionFilter of $A$. 
+    We denote the \DirectedSectionFilter of $A$ with \scSectionFilter{A}.
+\end{df}

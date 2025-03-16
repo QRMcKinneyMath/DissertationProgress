@@ -1,0 +1,33 @@
+\newcommand{\FunctionPointLimit}[0]{
+    \textbf{\hyperref[def:FunctionPointLimit]{Limit}}
+}
+\newcommand{\FunctionPointLimits}[0]{
+    \textbf{\hyperref[def:FunctionPointLimit]{Limits}}
+}
+\newcommand{\FunctionPointClusterPoint}[0]{
+    \textbf{\hyperref[def:FunctionPointLimit]{Cluster Point}}
+}
+\newcommand{\FunctionPointClusterPoints}[0]{
+    \textbf{\hyperref[def:FunctionPointLimit]{Cluster Points}}
+}
+\begin{df}[\FunctionPointLimit of a \Function at a point]
+\label{def:FunctionPointLimit}
+\rm
+Let $(X,\T_X)$ be a \TopologicalSpace.
+Let $(Y,\T_Y)$ be a \TopologicalSpace.
+Let $f:X \to Y$. 
+Let $a \in X$. 
+Let $\scB$ be the \NeighborhoodFilter of $X$ at $a$. 
+Let $y$ be a \FunctionLimit of $f$ with respect to $\scB$. 
+Then instead of the standard notation
+\begin{equation*}
+y \in \lim\limits_{x, \scB}f(x)
+\end{equation*}
+we instead write
+\begin{equation*}
+y \in \lim\limits_{x \to a} f(x)
+\end{equation*}
+and we say that $y$ is a \FunctionPointLimit of $f$ at $a$. 
+If $y$ is a \FunctionClusterPoint of $f$ with respect to $\scB$, then we say that
+$y$ is a \FunctionPointClusterPoint of $f$ at $a$. 
+\end{df}

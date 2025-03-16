@@ -1,0 +1,58 @@
+\begin{prop}[\FunctionLimit]
+\label{prop:FunctionLimit}
+Let $X \neq \emptyset$. 
+Let $(Y,\scT)$ be a \TopologicalSpace. 
+Let $f:X \to Y$. 
+Let $\scF$ be a \Filter in $X$. 
+Let $y \in Y$. 
+The Following are true 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:FunctionLimit}.~\roman*}]
+    \item
+    \label{prop:FunctionLimitCharacterization1}
+    $y$ is a \FunctionLimit of $f$ with respect to $\scF$ if and only if,
+    for each \Neighborhood $V$ of $y$, there exists $M \in \scF$ with 
+    $f(M) \subset V$. 
+    \item
+    \label{prop:FunctionLimitCharacterization2}
+    $y$ is a \FunctionLimit of $f$ with respect to $\scF$ 
+    if and only if 
+    for each \Neighborhood $V$ of $y$, $f^{-1}(V) \in \scF$. 
+    \item 
+    \label{prop:FunctionClusterPointCharacterization1}
+    $y$ is a \FunctionClusterPoint of $f$ with respect to $\scF$ 
+    if and only if
+    for each \Neighborhood $V$ of $y$ and each
+    $M \in \scF$, $f(M) \cap V \neq \emptyset$. 
+    \item
+    \label{prop:FunctionLimitCoarser}
+    If $y$ is a \FunctionLimit of $f$ with respect to $\scF$
+    in $(Y,\scT)$ and $\scT_1$ is a \TopologyCoarser 
+    \Topology on $Y$ than $\scT$, then $y$ is a 
+    \FunctionLimit of $f$ with respect to $\scF$ in $(Y, \scT_1)$. 
+    \item
+    \label{prop:FunctionClusterPointCoarser}
+    If $y$ is a \FunctionClusterPoint of $f$ with respect to $\scF$
+    in $(Y, \scT)$ and $\scT_1$ is a \TopologyCoarser
+    \Topology on $Y$ than $\scT$, then $y$ is a 
+    \FunctionClusterPoint of $f$ with respect to $\scF$ in $(Y, \scT_1)$. 
+    \item 
+    \label{prop:FunctionLimitFiner}
+    If $y$ is a \FunctionLimit of $f$ with respect to $\scF$ and 
+    $\scF_1$ is a \FinerFilter \Filter on $X$ than $\scF$, then 
+    $y$ is a \FunctionLimit of $f$ with respect to $\scF_1$. 
+    \item 
+    \label{prop:FunctionClusterPointFiner}
+    If $y$ is a \FunctionClusterPoint of $f$ with respect to $\scF$ and 
+    $\scF_1$ is a \FinerFilter \Filter on $X$ than $\scF$, then 
+    $y$ is a \FunctionClusterPoint of $f$ with respect to $\scF_1$. 
+    \item
+    \label{prop:FunctionClusterPointCharacterization2}
+    $y$ is a \FunctionClusterPoint of $f$ with repsect to $\scF$ if and only
+    if there is a \Filter $\scG$ on $X$ which is \FinerFilter than $\scF$ such that 
+    $y$ is a \FunctionLimit of $f$ with respect to $\scG$. 
+    \item
+    \label{prop:FunctionClusterPoints:Closed}
+    The set of \FunctionClusterPoints of $f$ with respect to $\scF$ is \SetClosed in $Y$, and 
+    may be empty. 
+\end{enumerate}
+\end{prop}

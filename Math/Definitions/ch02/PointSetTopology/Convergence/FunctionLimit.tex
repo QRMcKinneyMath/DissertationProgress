@@ -1,0 +1,32 @@
+\newcommand{\FunctionLimit}[0]{
+    \textbf{\hyperref[def:FunctionLimitPoint]{Limit}}
+}
+\newcommand{\FunctionLimits}[0]{
+    \textbf{\hyperref[def:FunctionLimitPoint]{Limits}}
+}
+\newcommand{\FunctionClusterPoint}[0]{
+    \textbf{\hyperref[def:FunctionLimitPoint]{Cluster Point}}
+}
+\newcommand{\FunctionClusterPoints}[0]{
+    \textbf{\hyperref[def:FunctionLimitPoint]{Cluster Points}}
+}
+\begin{df}[\FunctionLimit]
+\rm
+    \label{def:FunctionLimitPoint}
+    Let $X$ be a set and $Y$ be a topological space. 
+    Let $\scF$ be a \Filter in $X$ and let 
+    $f:X \to Y$. 
+    Let $y \in Y$. 
+    If $y$ is a \FilterLimit of $f(\scF)$, 
+    then we say that 
+    $y$ is a \FunctionLimit of $f$ with respect to $\scF$ 
+    and we write $y \in \lim_{\scF} f$ or we may write
+    $y \in \lim\limits_{x,\scF}f(x)$. 
+    If $\lim_{\scF}f$ is a \Singleton then we will, 
+    as an abuse of notation, write
+    $y=\lim_{\scF}f$ and $y =\lim\limits_{x, \scF} f(x)$. 
+    If $\scB$ is a \FilterBase on $X$ and 
+    If $y$ is a \FilterClusterPoint $f(\scB)$ 
+    then we sayt hat 
+    $y$ is a \FunctionClusterPoint of $f$ with respect to $\scB$. 
+\end{df}

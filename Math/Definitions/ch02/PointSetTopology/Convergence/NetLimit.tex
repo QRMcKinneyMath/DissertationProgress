@@ -1,0 +1,27 @@
+\newcommand{\NetLimit}[0]{
+    \textbf{\hyperref[def:NetLimitPoint]{Limit}}
+}
+\newcommand{\NetLimits}[0]{
+    \textbf{\hyperref[def:NetLimitPoint]{Limits}}
+}
+\newcommand{\NetClusterPoint}[0]{
+    \textbf{\hyperref[def:NetLimitPoint]{Cluster Point}}
+}
+\newcommand{\NetClusterPoints}[0]{
+    \textbf{\hyperref[def:NetLimitPoint]{Cluster Points}}
+}
+\begin{df}[\NetLimit]
+\label{def:NetLimitPoint}
+\rm
+    Let $(X,\scT)$ be a \TopologicalSpace. 
+    Let $\sigma=\{x_\alpha\}_{\alpha \in A} \subset X$ be a \Net in $X$. 
+    We say that $x \in X$ is a \NetLimit 
+    of $\sigma$ if 
+    $x$ is a \FunctionLimit of $\sigma$ with respect to the 
+    \DirectedSectionFilter on $A$. 
+    We say that $x \in X$ is a \NetClusterPoint 
+    of $\sigma$ if 
+    $x$ is a \FunctionClusterPoint of $\sigma$ with respect to the 
+    \DirectedSectionFilter on $A$. 
+\end{df}
+

@@ -1,5 +1,6 @@
 \begin{prop}[\Net \NetSections form a \FilterBase]
-    \label{prop:NetSectionsFormFilterBase}
+    \label{prop:NetSectionsFormFilterBaseBase}
+    \rm
     Let $X \neq \emptyset$
     and let $\sigma=\{x_\alpha\}_{\alpha \in A}$
     be a \Net in $X$. 
@@ -11,8 +12,24 @@
     \begin{equation*}
         \scB=\{S(\sigma, \alpha ) | \alpha \in A\}
     \end{equation*}
-    Then $\scB$ is a \FilterBase on $X$. 
-    \begin{proof}
+
+    For each $\alpha \in A$, let $S(\alpha,  \leq)$ 
+    denote the \DirectedSection of $\leq$ corresponding to 
+    $\alpha$.
+%    Define 
+%    \begin{equation*}
+%    \scF=\{S(\alpha, \leq) \subset A | \alpha \in A\}
+%    \end{equation*}
+    Then the following are true:
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:NetSectionsFormFilterBaseBase}~\roman*}]
+        \item 
+        \label{prop:NetSectionsFormFilterBase}
+        $\scB$ is a \FilterBase on $X$. 
+%        \item 
+%        \label{prop:DirectedSetSectionsFormFilter}
+%        $\scF$ is a \Filter on $A$. 
+    \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:NetSectionsFormFilterBase}]
         Since $\sigma$ is a \Net, 
         $(A,\leq)$ is a \DirectedSet, 
         implying that $(A,\leq)$ is a \PreorderedSet.
@@ -38,4 +55,6 @@
         \ref{def:FilterBase:IntersectionProperty}, 
         and we're done. 
     \end{proof}
+%    \begin{proof}[Proof of \ref{prop:DirectedSetSectionsFormFilter}]
+%    \end{proof}
 \end{prop}

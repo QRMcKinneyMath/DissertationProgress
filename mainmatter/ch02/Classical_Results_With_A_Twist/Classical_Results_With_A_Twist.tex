@@ -4,65 +4,7 @@
 By \ref{prop:seminormlinearoperators} and \ref{prop:weakquotients}, many of the classical theorems relating a normed space and its duals still hold in the context of a seminormed space without too much alteration of the proofs. Since the author has not seen these results presented in this context, they are presented with proof below. 
 \subsection{Helly}
 In this subsection, we develop Helly's theorem in the context of a seminormed space, which will serve as valuable lemma throughout this document. Its location here is due to the fact that  is is a generalization of a lemma commonly used to prove the Goldstine Theorem. 
-\begin{thm}[Helly's Theorem]
-    \label{thm:helly}
-    Let $(X,\norm{\cdot})$ be a seminormed space $M>0$, $\{\alpha_i\}_{i=1}^n \subset \R$, and $\{x_i^*\}_{i=1}^n \subset X^*$. Then the following are equivalent. 
-    \begin{enumerate}
-        \item For every $\epsilon > 0$, there is an $x_\epsilon \in X$ such that $\norm{x_\epsilon}< M+\epsilon$ and $\ip{x,x_i^*}=\alpha_i$ for $1 \leq i \leq n$. 
-        \item For every $\epsilon > 0$, there is an $x_\epsilon \in X$ such that $||x_\epsilon|| \leq M$ and $\abs{\ip{x_\epsilon,x_i^*}-\alpha_i}< \epsilon$ for $1 \leq i \leq n$. 
-        \item For each $\{\beta_i\}_{i=1}^n \subset \C$, 
-        \begin{equation}
-            \label{eq:helly}
-            \abs{\sum_{i=1}^n \beta_i \alpha_i} \leq M\norm{\sum_{i=1}^n \beta_i x_i^*}
-        \end{equation}
-    \end{enumerate}
-    \begin{proof} $(1 \implies 2)$
-        Obvious since $\{x_i^*\}_{i=1}^n \subset X^*$. 
-    \end{proof}
-    \begin{proof} $(2 \implies 3)$
-        Let $\{\beta_i\}_{i=1}^n \subset \C$ and choose $\epsilon >0$. 
-        Then
-        \begin{equation}
-            \begin{split}
-                \abs{\sum_{i=1}^n \beta_i \alpha_i }&= \abs{ \sum_{i=1}^n \beta_i \pa{ \alpha_i-\ip{x_\epsilon,x_i^*}+\ip{x_\epsilon,x_i^*}}}\\
-                & < \sum_{i=1}^n \epsilon \abs{\beta_i} + \abs{ \ip{ x_{\epsilon} , \sum_{i=1}^n \beta_ix_i^*}}\\
-                & \leq \epsilon \sum_{i=1}^n \abs{\beta_i} + M \norm{\sum_{i=1}^n \beta_i x_i^*}
-            \end{split} 
-        \end{equation}
-        Since $\epsilon$ was arbitrary, the desired inequality holds. 
-    \end{proof} 
-    \begin{proof} $(3 \implies 1)$
-        If each $x_i^*=0$, then by    \ref{eq:helly}, each $\alpha_i=0$, so $x=0$ works for any $\epsilon$. 
-        Otherwise, we without loss of generality reorder $\{x_i^*\}_{i=1}^n$ so that $\{x_i^*\}_{i=1}^m$ is linearly independent and $span\{x_i\}_{i=1}^m=span\{x_i\}_{i=1}^n$. 
-        Define $S:X \to \C^{m}$ by $Sx=\bra{\ip{x,x_1^*},\cdots,\ip{x,x_m^*}}$, and recognize that linear independence of $\{x_i\}_{i=1}^n$ guarantees that S is surjective, so there exists 
-        $\tilde{x} \in S^{-1} \{ \bra{\alpha_1,\cdots,\alpha_m}\}$ and furthermore
-        \begin{equation}
-            S^{-1}\{ \bra{\alpha_1,\cdots,\alpha_m}\}=\tilde{x}+ \bigcap_{i=1}^m kern(x_i^*) = \tilde{x}+ \bigcap_{i=1}^n kern(x_i^*):=\tilde{x}+K 
-        \end{equation}
-        If $m < j \leq n$, then $x_j^* \in span(x_i^*,\cdots,x_n^*)$ so  $x_j = \sum_{i=1}^n \gamma_i x_i^*$.
-        Now we choose $\beta_i=\gamma_i$ for $1 \leq i \leq m$, $\beta_j=-1$, and other $\beta_k's=0$. 
-        \begin{align} 
-            \abs{\ip{\tilde{x},x_j^*}-\alpha_j}&= \abs{\ip{\tilde{x},\sum_{i=1}^m \beta_i x_i^*}-\alpha_j} = \abs{ \pa{\sum_{i=1}^m \beta_i \ip{\tilde{x},x_i^*}}+(-1)\alpha_j}\\
-            &=\abs{\sum_{i=1}^n \beta_i \alpha_i} \\
-            &\leq M \norm{\sum_{i=1}^n \beta_i x_i^*} \\
-            & =M\norm{\sum_{i=1}^m \gamma_i x_i^* + (-1) x_j^*}
-        \end{align}
-        Hence $\ip{x,x_i^*} = \alpha_i$ for $1 \leq i \leq n$ and any $x \in \tilde{x}+K$. 
-        By the Hahn Banach Theorem applied to the semi norm on X induced by the seminorm on the quotient space $X/K$, there is an $x^* \in X^*$ such that $\sup\limits_{\norm{x} \neq 0} \frac{\abs{\ip{x,x^*}}}{\norm{x}} =1$, $\ip{\tilde{x},x^*} = d(\tilde{x},K)$, and $K \subset ker(x^*)$. Since $K \subset ker(x^*)$, $x^* \in span \{ x_i^*\}_{i=1}^n$, say $x^* = \sum_{i=1}^n \mu_i x_i^*$. 
-        Hence, 
-        \begin{equation}
-            \begin{split}
-                d(\tilde{x},K) = \ip{\tilde{x},x^*} & = \sum_{i=1}^n \mu_i \ip{\tilde{x},x_i^*}\\
-                & = \sum_{i=1}^n \mu_i \alpha_i\\
-                & \leq M\norm{\sum_{i=1}^n \mu_i x_i^*}=M 
-            \end{split}
-        \end{equation}
-        Thus, given $\epsilon > 0$, we find an $z_\epsilon \in K$ such that $||\tilde{x}-z_\epsilon|| < M+\epsilon$ and let $x_\epsilon=\tilde{x}-z_\epsilon$. 
-        
-    \end{proof}
-    
-\end{thm}
-
+\input{./Math/Theorems/ch02/HellysTheorem.tex}
 \begin{cor}
     \label{cor:helly}
     Let X be a seminormed space, $x^{**} \in X^{**}$, $\{x_i^*\}_{i=1}^n \subset X^*$, and $\epsilon > 0$. Then there exists the following.
