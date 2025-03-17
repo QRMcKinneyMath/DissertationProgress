@@ -33,23 +33,23 @@
 \contentsline {subsection}{\numberline {2.1.16}Seminormed Spaces}{52}{subsection.2.1.16}%
 \contentsline {section}{\numberline {2.2}Classical Results With A Twist}{74}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Helly}{74}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Goldstine}{76}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{76}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.2}Goldstine}{77}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{77}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Eberlein-Smulian}{78}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Bishop-Phelps}{80}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.5}Bishop-Phelps}{81}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}Reflexivity}{83}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}James}{84}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{91}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Convexity Of Functions And Sets}{92}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Differentiation And SubDifferentials}{95}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Normalized Duality Mapping}{97}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Orthogonality}{97}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Convexity Of A Space}{98}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Smoothness Of A Space}{100}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{103}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{103}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{104}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{105}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{105}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{105}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{106}{chapter.5}%
+\contentsline {subsection}{\numberline {2.3.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{92}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Convexity Of Functions And Sets}{93}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Differentiation And SubDifferentials}{96}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Normalized Duality Mapping}{98}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Orthogonality}{98}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Convexity Of A Space}{99}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Smoothness Of A Space}{101}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{104}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{104}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{105}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{106}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{106}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{106}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{107}{chapter.5}%

@@ -1,0 +1,34 @@
+\newcommand{\LinearlyIndependent}[0]{
+    \textbf{\hyperref[def:LinearlyIndependent]{Linearly Independent}}
+}
+\newcommand{\LinearIndependence}[0]{
+    \textbf{\hyperref[def:LinearlyIndependent]{Linearly Independence}}
+}
+\newcommand{\LinearlyDependent}[0]{
+    \textbf{\hyperref[def:LinearlyIndependent]{Linearly Dependent}}
+}
+\newcommand{\LinearDependence}[0]{
+    \textbf{\hyperref[def:LinearlyIndependent]{Linear Dependence}}
+}
+
+\begin{df}[\LinearlyIndependent]
+    \label{def:LinearlyIndependent}
+    Let $V$ be a \VectorSpace over a 
+    \Field $\scK$.
+    Let $A \subset V$. 
+    We say that $A$ is \LinearlyIndependent 
+    if, 
+    for any finite Subset 
+    $\{x_i\}_{i=1}^n \subset A$, 
+    the only solution to 
+    \begin{equation*}
+    \sum\limits_{i=1}^n \beta_i x_i = 0 \tab[2cm] \{\beta_i\}_{i=1}^n \subset \scK
+    \end{equation*}
+    is $\beta_i = 0$ for $1 \leq i \leq n$.
+    In such a scenario, we may also say that $A$ 
+    posesses \LinearIndependence. 
+    A subset of a \VectorSpace which is not 
+    \LinearlyIndependent is said to be 
+    \LinearlyDependent and to posess
+    \LinearDependence. 
+\end{df}

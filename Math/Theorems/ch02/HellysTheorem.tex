@@ -48,19 +48,70 @@
        \end{align*}
        and so we are done
     \end{proof}
-    \begin{proof} $(2 \implies 3)$
-        Let $\{\beta_i\}_{i=1}^n \subset \C$ and choose $\epsilon >0$. 
+    \begin{proof}[\ref{thm:HellysTheorem:2} $\implies$ \ref{thm:HellysTheorem:3}]
+        Let $\{\beta_i\}_{i=1}^n \subset \bbC$.
+        Let $\epsilon > 0$. 
+        Then by \ref{thm:HellysTheorem:2}, there exists 
+        $x_{0} \in X$ with $\norm{x_0} \leq M$ and 
+        $\abs{\ip{x_0, x_i^*} -\alpha_i} < \epsilon$ for $1 \leq i \leq n$. 
         Then
-        \begin{equation}
-            \begin{split}
-                \abs{\sum_{i=1}^n \beta_i \alpha_i }&= \abs{ \sum_{i=1}^n \beta_i \pa{ \alpha_i-\ip{x_\epsilon,x_i^*}+\ip{x_\epsilon,x_i^*}}}\\
-                & < \sum_{i=1}^n \epsilon \abs{\beta_i} + \abs{ \ip{ x_{\epsilon} , \sum_{i=1}^n \beta_ix_i^*}}\\
-                & \leq \epsilon \sum_{i=1}^n \abs{\beta_i} + M \norm{\sum_{i=1}^n \beta_i x_i^*}
-            \end{split} 
-        \end{equation}
-        Since $\epsilon$ was arbitrary, the desired inequality holds. 
+        \begin{align*}
+        \abs{\sum\limits_{i=1}^n \beta_i \alpha_i} 
+        & = \abs{\sum\limits_{i=1}^n \beta_i \pa{\alpha_i - \ip{x_0, x_i^*}+\ip{x_0, x_i^*}}}\\
+        & \leq \abs{\sum\limits_{i=1}^n \beta_i \pa{\alpha_i - \ip{x_0, x_i^*}}}
+        + \abs{\sum\limits_{i=1}^n  \beta_i \ip{x_0, x_i^*}}\\
+        & < \epsilon \sum\limits_{i=1}^n \abs{\beta_i} 
+        + \abs{ \ip{x_0, \sum\limits_{i=1}^n \beta_ix_i^*}}\\
+        & \leq \epsilon \sum\limits_{i=1}^n \abs{\beta_i} 
+        + M \norm{\sum\limits_{i=1}^n \beta_i x_i^*}
+        \end{align*}
+        Since $\epsilon > 0$ was arbitrary, we are done.
     \end{proof} 
-    \begin{proof} $(3 \implies 1)$
+    \begin{proof}[\ref{thm:HellysTheorem:3} $\implies$ \ref{thm:HellysTheorem:1}]
+        If any $x_j^*=0$, then by selecting $\beta_i= \delta_{ij}$, 
+        by \ref{thm:HellysTheorem:3}, we see that $\abs{\alpha_i} \leq M \norm{x_i^*} =0$. 
+        Hence, if all $x_i^*=0$, 
+        then all $\alpha_i = 0$, so 
+        $x_\epsilon = 0$ works for any $\epsilon$. 
+        Suppose at least some of the $\{x_i^*\}_{i=1}^n$ are nonzero.
+        Then we can, by reordering, assume that for some integer $m$, 
+        $1 \leq m \leq n$, we have 
+        $\{x_i^*\}_{i=1}^m$ is
+        \LinearlyIndependent,
+        and also 
+        $span \pa{\{x_i^*\}_{i=1}^m}= span \pa{\{x_i^*\}_{i=1}^n}$.
+        %TODO 1: Macro For Starndard Basis
+        Let $\{e_i\}_{i=1}^n$ be the standard basis for $\bbC^K$. 
+        Define $S:X \to \bbC^m$ by 
+        \begin{equation*}
+        S(x) = \pa{\ip{x, x_1^*}, \ip{x, x_2^*}, \cdots, \ip{x, x_m^*}}
+        \end{equation*}
+        %TODO 2 Break the following Section into its own result about Dual Spaces
+        I claim $S$ is \Surjective. 
+        To see this suppose otherwise. 
+        Then there exists $c \in \bbC^m$, represented $c=\sum_{i=1}^m$, such that 
+        $c \perp Range(S)$. 
+        Hence, for every $x \in X$, we would have 
+        \begin{align*}
+        0 & = \ip{\sum\limits_{i=1}^m \ip{x, x_i^*} e_i, \sum\limits_{i=1}^m c_i e_i}\\
+        & = \sum_{i=1}^m c_i \ip{x, x_i^*}\\
+        & = \ip{x, \sum\limits_{i=1}^m c_i x_i^*}
+        \end{align*}
+        This would of course imply $\{x_i\}_{i=1}^m$ was \LinearlyDependent, a contradiction. l
+        Thus, $S$ is \Surjective. 
+        %END of TODO 2
+        Hence there exists  $\tilde{x} \in S^{-1}\pa{\alpha_1, \cdots, \alpha_m}$. 
+
+
+
+
+
+
+
+
+        %%%%%%%%%%Old Proof
+        \bf OLD PROOF \rm 
+
         If each $x_i^*=0$, then by    \ref{eq:helly}, each $\alpha_i=0$, so $x=0$ works for any $\epsilon$. 
         Otherwise, we without loss of generality reorder $\{x_i^*\}_{i=1}^n$ so that $\{x_i^*\}_{i=1}^m$ is linearly independent and $span\{x_i\}_{i=1}^m=span\{x_i\}_{i=1}^n$. 
         Define $S:X \to \C^{m}$ by $Sx=\bra{\ip{x,x_1^*},\cdots,\ip{x,x_m^*}}$, and recognize that linear independence of $\{x_i\}_{i=1}^n$ guarantees that S is surjective, so there exists 
