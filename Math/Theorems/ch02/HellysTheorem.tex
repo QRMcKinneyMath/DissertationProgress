@@ -79,7 +79,10 @@
         $\{x_i^*\}_{i=1}^m$ is
         \LinearlyIndependent,
         and also 
-        $span \pa{\{x_i^*\}_{i=1}^m}= span \pa{\{x_i^*\}_{i=1}^n}$.
+        \begin{equation}
+        \label{Eq:HellysTheorem:1}
+        span \pa{\{x_i^*\}_{i=1}^m}= span \pa{\{x_i^*\}_{i=1}^n}
+        \end{equation}
         %TODO 1: Macro For Starndard Basis
         Let $\{e_i\}_{i=1}^n$ be the standard basis for $\bbC^K$. 
         Define $S:X \to \bbC^m$ by 
@@ -101,46 +104,94 @@
         Thus, $S$ is \Surjective. 
         %END of TODO 2
         Hence there exists  $\tilde{x} \in S^{-1}\pa{\alpha_1, \cdots, \alpha_m}$. 
-
-
-
-
-
-
-
-
-        %%%%%%%%%%Old Proof
-        \bf OLD PROOF \rm 
-
-        If each $x_i^*=0$, then by    \ref{eq:helly}, each $\alpha_i=0$, so $x=0$ works for any $\epsilon$. 
-        Otherwise, we without loss of generality reorder $\{x_i^*\}_{i=1}^n$ so that $\{x_i^*\}_{i=1}^m$ is linearly independent and $span\{x_i\}_{i=1}^m=span\{x_i\}_{i=1}^n$. 
-        Define $S:X \to \C^{m}$ by $Sx=\bra{\ip{x,x_1^*},\cdots,\ip{x,x_m^*}}$, and recognize that linear independence of $\{x_i\}_{i=1}^n$ guarantees that S is surjective, so there exists 
-        $\tilde{x} \in S^{-1} \{ \bra{\alpha_1,\cdots,\alpha_m}\}$ and furthermore
+        Then, for $1 \leq i \leq m$, $\ip{\tilde{x}, x_i^*} = \alpha_i$. 
+        Define $K=\bigcap\limits_{i=1}^{m}Kern(x_i^*)$. 
+        Then $S^{-1}\pa{\alpha_1, \cdots, \alpha_m} = \tilde{X}+K$. 
+        Let $m<j \leq n$, $j \in \mathbb{Z}$. Then, by 
+        \ref{Eq:HellysTheorem:1}, 
+        There exists $\{\gamma_i\}_{i=1}^m \subset \bbC^m$ such that 
+        \begin{equation*}
+        x_j^*= \sum_{i=1}^m \gamma_i x_i^*
+        \end{equation*}
+        Now define $\{\beta_i\}_{i=1}^n $ by 
         \begin{equation}
-            S^{-1}\{ \bra{\alpha_1,\cdots,\alpha_m}\}=\tilde{x}+ \bigcap_{i=1}^m kern(x_i^*) = \tilde{x}+ \bigcap_{i=1}^n kern(x_i^*):=\tilde{x}+K 
+        \beta_i = \begin{dcases}
+        \gamma_i & 1 \leq i \leq m \\
+        0 & m < i \wedge i \neq j \\
+        -1 & m < i \wedge i = j
+        \end{dcases}
         \end{equation}
-        If $m < j \leq n$, then $x_j^* \in span(x_i^*,\cdots,x_n^*)$ so  $x_j = \sum_{i=1}^n \gamma_i x_i^*$.
-        Now we choose $\beta_i=\gamma_i$ for $1 \leq i \leq m$, $\beta_j=-1$, and other $\beta_k's=0$. 
-        \begin{align} 
-            \abs{\ip{\tilde{x},x_j^*}-\alpha_j}&= \abs{\ip{\tilde{x},\sum_{i=1}^m \beta_i x_i^*}-\alpha_j} = \abs{ \pa{\sum_{i=1}^m \beta_i \ip{\tilde{x},x_i^*}}+(-1)\alpha_j}\\
-            &=\abs{\sum_{i=1}^n \beta_i \alpha_i} \\
-            &\leq M \norm{\sum_{i=1}^n \beta_i x_i^*} \\
-            & =M\norm{\sum_{i=1}^m \gamma_i x_i^* + (-1) x_j^*}
-        \end{align}
-        Hence $\ip{x,x_i^*} = \alpha_i$ for $1 \leq i \leq n$ and any $x \in \tilde{x}+K$. 
-        By the Hahn Banach Theorem applied to the semi norm on X induced by the seminorm on the quotient space $X/K$, there is an $x^* \in X^*$ such that $\sup\limits_{\norm{x} \neq 0} \frac{\abs{\ip{x,x^*}}}{\norm{x}} =1$, $\ip{\tilde{x},x^*} = d(\tilde{x},K)$, and $K \subset ker(x^*)$. Since $K \subset ker(x^*)$, $x^* \in span \{ x_i^*\}_{i=1}^n$, say $x^* = \sum_{i=1}^n \mu_i x_i^*$. 
         Hence, 
-        \begin{equation}
-            \begin{split}
-                d(\tilde{x},K) = \ip{\tilde{x},x^*} & = \sum_{i=1}^n \mu_i \ip{\tilde{x},x_i^*}\\
-                & = \sum_{i=1}^n \mu_i \alpha_i\\
-                & \leq M\norm{\sum_{i=1}^n \mu_i x_i^*}=M 
-            \end{split}
-        \end{equation}
-        Thus, given $\epsilon > 0$, we find an $z_\epsilon \in K$ such that $||\tilde{x}-z_\epsilon|| < M+\epsilon$ and let $x_\epsilon=\tilde{x}-z_\epsilon$. 
-        
+        by applying \ref{thm:HellysTheorem:3}, 
+        we have 
+        \begin{align*}
+        \abs{\ip{\tilde{x}, x_j^*}-\alpha_j} 
+        & = \abs{\ip{\tilde{x}, \sum\limits_{i=1}^m \beta_ix_i^*}-\alpha_j}\\
+        & = \abs{\pa{\sum_{i=1}^n \beta_i \ip{\tilde{x}, x_i^*}} + \pa{-1} \alpha_j}\\
+        & = \abs{\sum\limits_{i=1}^n \beta_i\alpha_i} \\ 
+        & \leq M \norm{\sum\limits_{i=1}^n \beta_i x_i^*}\\
+        & = M \norm{\sum\limits_{i=1}^m \gamma_ix_i^* + (-1) x_j^*}\\
+        & = 0
+        \end{align*}
+        Hence $\ip{\tilde{x}, x_j^*} = \alpha_j$. 
+        Since $m < j$ was arbitrary, 
+        $\ip{\tilde{x}, x_i^*} = \alpha_i$ for 
+        $m < i \leq n$, $i \in \mathbb{Z}$. 
+        \begin{equation*}
+        \label{eq:HellysTheorem:2}
+        \ip{x_0, x_i^*} = \alpha_i 
+        \end{equation*}
+        for $1 \leq i \leq n$
+        and for any $x_0 \in \tilde{x}+K$. 
+        Define $T:x+K \to \mathbb{R}$ by 
+        $Tx=d(x, K)$. 
+        Then $T \in \pa{x+K}^*$, so by 
+        \ref{thm:HahnBanach:Extension1}
+        there exists $x^* \in X^*$ satisfying
+        $\norm{x^*}=1$, 
+        $\ip{\tilde{x}, x^*} = d(\tilde{x}, K)$, 
+        and $Kernel(S) = K \subset ker(x^*)$. 
+        %TODO 3: Break the following Result into its own section about Dual Spaces
+        Let $Q$ be the quotient map $Q:X \to X/Kernel(S)$. 
+        Then $S$ has a Quotient $\tilde{S}:X/Ker(S) \to \bbC^K$ such that 
+        $S = \tilde{S} \circ Q$ and $Q = \tilde{S}^{-1} \circ S$. 
+        Since $Kernel(S) \subset Kernel(x^*)$, there also exists a 
+        quotient $\tilde{x^*}:X/Ker(S) \to \bbC$
+        satisfying $x^* = \tilde{x^*} \circ Q$. 
+        ALso, $\tilde{x^*} \circ \tilde{S}^{-1}:\bbC^m \to \bbC$ is linear, so 
+        there are $\{\sigma_i\}_{i=1}^n \subset \bbC$ such that 
+        \begin{equation*}
+            \tilde{x^*} \circ \tilde{S}^{-1}\pa{\sum_{i=1}^n x_i e_i} 
+            = \sum\limits_{i=1}^n x_i \pa{\tilde{x^*} \circ \tilde{S}^{-1}}(e_i) 
+            = \sum\limits_{i=1}^n x_i \sigma_i
+        \end{equation*}
+        Hence, for $x \in X$, 
+        \begin{align}
+        \ip{x, x^*} & = \tilde{x^*} \circ Q (x)\\
+        & = \tilde{x^*} \circ \tilde{S}^{-1} \circ S(x) \\
+        & = \pa{ \tilde{x^*} \circ \tilde{S}^{-1}} \pa{ \sum\limits_{i=1}^m \ip{x, x_i^*} e_i} \\
+        & = \sum\limits_{i=1}^m \sigma_i\ip{x, x_i^*} \\
+        & = \ip{x, \sum\limits_{i=1}^m \sigma_i x_i^*}
+        \end{align}
+        Thus $x^* \in span(x_1^*, \cdots, x_m^*)$. 
+        %End TODO 3%%%%%%%%%%%%%%
+        Since $\{x_i^*\}_{i=1}^m \subset \{x_i^*\}_{i=1}^n$, 
+        $x^* \in span(x_1^*, \cdots, x_n^*)$, say $x^* = \sum\limits_{i=1}^n \mu_i x_i^*$. 
+        (The representation is not unique)
+        Hence, 
+        \begin{align*}
+           d\pa{\tilde{x}, K} & = \ip{\tilde{x}, x^*} \\ 
+           & = \sum\limits_{i=1}^n \mu_i \ip{\tilde{x}, x_i^*}\\
+           & = \sum\limits_{i=1}^n \mu_i \alpha_i \\
+           & \leq M \norm{\sum\limits_{i=1}^n \mu_i x_i^*} \\
+           & = M \norm{x^*} \\
+           & = M
+        \end{align*}
+        Let $\epsilon > 0$. 
+        Then we can find $x_0 \in K$ such that $\norm{\tilde{x}-x_0} < M+\epsilon$, and 
+        by \ref{eq:HellysTheorem:2}, 
+        $\ip{x_0, x_i^*} = \alpha_i$ for $1 \leq i \leq n$. 
     \end{proof}
-    
 \end{thm}
 
 

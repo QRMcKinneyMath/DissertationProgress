@@ -6,25 +6,34 @@ $\norm{x_0-x_1}_X \neq 0$, and
 let $X^*$ denote $X's$
 \TopDualSpace. 
 The following are true. 
-\begin{enumerate}
-    \item If $Z \subset X$ is a subspace
+\begin{enumerate}[label=(\roman*), ref={\ref{thm:hahnbanach}~\roman*}]
+    \item 
+	\label{thm:HahnBanach:Extension1}
+	If $Z \subset X$ is a subspace
         and $z^* \in Z^*$, then there 
         is an extension $x^*$ of $z^*$, 
         $x^* \in X^*$ such that 
         \begin{equation}
         \norm{z^*}_{Z^*} = \norm{x^*}_{X^*}
         \end{equation}
-     \item If $x \in X$, 
+     \item 
+	 \label{thm:HahnBanach:Point1}
+	 If $x \in X$, 
         with $\norm{x} \neq 0$, 
         then there exists an
         $x^* \in X$ with 
         $\norm{x^*}=1$ and 
         $\ip{x,x^*} = \norm{x}_X$. 
-    \item If $x \in X$, then 
+    \item 
+	\label{thm:HahnBanach:Norm}
+	If $x \in X$, then 
     \begin{equation}
         \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}}
     \end{equation}
-    \item If $Y$ is a 
+	
+    \item 
+	\label{thm:HahnBanach:Operator1}
+	If $Y$ is a 
         \NonDegenerate
         \SeminormedSpace, and if 
         $x_0 \in X$, with 
