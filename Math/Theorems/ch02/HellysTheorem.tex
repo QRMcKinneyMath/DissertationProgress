@@ -89,20 +89,8 @@
         \begin{equation*}
         S(x) = \pa{\ip{x, x_1^*}, \ip{x, x_2^*}, \cdots, \ip{x, x_m^*}}
         \end{equation*}
-        %TODO 2 Break the following Section into its own result about Dual Spaces
-        I claim $S$ is \Surjective. 
-        To see this suppose otherwise. 
-        Then there exists $c \in \bbC^m$, represented $c=\sum_{i=1}^m$, such that 
-        $c \perp Range(S)$. 
-        Hence, for every $x \in X$, we would have 
-        \begin{align*}
-        0 & = \ip{\sum\limits_{i=1}^m \ip{x, x_i^*} e_i, \sum\limits_{i=1}^m c_i e_i}\\
-        & = \sum_{i=1}^m c_i \ip{x, x_i^*}\\
-        & = \ip{x, \sum\limits_{i=1}^m c_i x_i^*}
-        \end{align*}
-        This would of course imply $\{x_i\}_{i=1}^m$ was \LinearlyDependent, a contradiction. l
-        Thus, $S$ is \Surjective. 
-        %END of TODO 2
+        By \ref{prop:LinearlyIndependentLinearFunctionals}, 
+        $S$ is \Surjective. 
         Hence there exists  $\tilde{x} \in S^{-1}\pa{\alpha_1, \cdots, \alpha_m}$. 
         Then, for $1 \leq i \leq m$, $\ip{\tilde{x}, x_i^*} = \alpha_i$. 
         Define $K=\bigcap\limits_{i=1}^{m}Kern(x_i^*)$. 
@@ -151,32 +139,11 @@
         $\norm{x^*}=1$, 
         $\ip{\tilde{x}, x^*} = d(\tilde{x}, K)$, 
         and $Kernel(S) = K \subset ker(x^*)$. 
-        %TODO 3: Break the following Result into its own section about Dual Spaces
-        Let $Q$ be the quotient map $Q:X \to X/Kernel(S)$. 
-        Then $S$ has a Quotient $\tilde{S}:X/Ker(S) \to \bbC^K$ such that 
-        $S = \tilde{S} \circ Q$ and $Q = \tilde{S}^{-1} \circ S$. 
-        Since $Kernel(S) \subset Kernel(x^*)$, there also exists a 
-        quotient $\tilde{x^*}:X/Ker(S) \to \bbC$
-        satisfying $x^* = \tilde{x^*} \circ Q$. 
-        ALso, $\tilde{x^*} \circ \tilde{S}^{-1}:\bbC^m \to \bbC$ is linear, so 
-        there are $\{\sigma_i\}_{i=1}^n \subset \bbC$ such that 
-        \begin{equation*}
-            \tilde{x^*} \circ \tilde{S}^{-1}\pa{\sum_{i=1}^n x_i e_i} 
-            = \sum\limits_{i=1}^n x_i \pa{\tilde{x^*} \circ \tilde{S}^{-1}}(e_i) 
-            = \sum\limits_{i=1}^n x_i \sigma_i
-        \end{equation*}
-        Hence, for $x \in X$, 
-        \begin{align}
-        \ip{x, x^*} & = \tilde{x^*} \circ Q (x)\\
-        & = \tilde{x^*} \circ \tilde{S}^{-1} \circ S(x) \\
-        & = \pa{ \tilde{x^*} \circ \tilde{S}^{-1}} \pa{ \sum\limits_{i=1}^m \ip{x, x_i^*} e_i} \\
-        & = \sum\limits_{i=1}^m \sigma_i\ip{x, x_i^*} \\
-        & = \ip{x, \sum\limits_{i=1}^m \sigma_i x_i^*}
-        \end{align}
-        Thus $x^* \in span(x_1^*, \cdots, x_m^*)$. 
-        %End TODO 3%%%%%%%%%%%%%%
-        Since $\{x_i^*\}_{i=1}^m \subset \{x_i^*\}_{i=1}^n$, 
-        $x^* \in span(x_1^*, \cdots, x_n^*)$, say $x^* = \sum\limits_{i=1}^n \mu_i x_i^*$. 
+        Since $\bigcap\limits_{i=1}^n Kernel(x_i^*) =Kernel(S) \subset Kernl(x^*)$, 
+        by \ref{prop:FunctionalKernelIntersection}, 
+        $x^* \in span(x_1^*, \cdots, x_n^*)$. 
+        Hence we can find a representation 
+        $x^* = \sum\limits_{i=1}^n \mu_i x_i^*$. 
         (The representation is not unique)
         Hence, 
         \begin{align*}
@@ -190,7 +157,7 @@
         Let $\epsilon > 0$. 
         Then we can find $x_0 \in K$ such that $\norm{\tilde{x}-x_0} < M+\epsilon$, and 
         by \ref{eq:HellysTheorem:2}, 
-        $\ip{x_0, x_i^*} = \alpha_i$ for $1 \leq i \leq n$. 
+        $\ip{\tilde{x}-x_0, x_i^*} = \alpha_i$ for $1 \leq i \leq n$. 
     \end{proof}
 \end{thm}
 
