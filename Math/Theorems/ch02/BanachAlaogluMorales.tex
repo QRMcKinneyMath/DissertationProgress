@@ -1,0 +1,35 @@
+\begin{thm}[Banach-Alaoglu-Morales]
+    \label{thm:banachalaoglu}
+    Let X be a normed space and define $B=\{x^* \in X^*: ||x^*|| \leq 1\}$. Then B is $weak^*$ compact. 
+    \begin{proof}
+        Let $\mathbb{F}$ denote $X's$ field, and for $x \in X$, define $D_x=\{y \in \mathbb{F}: \abs{y} \leq \norm{x}\}$. 
+        Then each $D_x$ is Hausdorff and compact so by Tychonoff's theorem, $D:=\prod_{x \in X} D_x$ is compact and Hausdorff when endowed with the product topology. 
+        If $T \in D$, then $T:X \to \mathbb{F}$ and $\abs{Tx} \leq \norm{x}$ for each $x \in X$, so $D \cap X^* \subset B$. 
+        It is also clear that $B \subset D$, so $D \cap X^* = B$. 
+        Let $\{\gamma_\alpha\}_{\alpha \in A}$ be a net in B converging to $\gamma \in D$ in D's product topology. 
+        Then, letting $\pi_x$ denote the $x^{th}$ projection, for each $x \in X$, 
+        \begin{equation}
+            \gamma_{\alpha}(x) = \pi_x(\gamma_\alpha) \to \pi_x(\gamma) = \gamma(x)
+        \end{equation}
+        If $\alpha \in \mathbb{F}$ and $x,y \in X$, then 
+        \begin{equation}
+            \ip{\alpha x+y, \gamma_\alpha} \to \ip{ \alpha x+y, \gamma}
+        \end{equation}
+        and also
+        \begin{equation}
+            \ip{\alpha x+y,\gamma_\alpha} = \alpha \ip{x,\gamma_\alpha}+ \ip{y,\gamma_\alpha} \to \alpha \ip{x,\gamma}+\ip{y,\gamma}
+        \end{equation}
+        which implies $\gamma$ is linear since D is Hausdorff, and hence $\gamma \in B$. 
+        Thus $B$ is closed in D. What remains to be shown is that the $weak*$ topology on B is the subspace topology on B induced by $D's$ topology, since a Closed subset of a compact Hausdorff space is compact. 
+        For notation, denote with $\mathcal{T}_D$ the subspace topology on B induced by D's topology, and denote with $\mathcal{T}_w$ the subspace topology on B induced by the  $weak^*$ topology on $X^*$. 
+        To see that $\mathcal{T}_w \subset \mathcal{T}_D$, let $\{\gamma_\alpha\}_{\alpha \in A} \subset B$ such that $\gamma_\alpha \overset{\mathcal{T}_D}{\to} \gamma$. For each $x \in X$, letting c be the canonical embedding, 
+        \begin{equation}
+            \ip{\gamma_{\alpha}, c(x)}= \ip{x,\gamma_\alpha} = \pi_x(\gamma_\alpha) \to \pi_x(\gamma) = \ip{x,\gamma} = \ip{\gamma, c(x)}
+        \end{equation}
+        Hence $\gamma_\alpha \overset{\mathcal{T}_w}{\to} \gamma$, so $\mathcal{T}_w \subset \mathcal{T}_D$.  
+        To see that $\mathcal{T}_D \subset \mathcal{T}_w$, fix $x\in X$ and let $\{\gamma_\alpha\}_{\alpha \in A} \subset B$ such that $\gamma_\alpha \overset{\mathcal{T}_w}{\to} \gamma$. 
+        Then $\pi_x(\gamma_\alpha) = \ip{x,\gamma_\alpha} \to \gamma(x) = \pi_x(\gamma)$, so by definition of the product topology $\gamma_\alpha \overset{\mathcal{T}_D}{\to} \gamma$, implying $\mathcal{T}_D \subset \mathcal{T}_w$.  Hence B is $weak^{*}$ is compact. 
+    \end{proof}
+\end{thm} 
+
+

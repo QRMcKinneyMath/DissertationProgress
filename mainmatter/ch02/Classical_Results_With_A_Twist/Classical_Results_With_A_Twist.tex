@@ -5,91 +5,26 @@ By \ref{prop:seminormlinearoperators} and \ref{prop:weakquotients}, many of the 
 \subsection{Helly}
 In this subsection, we develop Helly's theorem in the context of a seminormed space, which will serve as valuable lemma throughout this document. Its location here is due to the fact that  is is a generalization of a lemma commonly used to prove the Goldstine Theorem. 
 \input{./Math/Theorems/ch02/HellysTheorem.tex}
-\begin{cor}
-    \label{cor:helly}
-    Let X be a seminormed space, $x^{**} \in X^{**}$, $\{x_i^*\}_{i=1}^n \subset X^*$, and $\epsilon > 0$. Then there exists the following.
-    \begin{enumerate}
-        \item An $x_1 \in X$ such that $\norm{x_1} \leq \norm{x^{**}}+\epsilon$ and for $1 \leq i \leq n$, $\ip{x_1,x_i^*} = \ip{x_i^*,x^{**}}$.  
-        \item An $x_2 \in X$ such that $\norm{x_2} \leq \norm{x^{**}}$ and for $1 \leq i \leq n$, $\abs{\ip{x_1,x_i^*}-\ip{x_i^*,x^{**}}} < \epsilon$. 
-    \end{enumerate} 
-    \begin{proof} For $1 \leq i \leq n$, let $\alpha_i=\ip{x_i^*,x^{**}}$, and let $\{\beta_i\}_{i=1}^n \subset \C$. Then 
-        \begin{equation}
-            \abs{\sum_{i=1}^n \beta_i \alpha_i} = \abs{ \ip{\sum_{i=1}^n \beta_i x_i^*,x^{**}}} \leq \norm{x^{**}} \norm{\sum_{i=1}^n \beta_i x_i^*}
-        \end{equation}
-        An application of \ref{thm:helly} completes the proof. 
-    \end{proof} 
-\end{cor} 
+\input{./Math/Corrolaries/ch02/HellysTheorem/HellyDoubleDual.tex}
 \subsection{Goldstine} 
-\begin{thm}[Goldstine]
-    \label{thm:goldstine}
-    Let X be a seminormed space, $c:X \to X^{**}$ denote the canonical embedding, B denote the closed unit ball of X, and $B_1$ denote the closed unit ball of $X^{**}$. Then $c(B)$ is $weak^*$ dense in $B_1$.   
-    \begin{proof}
-        Note that the $weak^*$ topology on $X^{**}$ has as a basis sets of the form
-        \begin{equation}
-            U\pa{x^{**},\epsilon,\{x_i^*\}_{i=1}^n}:=\{ y^{**} \in X^{**} : \pa{\forall 1 \leq i \leq n}\pa{ \abs{\ip{x_i^*,x^{**}-y^{**}}} < \epsilon }
-        \end{equation}
-        where we range over all $x^{**} \in X^{**}$, $\epsilon > 0$, and finite subsets $\{x_i^*\}_{i=1}^n$ of $X^*$. 
-        Let $x^{**} \in B_1$, $\epsilon > 0$, and $\{x_i^*\}_{i=1}^n \subset X^*$. 
-        Let $\epsilon > 0$. Then by \ref{cor:helly}, there exists an $x \in B$ such that for $1 \leq i \leq n$, $\abs{\ip{x_i^*,x^{**}-c(x)}}= \abs{\ip{x_i^*,x^{**}}-\ip{x,x_i^*}} < \epsilon$, from which the desired result follows.
-    \end{proof}
-\end{thm} 
-\subsection{Banach Alaoglu}
-The following well known result concerning the $weak^*$ compactness of the unit ball of a Banach space was first proven in the separable case by Banach, and then generalized in 1940 by Alaoglu \cite{alaoglu40} to Banach spaces. Generalizations of this result in a general TVS satisfying sufficient conditions have also been shown but the form presented here comes from \cite{hester07}, who drops the assumption of completeness for one direction of the implication. 
-\begin{thm}[Banach-Alaoglu-Morales]
-    \label{thm:banachalaoglu}
-    Let X be a normed space and define $B=\{x^* \in X^*: ||x^*|| \leq 1\}$. Then B is $weak^*$ compact. 
-    \begin{proof}
-        Let $\mathbb{F}$ denote $X's$ field, and for $x \in X$, define $D_x=\{y \in \mathbb{F}: \abs{y} \leq \norm{x}\}$. 
-        Then each $D_x$ is Hausdorff and compact so by Tychonoff's theorem, $D:=\prod_{x \in X} D_x$ is compact and Hausdorff when endowed with the product topology. 
-        If $T \in D$, then $T:X \to \mathbb{F}$ and $\abs{Tx} \leq \norm{x}$ for each $x \in X$, so $D \cap X^* \subset B$. 
-        It is also clear that $B \subset D$, so $D \cap X^* = B$. 
-        Let $\{\gamma_\alpha\}_{\alpha \in A}$ be a net in B converging to $\gamma \in D$ in D's product topology. 
-        Then, letting $\pi_x$ denote the $x^{th}$ projection, for each $x \in X$, 
-        \begin{equation}
-            \gamma_{\alpha}(x) = \pi_x(\gamma_\alpha) \to \pi_x(\gamma) = \gamma(x)
-        \end{equation}
-        If $\alpha \in \mathbb{F}$ and $x,y \in X$, then 
-        \begin{equation}
-            \ip{\alpha x+y, \gamma_\alpha} \to \ip{ \alpha x+y, \gamma}
-        \end{equation}
-        and also
-        \begin{equation}
-            \ip{\alpha x+y,\gamma_\alpha} = \alpha \ip{x,\gamma_\alpha}+ \ip{y,\gamma_\alpha} \to \alpha \ip{x,\gamma}+\ip{y,\gamma}
-        \end{equation}
-        which implies $\gamma$ is linear since D is Hausdorff, and hence $\gamma \in B$. 
-        Thus $B$ is closed in D. What remains to be shown is that the $weak*$ topology on B is the subspace topology on B induced by $D's$ topology, since a Closed subset of a compact Hausdorff space is compact. 
-        For notation, denote with $\mathcal{T}_D$ the subspace topology on B induced by D's topology, and denote with $\mathcal{T}_w$ the subspace topology on B induced by the  $weak^*$ topology on $X^*$. 
-        To see that $\mathcal{T}_w \subset \mathcal{T}_D$, let $\{\gamma_\alpha\}_{\alpha \in A} \subset B$ such that $\gamma_\alpha \overset{\mathcal{T}_D}{\to} \gamma$. For each $x \in X$, letting c be the canonical embedding, 
-        \begin{equation}
-            \ip{\gamma_{\alpha}, c(x)}= \ip{x,\gamma_\alpha} = \pi_x(\gamma_\alpha) \to \pi_x(\gamma) = \ip{x,\gamma} = \ip{\gamma, c(x)}
-        \end{equation}
-        Hence $\gamma_\alpha \overset{\mathcal{T}_w}{\to} \gamma$, so $\mathcal{T}_w \subset \mathcal{T}_D$.  
-        To see that $\mathcal{T}_D \subset \mathcal{T}_w$, fix $x\in X$ and let $\{\gamma_\alpha\}_{\alpha \in A} \subset B$ such that $\gamma_\alpha \overset{\mathcal{T}_w}{\to} \gamma$. 
-        Then $\pi_x(\gamma_\alpha) = \ip{x,\gamma_\alpha} \to \gamma(x) = \pi_x(\gamma)$, so by definition of the product topology $\gamma_\alpha \overset{\mathcal{T}_D}{\to} \gamma$, implying $\mathcal{T}_D \subset \mathcal{T}_w$.  Hence B is $weak^{*}$ is compact. 
-    \end{proof}
-\end{thm} 
+\input{./Math/Theorems/ch02/GoldstineTheorem.tex}
 
-\begin{cor}[Banach Alaoglu Seminorm]
-    Let X be a seminormed space and define $B=\{x^* \in X^*: \norm{x^*} \leq 1\}$. Then B is $weak^*$ compact. 
-    \begin{proof} 
-        This is  a consequence of the fact that the $weak^*$ topology on $X^*$ is identical to the $weak^*$ topology on the dual space of $X/\norm{\cdot}^{-1}\{0\}$. 
-    \end{proof} 
-\end{cor} 
+\subsection{Banach Alaoglu}
+The following well known result concerning the 
+\weakstar
+compactness 
+of the unit ball of a
+\BanachSpace was first proven in the 
+separable 
+case by Banach, and then generalized in 1940 by Alaoglu \cite{alaoglu40} to \BanachSpaces. 
+Generalizations of this result in a general TVS satisfying sufficient conditions 
+have also been shown but the form presented here comes from \cite{hester07}, 
+who drops the assumption of completeness for one direction of the implication. 
+\input{./Math/Theorems/ch02/BanachAlaogluMorales.tex}
+\input{./Math/Corrolaries/ch02/BanachAlaoglu/BanachAlaogluSeminorm.tex}
 This gives us the useable result
-\begin{cor}[Banach-Alaoglu-Morales]
-    \label{thm:banachalaoglumorales}
-    Let X be a seminormed space and $C \subset X^*$ 
-    \begin{enumerate}
-        \item If X is complete and $C$ $weak^*$ compact, then $C$ is $weak^*$ closed and bounded. 
-        \item If $C$ is $weak^*$ closed and bounded, then $C$ is $weak^*$ compact. 
-    \end{enumerate}
-    \begin{proof}(1)
-        Since $C$ is $weak^*$ compact, it is $weak^*$ closed since the $weak^*$ topology is Hausdorff. Since $c(x):(X,\mathcal{T}_{w^*}) \to \mathbb{C}$ is continuous for each $x \in X$, for each $x \in X$, $c(x)(C)=$ is compact and therefore bounded. Hence, for every $x \in X$, $\{\abs{\ip{x,c}} : c \in C\}$ is bounded, so by the Banach Steinhaus, C is bounded. 
-    \end{proof}
-    \begin{proof}(2)
-        Since $C$ is bounded, it is contained in some closed ball B which we know to be $weak^*$ compact by \ref{thm:banachalaoglu}. Since the $weak^*$ topology on B is compact and  Hausdorff and $C$ is closed in this topology, it is compact in this topology. Since the subspace topology on C induced by the $weak^*$ topology on $X^*$ equals this topology, we are done.  
-    \end{proof} 
-\end{cor} 
+\input{./Math/Corrolaries/ch02/BanachAlaoglu/BanachAlaogluMorales.tex}
+
 \subsection{Eberlein-Smulian}
 The purpose of this section is to provide a characterization of weakly compact subsets of a complete seminormed space X, which will serve to increase the applicability of the results regarding weakly compactly generated spaces covered later in this document. 
 The first main result of this section, \ref{thm:eberleinsmulian}, serves to show that even though weak topologies of Banach Spaces are not in general metrizable, an equivalence between weak compactness and sequential compactness exists. From this  result $(1 \implies 2)$ was first presented in the case of normed spaces in \cite{smulian40}, and then $(2 \implies 1)$ was proven in the case of normed spaces in \cite{eberlein47}. Several different proofs have been given in the years since, and the one present here is based on that present in \cite{whitley67}, which is also followed in \cite{diestel84}. 

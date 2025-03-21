@@ -1,0 +1,57 @@
+\begin{cor}
+    \label{cor:HellysTheorem}
+    Let X be a \SeminormedSpace.
+    Let, $x^{**} \in X^{**}$.
+    Let $\{x_i^*\}_{i=1}^n \subset X^*$.
+    Let and $\epsilon > 0$. 
+    The following are true
+    \begin{enumerate}[label=(\roman*), ref={\ref{cor:HellysTheorem}~\roman*}]
+        \item 
+        \label{cor:HellysTheorem:ThreeImpliesOne}
+        There exists an $x_1 \in X$ 
+        such that $\norm{x_1} \leq \norm{x^{**}}+\epsilon$ 
+        and for $1 \leq i \leq n$, 
+        $\ip{x_1,x_i^*} = \ip{x_i^*,x^{**}}$.  
+        \item 
+        \label{cor:HellysTheorem:ThreeImpliesTwo}
+        There exists an $x_2 \in X$ 
+        such that $\norm{x_2} \leq \norm{x^{**}}$ 
+        and for $1 \leq i \leq n$, 
+        $\abs{\ip{x_1,x_i^*}-\ip{x_i^*,x^{**}}} < \epsilon$. 
+    \end{enumerate} 
+    \begin{proof}[Proof of Both]
+    For $1 \leq i \leq n$, define $\alpha_i = \ip{x_i^*, x^{**}}$. 
+    Let $\{\beta_i\}_{i=1}^n \subset \bbC$. 
+    Then, 
+    \begin{align*}
+    \abs{\sum\limits_{i=1}^n \beta_i \alpha_i}
+    & = \abs{\sum\limits_{i=1}^n \beta_i \ip{x_i^*, x^**}}\\
+    & = \abs{\ip{\sum\limits_{i=1}^n \beta_i x_i^*, x^{**}}}\\
+    & \leq \norm{x^**} \norm{\sum\limits_{i=1}^n \beta_i x_i^*}
+    \end{align*}
+    Hence $\ref{thm:HellysTheorem:3}$ is satisfied with $\alpha_i=\ip{x_i^*, x^**}$ 
+    and $M = \norm{x^{**}}$. 
+    From an application of 
+    $\ref{thm:HellysTheorem:3} \implies \ref{thm:HellysTheorem:2}$, 
+    we conclude the existence of 
+    $x_{1} \in X$ 
+    with 
+    $\ip{x_1, x_i^*} = \alpha_i = \ip{x_i^*, x^{**}}$ 
+    and 
+    $\norm{x_1} \leq \norm{x^**}+\epsilon$, 
+    so \ref{cor:HellysTheorem:ThreeImpliesOne} holds.
+    Also, from 
+    $\ref{thm:HellysTheorem:3} \implies \ref{thm:HellysTheorem:1}$, 
+    we conclude the existence of an 
+    $x_2 \in X$ 
+    satisfying
+    \begin{align*}
+        \abs{\ip{x_2, x_i^*} - \ip{x_i^*, x^{**}}} 
+        & = \abs{\ip{x_2, x_i^*} - \alpha_i} \\
+        & < \epsilon
+    \end{align*}
+    and $\norm{x_2} \leq \norm{x^{**}}$. 
+    Hence \ref{cor:HellysTheorem:ThreeImpliesTwo} holds.
+    \end{proof}
+\end{cor} 
+

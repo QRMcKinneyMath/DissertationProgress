@@ -1,0 +1,14 @@
+\begin{cor}[Banach-Alaoglu-Morales]
+    \label{thm:banachalaoglumorales}
+    Let X be a seminormed space and $C \subset X^*$ 
+    \begin{enumerate}
+        \item If X is complete and $C$ $weak^*$ compact, then $C$ is $weak^*$ closed and bounded. 
+        \item If $C$ is $weak^*$ closed and bounded, then $C$ is $weak^*$ compact. 
+    \end{enumerate}
+    \begin{proof}(1)
+        Since $C$ is $weak^*$ compact, it is $weak^*$ closed since the $weak^*$ topology is Hausdorff. Since $c(x):(X,\mathcal{T}_{w^*}) \to \mathbb{C}$ is continuous for each $x \in X$, for each $x \in X$, $c(x)(C)=$ is compact and therefore bounded. Hence, for every $x \in X$, $\{\abs{\ip{x,c}} : c \in C\}$ is bounded, so by the Banach Steinhaus, C is bounded. 
+    \end{proof}
+    \begin{proof}(2)
+        Since $C$ is bounded, it is contained in some closed ball B which we know to be $weak^*$ compact by \ref{thm:banachalaoglu}. Since the $weak^*$ topology on B is compact and  Hausdorff and $C$ is closed in this topology, it is compact in this topology. Since the subspace topology on C induced by the $weak^*$ topology on $X^*$ equals this topology, we are done.  
+    \end{proof} 
+\end{cor} 

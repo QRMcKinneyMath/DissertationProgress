@@ -35,10 +35,10 @@
 \contentsline {subsection}{\numberline {2.2.1}Helly}{76}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Goldstine}{79}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Banach Alaoglu}{79}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Eberlein-Smulian}{80}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}Eberlein-Smulian}{81}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Bishop-Phelps}{83}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Reflexivity}{85}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}James}{86}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.3}Reflexivity}{86}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}James}{87}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{94}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Convexity Of Functions And Sets}{95}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Differentiation And SubDifferentials}{98}{section.2.5}%
