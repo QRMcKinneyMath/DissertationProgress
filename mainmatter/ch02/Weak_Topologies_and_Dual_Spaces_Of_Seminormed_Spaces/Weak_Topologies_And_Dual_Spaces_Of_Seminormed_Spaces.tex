@@ -1,14 +1,16 @@
-\section{Weak Topologies And Dual Spaces Of Seminormed Spaces}
 
-\subsection{Basics}
+\section{Set Theory}
+\subsection{Inclusion, Subset, Intersection, Union, Difference}
 \input{./Math/Definitions/ch02/SetTheory/SetTheoryDefinitions.tex}
 \input{./Math/Definitions/ch02/SetTheory/SetInclusion.tex}
 \input{./Math/Definitions/ch02/SetTheory/Subset.tex}
 \input{./Math/Definitions/ch02/SetTheory/SetDifference.tex}
+subsection{Binary Products}
 \input{./Math/Definitions/ch02/SetTheory/PairSet.tex}
 \input{./Math/Definitions/ch02/SetTheory/OrderedPair.tex}
 \input{./Math/Definitions/ch02/SetTheory/BinaryCartesianProduct.tex}
 \input{./Math/Definitions/ch02/SetTheory/Diagonal.tex}
+\subsection{Functions}
 \input{./Math/Definitions/ch02/Relation.tex}
 \input{./Math/Definitions/ch02/Function.tex}
 \input{./Math/Definitions/ch02/SetTheory/InsertionFunction.tex}
@@ -18,19 +20,20 @@
 \input{./Math/Definitions/ch02/SetTheory/Injective.tex}
 \input{./Math/Definitions/ch02/SetTheory/Surjective.tex}
 \input{./Math/Definitions/ch02/SetTheory/Bijective.tex}
+\subsection{Cardinality}
 \input{./Math/Definitions/ch02/SetTheory/Cardinality.tex}
-\input{./Math/Definitions/ch02/SetTheory/Disjoint.tex}
-\input{./Math/Definitions/ch02/SetTheory/Cover.tex}
-\input{./Math/Definitions/ch02/SetTheory/Partition.tex}
-\input{./Math/Definitions/ch02/SetTheory/InfiniteCartesianProduct.tex}
-\input{./Math/Definitions/ch02/SetTheory/InfiniteDiagonal.tex}
-
-\input{./Math/Definitions/ch02/SetTheory/FunctionProduct.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/ClosureUnderUnions.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/ClosureUnderIntersections.tex}
 \input{./Math/Props/ch02/SetTheory/FiniteClosure.tex}
-
 \input{./Math/Definitions/ch02/SetTheory/Nesting.tex}
+\subsection{Covers, Partitions}
+\input{./Math/Definitions/ch02/SetTheory/Disjoint.tex}
+\input{./Math/Definitions/ch02/SetTheory/Cover.tex}
+\input{./Math/Definitions/ch02/SetTheory/Partition.tex}
+\subsection{Infinite Cartesian Product}
+\input{./Math/Definitions/ch02/SetTheory/InfiniteCartesianProduct.tex}
+\input{./Math/Definitions/ch02/SetTheory/InfiniteDiagonal.tex}
+\input{./Math/Definitions/ch02/SetTheory/FunctionProduct.tex}
 \subsection{Relations and Orderings}
 \input{./Math/Definitions/ch02/ReflexiveRelation.tex}
 \input{./Math/Definitions/ch02/TransitiveRelation.tex}
@@ -53,6 +56,14 @@
 \input{./Math/Definitions/ch02/DirectedSection.tex}
 \input{./Math/Definitions/ch02/Lattice.tex}
 \input{./Math/Definitions/ch02/Sequence.tex}
+\subsection{Equivalence Relations}
+\input{./Math/Definitions/ch02/EquivalenceClass.tex}
+\input{./Math/Props/ch02/EquivalenceClassPartition.tex} 
+\input{./Math/Definitions/ch02/QuotientSet.tex}
+\input{./Math/Remarks/ch02/QuotientSetPartition.tex} 
+\input{./Math/Definitions/ch02/QuotientMap.tex}
+\input{./Math/Props/ch02/QuotientMapSurjective.tex}
+
 \subsection{Nets}
 \input{./Math/Definitions/ch02/Net.tex}
 \input{./Math/Definitions/ch02/Nets/NetSection.tex}
@@ -60,50 +71,48 @@
 \input{./Math/Definitions/ch02/SetTheory/InductiveOrder.tex}
 \input{./Math/Definitions/ch02/SetTheory/ZornsLemma.tex}
 
-\subsection{Filters}
+\section{Filters}
+\subsection{Filter Basics}
 \input{./Math/Definitions/ch02/Filters/Filter.tex}
 \input{./Math/Props/ch02/Filters/FilterFacts.tex}
 \input{./Math/Definitions/ch02/Filters/CoarseFineFilter.tex}
 \input{./Math/Props/ch02/Filters/FilterExistence.tex}
 \input{./Math/Props/ch02/Filters/FilterOrderFacts.tex}
-\subsubsection{Filter Base}
+\subsection{Filter Base}
 \input{./Math/Definitions/ch02/Filters/GeneratedFilter.tex}
 \input{./Math/Definitions/ch02/Filters/FilterBase.tex}
 \input{./Math/Props/ch02/Filters/FilterBase.tex}
 \input{./Math/Props/ch02/Filters/FilterBaseFacts.tex}
 \input{./Math/Props/ch02/Filters/NetSectionsFormFilterBase.tex}
 \input{./Math/Definitions/ch02/Filters/SectionFilterOfANet.tex}
-\subsubsection{Ultrafilters}
+\subsection{Ultrafilters}
 \input{./Math/Definitions/ch02/Filters/Ultrafilter.tex}
 \input{./Math/Props/ch02/Filters/UltrafilterFacts.tex}
-\subsubsection{Induced Filters}
+\subsection{Induced Filters}
 \input{./Math/Definitions/ch02/Filters/InducedFilter.tex}
 \input{./Math/Props/ch02/Filters/InducedFilterFacts.tex}
-\subsubsection{Direct and Inverse Images of a Filter Base}
+\subsection{Direct and Inverse Images of a Filter Base}
 \input{./Math/Props/ch02/Filters/DirectFilterImage.tex}
 \input{./Math/Props/ch02/Filters/InverseFilterImage.tex}
-\subsubsection{Filter Products}
+\subsection{Filter Products}
 \input{./Math/Definitions/ch02/Filters/FilterProduct.tex}
 \input{./Math/Props/ch02/Filters/ProductFilterFacts.tex}
 
 
 
-\subsection{Point Set Topology}
-\subsubsection{Open Sets, Closed Sets, and Neighborhoods}
+\section{Topological Spaces}
+\subsection{Open Sets, Closed Sets, and Neighborhoods}
 \input{./Math/Definitions/ch02/PointSetTopology/TopologicalSpace.tex}
+\input{./Math/Definitions/ch02/PointSetTopology/DiscreteIndiscreteTopology.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/OpenSetClosedSet.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/Continuous.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/OpenFunction.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/Homeomorphism.tex}
+\input{./Math/Definitions/ch02/PointSetTopology/CompactSet.tex}
+\input{./Math/Definitions/ch02/PointSetTopology/CompactFunction.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/CoarseFine.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/WeakTopology.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/InductiveTopology.tex}:
-\input{./Math/Definitions/ch02/PointSetTopology/SubspaceTopology.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/Neighborhood.tex}
 \input{./Math/Props/ch02/PointSetTopology/NeighborhoodFilter.tex}
 \input{./Math/Props/ch02/PointSetTopology/TopologyFromNeighborhoodFilters.tex}
-
-\input{./Math/Definitions/ch02/PointSetTopology/DiscreteIndiscreteTopology.tex}
+\input{./Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex}
+\input{./Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/AccumulationPointClosureInterior.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/SubBasis.tex}
 \input{./Math/Props/ch02/PointSetTopology/GeneratedTopologyCharacterization.tex}
@@ -113,15 +122,22 @@
 \input{./Math/Definitions/ch02/PointSetTopology/FundamentalSystemOfNeighborhoods.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/NeighborhoodBasis.tex}
 \input{./Math/Props/ch02/PointSetTopology/NeighborhoodBasisFacts.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/CompactSet.tex}
+
+\subsection{Continuous Functions}
+\input{./Math/Definitions/ch02/PointSetTopology/Continuous.tex} %LATER
+\input{./Math/Definitions/ch02/PointSetTopology/Homeomorphism.tex} %LATER
+\input{./Math/Definitions/ch02/PointSetTopology/WeakTopology.tex} %LATER
+\input{./Math/Definitions/ch02/PointSetTopology/InductiveTopology.tex}: %LATER
+\input{./Math/Definitions/ch02/PointSetTopology/OpenFunction.tex} %LATER
 \input{./Math/Definitions/ch02/PointSetTopology/ClosedFunction.tex}
-\input{./Math/Definitions/ch02/PointSetTopology/CompactFunction.tex}
+\subsection{Subspaces And Quotient Spaces}
+\input{./Math/Definitions/ch02/PointSetTopology/SubspaceTopology.tex} %LATER
+\input{./Math/Props/ch02/QuotientSpaceTopologyDefinition.tex}
+\input{./Math/Props/ch02/QuotientSpaceTopologyProp.tex}
+\subsection{Product Spaces}
 \input{./Math/Definitions/ch02/PointSetTopology/ProductTopology.tex}
-\subsubsection{Continuous Functions}
-\subsubsection{Subspaces}
-\subsubsection{Quotient Spaces}
-\subsubsection{Open and Closed Maps}
-\subsubsection{Convergence of Filters}
+\subsection{Open and Closed Maps}
+\subsection{Convergence of Filters}
 \input{./Math/Definitions/ch02/PointSetTopology/Convergence/FilterConvergence.tex}
 \input{./Math/Remarks/ch02/PointSetTopology/Convergence/FilterBase.tex}
 \input{./Math/Props/ch02/PointSetTopology/Convergence/FilterConvergence.tex}
@@ -135,10 +151,11 @@
 
 
 
-\subsubsection{Separation Axioms}
+\subsection{Separation Axioms}
 \input{./Math/Definitions/ch02/PointSetTopology/SeparationAxioms/SeparationAxiomsDef.tex}
 \input{./Math/Props/ch02/PointSetTopology/SeparationAxioms/HausdorffCharacterizations.tex}
-\subsubsection{Countability  Axioms}
+\subsection{Compactness}
+\subsection{Countability  Axioms}
 \input{./Math/Definitions/ch02/PointSetTopology/FirstCountable.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/SecondCountable.tex}
 \input{./Math/Definitions/ch02/PointSetTopology/TopologyDense.tex}
@@ -146,7 +163,7 @@
 \input{./Math/Definitions/ch02/PointSetTopology/TopologyLinedelof.tex}
 
 
-\subsection{Uniformities}
+\section{Uniform Spaces}
 \input{./Math/Definitions/ch02/Uniformities/Uniformity.tex}
 \input{./Math/Props/ch02/Uniformities/UniformityCharacterization.tex}
 \input{./Math/Definitions/ch02/Uniformities/FundamentalSystemOfEntourages.tex}
@@ -154,39 +171,14 @@
 \input{./Math/Props/ch02/Uniformities/FundamentalSystemOfEntouragesCharacterization.tex}
 \input{./Math/Props/ch02/Uniformities/UniformityFacts.tex}
 \input{./Math/Definitions/ch02/Uniformities/UniformityIsomorphism.tex}
-\subsubsection{Uniform Topologies}
+\subsection{Uniform Topologies}
 \input{./Math/Props/ch02/Uniformities/UniformTopology/Existence.tex}
 \input{./Math/Definitions/ch02/Uniformities/UniformTopology/UniformTopology.tex}
 \input{./Math/Props/ch02/Uniformities/UniformTopology/UniformProductTopology.tex}
 \input{./Math/Remarks/ch02/Uniformities/UniformTopologies/UniformNeighborhood.tex}
 \input{./Math/Props/ch02/Uniformities/UniformTopology/UniformProductFundamentalSystem.tex}
-
-
-%\input{./Math/Definitions/ch02/
-
-
-
-\input{./Math/Definitions/ch02/TopologicalLatexDefinitions.tex}
-
-
-\subsection{Neighborhood Filter Of A Point}
-\input{./Math/Definitions/ch02/RelationOfEqualNeighborhoodFilters.tex}
-\input{./Math/Props/ch02/EqualNeighborhoodFiltersEquivalenceRelation.tex}
-
-\subsection{Equivalence Relations, Quotient Sets, and Quotient Maps}
-\input{./Math/Definitions/ch02/EquivalenceClass.tex}
-\input{./Math/Props/ch02/EquivalenceClassPartition.tex} 
-\input{./Math/Definitions/ch02/QuotientSet.tex}
-\input{./Math/Remarks/ch02/QuotientSetPartition.tex} 
-\input{./Math/Definitions/ch02/QuotientMap.tex}
-\input{./Math/Props/ch02/QuotientMapSurjective.tex}
-
-\subsection{Quotient Space Topology}
-\input{./Math/Props/ch02/QuotientSpaceTopologyDefinition.tex}
-\input{./Math/Props/ch02/QuotientSpaceTopologyProp.tex}
-\subsection{Weak Topologies}
-
-\subsection{Algebraic Structures}
+\section{Algebraic Structures}
+\subsection{Magma, Semigroup, Group}
 \input{./Math/Definitions/ch02/Algebra/AlgebraicDeclarations}
 \input{./Math/Definitions/ch02/Algebra/SymmetricMap.tex}
 \input{./Math/Definitions/ch02/Algebra/BinaryOperation}
@@ -205,12 +197,7 @@
 \input{./Math/Definitions/ch02/Algebra/GroupInverseOperator}
 \input{./Math/Definitions/ch02/Algebra/TranslationOperator}
 
-\subsection{Topological Algebra}
-%\input{./Math/Definitions/ch02/TopologicalMagma}
-\input{./Math/Definitions/ch02/TopologicalGroup}
-\input{./Math/Definitions/ch02/LocalBasis}
-
-\subsection{Vector Spaces}
+\subsection{Vector Space}
 \input{./Math/Definitions/ch02/VectorSpace/VectorSpace.tex}
 \input{./Math/Definitions/ch02/VectorSpace/LinearlyIndependent.tex}
 \input{./Math/Definitions/ch02/VectorSpace/ScalarHomogeneous}
@@ -228,6 +215,23 @@
 \input{./Math/Definitions/ch02/VectorSpace/ConvexSet}
 
 
+
+\section{Topological Algebra}
+\subsection{Topological Groups}
+\input{./Math/Definitions/ch02/TopologicalGroup}
+\input{./Math/Definitions/ch02/LocalBasis}
+
+\subsection{Topological Vector Spaces} 
+\input{./Math/Definitions/ch02/TVS/VectorSpaceCompatible}
+\input{./Math/Definitions/ch02/TopologicalVectorSpace}
+\input{./Math/Definitions/ch02/LocallyConvex}
+\input{./Math/Props/ch02/ExistenceOfBalancedNeighborhoods}
+\input{./Math/Definitions/ch02/TVSBoundedSet}
+\input{./Math/Definitions/ch02/SpaceOfBoundedLinearOperators}
+\input{./Math/Definitions/ch02/TVSContinuousLinearOperator}
+\input{./Math/Definitions/ch02/TopologyOfUniformConvergence}
+\input{./Math/Props/ch02/TopologyOfUniformConvergence}
+\section{Seminormed Spaces}
 \subsection{Pseudometrics}
 \input{./MathDefinitions/ch02/TriangleInequality.tex}
 \input{./Math/Definitions/ch02/Pseudometric.tex}
@@ -248,23 +252,7 @@
 \input{./Math/Definitions/ch02/Pseudometrizable}
 \input{./Math/Props/ch02/PseudometrizablePrequotient}
 
-%\input{./Math/Definitions/ch02/`
-
-\subsection{Topological Vector Spaces} 
-\input{./Math/Definitions/ch02/TVS/VectorSpaceCompatible}
-\input{./Math/Definitions/ch02/TopologicalVectorSpace}
-\input{./Math/Definitions/ch02/LocallyConvex}
-\input{./Math/Props/ch02/ExistenceOfBalancedNeighborhoods}
-\input{./Math/Definitions/ch02/TVSBoundedSet}
-\input{./Math/Definitions/ch02/SpaceOfBoundedLinearOperators}
-\input{./Math/Definitions/ch02/TVSContinuousLinearOperator}
-\input{./Math/Definitions/ch02/TopologyOfUniformConvergence}
-\input{./Math/Props/ch02/TopologyOfUniformConvergence}
-%\input{./Math/Props/ch02/BLOContinuous} Not actually True.. In general a Sequentiqally continuous Operator is  is bounded, but bounded only implies continuous if trhe domain is a "BOrnological" space (Defined by bourbaki gives notion of boundeds grounding)
-
-\subsection{Seminormed Spaces}
-
-
+\subsection{Quotients of Seminormed Spaces}
 \input{./Math/Definitions/ch02/Seminorm.tex}
 \input{./Math/Props/ch02/SubadditiveInducesTriangleInequality} 
 \input{./Math/Definitions/ch02/SeminormTopology}
@@ -289,13 +277,13 @@
 \input{./Math/Definitions/ch02/TopologicalDualSpace.tex}
 \input{./Math/Theorems/ch02/TopologicalDualSpaceIsomorphism.tex}
 
-
-%\input{./Math/Props/ch02/DualSpacePushing.tex}
-
+\subsection{Seminormed Hahn Banach Theorem}
 \input{./Math/Theorems/ch02/HahnBanachSeminormed.tex}
+\subsection{Seminorm Adjoints}
 \input{./Math/Remarks/ch02/LinearOperationNotation.tex}
 \input{./Math/Definitions/ch02/AdjointOperator.tex}
 \input{./Math/Props/ch02/AdjointOperator.tex}
+\subsection{Higher order Seminorm Duals}
 \input{./Math/Definitions/ch02/HigherOrderDualSpaces.tex}
 \input{./Math/Definitions/ch02/HigherOrderDualSpaceIsomorphism.tex}
 \input{./Math/Definitions/ch02/CanonicalEmbedding.tex}
