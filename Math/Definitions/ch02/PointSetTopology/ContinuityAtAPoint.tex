@@ -1,0 +1,21 @@
+\newcommand{\ContinuityAt}[0]{\textbf{\hyperref[def:FunctionContinuityAtAPoint]{Continuity At}}\xspace}
+\newcommand{\ContinuousAt}[0]{\textbf{\hyperref[def:FunctionContinuityAtAPoint]{Continuous At}}\xspace}
+\begin{df}[\ContinuityAt a point]
+\label{def:FunctionContinuityAtAPoint}
+Let $(X, \T_X)$ be a \TopologicalSpace.
+Let $(Y, \T_Y)$ be a \TopologicalSpace.
+Let $f:X \to Y$. 
+Let $x_0 \in X$. 
+Let $\scU_{\T_X}(x_0)$ be the
+\NeighborhoodFilter
+of $\T_X$ at $x_0$. 
+Let $\scU_{\T_Y}(f(x_0))$ be the
+\NeighborhoodFilter
+of $\T_Y$ at $f(x_0)$.
+We say that $f$ is 
+\ContinuousAt $x_0$, 
+and we say that $f$ posesses
+\ContinuityAt $x_0$, if 
+\scNested{\scU_{\T_X}(x_0)}{f^{-1} \pa{\scU_{\T_Y}(f(x_0)}}
+holds.
+\end{df}

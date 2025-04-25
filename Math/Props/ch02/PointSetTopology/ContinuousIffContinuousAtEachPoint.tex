@@ -1,0 +1,56 @@
+\begin{prop}[global \FunctionContinuity iff \ContinuityAt each point]
+\label{prop:ContinuityCharacterization}
+Let $(X, \T_X)$ and 
+$(Y, \T_Y)$ 
+be 
+\TopologicalSpaces.
+Let $f:X \to Y$. 
+The following are equivalent:
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:ContinuityCharacterization}.~\roman*}]
+\item
+\label{prop:ContinuityCharacterizations:GlobalContinuity}
+$f$ is \ContinuousFunction.
+\item 
+\label{prop:ContinuityCharacterizations:ContinuousAtEachPoint}
+$f$ is \ContinuousAt each point in $X$. 
+\item 
+\label{prop:ContinuityCharacterizations:Closure}
+For each $A \subset X$, 
+$f\pa{\ClosureMark{A}} \subset \ClosureMark{f(A)}$
+\item
+\label{prop:ContinuityCharacterizations:ClosedInverseImage}
+If $B \subset Y$ is 
+\SetClosed in $Y$, 
+then 
+$f^{-1}(B)$ is \SetClosed in $X$. 
+\end{enumerate}
+\begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:GlobalContinuity} \implies \ref{prop:ContinuityCharacterizations:ContinuousAtEachPoint}$]
+
+Let $x_0 \in X$. 
+Let $\scU$ denote the \NeighborhoodFilter of $\T_Y$ at $f(x_0)$. 
+Let $\scV$ denote the \NeighborhoodFilter of $\T_X$ at $x_0$.
+Let $U \in \scU$. 
+Then by 
+\ref{def:Neighborhood}
+there exists \SetOpen $\tilde{U} \in \scU$ such that $f(x_0) \in \tilde{U} \subset U$. 
+By the assumption 
+\ref{prop:ContinuityCharacterizations:GlobalContinuity}, 
+$f^{-1}\pa{\tilde{U}} \in \T_X$. 
+Also, since $f(x_0) \in \tilde{U}$, $x_0 \in f^{-1}\pa{\tilde{U}}$.
+Hence, $f^{-1}\pa{\tilde{U}} \in \scV$. 
+Since $f^{-1}\pa{\tilde{U}} \subset f^{-1}\pa{U}$, 
+we conclude 
+\scNested{\scV}{f^{-1}(\scU)}.
+Hence $f$ is \ContinuousAt $x_0$. 
+Since $x_0 \in X$ was arbitrary, we are done. 
+\end{proof}
+\begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:ContinuousAtEachPoint} \implies \ref{prop:ContinuityCharacterizations:Closure}$]
+
+This result is a direct application of 
+\ref{prop:ContinuityAtAPoint:Closure}.
+\end{proof}
+\begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:Closure} \implies \ref{prop:ContinuityCharacterizations:ClosedInverseImage}$]
+\end{proof}
+\begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:ClosedInverseImage} \implies \ref{prop:ContinuityCharacterizations:GlobalContinuity}$]
+\end{proof}
+\end{prop}

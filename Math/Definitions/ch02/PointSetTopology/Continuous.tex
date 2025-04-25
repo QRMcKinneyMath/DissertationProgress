@@ -1,12 +1,7 @@
 \label{def:FunctionContinuous}
-\newcommand{\ContinuousFunction}[0]{
-    \textbf{\hyperref[def:FunctionContinuous]{Continuous}}
-}
-\newcommand{\FunctionContinuity}[0]{
-    \textbf{\hyperref[def:FunctionContinuous]{Continuity}}
-}
-
-\begin{df}[\ContinuousFunction]
+\newcommand{\ContinuousFunction}[0]{\textbf{\hyperref[def:FunctionContinuous]{Continuous}}\xspace} 
+\newcommand{\FunctionContinuity}[0]{\textbf{\hyperref[def:FunctionContinuous]{Continuity}}\xspace}
+\begin{df}[global \FunctionContinuity of a function]
     Let $(X,\T_X)$ and 
     $(Y,\T_Y)$
     be
@@ -17,6 +12,7 @@
     and that it exhibits
     \FunctionContinuity
     with respect to $\T_1$ and $\T_2$
+	if
     $f^{-1}(\T_Y) \subset \T_X$. 
     We may make the \Topologies 
     explicit by writing 
