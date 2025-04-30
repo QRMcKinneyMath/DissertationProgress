@@ -13,32 +13,32 @@
 \contentsline {subsection}{\numberline {2.2.1}Filter Basics}{11}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Filter Base}{14}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Ultrafilters}{16}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Induced Filters}{18}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}Induced Filters}{17}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Direct and Inverse Images of a Filter Base}{18}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Filter Products}{20}{subsection.2.2.6}%
 \contentsline {section}{\numberline {2.3}Topological Spaces}{23}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Open Sets, Closed Sets, and Neighborhoods}{23}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Continuous Functions}{28}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Continuous Functions}{27}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Subspaces And Quotient Spaces}{29}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Product Spaces}{33}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Open and Closed Maps}{33}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Convergence of Filters}{33}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.4}Product Spaces}{32}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Open and Closed Maps}{32}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Convergence of Filters}{32}{subsection.2.3.6}%
 \contentsline {subsection}{\numberline {2.3.7}Separation Axioms}{35}{subsection.2.3.7}%
 \contentsline {subsection}{\numberline {2.3.8}Compactness}{36}{subsection.2.3.8}%
 \contentsline {subsection}{\numberline {2.3.9}Countability Axioms}{36}{subsection.2.3.9}%
-\contentsline {section}{\numberline {2.4}Uniform Spaces}{37}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Uniform Spaces}{36}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Uniform Topologies}{38}{subsection.2.4.1}%
 \contentsline {section}{\numberline {2.5}Algebraic Structures}{39}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Magma, Semigroup, Group}{39}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Vector Space}{42}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}Topological Algebra}{46}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Topological Groups}{46}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.5.2}Vector Space}{41}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Topological Algebra}{45}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Topological Groups}{45}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Topological Vector Spaces}{46}{subsection.2.6.2}%
 \contentsline {section}{\numberline {2.7}Seminormed Spaces}{47}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Pseudometrics}{47}{subsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.7.2}Quotients of Seminormed Spaces}{55}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Seminormed Hahn Banach Theorem}{70}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Seminorm Adjoints}{72}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.4}Seminorm Adjoints}{71}{subsection.2.7.4}%
 \contentsline {subsection}{\numberline {2.7.5}Higher order Seminorm Duals}{74}{subsection.2.7.5}%
 \contentsline {section}{\numberline {2.8}Classical Results With A Twist}{77}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Helly}{77}{subsection.2.8.1}%
