@@ -1,10 +1,12 @@
-\label{def:Chain}
 \newcommand{\Chain}[0]{\textbf{\hyperref[def:Chain]{Chain}}\xspace}
 \newcommand{\Chains}[0]{\textbf{\hyperref[def:Chain]{Chains}}\xspace}
 \begin{df}[\Chain]
+\label{def:Chain}
+\rm
     Let $(X,\leq)$ be a \Poset. 
     Let $A \subset X$ such that
-    $\pa{A, \leq \cap \pa{A \times A}}$ is a 
+	$\pa{A, \scRestriction{\leq}{ A \times A}}$ 
+	is a 
     \Toset. 
     Then we call $A$ a \Chain in $X$. 
 \end{df}

@@ -1,4 +1,5 @@
 \newcommand{\Cover}[0]{\textbf{\hyperref[def:Cover]{Cover}}\xspace}
+\newcommand{\CoveredBy}[0]{\textbf{\hyperref[def:Cover]{Covered By}}\xspace}
 \newcommand{\Covers}[0]{\textbf{\hyperref[def:Cover]{Covers}}\xspace}
 \newcommand{\Subcover}[0]{\textbf{\hyperref[def:Cover]{Subcover}}\xspace}
 \newcommand{\Subcovers}[0]{\textbf{\hyperref[def:Cover]{Subcovers}}\xspace}
@@ -7,6 +8,7 @@
 \rm
     Let $X$ be a set and let 
     $Y=\{Y_\alpha\}_{\alpha \in A}$ 
+	be a collection of sets
     such that 
     \begin{equation*}
         X \subset \bigcup_{\alpha \in A} Y_{\alpha}
@@ -16,20 +18,26 @@
     is a 
     \Cover
     for $X$ 
-    or that $Y$ 
-    \Covers $X$. 
+    and that $Y$ 
+    \Covers $X$
+	and that $X$ 
+	is \CoveredBy
+	$Y$. 
     In the context of talking about a 
     \Cover, if every member of a 
     \Cover posses a certain property
     then we may say that the \Cover 
     has that property. 
-    If $Z \subset Y$ \Covers $X$, then
-    we call $Z$ a \Subcover of $Y$. 
-    One exception to this is that 
+	An exception to this is that 
     when talking about the 
     \Cardinality
     or \Disjointedness 
-    of a \Cover, we are 
-    talking about \Cover itself, 
-    not each of its constituent sets. 
+    of a \Cover.
+	In such cases we are saying
+	that the \Cover itself is 
+	\Disjoint of a particular 
+	\Cardinality, not the 
+	constituent sets. 
+    If $Z \subset Y$ \Covers $X$, then
+    we call $Z$ a \Subcover of $Y$. 
 \end{df}

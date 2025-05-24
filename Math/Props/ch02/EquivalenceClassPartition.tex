@@ -1,18 +1,25 @@
 \begin{prop}[Equivalence Classes Partition]
     \label{prop:EquivalenceClassesPartition}
-    
+\rm
     Let $X \neq \emptyset$. 
     Let $\cong$ be an 
 	\EquivalenceRelation
 	defined on X. 
     Let $x,y \in X$. 
     The following statements are equivalent. 
-    \begin{enumerate}
-        \item $[x]_{\cong}  \cap [y]_{\cong} \neq \emptyset$
-        \item $x \cong y$
-        \item $[x]_{\cong} = [y]_{\cong}$
-        \item $[x]_{\cong} \subset [y]_{\cong}$
-        \item $[y]_{\cong} \subset [x]_{\cong}$ 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:EquivalenceClassesPartition}.~\roman*}]
+        \item 
+		\label{prop:EquivalenceClass:NonDisjoint}
+		$[x]_{\cong}  \cap [y]_{\cong} \neq \emptyset$
+        \item 
+		\label{prop:EquivalenceClass:Related}
+		$x \cong y$
+        \item 
+		\label{prop:EquivalenceClass:EqualClass}
+		$[x]_{\cong} = [y]_{\cong}$
+        \item 
+		\label{prop:EquivalenceClass:Subset}
+		$[x]_{\cong} \subset [y]_{\cong}$ or $[y]_{\cong} \subset [x]_{\cong}$  
     \end{enumerate}
     
 \begin{proof}[Proof That $1 \implies 2$]

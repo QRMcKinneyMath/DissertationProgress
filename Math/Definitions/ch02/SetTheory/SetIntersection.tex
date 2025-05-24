@@ -1,0 +1,26 @@
+\newcommand{\SetIntersection}[0]{\textbf{\hyperref[def:SetIntersection]{Intersection}}\xspace}
+\newcommand{\SetIntersections}[0]{\textbf{\hyperref[def:SetIntersection]{Intersections}}\xspace}
+\begin{df}[Set Intersection]
+\label{def:SetIntersection}
+
+\rm
+    Let $X$ and $Y$ be sets. 
+    We assume there exists a set $Z$ such that 
+    \begin{equation*}
+    \pa{\forall \phi}\pa{\phi \in Z \iff \pa{\phi \in X \wedge \phi \in Y}}
+    \end{equation*}
+    We call $Z$ the \SetIntersection of $X$ with $Y$ and we write $Z = X \cap Y$.  
+
+
+    Let $A$ be a set. 
+    For each $\alpha \in A$, let $X_\alpha$ be a set. 
+    We assume there exists a set $\Theta$ such that 
+    \begin{equation*}
+    \pa{\forall \phi} \pa{\pa{\phi \in \Theta} \iff \pa{\pa{\forall \alpha \in A}\pa{\phi \in X_\alpha}}}
+    \end{equation*}
+    We call $\Theta$ the \SetIntersection of $X_{\alpha}$ as $\alpha$ ranges over $A$. 
+    We write 
+    \begin{equation*}
+    \Theta = \bigcap\limits_{\alpha \in A} X_\alpha
+    \end{equation*}
+\end{df}

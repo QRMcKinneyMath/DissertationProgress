@@ -1,15 +1,25 @@
 \begin{prop}
 \label{prop:FilterFacts}
+\rm
     Let $X \neq \emptyset$ and let $\scF$ be a 
     \Filter on $X$. 
     Let $B \subset X$. 
     The following are true. 
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterFacts}~\roman*}]
-        \item \label{prop:FilterFacts:ContainsX} $X \in \scF$. 
-        \item \label{prop:FilterFacts:ClosureUnderFiniteIntersections} $\scF$ is \ClosedUnderFiniteIntersections
-        \item \label{prop:FilterFacts:IntersectionOfFiltersIsAFilter} The intersection of a collection of \Filters on $X$ is a \Filter on $X$. 
-        \item \label{prop:FilterFacts:InducedFilterExistence}
-        $\scF_B$ defined by $\{U \cap B | U \in \scF\}$ is a \Filter on $B$ 
+        \item 
+		\label{prop:FilterFacts:ContainsX} 
+		$X \in \scF$. 
+        \item 
+		\label{prop:FilterFacts:ClosureUnderFiniteIntersections} 
+		$\scF$ is \ClosedUnderFiniteIntersections
+        \item 
+		\label{prop:FilterFacts:IntersectionOfFiltersIsAFilter} 
+		The intersection of a collection of 
+		\Filters on $X$ is a \Filter on $X$. 
+        \item 
+		\label{prop:FilterFacts:InducedFilterExistence}
+        $\scF_B$ defined by $\braces{U \cap B | U \in \scF}$ 
+		is a \Filter on $B$ 
         if and only if $\emptyset \not \in \scF_B$. 
     \end{enumerate}
     \begin{proof}[Proof of \ref{prop:FilterFacts:ContainsX}]
@@ -20,10 +30,12 @@
         $X \in \scF$, so \ref{prop:FilterFacts:ContainsX} is proven. 
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}]
+	
         Direct application of \ref{def:Filter:FiniteIntersectionProperty} paired with 
         \ref{prop:FiniteClosure:Union}.
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FilterFacts:IntersectionOfFiltersIsAFilter}]
+	
         Let $\{\scF_\alpha\}_{\alpha \in A}$ be a collection of \Filters on $X$. 
         Define $\scF=\bigcap\limits_{\alpha \in A} \scF_\alpha$. 
         By \ref{prop:FilterFacts:ContainsX}, for each $\alpha \in A$, 

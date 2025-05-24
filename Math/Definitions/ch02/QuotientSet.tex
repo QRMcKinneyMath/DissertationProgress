@@ -1,16 +1,17 @@
-\label{def:QuotientSet}
 \newcommand{\QuotientSet}[0]{\textbf{\hyperref[def:QuotientSet]{Quotient Set}}\xspace}
 \newcommand{\QuoSet}[2]{\ensuremath{#1/#2}\xspace}
 \newcommand{\LetBeQuotientSet}[2]{
     Let \ensuremath{\QuoSet{#1}{#2}} be the \QuotientSet of \ensuremath{#1} with respect to the relation \ensuremath{#2}.
 }
 \begin{df}[Quotient Set]  
+\label{def:QuotientSet}
+\rm
     Let $X \neq \emptyset$.
     Let $\cong$ be an 
 	\EquivalenceRelation defined on X.
     We define the set $X/\cong$ by 
     \begin{equation}
-        \QuoSet{X}{\cong} = \{ [x]_{\cong} : x \in X\}
+        \QuoSet{X}{\cong} = \braces{ [x]_{\cong} : x \in X}
     \end{equation}
     We call $\QuoSet{X}{\cong}$ the \QuotientSet of X under the relation $\cong$. 
 \end{df} 

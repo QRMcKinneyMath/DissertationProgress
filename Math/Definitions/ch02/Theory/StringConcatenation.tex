@@ -1,0 +1,18 @@
+\newcommand{\StringConcatenation}[0]{\textbf{\hyperref[def:StringConcatenation]{Concatenation}}\xspace}
+\newcommand{\StringConcatenations}[0]{\textbf{\hyperref[def:StringConcatenation]{Concatenations}}\xspace}
+\begin{df}[\StringConcatenation]
+
+\rm
+    Let $x$ be a \String of length $m$ in an \Alphabet $A$.
+    Let $y$ be a \String of length $n$ in an \Alphabet $A$. 
+    Let $z$ be the \String of length $m+n$ such that 
+    for $1 \leq i \leq m$, 
+    $z(i) \SymbolEqual x(i)$ 
+    and for $m < i \leq m+n$, 
+    $z(i) = y(i-m)$.
+    Then we call 
+    $z$ the 
+    \StringConcatenation of $x$ with $y$
+    and we write 
+    $z \StringEqual xy$
+\end{df}

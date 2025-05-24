@@ -1,0 +1,22 @@
+\newcommand{\String}[0]{\textbf{\hyperref[def:String]{String}}\xspace}
+\newcommand{\Strings}[0]{\textbf{\hyperref[def:String]{Strings}}\xspace}
+\newcommand{\StringEqual}[0]{\hyperref[def:String]{\ensuremath{=_{\String}}}\xspace}
+\begin{df}[\String]
+\label{def:String}
+
+\rm
+    A \String in an \Alphabet $A$ is a finite ordered list of \Symbols in $A$.
+    The number of \Symbols in a string is called the length of that string.
+    A string can contain multiple instances of the same \Symbol.
+    A \String may be represented by a character, or a sequence of characters.
+    If we say that a character or sequence of characters is a \String, then we mean that
+    that character or sequence of characters represents a \String.
+    Suppose $x$ is a \String of length m whose $i^{th}$ element
+    is the \Symbol represented by $x_i$.
+    Then, for every counting number i between 1 and m.
+    Then we write $x_i \SymbolEqual x(i)$.
+    If $x$ and $y$ each are strings of length $m$ such that for 
+    $1 \leq i \leq m$ we have 
+    $x(i) \SymbolEqual  y(i)$, then we write
+    $x \StringEqual y$. 
+\end{df}

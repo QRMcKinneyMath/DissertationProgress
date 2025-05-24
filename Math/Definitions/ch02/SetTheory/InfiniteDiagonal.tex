@@ -3,12 +3,14 @@
 \newcommand{\scInfiniteSetDiagonal}[2]{\ensuremath{\hyperref[def:InfiniteSetDiagonal]{\Delta_{#1}\pa{#2}}}\xspace}
 \begin{df}[\InfiniteSetDiagonal]
     \label{def:InfiniteSetDiagonal}
-    rm
+    \rm
     Let $X$ be a set.
     Let $A \neq \emptyset$. 
+	For each $x \in X$, define $f_x:A \to X$
+	by $f_x(\alpha) = x$ for each $\alpha \in A$. 
     We define 
     \begin{equation*}
-    \scInfiniteSetDiagonal{A}{X}= \left\{ \{x\}_{\alpha \in A} \in \prod\limits_{\alpha \in A} X | x \in X\right\}
+    \scInfiniteSetDiagonal{A}{X}= \left\{ f_x \in \prod\limits_{\alpha \in A} X | x \in X\right\}
     \end{equation*}
     We call this the \InfiniteSetDiagonal of $X$ with respect to $A$, 
     or, when $A$ is understood, the \InfiniteSetDiagonal of $X$.
