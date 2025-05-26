@@ -1,0 +1,15 @@
+\newcommand{\Term}[0]{\textbf{\hyperref[def:Term]{Term}}\xspace}
+\newcommand{\Terms}[0]{\textbf{\hyperref[def:Term]{Terms}}\xspace}
+
+\begin{df}[\Term]
+\label{def:Term}
+
+\rm
+    We say that a \String C in \scA is a \Term in \scG if and only if 
+    one or both of the following hold. 
+    \begin{enumerate}
+        \item $C \StringEqual x$ where $x$ is an \IndividualVariable or an \IndividualConstant in \scA.
+        \item $C \StringEqual f(x_1,x_2,\cdots,x_n)$ where $f$ is a \FunctionLetter{n} 
+        and each $x_i$ is a \Term. 
+    \end{enumerate}
+\end{df}

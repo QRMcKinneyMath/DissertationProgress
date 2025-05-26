@@ -1,0 +1,17 @@
+\newcommand{\TermAppearsInTerm}[0]{\textbf{\hyperref[def:TermAppearsInTerm]{Appears In}}\xspace}
+\begin{df}[\Term \TermAppearsInTerm \Term]
+\label{def:TermAppearsInTerm}
+
+\rm
+    Let $x$ and $y$ be \Terms in \scG. 
+    We say that $x$
+    \TermAppearsInTerm $y$ if 
+    either or both of the following hold. 
+    \begin{enumerate}
+        \item $x \StringEqual y$. 
+        \item $y \StringEqual f(x_1,x_2,\cdots,x_n)$
+        , where $f$ is a \FunctionLetter{n} 
+        and each $x_i$ is a \Term and x 
+        \TermAppearsInTerm $x_i$ for at least a single $1 \leq i \leq n$. 
+    \end{enumerate}
+\end{df}

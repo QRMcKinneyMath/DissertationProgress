@@ -1,68 +1,69 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Prerequisite Knowledge}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Foundations}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Symbol, Alphabet, String, Grammar}{2}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Predicate Calculus}{3}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Set Theory}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Inclusion, Subset, Intersection, Union, Difference}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Binary Products}{4}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Functions}{4}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Cardinality}{5}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Covers, Partitions}{7}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Infinite Cartesian Product}{7}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}Relations and Orderings}{8}{subsection.2.2.7}%
-\contentsline {subsection}{\numberline {2.2.8}Equivalence Relations}{10}{subsection.2.2.8}%
-\contentsline {subsection}{\numberline {2.2.9}Nets}{12}{subsection.2.2.9}%
-\contentsline {section}{\numberline {2.3}Filters}{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Filter Basics}{12}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Filter Base}{15}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Ultrafilters}{18}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Induced Filters}{19}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Direct and Inverse Images of a Filter Base}{20}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Filter Products}{21}{subsection.2.3.6}%
-\contentsline {section}{\numberline {2.4}Topological Spaces}{24}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Open Sets, Closed Sets, and Neighborhoods}{24}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Continuous Functions}{29}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Subspaces And Quotient Spaces}{30}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Product Spaces}{34}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Open and Closed Maps}{34}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Convergence of Filters}{34}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}Separation Axioms}{36}{subsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.4.8}Compactness}{37}{subsection.2.4.8}%
-\contentsline {subsection}{\numberline {2.4.9}Countability Axioms}{37}{subsection.2.4.9}%
-\contentsline {section}{\numberline {2.5}Uniform Spaces}{38}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Uniform Topologies}{39}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}Algebraic Structures}{40}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Magma, Semigroup, Group}{40}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Vector Space}{43}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Topological Algebra}{47}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Topological Groups}{47}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Topological Vector Spaces}{47}{subsection.2.7.2}%
-\contentsline {section}{\numberline {2.8}Seminormed Spaces}{48}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Pseudometrics}{48}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Quotients of Seminormed Spaces}{56}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Seminormed Hahn Banach Theorem}{71}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Seminorm Adjoints}{73}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Higher order Seminorm Duals}{75}{subsection.2.8.5}%
-\contentsline {section}{\numberline {2.9}Classical Results With A Twist}{78}{section.2.9}%
-\contentsline {subsection}{\numberline {2.9.1}Helly}{78}{subsection.2.9.1}%
-\contentsline {subsection}{\numberline {2.9.2}Goldstine}{81}{subsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}Banach Alaoglu}{82}{subsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.9.4}Eberlein-Smulian}{83}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Bishop-Phelps}{86}{subsection.2.9.5}%
-\contentsline {section}{\numberline {2.10}Reflexivity}{88}{section.2.10}%
-\contentsline {subsection}{\numberline {2.10.1}James}{89}{subsection.2.10.1}%
-\contentsline {subsection}{\numberline {2.10.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{97}{subsection.2.10.2}%
-\contentsline {section}{\numberline {2.11}Convexity Of Functions And Sets}{98}{section.2.11}%
-\contentsline {section}{\numberline {2.12}Differentiation And SubDifferentials}{101}{section.2.12}%
-\contentsline {section}{\numberline {2.13}Normalized Duality Mapping}{103}{section.2.13}%
-\contentsline {section}{\numberline {2.14}Orthogonality}{103}{section.2.14}%
-\contentsline {section}{\numberline {2.15}Convexity Of A Space}{104}{section.2.15}%
-\contentsline {section}{\numberline {2.16}Smoothness Of A Space}{106}{section.2.16}%
-\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{109}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{109}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{110}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{111}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{111}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{111}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{112}{chapter.5}%
+\contentsline {subsection}{\numberline {2.1.1}Metatheoretical Constructs}{2}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Symbol, Alphabet, String, Grammar}{2}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Predicate Calculus}{3}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Set Theory}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Inclusion, Subset, Intersection, Union, Difference}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Binary Products}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Functions}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Cardinality}{7}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Covers, Partitions}{8}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Infinite Cartesian Product}{9}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Relations and Orderings}{10}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Equivalence Relations}{12}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Nets}{13}{subsection.2.2.9}%
+\contentsline {section}{\numberline {2.3}Filters}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Filter Basics}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Filter Base}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Ultrafilters}{19}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Induced Filters}{21}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Direct and Inverse Images of a Filter Base}{21}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Filter Products}{23}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Topological Spaces}{26}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Open Sets, Closed Sets, and Neighborhoods}{26}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Continuous Functions}{31}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Subspaces And Quotient Spaces}{32}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Product Spaces}{36}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Open and Closed Maps}{36}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Convergence of Filters}{36}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Separation Axioms}{38}{subsection.2.4.7}%
+\contentsline {subsection}{\numberline {2.4.8}Compactness}{39}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.9}Countability Axioms}{39}{subsection.2.4.9}%
+\contentsline {section}{\numberline {2.5}Uniform Spaces}{40}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Uniform Topologies}{41}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Algebraic Structures}{42}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Magma, Semigroup, Group}{42}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Vector Space}{45}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Topological Algebra}{49}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Topological Groups}{49}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Topological Vector Spaces}{49}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Seminormed Spaces}{50}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Pseudometrics}{50}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Quotients of Seminormed Spaces}{58}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Seminormed Hahn Banach Theorem}{73}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Seminorm Adjoints}{75}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Higher order Seminorm Duals}{77}{subsection.2.8.5}%
+\contentsline {section}{\numberline {2.9}Classical Results With A Twist}{80}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Helly}{80}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Goldstine}{83}{subsection.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Banach Alaoglu}{84}{subsection.2.9.3}%
+\contentsline {subsection}{\numberline {2.9.4}Eberlein-Smulian}{85}{subsection.2.9.4}%
+\contentsline {subsection}{\numberline {2.9.5}Bishop-Phelps}{88}{subsection.2.9.5}%
+\contentsline {section}{\numberline {2.10}Reflexivity}{90}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}James}{91}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Lindenstrauss On Nonseparable Reflexive Banach Spaces}{99}{subsection.2.10.2}%
+\contentsline {section}{\numberline {2.11}Convexity Of Functions And Sets}{100}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Differentiation And SubDifferentials}{103}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Normalized Duality Mapping}{105}{section.2.13}%
+\contentsline {section}{\numberline {2.14}Orthogonality}{105}{section.2.14}%
+\contentsline {section}{\numberline {2.15}Convexity Of A Space}{106}{section.2.15}%
+\contentsline {section}{\numberline {2.16}Smoothness Of A Space}{108}{section.2.16}%
+\contentsline {chapter}{\numberline {3}Smoothness And Convexity}{111}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Convexity And Smoothness Of A Space}{111}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Convexity, Smoothness, and High Order Duals}{112}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Renorming Theory (Including Results about WCG Spaces)}{113}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Representations Of Reflexive Spaces}{113}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Local Uniform Convexafiability Of Reflexive Spaces}{113}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Convexity And Fixed Point Theory}{114}{chapter.5}%
