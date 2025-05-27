@@ -1,0 +1,26 @@
+\newcommand{\WFF}[0]{\textbf{\hyperref[def:WellFormedFormula]{Well Formed Formula}}\xspace}
+\newcommand{\WFFs}[0]{\textbf{\hyperref[def:WellFormedFormula]{Well Formed Formulas}}\xspace}
+\newcommand{\Wff}[0]{\textbf{\hyperref[def:WellFormedFormula]{Well Formed Formula}}\xspace}
+\newcommand{\Wffs}[0]{\textbf{\hyperref[def:WellFormedFormula]{Well Formed Formulas}}\xspace}
+\begin{df}[\WFF]
+\label{def:WellFormedFormula}
+
+\rm
+    Let $C$ be a \String in \scA. 
+    We say that $C$ is a 
+    \WFF in \scG if and only if one or more of the following hold. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:WellFormedFormula}.~\roman*}]
+        \item 
+        \label{def:WFF:AtomicFormula}
+        $C$ is an \AtomicFormula in \scG.
+        \item 
+        \label{def:WFF:Negation}
+        $C \StringEqual (\neg B)$ where $B$ is a \WFF in \scG.
+        \item 
+        \label{def:WFF:Implication}
+        $C \StringEqual (B \implies D)$ where $B$ and $D$ are \WFFs in \scG.
+        \item 
+        \label{def:WFF:Quantification}
+        $C \StringEqual ((\forall y)B)$ where $B$ is a \WFF in \scG and $y$ is an \IndividualVariable.
+    \end{enumerate}
+\end{df}

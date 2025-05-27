@@ -1,0 +1,17 @@
+\newcommand{\TermAppearsInWFF}[0]{\textbf{\hyperref[def:TermAppearsInWFF]{Appears In}}\xspace}
+\begin{df}[\Term \TermAppearsInWFF \WFF]
+\label{def:TermAppearsInWFF}
+
+\rm
+    Let $y$ be a \Term in \scG.
+    Let $C$ be a \WFF in \scG. 
+    Let $B_1, \cdots, B_k$ be the 
+    \FundamentalAtomicGenerator
+    for $C$. 
+    We say that $y$ \TermAppearsInWFF
+    $C$
+    if $y$ 
+    \TermAppearsInAtomicFormula
+    $B_i$ for at least 
+    one $i$, $1 \leq i \leq k$.
+\end{df}
