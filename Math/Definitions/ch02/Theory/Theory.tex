@@ -1,7 +1,18 @@
 \newcommand{\Theory}[0]{\textbf{\hyperref[def:Theory]{Theory}}\xspace}
 \newcommand{\Theories}[0]{\textbf{\hyperref[def:Theory]{Theories}}\xspace}
+\newcommand{\Theorem}[0]{\textbf{\hyperref[def:Theory]{Theorem}}\xspace}
+\newcommand{\Theorems}[0]{\textbf{\hyperref[def:Theory]{Theorems}}\xspace}
 \begin{df}[\Theory]
 \label{def:Theory}
-    TODO
+    
 \rm
+    Let \scA be an alphabet and let 
+    \scG be a \Grammar on \scA. 
+    A \Theory on \scG is a 
+    subcollection of the set of \Statements of \scG. 
+    We call a \Statement contained in a \Theory a 
+    \Theorem of that \Theory. 
+    If \scT is a \Theory and 
+    $t$ is a \Theorem in \scT, then we write 
+    \isthm{\scT}$t$
 \end{df}

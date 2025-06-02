@@ -1,0 +1,17 @@
+\newcommand{\SatisfyRule}[0]{\textbf{\hyperref[def:SatisfyRule]{Satisfy}}\xspace}
+\newcommand{\SatisfiesRule}[0]{\textbf{\hyperref[def:SatisfyRule]{Satisfies}}\xspace}
+\begin{df}[\SatisfyRule \RuleOfInference]
+\label{def:SatisfyRule}
+
+\rm
+    Let \scG be a \Grammar. 
+    Let \scT be a \Theory in \scG. 
+    Let n be a counting number where $n>1$. 
+    Let \scR be an n-th order \RuleOfInference in \scG. 
+    We say that \scT \SatisfiesRule \scR if 
+    whenever $(B_1, B_2, \cdots, B_n)$ are elemnts of \scR 
+    and $\isthm{\scT}B_1$, $\isthm{\scT}B_2$, $\cdots$, $\isthm{\scT}B_{n-1}$, 
+    then $\isthm{\scT}B_n$. 
+
+
+\end{df}

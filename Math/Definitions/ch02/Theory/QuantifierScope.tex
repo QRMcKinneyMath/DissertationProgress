@@ -1,0 +1,14 @@
+\newcommand{\QuantifierScope}[0]{\textbf{\hyperref[def:QuantifierScope]{Scope}}\xspace}
+\newcommand{\QuantifierScopes}[0]{\textbf{\hyperref[def:QuantifierScope]{Scopes}}\xspace}
+
+\begin{df}[\QuantifierScope]
+\label{def:QuantifierScope}
+\rm
+    Let $A$ be a \WFF in \scG such that
+    $A \StringEqual ((\forall y)B)$ 
+    where $B$ is a \WFF and $y$ is an \IndividualVariable in \scA.
+    We say that the \QuantifierScope of $A$, 
+    or when confusion is unlikely, the 
+    \QuantifierScope of the quantifier $(\forall y)$ is the 
+    collection of all \StringOccurences of \Terms in $B$. 
+\end{df}

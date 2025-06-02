@@ -1,0 +1,20 @@
+\newcommand{\FreeVariable}[0]{\textbf{\hyperref[def:FreeBoundVariable]{Free}}\xspace}
+\newcommand{\BoundVariable}[0]{\textbf{\hyperref[def:FreeBoundVariable]{Bound}}\xspace}
+
+\begin{df}[\FreeVariable, \BoundVariable]
+\label{def:FreeBoundVariable}
+
+\rm
+    Let $B$ be a \Wff in \scG.
+    Let $x$ be an \IndividualVariable that \AppearsIn $B$. 
+    We say that $x$ is \FreeVariable in $B$
+    if it has an \StringOccurence that is \FreeOccurence in $B$. 
+    We say that $x$ is \BoundVariable in $B$
+    if it has an \StringOccurence that is \BoundOccurence in $B$. 
+
+    Note that $x$ can be both
+    \FreeVariable
+    and 
+    \BoundVariable
+    in $B$. 
+\end{df}

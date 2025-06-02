@@ -1,0 +1,17 @@
+\newcommand{\BoundOccurence}[0]{\textbf{\hyperref[def:BoundOccurence]{Bound}}\xspace}
+
+\begin{df}[\BoundOccurence]
+\label{def:BoundOccurence}
+
+\rm
+    Let $B$ be a \Wff in \scG. 
+    Let $x$ be an \IndividualVariable that \AppearsIn $B$.. 
+    We say that an \StringOccurence of $x$ is \BoundOccurence in $B$. 
+    if either of the following two hold. 
+    \begin{enumerate}
+        \item That \StringOccurence is immediately preceeded by the \Symbol $\forall$.
+        \item That \StringOccurence is within the \QuantifierScope of the quantifier
+        $(\forall x)$. 
+    \end{enumerate}
+
+\end{df}

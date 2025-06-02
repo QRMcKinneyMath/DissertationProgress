@@ -1,0 +1,16 @@
+\newcommand{\FreeTerm}[0]{\textbf{\hyperref[def:FreeTerm]{Free}}\xspace}
+
+\begin{df}[\FreeTerm]
+\label{def:FreeTerm}
+
+\rm
+    Let $B$ be a \WFF in \scG. 
+    Let $t$ be a \Term in \scG. 
+    Let $x$ be an \IndividualVariable that \AppearsIn $B$. 
+    Then we say that 
+    $t$ is \FreeTerm for $x$ in $B$ if 
+    for every \IndividualVariable $y$ 
+    that \AppearsIn $t$, there is no 
+    \FreeOccurence of $x$ in $B$ within the \QuantifierScope 
+    of the quantifier $(\forall y)$. 
+\end{df}

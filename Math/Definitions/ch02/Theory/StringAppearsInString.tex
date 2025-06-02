@@ -1,0 +1,30 @@
+\newcommand{\AppearsIn}[0]{\textbf{\hyperref[def:AppearsIn]{Appears In}}\xspace}
+\newcommand{\AppearIn}[0]{\textbf{\hyperref[def:AppearsIn]{Appear In}}\xspace}
+\newcommand{\Substring}[0]{\textbf{\hyperref[def:AppearsIn]{Substring}}\xspace}
+\newcommand{\Substrings}[0]{\textbf{\hyperref[def:AppearsIn]{Substrings}}\xspace}
+\newcommand{\StringOccurence}[0]{\textbf{\hyperref[def:AppearsIn]{Occurence}}\xspace}
+\newcommand{\StringOccurences}[0]{\textbf{\hyperref[def:AppearsIn]{Occurences}}\xspace}
+\begin{df}[\AppearsIn]
+\label{def:AppearsIn}
+
+\rm
+    Let \scA be an \Alphabet.
+    Let $x$ be a \String of length n in \scA. 
+    Let $y$ be a \String of length m in \scA. 
+    We say that $x$ 
+    \AppearsIn
+    y
+    if there exists a $k >0$ such that 
+    for each $i$, $1 \leq i \leq n$, we have 
+    \begin{equation*}
+        x(i) \SymbolEqual  y(i+k)
+    \end{equation*}
+    If $x$ \AppearsIn $y$
+    then we may also say that 
+    $x$ is a \Substring of $y$. 
+    It is possible for a single \String
+    to \AppearIn another string in multiple locations. 
+    We call disjoint appearances of the same \String 
+    in another a \StringOccurence of that \Substring.
+
+\end{df}
