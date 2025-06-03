@@ -1,0 +1,18 @@
+\newcommand{\ConsistentTheory}[0]{\textbf{\hyperref[def:ConsistentTheory]{Consistent}}\xspace}
+\newcommand{\ConsistencyTheory}[0]{\textbf{\hyperref[def:ConsistentTheory]{Consistency}}\xspace}
+\newcommand{\InconsistentTheory}[0]{\textbf{\hyperref[def:ConsistentTheory]{Inconsistent}}\xspace}
+\newcommand{\InconsistencyTheory}[0]{\textbf{\hyperref[def:ConsistentTheory]{Inconsistency}}\xspace}
+
+\begin{df}[\ConsistentTheory, \InconsistentTheory]
+\label{def:ConsistentTheory}
+
+\rm
+    Let \scG be a \FirstOrderLanguage on an \Alphabet \scA. 
+    Let \scT be a \Theory on \scG. 
+    We say that \scT is \InconsistentTheory, or that \scT posesses
+    \InconsistencyTheory if there
+    exists a \Statement S such that 
+    $\isthm{\scT}S$ and $\isthm{\scT}\pa{\neg S}$.
+    If \scT is not \InconsistentTheory, 
+    then we say that it is \ConsistentTheory and that it posesses \ConsistencyTheory.
+\end{df}

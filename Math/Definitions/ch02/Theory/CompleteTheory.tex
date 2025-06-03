@@ -1,0 +1,16 @@
+\newcommand{\CompleteTheory}[0]{\textbf{\hyperref[def:CompleteTheory]{Consistent}}\xspace}
+\newcommand{\CompletenessTheory}[0]{\textbf{\hyperref[def:CompleteTheory]{Completeness}}\xspace}
+\newcommand{\IncompleteTheory}[0]{\textbf{\hyperref[def:CompleteTheory]{Incomplete}}\xspace}
+\newcommand{\IncompletenessTheory}[0]{\textbf{\hyperref[def:CompleteTheory]{Incompleteness}}\xspace}
+
+\begin{df}[\CompleteTheory, \IncompleteTheory]
+\label{def:CompleteTheory}
+
+\rm
+    Let \scG be a \FirstOrderLanguage on an \Alphabet \scA. 
+    Let \scT be a \Theory on \scG. 
+    We say that \scT is \IncompleteTheory, or that \scT 
+    posesses \IncompletenessTheory 
+    if there exists  a \Statement S in \scG such that 
+    Neither $\isthm{\scT}S$ nor $\isthm{\scG}\pa{\neg S}$ are true. 
+\end{df}

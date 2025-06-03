@@ -1,0 +1,20 @@
+\newcommand{\AxiomaticTheory}[0]{\textbf{\hyperref[def:AxiomaticTheory]{Axiomatic Theory}}\xspace}
+\newcommand{\AxiomaticTheories}[0]{\textbf{\hyperref[def:AxiomaticTheory]{Axiomatic Theories}}\xspace}
+\begin{df}[\AxiomaticTheory]
+\label{def:AxiomaticTheory}
+
+\rm
+    Let \scA be an \Alphabet and let \scG
+    be a \Grammar on \scA. 
+    Let $A_1, \cdots, A_n$ be a collection of 
+    \AxiomSchemes on \scG. 
+    Let $R_1, \cdots, R_m$ be a collection of 
+    \RulesOfInference on \scG. 
+    We define the 
+    \AxiomaticTheory with \AxiomSchemes $A_1, \cdots, A_n$
+    and \RulesOfInference $R_1, \cdots, R_n$ 
+    to be the 
+    smallest possible \Theory on \scG which 
+    \SatisfiesAxiom each $A_i$ for $1 \leq i \leq n$
+    and which \SatisfiesRule each $R_j$ for $1 \leq j \leq m$. 
+\end{df}

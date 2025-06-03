@@ -1,0 +1,26 @@
+\newcommand{\Proof}[0]{\textbf{\hyperref[def:Proof]{Proof}}\xspace}
+\newcommand{\Proofs}[0]{\textbf{\hyperref[def:Proof]{Proofs}}\xspace}
+\newcommand{\Proven}[0]{\textbf{\hyperref[def:Proof]{Proven}}\xspace}
+\newcommand{\Proves}[0]{\textbf{\hyperref[def:Proof]{Proves}}\xspace}
+\newcommand{\Prove}[0]{\textbf{\hyperref[def:Proof]{Prove}}\xspace}
+\begin{df}[\Proof]
+\label{def:Proof}
+
+\rm
+    Let \scT be an \AxiomaticTheory
+    with \AxiomSchemes $A_1, \cdots, A_n$
+    and \RulesOfInference $R_1, \cdot R_m$, 
+    where for each $i$, $1 \leq i \leq m$, 
+    $R_i$ is a \RuleOfInference of order $k_i$. 
+    A \Proof in \scT  for a statement $S_t$ in \scG
+    is a finite sequence of \Statements in \scG, 
+    $S_1, \cdots, S_{t-2}, S_{t-1}, S_t$
+    where for each $j$, $1 \leq j \leq t$, at least one of the following holds. 
+    \begin{enumerate}
+        \item $S_j$ is an \Axiom for \scT. 
+        \item There exists a p, $1 \leq p \leq m$ and a collection of indices, 
+        $l_1, l_2, \cdots, l_{k_p-1}$ such that each $l_q < j$ and 
+        $(S_{l_1}, S_{l_2}, \cdots, S_{l_{k_p-1}}, S_j$ is in $R_p$
+    \end{enumerate}
+\end{df}
+
