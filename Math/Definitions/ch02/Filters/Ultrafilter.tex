@@ -4,7 +4,8 @@
 \newcommand{\UltrafilterBases}[0]{\textbf{\hyperref[def:Ultrafilter]{Ultrafilter Bases}}\xspace}
 \begin{df}[\Ultrafilter]
 \label{def:Ultrafilter}
-    Let $X \neq \emptyset$. 
+\rm
+    Let $X$ be a nonempty set.
     An \Ultrafilter 
     on $X$ is a \Maximum
     of the relation of \FilterFineness
@@ -12,14 +13,16 @@
 \end{df}
 \begin{rmk}[\Ultrafilter Existence]
 \label{rmk:Ultrafilter}
-    Let $\scF$ be a \Filter on $X \neq \emptyset$. 
+\rm
+    Let $X$ be a nonempty set.
+    Let $\scF$ be a \Filter on $X$.
     By 
     \ref{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}
     Not only is \FilterFineness an \InductiveOrder 
     on the set of \Filters of $X$, 
     (as stated in \ref{prop:FilterOrderFacts:FilterFinenessIsInductive})
     , but \FilterFineness is also an \InductiveOrder
-    on the set of \Filters \FinerFilter than $\scF$. 
+    on the set of \Filters which are \FinerFilter than $\scF$. 
     Hence by \ref{Axiom:ZornsLemma}, 
     $\scF$ is contained in an \UltraFilter on $X$. 
     A \FilterBase for an \Ultrafilter

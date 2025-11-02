@@ -1,7 +1,8 @@
 \begin{thm}[Goldstine]
     \label{thm:GoldstinesTheorem}
+    \rm
     Let $X$ be a \SeminormedSpace.
-    Let $c:X \to X^{**}$ be the \CanonicalEmbedding of $X$ into $X^*$.
+    Let $c:X \to X^{**}$ be the \CanonicalEmbedding of $X$ into $X^{**}$.
     Let $B$ denote the \ClosedUnitBall about $0$ in $X$. 
     Let $B_1$ denote the \ClosedUnitBall about $0$ in $X^{**}$. 
     Then $c(B)$ is  \weakstar \TopologyDense in $B_1$. 
@@ -15,12 +16,12 @@
     define 
     \begin{align*}
     U(x^{**}, \epsilon,  K) 
-    & := \bigcap\limits_{x^* \in K} \{y \in X^{**} | \abs{\ip{x^{**}-y, c^*(x^*)}} < \epsilon \}  \\
-    & = \bigcap\limits_{x^* \in K} \{y \in X^{**} | \abs{\ip{x^*, x^{**}-y}} < \epsilon \}
+    & := \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^{**}-y, c^*(x^*)}} < \epsilon \}  \\
+    & = \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^*, x^{**}-y}} < \epsilon \}
     \end{align*}
     Define 
     \begin{align*}
-        \scB = \{U(x^{**}, \epsilon, K) | K \in \scK \wedge x^{**} \in X^{**} \wedge \epsilon \in (0,\infty) \}
+        \scB = \{U(x^{**}, \epsilon, K) : K \in \scK \tab[.5cm]  x^{**} \in X^{**} \tab[.5cm] \epsilon \in (0,\infty) \}
     \end{align*}
     Then by definition, the $\scB$ is a
     \TopologyBasis for the \weakstar \Topology on $X^{**}$. 
@@ -37,7 +38,7 @@
     \end{align*}
     Hence 
     \begin{equation*}
-    c(x) \in \bigcap\limits_{x_i^* \in K} \{y \in X^{**} | \abs{\ip{x_i^*, x^{**} - y }}< \epsilon \} = U(x^{**}, \epsilon, K)
+    c(x) \in \bigcap\limits_{x_i^* \in K} \{y \in X^{**} : \abs{\ip{x_i^*, x^{**} - y }}< \epsilon \} = U(x^{**}, \epsilon, K)
     \end{equation*}
     Hence $c(B)$ is \weakstar \TopologyDense in $B_1$. 
     \end{proof}

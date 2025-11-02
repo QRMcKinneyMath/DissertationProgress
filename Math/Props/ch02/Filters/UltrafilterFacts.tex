@@ -1,13 +1,14 @@
 \begin{prop}[Ultrafilter Facts]
 \label{prop:UltrafilterFacts}
+\rm
     Suppose the following
     \begin{enumerate}[label=(\Roman*), ref={\ref{prop:UltrafilterFacts}.~\Roman*}]
-        \item \label{prop:UltrafilterFacts:Ass1} $X \neq \emptyset$. 
+        \item \label{prop:UltrafilterFacts:Ass1} $X$ is a nonempty set.
         \item \label{prop:UltrafilterFacts:Ass2} $\scF$ is an \Ultrafilter on $X$. 
         \item \label{prop:UltrafilterFacts:Ass3} $\scG$ is a \Filter on $X$. 
         \item \label{prop:UltrafilterFacts:Ass4} $\scK$ is a \FilterSubbasis on $X$. 
         \item \label{prop:UltrafilterFacts:Ass5} 
-        $\scM=\scK \cup \{K \subset X | X \setminus K \in \scK\}$. 
+        $\scM=\scK \cup \{K \subset X : X \setminus K \in \scK\}$. 
     \end{enumerate}
 
     Then the following are true
@@ -30,15 +31,16 @@
 
     \begin{proof}[Proof of \ref{prop:UltrafilterFacts:BinaryUnion}]
         We use contradiction.
-        Suppose $A \not \in \scF$ and $B \not \in \scF$. 
-        Define $\scT=\{G \in \scPowerSet{X} | A \cup G \in \scF\}$. 
+        Suppose $A \not \in \scF$ and $B \not \in \scF$, but $A \cup B \in \scF$.
+        Define $\scT=\{G \in \scPowerSet{X} : A \cup G \in \scF\}$. 
         Then $B \in \scT$, so $\scT$ satisfies 
         \ref{def:Filter:IsNonempty}.
         Furthermore, if $G_1 \in \scT$ and $G_1 \subset G_2 \subset X$, then 
         by \ref{def:Filter:SubsetProperty},  
         $A \cup G_1 \subset A \cup G_2 \in \scF$. Hence $G_2 \in \scT$ so 
         $\scT$ satisfies \ref{def:Filter:SubsetProperty}.
-        Let $G_3,G_4 \in \scT$ 
+        Let $G_3,G_4 \in \scT$. 
+        Then, 
         \begin{align*}
             A \cup \pa{G_3 \cap G_4} & = \pa{A \cup G_3} \cap \pa{A \cup G_4} \in \scF
         \end{align*}
@@ -69,7 +71,8 @@
     \begin{proof}[Proof of \ref{prop:UltraFilterFacts:UltrafilterCondition}]
         I first prove that $\scM=\scPowerSet{X}$, 
         paired with 
-        \ref{prop:UltrafilterFacts:Ass4} and 
+        \ref{prop:UltrafilterFacts:Ass1}, 
+        \ref{prop:UltrafilterFacts:Ass4}, and 
         \ref{prop:UltrafilterFacts:Ass5} 
         implies $\scK$ is a \Filter
         on $X$.
@@ -110,7 +113,7 @@
     By \ref{prop:FilterFacts:IntersectionOfFiltersIsAFilter}, 
     $\scP$ is a \Filter on $X$, and by construction
     $\scG \subset \scP$.
-    Let $B \subset X \setminus \scG$. 
+    Let $B \in 2^X \setminus \scG$.
     Then, by 
     \ref{def:Filter:SubsetProperty}, 
     there is no $G \in \scG$ with $G \subset A$. 

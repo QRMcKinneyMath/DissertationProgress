@@ -1,13 +1,15 @@
 \begin{prop}
     \label{prop:TopologyBasisCharacterization}
+    \rm
     Let $(X,\T)$ be a 
     \TopologicalSpace 
     and let 
     $\scG \subset \T$ 
     such that $\{\emptyset, X \} \subset \scG$. 
     The following conditions are equivalent
-    \begin{enumerate}
-        \item For every
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:TopologyBasisCharacterization}~\roman*}]
+        \item \label{prop:TopologyBasisCharacterization:Nesting}
+        For every
             \SetOpen
             $U$, 
             for every $x \in U$, 
@@ -15,18 +17,22 @@
             $G_x \in \scG$
             such that 
             $x \in G_x \subset U$. 
-        \item $\scG$  is a \TopologyBasis for $\T$. 
+        \item \label{prop:TopologyBasisCharacterization:IsBasis}
+        $\scG$  is a \TopologyBasis for $\T$. 
     \end{enumerate}
-    \begin{proof}[$1 \implies 2$]
+    \begin{proof}[ \ref{prop:TopologyBasisCharacterization:Nesting} $\implies$ \ref{prop:TopologyBasisCharacterization:IsBasis} ]
         Let $U \in \T$. Then we can write $U = \bigcup_{x \in U} G_x$, implying that $\scG$ is a \TopologyBasis. 
     \end{proof}
-    \begin{proof}[$2 \implies 1$]
-        Let $U$ is \SetOpen, then since 
+
+    \begin{proof}[ \ref{prop:TopologyBasisCharacterization:Nesting} $\impliedby$ \ref{prop:TopologyBasisCharacterization:IsBasis} ]
+        Let $U$ be \SetOpen, then since 
         $\scG$ is a \TopologyBasis, 
         there is a $\{G_{\alpha}\}_{\alpha \in A} \subset \scG$ such that 
         $U = \bigcup_{\alpha \in A} G_{\alpha}$. 
         Hence, if $x \in U$, then 
         $x \in G_{\alpha}$ for some $\alpha \in A$, and obviously $G_{\alpha} \subset U$, 
-        so $1$ holds and we're done. 
+        so 
+        \ref{prop:TopologyBasisCharacterization:IsBasis}
+        holds and we're done. 
     \end{proof}
 \end{prop}

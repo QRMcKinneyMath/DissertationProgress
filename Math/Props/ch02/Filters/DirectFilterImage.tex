@@ -1,8 +1,9 @@
 \begin{prop}[Direct Filter Image]
 \label{prop:DirectFilterImage}
+\rm
 Suppose the following. 
 \begin{enumerate}
-    \item $X,Y \neq \emptyset$
+    \item $X$ and $Y$ are nonempty sets.
     \item $f:X \to Y$ is \Surjective.
     \item For $i \in \{1,2\}$, $\scB_i$ is a \FilterBase for a \Filter $\scF_i$ on $X$. 
     \item $\scF_2$ is \FinerFilter than $\scF_1$. 
@@ -21,11 +22,15 @@ Then the following are true.
     $f(\scF_1)$ satisfies \ref{def:Filter:DoesntContainEmpty}.
     Since $\emptyset \neq \scF_1$, $f(\scF_1) \neq \emptyset$, 
     so $f(\scF_1)$ satisfies $\ref{def:Filter:IsNonempty}$.
-    Let $G_1 \in f(\scF_1)$. Let $G_1 \subset G_2 \subset Y$. 
-    Then, since $f$ is \Surjective, $U \subset f^{-1}(G_2)$, 
+    Let $G_1 \in f(\scF_1)$. 
+    The there exists $U \in \scF_1$ such that $f(U) = G_1$. 
+    Let $G_1 \subset G_2 \subset Y$. 
+    Then, 
+    $U \subset f^{-1}(G_2)$, 
     which by 
     \ref{def:Filter:SubsetProperty} implies $f^{-1}(G_2) \in \scF_1$. 
-    Hence $G_2=f\pa{f^{-1}\pa{G_2}} \in f(\scF_1)$, so 
+    Then, since $f$ is \Surjective, 
+    $G_2=f\pa{f^{-1}\pa{G_2}} \in f(\scF_1)$, so 
     $f(\scF_1)$ satisfies \ref{def:Filter:SubsetProperty}. 
     Finally, if $G_1,G_2 \in f(\scF_1)$, then 
     there are $K_1,K_2 \in \scF_1$ with $f(K_i) =G_i$ for $i \in \{1,2\}$. 
@@ -42,10 +47,13 @@ Then the following are true.
    $\emptyset \not \in f(\scB_1)$, implying $\scB_1$ satisfies \ref{def:FilterBase:DoesntContainEmptySet}. 
    Finally, let $U_1,U_2 \in f(\scB_1)$.
    Then there exists $V_i \in \scB_1$ with $f(V_i) = U_i$. 
-   Then by \ref{def:FilterBase:IntersectionProperty}, $V_1 \cap V_2 \in \scB_1$, 
-   and $f(V_1 \cap V_2) \subset f(V_1) \cap f(V_2)$, and $f(V_1 \cap V_2) \in f(\scB_1)$
-   by construction, so $f(\scB_1)$ satisfies \ref{def:FilterBase:IntersectionProperty}, 
-   and therefore $f(\scB_1)$ is a \FilterBase on $Y$. 
+   Then, since $\scB_1$ satisfies
+   \ref{def:FilterBase:IntersectionProperty}, 
+   there exists $V \in \scB_1$ such that $V \subset V_1 \cap V_2$, so 
+   $f(V) \subset f(V_1) \cap f(V_2)$. 
+   Also, $f(V) \in f(\scB_1)$, so $f(\scB_1)$ satisfies 
+   \ref{def:FilterBase:IntersectionProperty}.
+   Hence, $f(\scB_1)$ is a \FilterBase on $Y$. 
    Now, if $V \in f(\scF_1)$, then by definition, there exists 
    $U \in \scF_1$ with $f(U) = V$. 
    By \ref{prop:FilterBaseFacts:BaseCondition}, there 
@@ -69,13 +77,18 @@ Then the following are true.
    X= f^{-1}(U) \cup \pa{X \setminus f^{-1}(U)} = f^{-1}(U) \cup f^{-1} \pa{f(X) \setminus U}= f^{-1}(U) \cup f^{-1}(Y \setminus U)
    \end{equation}
    and by \ref{prop:FilterFacts:ContainsX}, we have 
-    $f^{-1}(U) \cup f^{-1}(Y \setminus U) \in \scG$
-    Since \scG is an \Ultrafilter, by \ref{def:UltrafilterFacts:BinaryUnion}, 
+    $f^{-1}(U) \cup f^{-1}(Y \setminus U) \in \scG$.
+    Since \scG is an \Ultrafilter, by 
+    \ref{prop:UltrafilterFacts:BinaryUnion}, 
     either $f^{-1}(U) \in \scG$ or $f^{-1}(Y \setminus U) \in \scG$. 
     This implies either 
     $U \in f( \scG)$ or $Y \setminus U \in f(\scG)$. 
-    By \ref{prop:UltrafilterFacts:UltrafilterCondition}, 
-    $f(\scG)$ is an \Ultrafilter on $Y$. 
-    An application of \ref{prop:DirectFilterImage:Base} completes the result.
+    Since $U$ is arbitrary, by
+    \ref{prop:UltraFilterFacts:UltrafilterCondition}, 
+    $f\pa{\scG}$ is an \UltraFilter on $X$. 
+    Finally, by 
+    \ref{prop:DirectFilterImage:Base}, 
+    $f\pa{\scK}$ is a \FilterBase for 
+    $f(\scG)$, so the result holds. 
 \end{proof}
 \end{prop}

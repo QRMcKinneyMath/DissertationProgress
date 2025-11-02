@@ -1,7 +1,7 @@
 \begin{prop}[Net Section]
     \label{def:NetSection}
 	\rm
-    Let $X \neq \emptyset$ 
+        Let $X$ be a nonempty set.
     and let $\{x_\alpha\}_{\alpha \in A}$ 
     be a \Net in $X$. 
     Let $\beta \leq \gamma \in A$. 
@@ -11,7 +11,10 @@
     Then $S(\gamma) \subset S(\beta)$. 
     \begin{proof}
         Let $y \in S(\gamma)$.
-        Then $y=x_\tau$ for some $\beta \leq \gamma \leq \tau$. 
+        Then $y=x_\tau$ for some 
+        $\tau \in A$ 
+        satisfying 
+        $\beta \leq \gamma \leq \tau$. 
         Hence, $y=x_\tau \in S(\beta)$. 
     \end{proof}
 \end{prop}

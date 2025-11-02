@@ -8,15 +8,18 @@
 \begin{df}[\NetSectionFilter]
     \label{def:SectionFilter}
     \rm
-    Let $X \neq \emptyset$. 
+    Let $X$ be a nonempty set.
     Let $\sigma=\{x_{\alpha}\}_{\alpha \in A}$ be a 
     \Net in $X$. 
     For each $\alpha \in A$, let $S(\sigma, \alpha)$ 
     denote the \NetSection of $x_{\alpha}$ in $\sigma$. 
-    Define $\scB=\{S(\sigma, \alpha) | \alpha \in A\}$. 
-    By \ref{prop:NetSectionFormFilterBase}, $\scB$ is a 
+    Define $\scB$ by 
+    \begin{equation*}
+    \scB=\{S(\sigma, \alpha) : \alpha \in A\}
+    \end{equation*}
+    By \ref{prop:NetSectionsFormFilterBase}, $\scB$ is a 
     \FilterBase on $X$. 
-    We call the \FilterGeneratedBy $\scB$ the 
+    We call the \Filter \FilterGeneratedBy $\scB$ the 
     \NetSectionFilter of $\sigma$. 
     We call 
     the \NetSectionFilter of the 

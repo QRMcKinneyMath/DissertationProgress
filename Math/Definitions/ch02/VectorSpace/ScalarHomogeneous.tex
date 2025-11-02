@@ -1,4 +1,3 @@
-\label{def:scalarhomogeneous}
 \newcommand{\ScalarHomogeneous}[0]{
     \bf \hyperref[def:scalarhomogeneous]{Scalar Homogeneous} \rm
 }
@@ -6,20 +5,21 @@
 \newcommand{\ScalarHomogeneity}[0]{
     \bf \hyperref[def:scalarhomogeneous]{Scalar Homogeneity} \rm
 }
-\begin{df}[Scalar Homogeneous]
+\begin{df}[\ScalarHomogeneous]
+\label{def:scalarhomogeneous}
+\rm
     Let V be a 
 	\VectorSpace over a 
 	\Field	$\F \in \{\R, \C\}$. 
-    We say that a map $p:V \to V$ is \ScalarHomogeneous, if
-    , for each $\alpha \in \F$ and each $x \in V$, we have 
-    \begin{equation}
+    We say that a map $p:V \to V$ is \ScalarHomogeneous if,
+    for each $\alpha \in \F$ and each $x \in V$,
+    \begin{equation*}
         p(\alpha x) = \alpha p(x)
-    \end{equation}
+    \end{equation*}
     Under these circumstances, we may instead say that the operator 
     p posesses \ScalarHomogeneity.
 \end{df}
 
-\label{def:absolutevaluescalarhomogeneous}
 \newcommand{\AbsScalarHomogeneous}[0]{
     \bf \hyperref[def:absolutevaluescalarhomogeneous]{Absolutely Scalar Homogeneous} \rm
 }
@@ -27,35 +27,37 @@
 \newcommand{\AbsScalarHomogeneity}[0]{
     \bf \hyperref[def:absolutevaluescalarhomogeneous]{Absolute Scalar Homogeneity} \rm
 }
-\begin{df}[Scalar Homogeneous]
+\begin{df}[\AbsScalarHomogeneous]
+\label{def:absolutevaluescalarhomogeneous}
+\rm
     Let V be a \VectorSpace over a \Field $\F \in \{\R, \C\}$. 
-    We say that a map $p:V \to V$ is \AbsScalarHomogeneous, if
-    , for each $\alpha \in \F$ and each $x \in V$, we have 
-    \begin{equation}
+    We say that a map $p:V \to V$ is \AbsScalarHomogeneous if,
+    for each $\alpha \in \F$ and each $x \in V$, 
+    \begin{equation*}
         p(\alpha x) = \abs{\alpha} p(x)
-    \end{equation}
+    \end{equation*}
     Under these circumstances, we may instead say that the operator 
     p posesses \AbsScalarHomogeneity.
 \end{df}
 
 
-\label{rmk:seminorm}
 \begin{rmk}[\ScalarHomogeneous or \AbsScalarHomogeneous operator at 0 is 0]
-
+\label{rmk:seminorm}
+\rm
 If V is a 
 \VectorSpace over a 
 \Field 
 $\mathbb{F} \in \{\R, \C\}$, then for each 
 $x \in V$,
  $0x=0$.
-Hence, if p is a \AbsScalarHomogeneous operator on v, then for any $x \in V$
-\begin{equation}
+Hence, if p is an \AbsScalarHomogeneous operator on V, then for any $x \in V$
+\begin{equation*}
 p(0)=p(0x)=|0|p(x)=0p(x)=0
-\end{equation}
+\end{equation*}
 If instead p is \ScalarHomogeneous operator on V, then we have
-\begin{equation}
+\begin{equation*}
 p(0)=p(0x)=0p(x)=0
-\end{equation}
+\end{equation*}
 that is, in either case,  p(0)=0. 
 \end{rmk}
 

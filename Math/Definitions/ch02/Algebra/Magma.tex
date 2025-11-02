@@ -1,11 +1,12 @@
-\label{def:Magma}
 \newcommand{\Magma}[0]{\textbf{\hyperref[def:Magma]{Magma}}\xspace}
 \newcommand{\Magmas}[0]{\textbf{\hyperref[def:Magma]{Magmas}}\xspace}
 \newcommand{\CommutativeMagma}[0]{\textbf{\hyperref[def:Magma]{Commutative Magma}}\xspace}
 \newcommand{\CommutativeMagmas}[0]{\textbf{\hyperref[def:Magma]{Commutative Magmas}}\xspace}
 
 \begin{df}[\Magma]
-    Let $X$ be a set and
+\label{def:Magma}
+\rm
+    Let $X$ be a nonempty set and
     $T:X \times X \to X$ be a 
     \BinaryOperation
     on $X$. 
@@ -26,4 +27,17 @@
 	for any algebraic structure defined on a set 
 	via a \BinaryOperation with
 	particular properties. 
+	
+	Now let $(M,+)$ be a \Magma, let $x \in M$, and let 
+	$A,B \subset M$. 
+	We define the following:
+	\begin{equation*}
+	x+A = \{x+y : y \in A\}
+	\end{equation*}
+    \begin{equation*}
+    A+x = \{y+x : y \in A\}
+    \end{equation*}
+	\begin{equation*}
+	A+B = \{a+b : a \in A \tab[.5cm] and \tab[.5cm] b \in B\}
+	\end{equation*}
 \end{df}

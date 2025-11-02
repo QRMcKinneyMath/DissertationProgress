@@ -1,0 +1,32 @@
+\begin{prop}[Closure Characterization]
+\label{prop:ClosureCharacterization}
+\rm 
+Let $G$ be a \TopologicalGroup, 
+$\scB= \{V_\alpha \}_{\alpha \in B}$ be a \LocalBasis for $G$, 
+and $A \subset X$. 
+Then 
+\begin{equation*}
+\overline{A} = \bigcap\limits_{\alpha \in B}\pa{ A+V_{\alpha}}
+\end{equation*}
+\begin{proof}
+It is clear that by \ref{rmk:LocalBasisSymmetric}, we can, 
+without loss of generality, 
+assume that $\scB$ consists of \SymmetricSubset
+sets. 
+Let $x \in \overline{A}$. 
+This is true if and only if, for each $\alpha \in B$, 
+$x+V_\alpha \cap A = \emptyset$. 
+Since $\scB$ consists of \SymmetricSubset sets, 
+this is true if and only if, for each $\alpha \in B$, 
+$\{x\} \cap \pa{A+V_\alpha} = \{x\} \cap \pa{A - V_\alpha} \neq \emptyset$. 
+This is equivalent to saying that $x \in A+V_{\alpha}$ for every $\alpha \in B$. 
+This is then equivalent to 
+\begin{equation*}
+x \in \bigcap\limits_{\alpha\in B} \pa{A+V_{\alpha}}
+\end{equation*}
+Since every step involved here was a logical equivalence, 
+\begin{equation*}
+\overline{A} = \bigcap\limits_{\alpha \in B} \pa{A+V_{\alpha}}
+\end{equation*}
+\end{proof}
+\end{prop}

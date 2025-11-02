@@ -1,0 +1,28 @@
+\begin{prop}[Compact Contained]
+\label{prop:CompactContained}
+\rm
+Let $X$ be a nonempty set.
+Let $\scT_1$ and $\scT_2$ be
+\Topologies on $X$. 
+Let $\cong_i$ denote the \RelationOfEqualNeighborhoodFilters on $\scT_i$. 
+Let $\cong_1=\cong_2$. 
+Let $\scT_1$ be \PseudoHausdorff.
+Let $\scT_2$ be \SetCompact.
+Let $\scT_1 \subset \scT_2$. 
+Then $\scT_1 = \scT_2$. 
+\begin{proof}
+Let $F \subset X$ be \SetClosed in $\scT_2$. 
+By \ref{prop:ClosedCompact}, $F$, endowed with its $\scT_2$ subspace \Topology, 
+is \SetCompact. 
+Since $\scT_1 \subset \scT_2$, $F$, 
+endowed with its $\scT_1$ subspace \Topology, is \SetCompact. 
+Since $F$ is $\scT_2-\SetClosed$, by \ref{prop:QuotientSpaceTopology}, 
+$F$ is a \Fiber under $\cong_2$. 
+Hence $F$ is a \Fiber under $\cong_1$. 
+Hence, we can apply \ref{prop:CompactClosed}
+to claim that $F$ is \SetClosed in $\scT_1$. 
+Since an arbitrary $\scT_2-\SetClosed$ set is 
+$\scT_1-\SetClosed$, $\scT_2 \subset \scT_1$. 
+By assumption, the reverse inclusion holds, so equality is verified. 
+\end{proof}
+\end{prop}

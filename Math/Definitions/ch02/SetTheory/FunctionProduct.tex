@@ -1,9 +1,10 @@
 \newcommand{\FunctionProduct}[0]{\textbf{\hyperref[def:FunctionProduct]{Function Product}}\xspace} 
 \newcommand{\FunctionProducts}[0]{ \textbf{\hyperref[def:FunctionProduct]{Function Products}}\xpsace}
-\begin{df}[Function Product]
+\begin{df}[\FunctionProduct]
 \label{def:FunctionProduct}
 \rm
-    For $\alpha \in A$, let $f_\alpha : X_\alpha \to Y_\alpha$. 
+    Let $A$ be a nonempty set. 
+    For each $\alpha \in A$, let $f_\alpha : X_\alpha \to Y_\alpha$. 
     Define
     \begin{equation*}
     f: \prod\limits_{\alpha \in A} X_\alpha \to \prod\limits_{\alpha \in A} Y_{\alpha}
@@ -15,7 +16,7 @@
     Then we call $f$ the \FunctionProduct of $\{f_\alpha\}_{\alpha \in A}$
     and we denote 
     $\prod\limits_{\alpha \in A} f_\alpha:=f$.
-    or in the case where $\{X_\alpha\}_{\alpha \in A} =\{X_1, \cdots, X_n\}$, 
+    In the case where $\{X_\alpha\}_{\alpha \in A} =\{X_1, \cdots, X_n\}$, 
     we may denote 
     $f=f_1 \times f_2 \times \cdot \times f_n$. 
 \end{df}

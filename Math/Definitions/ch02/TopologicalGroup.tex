@@ -1,19 +1,18 @@
-\label{def:TopologicalGroup}
-\newcommand{\TopologicalGroup}[0]{
-    \bf \hyperref[def:TopologicalGroup]{Topological Group}  \rm`
-}
+\newcommand{\TopologicalGroup}[0]{ \textbf{\hyperref[def:TopologicalGroup]{Topological Group}}\xspace}
 \begin{df}[\TopologicalGroup]
+
+\rm
+\label{def:TopologicalGroup}
     Let $(G,+,e)$ be a \Group.
+    Let $\T$ be a 
     \Topology on
     $G$ such that 
-    $+:G \times G \to G$ is 
+    $+:G \times G \to G$
+	and the 
+    \GroupInverseOperator
+    are both
     \ContinuousFunction
     with respect to the 
-    %\ProductTopology 
-
-
-    and $g_{-1}$ is 
-    \ContinuousFunction.
-
+	\ProductTopology.
     In this scenario, we call $(G, \T)$ a \TopologicalGroup.
 \end{df}

@@ -1,0 +1,40 @@
+\begin{prop}
+\label{prop:CompactClosed}
+\rm
+Let $X$ be a \PseudoHausdorff \TopologicalSpace. 
+Let $\cong$ denote the \RelationOfEqualNeighborhoodFilters 
+on $X$. 
+Let $\pi:X \to X/\cong$ denote the \QuotientMap. 
+Let $K \subset X$ be a \SetCompact \Fiber under $\cong$. 
+Then $K$ is \SetClosed. 
+\begin{proof}
+Let $x_0 \in X \setminus K$. 
+Then since $K$ is a \Fiber.
+$\pi(x_0) \in \pa{X / \cong} \setminus \pi(K)$. 
+Since $X/\cong$ is \Hausdorff, for each $x \in K$, 
+there is an $X/\cong$ \Neighborhood  $U_x$ of $\pi(x_0)$ and
+and $X/\cong$ \Neighborhood $V_x$ of $x$ such that $U \cap V = \emptyset$. 
+Then $\{V_x\}_{x \in \pi(K)}$ is an \SetOpen \Cover 
+of $\pi(K)$. Since $\pi$ is continuous, $\pi(K)$ is \SetCompact. 
+Hence, there is an $\{x_i\}_{i=1}^n \subset \pi(K)$ such that 
+$K \subset \bigcup_{i=1}^n V_{x_i}$. 
+Define $U = \bigcap_{i=1}^n U_{x_i}$. 
+Then $\pi(x_0) \in U$
+and $U \cap V = \emptyset$. 
+Since $\pi(K) \subset V$, $U \cap \pi(K) = \emptyset$. 
+Since $\pi(x_0) \in U$, $x_0 \in \pi^{-1}(U)$, and 
+$K \cap \pi^{-1}(U) = \emptyset$, so $x \in X \setminus \overline{K}$. 
+Hence $K=\overline{K}$, so $K$ is \SetCompact. 
+\end{proof}
+\end{prop}
+
+\begin{cor}[Compact Closed]
+\label{cor:CompactClosed}
+\rm
+A \SetCompact subset of a \Hausdorff space is \SetClosed. 
+\begin{proof}
+Since every subset of a \Hausdorff space is a \Fiber, we 
+can apply
+\ref{prop:CompactClosed} to get this result. 
+\end{proof}
+\end{cor}

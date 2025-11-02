@@ -1,14 +1,16 @@
-\label{def:QuotientSpaceTopology}
 \newcommand{\QuotientSpaceTopology}[0]{\textbf{\hyperref[def:QuotientSpaceTopology]{Quotient Topology}}\xspace}
 \newcommand{\QuotientTopologicalSpace}[0]{\textbf{\hyperref[def:QuotientSpaceTopology]{Quotient Topological Space}}\xspace}
 
 \begin{df}[Quotient Space Topology]
+\label{def:QuotientSpaceTopology}
+
+\rm
     Let $(Z,\T_Z)$ be a topological space. 
     Let $\cong$ be the \RelationOfEqualNeighborhoodFilters{$(Z, \T_Z)$}. 
     Let T be the \QuotientMap of Z under the relation $\cong$. 
     Define $\T_{Z/\cong}$ by
     \begin{equation}
-        \T_{Z/\cong} = \left\{ \bigcup_{x \in U}\{T(x)\} \in 2^{Z/\cong}| U \in \T_Z \right\}
+        \T_{Z/\cong} = \left\{ \bigcup_{x \in U}\{T(x)\} \in 2^{Z/\cong}: U \in \T_Z \right\}
     \end{equation}
     By \ref{prop:QuotientSpaceTopology}, $\T_{Z/\cong}$ is a topology on $Z/\cong$.
     We call $\T_{Z/\cong}$ the \QuotientSpaceTopology and we call $\pa{Z/\cong, \T_{Z/\cong}}$ the \QuotientTopologicalSpace of $(Z, \T_Z)$.

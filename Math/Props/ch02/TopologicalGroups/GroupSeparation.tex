@@ -1,0 +1,61 @@
+\begin{prop}[Group Separation]
+\label{prop:GroupSeparation}
+\rm
+Let $(G,\T)$ be a \TopologicalGroup with identity $e$.
+Let $K \subset G$ be 
+\SetCompact. Let $C \subset G$ be \SetClosed. 
+Let $K \cap C = \emptyset$. 
+Then there exists an 
+\SymmetricSubset \SetOpen $V$ containing $e$ such that 
+\begin{equation*}
+VKV \cap VCV = \emptyset
+\end{equation*}
+\begin{proof}
+Let $y \in K$. 
+Then $y \in G \setminus C$. 
+Since $C$ is \SetClosed, 
+there is an \SetOpen  
+\SymmetricSubset 
+$\tilde{V}_y$
+containing $e$ such that
+$\tilde{V}_y\{y\} \cap C = \emptyset$. 
+By 3 applications of
+\ref{prop:SymmetricContained}
+there exists an 
+\SetOpen
+\SymmetricSubset $V_y$ containing $e$
+such that $V_y^8 \subset \tilde{V}_y$. 
+Then $V_y^8 \{y\} \cap C = \emptyset$. 
+Then, since by \ref{prop:GroupInvariance}, 
+$\scLeftTranslationOperator_y$ is a 
+\Homeomorphism, there is an 
+\SetOpen $U_y$ containing $e$ 
+such that $yU_y \subset V_y y$. 
+By \ref{prop:SymmetricContained} 
+we can without loss of generality assume 
+$U_y$ is \SymmetricSubset.
+Hence $V_y^4 \{y\} U_y^4 \cap C = \emptyset$. 
+Define $W_y = U_y \cap V_y$. 
+Then $W_y$ is \SetOpen, \SymmetricSubset, $e \in W_y$, and 
+$W_y^4 \{y\} W_y^4 \cap C = \emptyset$.
+Since $W_y$ is \SymmetricSubset, 
+$\pa{W_y^2 \{y\} W_y^2} \cap \pa{W_y^2 C W_y^2} = \emptyset$.
+
+Thus we have, for each $x \in K$, a 
+\SetOpen , \SymmetricSubset $W_x$ containing $e$ such that $\pa{W_x^2 \{x\}W_x^2} \cap  \pa{ W_x^2 C W_x^2}= \emptyset$.
+Since $K \subset \bigcup\limits_{x \in K} W_x \{x\} W_x$, we can find a 
+$\{x_i\}_{i=1}^n \subset K$ such that 
+$K \subset \bigcup\limits_{i=1}^n W_{x_i} \{x_i\} W_{x_i}$.
+Define $W = \bigcap\limits_{i=1}^n W_{x_i}$.
+Then 
+\begin{align*}
+WKW & \subset W\pa{\bigcup\limits_{i=1}^n W_{x_i}\{x_i\}W_{x_i}} W\\
+& = \bigcup\limits_{i=1}^n \pa{W W_{x_i} \{x_i\} W_{x_i} W}\\
+& \subset \bigcup\limits_{i=1}^n \pa{ W_{x_i}^2 \{x_i\} W_{x_i}^2}\\
+& \subset G \setminus \pa{\bigcap\limits_{i=1}^n W_{x_i}^2 C W_{x_i}^2}\\
+& \subset G \setminus \pa{\bigcap\limits_{i=1}^n W_{x_i} C W_{x_i}}\\
+& \subset G \setminus \pa{ \pa{\bigcap\limits_{i=1}^n W_{x_i}} C \pa{\bigcap\limits_{i=1}^n W_{x_i}}}\\
+& = G \setminus \pa{WCW}
+\end{align*}
+\end{proof}
+\end{prop}

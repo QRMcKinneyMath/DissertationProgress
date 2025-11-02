@@ -14,12 +14,11 @@
 \newcommand{\FunctionImages}[0]{\textbf{\hyperref[def:Function]{Images}}\xspace}
 \newcommand{\FunctionPreimage}[0]{\textbf{\hyperref[def:Function]{Preimage}}\xspace}
 \newcommand{\FunctionPreimages}[0]{\textbf{\hyperref[def:Function]{Preimages}}\xspace}
-\begin{df}[Function]
+\begin{df}[\Function]
 \label{def:Function}
 
 \rm
-    Let $X \neq \emptyset$ 
-    and $Y \neq \emptyset$.
+    Let $X$ and $Y$ be nonempty sets.
     Let $f \subset X \times Y$ 
     such that for each $x \in X$ 
     there exists a unique $y \in Y$ 
@@ -27,35 +26,23 @@
     $(x,y) \in f$. 
     Then we say that $f$ 
     is a \Function
-    from $X$ into $Y$ 
+    with \FunctionDomain $X$
+    and \FunctionCodomain $Y$
     and we write 
     $f:X \to Y$. 
+    If $(x,y) \in f$, then we write $f(x) = y$. 
     We may also call $f$ 
     a 
     \Map
     or a 
-    \Mapping 
-    from $X$ 
-    into $Y$. 
-    Primarily, though 
-    we will rely on the notation 
-    $f:X \to Y$ to indicate
-    that 
-    $f$ is a 
-    \Function
-    with 
-    \FunctionDomain
-    $X$
-    and 
-    \FunctionCodomain
-    $Y$.
+    \Mapping.
     If $A \subset X$ 
     and $B \subset Y$, 
     then we denote 
     \begin{equation*}
-    f\pa{A}= \{f(x)\in Y | x \in A\} \\
+    f\pa{A}= \{f(x)\in Y : x \in A\} \\
     \; \; \;
-    f^{-1}\pa{B} = \{x \in X | f(x) \in B \}
+    f^{-1}\pa{B} = \{x \in X : f(x) \in B \}
     \end{equation*}
     We call 
     $f(A)$ 
@@ -67,12 +54,16 @@
     \FunctionPreimage
     of $B$ under
     $f$. 
-    wW call $f(X)$ 
+    We call $f(X)$ 
     the \FunctionRange
     of $f$. 
     When the domain of a function is understood, we may also refer to an unnamed map
     f by writing, 
+    $x \to f(x)$
+    If $\scA \subset 2^X$ and $\scB \subset 2^Y$, then we write
     \begin{equation*}
-    x \to f(x)
+    f\pa{\scA} = \{ f(A) : A \in \scA\}\\
+    \; \; \;
+    f^{-1}\pa{\scB} = \{ f^{-1}(B) : B \in \scB\}
     \end{equation*}
 \end{df}

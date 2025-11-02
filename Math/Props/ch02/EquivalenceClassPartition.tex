@@ -1,7 +1,7 @@
 \begin{prop}[Equivalence Classes Partition]
     \label{prop:EquivalenceClassesPartition}
 \rm
-    Let $X \neq \emptyset$. 
+    Let $X$ be a nonempty set.
     Let $\cong$ be an 
 	\EquivalenceRelation
 	defined on X. 
@@ -19,31 +19,36 @@
 		$[x]_{\cong} = [y]_{\cong}$
         \item 
 		\label{prop:EquivalenceClass:Subset}
-		$[x]_{\cong} \subset [y]_{\cong}$ or $[y]_{\cong} \subset [x]_{\cong}$  
+		$[x]_{\cong} \subset [y]_{\cong}$.
     \end{enumerate}
     
-\begin{proof}[Proof That $1 \implies 2$]
-Suppose $M:=[x]_{\cong} \cap [y]_{\cong} \neq \emptyset$. 
-Then there exists $z \in M$.
-Then $z \cong x$, so by \RelationSymmetry, $x \cong z$. 
-But by \RelationTransitivity, pair with $z \cong y$, we conclude $x \cong y$. 
+\begin{proof}[\ref{prop:EquivalenceClass:NonDisjoint} $\implies$ \ref{prop:EquivalenceClass:Related}]
+Suppose $[x]_{\cong} \cap [y]_{\cong} \neq \emptyset$. 
+Then there exists $z \in [x]_{\cong} \cap [y]_{\cong}$.
+Hence $z \cong x$ and $z \cong y$. By \RelationSymmetry, $x \cong z$. 
+By \RelationTransitivity, $x \cong y$.
 \end{proof}
-\begin{proof}[Proof That $2 \implies 4$]
+\begin{proof}[\ref{prop:EquivalenceClass:Related} $\implies$ \ref{prop:EquivalenceClass:Subset}]
     Let $x \cong y$ and let $z \in [x]_{\cong}$. 
     Then $z \cong x \cong y$, so $z \cong y$ and $z \in [y]_{\cong}$.
     Since z was arbitrary, we're done. 
 \end{proof}
-\begin{proof}[Proof That $2 \implies 5$]
-    Let $x \cong y$. By 
-	\RelationSymmetry, $y \cong x$, so by $(2 \implies 4)$, we are done. 
+\begin{proof}[\ref{prop:EquivalenceClass:Related} $\implies$ \ref{prop:EquivalenceClass:EqualClass}]
+    Let $x \cong y$. 
+    By 
+    $\ref{prop:EquivalenceClass:Related} \implies \ref{prop:EquivalenceClass:Subset}$, 
+    $[x]_{\cong} \subset [y]_{\cong}$. 
+    Also, by \RelationSymmetry, $y \cong x$, 
+    so $[y]_{\cong} \subset [y]_{\cong}$.
+    Hence, equality holds.
 \end{proof}
-\begin{proof}[Proof That $2 \implies 3$]
-    Since  $2 \implies 4$ and $2 \implies 5$ and 5 and 4 together imply 3, we have this. 
-\end{proof}
-\begin{proof}[Proof That $5 \implies 1$]
+\begin{proof}[\ref{prop:EquivalenceClass:Subset} $\implies$ \ref{prop:EquivalenceClass:NonDisjoint}]
     Let $[y]_{\cong} \subset [x]_{\cong}$. 
     Then $y \in [y]_{\cong} = [y]_{\cong} \cap [x]_{\cong} $.
-    Hence 1 holds. 
+    Hence \ref{prop:EquivalenceClass:NonDisjoint} holds.
 \end{proof}
 
+\begin{proof}[\ref{prop:EquivalenceClass:EqualClass} $\implies$  \ref{prop:EquivalenceClass:Subset}]
+Obvious.
+\end{proof}
 \end{prop} 

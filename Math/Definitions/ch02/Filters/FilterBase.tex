@@ -3,8 +3,8 @@
 \newcommand{\FilterBaseEquivalent}[0]{\textbf{\hyperref[def:FilterBase]{Equivalent}}\xspace}
 
 \begin{df}[\FilterBase]
-\label{def:FilterBase}
-    Let $X \neq \emptyset$. 
+\label{def:FilterBase}\rm
+    Let $X$ be a nonempty set.
     Let $\scB \subset \scPowerSet{X}$
     such that 
     \begin{enumerate}[label=(\roman*), ref={\ref{def:FilterBase}.~\roman*}]
@@ -13,8 +13,8 @@
         \item \label{def:FilterBase:DoesntContainEmptySet}$
         \emptyset \not \in \scB$. 
         \item \label{def:FilterBase:IntersectionProperty}
-		Define $\scB_{Intersection}=\{U \cap V | \{U,V\} \subset \scB\}$.
-		Then \scNested{\scB}{\scB_{Intersection}} holds. 
+        If $\scB_{Int}$ is the collection of binary intersections of elements of $\scB$, then
+		Then \scNested{\scB}{\scB_{Int}} holds. 
     \end{enumerate}
     Then we call 
     $\scB$ 

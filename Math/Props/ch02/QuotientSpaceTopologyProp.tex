@@ -1,110 +1,131 @@
-
 \begin{prop}[Quotient Space Topology]
     \label{prop:QuotientSpaceTopology}
-    
+
+    \rm
     Let $(Z,\T_Z)$ be a 
 	\TopologicalSpace
     with \QuotientTopologicalSpace  $\pa{Z/\cong, \T_{Z/\cong}}$
     and \QuotientMap T.
     
     Then the following are true. 
-    \begin{enumerate}
-        \item $\T_{Z/\cong}$ is a \Topology on $Z/\cong$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:QuotientSpaceTopology}.~\roman*}]
+        \item 
+        \label{prop:QST:IsTop}
+        $\T_{Z/\cong}$ is a \Topology on $Z/\cong$. 
+        \item 
+        \label{prop:QST:QuotientMapContinuous}
+        $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
         \ContinuousFunction. 
-        \item If U is \SetOpen (\SetClosed) in $(Z,\T_Z)$ then $T(U)$ and $T(Z\setminus U)$ \Partition $Z/\cong$. 
-        \item If U is \SetOpen in $(Z, \T_Z)$, then $T^{-1}(T(U))=U$. 
-        \item If K is \SetClosed in $(Z,\T_Z)$, then $T^{-1}T(K)=K$. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
-            \OpenFunction. 
-        \item $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+        \item 
+        \label{prop:QST:OpenSetsPartition}
+        If U is \SetOpen (\SetClosed) in $(Z,\T_Z)$, 
+        then $T(U)$ and $T(Z\setminus U)$ \Partition $Z/\cong$. 
+        \item 
+        \label{prop:QST:OpenSetFiber}
+        If U is \SetOpen in $(Z, \T_Z)$, then $U$ is a \Fiber.
+        \item 
+        \label{prop:QST:ClosedSetFiber}
+        If K is \SetClosed in $(Z,\T_Z)$, then $K$ is a \Fiber.
+        \item 
+        \label{prop:QST:QuotientMapOpen}
+        $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
+        \OpenFunction. 
+        \item 
+        \label{prop:QST:QuotientMapClosed}
+        $T:(Z, \T_Z) \to (Z/\cong, \T_{Z/\cong})$ is 
         \ClosedFunction.
-        \item $(Z, \T_Z)$ is a \SetCompact space if and only if $(Z/\cong, \T_{Z/\cong})$ is a \SetCompact space.
-        \item If $\scB$ is a \TopologyBasis for $\T_z$, then $\{T(U) | U \in \scB\}$ is a \TopologyBasis for $\T_{Z/\cong}$. 
-        \item If T is \Injective, then it is a \Homeomorphism. 
+        \item 
+        \label{prop:QST:Compact}
+        $(Z, \T_Z)$ is a \SetCompact space if and only if 
+        $(Z/\cong, \T_{Z/\cong})$ is a \SetCompact space.
+        \item 
+        \label{prop:QST:Basis}
+        If $\scB$ is a \TopologyBasis for $\T_z$, 
+        then $\{T(U) : U \in \scB\}$ is a \TopologyBasis for $\T_{Z/\cong}$. 
+        \item 
+        \label{prop:QST:Injective}
+        If T is \Injective, then it is a \Homeomorphism. 
     \end{enumerate} 
-    \begin{proof}[Proof of 1]
+    \begin{proof}[Proof of \ref{prop:QST:IsTop}]
         Since $\emptyset \in \T_Z$, we have 
-        \begin{equation}
+        \begin{equation*}
             \emptyset = \bigcup\limits_{x \in \emptyset} \{Tx\} \in \T_{Z/\cong}
-        \end{equation}
+        \end{equation*}
         Since $Z \in \T_Z$, and by \ref{rmk:quotientsetpartition}, 
-        \begin{equation} 
+        \begin{equation*} 
             Z/\cong = \bigcup_{x \in Z} \{[x]\}= \bigcup\limits_{x \in Z} \{T(x)\} \in \T_{Z/\cong}
-        \end{equation} 
+        \end{equation*} 
         
-        Let $\{U_{\alpha} | \alpha \in A\} \subset \T_{Z/\cong}$. 
+        Let $\{U_{\alpha} : \alpha \in A\} \subset \T_{Z/\cong}$. 
         For each $\alpha \in A$, there exists $B_{\alpha} \in \T_{Z}$ such that we have
-        \begin{equation} 
+        \begin{equation*} 
             U_{\alpha } = \bigcup_{x \in B_{\alpha}} \{Tx\}
-        \end{equation} 
+        \end{equation*} 
         Since $\bigcup_{\alpha \in A} B_\alpha \in \T_{Z}$, we have 
-        \begin{equation}
+        \begin{equation*}
             \bigcup_{\alpha \in A} U_{\alpha}= \bigcup\limits_{\alpha \in A} \bigcup\limits_{x \in U_\alpha} \{T(x)\} = \bigcup\limits_{x \in \bigcup\limits_{\alpha \in A} B_{\alpha}} \{T(x)\} \in \T_{Z/\cong}
-        \end{equation} 
+        \end{equation*} 
         Let $\{U_i\}_{i=1}^n \subset \T_{Z/\cong}$. 
         For each $i \in \{1, ..., n\}$, there exists $B_i \in \T_{Z}$ such that
-        \begin{equation}
+        \begin{equation*}
             U_i = \bigcup_{x \in B_{i}} \{T(x)\}
-        \end{equation}
+        \end{equation*}
         Suppose 
-        \begin{equation}
+        \begin{equation*}
             [x_0] \in \bigcap\limits_{i=1}^n \bigcup\limits_{x \in B_i} \{T(x)\}
-        \end{equation}
+        \end{equation*}
         Then for each $i \in \{1,..., n\}$, there is a $y_i \in B_i$ such that $ y_i \cong x_0$. 
         Since each $B_i$ is \SetOpen, the definition of $\cong$ implies that $x_0 \in B_i$ for every i. Hence, 
-        \begin{equation} 
+        \begin{equation*} 
             x_0 \in \bigcap_{i=1}^n B_i
-        \end{equation} 
+        \end{equation*} 
         Implying 
-        \begin{equation}
+        \begin{equation*}
             [x_0] \in  \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{[x]\}
-        \end{equation} 
+        \end{equation*} 
         Hence, 
-        \begin{equation} 
+        \begin{equation*} 
             \bigcap\limits_{i=1}^n \bigcup\limits_{x \in B_i} \{T(x)\}
             \subset
             \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{[x]\}
-        \end{equation} 
+        \end{equation*} 
         Furthermore, since the reverse inclusion is obvious, 
         and since $\bigcap_{i=1}^n B_i \in \T_{Z}$, we have 
-        \begin{equation}
+        \begin{equation*}
             \bigcap_{i=1}^n U_i = \bigcap_{i=1}^n \bigcup_{x \in B_i} \{T(x)\}= \bigcup\limits_{x \in \bigcap\limits_{i=1}^n B_i} \{T(x)\} \in \T_{Z/\cong}
-        \end{equation}
+        \end{equation*}
     \end{proof}
-    \begin{proof}[Proof of 2]
+    \begin{proof}[Proof of \ref{prop:QST:QuotientMapContinuous}]
         Let $V \in \T_{Z/\cong}$. 
         Let $x_0 \in T^{-1}(V)$. 
         Then $[x_0] \in V$. 
         By definition, there is a $U \in \T_Z$ such that 
-        \begin{equation}
+        \begin{equation*}
             T(U) \subset \bigcup\limits_{x \in U} \{T(x)\}=V
-        \end{equation}
+        \end{equation*}
         Hence there is a $y_0 \in U$  such that 
-        \begin{equation}
+        \begin{equation*}
             [x_0] \in T(y_0) = \{[y_0]\}
-        \end{equation}
+        \end{equation*}
         Therefore, $x \cong y$. 
-        Definition of the 
-		\RelationOfEqualNeighborhoodFilters 
+        The definition of the 
+		\RelationOfEqualNeighborhoodFilters{Z}
 		implies $\scU(x_0)=\scU(y_0)$. 
         Hence, $x_0 \in U \subset T^{-1}(V)$.
     \end{proof}
-    \begin{proof}[Proof of 3]
-        Let $K$ be closed in $(Z,\T_Z)$. 
-        Then each point $x_0$ in $Z\setminus K$ has some 
-        Open $U_{x_0}$ containing $x_0$
-        which is 
-		\Disjoint 
-		from K.
-        Hence $y_0 \not \cong x_0$ for any $y_0 \in K$, $x_0 \in Z\setminus K$. 
+    \begin{proof}[Proof of \ref{prop:QST:OpenSetsPartition}]
+        Let $K$ be \SetClosed in $(Z,\T_Z)$. 
+        Then to each point $x_0 \in Z \setminus K$ 
+        there corresponds a \Neighborhood $U_{x_0}$ of $x_0$
+        \Disjoint from $K$.
+        Hence $y_0 \not \cong x_0$ for any $y_0 \in K$, 
         Hence $T(K)$ is 
 		\Disjoint 
 		from $T\pa{Z \setminus K}$. 
         This fact, paired with \ref{prop:QuotientMapSurjective}, implies $T(Z\setminus K)$ and T(K) 
 		is a \Partition of $Z/\cong$.
     \end{proof}
-    \begin{proof}[Proof of 4]
+    \begin{proof}[Proof of \ref{prop:QST:OpenSetFiber}]
         Let $U \in \T_Z$. 
         The nontrivial direction to prove is $T^{-1}\pa{T(U)} \subset U$.
         Let $y \in T^{-1}\pa{T(U)}$. 
@@ -114,12 +135,16 @@
         Hence $y \in U$.
         Since y was arbitrary, $T^{-1}\pa{T(U)} \subset U$, and equality is obvious because the other direction of inclusion is trivial. 
     \end{proof}
-    \begin{proof}[Proof of 5]
+    \begin{proof}[Proof of \ref{prop:QST:ClosedSetFiber}]
         Let K be 
 		\SetClosed 
-		in $(Z,\T_Z)$. Part 3 Of this result implies $Z/\cong$ is partitioned by $T(K)$ and $T(Z\setminus K)$. 
+		in $(Z,\T_Z)$. 
+        Part \ref{prop:QST:OpenSetsPartition}
+        Of this result implies $Z/\cong$ is partitioned by $T(K)$ and $T(Z\setminus K)$. 
+        Hence, $T(K) = T(Z) \setminus T(Z \setminus K)$
         
-        By part 4 of this proposition, 
+        By 
+        \ref{prop:QST:OpenSetFiber},
         \begin{align*}
             T^{-1}\pa{T(K)}&=T^{-1} \pa{T(Z) \setminus T(Z \setminus K)} \\
             &= T^{-1}\pa{Z/\cong \setminus T(Z \setminus K)}\\
@@ -128,45 +153,46 @@
             &= K
         \end{align*}      
     \end{proof}
-    \begin{proof}[Proof of 6]
+    \begin{proof}[Proof of \ref{prop:QST:QuotientMapOpen}]
         Let $U \in \T_Z$.
         Then by definition of the \QuotientSpaceTopology
-        \begin{equation}
+        \begin{equation*}
             TU= \bigcup_{x \in U} \{T(x)\}  \in \T_{Z/\cong}
-        \end{equation}
+        \end{equation*}
+        which is open.
     \end{proof}  
-    \begin{proof}[Proof of 7] 
+    \begin{proof}[Proof of \ref{prop:QST:QuotientMapClosed}] 
         Let K be \SetClosed in $(Z,\T_Z)$. 
         Then $Z \setminus K \in \T_Z$. 
-        By Parts 3 and five of this proposition, we know $T(K) = Z/\cong \setminus T(Z\setminus K)$ and also that $T(Z\setminus K) \in \T_{Z/\cong}$. Hence $T(K)$ is closed in $(Z/\cong, \T_{Z/\cong})$. 
+        By \ref{prop:QST:OpenSetsPartition} and 
+        \ref{prop:QST:ClosedSetFiber}, we know $T(K) = Z/\cong \setminus T(Z\setminus K)$ and also that $T(Z\setminus K) \in \T_{Z/\cong}$. Hence $T(K)$ is \SetClosed in $(Z/\cong, \T_{Z/\cong})$. 
     \end{proof} 
-    \begin{proof}[Proof of 8]
+    \begin{proof}[Proof of \ref{prop:QST:Compact}]
         Let $(Z,\T_Z)$ be \SetCompact. 
-        Let $\{U_{\alpha}\}_{\alpha \in A}$ be an open covering of $(Z/\cong, \T_{Z/\cong})$. 
-        Then $\{T^{-1}\pa{U_{\alpha}} | \alpha \in A\}$ is an open covering of $(Z, \T_Z)$. 
-        \SetCompactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}} | i \in \{1, ..., n\}\}$. 
+        Let $\{U_{\alpha}\}_{\alpha \in A}$ be an \SetOpen covering of $(Z/\cong, \T_{Z/\cong})$. 
+        Then $\{T^{-1}\pa{U_{\alpha}} : \alpha \in A\}$ is an \SetOpen covering of $(Z, \T_Z)$. 
+        \SetCompactness of $(Z, \T_Z)$ guarantees the existence of a finite subcovering $\{T^{-1}\pa{U_{\alpha_i}}\}_{i=1}^n$. 
         Hence
-        $\{U_{\alpha_i} | i \in \{1, ..., n\}\}=\{TT^{-1}(U_{\alpha_i}) | i \in \{1, ..., n\}\}$ is an 
+        $\{U_{\alpha_i} \}_{i=1}^n=\{TT^{-1}(U_{\alpha_i})\}_{i=1}^n$ is an 
 		\SetOpen
         \Cover of $(Z/\cong, \T_{Z/\cong})$. 
-         And the \SetCompactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
-         
+        Hence, the \SetCompactness of $(Z/\cong, \T_{Z/\cong})$ is verified. 
          
          Now, suppose $(Z/\cong, \T_{Z/\cong})$ is \SetCompact. 
-         Let $\{V_{\beta} | \beta \in B\}$ be an 
+         Let $\{V_{\beta} : \beta \in B\}$ be an 
          \SetOpen
          \Cover of $(Z, \T_Z)$. 
          Since T is an 
          \OpenFunction
-         mapping, $\{T(V_{\beta}) | \beta \in B\}$ is an 
+         mapping, $\{T(V_{\beta}) : \beta \in B\}$ is an 
 		 \SetOpen
          \Cover of $(Z/\cong, \T_{Z/\cong})$ which by 
-		 \SetCompactness has a \Finite \Subcover $\{T(V_{\beta_i}) | i \in \{1, ..., n\}\}$. 
-         By part 4 of \ref{prop:QuotientSpaceTopology}, 
-         $\{V_{\beta_i}| i \in \{1, ..., n\}\} = \{T^{-1}(T(V_{\beta_i})) |i \in \{1, ..., n\}\}$ is then an \SetOpen \Subcover of $(Z, \T_Z)$. 
+		 \SetCompactness has a \Finite \Subcover $\{T(V_{\beta_i}) \}_{i=1}^n$. 
+        By \ref{prop:QST:OpenSetFiber}, 
+         $\{V_{\beta_i}\}_{i=1}^n = \{T^{-1}(T(V_{\beta_i}))\}_{i=1}^n$ is then an \SetOpen \Subcover of $(Z, \T_Z)$. 
      %    
     \end{proof}
-    \begin{proof}[Proof of 9]
+    \begin{proof}[Proof of \ref{prop:QST:Basis}]
         Let $\scB$ be a basis for $\T_z$ and let $V \in \T_{Z/\cong}$. 
         Then $T^{-1}(Z) \in \T_Z$, and so there is a subcollection $\{U_{\alpha}\}_{\alpha \in A} \subset \scB$ such that $T^{-1}(V) = \bigcup_{\alpha \in A} U_{\alpha}$. 
         Hence, 
@@ -176,11 +202,14 @@
             & = \bigcup_{\alpha \in A} T(U_{\alpha})
         \end{align*}
      \end{proof} 
-     \begin{proof} [Proof of 10]
+     \begin{proof} [Proof of \ref{prop:QST:Injective}]
             If T is \Injective
 			, then since it is 
             \ContinuousFunction
-            Part 2 of this result, open by part 6 of this result, and \Surjective by \ref{prop:QuotientMapSurjective}, it is a 
+            by 
+            \ref{prop:QST:QuotientMapContinuous}, 
+            open by 
+            \ref{prop:QST:QuotientMapOpen}, and \Surjective by \ref{prop:QuotientMapSurjective}, it is a 
             \Homeomorphism. 
          \end{proof}
 \end{prop} 

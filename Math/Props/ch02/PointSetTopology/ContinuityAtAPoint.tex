@@ -1,16 +1,26 @@
 \begin{prop}
 \label{prop:ContinuityAtAPoint:Closure}
+\rm
 Let $(X, \T_X)$ be a \TopologicalSpace. 
-Let $(Y, |T_Y)$ be a \TopologicalSpace. 
+Let $(Y, \scT_Y)$ be a \TopologicalSpace. 
 Let $A \subset X$. 
 Let $x_0 \in \ClosureMark{A}$.
 Let $f:X \to Y$ be 
 \ContinuousAt $x_0$. 
 Then $f(x_0) \in \ClosureMark{f(A)}$. 
 \begin{proof}
-Let $\scV$ be the \NeighborhoodFilter 
-of $\T_Y$ about $f(x_0)$. 
-Let $V \in \scV$. 
+If $x_0 \in A$, then 
+$f(x_0) \in f(A) \subset \overline{f(A)}$. 
+Otherwise, $x_0 \in A'$
+Let $V$ be a \Neighborhood of $f(x_0)$. 
+Then $f^{-1}(V) \in f^{-1}\pa{ \NeighborhoodFilterInstance{\scT}(f(x_0))}$. 
+By continuity at $x_0$ there exists
+$U \in \NeighborhoodFilterInstance{\scT}(x_0)$ such that $U \subset f^{-1}(V)$. 
+Since $x_0 \in A'$, $U \cap A \neq \emptyset$, so 
+$A \cap f^{-1}(V) \neq \emptyset$. 
+Thus $V \cap f(A) \neq \emptyset$. 
+Since $V \in \NeighborhoodFilterInstance{\scT}(f(x_0))$ was arbitrary, 
+$f(x_0) \in \overline{A}$.
 
 
 \end{proof}

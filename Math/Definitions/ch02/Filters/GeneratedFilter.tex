@@ -5,18 +5,18 @@
 \newcommand{\FilterSubBases}[0]{\textbf{\hyperref[def:GeneratedFilter]{Subbases}}\xspace}
 
 \begin{df}[\FilterSubbasis]
-\label{def:GeneratedFilter}
-    Let $X$ be a set and $A \subset X$ such that 
+\label{def:GeneratedFilter}\rm
+    Let $X$ be a nonempty set.
+    Let $A \subset X$ such that 
     \begin{enumerate}[label=(\roman*), ref={\ref{def:GeneratedFilter}.~\roman*}]
        \item \label{def:FilterSubbase:IsNotEmpty} $\emptyset \neq A$. 
        \item \label{def:FilterSubbase:FiniteIntersectionsNonempty} 
-       \begin{equation}
-        \emptyset \not \in K:=\left\{ \bigcap\limits_{i=1}^n A_i | \{A_i\}_{i=1}^n \subset A \wedge n \in \bbN\right\}
-       \end{equation}
+       Finite intersections of elements of $A$ are nonempty. 
     \end{enumerate}
+    Let $K$ denote the collection of finite intersections of elements of $A$. 
     Define 
     \begin{equation*}
-        \scK=\left\{ U \cup P | U \in K \wedge P \subset X \right\}
+        \scK=\left\{ U \cup P : U \in K \wedge P \subset X \right\}
     \end{equation*}
     We call $\scK$ the \Filter
     on $X$

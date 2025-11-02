@@ -1,17 +1,21 @@
 \newcommand{\QuotientMap}[0]{\textbf{\hyperref[df:quotient_map]{Quotient Map}}\xspace}
-    
+\newcommand{\Fiber}[0]{\textbf{\hyperref[df:quotient_map]{Fiber}}\xspace}
  \newcommand{\QuotientMapInstance}[3]{ #1 : #2\to #2/#3 }
-\begin{df}[Quotient Map]
+\begin{df}[\QuotientMap]
 \label{df:quotient_map}
 \rm
-    Let $X \neq \emptyset$.
+    Let $X$ be a nonempty set.
     Let $\cong$ be an 
 	\EquivalenceRelation 
 	on X.
     \LetBeQuotientSet{X}{\cong}
     Define $T:X \to X/\cong$ by setting, for each $x \in X$, 
-    \begin{equation}
+    \begin{equation*}
         T(x)=[x]
-    \end{equation}    
+    \end{equation*}    
     We call T the \QuotientMap of X under $\cong$. 
+	If $A \subset X$ 
+	and $T^{-1}(T(A)) = A$, then we call $A$ 
+	a \Fiber under $\cong$, or if $\cong$ is understood, we call 
+	$T$ a \Fiber.
 \end{df} 

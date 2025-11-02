@@ -5,6 +5,8 @@
 \newcommand{\FilterConverges}[0]{\textbf{\hyperref[def:FilterConvergence]{Converges}}\xspace}
 \begin{df}[\FilterConvergence]
 \label{def:FilterConvergence}
+
+\rm
     Let $(X,\T)$ be a \TopologicalSpace. 
     Let $\scF$ be a \Filter on $X$. 
     Let $\scB$ be a \FilterBase for $\scF$. 
@@ -14,12 +16,10 @@
     than 
     \NeighborhoodFilterInstance{\T}(x).
     Then we say the following:
-     $x$ is a \FilterLimit of $\scF$, 
-     $x$ is a \FilterLimit of $\scB$, 
-     $\scF$ \FilterConverges to $x$, 
-     $\scB$ \FilterConverges to $x$, 
-     $\scF$ is \FilterConvergent to $x$, 
-     $\scB$ is \FilterConvergent to $x$, 
-     $\scF$ posesses \FilterConvergence to $x$, and 
-     $\scB$ posesses \FilterConvergence to $x$. 
+    \begin{enumerate}
+     \item $x$ is a \FilterLimit of $\scB$. 
+     \item $\scB$ \FilterConverges to $x$. 
+     \item $\scB$ is \FilterConvergent to $x$. 
+     \item $\scB$ posesses \FilterConvergence to $x$.
+     \end{enumerate}
 \end{df}

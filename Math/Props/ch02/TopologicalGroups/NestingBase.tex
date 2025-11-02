@@ -1,0 +1,26 @@
+\begin{prop}[Local Base Nesting]
+\label{prop:LocalBaseNesting}
+\rm
+Let $G$ be a \TopologicalGroup with identity $e$.
+Let $\scB$ be a \LocalBasis for $G$. 
+Let $b_0 \in \scB$. 
+Then there exists $b_1 \in \scB$ such that 
+$\overline{b_1} \subset b_0$. 
+\begin{proof}
+Let $b_0 \in B$. 
+Then $C=G \setminus b_0$  is \SetClosed and 
+$K = \{e\}$ is \SetCompact. 
+Furthermore $e \in b_0$, so $K \cap C = \emptyset$, 
+so by \ref{prop:GroupSeparation}, 
+there is an open $V$ such that 
+\begin{equation*}
+V \cap \pa{\pa{G \setminus b_0}V }= \pa{eV} \cap \pa{\pa{G \setminus b_0}V } = \emptyset
+\end{equation*}
+If $x \not \in b_0$, then $xV \subset \pa{G \setminus b_0}  V $ is disjoint from $V$, 
+so $x \not \in \overline{V}$. 
+Hence $\overline{V} \subset b_0$. 
+Since $\scB$ is a \LocalBasis, 
+there is a $b_1 \in \scB$ with $b_1 \subset V$. 
+Hence $\overline{b_1} \subset \overline{V} \subset b_0$. 
+\end{proof}
+\end{prop}

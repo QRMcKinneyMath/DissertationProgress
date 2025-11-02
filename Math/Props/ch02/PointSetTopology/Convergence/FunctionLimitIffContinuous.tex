@@ -1,5 +1,7 @@
 \begin{prop}
 \label{prop:FunctionLimitIffContinuous}
+
+\rm
 For $i \in \{0,1\}$, let $(X_i, \scT_i)$ be \TopologicalSpaces. 
 Let $f:X_0 \to X_1$. 
 Let $x_0 \in X_0$. 
@@ -14,14 +16,15 @@ The following are true.
     \label{prop:Continuity:FilterBaseConvergence}
     If $f$ is \ContinuousFunction at $x_0$, then 
     for every $\FilterBase$ \scB in $X$ which \FilterConverges 
-    to $a$, we have $f(\scB)$ \FilterConverges to $f(a)$.
+    to $x_0$, we have $f(\scB)$ \FilterConverges to $f(x_0)$.
     \item  
     \label{prop:Continuity:UltrafilterConvergence}
     If, for every $\UltraFilter$ $\scU$ on $X$ which \FilterConverges to $a$
     , we have $f(\scU)$ converges to $f(a)$, then $f$ is \ContinuousFunction at $a$. 
     \item 
     \label{prop:Continuity:LimitComposition}
-    Let $X_2 \neq \emptyset$ and let $\scF$ be a \Filter on $X_2$. Let 
+    Let $X_2$ be a nonempty set.
+    Let $\scF$ be a \Filter on $X_2$. Let 
     $f_1:X_2 \to X_0$. 
     Let $x_0 \in \lim\limits_{x, \scF}g(x)$. 
     If $f$ is continuous, then $f(x_0) \in \lim\limits_{x, \scF} f \circ g(x)$. 

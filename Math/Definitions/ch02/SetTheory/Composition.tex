@@ -1,0 +1,16 @@
+\newcommand{\Composition}[0]{\textbf{\hyperref[def:Composition]{Composition}}\xspace}
+\newcommand{\Compositions}[0]{\textbf{\hyperref[def:Composition]{Compositions}}\xspace}
+\newcommand{\Compose}[0]{\textbf{\hyperref[def:Composition]{Compose}}\xspace}
+\newcommand{\scCompose}[0]{\hyperref[def:Composition]{\ensuremath{\circ}}\xspace}
+\begin{df}[\Composition]
+\label{def:Composition}
+\rm
+Let $X$, $Y$, and $Z$ be nonempty sets. 
+Let $R$ be a \Relation from $X$ into $Y$. 
+Let $S$ be a \Relation from $Y$ into $Z$.
+We define 
+\begin{equation*}
+S \scCompose R = \{(x,z)  \in X \times Z: (\exists y \in Y)(xRy \tab[0.25cm] and \tab[0.25cm] ySz) \}
+\end{equation*}
+We call $S \scCompose R$ the \Composition of $S$ with $R$. 
+\end{df}

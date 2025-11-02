@@ -1,42 +1,44 @@
-\begin{prop}
+\begin{prop}[Binary to Finite]
 \label{prop:FiniteClosure}
 \rm
-    Let Let $X$ be a set. 
+    Let $X$ be a nonempty set. 
     The following are true. 
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FiniteClosure}.~\roman*}]
-        \item \label{prop:FiniteClosure:Intersection}If $X$ has the property that $\{y,z\} \subset X \implies y \cap z \in X$, then $X$ 
-        posesses \ClosureUnderFiniteIntersections. 
-        \item \label{prop:FiniteClosure:Union}If $X$ has the property that $\{y,z\} \subset X \implies y \cup z \in X$, then $X$ posesses 
-        \ClosureUnderFiniteUnions.
+        \item \label{prop:FiniteClosure:Intersection}
+        If $X$ is closed under binary intersections, then $X$ is closed under
+        finite intersections.
+        \item \label{prop:FiniteClosure:Union}
+        If $X$ is closed under binary unions, 
+        then $X$ is closed under finite unions.
     \end{enumerate}
     \begin{proof}[Proof of \ref{prop:FiniteClosure:Intersection}]
         We use induction.
-        Let $M$ be the set of natural numbers for which
-        $X$ is closued under intersections of n sets. 
+        Let $M$ be the set of positive integers $n$ for which
+        $X$ is closed under intersections of n sets. 
         The intersection of a single set equals that set, so $1 \in M$. 
         $2 \in M$ by direct application of the assumption of 
         \ref{prop:FiniteClosure:Intersection}. 
-        Let $m \in M$. Let $\{x_i\}_{i=1}^{m+1} \subset M$. 
+        Let $m \in M$. Let $\{x_i\}_{i=1}^{m+1} \subset 2^X$. 
         Then 
         \begin{equation*}
             \bigcap\limits_{i=1}^{m+1} x_i = \pa{ \bigcap\limits_{i=1}^m x_i} \cap x_{m+1} \in X
         \end{equation*}
         so $m+1 \in M$. 
-        Hence $M= \N$ and \ref{prop:FiniteClosure:Intersection} is proven. 
+        Hence $M= \Z^+$ and \ref{prop:FiniteClosure:Intersection} is proven. 
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FiniteClosure:Union}]
          We use induction.
-        Let $M$ be the set of natural numbers for which
-        $X$ is closued under unions of n sets. 
+        Let $M$ be the set of positive integers $n$ for which
+        $X$ is closed under unions of n sets. 
         The union of a single set equals that set, so $1 \in M$. 
         $2 \in M$ by direct application of the assumption of 
         \ref{prop:FiniteClosure:Union}. 
-        Let $m \in M$. Let $\{x_i\}_{i=1}^{m+1} \subset M$. 
+        Let $m \in M$. Let $\{x_i\}_{i=1}^{m+1} \subset 2^X$. 
         Then 
         \begin{equation*}
             \bigcup\limits_{i=1}^{m+1} x_i = \pa{ \bigcup\limits_{i=1}^m x_i} \cup x_{m+1} \in X
         \end{equation*}
         so $m+1 \in M$. 
-        Hence $M= \N$ and \ref{prop:FiniteClosure:Union} is proven. 
+        Hence $M= \Z^+$ and \ref{prop:FiniteClosure:Union} is proven. 
     \end{proof}
 \end{prop}

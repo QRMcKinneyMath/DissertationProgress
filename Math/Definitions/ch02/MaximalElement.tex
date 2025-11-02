@@ -5,7 +5,7 @@
 \begin{df}[\MaximalElement]
 \label{def:MaximalElement}
 \rm
-    Let $X \neq \emptyset$ be a set. 
+    Let $X$ be a nonempty set.
     Let $R$ be an 
     \Relation on $X$. 
     Let $Y \subset X$.
@@ -25,26 +25,3 @@
 	
 	
 \end{df}
-
-\begin{prop}[\MaximalElement unique if R is \AntiSymmetricRelation]
-\label{prop:MaximalElementUniqueIfAntisymmetric}
-\rm
-	Let $X \neq \emptyset$ be a set. 
-	Let $R$ be an
-	\AntiSymmetricRelation
-	\Relation
-	on X. 
-	Let $Y \subset X$.
-	Let $a$ and $b$ be 
-	each be a \MaximalElement
-	of Y. 
-	Then $a=b$. 
-	\begin{proof}
-		Since $a \in \Maxima(Y)$, 
-		$b \leq a$. 
-		Since $b \in \Maxima(Y)$, 
-		$a \leq b$. 
-		By \RelationAntiSymmetry, 
-		$b = a$. 
-	\end{proof}
-\end{prop}

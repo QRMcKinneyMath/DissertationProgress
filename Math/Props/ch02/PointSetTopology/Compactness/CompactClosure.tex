@@ -1,0 +1,39 @@
+\begin{prop}
+\label{prop:CompactClosure}
+\rm
+Let $X$ be a \PseudoHausdorff
+\TopologicalSpace. 
+Let $K \subset X$ be \SetCompact. 
+Let $\cong$ denote the 
+\RelationOfEqualNeighborhoodFilters in $X$. 
+Then $\pi(K)$ is \SetClosed, 
+$\overline{K} = \pi^{-1}\pa{\pi\pa{K}}$, 
+and $\overline{K}$ is \SetCompact.
+\begin{proof}
+Since $K$ is \SetCompact, 
+$\pi(K)$ is \SetCompact. 
+Since $X/\cong$ is \Hausdorff, we can apply
+\ref{cor:CompactClosed} to see that $\pi(K)$ is \SetClosed. 
+Furthermore, by continuity of $\pi$, 
+$\pi^{-1}\pa{\pi\pa{K}}$ is a \SetClosed set containing 
+$K$.
+Also, by 
+\ref{prop:QST:ClosedSetFiber}, 
+$\overline{K}$ is a \Fiber.
+Thus, we have 
+\begin{equation*}
+\overline{K} \subset \pi^{-1}(\pi (K)) \subset \pi^{-1}\pa{\pi\pa{\overline{K}}} = \overline{K}
+\end{equation*}
+Hence $\overline{K} = \pi^{-1}(\pi(K))$. 
+
+Finally, let $\{U_{\alpha}\}_{\alpha \in A}$ be a \SetOpen 
+\Cover of $\overline{K}$. Then $\{\pi(U_{\alpha})\}_{\alpha \in A}$ is a
+\SetOpen \Cover of $\pi(\overline{K}) = \pi(K)$.
+Since $\pi(K)$ is \SetCompact, there is a 
+finite $\{\alpha_i\}_{i=1}^n \subset A$ 
+such that $\{\pi(V_{\alpha_i})\}_{i=1}^n$ covers $\pi(K)=\pi\pa{\overline{K}}$. 
+Hence $\{V_{\alpha_i}\}_{i=1}^n$ covers $\overline{K}$ so $\overline{K}$ is \SetCompact.
+
+
+\end{proof}
+\end{prop}

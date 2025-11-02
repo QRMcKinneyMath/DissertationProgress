@@ -1,19 +1,23 @@
 \begin{prop}[Characterization Of Generated Topology]
     \label{prop:CharacterizationOfGeneratedTopoology}
-    Let $X \neq \emptyset$ 
-    and $F \subset \scPowerSet{X}$. 
+
+    \rm
+    Let $X$ be a nonempty set.
+    Let $F \subset \scPowerSet{X}$. 
+    Let $K$ be the collection of finite intersections of elements of $F$. 
+    Let $\scK$ be the collection of unions of elements of $K$. 
     Define 
     \begin{equation*}
-    \T_{Prop}=\left\{\bigcup\limits_{\alpha \in A} \bigcap\limits_{i=1}^{N_\alpha} U_{i, \alpha} |(\forall \alpha \in A)\left((N_\alpha \in \N)\wedge \pa{(\forall i \in \{1, \cdots, N_\alpha\}} \pa{U_{i, \alpha} \in F}\right) \right\}\cup \{X, \emptyset\}
+    \T_{Prop} = \scK \cup \{X, \emptyset\}
     \end{equation*}
+    Define 
     Then 
     $\scGeneratedTopology{X}{F} = \T_{Prop}$.
     \begin{proof}
         We first show that $\T_{Prop}$ is a
         \Topology
         on $X$. 
-        For 
-        \ClosureUnderUnions, 
+        To prove closure under arbitrary unions, 
         Let $B \neq \emptyset$ 
         and $\{B_\beta\}_{\beta \in B} \subset \T_{Prop}$
         Then for each $\beta \in B$, we can find $A_{\beta}$
@@ -30,7 +34,7 @@
             \bigcup\limits_{\beta \in B} B_{\beta} & = \bigcup\limits_{\beta \in B} \bigcup\limits_{\alpha_\beta \in A_{\beta}} \bigcap\limits_{i=1}^{N_{\alpha_\beta}} U_{i, \alpha_\beta}\\
             & = \bigcup\limits_{\alpha_\beta \in \bigcup\limits_{\beta \in B} A_{\beta}} \bigcap\limits_{i =1 }^{N_{\alpha_\beta}} U_{i, \alpha_\beta} \in \T_{Prop}
         \end{align*}
-        For \ClosureUnderFiniteIntersections, 
+        To prove closure under finite intersections, 
         let $N \in \N$ and 
         $\{B_j\}_{j=1}^N \subset \T_{Prop}$. 
         Then for each $j \in \{1, \cdots, N\}$, there 

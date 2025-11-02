@@ -1,4 +1,3 @@
-\label{def:AccumulationClosureInterior}
 \newcommand{\AccumulationPoint}[0]{\textbf{\hyperref[def:AccumulationClosureInterior]{Accumulation Point}}\xspace}
 \newcommand{\AccumulationPoints}[0]{\textbf{\hyperref[def:AccumulationClosureInterior]{Accumulation Points}}\xspace}
 \newcommand{\AccumulationPointMark}[1]{\ensuremath{#1'}\xspace}
@@ -12,10 +11,13 @@
 \newcommand{\Boundaries}[0]{\textbf{\hyperref[def:AccumulationClosureInterior]{Boundaries}}\xspace}
 \newcommand{\BoundaryMark}[1]{\ensuremath{\partial\pa{#1}}\xspace}
 \begin{df}[\AccumulationPoint, \Closure, \Interior, \Boundary]
+\label{def:AccumulationClosureInterior}
+
+\rm
     Let $(X,\T)$ be a \TopologicalSpace.
     Let $A \subset X$. We define the following. 
     \begin{enumerate}
-        \item $\AccumulationPointMark{A}=\{x \in X | (\forall U \in \NeighborhoodFilterInstance{\T}(A))((U \setminus A) \cap \{x\} \neq \emptyset)\} $
+        \item $\AccumulationPointMark{A}=\{x \in X : (\forall U \in \NeighborhoodFilterInstance{\T}(A))((U \setminus A) \cap \{x\} \neq \emptyset)\} $
         \item $\ClosureMark{A}= A \cup \AccumulationPointMark{A}$
         \item $\BoundaryMark{A} = \ClosureMark{A} \cap \ClosureMark{X \setminus A}$
         \item $\InteriorMark{A} = A \setminus \ClosureMark{X \setminus A}$

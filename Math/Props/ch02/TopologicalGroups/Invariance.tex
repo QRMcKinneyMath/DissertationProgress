@@ -1,0 +1,35 @@
+\begin{prop}[Group Invariance]
+\label{prop:GroupInvariance}
+\rm
+Let $(G,\scT)$ be a \TopologicalGroup.
+Let $x \in G$. 
+Then $\scRightTranslationOperator_x$, 
+$\scLeftTranslationOperator_x$, and 
+$\scGroupInverseOperator_G$
+are 
+\Homeomorphisms of $G$ with itself. 
+\begin{proof}
+Let $x \in G$. Let $y \in G$. 
+Let $V \in \T$ with 
+$\scLeftTranslationOperator_x(y) \in V$. 
+Then $x  y  \in V$. 
+That is, $(x,y) \in *^{-1}(V)$
+By \FunctionContinuity  of $*$, there are 
+$U_1,U_2 \in \T$, $x \in U_1$, $y \in U_2$ such that 
+$ U_1  U_2 \subset V$. 
+Since 
+$\scLeftTranslationOperator_x(U_2) = x  U_2 \subset U_1  U_2 \subset V$, 
+$U_2 \subset L_x^{-1}(V)$. 
+Since $V$ was arbitrary, $\scLeftTranslationOperator_x$ is \ContinuousAt $y$.
+Since $y$ was arbitrary, $\scLeftTranslationOperator_x$ is \ContinuousFunction.
+Similarly,  
+$\scLeftTranslationOperator_{x^{-1}}$ is \ContinuousFunction. 
+Since 
+$\pa{\scLeftTranslationOperator_x}^{-1} =\scLeftTranslationOperator_{x^{-1}}$, 
+$\scLeftTranslationOperator_x$ has a \ContinuousFunction inverse and so is a \Homeomorphism. 
+The proof for $\scRightTranslationOperator_x$ is virtually unchanged. 
+Since $\scGroupInverseOperator_G^{-1} = \scGroupInverseOperator$, 
+since $\scGroupInverseOperator_G$ is \ContinuousFunction, 
+it is a \Homeomorphism.
+\end{proof}
+\end{prop}

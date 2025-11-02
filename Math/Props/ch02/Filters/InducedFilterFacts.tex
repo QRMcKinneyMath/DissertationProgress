@@ -1,13 +1,17 @@
 \begin{prop}[\InducedFilter \Filter facts]
 \label{prop:InducedFilter}
-    Let $X \neq \emptyset$ 
+\rm
+    Let $X$ be a nonempty set.
     Let $\scF$ be a \Filter on $X$. 
     Let $\scB$ be a \FilterBase for $\scF$. 
     Let $\scG$ be an \Ultrafilter on $X$. 
     Let $A \subset X$. 
-    Define $\scF_A =\{A \cap U | U \in \scF\}$. 
-    Define $\scB_A =\{A \cap U | U \in \scB\}$. 
-    Define $\scG_A= \{A \cap U | U \in \scG\}$. 
+    Define
+    \begin{align*}
+        \scF_A =\{A \cap U : U \in \scF\}\\
+        \scB_A =\{A \cap U : U \in \scB\}\\
+        \scG_A= \{A \cap U : U \in \scG\}
+    \end{align*}
     The following are true
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:InducedFilter}.~\roman*}]
     \item  \label{prop:InducedFilter:Base} If $\scF_A$ is a \Filter on $A$, then $\scB_A$ is a \FilterBase for $\scF_A$. 
@@ -28,7 +32,7 @@
         Even if $\scG$ was merely a \Filter on $X$, by
         \ref{def:Filter:DoesntContainEmpty}
         and
-        \ref{prop:filterFacts:ClosureUnderFiniteIntersections}
+        \ref{prop:FilterFacts:ClosureUnderFiniteIntersections}
         $A \in \scG$ is sufficient to guarantee that $\scG_A$ is a \Filter
         on $A$. 
         Now suppose $\scG_A$ is a \Filter on $A$
@@ -42,6 +46,11 @@
         $P \not \in \scG_A$, then 
         $P \not \in \scG$. 
         Since $\scG$ is an \Ultrafilter, 
+
+
+
+
+
         by \ref{prop:FilterOrderFacts:ContainingFilter}, 
         $P \cap U = \emptyset$ for some $U \in \scG$. 
         This implies $P \cap \pa{U \cap A} = \emptyset$, 

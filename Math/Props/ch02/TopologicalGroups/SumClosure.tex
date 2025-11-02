@@ -1,0 +1,63 @@
+\begin{prop}[Sum Closure]
+\label{prop:SumClosure}
+\rm
+Let $(G, \scT)$ be a \TopologicalGroup with identity $e$
+and let $A_0,A_1 \subset G$. 
+Then 
+\begin{equation}
+\overline{A_0}+\overline{A_1} \subset \overline{A_0+A_1}
+\end{equation}
+Furthermore, if there exists a \SetCompact $K$ such that either 
+$A_0 \subset K$ or $A_1 \subset K$, then 
+\begin{equation*}
+\overline{A_0}+\overline{A_1} = \overline{A_0+A_1}
+\end{equation*}
+
+\begin{proof}
+Let $a_i \in \overline{A_i}$ for $i \in \{0,1\}$. 
+Let $e \in V \in \scT$. 
+By \ref{prop:SymmetricContained} there is a
+\SymmetricSubset $V'$ satisfying
+$e \in V' \in \scT$ and $V'+V' \subset V$. 
+Since translation is a \Homeomorphism, 
+there exists 
+a
+\SymmetricSubset
+\SetOpen
+$\tilde{V}$ 
+containing $e$ 
+such that $\tilde{V} a_1 \subset a_1V'$
+and $\tilde{V} \subset V'$. 
+Since $a_i \in \overline{A_i}$, 
+$A_i \cap \pa{a_i + \tilde{V}} \neq \emptyset$. 
+Hence, for $i \in \{1,2\}$, there exists 
+$x_i \in A_i  \cap \pa{a_i+\tilde{V}}$.
+Hence, 
+\begin{align*}
+x_0+x_1 &  \in \pa{A_0 \cap (a_0+\tilde{V})} + \pa{A_1 \cap (a_1+\tilde{V})}\\
+& \subset (A_0+A_1) \cap \pa{a_0 + \tilde{V} + a_1 + \tilde{V}}\\
+& \subset \pa{A_0+A_1} \cap \pa{a_0+a_1+V'+V'}\\
+& \subset \pa{A_0+A_1} \cap \pa{a_0+a_1+V} \neq \emptyset
+\end{align*}
+Since $e \in V \in \scT$ was arbitrary, 
+$a_0+a_1 \in \overline{A_0+A_1}$, 
+Hence 
+\begin{equation*}
+\overline{A_0}+ \overline{A_1} \subset \overline{A_0+A_1}
+\end{equation*}
+
+Now, if there is a compact $K$ such that $A_0 \subset K$, then 
+$\overline{A_0} \subset \overline{K}$. 
+Furthermore, by \ref{prop:CompactClosure}, $\overline{K}$ is \SetCompact.
+Hence, by  \ref{prop:ClosedCompact}, $\overline{A_0}$ is \SetCompact. 
+Hence, by \ref{prop:ClosedSum} $\overline{A_0}+\overline{A_1}$ is \SetClosed. 
+Thus, we have
+\begin{align*}
+\overline{A_0+A_1} & \subset \overline{\overline{A_0}+\overline{A_1}}\\
+& = \overline{A_0}+\overline{A_1}
+\end{align*}
+So equality holds. 
+If instead $A_1 \subset K$, the argument is identical. 
+
+\end{proof}
+\end{prop}

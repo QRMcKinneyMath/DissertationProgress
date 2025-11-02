@@ -1,17 +1,22 @@
-\label{def:ProductTopology}
 \newcommand{\ProductTopology}[0]{\textbf{\hyperref[def:ProductTopology]{Product Topology}}\xspace}
 \newcommand{\ProductTopologies}[0]{\textbf{\hyperref[def:ProductTopology]{Product Topologies}}\xspace}
 
 \begin{df}[\ProductTopology]
-    Let $A \neq \emptyset$. 
+\label{def:ProductTopology}
+
+\rm
+    Let $A$ be a nonempty set. 
     For each $\alpha \in A$, 
     let $(X_\alpha, \T_\alpha)$ 
     be a 
     \TopologicalSpace.
+	For each $\alpha \in A$, let 
+	$\pi_\alpha:\scCartesianProduct{\alpha}{A}{X} \to (X_\alpha, \T_\alpha)$
+	denote the $\alpha-$\ProjectionMap.
     We call the \WeakTopology
     on 
     \scCartesianProduct{\alpha}{A}{X}
     induced by 
-    $\{\pi_\alpha:\scCartesianProduct{\alpha}{A}{X} \to (X_\alpha, \T_\alpha)\}_{\alpha \in A}$
+    $\left\{\pi_\alpha\right\}_{\alpha \in A}$
     the \ProductTopology. 
 \end{df}

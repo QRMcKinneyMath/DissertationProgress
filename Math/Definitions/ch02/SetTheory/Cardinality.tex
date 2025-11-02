@@ -2,8 +2,8 @@
 \newcommand{\Cardinals}[0]{\textbf{\hyperref[def:Cardinality]{Cardinals}}\xspace}
 \newcommand{\Cardinality}[0]{\textbf{\hyperref[def:Cardinality]{Cardinality}}\xspace}
 \newcommand{\Cardinalities}[0]{\textbf{\hyperref[def:Cardinality]{Cardinalities}}\xspace}
-\newcommand{\FirstNaturals}[1]{\ensuremath{N_{#1}}\xspace}
-\newcommand{\CardinalityFunction}[1]{\ensuremath{\textbf{Card}\pa{#1}\xspace}}
+\newcommand{\FirstNaturals}[1]{\hyperref[def:Cardinality]{\ensuremath{N_{#1}}}\xspace}
+\newcommand{\CardinalityFunction}[1]{\hyperref[def:Cardinality]{\ensuremath{\textbf{Card}\pa{#1}\xspace}}}
 \newcommand{\Finite}[0]{\textbf{\hyperref[def:Cardinality]{Finite}}\xspace}
 \newcommand{\Infinite}[0]{\textbf{\hyperref[def:Cardinality]{Infinite}}\xspace}
 \newcommand{\Denumerable}[0]{\textbf{\hyperref[def:Cardinality]{Denumerable}}\xspace}
@@ -13,10 +13,10 @@
 \label{def:Cardinality}
 
 \rm
-    Let $n \in \N$. We define 
-    \begin{equation*}
-        \FirstNaturals{n}=\{ 1, 2, 3, \cdots, n-2, n-1, n\}
-    \end{equation*}
+    We define $\mathbb{Z}^+=\{1, 2, 3, \cdots\}$. 
+    We define $\mathbb{N} = \{0, 1, 2, 3, \cdots\}$.
+    Let $n \in \Z^+$. We define 
+    $\FirstNaturals{n} = \Z^+ \cap [1,n]$.
     Let $X$ be a set.
     Let $f:X \to \FirstNaturals{n}$ 
     be a 
@@ -27,7 +27,12 @@
     $n$
     and we write 
     $\CardinalityFunction{X}=n$.
-    More generaly, if there exists a 
+    We say that the 
+    \Cardinality 
+    of the empty set is $0$
+    and we write
+    $\CardinalityFunction{\emptyset} = 0$.
+    More generally, if there exists a 
     \Bijection
     between two sets 
     $Y$ and $Z$, then we write

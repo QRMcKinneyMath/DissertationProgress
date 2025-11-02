@@ -2,13 +2,14 @@
 \begin{df}[\InducedFilter]
 \label{def:InducedFilter}
 \rm
-    Let $X \neq \emptyset$, 
-    $\scF$ be a \Filter on $\scF$ 
-    and $A \subset X$ such that 
+    Let $X$ be a nonempty set.
+    Let $\scF$ be a \Filter on $X$.
+    Let $A \subset X$. 
+    Define
     \begin{equation*}
-        \scF_A:= \{U \cap A | U \in \scF\}
+        \scF_A:= \{U \cap A : U \in \scF\}
     \end{equation*}
-    satisfies $\emptyset \not \in \scF_A$. 
+    Suppose $\emptyset \not \in \scF_A$.
     Then by \ref{prop:FilterFacts:InducedFilterExistence}
     $\scF_A$ is a \Filter on $A$ 
     which we call the \Filter

@@ -1,5 +1,7 @@
 \begin{prop}[global \FunctionContinuity iff \ContinuityAt each point]
 \label{prop:ContinuityCharacterization}
+
+\rm
 Let $(X, \T_X)$ and 
 $(Y, \T_Y)$ 
 be 
@@ -19,9 +21,7 @@ For each $A \subset X$,
 $f\pa{\ClosureMark{A}} \subset \ClosureMark{f(A)}$
 \item
 \label{prop:ContinuityCharacterizations:ClosedInverseImage}
-If $B \subset Y$ is 
-\SetClosed in $Y$, 
-then 
+For each \SetClosed $B \subset Y$, 
 $f^{-1}(B)$ is \SetClosed in $X$. 
 \end{enumerate}
 \begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:GlobalContinuity} \implies \ref{prop:ContinuityCharacterizations:ContinuousAtEachPoint}$]
@@ -50,7 +50,13 @@ This result is a direct application of
 \ref{prop:ContinuityAtAPoint:Closure}.
 \end{proof}
 \begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:Closure} \implies \ref{prop:ContinuityCharacterizations:ClosedInverseImage}$]
+Let $K$ be \SetClosed in $Y$. Then $\overline{K} = K$, so 
+\begin{equation*}
+f\pa{\overline{f^{-1}\pa{K}}} \subset \overline{f\pa{f^{-1}\pa{K}}} \subset \overline{K} = K
+\end{equation*}
+This implies $\overline{f^{-1}(K)} \subset f^{-1}(K)$, so $f^{-1}(K)$ is closed.
 \end{proof}
 \begin{proof}[Proof of $\ref{prop:ContinuityCharacterizations:ClosedInverseImage} \implies \ref{prop:ContinuityCharacterizations:GlobalContinuity}$]
+Let $U \subset Y$ be open. Then $f^{-1}(Y \setminus U) = X \setminus f^{-1}(U)$ is closed so $f^{-1}(U)$ is open. 
 \end{proof}
 \end{prop}

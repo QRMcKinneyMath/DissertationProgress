@@ -1,18 +1,26 @@
 \newcommand{\SetDiagonal}[0]{\textbf{\hyperref[def:SetDiagonal]{Diagonal}}\xspace}
+\newcommand{\IdentityMap}[0]{\textbf{\hyperref[def:SetDiagonal]{Identity Map}}\xspace}
+\newcommand{\IdentityMaps}[0]{\textbf{\hyperref[def:SetDiagonal]{Identity Maps}}\xspace}
 \newcommand{\SetDiagonals}[0]{\textbf{\hyperref[def:SetDiagonal]{Diagonals}}\xspace}
 \newcommand{\scSetDiagonal}[1]{\ensuremath{\hyperref[def:SetDiagonal]{\Delta\pa{#1}}}\xspace}
-\begin{df}[Set Diagonal]
+\newcommand{\scIdentity}[1]{\ensuremath{\hyperref[def:SetDiagonal]{I_{#1}}}\xspace}
+\begin{df}[\IdentityMap]
 \label{def:SetDiagonal}
 
 \rm
     Let $X$ be a set. 
     We define 
     \begin{equation*}
-	\scSetDiagonal{X}=\{(x,x)\in X \times X | x \in X\}
+	\scSetDiagonal{X}=\{(x,x)\in X \times X : x \in X\}
 	\end{equation*}
     and we call 
     \scSetDiagonal{X} 
     the 
     \SetDiagonal
-    of $X$.
+    of $X\times X$ or the 
+    \IdentityMap of $X$.
+    When viewing
+    \scSetDiagonal{X} as a function, we may denote
+    \scSetDiagonal{X} = \scIdentity{X}
+
 \end{df}

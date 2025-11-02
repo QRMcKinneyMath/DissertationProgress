@@ -3,13 +3,11 @@
 \newcommand{\RelationTransitivity}[0]{\textbf{\hyperref[def:TransitiveRelation]{Transitivity}}\xspace}
 \begin{df}[\TransitiveRelation]
 \rm
-\rm
-    Let $X \neq \emptyset$ be a set. 
+    Let $X$ be a nonempty set.
     Let $R$ be a \Relation on X. 
     We say that $R$ is \TransitiveRelation, 
-    or equivalently we say that
+    and we say that
     $R$ posseses 
     \RelationTransitivity
-    if whenever $(a,b) \in R$ and $(b,c) \in R$, 
-    we also have $(a,c) \in R$. 
+	if $R \circ R \subset R$.
 \end{df}

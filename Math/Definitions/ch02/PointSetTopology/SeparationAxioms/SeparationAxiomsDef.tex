@@ -1,12 +1,25 @@
 \newcommand{\Hausdorff}[0]{\textbf{\hyperref[def:Hausdorff]{Hausdorff}}\xspace}
+\newcommand{\PseudoHausdorff}[0]{\textbf{\hyperref[def:Hausdorff]{Pseudo-Hausdorff}}\xspace}
 \newcommand{\Hausdorffness}[0]{\textbf{\hyperref[def:Hausdorff]{Hausdorffness}}\xspace}
 \newcommand{\TTwo}[0]{\textbf{\hyperref[def:Hausdorff]{T2}}\xspace}
 \begin{df}[Separation Axioms]
     \label{def:SeparationAxioms}
+
+    \rm
     Let $(X,\scT)$ be a \TopologicalSpace. 
     We define the following. 
     \begin{enumerate}[label=(\roman*), ref={\ref{def:SeparationAxioms}~\roman*}]
     \item \label{def:Hausdorff} We say $X$ is \Hausdorff, or \TTwo if 
     distinct points in $X$ have \Disjoint \Neighborhoods.
+    \item \label{def:PseudoHausdorff} We say that $X$ is \PseudoHausdorff
+    if, for each $x_0,x_1 \in X$, either $x_0$ and $x_1$ have \Disjoint 
+    \Neighborhoods or $\scU_{\scT}(x_0) = \scU_{\scT}(x_1)$. 
     \end{enumerate}
 \end{df}
+
+\begin{rmk}
+\rm
+It is clear that any \Hausdorff space is \PseudoHausdorff, and that 
+a space is \PseudoHausdorff if and only if its quotient under the 
+\RelationOfEqualNeighborhoodFilters is \Hausdorff.
+\end{rmk}

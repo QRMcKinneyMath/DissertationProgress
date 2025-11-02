@@ -1,4 +1,3 @@
-\label{def:TranslationOperator}
 \newcommand{\RightTranslation}[0]{\textbf{\hyperref[def:TranslationOperator]{Right Translation}}\xspace}
 \newcommand{\LeftTranslation}[0]{\textbf{\hyperref[def:TranslationOperator]{Left Translation}}\xspace}
 \newcommand{\Translation}[0]{\textbf{\hyperref[def:TranslationOperator]{Translation}}\xspace}
@@ -11,34 +10,10 @@
 \newcommand{\RightTranslationOperators}[0]{\textbf{\hyperref[def:TranslationOperator]{Right Translation Operators}}\xspace}
 \newcommand{\LeftTranslationOperators}[0]{\textbf{\hyperref[def:TranslationOperator]{Left Translation Operators}}\xspace}
 \newcommand{\TranslationOperators}[0]{\textbf{\hyperref[def:TranslationOperator]{Translation Operators}}\xspace}
-%
-%%%Vector Space Version
-%
-%\begin{df}[\TranslationOperator]
-%    Let $V$ be a 
-%    \VectorSpace
-%    over a 
-%    \Field $\F$. 
-%    Let $\alpha \in \F$. 
-%    We define $T_\alpha:V \to V$ by 
-%    setting, for each 
-%    $x \in V$, 
-%    \begin{equation}
-%    T_\alpha(x)=\alpha+x
-%    \end{equation}
-%    We call $T_\alpha$ 
-%    the 
-%    \TranslationOperator
-%\end{df}
-
-
-%
-%%
-%%%Magma Version
-%%
-%
 \begin{df}[\TranslationOperator]
-    Let $(G,\oplus)$ be a 
+\label{def:TranslationOperator}
+\rm
+    Let $G$ be a 
     \Magma. 
     Let $g \in G$. 
     We define 
@@ -48,25 +23,25 @@
     by setting, for each 
     $x \in G$, 
     \begin{equation*}
-        \scRightTranslationOperator_g (x) = x \oplus g
+        \scRightTranslationOperator_g (x) = xg
     \end{equation*}
     \begin{equation*}
-        \scLeftTranslationOperator_g (x) = g \oplus x
+        \scLeftTranslationOperator_g (x) = gx 
     \end{equation*}
     We call $\scRightTranslationOperator_g$
     the \RightTranslation
-    of $(G,\oplus)$
+    of $G$
     by $g$, 
     and we call 
     $\scLeftTranslationOperator_g$
     the \LeftTranslation
     of 
-    $(G, \oplus)$ 
+    $G$ 
     by $g$. 
-    If $\oplus$ is 
+    If the operation of $G$ is 
     \CommutativeFunction,
     then we define 
     $\scTranslationOperator_g=\scRightTranslationOperator_g=\scLeftTranslationOperator_g$
     which we call 
-    \Translation of $(G, \oplus)$ by $g$.
+    \Translation of $G$ by $g$.
 \end{df}

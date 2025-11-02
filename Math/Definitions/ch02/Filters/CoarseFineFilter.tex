@@ -9,8 +9,10 @@
 
 
 \begin{df}[\CoarserFilter, \FinerFilter]
+\rm
 \label{def:CoarseFineFilter}
-    Let $X$ be a set and let $\scF_1$ 
+    Let $X$ be a nonempty set.
+    Let $\scF_1$
     and $\scF_2$ be \Filters
     on $X$ such that 
     $\scF_1 \subset \scF_2$. 
@@ -19,20 +21,20 @@
     than $\scF_2$ and we say that 
     $\scF_2$ is \FinerFilter than 
     $\scF_1$. 
-    Let $A \subset X$ be a collection of filters
-    and let $\scF_2 \in A$ be \FinerFilter 
+    Let $A$ be a collection of \Filters on $X$. 
+    Let $\scF_2 \in A$ be \FinerFilter 
     than every element of $A$. 
     Then we say that $\scF_2$ is the \FinestFilter
     element of $A$. 
     Let $\scF_3 \in A$ be \CoarserFilter
     than every element of $A$. 
-    Then we say that $\scF_3$ is the \CoarsestFilter
+    Then we say that $\scF_3$ is the \CoarsestFilter element
     in $A$. 
     \FilterFineness
     defines a \PartialOrdering on
     the collection of \Filters on $X$, where 
-    $\scF_1 \leq \scF_2$ if $\scF_2$ is a \FinerFilter than $\scF_1$. 
+    $\scF_1 \leq \scF_2$ if $\scF_2$ is a \FinerFilter \Filter than $\scF_1$. 
     A \Maximum
-    of \FilterFineness is called an 
+    of the \FilterFineness relation is called an 
     \UltraFilter on $X$. 
 \end{df}

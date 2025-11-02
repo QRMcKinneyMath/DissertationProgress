@@ -12,15 +12,16 @@
 
 \begin{df}[Topological Space]
     \label{def:TopologicalSpace}
-    Let $X \neq \emptyset$ be a set 
-    and let $\{\emptyset, X\} \subset \T \subset 2^X$ such that
-    \begin{enumerate}[label=(\roman*), ref={\ref{def:TopologicalSpace}~/roman*}]
+
+\rm	
+    Let $X$ be a nonempty set and let $\T \subset 2^X$ such that 
+    \begin{enumerate}[label=(\roman*), ref={\ref{def:TopologicalSpace}~\roman*}]
     \item \label{def:TopologicalSpace:ContainsX} $X \in \T$. 
     \item \label{def:TopologicalSpace:ContainsEmptyset} $\emptyset \in \T$. 
     \item \label{def:TopologicalSpace:ClosureUnderUnions} $\T$ is 
-    \ClosedUnderArbitraryUnions.
+    closed under arbitrary unions.
     \item \label{def:TopologicalSpace:ClosureUnderFiniteIntersections} $\T$
-    is \ClosedUnderFiniteIntersections. 
+    is closed under finite intersections. 
     \end{enumerate}
     Then we call $\T$ a \Topology on $X$ and we call 
     $(X,\T)$ a \TopologicalSpace. 

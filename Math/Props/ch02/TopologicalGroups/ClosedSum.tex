@@ -1,0 +1,23 @@
+\begin{prop}[\SetClosed Product]
+\label{prop:ClosedSum}
+\rm
+Let $(G, \T)$ be a \TopologicalGroup with identity $e$.
+Let $C \subset G$ be \SetClosed. 
+Let $K \subset G$ be \SetCompact. 
+Then $CK$ is \SetClosed and $KC$ is \SetClosed. 
+\begin{proof}
+Let $x \not \in CK$. 
+Then $\pa{C^{-1}x} \cap K = \emptyset$.
+By \ref{prop:GroupInvariance}, $C^{-1}x$ is \SetClosed.
+Hence, by \ref{prop:GroupSeparation}, there exists
+an
+\SetOpen \SymmetricSubset
+$V$ contining $e$ such that 
+$\pa{C^{-1}xV } \cap \pa{KV} = \emptyset$.
+Hence $\pa{xVV^{-1}} \cap \pa{CK} = \emptyset$, so 
+$x \not \in \overline{CK}$, so 
+$CK = \overline{CK}$.
+Hence $CK$ is \SetClosed. 
+The proof for $KC$ is virtually identical.
+\end{proof}
+\end{prop}

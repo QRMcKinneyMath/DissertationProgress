@@ -5,7 +5,7 @@
 \begin{df}[\MinimalElement]
 \label{def:MinimalElement}
 \rm
-    Let $X \neq \emptyset$ be a set. 
+    Let $X$ be a nonempty set.
     Let $R$ be an 
     \Relation on $X$. 
     Let $Y \subset X$.
@@ -24,26 +24,3 @@
 	we represent the set of $\Minima$ of Y with 
 	$\Minima(Y)$. 
 \end{df}
-
-\begin{prop}[\MinimalElement unique if R is \AntiSymmetricRelation]
-\label{prop:MinimalElementUnique}
-\rm
-	Let $X \neq \emptyset$ be a set. 
-	Let $R$ be an
-	\AntiSymmetricRelation
-	\Relation
-	on X. 
-	Let $Y \subset X$.
-	Let $a$ and $b$ be 
-	each be a \MinimalElement
-	of Y. 
-	Then $a=b$. 
-	\begin{proof}
-		Since $a \in \Minima(Y)$, 
-		$a \leq b$. 
-		Since $b \in \Minima(Y)$, 
-		$b \leq a$. 
-		By \RelationAntiSymmetry, 
-		$b = a$. 
-	\end{proof}
-\end{prop}

@@ -1,15 +1,18 @@
 \begin{prop}
-    \label{prop:FilterBase}
-    Let $X$ be a set and let 
+    \label{prop:FilterBase}\rm
+    Let $X$ be a nonempty set.
+    Let
     $A \subset \scPowerSet{X}$. 
     and define 
-    $\scU=\{U \subset X | (\exists a \in A ) ( a \subset U ) \}$. 
+    \begin{equation*}
+    \scU=\{U \subset X : (\exists a \in A ) ( a \subset U ) \}
+    \end{equation*}
     The following are equivalent. 
     \begin{enumerate}
     \item $A$ is a \FilterBase on $X$. 
     \item $\scU$ is a \Filter on $X$. 
     \end{enumerate}
-    \begin{proof}[$\implies$]
+    \begin{proof}[1 $\implies$ 2]
     Supose $A$ is a \FilterBase on $X$.
     By $\ref{def:FilterBase:DoesntContainEmptySet}$, $\emptyset \not \in A$, so 
     $\emptyset \not \in \scU$, implying that $\scU$ satisfies
@@ -20,7 +23,7 @@
     By \ref{def:FilterBase:IntersectionProperty}, there is $B \in A$ satisfying 
     $B \subset U_1 \cap U_2 \subset G_1 \cap G_2$, so $G_1 \cap G_2 \in \scU$, implying $\scU$ is a \Filter on $X$. 
     \end{proof}
-    \begin{proof}[$\impliedby$]
+    \begin{proof}[1 $\impliedby$ 2]
         If $A = \emptyset$, then $\scU=\emptyset$, so $A$ failing $\ref{def:FilterBase:IsNotEmpty}$ implies $\scU$ fails \ref{def:Filter:IsNonempty}. 
         If $\emptyset \in A$, then $\emptyset \in \scU$, so $A$ failing $\ref{def:FilterBase:DoesntContainEmptySet}$ implies $\scU$ fails \ref{def:Filter:DoesntContainEmpty}. 
         Finally, if $\scA$ fails \ref{def:FilterBase:IntersectionProperty}, then 
@@ -29,7 +32,7 @@
     \end{proof}
 \end{prop}
 \begin{rmk}
-\label{rmk:FilterBase}
+\label{rmk:FilterBase}\rm
     If $A$ is a \FilterBase on $X$, then \scU defined in $\ref{prop:FilterBase}$ 
-    is the \FilterGeneratedBy $A$. 
+    is the \Filter \FilterGeneratedBy $A$. 
 \end{rmk}

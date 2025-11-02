@@ -1,7 +1,9 @@
-\begin{prop}[Bassis Of Generated Topology]
+\begin{prop}[Basis Of Generated Topology]
 \label{prop:BasisOfGeneratedTopology}
-    Let $X \neq \emptyset$ and let 
-    $B \subset \scPowerSet{X}$
+
+\rm
+    Let $X$ be a nonempty set.
+    Let $B \subset \scPowerSet{X}$
     Then $B$ is a 
     \TopologyBasis 
     for 
@@ -11,13 +13,15 @@
     \begin{enumerate}
         \item $X \in B$
         \item $\emptyset \in B$. 
-        \item For each $U,V \in B$, For each $x \in U \cap V$, there is a $W \in B$ with $x \in W \subset U \cap V$. 
+        \item For each $U,V \in B$ and for each $x \in U \cap V$, 
+        there is a $W \in B$ satisfying  $x \in W \subset U \cap V$. 
     \end{enumerate}
     \begin{proof}
         I first claim that 
         it is sufficient to show that any finite intersection of elements of $B$ can 
         be written as a union of elements of $B$.
-        By Induction, proving for a binary intersection is sufficient. 
+        I prove in the case of binary intersections, but the inductive step
+        has a similar proof to that of the binary case.
         Hence, let $U,V \in B$ with $U \cap V \neq \emptyset$. 
         Then for each $x \in U \cap V$, by assumption, 
         there exists a $W_x \in B$ such that 
@@ -26,7 +30,7 @@
         \begin{equation*}
             U \cap V \subset \bigcup_{x \in U \cap V} W_x \subset U \cap V
         \end{equation*}
-        showign that finite intersctions of 
+        showing that finite intersctions of 
         elements of $B$ can be written as unions of 
         elements of $B$. 
         Hence, by

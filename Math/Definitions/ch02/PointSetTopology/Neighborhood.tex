@@ -5,6 +5,8 @@
 \newcommand{\NeighborhoodFilterInstance}[1]{\ensuremath{\scU_{#1}}\xspace}
 \begin{df}[\Neighborhood, \NeighborhoodFilter]
 \label{def:Neighborhood}
+
+\rm
     Let $(X, \T)$ be a \TopologicalSpace.
     Let $A \subset B \subset C \subset X$ 
     and let $B$ be \SetOpen in $(X,\T)$. 
@@ -16,12 +18,13 @@
     We denote the collection of all \Neighborhoods 
     of $x \in X$ with 
     $\NeighborhoodFilterInstance{\T}(x)$.
-    and we call this the 
-	\NeighborhoodFilter of $x$.
     By 
     \ref{prop:NeighborhoodFilter}, 
+	$\NeighborhoodFilterInstance{\T}(x)$
     is a \Filter
     on $X$, and se we call this the
     \NeighborhoodFilter of 
-    $\T$ at $x$. 
+    $\T$ at $x$
+	or simply the 
+	\NeighborhoodFilter of $x$.
 \end{df}

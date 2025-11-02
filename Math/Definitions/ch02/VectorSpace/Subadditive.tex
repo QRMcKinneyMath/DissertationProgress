@@ -1,4 +1,3 @@
-\label{def:subadditive}
 \newcommand{\Subadditive}[0]{
     \bf \hyperref[def:subadditive]{Subadditive} \rm
 }
@@ -7,16 +6,18 @@
     \bf \hyperref[def:subadditive]{Subadditivity} \rm
 }
 \begin{df}[\Subadditive]
-Let $(G, \oplus_G)$ be a 
+\label{def:subadditive}
+\rm
+Let $G$ be a 
 \Magma 
 and 
-$(H, \oplus_H, \leq)$ 
+$(H, \leq)$ 
 be a 
 \PartiallyOrderedMagma. 
-We call a mapping $p:G \to H$ \Subadditive if, for every $x,y \in G$, we have 
-\begin{equation}
-    p(x\oplus_G y) \leq p(x)\oplus_H p(y)
-\end{equation}
+We call a mapping $p:G \to H$ \Subadditive if, for every $x,y \in G$, 
+\begin{equation*}
+    p(xy) \leq p(x)p(y)
+\end{equation*}
 Under these circumstances, 
 we may also say that
 $p$

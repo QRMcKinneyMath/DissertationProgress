@@ -1,8 +1,8 @@
 \begin{prop}[\Net \NetSections form a \FilterBase]
     \label{prop:NetSectionsFormFilterBaseBase}
     \rm
-    Let $X \neq \emptyset$
-    and let $\sigma=\{x_\alpha\}_{\alpha \in A}$
+    Let $X$ be a nonempty set.
+    Let $\sigma=\{x_\alpha\}_{\alpha \in A}$
     be a \Net in $X$. 
     For each 
     $\alpha \in A$, denote  with
@@ -10,7 +10,7 @@
     the \NetSection of $x_\alpha$ in $\sigma$. 
     Define 
     \begin{equation*}
-        \scB=\{S(\sigma, \alpha ) | \alpha \in A\}
+        \scB=\{S(\sigma, \alpha ) : \alpha \in A\}
     \end{equation*}
 
     For each $\alpha \in A$, let $S(\alpha,  \leq)$ 
@@ -18,7 +18,7 @@
     $\alpha$.
 %    Define 
 %    \begin{equation*}
-%    \scF=\{S(\alpha, \leq) \subset A | \alpha \in A\}
+%    \scF=\{S(\alpha, \leq) \subset A : \alpha \in A\}
 %    \end{equation*}
     Then the following are true:
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:NetSectionsFormFilterBaseBase}~\roman*}]
@@ -41,7 +41,7 @@
         Furthermore, since 
         $(A,\leq)$ is a \PreorderedSet, 
         $A$ is nonempty, so 
-        $\emptyset \neq \scB$, implying $\scB$ satisfeis 
+        $\emptyset \neq \scB$, implying $\scB$ satisfies 
         \ref{def:FilterBase:IsNotEmpty}. 
         Finally, let $U,V \in \scB$. 
         Then we can find $u,v \in A$ such that 

@@ -2,15 +2,15 @@
 \newcommand{\InfiniteCartesianProducts}[0]{\textbf{\hyperref[def:InfiniteCartesianProduct]{Cartesian Products}}\xspace}
 \newcommand{\scCartesianProduct}[3]{\ensuremath{\prod\limits_{#1 \in #2}#3_{#1}}\xspace}
 \newcommand{\ProjectionMap}[0]{\textbf{\hyperref[def:InfiniteCartesianProduct]{Projection Map}}\xspace}
-\begin{df}[Infinite Cartesian Product]
+\begin{df}[\InfiniteCartesianProduct]
 \label{def:InfiniteCartesianProduct}
 \rm
-    Let $A \neq \emptyset$. 
+    Let $A$ be a nonempty set.
     For each $\alpha \in A$, let 
-    $X_{\alpha} \neq \emptyset$. 
+    $X_{\alpha}$ be a nonempty set.
     Define 
     \begin{equation*}
-        \prod\limits_{\alpha \in A} X_{\alpha } = \left\{f:A \to \bigcup\limits_{\alpha \in A} X_{\alpha} | (\forall \alpha \in A)(f(\alpha) \in X_{\alpha} ) \right\}
+        \prod\limits_{\alpha \in A} X_{\alpha } = \left\{f:A \to \bigcup\limits_{\alpha \in A} X_{\alpha} \in 2^{A \times \bigcup\limits_{\alpha \in A} X_{\alpha}} : (\forall \alpha \in A)(f(\alpha) \in X_{\alpha} ) \right\}
     \end{equation*}
     We call this the 
     \InfiniteCartesianProduct

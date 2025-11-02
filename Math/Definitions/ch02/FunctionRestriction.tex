@@ -1,17 +1,17 @@
 \newcommand{\Restriction}[0]{\textbf{\hyperref[def:FunctionRestriction]{Restriction}}\xspace}
-\newcommand{\scRestriction}[2]{\ensuremath{\pa{#1}|_{#2}}\xspace}
-\begin{df}[Restriction]
+\newcommand{\scRestriction}[2]{\ensuremath{#1|_{#2}}\xspace}
+\begin{df}[\Restriction]
 \label{def:FunctionRestriction}
 
 \rm
-    Let $X,Y$ be sets and 
-    let $R$ be a 
+    Let $X$ and $Y$ be nonempty sets.
+    Let $R$ be a 
     \Relation from 
     $X$ to $Y$. 
     Let $A \subset X$. 
     We define 
     \begin{equation*}
-        \scRestriction{R}{A} = \{(x,y)\in R| x \in A \}
+        \scRestriction{R}{A} = R \cap \pa{ A \times Y}
     \end{equation*}
     We call 
     \scRestriction{R}{A}

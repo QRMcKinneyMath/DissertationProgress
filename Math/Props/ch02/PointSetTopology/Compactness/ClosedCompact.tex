@@ -1,0 +1,21 @@
+\begin{prop}
+\label{prop:ClosedCompact}
+\rm
+Let $X$ be a \SetCompact \TopologicalSpace. 
+Let $F \subset X$ be \SetClosed. 
+Then $F$ is \SetCompact.
+\begin{proof}
+Let $\{U_{\alpha}\}_{\alpha \in A}$ 
+be an \SetOpen \Cover for $F$.
+Then $\{U_{\alpha}\}_{\alpha \in A} \cup \{X \setminus F\}$
+is a \SetOpen \Cover for $X$. 
+Since $X$ is \SetCompact
+there is $\{\alpha_i\}_{i=1}^n \subset A$
+such that $\{U_{\alpha_i}\}_{i=1}^n \cup \{X \setminus F\}$ 
+is an \SetOpen \Cover for $X$. 
+Since $\pa{X \setminus F} \cap F = \emptyset$, 
+$\{U_{\alpha_i}\}_{i=1}^n$ is an \SetOpen \Cover
+for $F$. 
+Hence $F$ is \SetCompact.
+\end{proof}
+\end{prop}
