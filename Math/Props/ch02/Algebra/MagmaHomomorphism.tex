@@ -1,0 +1,54 @@
+\begin{prop}[\MagmaHomomorphism]
+\label{prop:MagmaHomomorphism}
+\rm
+Let $M_1$ and $M_2$ be \Magmas.
+Let $T:M_1 \to M_2$ be a 
+\MagmaHomomorphism.
+Define $\cong \subset M_1 \times M_1$ by $x \cong y$ if and only if $T(x)=T(y)$.
+The following are true.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:MagmaHomomorphism}~\roman*}]
+\item
+\label{prop:MagmaHomomorphism:Compatible}
+$\cong$ is a \Congruence on $M_1$. 
+\item
+\label{prop:MagmaHomomorphism:Quotient}
+Let $Q:M_1 \to M_1/\cong$ denote the \QuotientMap.
+Define $\tilde{T}:M_1/\cong \to Range(T)$ by setting, for each $x \in M_1/\cong$, 
+$\tilde{T}\pa{[x]} = T(x)$. 
+Then $\tilde{T}$ is a well defined \Bijective \MagmaHomomorphism, $T = \tilde{T} \circ Q$, and $Q = \tilde{T}^{-1} \circ T$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:MagmaHomomorphism:Compatible}]
+It is obvious that $T$ is an \EquivalenceRelation.
+What remains to show is that $\cong$ is 
+\AlgebraicallyConsistent with $M$. 
+Suppose $x_0 \cong x_1$ and $y_0 \cong y_1$. 
+Then since $T$ is a \MagmaHomomorphism, 
+\begin{equation*}
+T(x_0y_0) = T(x_0) T(y_0) = T(x_1) T(y_1) = T(x_1y_1)
+\end{equation*}
+Hence $x_0y_0 \cong x_1y_1$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:MagmaHomomorphism:Quotient}]
+We first show that $T$ is well defined. 
+Let $[x] = [y]$. We must show that $\tilde{T}([x]) = \tilde{T}([y])$. 
+Since $[x] = [y]$, $x \cong y$. Hence, $T(x) = T(y)$, 
+which gives us 
+$\tilde{T}([x]) = T(x) = T(y) = \tilde{T} ([y])$. 
+
+Suppose $\tilde{T}\pa{[x]} = \tilde{T}\pa{[y]}$. 
+Then $T(x) = T(y)$, so $x \cong y$, so $[x] = [y]$. 
+Hence $\tilde{T}$ is \Injective. 
+
+Let $y \in Range(T)$. Then there exists $x \in M_1$ such that 
+$T(x) = y$. Hence $\tilde{T}\pa{[x]} = T(x) = y$. 
+Thus, $\tilde{T}$ is \Surjective. 
+
+Now let $x,y \in M$. 
+Then, $\tilde{T}\pa{[x][y]} = \tilde{T}\pa{[xy]} = T(xy) = T(x)T(y) = \tilde{T}([x]) \tilde{T}([y])$. 
+Thus $\tilde{T}$ is a \MagmaHomomorphism. 
+
+Finally, if $x \in M_1$, then $\tilde{T} \circ Q(x) = \tilde{T}([x]) = T(x)$, so 
+$T = \tilde{T} \circ Q$.
+The final equation falls from the \Bijectivity of $\tilde{T}$. 
+\end{proof}
+\end{prop}

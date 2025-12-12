@@ -2,13 +2,13 @@
 \label{prop:FunctionLimit}
 
 \rm
-Let $X \neq \emptyset$. 
+Let $X$ be a nonempty set.
 Let $(Y,\scT)$ be a \TopologicalSpace. 
 Let $f:X \to Y$. 
 Let $\scF$ be a \Filter in $X$. 
 Let $\scB$ be a \FilterBase for $\scF$. 
 Let $y \in Y$. 
-The Following are true 
+The following are true 
 \begin{enumerate}[label=(\roman*), ref={\ref{prop:FunctionLimit}.~\roman*}]
     \item
     \label{prop:FunctionLimitCharacterization1}
@@ -46,7 +46,7 @@ The Following are true
     \item 
     \label{prop:FunctionClusterPointFiner}
     If $y$ is a \FunctionClusterPoint of $f$ with respect to $\scB$ and 
-    $\scF_1$ is a \FinerFilter \Filter on $X$ than $\scF$, then 
+    $\scF_1$ is a \CoarserFilter \Filter on $X$ than $\scF$, then 
     $y$ is a \FunctionClusterPoint of $f$ with respect to $\scF_1$. 
     \item
     \label{prop:FunctionClusterPointCharacterization2}
@@ -58,4 +58,42 @@ The Following are true
     The set of \FunctionClusterPoints of $f$ with respect to $\scB$ is \SetClosed in $Y$ and 
     may be empty. 
 \end{enumerate}
+\begin{proof}[Proof of \ref{prop:FunctionLimitCharacterization1}]
+This is obvious from an application of 
+\ref{def:FunctionLimitPoint}
+and
+\ref{prop:FilterConvergenceFacts:FundamentalSystemExistence}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionLimitCharacterization2}]
+This is a direct application of \ref{prop:FunctionLimitCharacterization1}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionClusterPointCharacterization1}]
+This result comes from an application of 
+\ref{prop:FilterClusterPoint:FundamentalSystem}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionLimitCoarser}]
+This is a direct consequence of 
+\ref{prop:FilterConvergenceFacts:CoarserTopology}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionClusterPointCoarser}]
+This is a direct consequence of 
+\ref{prop:FilterClusterPoint:CoarserTopology}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionLimitFiner}]
+This is a direct consequence of 
+\ref{prop:FilterConvergenceFacts:FinerFilter}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionClusterPointFiner}]
+This is a direct consequence of 
+\ref{prop:FilterClusterPoint:CoarserFilter}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionClusterPointCharacterization2}]
+This result falls from a direct application of 
+\ref{prop:FilterClusterPoint:Finer}
+paired with
+\ref{prop:InverseFilterImage}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:FunctionClusterPoints:Closed}]
+This is obvious.
+\end{proof}
 \end{prop}

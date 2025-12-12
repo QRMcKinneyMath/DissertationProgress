@@ -1,6 +1,6 @@
-
 \begin{prop}[Relation Of Zero Distance is the Relation Of Equal Neighborhood Filters]
     \label{prop:relationofzerodistance}
+    \rm
     Let $(X,d)$ be a \PseudometricSpace.
     Let $\cong_{\T_d}$ be the \RelationOfEqualNeighborhoodFilters $(X,\T_d)$. 
     Let $\cong_d$ be the \RelationOfZeroDistance on $(X,d)$. 
@@ -12,14 +12,11 @@
         Since $x_0 \cong_d y_0$, $d(x_0,y_0) = 0$, so $y_0 \in B(x_0 ; \epsilon) \subset U$. 
         Hence $U \in \scU_{\T_d}(y_0)$. 
         The arbitrary nature of $U \in \scU_{\T_d}(x_0)$ implies 
-        \begin{equation}
-            \scU_{\T_d}(x_0) \subset \scU_{\T_d}(y_0)
-        \end{equation}
+        $\scU_{\T_d}(x_0) \subset \scU_{\T_d}(y_0)$.
         A reverse construction would just as easily show the reverse inclusion, so we conclude that $x_0 \cong_{\T_d} y_0$. 
-        Now suppose $x_0 \cong_{\T_d} y $. Then or each $n \in \N$, 
-        \begin{equation}
-            y_0 \in B_{d} \pa{x_0 ; \frac{1}{n}}
-        \end{equation}
-        Hence $d(x_0, y_0) < \frac{1}{n}$ for each natural n, therefore $d(x_0,y_0) = 0$ and $x_0 \cong_d y_0$. 
+        Now suppose $x_0 \cong_{\T_d} y $. Then for each $n \in \N$, 
+        $y_0 \in B_{d} \pa{x_0 ; \frac{1}{n}}$.
+        Hence $d(x_0, y_0) < \frac{1}{n}$ for each $n \in \bbZ^+$, 
+        and so $d(x_0,y_0) = 0$ and $x_0 \cong_d y_0$. 
     \end{proof}
 \end{prop}

@@ -6,25 +6,26 @@ over a \Field $\bbF$.
 Let $\{v_i\}_{i=1}^n \subset \scAlgebraicDual{V}$. 
 Let $v \in \scAlgebraicDual{V}$. 
 Suppose
-\begin{equation*}
-\bigcap\limits_{i=1}^n Kernel(v_i) \subset Kernel(v)
-\end{equation*}
+$\bigcap\limits_{i=1}^n Kernel(v_i) \subset Kernel(v)$.
 Then $v \in span(v_1, \cdots, v_n)$. 
 \begin{proof}
    Without loss of generality 
-    we let $\{v_i\}_{i=1}^n$ be \LinearlyIndependent.
-    Let $\{e_i\}_{i=1}^n$ be the \StandardBasis of $\bbF^n$.
+   we let $\{v_i\}_{i=1}^n$ be \LinearlyIndependent.
+   Let $\{e_i\}_{i=1}^n$ be the \StandardBasis of $\bbF^n$.
    Define $S:V \to \bbF^n$  by $S(x)=\sum\limits_{i=1}^n \ip{x, v_i} e_i$. 
    By \ref{prop:LinearlyIndependentLinearFunctionals}, $S$ is \Surjective.
-   Hence, if we let $Q:V \to V/Kernel(S)$ be the quotient map. 
-   Then $S$ has a invertible quotient 
-   $\tilde{S}:V/Kernel(S) \to \bbF^n$ which satisfies
+   Let $Q:V \to V/Kernel(S)$ be the \QuotientMap. 
+   By 
+   \ref{prop:LinearOperatorQuotient}, 
+   $\tilde{S}:V/Kernel(S) \to \bbF^n$ defined by $\tilde{S}([x])=S(x)$
+   is a
+   \Linear \Bijection which satisfies
    $S=\tilde{S} \circ Q$ and $Q = \tilde{S}^{-1} \circ S$. 
    Since $Kernel(S) = \bigcap\limits_{i=1}^n Kernel(v_i) \subset Kernel(v)$, 
    there exists $\tilde{v}:X/Kernel(S) \to \bbF$ such that 
    $v=\tilde{v} \circ Q$. 
     Also, $\tilde{v}\circ \tilde{S}^{-1}:\bbF^n \to \bbF$
-    is linear, so there are $\{\sigma_i\}_{i=1}^n \subset \bbF$ 
+    is \Linear, so there are $\{\sigma_i\}_{i=1}^n \subset \bbF$ 
     such that if $\sum_{i=1}^n x_i e_i \in \bbF^n$, we have 
     \begin{equation*}
     \tilde{v} \circ \tilde{S}^{-1} \pa{\sum\limits_{i=1}^n x_i e_i}

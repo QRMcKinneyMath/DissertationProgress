@@ -5,20 +5,84 @@ Let $X$ be a nonempty set.
 For each $x \in X$, let 
 $\NeighborhoodFilterInstance{}(x) \subset \scPowerSet{X}$ such that 
 each $\NeighborhoodFilterInstance{}(x)$ satisfies 
-\ref{def:Filter:SubsetProperty}
-\ref{def:Filter:FiniteIntersectionProperty}
+\ref{def:Filter:IsNonempty}, 
+\ref{def:Filter:SubsetProperty}, 
+\ref{def:Filter:FiniteIntersectionProperty}, 
 and
-\ref{prop:NeighborhoodFilter:Containsx}
-and the collection
+\ref{prop:NeighborhoodFilter:Containsx}.
+Further assume that the collection
 $\{ \NeighborhoodFilterInstance{}(x) : x \in X \}$ 
 satisfies 
 \ref{prop:NeighborhoodFilter:CharacteristicProperty}.
-Then there exists a Unique topology $\T$ 
+Then there exists a unique topology $\T$ 
 on $X$ such that 
 for each $x \in X$, 
 $\NeighborhoodFilterInstance{}(x)$ is the 
 \NeighborhoodFilter for $\T$ at $x$. 
 \begin{proof}
-\end{proof}
+Define $\scT = \{U \subset X : (\forall x \in U) (U \in \scU_x)\}$. 
+I first show that $\scT$ is a \Topology on $X$. 
+Clearly, $\emptyset \in \scT$. 
+By \ref{def:Filter:SubsetProperty}, for each $x \in X$, there 
+exists $B \subset X$ such that $B \in \scU_x$. 
+Hence, by 
+\ref{def:Filter:SubsetProperty}, 
+$X \in \scU_x$. 
+Hence, $X \in \scT$.
+Let $U_1,U_2 \in \scT$. 
+Let $x \in U_1 \cap U_2$. 
+Then $x \in U_1`$ and $x \in U_2$, so $U_1 \in \scU_x$ and $U_2 \in \scU_x$. 
+By 
+\ref{def:Filter:FiniteIntersectionProperty}, $U_1 \cap U_2 \in \scU_x$. 
+Hence $U_1 \cap U_2 \in \scT$.
+By 
+\ref{prop:FiniteClosure:Intersection}, 
+$\scT$ is closed under finite intersections.
+Let $\{U_\alpha\}_{\alpha \in A} \subset \scT$. 
+Let $x \in \bigcup\limits_{\alpha \in A} U_\alpha$. 
+Then for some $\beta \in A$, $x \in U_\beta$. 
+Hence $U_\beta \in \scU_x$. 
+Since $U_\beta \subset\bigcup\limits_{\alpha \in A} U_\alpha$, 
+by \ref{def:Filter:SubsetProperty}, 
+$\bigcup\limits_{\alpha \in A} U_\alpha \in \scT$. 
+Hence $\scT$ is a \Topology on $X$. 
 
+I now show that $\scT$ has the required properties. 
+Let $x \in X$. 
+I must show $\scU_x = \scU_{\scT}(x)$.
+Let $N \in \scU_{\scT}(x)$. 
+Then there exists $U \in \scT$ with $x\in U \subset N$. 
+Since $x \in U \in \scT$, $U \in \scU_x$. 
+Since $U \subset N$, $N \in \scU_x$. 
+Hence $\scU_{\scT}(x) \subset \scU_x$. 
+Now let $U \in \scU_x$. 
+Then by 
+\ref{prop:NeighborhoodFilter:CharacteristicProperty}
+there exists $V \in \scU_x$ 
+such that for every $y \in V$, 
+$U \in \scU_y$. 
+Let $y \in V$. 
+Then $\exists \tilde{U} \in \scU_y$ such that for 
+every $z \in \tilde{U}$, $V \in \scU_{\scT}(z)$. 
+Since $y \in \tilde{U}$, $V \in \scU_y$. 
+Since $y \in V$ was arbitrary, $V \in \scT$. 
+Hence $x \in V \subset U \in \scU_{\scT}(x)$. 
+Thus $\scU_x \subset \scU_{\scT}(x)$. 
+
+I now show that the $\scT$ is the unique 
+\Topology with this property. 
+Let $\scT_1$ be another \Topology on $X$ 
+such that for each $x \in X$, 
+$\scU_{\scT}(x) = \scU_x = \scU_{\scT_1}(x)$. 
+Let $U \in \scT$. 
+Let $x \in U$. 
+Then $\exists U_x \in \scU_{\scT}(x) = \scU_{\scT_1}(x)$ such that
+$U_x \subset U$. 
+Since $x \in U_x \in \scU_{\scT_1}(x)$, 
+there exists $x \in V_x \in \scT_1$ such that $V_x \subset U_x$. 
+Hence $U = \bigcup\limits_{x \in U} V_x \in \scT_1$. 
+Hence $\scT \subset \scT_1$.
+The proof for the other direction is identical.
+Hence uniqueness holds.
+\end{proof}
 \end{prop}

@@ -1,0 +1,16 @@
+\newcommand{\QuotientMagma}[0]{\textbf{\hyperref[def:QuotientMagma]{Quotient Magma}}\xspace}
+\begin{df}[\QuotientMagma]
+\label{def:QuotientMagma}
+\rm
+Let $(M,\cdot)$ be a \Magma. 
+Let $\cong$ be a \Congruence on $M$.
+Define $\boxdot:M / \cong \times M/\cong \to M/\cong$
+by setting, for each $x,y \in M$, 
+\begin{equation*}
+[x]\boxdot [y] = [x \cdot y]
+\end{equation*}
+By \ref{prop:QuotientMagma}, 
+$\pa{M/\cong, \boxdot}$ 
+is a \Magma, which 
+we call the \QuotientMagma of $M$ relative to $\cong$.
+\end{df}

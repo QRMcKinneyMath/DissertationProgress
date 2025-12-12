@@ -1,0 +1,20 @@
+\newcommand{\StandardBasis}[0]{ \textbf{\hyperref[def:StandardBasis]{Standard Basis}}\xspace}
+\newcommand{\StandardBases}[0]{ \textbf{\hyperref[def:StandardBasis]{Standard Bases}}\xspace}
+\begin{df}[\StandardBasis]
+\label{def:StandardBasis}
+\rm
+Let $(\scF, +, \cdot, 0, 1)$ be a \Field. 
+Define $\oplus:\scF^n \times \scF^n \to \scF^n$ by 
+\begin{equation*}
+\{x_i\}_{i=1}^n \oplus \{y_i\}_{i=1}^n = \{x_i+y_i\}_{i=1}^n
+\end{equation*}
+Define $\odot:\scF \times \scF^n \to \scF^n$ by 
+\begin{equation*}
+\alpha \odot \{x_i\}_{i=1}^n = \{\alpha x_i\}_{i=1}^n
+\end{equation*}
+Then $\scF^n$ is a \VectorSpace over $\scF$. 
+For $1 \leq j \leq n$, define $e_i = \{\delta_{i,j}\}_{j=1}^n$, 
+where $\delta_{i,j}$ is the \KronekerDelta function over $\scF$. 
+Then $\{e_i\}_{i=1}^n$ is a \Basis for $\scF^n$. 
+We call $\{e_i\}_{i=1}^n$ the \StandardBasis for $\scF^n$.
+\end{df}

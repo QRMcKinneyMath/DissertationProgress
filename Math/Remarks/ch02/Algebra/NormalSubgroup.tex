@@ -1,0 +1,22 @@
+\newcommand{\QuotientGroup}[0]{\textbf{\hyperref[rmk:NormalSubgroup]{Quotient Group}}\xspace}
+\newcommand{\QuotientGroups}[0]{\textbf{\hyperref[rmk:NormalSubgroup]{Quotient Groups}}\xspace}
+\begin{rmk}[\QuotientGroup]
+\label{rmk:NormalSubgroup}
+\rm
+Let $G$ be a \Group. 
+Let $\cong$ be a \Congruence on $G$. 
+Then by \ref{prop:NormalSubgroup}
+there is a $\NormalSubgroup$ $K$ of $G$
+such that $x \cong y$ if and only if 
+$xy^{-1}  \in K$. 
+For this reason, we denote $X/\cong$
+with $X/K$. 
+Furthermore, 
+by \ref{prop:QuotientMagma:Associative}, 
+\ref{prop:QuotientMagma:Identity}, 
+and \ref{prop:QuotientMagma:Inverse}, 
+$X/K$ is a \Group whose \IdentityElement 
+is $[e]$. We call this \Group the 
+\QuotientGroup of $G$ 
+corresponding to $K$. 
+\end{rmk}

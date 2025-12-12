@@ -1,0 +1,24 @@
+\newcommand{\Ring}[0]{\textbf{\hyperref[def:Ring]{Ring}}\xspace}
+\newcommand{\Rings}[0]{\textbf{\hyperref[def:Ring]{Rings}}\xspace}
+\newcommand{\Field}[0]{\textbf{\hyperref[def:Ring]{Field}}\xspace}
+\newcommand{\Fields}[0]{\textbf{\hyperref[def:Ring]{Fields}}\xspace}
+\begin{df}[\Ring]
+\label{def:Ring}
+\rm
+Let $R$ be a nonempty set.
+Let $(R,+,0)$ be a \CommutativeFunction \Group. 
+Let $(R \setminus \{0\}, \cdot, 1)$ be a \Monoid. 
+Suppose that for each $a,b,c \in R$ we have 
+\begin{equation*}
+a \cdot \pa{b+c} = \pa{a \cdot b} + \pa{a \cdot c}
+\end{equation*}
+\begin{equation*}
+\pa{a+b} \cdot c = \pa{a \cdot c} + \pa{b \cdot c}
+\end{equation*}
+Then we call $(R,+,\cdot,0,1)$ a \Ring. 
+When the context is clear, we call $R$ a \Ring.
+If $\cdot$ is \CommutativeFunction, then we call $R$ a 
+\CommutativeFunction \Ring. 
+If $(R \setminus \{0\},\cdot,1)$ is a \CommutativeGroup
+then we call $R$ a \Field.
+\end{df}

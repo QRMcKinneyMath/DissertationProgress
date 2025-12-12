@@ -1,14 +1,14 @@
-\label{def:uniformlyconvergent}
 \newcommand{\UniformlyConvergent}[0]{\textbf{\hyperref[def:uniformlyconvergent]{Uniformly Convergent}}\xspace}
 \newcommand{\ConvergesUniformly}[0]{\textbf{\hyperref[def:uniformlyconvergent]{Converges Uniformly}}\xspace}
 \newcommand{\UniformConvergence}[0]{\textbf{\hyperref[def:uniformlyconvergent]{Uniform Convergence}}\xspace}
-
-\begin{df}[Uniform Convergence]
-	Let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
-	for $\alpha \in A$ where A is some indexing set. 
-	For each $\alpha \in A$
-	, let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
-	be a sequence. 
+\begin{df}[\UniformConvergence]
+\label{def:uniformlyconvergent}
+\rm
+    Let $A$ be a nonempty set.
+    For each $\alpha \in A$, 
+	let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
+	and let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
+	be a \Sequence in $X_\alpha$. 
 	We say that the collection $\{\phi_\alpha\}_{\alpha \in A}$ 
     is \UniformlyConvergent to 
     $\{x_\alpha\}_{\alpha \in A} \in \prod\limits_{\alpha \in A} X_\alpha$
@@ -17,17 +17,15 @@
     such that for each $n>N$, 
     and for every $\alpha \in A$, 
     we have 
-    \begin{equation}
+    \begin{equation*}
         d_\alpha(x^{\alpha}_i,x_\alpha) < \epsilon
-    \end{equation}
+    \end{equation*}
 
     In this scenario, we may equivalently say that
     $\{\phi_\alpha\}$ demonstrates \UniformConvergence
     to $\{x_\alpha\}_{\alpha \in A}$ 
-    or that it \ConvergesUniformly. 
-
+    or that it \ConvergesUniformly
+    to $\{x_\alpha\}_{\alpha \in A}$.
     When we mention \UniformConvergence without
-    reference to what the convergence is to, 
-    we are merely claiming the existence of 
-    such a limit. 
+    specifying the limit, we are only claiming that one exists.
 \end{df}

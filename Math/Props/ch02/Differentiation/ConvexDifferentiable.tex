@@ -1,0 +1,79 @@
+\begin{prop}[\ConvexFunction \DirectionalDerivative]
+\label{prop:ConvexDifferentiable}
+\rm
+Let $X$ be a \TVS. 
+Let $f:X \to (-\infty,\infty]$ be \ConvexFunction.
+Let $x_0 \in Interior\pa{D(f)}$. 
+Let $y_0 \in X$. 
+Then $f_+'(x_0,y_0)$ exists. 
+Furthermore, 
+$-f_-'(x_0,y_0) \leq f_+'(x_0,y_0)$, 
+and for any $t > 0$ for which 
+$x_0+ty_0 \in Interior\pa{D(f)}$, 
+we have 
+\begin{equation*}
+f_+'(x_0,y_0) \leq \frac{f(x_0+ty_0)-f(x_0)}{t_0} \leq f_-'(x_0'+ty_0, y_0)
+\end{equation*}
+\begin{proof}
+This result mostly falls from several applications of 
+\ref{prop:ConvexFunction:ConvexInequality}.
+Let $0 < t_1 < t_0$. 
+Then if $x=x_0-t_0y_0$, $y=x_0-t_1y_0$, and $z=x_0$, we have 
+\begin{equation*}
+\frac{f(x_0)-f(x_0-t_0y_0)}{t_0} \leq \frac{f(x_0)-f(x_0-t_1y_0)}{t_1}
+\end{equation*}
+Alternatively, if $x=x_0-t_1y_0$, $y=x_0$, and $z=x_0+t_1y_0$, we have
+\begin{equation*}
+\frac{f(x_0)-f(x_0-t_1y_0)}{t_1} \leq \frac{f(x_0+t_1y_0)-f(x_0)}{t_1}
+\end{equation*}
+Finally, if $x=x_0$, $y=x_+t_1y_0$, and $z=x_0+t_0y_0$, we derive
+\begin{equation*}
+\frac{f(x_0+t_1y_0)-f(x_0)}{t_1} \leq \frac{f(x_0+t_0y_0)-f(x_0)}{t_0}
+\end{equation*}
+Putting the above inequalities together, we have 
+\begin{equation*}
+\frac{f(x_0)-f(x_0-t_0y_0)}{t_0} \leq \frac{f(x_0)-f(x_0-t_1y_0)}{t_1} \leq \frac{f(xl_0+t_1y_0)-f(x_0)}{t_1} \leq \frac{f(x_0+t_0y_0)-f(x_0)}{t_0}
+\end{equation*}
+whenever $0<t_1<t_0$. 
+From this, we derive that $g_-$ defined by 
+\begin{equation*}
+g_-(t) = \frac{f(x_0)-f(x_0-ty_0)}{t}
+\end{equation*}
+is Monotone decreasing on $(0,\infty)$
+and $g_+$ defined by 
+\begin{equation*}
+g_+(t) = \frac{f(x_0+ty_0)-f(x_0)}{t}
+\end{equation*}
+is MONOTONE INCREASING on $(0,\infty)$. 
+Let $t_0 >0$. 
+Furthermore, for every $t > 0$, we have 
+\begin{equation*}
+g_-(t) \leq g_+(t_0)
+\end{equation*}
+Hence, since $t$ was arbitrary, 
+\begin{equation*}
+-f_-'(x_0,y_0) = \lim\limits_{t \searrow 0 } g_-(t) \leq g_+(t_0)
+\end{equation*}
+Now, since $t_0>0$ was arbitrary, we have 
+\begin{equation*}
+-f_-'(x_0,y_0) \leq \lim\limits_{t \searrow 0} g_+(t) = f_+'(x_0,y_0)
+\end{equation*}
+Let $t_0 > 0$.
+Now, finally leveraging the monotonicity of $g_+$, 
+we have, for any $t > 0$, 
+\begin{equation*}
+f_+'(x_0,y_0) \leq \frac{f(x_0+ty_0)-f(x_0)}{t}
+\end{equation*}
+$g_-$, except centering the inequalities at $x_0+t_0y_0$, 
+For any $t > 0$, we have 
+\begin{equation*}
+-f_-'(x_0+t_0y_0, y_0) \geq \frac{f(x_0+t_0y_0)-f(x_0+t_0y_0-ty_0)}{t}
+\end{equation*}
+Thus, if $t=t_0$, we find
+\begin{equation*}
+f_+'(x_0,y_0) \leq \frac{f(x_0+t_0y_0)-f(x_0)}{t_0} \leq -f_-'(x_0+t_0y_0,y_0)
+\end{equation*}
+\end{proof}
+
+
+\end{prop}

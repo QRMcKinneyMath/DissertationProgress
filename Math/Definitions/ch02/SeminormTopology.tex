@@ -2,24 +2,24 @@
 \newcommand{\SeminormInducedPseudometric}[0]{\textbf{\hyperref[def:seminormtopology]{Pseudometric induced by the Seminorm}}\xspace}
 \newcommand{\SeminormSpaceInducedPseudometricSpace}[0]{\textbf{\hyperref[def:seminormtopology]{Pseudometric Space induced by the Seminormed Space}}\xspace}
 
-\begin{df}[Seminorm Topology]
+\begin{df}[\SeminormTopology]
 \label{def:seminormtopology}
 \rm
     Let $(X,\norm{\cdot})$ be a \SeminormedSpace.
     define $d_{\norm{\cdot}}:V \times V \to [0,\infty)$  by setting,
     for $x,y \in X$, 
-    \begin{equation}
+    \begin{equation*}
     d_{\norm{\cdot}}(x,y) = \norm{x-y}
-    \end{equation}
+    \end{equation*}
     Observe the following: 
     \begin{enumerate}
         \item \ref{rmk:seminorm} guarantees that $d_{\norm{\cdot}}(x,x)=0$ for $x \in X$. 
         \item 
         \ref{prop:subadditiveinducestriangleinequality} guarantees that d satisfies the \TriangleInequality. 
-        \item d is a \SymmetricMap, as we have 
-    \begin{equation}
+        \item d is \CommutativeFunction, as we have 
+    \begin{equation*}
         d(x,y)_{\norm{\cdot}}=\norm{x-y}=|-1|\norm{x-y}=\norm{y-x}=d(y,x)
-    \end{equation}
+    \end{equation*}
     \end{enumerate}
 
     Hence, $d_{\norm{\cdot}}$  is a \Pseudometric on X, which we call the \SeminormInducedPseudometric on X. 

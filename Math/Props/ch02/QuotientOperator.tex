@@ -1,20 +1,21 @@
 \begin{prop}[Quotient Operator]
 \label{prop:quotientoperator}
+\rm
     Let $X,Y$ be \SeminormedSpaces
     with \SeminormKernels $\Ker_X$, $\Ker_Y$
     and \OperatorQuotientMap Q. 
-    Then Q is a well-defined linear surjective isometry. 
+    Then Q is a well-defined \Linear \Surjective \Isometry. 
     \begin{proof} 
         We first show that Q is well defined. 
         Let $T \in BL(X,Y)$ and 
         let $x_0, x_1 \in X$ such that $\bra{x_0}=\bra{x_1}$. 
-        Then $\norm{x_0-x_1}_X = 0$, so since T is continuous, 
+        Then $\norm{x_0-x_1}_X = 0$, so since T is \ContinuousFunction, 
         $\norm{Tx_0-Tx_1}_Y = 0$. 
         Hence $Tx_0 \cong Tx_1$, so
         $\bra{Tx_0} = \bra{Tx_1}$. 
 
 
-        For linearity, let $\alpha\in \F$, and let
+        For \Linearity, let $\alpha\in \F$, and let
         $T,S \in BL(X,Y)$. 
         Let $x \in X$. 
         Then 
@@ -24,9 +25,9 @@
             & = \alpha QT[x]_X +QS[x]_X\\
             & = \pa{\alpha QT+QS}[x]_X
         \end{align*}
-        Since $x \in X$ was arbitrary, Q is linear. 
+        Since $x \in X$ was arbitrary, Q is \Linear. 
 
-        As for being an isometry, let $T \in BL(X,Y)$ and let $x \in X$. 
+        As for being an \Isometry, let $T \in BL(X,Y)$ and let $x \in X$. 
         Since $\norm{\bra{x}}=\norm{x}$ and $\norm{Tx}=\norm{\bra{Tx}}$, 
         we have 
         \begin{align*}
@@ -34,7 +35,7 @@
         & = \frac{\norm{Tx}_Y}{\norm{x}_X} 
         \end{align*}
         and so taking the supremum over $\norm{x} \neq 0$ gives us 
-        that this is an isometry. 
+        that this is an \Isometry. 
         
 
         For surjectivity, let $\tilde{T} \in BL(X/\Ker_X, Y/\Ker_Y)$.
@@ -45,7 +46,7 @@
         \begin{equation}
             T\sum_{i=1}^n \beta_i x_{\alpha_i} = \sum_{i=1}^n \beta_i y_{\alpha_i}
         \end{equation}
-        Then $T:X \to Y$ is obviously linear, and
+        Then $T:X \to Y$ is obviously \Linear, and
         $Tx \in \tilde{T}[x]_X$ for $x \in X$. 
         Hence, 
         \begin{equation}

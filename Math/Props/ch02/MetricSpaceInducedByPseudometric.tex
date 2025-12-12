@@ -1,22 +1,36 @@
 \begin{prop}[Metric Space Induced By Pseudometric Space]
     \label{prop:pseudometricinducedmetric}
-    %Let $X$, d, $\cong$, and $\tilde{d}$ be defined as in \ref{def:pseudometricinducedmetric}
+    \rm
     Let $(X,d)$ be a \PseudometricSpace, $\cong$ the \RelationOfZeroDistance on $(X,d)$ and $\tilde{d}$ be defined as in \ref{def:pseudometricinducedmetric}.
-    Let $(X/\cong, \T_{X/\cong})$ be the  \QuotientTopologicalSpace with \QuotientMap T, and let $(X/\cong, \T_{\tilde{d}})$ be the topological space induced by the metric space $(X/\cong, \tilde{d})$. 
+    Let $(X/\cong, \T_{X/\cong})$ be the  \QuotientTopologicalSpace with \QuotientMap T, and let $(X/\cong, \T_{\tilde{d}})$ be the \TopologicalSpace induced by the \MetricSpace  $(X/\cong, \tilde{d})$. 
     The following are true. 
-    \begin{enumerate}
-        \item $\tilde{d}$ is in fact well defined, and is a metric on $X/\cong$, justifying calling it the \MetricInducedByPseudometric d.
-        \item $\T_{X/\cong} = \T_{\tilde{d}}$
-        \item T is an isometric surjection $(X,d)$ to $(X/\cong, \tilde{d})$
-        \item $(X/\cong, \tilde{d})$ is complete if and only if $(X, d)$ is \PseudometricComplete.
-
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:pseudometricinducedmetric}~\roman*}]
+        \item 
+        \label{def:MFPM:IsMetric}
+        $\tilde{d}$ is a well defined
+        \Metric on $X/\cong$. 
+        \item 
+        \label{def:MFPM:TopolgiesEqual}
+        $\T_{X/\cong} = \T_{\tilde{d}}$
+        \item 
+        \label{def:MFPM:IsIsometricSurjection}
+        T is an \Isometric \Surjection of $(X,d)$ 
+        onto $(X/\cong, \tilde{d})$
+		\item
+		\label{def:MFPM:Injection}
+		$(X,d)$ is a \MetricSpace if and only if 
+		$T$ is \Injective.
+        \item 
+        \label{def:MFPM:CompleteInherited}
+        $(X/\cong, \tilde{d})$ is complete if and only if 
+        $(X, d)$ is \PseudometricComplete.
     \end{enumerate}
-    \begin{proof}[Proof of 01]
-        First we show that $\tilde{d}$ is well defined as a mapping, that is, that if
+    \begin{proof}[Proof of \ref{def:MFPM:IsMetric}]
+        First we show that $\tilde{d}$ is well defined as a function, that is, that if
         $x_0,y_0 \in X$ and $x_1 \cong x_0$ and $y_1 \cong y_0$, then we should have 
-        \begin{equation}
+        \begin{equation*}
             \tilde{d}\pa{\bra{x_0},\bra{y_0}}=\tilde{d}\pa{\bra{x_1},\bra{y_1}}
-        \end{equation}
+        \end{equation*}
         
         This is easy, as
         \begin{align*}
@@ -26,7 +40,7 @@
             &=d(x_0,y_0)
          \end{align*}
          Nonnegativity falls directly from the nonnegativity of d. 
-         Proving that $\tilde{d}$ is a \SymmetricMap is equally trivial
+         Proving that $\tilde{d}$ is \CommutativeFunction is equally trivial
          \begin{align*}
              \tilde{d}\pa{\bra{x}, \bra{y}}= d(x,y) = d(y,x) = \tilde{d}\pa{\bra{y}, \bra{x}}
          \end{align*}
@@ -41,9 +55,9 @@
              \tilde{d}\pa{\bra{x_0}, \bra{y_0}}=d(x_0,y_0) \neq 0
              \end{equation*}
     \end{proof}
-    \begin{proof}[Proof of 02]
-        By \ref{prop:QuotientSpaceTopology}, part 9, $\scB_{\cong}:=\{T(B_d(x;\epsilon)) | x \in X, \epsilon > 0\}$ is a basis for $\T_{X/\cong}$. 
-        By definition, $\scB_{\tilde{d}}:=\{B_{\tilde{d}}(\bra{x}; \epsilon) | x \in X , \epsilon > 0 \}$ is a basis for $\T_{\tilde{x}}$. 
+    \begin{proof}[Proof of \ref{def:MFPM:TopolgiesEqual}]
+        By \ref{prop:QST:Basis}, $\scB_{\cong}:=\{T(B_d(x;\epsilon)) : x \in X, \epsilon > 0\}$ is a \TopologyBasis for $\T_{X/\cong}$. 
+        By definition, $\scB_{\tilde{d}}:=\{B_{\tilde{d}}(\bra{x}; \epsilon) : x \in X , \epsilon > 0 \}$ is a \TopologyBasis for $\T_{\tilde{x}}$. 
         
         I claim that for each $x \in X$ and $\epsilon > 0$, 
         \begin{equation}
@@ -66,58 +80,75 @@
         Suppose $\bra{y} \in B_{\tilde{d}}\pa{\bra{x} ; \epsilon}$. 
         Then $d(x,y) = \tilde{d}()\bra{x},\bra{y}) < \epsilon$, so $y \in B_d(x; \epsilon)$. 
         Hence $[y]=T(y) \in T\pa{B_d(x;\epsilon)}$, so the reverse inclusion also holds, and so the above claim holds. 
-        This, paired witht he fact that 
-        \begin{equation}
-            \{[x] | x \in X\}= X/\cong
-        \end{equation}
+        This, paired with the fact that 
+        \begin{equation*}
+            \{[x] : x \in X\}= X/\cong
+        \end{equation*}
         finishes the result. 
         
     \end{proof}
-    \begin{proof}[Proof of 03]
-        Falls directly from the definition $T(x)=\bra{x}$, hence
-        \begin{equation}
-            d(x,y) = \tilde{d}\pa{\bra{x}, \bra{y}} = \tilde{d}\pa{T(x), T(y)}
-        \end{equation}
+    \begin{proof}[Proof of \ref{def:MFPM:IsIsometricSurjection}]
+    Let $x,y \in X$. Then, 
+    \begin{equation*}
+        d(x,y) = \tilde{d}\pa{\bra{x}, \bra{y}} = \tilde{d}\pa{T(x), T(y)}
+    \end{equation*}
         
-        T is surjective by \ref{prop:QuotientMapSurjective}.
+        T is \Surjective by \ref{prop:QuotientMapSurjective}.
     \end{proof}
-    \begin{proof}[Proof of 04]
+	\begin{proof}[Proof of \label{def:MFPM:Injection}]
+	Let $T$ be \Injective. 
+	Let $x,y \in X$ with $x \neq y$. 
+	Then $T(x) \neq T(y)$, so by 
+	\ref{def:MFPM:IsMetric}
+	and
+	\ref{def:MFPM:IsIsometricSurjection}, 
+	$0 < \tilde{d}\pa{T(x),T(y)}= d(x,y)$. 
+	Hence $d$ is a \Metric. 
+
+	Now suppose $d$ is a \Metric. 
+	Let $x,y \in X$ with $x \neq y$. 
+	Then $d(x,y) > 0$. Hence by
+	\ref{def:MFPM:IsIsometricSurjection}, 
+	$\tilde{d}(T(x),T(y)) = d(x,y) > 0$. 
+	Hence $T(x) \neq T(y)$. 
+	\end{proof} 
+    \begin{proof}[Proof of \ref{def:MFPM:CompleteInherited}]
         Let $(X,d)$ be \PseudometricComplete. 
         Let $\{[x_i]\}_{i \in \N} \subset (X/\cong, \tilde{d})$ be a \PseudometricCauchySequence. 
         Let $\epsilon > 0$. 
         Then there exists $N \in \N$ such that for $m,n > N$, we have 
-        \begin{equation}
+        \begin{equation*}
             d(x_m, x_n) = \tilde{d}(Tx_m, Ty_m) =\tilde{d}([x_m], [x_n]) < \epsilon
-        \end{equation}
-        So the sequence $\{x_i\}_{ i \in \N} \subset (X,d)$ is \PseudometricCauchySequence. 
-        Since $(X,d)$ is \PseudometricComplete, this sequence has a limit, say $x_i \to x \in (X,d)$. 
-        But, we have $[x_i]=Tx_i \to Tx = [x]$, so $\{[x_i]\}$ is convergent, and since that sequence was arbitrary, $(X/\cong, \tilde{d})$ is \PseudometricComplete. 
+        \end{equation*}
+        So the \Sequence $\{x_i\}_{ i \in \N} \subset (X,d)$ is \PseudometricCauchySequence. 
+        Since $(X,d)$ is \PseudometricComplete, this \Sequence has a limit, say $x_i \to x \in (X,d)$. 
+        But, we have $[x_i]=Tx_i \to Tx = [x]$, so $\{[x_i]\}$ is convergent, and since that \Sequence was arbitrary, $(X/\cong, \tilde{d})$ is \PseudometricComplete. 
         
         Let $(X/\cong, \tilde{d})$ be \PseudometricComplete. 
         Let $\{x_i\} \subset X$ be a \PseudometricCauchySequence.
         Let $\epsilon > 0$. Then there exist $N \in \N$ such that for $m,n > N$, we have
-        \begin{equation}
+        \begin{equation*}
             \tilde{d}\pa{[x_m], [x_n]} = \tilde{d}(Tx_m, Tx_n) = d(x_m, x_n) < \epsilon
-        \end{equation}
+        \end{equation*}
         so that $\{[x_i]\}_{i \in \N}$ is also a \PseudometricCauchySequence. 
-        Since $(X/\cong, \tilde{d})$ is \PseudometricComplete, this sequence has a limit, say $[x_i] \to y \in X/\cong$. 
-        Since T is surjective, for some $x \in X$, $Tx \in y$, and so
-        \begin{equation}
+        Since $(X/\cong, \tilde{d})$ is \PseudometricComplete, this \Sequence has a limit, say $[x_i] \to y \in X/\cong$. 
+        Since T is \Surjective, for some $x \in X$, $Tx \in y$, and so
+        \begin{equation*}
             d(x, x_i) = \tilde{d}(Tx, Tx_i) =\tilde{d}(y, [x_i]) \to 0
-        \end{equation}
+        \end{equation*}
         meaning $x_i \to x$ and we are done. 
                 
 \end{proof}
 \end{prop}
 
-\begin{rmk}[Mettic Space Correspondence]
-
-Note that in the case of a metric space, 
+\begin{rmk}[\MetricSpace  Correspondence]
+\rm
+Note that in the case of a \MetricSpace
 the condition of being
 \PseudometricComplete is equivalent to 
 the condition being
 Complete,  and
-A sequence is a 
+A \Sequence is a 
 \PseudometricCauchySequence 
-if and only if it is a cauchy sequence. 
+if and only if it is a Cauchy \Sequence. 
 \end{rmk}

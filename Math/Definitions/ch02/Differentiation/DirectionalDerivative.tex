@@ -1,0 +1,35 @@
+\newcommand{\DirectionalDerivative}[0]{\textbf{\hyperref[def:DirectionalDerivative]{Directional Derivative}}\xspace}
+\newcommand{\DirectionalDerivatives}[0]{\textbf{\hyperref[def:DirectionalDerivative]{Directional Derivatives}}\xspace}
+\begin{df}[\DirectionalDerivative]
+\label{def:DirectionalDerivative}
+\rm
+Let $X$ be a \TVS.
+Let $Y$ be a \Hausdorff \TVS.
+Let $C \subset X$. 
+Let $y_0 \in X$ and let $x_0 \in C$. 
+Let $f:C \to X$. 
+Suppose $x_0$ is an \AccumulationPoint of $[x_0, x_0+y_0]$. 
+Suppose 
+\begin{equation*}
+\lim\limits_{t \searrow 0} \frac{f\pa{x_0+ty_0} - f(x_0)}{t}
+\end{equation*}
+exists. 
+Then we say that the \DirectionalDerivative of $f$
+in the direction of $y_0$ exists at $x_0$.
+Let $D \subset C \times X$ denote the collection of pairs $(x,y)$ 
+such that the \DirectionalDerivative of $f$ in the direction of $y$ 
+exists at $x_0$. 
+Then we define, for each $x,y \in D$. 
+\begin{equation*}
+f_+'(x,y) = \lim\limits_{t \searrow 0} \frac{f(x+ty)-f(x)}{t}
+\end{equation*}
+We call $f_+'(x,y)$ the \DirectionalDerivative 
+of $f$ in the direction of $y$ at $x$, and 
+we call $f_+$ the \DirectionalDerivative of $f$. 
+Let $F \subset C \times X$ denote the collection of pairs
+$(x,y)$ such that the \DirectionalDerivative of $f$ 
+in the direction of $-y$ exists at $x$. 
+Then we define, for each $(x,y) \in F$, 
+$f_-'(x,y) = f_+'(x,-y)$. 
+\end{df}
+

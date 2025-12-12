@@ -27,18 +27,12 @@
         the collection of 
         \Finite intersections of elements of $\scK := \{A\} \cup \scF$ is given by 
         \begin{equation*}
-            \scL:=\scF \cup \{ A \cap F | F \in \scF\}
+            \scL:=\scF \cup \{ A \cap F : F \in \scF\}
         \end{equation*}
-        By \ref{def:Filter:DoesntContainEmpty}, $\emptyset \not \in \scF$. 
-        Hence, $\emptyset \not \in \scL$ if and only if 
-        $\emptyset \not \in \{A \cap F | F \in \scF\}$
         By
-        \ref{prop:FilterExistence}, 
-        $\emptyset \not \in \scL$ is equivalent to 
-        there existing a \Filter on $X$ containing $\scK$, 
-        and so there existing a \Filter on $X$ containing $\scK$ 
-        is equivalent to 
-        $\emptyset \not \in \{A \cap F | F \in \scF\}$. 
+        \ref{prop:FilterExistence}
+        there is a \Filter containing $\scK$ if and only if 
+        $\emptyset \not \in \scL$.
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FinestFilterExistence}]
         By 

@@ -1,1 +1,61 @@
-\begin{prop}\bf REMOVE\rm \end{prop}
+\begin{prop}[\TopologyOfUniformConvergence is a \Topology]
+\label{prop:TopologyOfUniformConvergence}
+\rm
+    Let $X$ be a nonempty set. 
+    Let $(Y,\scT_Y)$ be a \TopologicalGroup.
+    Let $\scF$ be a 
+    \Subgroup of the set of 
+    functions  $T:X \to Y$. 
+    Let 
+    $\emptyset \neq \scG \subset 2^X$  such that 
+	$(\scG, \subset)$ is a \DirectedSet.
+    Then the \TopologyOfUniformConvergence 
+    is a left-invariant \Topology on $\scF$. 
+\begin{proof}
+Existence and uniqueness will be proven by a 
+use of 
+\ref{prop:TopFromNbhFilter}
+to the collection $\{\scU(f)\}_{f \in \scF}$.
+From there, left-invariance is clear, as 
+$\scU(f)=f*\scU(e)$.
+Let $f \in \scF$. 
+I first show that $\scB(f)$ is a 
+\FilterBase for a \Filter on $\scF$, 
+every element of which contains $f$. 
+Since $\scF$ is a \Subgroup, it 
+contains the function $g(x)=e$ for each $x \in X$. 
+We have $g \in M(x,y)$ for each $x \in \scG$ and $y \in \scB$.
+Hence $f=f*g \in f*M(x,y)$ for each $x \in \scG$ and $y \in \scB$.
+Hence $\scB(f)$ satisfies 
+\ref{def:FilterBase:DoesntContainEmptySet}.
+Furthermore, since $\scG \neq \emptyset$, $\scB(f)$ satisfies
+\ref{def:FilterBase:IsNotEmpty}.
+Let $U_1,U_2 \in \scG$ and let $V_1,V_2 \in \scB$.
+Since $(\scG,\subset)$ is a \DirectedSet, there exists
+$U \in \scG$ such that $U_1 \cup U_2 \subset U$. 
+Since $\scB$ is a \LocalBasis for $\scT_y$, 
+there exists $V \in \scB$ such that $V \subset V_1 \cap V_2$. 
+Then $\pa{f*M(U,V)} \subset \pa{f*M(U_1,V_1)} \cap \pa{f*M(U_2,V_2)}$.
+Hence $\scB(f)$ satisfies \ref{def:FilterBase:IntersectionProperty}, 
+and so $\scF$ is a \FilterBase for a \Filter on $f$. 
+Hence $\scB(f)$ is a \FilterBase for a \Filter $\scU(f)$ on $\scF$. 
+Now, let $f_1 \in \scF$. Let $U_1 \in \scG$ and let $V_1 \in \scB$. 
+By 
+\ref{prop:SymmetricContained}, 
+there exists $V \in \scB$ such that 
+$VV \subset V_1$. 
+Let $y \in fM(U_1,V)$. 
+Then
+\begin{equation*}
+yM(U_1,V) \subset fM(U_1,V)M(U_1,V) \subset fM(U_1,VV) \subset fM(U_1,V_1)
+\end{equation*}
+Since $yM(U_1,V) \in \scB(y)$, $yM(U_1,V) \in \scU(y)$, and so 
+$fM(U_1,V_1) \in \scU(y)$. 
+Hence $\{\scU(f)\}_{f \in \scF}$ satisfies \ref{prop:NeighborhoodFilter:CharacteristicProperty}.
+By 
+\ref{prop:TopFromNbhFilter}, 
+there is a unique \Topology $\scT$ on $\scF$
+sucht that for each $f \in \scF$, $\scU(f)$ is the 
+\NeighborhoodFilter for $\scT$ at $f$. 
+\end{proof}
+\end{prop}

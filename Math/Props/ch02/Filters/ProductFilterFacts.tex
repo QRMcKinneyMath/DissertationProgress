@@ -9,11 +9,11 @@
     , $\scB_\alpha$ is a \FilterBase for a \Filter $\scF_\alpha$ on $X_\alpha$.
     \item For each $\alpha \in A$, $\scG_\alpha$ is a \FilterSubbasis
     which \FilterGenerates $\scF_\alpha$. 
-    \item For each $\gamma \in A$, $\pi_\gamma : \prod\limits_{\alpha \in A} X_\alpha \to  X_\gamma$ represents the \ProjectionMap. 
+    \item For each $\gamma \in A$, $\pi_\gamma : \prod\limits_{\alpha \in A} X_\alpha \to  X_\gamma$ represents the $\gamma-$\ProjectionMap. 
     \item $\scG:=\bigcup\limits_{\alpha \in A} \pi_\alpha^{-1}(\scG_\alpha)$. 
     \item $\scB$ is the collection of finite intersections of elements of 
-        $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scB_\alpha)$
-    \item $\scF$ is the \ProductFilter on $\prod\limits_{\alpha \in A} (X_\alpha, \scF_\alpha)$
+        $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scB_\alpha)$.
+    \item $\scF$ is the \ProductFilter on $\prod\limits_{\alpha \in A} (X_\alpha, \scF_\alpha)$.
 \end{enumerate}
 Then the following are true 
 \begin{enumerate}[label=(\roman*), ref={\ref{prop:ProductFilterFacts}.~\roman*}]
@@ -74,7 +74,6 @@ for every $\alpha \in A$, $\pi_\alpha (\scF) = \scF_\alpha$.
     $\bigcup\limits_{\alpha\in A} \pi_{\alpha}^{-1}\pa{\scB_\alpha}$ 
     generates a \Filter $\scF_0$ on $\prod\limits_{\alpha \in A}X_\alpha$.
     In Particular, the above equation implies $\scF_0 \subset \scF$. 
-    Denote 
     Let $\alpha \in A$. 
     By \ref{prop:InverseFilterImage:Base}, both 
     $\pi_\alpha^{-1}(\scF_\alpha)$ and $\pi_{\alpha}^{-1}(\scB_\alpha)$ are \FilterBases 
@@ -88,7 +87,7 @@ for every $\alpha \in A$, $\pi_\alpha (\scF) = \scF_\alpha$.
     than $\pi_{\alpha}^{-1}(\scF_\alpha)$. 
     This implies that any $\Filter$ containing $\pi_{\alpha}^{-1}(\scB_\alpha)$ also contains 
     $\pi_{\alpha}^{-1}(\scF_\alpha)$. 
-    Since, for each $\alpha \in A$, $\pi_{\alpha}^{-1}(\scB_\alpha)\subset\scF_0$
+    Since, for each $\alpha \in A$, $\pi_{\alpha}^{-1}(\scB_\alpha)\subset\scF_0$,
     for each $\alpha \in A$, $\pi_\alpha^{-1} \pa{\scF_\alpha} \subset \scF_0$. 
     Hence $\bigcup\limits_{\alpha \in A}\pi_\alpha^{-1} \pa{\scF_\alpha} \subset \scF_0$, 
     so by \ref{def:GeneratedFilter}, $\scF \subset \scF_0$. 
@@ -116,7 +115,7 @@ for every $\alpha \in A$, $\pi_\alpha (\scF) = \scF_\alpha$.
     \end{equation*}
     So the collection of \Finite intersections of elements 
     of $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scK_\alpha)$ equals the 
-    collection of finite intersections of elements of $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scG_\alpha)$, they generate the same \Filter!
+    collection of finite intersections of elements of $\bigcup\limits_{\alpha \in A} \pi_{\alpha}^{-1}(\scG_\alpha)$, they generate the same \Filter.
 \end{proof}
 \begin{proof}[Proof of \ref{prop:ProductFilterFacts:Characterization}]
 I first show that $\scF$ has the described property, 

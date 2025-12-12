@@ -1,27 +1,41 @@
 \begin{prop}[\AdjointOperator]
     \label{prop:adjointoperator}
-    Let X, Y, and Z be \SeminormedSpaces
-    over a field $\F \in \{\R, \C\}$. .
+    \rm
+    Let $X$, $Y$, and $Z$ be \SeminormedSpaces
+    over a \Field $\F \in \{\R, \C\}$. .
     Let $T \in BL(X,Y)$. 
     Let $\T=T^\times_Z$ denote the 
     \AdjointOperator of T
     relative to the space Z. 
     Let $Q_y$ denote the \QuotientMap
-
     The following are true. 
-    \begin{enumerate}
-        \item $\T$ is Linear. 
-        \item If $S \in BL(Y,Z)$, then $\T S \in BL(X,Z)$. (That is, the \AdjointOperator is well defined as a concept).
-        \item $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$. 
-        \item $\norm{\T}=\norm{T}$
-        \item If T is surjective, then $\inf\limits_{\norm{x}=1}\norm{Tx} \leq \inf\limits_{\norm{S}_{BL(Y,Z)} = 1} \norm{\T S} $. Also TODO: Weaken T surjectivity condition
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:adjointoperator}~\roman*}]
+        \item 
+        \label{prop:Adjoint:Linear}
+        $\T$ is Linear. 
+        \item 
+        \label{prop:Adjoint:WellDefined}
+        If $S \in BL(Y,Z)$, then $\T S \in BL(X,Z)$. (That is, the \AdjointOperator is well defined as a concept).
+        \item 
+        \label{prop:Adjoint:Continuous}
+        $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$. 
+        \item 
+        \label{prop:Adjoint:Isometry}
+        $\norm{\T}=\norm{T}$
+        \item 
+        \label{prop:Adjoint:DenseRange}
+        If T is \Surjective, then $\inf\limits_{\norm{x}=1}\norm{Tx} \leq \inf\limits_{\norm{S}_{BL(Y,Z)} = 1} \norm{\T S} $. Also TODO: Weaken T surjectivity condition
 				To Range(T) dense in Y. 
-		\item If Range(T) is not dense in Y, then $\inf\limits_{\norm{S}_{BL(Y,Z)}=1} \norm{\T S} =0$
-        \item $\T$ is surjective ifff T is injective and has closed range in Y. 
+		\item 
+        \label{prop:Adjoint:NotDenseRange}
+        If Range(T) is not dense in Y, then $\inf\limits_{\norm{S}_{BL(Y,Z)}=1} \norm{\T S} =0$
+        \item 
+        \label{prop:Adjoint:Surjective}
+        $\T$ is \Surjective if and only if T is \Injective and has \SetClosed range in Y. 
     \end{enumerate}
 
 
-    \begin{proof}[Proof of 01]
+    \begin{proof}[Proof of \ref{prop:Adjoint:Linear}]
         Let $S,R \in BL(Y,Z)$, 
         $\alpha \in \F$, 
         and $x \in X$. 
@@ -33,28 +47,28 @@
             & = \ip{x, \alpha \T S} + \ip{x, \T R} \\
             & = \ip{x, \alpha \T S + \T R}
         \end{align*}
-        Since $x \in X$ was arbitrary, linearity is verified. 
+        Since $x \in X$ was arbitrary, \Linearity is verified. 
     \end{proof}
-    \begin{proof}[Proof of 02]
+    \begin{proof}[Proof of \ref{prop:Adjoint:WellDefined}]
         Let $S \in BL(Y,Z)$. 
         Then, 
         $\T S = S \circ T$. 
         The composition of continuous operators is continuous, so $\T S$ is 
         continuous.
         The composition of linear operators is linear, so $\T S$ is linear.
-        This, paired with linearity, implies $\T S \in BL(X,Z)$.
+        This, paired with \Linearity, implies $\T S \in BL(X,Z)$.
     \end{proof}
-    \begin{proof}[Proof of 3]
+    \begin{proof}[Proof of \ref{prop:Adjoint:Continuous}]
         Let $S \in BL(Y,Z)$. Then, 
         if $x \in X$
-        \begin{equation}
+        \begin{equation*}
         \norm{\ip{x, \T S}} = \norm{\ip{Tx, S}} \leq \norm{S} \norm{Tx} \leq \norm{S} \norm{T} \norm{x}
-        \end{equation}
+        \end{equation*}
         Hence $\norm{\T S} \leq \norm{S} \norm{T}$
         Since T is linear, and since S was arbitrary, 
         by part  12 of \ref{prop:BLO}, $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$.
     \end{proof}
-    \begin{proof}[Proof of 4]
+    \begin{proof}[Proof of \ref{prop:Adjoint:Isometry}]
         For any $S \in BL(Y,Z)$, 
         $\T S = S \circ T$, so
         $\norm{\T S} \leq \norm{S} \norm{T}$. 
@@ -77,7 +91,7 @@
         Since the inequality goes both ways, $\norm{T}=\norm{\T}$.
 
     \end{proof}
-    \begin{proof}[Proof of 05]
+    \begin{proof}[Proof of \ref{prop:Adjoint:DenseRange}]
         Let $\Gamma=\inf\limits_{\norm{x}=1} \norm{Tx}$, 
         and let $S \in BL(Y,Z)$ with $\norm{S} = 1$. 
         Then, 
@@ -89,7 +103,7 @@
             \sup\limits_{\norm{x}\leq 1} \abs{\ip{Tx, S}} \geq \sup\limits_{\norm{Tx} \leq \Gamma}\abs{\ip{Tx, S}}
         \end{equation*}
 
-        Also, since T is surjective by assumption, 
+        Also, since T is \Surjective by assumption, 
         \begin{equation*}
             \sup\limits_{\norm{Tx} \leq \Gamma} \abs{\ip{Tx, S}} = \sup\limits_{\norm{y} \leq \Gamma} \abs{\ip{y, S}}
         \end{equation*}

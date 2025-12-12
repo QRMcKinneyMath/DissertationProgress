@@ -6,30 +6,27 @@
 \begin{df}[\Magma]
 \label{def:Magma}
 \rm
-    Let $X$ be a nonempty set and
-    $T:X \times X \to X$ be a 
+    Let $X$ be a nonempty set.
+    Let $T:X \times X \to X$ be a 
     \BinaryOperation
     on $X$. 
     We call the pair $(X,T)$ a 
     \Magma.
-    When it is clear what operation is being referred to, 
-    we may simply refer to $X$
-    as the 
+    When $T$ is clear, we call $X$ a 
     \Magma.
 	If 
 	$T$
 	is
 	\CommutativeFunction, 
 	then we call 
-	$(X,T)$ (or simply just $X$)
+	$(X,T)$
 	a \CommutativeMagma.
 	In general, this naming convention is used 
 	for any algebraic structure defined on a set 
 	via a \BinaryOperation with
 	particular properties. 
-	
 	Now let $(M,+)$ be a \Magma, let $x \in M$, and let 
-	$A,B \subset M$. 
+	$A,B \subset M$. Let $\scU,\scV \subset 2^M$.
 	We define the following:
 	\begin{equation*}
 	x+A = \{x+y : y \in A\}
@@ -40,4 +37,19 @@
 	\begin{equation*}
 	A+B = \{a+b : a \in A \tab[.5cm] and \tab[.5cm] b \in B\}
 	\end{equation*}
+    \begin{equation*}
+    \scU+\scV = \{U+V : (U \in \scU)(V \in \scV)\}
+    \end{equation*}
+    \begin{equation*}
+    \scU + A = \{U+A : U \in \scU\}
+    \end{equation*}
+    \begin{equation*}
+    A+\scU = \{A +U : U \in \scU\}
+    \end{equation*}
+    \begin{equation*}
+    \scU+x=\{U+x : U \in \scU\}
+    \end{equation*}
+    \begin{equation*}
+    x+\scU = \{x+U : U \in \scU\}
+    \end{equation*}
 \end{df}

@@ -1,12 +1,13 @@
 
 \newcommand{\PseudometricInducedMetric}[0]{\textbf{\hyperref[def:pseudometricinducedmetric]{Pseudometric Induced Metric}}\xspace}
 \newcommand{\MetricInducedByPseudometric}[0]{\textbf{\hyperref[def:pseudometricinducedmetric]{Metric Induced By The Pseudometric}}\xspace}
-\begin{df}[Metric Space Induced By Pseudometric]
+\begin{df}[\MetricInducedByPseudometric]
     \label{def:pseudometricinducedmetric}
-    Let $(X,d)$ be a \PseudometricSpace, and let $\cong$ be the \RelationOfZeroDistance, which by \ref{prop:relationofzerodistance} is also the \RelationOfEqualNeighborhoodFilters $(X,\T_d)$. 
+    \rm
+    Let $(X,d)$ be a \PseudometricSpace, and let $\cong$ be the \RelationOfZeroDistance, which by \ref{prop:relationofzerodistance} is also the \RelationOfEqualNeighborhoodFilters on $(X,\T_d)$. 
     Define $\tilde{d}: X/\cong \to [0,\infty)$ by 
-    \begin{equation}
+    \begin{equation*}
         \tilde{d}\pa{\bra{x}, \bra{y}} = d(x,y)
-    \end{equation}
-    By \ref{prop:pseudometricinducedmetric}, $\tilde{d}$ is well defined and is in fact a metric on $X/\cong$, so we call $\tilde{d}$ the \MetricInducedByPseudometric d on X, or we call it the \PseudometricInducedMetric of $(X,d)$. 
+    \end{equation*}
+    By \ref{prop:pseudometricinducedmetric}, $\tilde{d}$ is well defined and is in fact a \Metric on $X/\cong$, so we call $\tilde{d}$ the \MetricInducedByPseudometric d on X, or we call it the \PseudometricInducedMetric of $(X,d)$. 
 \end{df}

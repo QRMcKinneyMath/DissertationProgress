@@ -1,0 +1,67 @@
+\begin{prop}[\QuotientVectorSpace]
+\label{prop:QuotientVectorSpace}
+\rm
+Let $V$ be a \VectorSpace.
+Let $U \subset V$ be a \VectorSubspace. 
+Let $(U/V, \oplus, \odot)$ denote the \QuotientVectorSpace 
+as defined in \ref{def:QuotientVectorSpace}.
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:QuotientVectorSpace}~\roman*}]
+\item 
+\label{prop:QuotientVectorSpace:WellDefined}
+$\odot$ is well defined and makes $V/U$ into a 
+\VectorSpace over $\scF$. 
+\item 
+\label{prop:QuotientVectorSpace:QuotientMapLinear}
+Let $Q:V \to V/U$ denote the \QuotientMap. 
+Then $Q$ is \Linear. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:QuotientVectorSpace:WellDefined}]
+We first show that $\odot$ is well defined. 
+Suppose $[x] \cong [y]$ and let $\alpha \in \scF$. 
+We must show that $[\alpha x] = [\alpha y]$. 
+Since $[x] = [y]$, $x \cong y$, so $x-y \in U$. 
+Hence $\alpha x - \alpha y = \alpha (x-y) \in \alpha U \subset U$. 
+Hence $[\alpha x ]  = [\alpha y]$, so 
+$\alpha \odot [x] = [\alpha \cdot x ] = [\alpha \cdot y] = \alpha \odot [y]$. 
+thus $\odot$ is well defined. 
+By 
+\ref{rmk:NormalSubgroup}
+and
+\ref{prop:QuotientMagma:Commutative}, 
+all that remains is to show that 
+$V/U$ satisfies
+\ref{def:VectorSpace:Associativity}, 
+\ref{def:VectorSpace:Distributivity1}, 
+\ref{def:VectorSpace:Distributivity2},  and
+\ref{def:VectorSpace:Identity}.
+Let 
+$\alpha, \beta \in \scF$ Let $x,y \in V$. 
+For \ref{def:VectorSpace:Associativity}, we have
+\begin{equation*}
+\alpha \odot \pa{\beta \odot[x]} = \alpha \odot[\beta \cdot x] = [\alpha \cdot \pa{\beta \cdot x}] = [\pa{\alpha \beta} \cdot x] = \pa{\alpha \beta} \odot [x]
+\end{equation*}
+For 
+\ref{def:VectorSpace:Distributivity1},  we have 
+\begin{equation*}
+\pa{\alpha + \beta} \odot [x] = [\pa{\alpha+\beta}\cdot x ] = [\pa{\alpha \cdot x}+ \pa{\beta \cdot x}] = [\alpha \cdot x] \oplus [\beta \cdot x ]= \pa{\alpha \odot [x] }\oplus\pa{ \beta \odot [x]}
+\end{equation*}
+For \ref{def:VectorSpace:Distributivity2}, we have 
+\begin{equation*}
+\alpha \odot\pa{[x] \oplus [y] } = \alpha \odot [x+y] = [\alpha \cdot \pa{x+y}] = [\pa{\alpha \cdot x} + \pa{\alpha \cdot y}] = [\alpha \cdot x] \oplus [\alpha \cdot y] = \pa{\alpha \odot [x]} + \pa{ \alpha \odot [y]}
+\end{equation*}
+For \ref{def:VectorSpace:Identity}, we have 
+\begin{equation*}
+1 \odot[x] = [1 \cdot x] = [x]
+\end{equation*}
+which concludes this proof. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientVectorSpace:QuotientMapLinear}]
+By 
+\ref{prop:QuotientMagma:Homomorphism}, 
+$Q$ is a \MagmaHomomorphism. 
+Hence it is sufficient to show that $Q$ is \ScalarHomogeneous.
+Let $\alpha \in \scF$ and let $x \in V$. Then
+$Q(\alpha x) = [\alpha x ] = \alpha \odot [x]= \alpha Q(x)$, finishing the proof. 
+\end{proof}
+\end{prop}

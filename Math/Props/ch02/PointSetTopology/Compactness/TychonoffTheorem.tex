@@ -1,0 +1,75 @@
+\begin{thm}[Tychonoff]
+\label{thm:Tychonoff}
+\rm
+Let $A$ be a nonempty set.
+For each $\alpha \in A$, let
+$(X_{\alpha}, \scT_{\alpha})$ be a 
+\TopologicalSpace.
+Define $X=\prod\limits_{\alpha \in A} X_\alpha$. 
+Endow $X$ with the \ProductTopology. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{thm:Tychonoff}~\roman*}]
+\item
+\label{thm:Tychonoff:CompactProduct}
+$X$ is \SetCompact.
+\item
+\label{thm:Tychonoff:CompactComponents}
+Each $X_\alpha$ is \SetCompact.
+\end{enumerate}
+\begin{proof}[Proof of \ref{thm:Tychonoff:CompactComponents} implies \ref{thm:Tychonoff:CompactProduct}]
+Let each $X_{\alpha}$ be \SetCompact.
+Let $\scG$ be an \Ultrafilter on $X$. 
+Since each $\pi_{\alpha}:X \to X_{\alpha}$ is \Surjective, 
+by 
+\ref{prop:DirectFilterImage:Ultrafilter}, 
+for each $\alpha \in A$, 
+$\pi_{\alpha}\pa{\scG}$ is an 
+\UltrafilterBase
+for an 
+\Ultrafilter
+$\scG_{\alpha}$ 
+on $X_{\alpha}$. 
+By
+\ref{prop:CompactFilter}, 
+for each $\alpha \in A$, 
+$\scG_{\alpha}$ has a \FilterLimit $x_{\alpha} \in X_{\alpha}$. 
+Define $x=\{x_{\alpha}\}_{\alpha \in A} \in X$. 
+I claim that $x$ is a \FilterLimit for $\scG$. 
+To see this, let $U \in \scU_{\scT}(x)$. 
+Then there exists $\{\alpha_{i}\}_{i=1}^n \subset A$
+and $U_{\alpha_i} \in \scU_{\scT_{\alpha_i}}(x_{\alpha_i})$ 
+such that 
+$x \in \bigcap\limits_{i=1}^n \pi_{\alpha_i}^{-1}\pa{U_{\alpha_i}} \subset U$.
+Since $\scG_{\alpha_i}$ has $x_{\alpha_i}$ as a \FilterLimit, 
+fore each $1 \leq i \leq n$, there exists $V_i \in\scG_{\alpha_i}$ such that 
+$V_i \subset U_{\alpha_i}$. 
+Since $\pi_{\alpha_i}\pa{\scG}$ is an 
+\UltrafilterBase for $\scG_{\alpha_i}$, 
+for each $1 \leq i \leq n$, there exists $W_i \in \scG$ 
+such that $\pi_{\alpha_i}\pa{W_i} \subset V_i \subset U_{\alpha_i}$. 
+Hence, for each $1 \leq i \leq n$, 
+$W_i \subset \pi_{\alpha_i}^{-1}\pa{U_{\alpha_i}}$. 
+Furthermore, since $\pi_{\alpha_i}\pa{W_i} \in \scG_{\alpha}$, 
+$x_{\alpha_i} \in \pi_{\alpha_i}\pa{W_i}$.
+This implies $x \in \bigcap\limits_{i=1}^n W_{i}$. 
+Thus we have 
+\begin{equation*}
+x \in \bigcap\limits_{i=1}^n W_{i} \subset \bigcap\limits_{i=1}^n \pi_{\alpha_i}^{-1}\pa{U_{\alpha_{i}}} \subset U
+\end{equation*}
+Since $\scG$ is a \Filter, $\bigcap\limits_{i=1}^n W_i \in \scG$, so
+$x$ is a \FilterLimit of $\scG$. 
+Hence, by \ref{prop:CompactFilter}, $X$ is \SetCompact.
+
+
+
+\end{proof}
+\begin{proof}[Proof of \ref{thm:Tychonoff:CompactProduct} implies \ref{thm:Tychonoff:CompactComponents}]
+Let $X$ be \SetCompact. 
+For each $\alpha \in A$, let $\pi_{\alpha}$ be the $\alpha-\ProjectionMap$. 
+By \ref{def:ProductTopology}, each $\pi_{\alpha}$ is \ContinuousFunction. 
+Hence, by 
+\ref{prop:CompactImage}, 
+for each $\alpha \in A$, 
+$X_{\alpha} = \pi_{\alpha}(X)$ is \SetCompact.
+\end{proof}
+\end{thm}

@@ -1,0 +1,26 @@
+\begin{prop}[\Linear operator quotient]
+\label{prop:LinearOperatorQuotient}
+\rm
+Let $\scF$ be a \Field. 
+Let $V_1$ and $V_2$ be
+\VectorSpaces over $\scF$. 
+Let $T:V_1 \to V_2$ be \Linear.
+Define $\tilde{T}:V_1/Kernel(T) \to Range(T)$ by 
+$\tilde{T}\pa{[x]} = T(x)$. 
+The following are true
+\begin{enumerate}
+\item $\tilde{T}$ is a \Bijective \Linear operator. 
+\item $T = \tilde{T} \circ Q$. 
+\end{enumerate}
+\begin{proof}
+By \ref{thm:GroupIsomorphism}, 
+$\tilde{T}$ is a \Bijective \MagmaHomomorphism
+and $T = \tilde{T} \circ Q$.
+Furthermore, if $[x] \in V_1/Kernel(T)$ and $\alpha \in \scF$, 
+then 
+\begin{equation*}
+\tilde{T}\pa{\alpha [x]} = \tilde{T}\pa{[\alpha x]} = T(\alpha x) = \alpha T(x) = \alpha \tilde{T}([x])
+\end{equation*}
+so $\tilde{T}$ is also \ScalarHomogeneous and is therefore \Linear, finishing the proof.
+\end{proof}
+\end{prop}

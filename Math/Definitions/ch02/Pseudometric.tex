@@ -2,28 +2,25 @@
 \newcommand{\Pseudometrics}[0]{\textbf{\hyperref[def:pseudometric]{Pseudometrics}}\xspace}
 \newcommand{\PseudometricSpaces}[0]{\textbf{\hyperref[def:pseudometric]{Pseudometric Spaces}}\xspace}
 \newcommand{\PseudometricSpace}[0]{\textbf{\hyperref[def:pseudometric]{Pseudometric Space}}\xspace}
-\begin{df}[Pseudometric]
+\begin{df}[\Pseudometric]
 \label{def:pseudometric}
 \rm
-    Let $X \neq \emptyset$. 
-    Let $d:X \times X \to [0,\infty)$ be a \SymmetricMap that satisfies the \TriangleInequality and further satisfies, for each $x \in X$, 
-    \begin{equation}
+    Let $X$ be a nonempty set.
+    Let $d:X \times X \to [0,\infty)$ be \CommutativeFunction, 
+    satisfy the \TriangleInequality, and for each $x \in X$, 
+    \begin{equation*}
         d(x,x) = 0
-    \end{equation}
-    Under these conditions we call d a \Pseudometric on X and we call $\pa{X,d}$ a \PseudometricSpace.
+    \end{equation*}
+    Then we call d a \Pseudometric on X and we call $\pa{X,d}$ a \PseudometricSpace.
     \end{df} 
 	
 	
 	
+\newcommand{\Metric}[0]{\textbf{\hyperref[def:metric]{Metric}}\xspace}
+\newcommand{\MetricSpace}[0]{\textbf{\hyperref[def:metric]{Metric Space}}\xspace}
+\begin{df}[\Metric]
 \label{def:metric}
-\newcommand{\Metric}[0]{
-    \bf \hyperref[def:pseudometric]{Metric} \rm
-}
-\newcommand{\MetricSpace}[0]{
-    \bf \hyperref[def:pseudometric]{Metric Space} \rm
-}
-
-\begin{df}[Metric]
+\rm
 	Let $(X,d)$ be a \PseudometricSpace. 
 	If d has the property that for
 	$x,y \in X$, if $x \neq y$, then

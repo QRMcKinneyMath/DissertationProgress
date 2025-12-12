@@ -1,36 +1,53 @@
 \begin{prop}[Space of Bounded Linear Operators On Seminormed Spaces]
 \label{prop:BLO} 
+\rm
 Let $(X,\norm{\cdot}_X)$ be a \SeminormedSpace. 
 Let $(Y, \norm{\cdot}_Y)$ be a \SeminormedSpace.
 Let $BL(X,Y)$ denote the \SpaceOfBoundedLinearOperators from X to Y. 
 Let $\norm{\cdot}$ denote the \OperatorSeminorm. 
 
 The following are true. 
-\begin{enumerate}
-%For Item 1, may have to prove result connecting 
-%pseudometric topology continuity to $\epsilon-delta$ cotninuity wrt the pseudometric. 
-\item $\norm{\cdot}$ is in fact a well-defined \Seminorm on $BL(X,Y)$. 
-\item If $\norm{\cdot}_Y$ is a \Norm, then so is $\norm{\cdot}$. 
-\item If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, then $\norm{T} = \sup\limits_{\norm{x}_X =\alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
-\item If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, , then $\norm{T} = \sup\limits_{0<\norm{x}_X \leq \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}= \sup\limits_{0<\norm{x}_X < \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
-\item If $T \in BL(X,Y)$ and $x \in X$, then $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$. 
-\item $S:X \to Y$ is linear
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:BLO}~\roman*}]
+\item 
+\label{prop:BLO:WellDefined}
+$\norm{\cdot}$ is a well-defined \Seminorm on $BL(X,Y)$. 
+\item 
+\label{prop:BLO:Norm}
+If $\norm{\cdot}_Y$ is a \Norm, then so is $\norm{\cdot}$. 
+\item 
+\label{prop:BLO:Sphere}
+If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, then $\norm{T} = \sup\limits_{\norm{x}_X =\alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
+\item 
+\label{prop:BLO:Ball}
+If $T \in BL(X,Y)$ and $\alpha \in (0,\infty)$, , then $\norm{T} = \sup\limits_{0<\norm{x}_X \leq \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}= \sup\limits_{0<\norm{x}_X < \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$. 
+\item 
+\label{prop:BLO:Schwarz}
+If $T \in BL(X,Y)$ and $x \in X$, then $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$. 
+\item 
+\label{prop:BLO:Characterization}
+$S:X \to Y$ is linear
 , $S(\Ker_X) \subset \Ker_Y$
 , and $\sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Sx}_Y}{\norm{x}_X} < \infty$
 , if and only if $S \in BL(X,Y)$. 
-\item A sequence $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence
+\item 
+\label{prop:BLO:UniformlyCauchy}
+A \Sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ is a \PseudometricCauchySequence
     if and only if
     there exists an $\alpha > 0$ 
     such that the collection of sequences 
-    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\alpha)\}$ is
+    $\{\{T_ix\}_{i \in \N} : x \in B_X(0;\alpha)\}$ is
     \UniformlyCauchy
     if and only if
     for every $\beta > 0$, 
     the collection of sequences 
-    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\beta)\}$ is
-    is \UniformlyCauchy
-\item If $T_i \to T$ with respect to $\norm{\cdot}$, then $T_ix \to Tx$ with respect to $\norm{\cdot}_Y$ for each $x \in X$
-\item A sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ 
+    $\{\{T_ix\}_{i \in \N} : x \in B_X(0;\beta)\}$ is
+    is \UniformlyCauchy.
+\item 
+\label{prop:BLO:NormConvergenceImpliesStrongConvergence}
+If $T_i \to T$ with respect to $\norm{\cdot}$, then $T_ix \to Tx$ with respect to $\norm{\cdot}_Y$ for each $x \in X$
+\item 
+\label{prop:BLO:ConvergenceCriteria}
+A sequence $\{T_i\}_{i \in \N} \subset BL(X,Y)$ 
     converges %TODO: Turn converges into a macro (net based) referenced via \Coverges, and insert that here. 
     with respect to $\norm{\cdot}$ 
     if and only if it is a \PseudometricCauchySequence 
@@ -38,21 +55,29 @@ The following are true.
     in some Hamel basis $\{x_\alpha\}_{\alpha \in A} \subset X$,
     the sequence $\{T_ix_\alpha\}_{\alpha \in A}$
     converges with respect to $\norm{\cdot}_Y$. 
-\item Let X be \NonDegenerate. Then $BL(X,Y)$ is complete if Y is complete. 
-\item  If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
-\item If $S:X \to Y$ is linear
-	, then $S \in BL(X,Y)$ if and only if 
+\item 
+\label{prop:BLO:Complete}
+Let X be \NonDegenerate. Then $BL(X,Y)$ is complete if Y is complete. 
+\item  
+\label{prop:BLO:NonDegenerate}
+If $BL(X,Y)$ is \NonDegenerate then Y is \NonDegenerate.
+\item 
+\label{prop:BLO:Bounded}
+If $S:X \to Y$ is \Linear,
+	then $S \in BL(X,Y)$ if and only if 
 	there exists a constant $c \in (0,\infty)$ 
 	such that for every 
 	$x \in X$. 
 	$\norm{Tx} \leq c \norm{x}$. 
-\item If $T \in BL(X,Y)$, 
-	and $A=\{c \in (0,\infty) | \norm{Tx} \leq c \norm{x} (\forall x \in X)\}$, then
+\item 
+\label{prop:BLO:NormCharacterization}
+If $T \in BL(X,Y)$, 
+	and $A=\{c \in (0,\infty) : \norm{Tx} \leq c \norm{x} (\forall x \in X)\}$, then
 	$\norm{T}=\inf(A)$.
 \end{enumerate}
 
 
-\begin{proof}[Proof of 1] 
+\begin{proof}[Proof of \ref{prop:BLO:WellDefined}] 
     Since X is \NonDegenerate, there exists an $x \in X$ with $\norm{x}_X \neq 0$, 
     so for each $T \in BL(X,Y)$, the set that the supremum is being taken over is nonempty.
     Also, it is clear that $Range(\norm{\cdot}) \subset [0,\infty)$, 
@@ -76,7 +101,7 @@ The following are true.
     \end{align*}
     Hence taking the supremum finishes the proof.
 \end{proof}
-\begin{proof}[Proof of 2] 
+\begin{proof}[Proof of \ref{prop:BLO:Norm}] 
    Let $T \neq 0 \in BL(X,Y)$. Then for some $x \in X$, $Tx \neq 0$. 
    Then $Tx$ has a neighborhood U disjoint from $0_Y$, 
    Hence $x \in T^{-1}(U)$ but not $0_X \in T^{-1}(U)$, since $T0_X = 0_Y$.
@@ -88,7 +113,7 @@ The following are true.
    0 < \frac{\norm{Tx}_Y}{\norm{x}_X} \leq \sup\limits_{\norm{x}_X \neq 0} \frac{\norm{Tx}_X}{\norm{x}_X}=\norm{T}
    \end{equation}
 \end{proof}
-\begin{proof}[Proof of 3] 
+\begin{proof}[Proof of \ref{prop:BLO:Sphere}] 
     Let $\alpha \in (0,\infty)$
    Let $T \in BL(X,Y)$. 
    Then, there is a sequence $\{x_i\} \subset X$ with each $\norm{x_i}_X \neq 0$ 
@@ -105,7 +130,7 @@ The following are true.
     \end{equation}
     , completing the proof. 
 \end{proof}
-\begin{proof}[Proof of 4] 
+\begin{proof}[Proof of \ref{prop:BLO:Ball}] 
 If we define, for 
 $T \in BL(X,Y)$, 
 $f(T) = \sup\limits_{0 < norm{x}_X \leq \alpha} \frac{\norm{Tx}_Y}{\norm{x}_X}$, then
@@ -113,7 +138,7 @@ since $\norm{\cdot}^{-1}((0,\alpha))\subset \norm{\cdot}^{-1}((0,\infty))$, we h
 and since $\norm{\cdot}^{-1}(\{\alpha\})\subset \norm{\cdot}^{-1}((0,\alpha))$, we have $\norm{T} \leq f(T)$. proving the first equality.
 The second is found by applying the same arguement to $\alpha/2$ and realizing that $(0,\alpha/2] \subset (0,\alpha)$. 
 \end{proof}
-\begin{proof}[Proof of 5]
+\begin{proof}[Proof of \ref{prop:BLO:Schwarz}]
 Let $T \in BL(X,Y)$ and $x \in X$. 
 If $\norm{Tx}_Y \neq 0$, then $B_Y(Tx, \frac{\norm{Tx}_Y}{2})$ is a neighborhood of $Tx$ disjoint from 0.
 Continuity of T impliese $x$ then has a neighborhood disjoint from $0 \in T^{-1}(0)$, implying
@@ -130,7 +155,7 @@ If $\norm{x}_X \neq 0$, then by definition of supremum,
 \end{equation*}
 so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$. 
 \end{proof}
-\begin{proof}[Proof of 6]
+\begin{proof}[Proof of \ref{prop:BLO:Characterization}]
     I assume the first 3 conditions
     and show that $S \in BL(X,Y)$.
     It is necessary and sufficient to 
@@ -157,7 +182,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     Then S is 
 	\Linear 
 	by definition
-    , and the supremum expression is finite by part 1 
+    , and the supremum expression is finite by \ref{prop:BLO:WellDefined}
     of this result. 
     Since S is 
 	\Linear, $S0_X = 0_Y$. 
@@ -173,7 +198,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
 
 
 \end{proof}
-\begin{proof}[Proof of 7]
+\begin{proof}[Proof of \ref{prop:BLO:UniformlyCauchy}]
     $(3 \implies 2)$ is trivial, as is $(2 \implies 3)$.
     
     I now prove $(1\implies 3)$. 
@@ -194,7 +219,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
         & < \epsilon
     \end{align*}
     Since $x \in B_X(0;\beta)$ was arbitrary,
-    $\{\{T_ix\}_{i \in \N} | x \in B_X(0;\beta)\}$ is
+    $\{\{T_ix\}_{i \in \N} : x \in B_X(0;\beta)\}$ is
     \UniformlyCauchy.
 
     I now prove $(3 \implies 1)$. 
@@ -210,10 +235,10 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     \frac{\norm{(T_m-T_n)x}_Y}{\norm{x}_X} =\norm{(T_m-T_n)x}_Y < \epsilon
     \end{equation}
     Hence, by taking the supremum over such x
-    and applying part 3 of this result, 
+    and applying \ref{prop:BLO:Sphere}, 
     $\norm{T_m-T_n} < \epsilon$. 
 \end{proof}
-\begin{proof}[Proof of 8]
+\begin{proof}[Proof of \ref{prop:BLO:NormConvergenceImpliesStrongConvergence}]
     Let $T_i \to T$. 
     Let $x \in X$. 
     If $x \in \Ker_X$, then $T_i(x) \in \Ker_Y$ for $i \in \N$ and $T_x \in \Ker_Y$, 
@@ -227,13 +252,13 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     \norm{T_ix-Tx}_Y \leq \norm{T_i-T} \norm{x}_X < \epsilon
     \end{equation*}
 \end{proof}
-\begin{proof}[Proof of 9]
+\begin{proof}[Proof of \ref{prop:BLO:ConvergenceCriteria}]
     
     $(\implies)$ 
     Suppose $T_i \to T$.
     Then, by \ref{prop:pseudometricconvergenceimpliespseudometriccauchy}, 
     $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence.
-    An application of part 8 of this result implies
+    An application of \ref{prop:BLO:NormConvergenceImpliesStrongConvergence} implies
     the pointwise convergence on a hamel basis. 
 
 
@@ -272,7 +297,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     $T_ix \to Tx$ for $x \in X$. 
 
     Since $T_ix \to Tx$ for $x \in B_X(0;2)$, 
-    and since part 7 of this result, 
+    and since \ref{prop:BLO:UniformlyCauchy}, 
     paried with the assumption that
     $\{T_i\}_{i \in \N}$ is a \PseudometricCauchySequence, 
     $\left\{\{T_ix\}_{i \in \N}\right\}_{x \in B_X(0;2)}$ 
@@ -290,11 +315,11 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     \begin{equation}
     \frac{\norm{(T_n-T)x}_Y}{\norm{x}_X} < \epsilon
     \end{equation}
-    Implying first through part 6 of this result
+    Implying first by \ref{prop:BLO:Characterization}
     that $T \in BL(X,Y)$, and second that
     Hence $T_i \to T$ with respect to $\norm{\cdot}$. 
 \end{proof}
-\begin{proof}[Proof of 10]
+\begin{proof}[Proof of \ref{prop:BLO:Complete}]
     Let Y be Pseudometric Complete. 
     and let $X$ be \NonDegenerate. 
     Let $\{T_\alpha\}_{\alpha \in A} \subset BL(X,Y)$ 
@@ -319,7 +344,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     is a \PseudometricCauchySequence.
     Since Y is \Complete, these sequences converge, say
     $T_ix_\alpha \to y_\alpha$. 
-    This allows us apply part 9 of  this result
+    This allows us apply \ref{prop:BLO:ConvergenceCriteria}
     to claim that $\{T_i\}_{i \in \N}$ converges in $\norm{\cdot}$. 
 \end{proof}
 \begin{proof}[Proof of 11]
@@ -328,7 +353,7 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
     for some $x \in X$, 
     $\norm{Tx}_Y \neq 0$. 
 \end{proof}
-\begin{proof}[Proof of 12]
+\begin{proof}[Proof of \ref{prop:BLO:Bounded}]
 	Let $S \in BL(X,Y)$. 
 	Let $c=\norm{S}+1$. %adding 1 accounts for case where $\norm{S} =0$.  
 	Then, if $\norm{x} \neq 0$, we have 
@@ -336,7 +361,8 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
 		\frac{\norm{Sx}}{\norm{x}} \leq \sup\limits_{\norm{x} \neq 0} \frac{\norm{Sx}}{\norm{x}} = \norm{S}=c
 	\end{equation}
 	so multiplying by $\norm{x}$ gives $\norm{Sx} \leq c \norm{x}$. 
-	If $\norm{x} = 0$, then $x \in \Ker_X$, so by part 6 of this result, $Sx \in \Ker_X$, so 
+	If $\norm{x} = 0$, then $x \in \Ker_X$.
+    Hence, by \ref{prop:BLO:Characterization}, $Sx \in \Ker_X$, so 
 	\begin{equation}
 		\norm{Sx} =0 = c 0  = c \norm{Sx}
 	\end{equation}
@@ -354,8 +380,8 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
 	\end{equation}
 	Taking the supremum over all x with $\norm{x} \neq 0$ gives us the desired result. 
 \end{proof}
-\begin{proof}[Proof of 13]
-	By part 5 of this result, $\norm{T}$ is one possible value
+\begin{proof}[Proof of \ref{prop:BLO:NormCharacterization}]
+	By \ref{prop:BLO:Schwarz}, $\norm{T}$ is one possible value
 	for c, so $\norm{T} \in A$. 
 	That is, $inf(A) \leq \norm{T}$. 
 	Furthermore, if $\epsilon > 0$, then there
@@ -373,8 +399,11 @@ so that $\norm{Tx}_Y \leq \norm{T} \norm{x}_X$.
 
 
 \begin{rmk}[Converses]
-The converses to parts 10 and 11 of 
-\ref{prop:BLO} 
+\rm
+The converses of 
+\ref{prop:BLO:Complete}
+and
+\ref{prop:BLO:NonDegenerate}
 are true, but their proof relies upon
 the Hahn Banach theorem for Seminormed spaces, 
 and so their official claim

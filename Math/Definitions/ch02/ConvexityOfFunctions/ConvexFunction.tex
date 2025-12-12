@@ -1,0 +1,17 @@
+\newcommand{\ConvexFunction}[0]{\textbf{\hyperref[def:ConvexFunction]{Convex}}\xspace}
+\newcommand{\StrictlyConvexFunction}[0]{\textbf{\hyperref[def:ConvexFunction]{Strictly Convex}}\xspace}
+\begin{df}[\ConvexFunction]
+\label{def:ConvexFunction}
+\rm
+Let $\scF \in \{\bbR, \bbC\}$. 
+Let $V$ be a \VectorSpace over $\scF$. 
+Let $T:V \to (-\infty,\infty]$
+We say that $T$ is \ConvexFunction if for each $x,y \in V$, 
+\begin{equation*}
+T\pa{\frac{x+y}{2}} \leq \frac{T(x)+T(y)}{2}
+\end{equation*}
+We say that $T$ is \StrictlyConvexFunction if for each $x,y \in V$, 
+\begin{equation*}
+T\pa{\frac{x+y}{2}} < \frac{T(x)+T(y)}{2}
+\end{equation*}
+\end{df}

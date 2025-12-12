@@ -1,18 +1,20 @@
-\label{def:uniformlycauchy}
 \newcommand{\UniformlyCauchy}[0]{\textbf{\hyperref[def:uniformlycauchy]{Uniformly Cauchy}}\xspace}
 \begin{df}[Uniformly Cauchy]
-	Let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
-	for $\alpha \in A$ where A is some indexing set. 
-	For each $\alpha \in A$
-	, let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
-	be a sequence. 
+\label{def:uniformlycauchy}
+\rm
+    Let $A$ be a nonempty set.
+    For each $\alpha \in A$, 
+	let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace.
+	For each $\alpha \in A$,
+	let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N}$
+	be a \Sequence in $X_{\alpha}$.
 	We say that the collection $\{\phi_\alpha\}_{\alpha \in A}$ 
 	is 
 	\UniformlyCauchy if for each $\epsilon > 0$, there exists an 
 	$N \in \N$ such that for each pair $m,n \in N$
 	such that $m>N$ and $n>N$, and for each $\alpha \in A$, 
 	we have 
-	\begin{equation}
+	\begin{equation*}
 	d_{\alpha} \pa{x^{\alpha}_n, x^{\alpha}_m} < \epsilon
-	\end{equation}
+	\end{equation*}
 \end{df}

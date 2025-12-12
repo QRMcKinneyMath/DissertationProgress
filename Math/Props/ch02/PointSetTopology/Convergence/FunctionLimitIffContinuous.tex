@@ -9,7 +9,10 @@ The following are true.
 \begin{enumerate}[label=(\roman*), ref={\ref{prop:FunctionLimitIffContinuous}~\roman*}]
     \item 
     \label{prop:Continuity:ContinuousIffLimit}
-    $f$ is \ContinuousFunction at $x_0$ 
+    
+    $f$ is 
+    \ContinuousAt
+    $x_0$ 
     if and only if  
     $f(x_0) \in \lim\limits_{x \to x_0} f(x)$. 
     \item 
@@ -27,6 +30,107 @@ The following are true.
     Let $\scF$ be a \Filter on $X_2$. Let 
     $f_1:X_2 \to X_0$. 
     Let $x_0 \in \lim\limits_{x, \scF}g(x)$. 
-    If $f$ is continuous, then $f(x_0) \in \lim\limits_{x, \scF} f \circ g(x)$. 
+    If $f$ is  
+    \ContinuousAt
+    $x_0$, then 
+    $f(x_0) \in \lim\limits_{x, \scF} f \circ g(x)$. 
 \end{enumerate}
+\begin{proof}[Proof of \ref{prop:Continuity:ContinuousIffLimit}]
+$(\implies)$
+Let $f$ be \ContinuousFunction at $x_0$. 
+Then $\scNested{\scU_{\scT_0}(x_0)}{f^{-1}\pa{\scU_{\scT_1}(f(x_0))}}$ holds.
+Let $V \in \scU_{\scT_1}(f(x_0))$. 
+Then there exists $U \in \scU_{\scT_0}(x_0)$ such that 
+$U \subset f^{-1}(V)$. 
+Hence $f(U) \subset V$. 
+Since $\scU_{\scT_1}(f(x_0))$ was arbitrary, 
+$\scNested{f\pa{\scU_{\scT_0}(x_0)}}{\scU_{\scT_1}(f(x_0))}$ holds, 
+so $f(x_0) \in \lim\limits_{x \to x_0}f(x)$.
+
+$(\impliedby)$
+Let $f(x_0) \in \lim\limits_{x \to x_0}f(x_0)$. 
+Then $\scNested{f\pa{\scU_{\scT_0}(x_0)}}{\scU_{\scT_1}(f(x_0))}$ holds.
+Let $U \in f^{-1} \pa{\scU_{\scT_1}(f(x_0))}$. 
+Then there is a $\tilde{U} \in \scU_{\scT_1}(f(x_0))$ such that 
+$U = f^{-1}\pa{\tilde{U}}$. 
+By nesting there exists $V \in f\pa{\scU_{\scT_0}(x_0)}$ such that 
+$V \subset \tilde{U}$. 
+By definition there exists $\tilde{V} \in \scU_{\scT_0}(x_0)$ 
+such that $V= f\pa{\tilde{V}}$. 
+Then we have $f\pa{\tilde{V}} = VB \subset \tilde{U}$, 
+so 
+$\tilde{V} \subset f^{-1}\pa{\tilde{U}} = U$.
+Since $U \in f^{-1} \pa{\scU_{\scT_1}(f(x_0))}$
+was arbitrary and $V \in \scU_{\scT_0}(x_0)$, we conclude
+$\scNested{\scU_{\scT_0}(x_0)}{ f^{-1} \pa{\scU_{\scT_1}(f(x_0))}}$ holds.
+Thus $f$ is \ContinuousFunction at $x_0$. 
+\end{proof} 
+\begin{proof}[Proof of \ref{prop:Continuity:FilterBaseConvergence}]
+Let $f$ be \ContinuousFunction at $x_0$.
+Then $\scNested{f\pa{\scU_{\scT_0}(x_0)}}{\scU_{\scT_1}(f(x_0))}$ holds.
+Let $\scB$ be a \FilterBase in $X$. 
+Let $x_0$ be a \FilterLimit of $\scB$. 
+Then $\scNested{\scB}{\scU_{\scT_0}(x_0)}$ holds.
+Hence $\scNested{f\pa{\scB}}{f\pa{\scU_{\scT_0}(x_0)}}$ holds. 
+By \RelationTransitivity, we conclude
+\begin{equation*}
+\scNested{f\pa{\scB}}{\scU_{\scT_1}(f(x_0))}
+\end{equation*}
+so $x_0$ is a \FunctionLimit of $f\pa{\scB}$. 
+\end{proof} 
+\begin{proof}[Proof of \ref{prop:Continuity:UltrafilterConvergence}]
+Suppose $f$ is not \ContinuousFunction at $x_0$. 
+Then it is not the case that 
+$\scNested{f\pa{\scU_{\scT_0}(x_0)}}{\scU_{\scT_1}(f(x_0))}$ holds.
+Hence, for some $V \in \scU_{\scT_1}(f(x_0))$, 
+and for each $U \in \scU_{\scT_0}(x_0)$, 
+$f(U) \cap \pa{X_1 \setminus V} \neq \emptyset$. 
+Hence, by 
+\ref{prop:FilterExistence}, 
+$\{f^{-1}\pa{X_1 \setminus V}\} \cup \scU_{\scT_0}(x_0)$ is
+contianed within a \Filter \scG on $X_1$. 
+Since $\scU_{\scT_00}(x_0) \subset \scG$, $x_0$ is a 
+\FilterLimit of $\scG$. 
+Furthermore, since $V \in \scU_{\scT_1}(f(x_0))$, 
+and since $f\pa{f^{-1}\pa{X_1 \setminus V}} \in f\pa{\scG}$, 
+by
+\ref{prop:FilterClusterPoint:FundamentalSystem}, 
+since $V \cap f\pa{f^{-1}\pa{X_1 \setminus V}} \subset V \cap \pa{X_1 \setminus V} = \emptyset$, we conclude
+$f(x_0)$ is not a \FilterClusterPoint of $f\pa{\scG}$. 
+By 
+\ref{prop:FilterClusterPoint:Finer}, 
+there is no \Filter 
+on $X_1$ which is 
+\FinerFilter
+than $f(\scG)$ which has $f(x_0)$ as a \FilterLimit.
+By \ref{def:Ultrafilter}, 
+there is an \Ultrafilter $\tilde{\scG}$ on $X$ 
+containing $\scG$. 
+By 
+\ref{prop:FilterConvergenceFacts:FinerFilter}, 
+Since $x_0$ is a \FilterLimit of $\scG$, 
+$x_0$ is a \FilterLimit of $\tilde{\scG}$. 
+But by the above argumentation, $f(x_0)$ is not a 
+\FilterLimit of $f\pa{\tilde{\scG}}$.
+Thus we have, under the assumption that $f$ 
+is not \ContinuousFunction at $x_0$, 
+constructed an \Ultrafilter $\tilde{\scG}$
+such that $x_0$ is a \FilterLimit of $\tilde{\scG}$
+but $f(x_0)$ is not a \FilterLimit of 
+$f\pa{\tilde{\scG}}$.
+\end{proof} 
+\begin{proof}[Proof of \ref{prop:Continuity:LimitComposition}]
+This falls from several applications of 
+\ref{prop:Continuity:FilterBaseConvergence}
+Let $U \in \scU_{\scT_1}(f(x_0)$. 
+Since $f$ is \ContinuousFunction at $x_0$, 
+there exists $V \in \scU_{\scT_0}(x_0)$ such that 
+$f(V) \subset U$. 
+Since $x_0$ is a \FilterLimit of $g\pa{\scF}$, there exists 
+$F \in \scF$ such that $g(F) \subset V$. 
+Hence $\pa{f\circ g}(F) \subset U$. 
+Since $U \in \scU_{\scT_1}(f(x_0))$ was arbitrary, we conclude
+$\scNested{\pa{f \circ g}\pa{\scF}}{\scU_{\scT_1}\pa{f(x_0)}}$. 
+Hence $f(x_0) \in \lim\limits_{x,\scF}\pa{f\circ g}\pa{x}$.
+\end{proof} 
 \end{prop}

@@ -1,10 +1,11 @@
-\label{def:pseudometricsequenceconvergence}
 \newcommand{\PseudometricConvergence}[0]{\textbf{\hyperref[def:pseudometricsequenceconvergence]{Pseudometric-Convergence}}\xspace}
 \newcommand{\PseudometricConvergent}[0]{\textbf{\hyperref[def:pseudometricsequenceconvergence]{Pseudometrically-Convergent}}\xspace}
 \newcommand{\PseudometricConverges}[0]{\textbf{\hyperref[def:pseudometricsequenceconvergence]{Pseudometric-Converges}}\xspace}
-\begin{df}[Pseudometric Convergence]
+\begin{df}[\PseudometricConvergence]
+\label{def:pseudometricsequenceconvergence}
+\rm
     Let $(X,d)$ be a \PseudometricSpace.
-	Let $\{x_i\}_{i \in \N}$ be a sequence in $(X,d)$.
+	Let $\{x_i\}_{i \in \N}$ be a \Sequence in $(X,d)$.
     Let $x_0 \in X$.  
     We say that 
 	$\{x_i\}_{i \in \N}$ 
@@ -12,19 +13,19 @@
 	\PseudometricConvergence 
 	to 
 	$x_0$ 
-	in d,
+	in $(X,d)$,
 	or we say that 
 	$\{x_i\}_{i \in \N}$  
 	\PseudometricConverges 
 	to 
 	$x_0$ 
-	in d, 
+	in $(X,d)$, 
 	or we say that 
 	$\{x_i\}_{i \in \N}$ 
 	is 
 	\PseudometricConvergent 
 	to 
-	$x_0 \in d$ 
+	$x_0 \in X$ 
 	if, 
     for every 
 	$\epsilon > 0$, 
@@ -33,7 +34,7 @@
 	such that for every 
 	$n>N$, 
 	we have 
-    \begin{equation}
+    \begin{equation*}
         d(x_0, x_n) < \epsilon
-    \end{equation}
+    \end{equation*}
 \end{df}

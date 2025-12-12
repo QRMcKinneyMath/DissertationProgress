@@ -1,25 +1,22 @@
 \begin{prop}[Subadditive Operator On a Group Induces a Metric]
     \label{prop:subadditiveinducestriangleinequality}
+    \rm
     Let $(G,+, e)$ be a 
 	\Group and let $(H,+,\leq)$ be a 
-	\TotallyOrderedMagma
-	. 
+	\TotallyOrderedMagma.
     Let $p:G \to H$ be \Subadditive. 
-    define $d:G \times G \to H$ by setting, for each $x,y \in G$, 
-    \begin{equation}
-        d(x,y) =  p(x+(-y))
-    \end{equation}
-
-    Then d satisfies the triangle inequality. 
+    Define $d:G \times G \to H$ by setting, for each $x,y \in G$, 
+        $d(x,y) =  p(xy^{-1})$.
+    Then d satisfies the \TriangleInequality. 
 
     \begin{proof}
     let $x,y, z \in G$. Then
     \begin{align*}
-        d(x,z) &= p(x+(-z))\\
-        & = p(x+e+(-z))\\
-        & = p(x+(-y)+y+(-z))\\
-        & \leq p(x+(-y))+p(y+(-z))\\
-        & = d(x,y)+d(y,z)
+        d(x,z) &= p(xz^{-1})\\
+        & = p(xez^{-1})\\
+        & = p(xy^{-1}yz^{-1})\\
+        & \leq p(xy^{-1})p(yz^{-1})\\
+        & = d(x,y)d(y,z)
     \end{align*}
     completing the proof. 
     \end{proof} 

@@ -1,0 +1,91 @@
+\begin{prop}[\QuotientMagma]
+\label{prop:QuotientMagma}
+\rm
+Let $\pa{M,\cdot}$ be a \Magma.
+Let $\cong$ be a $\Congruence$ on $M$. 
+Let $\pa{M/\cong, \boxdot}$ 
+be the \QuotientMagma. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:QuotientMagma}~\roman*}]
+\item
+\label{prop:QuotientMagma:WellDefined}
+The \QuotientMagma is well defined. 
+That is $\boxdot$, as it is defined in \ref{def:QuotientMagma},
+is a well defined \BinaryOperation on $M/\cong$. 
+\item
+\label{prop:QuotientMagma:Associative}
+If $\cdot$ is \AssociativeFunction, then
+$\boxdot$ is \AssociativeFunction.
+\item
+\label{prop:QuotientMagma:Commutative}
+If $\cdot$ is \CommutativeFunction, 
+then $\boxdot$ is \CommutativeFunction.
+\item
+\label{prop:QuotientMagma:Identity}
+If $e\in M$ is a \IdentityElement of $(M,\cdot)$, 
+then $[e]$ is an \IdentityElement of $(M/\cong, \boxdot)$. 
+\item
+\label{prop:QuotientMagma:Inverse}
+If $x \in M$ is an \InvertibleElement element
+of $M$, then $[x]$ is an \InvertibleElement of $M/\cong$, 
+and $[x]^{-1} = [x^{-1}]$.
+\item
+\label{prop:QuotientMagma:Homomorphism}
+The \QuotientMap $T:M \to M/\cong$ 
+defined by $T(x)=[x]$
+is a \MagmaHomomorphism.
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:WellDefined}]
+Let $x_0,x_1,y_0,y_1 \in M$ such that 
+$[x_0]=[x_1]$ and $[y_0]=[y_1]$. 
+Then $x_0 \cong x_1$ and $y_0 \cong y_1$, so 
+since $\cong$ is \AlgebraicallyConsistent, 
+$x_0 \cdot y_0 \cong x_1 \cdot y_1$.
+Hence, 
+$[x_0] \boxdot [y_0]  = [x_0 \cdot y_0] = [x_1 \cdot y_1] = [x_1] \boxdot [y_1]$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:Associative}]
+Let $M$ be \AssociativeFunction.
+Let $x,y,z \in M$. 
+Then, 
+\begin{equation*}
+\pa{[x]\boxdot[y]} \boxdot[z] = \pa{[x \cdot y]} \boxdot [z] = \bra{\pa{x \cdot y} \cdot z} = \bra{x \cdot \pa{y \cdot z}} = [x] \boxdot \bra{y \cdot z} = [x] \boxdot \pa{ [y] \boxdot [z]}
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:Commutative}]
+Let $\cdot$ be \CommutativeFunction.
+Let $x,y  \in M$. 
+Then, 
+\begin{equation*}
+[x] \boxdot [y] = [x \cdot y ] = [y \cdot x ] = [y] \boxdot [x]
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:Identity}]
+Let $e$ be an \IdentityElement of $M$. 
+Let $x \in M$.
+Then, 
+\begin{equation*}
+[e] \boxdot [x] = [e \cdot x ] = [x] = [x \cdot e] = [x] \boxdot [e]
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:Inverse}]
+Let $x$ be an \InvertibleElement of $M$.
+Then, 
+\begin{equation*}
+[x] \boxdot [x^{-1}] = [x \cdot x^{-1}] = [e]
+\end{equation*}
+and
+\begin{equation*}
+[x^{-1}] \boxdot [x] = [x^{-1} \cdot x] = [e]
+\end{equation*}
+These two equations, paired with \ref{prop:QuotientMagma:Identity}
+implies $[x]^{-1} = [x^{-1}]$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:QuotientMagma:Homomorphism}]
+Let $x,y \in M$. 
+Then, 
+\begin{equation*}
+T(x \cdot y) = [x \cdot y] = [x] \boxdot [y]  = T(x) \boxdot T(y)
+\end{equation*}
+\end{proof}
+\end{prop}

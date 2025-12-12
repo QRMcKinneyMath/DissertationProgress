@@ -1,0 +1,81 @@
+\begin{prop}[\TopologyOfUniformConvergence is a Tvs]
+\label{prop:TOUC:Tvs}
+\rm
+Let $\bbF \in \{\R, \C\}$. 
+Let $Y$ be a \TVS
+over $\bbF$. 
+Let $X$ be a nonempty set.
+Let $\scF$ be a \VectorSubspace 
+of the set of maps $T:X \to Y$. 
+Let $\scG \subset X$. 
+Let $\scT$ denote the 
+\TopologyOfUniformConvergence
+on $\scF$ induced by $\scG$. 
+Then $\pa{\scF, \scT}$ is a \TVS
+over $\bbF$ if and only if, 
+for each $U \in \scG$, for each 
+$f \in \scF$, the set $f(U)$ is 
+\TVSBounded in $Y$. 
+\begin{proof}
+Suppose $(\scF, \scT)$ is a \TVS. 
+Then $\cdot:\bbF \times \scF \to \scF$ is \ContinuousFunction. 
+Let $f \in \scF$. Let $U \in \scG$. Let $V \in \scT_Y$. 
+Since $\cdot$ is \ContinuousFunction, 
+$T:\bbF \to \scF$ defined by $T(\alpha) = \alpha f$ is 
+\ContinuousFunction.
+Hence $T^{-1}(M(U,V))$ contains some $\alpha_0>0$.
+Hence $alpha_0f \in M(U,V)$. That is $\alpha_0f(U) \subset V$.
+That is, $f(U) \subset \frac{1}{\alpha_0} V$, so $f(U)$ is absorbed by $V$. 
+Since $V \in \scT_Y$ is an arbitrary \SetOpen set containing $0$, $f(U)$ 
+is \TVSBounded. 
+Since $U \in \scG$ is arbitrary, this direciton of the theorem is proven.
+
+Now let each $f(U)$ be \TVSBounded. 
+Let $\alpha \in \bbF$. 
+Let $f \in \scF$.
+Let $U \in \scG$.
+Let $V \in \scT_{Y}$ such that $0 \in V$. 
+By 
+\ref{prop:SymmetricContained}
+there exists 
+$\tilde{V} \in \scT_Y$ such that 
+$0 \in \tilde{V}$ and
+$\tilde{V}+\tilde{V}+\tilde{V}+\tilde{V} \subset V$.
+Let $V' \in \scT_Y$ such that $\alpha V' \subset \tilde{V}$.
+Let $V''$ be a \Balanced \SetOpen subset of $Y$ containing $0$ such that  $V'' \subset V' \cap \tilde{V}$. 
+Since $f(U)$ is \TVSBounded there exists $\epsilon_0 > 0$ such that 
+\begin{equation*}
+\epsilon_0 f(U) \subset V'' \tab[1cm] \abs{\epsilon_0} < \abs{\alpha}
+\end{equation*}
+Set $\Gamma = B_{\mathbb{C}}(0;\epsilon_0)$. 
+Set $\Omega = M(U,V'')$. 
+Let $h \in \Gamma\pa{f+\Omega}$. 
+Then there exists $\gamma \in \C$ with $\abs{\gamma} < \epsilon_0$ 
+and there exists $g \in M(U,V'')$ such that $h=(\alpha+\gamma)\pa{f+g}$. 
+Let $x \in U$. 
+Then, 
+\begin{align*}
+h(x) & = \pa{\alpha+\epsilon}\pa{f+g}(x)\\
+& = \alpha f(x) + \gamma f(x) + \alpha g(x) + \gamma g(x) \\
+& \in \alpha f(x) + \gamma f(U) + \alpha g(U) + \gamma g(U) \\
+& = \alpha f(x) + \frac{\gamma}{\epsilon_0} \epsilon_0 f(U) + \alpha g(U) + \gamma g(U) \\
+& \subset  \alpha f(x) + \frac{\gamma}{\epsilon_0} V'' + \alpha V'' + \gamma V''\\
+& \subset \alpha f(x) + V'' +\alpha V'' +\alpha V'' \\
+& \subset \alpha f(x) + \tilde{V}+ \tilde{V}+ \tilde{V}\\
+& \subset \alpha f(x) + V
+\end{align*}
+Hence, $h \in\alpha f + M(U,V)$.
+Hence, $\Gamma \Omega \subset \alpha f + M(U,V)$.
+Since $U \in \scG$ and $V \in \scT_Y$ containing 0 were arbitrary, 
+$\cdot$ is 
+\ContinuousAt $(\alpha, f )$. 
+Since $\alpha \in \bbF$ and $f \in \scF$ were arbitrary,
+$\cdot$ is \ContinuousFunction. 
+By 
+\ref{prop:TopologyOfUniformConvergenceCompatible}, $(\scF, \scT)$ 
+is a \TopologicalGroup, so \FunctionContinuity of $\cdot$ is enough
+to guarantee that 
+$(\scF, \scT)$ is a \TVS.
+
+\end{proof}
+\end{prop}

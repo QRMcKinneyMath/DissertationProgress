@@ -1,0 +1,61 @@
+\begin{prop}[Compact Filter]
+\label{prop:CompactFilter}
+\rm
+Let $(X,\scT)$ be a \TopologicalSpace.
+The following are equivalent
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:CompactFilter}~\roman*}]
+\item
+\label{prop:CompactFilter:Compact}
+$X$ is \SetCompact.
+\item Each \Ultrafilter in $X$ has a \FilterLimit.
+\label{prop:CompactFilter:Converge}
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:CompactFilter:Converge} implies \ref{prop:CompactFilter:Compact}]
+I prove the converse.
+Let $X$ be non-\SetCompact.
+Then there is an \SetOpen \Cover for $X$, $\scU=\{U_\alpha\}_{\alpha \in A}$
+with no \Finite Subcover.
+Define 
+\begin{equation*}
+F=\{X \setminus U_{\alpha}\}_{\alpha \in A}
+\end{equation*}
+Since $\scU$ has no \Finite \Subcover, 
+\Finite intersections of elements of $F$ are nonempty. 
+Hence, by 
+\ref{prop:FilterExistence}
+and
+\ref{rmk:Ultrafilter}
+there is an 
+\Ultrafilter
+$G$
+on $X$ which contains $F$. 
+Let $y \in X$. 
+Since $\scU$ is a \Cover for $X$, for some $\alpha \in A$, $y \in U_\alpha$. 
+Since $U_{\alpha} \in \scT$, $U_{\alpha} \in \scU_{\scT}(y)$. 
+Since $U_\alpha \cap \pa{X \setminus U_{\alpha}} = \emptyset$, 
+by 
+\ref{prop:FilterClusterPoint:FundamentalSystem}, 
+$y$ is not a \FilterClusterPoint of $G$. 
+By 
+\ref{prop:FilterClusterPoint:Ultrafilter}, 
+$y$ is not a \FilterLimit of $G$. 
+Since $y \in X$ was arbitrary, $G$ has no \FilterLimits in $X$.
+\end{proof}
+\begin{proof}[Proof of  \ref{prop:CompactFilter:Compact} implies \ref{prop:CompactFilter:Converge}]
+Let $X$ be \SetCompact.
+Let $G$ be an \Ultrafilter on $X$. 
+Suppose, for sake of contradiction, that $G$ has no \FilterLimit. 
+Then, for each $x \in X$, 
+there is a $U_x \in \scU_{\scT}(x)$ such that $U_x \not \in G$. 
+Hence, for each $x \in X$, we can find $x \in V_x \in \scT$ 
+such that $V_x \not \in G$. 
+Then $\scV=\{V_x\}_{x \in X}$ is an \SetOpen \Cover for $X$. 
+Since $X$ is \SetCompact, $\scV$ has a \Finite \Subcover
+$\{V_{x_i}\}_{i=1}^n$. 
+Since $X=\bigcup\limits_{i=1}^n V_{x_i}$ and $X \in G$, 
+by 
+\ref{prop:UltrafilterFacts:BinaryUnion}, 
+for some $i$, $1 \leq i \leq n$, $V_{x_i} \in G$, a contradiction. 
+Hence $G$ has a \FilterLimit. 
+\end{proof}
+\end{prop}

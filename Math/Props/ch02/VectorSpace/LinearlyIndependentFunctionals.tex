@@ -7,24 +7,20 @@
         \LinearlyIndependent. 
         Let $\{e_i\}_{i=1}^n$ be the \StandardBasis for $\bbF^n$. 
         Define $S:V \to  \bbF^n$ by 
-        \begin{equation}
-        S(v)= \sum\limits_{i=1}^n \ip{v, x_i^*}e_i
-        \end{equation}
+        $S(v)= \sum\limits_{i=1}^n \ip{v, x_i^*}e_i$
         Then $S$ is \Surjective. 
         \begin{proof}
             Supose otherwise.
             Then there exists $0 \neq c \in \bbF^n$, represented
-            \begin{equation*}
-            c= \sum\limits_{i=1}^n c_i e_i
-            \end{equation*}
+            $c= \sum\limits_{i=1}^n c_i e_i$
             such that $c \perp Range(S)$. Hence, for every $x \in X$, 
             \begin{align*}
             0 
             & = \ip{\sum\limits_{i=1}^n \ip{x, x_i^*} e_i, c} \\
             & =  \ip{\sum\limits_{i=1}^n \ip{x, x_i^*}e_i, \sum\limits_{i=1}^n c_i e_i} \\
-            & = \sum\limits_{i=1}^n \ip{x, x_i^*} c_i\\
-            & = \ip{x, \sum\limits_{i=1}^n c_i x_i^*} 
+            & = \sum\limits_{i=1}^n \ip{x, x_i^*} \overline{c_i}\\
+            & = \ip{x, \sum\limits_{i=1}^n \overline{c_i} x_i^*} 
             \end{align*}
-            This implies that $\sum\limits_{i=1}^n c_i x_i^* = 0$, a contradiction. 
+            This implies that $\sum\limits_{i=1}^n \overline{c_i} x_i^* = 0$, a contradiction. 
         \end{proof}
 \end{prop}

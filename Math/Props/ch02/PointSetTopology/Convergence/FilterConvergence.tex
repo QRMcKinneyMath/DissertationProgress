@@ -33,7 +33,9 @@
     If $x$ is a \FilterLimit of $\scF$ in $(X,\scT)$, and 
     $\scT_1$ is a \TopologyCoarser \Topology on $X$, then 
     $x$ is a \FilterLimit of $\scF$ in $(X, \scT_1)$. 
-    \item Let $\{\scF_\alpha\}_{\alpha \in A}$ be a collection of 
+    \item 
+    \label{prop:FilterConvergenceFacts:Intersection}
+    Let $\{\scF_\alpha\}_{\alpha \in A}$ be a collection of 
     \Filters on $X$ each of which have $x$ as a \FilterLimit. 
     Then $\bigcap\limits_{\alpha \in A} \scF_\alpha$ has $x$
     as a \FilterLimit. 
@@ -43,4 +45,97 @@
     $x$ is a \FilterLimit of every $\UltraFilter$ 
     which is \FinerFilter than $\scF$. 
     \end{enumerate}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:BaseEquivalence}]
+       This is a direct result of 
+       \ref{prop:FilterBaseFacts:FiltersAreFilterBases}. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:FundamentalSystemExistence}]
+    $(\implies)$ 
+    Let $x$ be a \FilterLimit for $\scB$.
+    By 
+    \ref{def:FilterConvergence}, 
+    $\scU_{\scT}(x) \subset \scF$.
+    Hence, 
+    \scNested{\scF}{\scU_{\scT}(x)} holds.
+    Since \Nested is 
+    \TransitiveRelation 
+    and 
+    by 
+    \ref{prop:FilterBaseFacts:BaseCondition}, 
+    $\scNested{\scB}{\scU_{\scT}(x)}$ holds.
+    Since $\scU_{\scT}(x)$ is a 
+    \FundamentalSystemOfNeighborhoods for $x$, 
+    this direction of the proof is complete. 
+
+    $(\impliedby)$
+    Let $\tilde{\scU}$ be a 
+    \FundamentalSystemOfNeighborhoods
+    for $x$
+    such that $\scNested{\scB}{\tilde{\scU}}$ holds. 
+    Then by \ref{def:FundamentalSystemOfNeighborhoods:Nesting}, 
+    $\scNested{\tilde{\scU}}{\scU_{\scT}(x)}$.
+    Since \Nested is 
+    \TransitiveRelation 
+    we conclude 
+    $\scNested{\scB}{\scU_{\scT}(x)}$. 
+    Since $\scB \subset \scF$, 
+    $\scNested{\scF}{\scU_{\scT}(x)}$ holds. 
+    By \ref{prop:FilterBaseFacts:FinerCondition}, 
+    we conclude $\scU_{\scT}(x) \leq \scF$, 
+    and so $x$ is a \FilterLimit of $\scB$  
+    by \ref{def:FilterConvergence}.
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:FundamentalSystemForAll}]
+    $(\impliedby)$ 
+    This is a trivial consequence of the $(\impliedby)$ direction of
+    \ref{prop:FilterConvergenceFacts:FundamentalSystemExistence}.
+    
+    $(\implies)$ 
+    Let $x$ be a \FilterLimit of $\scB$. 
+    Then $\scU_{\scT}(x) \subset \scF$. 
+    Let $\scU$ be a 
+    \FundamentalSystemOfNeighborhoods
+    For $X$ at $x$. 
+    By 
+    \ref{def:FundamentalSystemOfNeighborhoods:AreNeighborhoods}, 
+    $\scU \subset \scU_{\scT}(x)$, so 
+    $\scU \subset \scU_{\scT}(x) \subset \scF$. 
+    Hence $\scNested{\scF}{ \scU}$ holds. 
+    Since $\scNested{\scB}{\scF}$ holds and since 
+    \Nested is a \TransitiveRelation, 
+    $\scNested{\scB}{\scU}$ holds. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:FinerFilter}]
+    This is clear since \FilterFineness is a \PartialOrdering and is therefore \TransitiveRelation.
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:CoarserTopology}]
+    If $\scT_1$ is \TopologyCoarser than $\scT$, then 
+    $\scU_{\scT_1}(x) \subset \scU_{\scT}(x)$. 
+    If $x$ is a \FilterLimit of $\scF$ in $(X, \scT)$, then 
+    $\scU_{\scT}(x) \subset \scF$. 
+    Hence, $\scU_{\scT_1}(x) \subset\scF$, so 
+    $x$ is a \FilterLimit of $\scF$ in $(X,\scT_1)$. 
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:Intersection}]
+    Let $U \in \scU_{\scT}(x)$. 
+    Then for each $\alpha \in A$, $U \in \scF_{\alpha}$. 
+    Hence $U \in \bigcap\limits_{\alpha \in A} \scF_{\alpha}$. 
+    Hence 
+    $\scU_{\scT}(x) \subset \bigcap\limits_{\alpha \in A} \scF_{\alpha}$. 
+    so $x$ is a \FilterLimit of 
+    $\bigcap\limits_{\alpha \in A} \scF_{\alpha}$.
+    \end{proof}
+    \begin{proof}[Proof of \ref{prop:FilterConvergenceFacts:UltrafilterCondition}]
+    $(\implies)$ 
+    This direction is a direct consequence of 
+    \ref{prop:FilterConvergenceFacts:FinerFilter}.
+
+    $(\impliedby)$
+    By \ref{prop:UltraFilterFacts:UltrafilterIntersection}, 
+    $\scF$ is the intersection of all \Ultrafilters on $X$ 
+    which contain $\scF$. 
+    By \ref{prop:FilterConvergenceFacts:Intersection}, if 
+    these all have $x$ as a \FilterLimit, then $\scF$ must also
+    have $x$ as a \FilterLimit.
+    \end{proof}
 \end{prop}

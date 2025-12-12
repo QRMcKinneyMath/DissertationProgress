@@ -1,0 +1,19 @@
+\begin{prop}[\SetCompact Image]
+\label{prop:CompactImage}
+\rm
+Let $X$ be a \SetCompact \TopologicalSpace.
+Let $Y$ be a \TopologicalSpace.
+Let $f:X \to Y$ be \ContinuousFunction.
+Then $f(X)$ is \SetCompact. 
+\begin{proof}
+Let $\{U_{\alpha}\}_{\alpha \in A}$ be an \SetOpen \Cover of $f(X)$. 
+Since $f$ is \ContinuousFunction, $\{f^{-1}\pa{U_{\alpha}}\}_{\alpha \in A}$
+is a \SetOpen \Cover of $X$. 
+Since $X$ is \SetCompact, there is a \Finite \Subcover
+$\{f^{-1}\pa{U_{\alpha_i}}\}_{i=1}^n$. 
+Since 
+$X \subset \bigcup\limits_{i=1}^n f^{-1}\pa{U_{\alpha_i}}$, 
+$f(X) \subset \bigcup\limits_{i=1}^n U_{\alpha_i}$.
+Hence $f(X)$ is \SetCompact.
+\end{proof}
+\end{prop}

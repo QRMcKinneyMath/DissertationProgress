@@ -1,16 +1,17 @@
-\label{def:handedquotientoperators}
 \newcommand{\CodomainQuotientOperator}[0]{\textbf{\hyperref[def:handedquotientoperators]{Codomain Quotient Operator}}\xspace}
 \newcommand{\CodomainQuotientMap}[0]{\textbf{\hyperref[def:handedquotientoperators]{Codomain Quotient Map}}\xspace}
-\begin{df}[Codomain Quotient Operator]
-    Let X and Y be \SeminormedSpaces.
+\begin{df}[\CodomainQuotientMap]
+\label{def:handedquotientoperators}
+\rm
+    Let $X$ and $Y$ be \SeminormedSpaces.
     Define $\scQ_Y:BL(X,Y) \to BL(X, Y/\Ker_Y)$ by setting, 
-    for each $x \in X$, 
+    for each $x \in X$, and for each $T \in BL(X,Y)$, 
     \begin{equation*} 
         \scQ_YTx = [Tx]
     \end{equation*}
+    We call $\scQ_Y$ the \CodomainQuotientMap of $X$ and $Y$.
     Let $T \in BL(X,Y)$. 
-    We call $\scQ_Y$ the \CodomainQuotientMap of X and Y
-    and we call $\scQ_YT$ the 
+    We call $\scQ_YT$ the 
     \CodomainQuotientOperator
-    of T.
+    of $T$.
 \end{df}

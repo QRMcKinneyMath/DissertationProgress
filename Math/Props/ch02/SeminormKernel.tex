@@ -1,30 +1,45 @@
 \begin{prop}[Seminorm Kernel is a vector Subspace]
 \label{prop:seminormkernelisavectorsubspace}
+\rm
     Let $(X,\norm{\cdot})$ be a \SeminormedSpace over a field $\F \in \{\R, \C\}$  
     with corresponding \SeminormKernel $\Ker$. 
-    Then the following are true. 
-    \begin{enumerate}
-        \item $\Ker$ is a vector subspace of X. 
-        \item $\Ker$ is closed in the \SeminormTopology on X.
-        \item $\Ker=X$ if and only if X is \Degenerate. 
+    Then $\Ker=\overline{\{0\}}$, and in particular, the following hold. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:seminormkernelisavectorsubspace}~\roman*}]
+        \item 
+        \label{prop:SeminormKernel:Closure0}
+        $\Ker=\overline{\{0\}}$, and is therefore \SetClosed. 
+        \item 
+        \label{prop:SeminormKernel:VectorSubspace}
+        $\Ker$ is a  \VectorSubspace  of $X$. 
+        \item 
+        \label{prop:SeminormKernel:Degenerate}
+        $\Ker=X$ if and only if $X$ is \Degenerate. 
     \end{enumerate}
-
-
-    \begin{proof}[Proof of One]
-        \Subadditivity implies that, if $x,y \in \Ker$, then $\norm{x+y} \leq \norm{x}+\norm{y}=0$. 
-        By \ScalarHomogeneity, if $x \in \Ker$  and $\alpha \in \F$, $\norm{\alpha x} =|\alpha| \norm{x}=0$
-        so $\Ker$ is in fact a vector subspace of X. 
-    \end{proof}
-    \begin{proof}[Proof of Two]
-        
-        If $x \in X \setminus  \Ker$
-        then $\norm{x} = \alpha > 0$ for some positive $\alpha$. 
-        Hence $B(x;\alpha/2)$ is an open set containing x disjoint from $\Ker$. 
-       We can then write $X \setminus \Ker$ as the union of all such open sets to see that $\Ker$ is closed. 
-    \end{proof}
-	
-	\begin{proof}[Proof of Three]
-		Direct application of the definitions of the \SeminormKernel
-		and \Degenerate \Seminorm. 
-	\end{proof} 
+    
+\begin{proof}[Proof of \ref{prop:SeminormKernel:Closure0}]
+Let $x \in X \setminus \Ker$. 
+Then $\norm{x} > 0$.
+Hence $B\pa{x, \frac{\norm{x}}{2}}$ is a \Neighborhood of $x$
+\Disjoint from $\Ker$.
+Hence $x \in X \setminus \overline{\{0\}}$.
+That is, $\overline{\{0\}} \subset \Ker$. 
+Now let $x \in X \setminus \overline{\{0\}}$. 
+Then there is $U \in \scU_{\scT}(x)$  not containing $0$. 
+Then there exists $\delta > 0$ with $B(x;\delta) \subset U$. 
+This implies $\norm{x} \geq \delta > 0$, so $x \not \in \Ker$. 
+Hence $\Ker \subset \overline{\{0\}}$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:SeminormKernel:VectorSubspace}]
+By 
+\ref{prop:SeminormKernel:Closure0} and 
+\ref{prop:TopGroup:NormalSubgroup}, 
+$\Ker$ is a \NormalSubgroup of $X$. 
+Let $x \in \Ker$. 
+Let $\alpha \in \mathbb{F}$. 
+Then $\norm{\alpha x} = \abs{\alpha} \norm{x} = 0$, so $\alpha x \in \Ker$. 
+Hence $\Ker$ is a \VectorSubspace of $X$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:SeminormKernel:Degenerate}]
+Trivial.
+\end{proof}
 \end{prop}

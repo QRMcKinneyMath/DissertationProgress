@@ -8,47 +8,72 @@
     \TopologyBasis 
     for 
     \scGeneratedTopology{X}{B}
-    if and only if 
+    if and only if each of 
     the following hold
-    \begin{enumerate}
-        \item $X \in B$
-        \item $\emptyset \in B$. 
-        \item For each $U,V \in B$ and for each $x \in U \cap V$, 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:BasisOfGeneratedTopology}~\roman*}]
+        \item 
+        \label{prop:Basis:Cover}
+        For each $x \in X$, there exists $U \in B$ such that 
+        $x \in U$. 
+        \item 
+        \label{prop:Basis:Empty}
+        $\emptyset \in B$. 
+        \item 
+        \label{prop:Basis:Nest}
+        For each $U,V \in B$ and for each $x \in U \cap V$, 
         there is a $W \in B$ satisfying  $x \in W \subset U \cap V$. 
     \end{enumerate}
-    \begin{proof}
-        I first claim that 
-        it is sufficient to show that any finite intersection of elements of $B$ can 
-        be written as a union of elements of $B$.
+    \begin{proof}[Proof of $\impliedby$]
+        Suppose 
+        \ref{prop:Basis:Cover}, 
+        \ref{prop:Basis:Empty}, and
+        \ref{prop:Basis:Nest} hold.
+        Let $\scK$ denote the collection of 
+        arbitrary unions of \Finite intersections 
+        of elements of $B$. 
+        By \ref{prop:Basis:Cover}, $X \in \scK$. 
+        By \ref{prop:Basis:Empty}, $\emptyset \in \scK$. 
+        Hence, by
+        \ref{prop:CharacterizationOfGeneratedTopoology}, 
+        $\scGeneratedTopology{X}{B}=\scK$.
+        Hence, to show that $B$ is a \TopologyBasis for $\scGeneratedTopology{X}{B}$, 
+        it is sufficient to show that $B$ any \Finite
+        intersection of elements of $B$ can be written as 
+        a union of elements of $B$. 
         I prove in the case of binary intersections, but the inductive step
         has a similar proof to that of the binary case.
         Hence, let $U,V \in B$ with $U \cap V \neq \emptyset$. 
-        Then for each $x \in U \cap V$, by assumption, 
+        Then for each $x \in U \cap V$, by 
+        \ref{prop:Basis:Nest}, 
         there exists a $W_x \in B$ such that 
         $x \in W_x \subset U \cap V$. 
         Hence, we can write 
         \begin{equation*}
             U \cap V \subset \bigcup_{x \in U \cap V} W_x \subset U \cap V
         \end{equation*}
-        showing that finite intersctions of 
+        showing that \Finite intersections of 
         elements of $B$ can be written as unions of 
         elements of $B$. 
-        Hence, by
-        \ref{prop:CharacterizationOfGeneratedTopoology}, 
-        $\scGeneratedTopology{X}{B}$ 
-        consists of exactly the unions of elements of $B$, finishing one direction.
-        For the other direction, 
-        if $B$ is a 
+        Hence $B$ is a \TopologyBasis for 
+        \scGeneratedTopology{X}{B}.
+       \end{proof}
+       \begin{proof}[Proof of $\implies$]
+        Let $B$ be a 
         \TopologyBasis
         for $\scGeneratedTopology{X}{B}$, 
-        then 
-        by 
-        \ref{prop:TopologyBasisCharacterization}, 
-        sicnce $\scGeneratedTopology{X}{B}$ 
-        contains finite intersections of elements of $B$, 
-        the given properties hold. 
-       
-        
-
+        Since $X \in \scGeneratedTopology{X}{B}$, 
+        \ref{prop:Basis:Cover} holds. 
+        Since $\emptyset \in \scGeneratedTopology{X}{B}$, 
+        \ref{prop:Basis:Empty} holds. 
+        Let $U,V \in B$.
+        Let $x \in U \cap V$. 
+        Then $U \cap V \in \scGeneratedTopology{X}{B}$. 
+        Since $B$ is a \TopologyBasis for 
+        $\scGeneratedTopology{X}{B}$, there exists
+        $\{B_\alpha\}_{\alpha \in A} \subset B$ such that 
+        $U \cap V = \bigcup\limits_{\alpha \in A} B_\alpha$. 
+        Hence, for some $\gamma \in A$, 
+        $x \in B_\gamma \subset U \cap V$. 
+        Hence \ref{prop:Basis:Nest} holds.
     \end{proof}
 \end{prop}

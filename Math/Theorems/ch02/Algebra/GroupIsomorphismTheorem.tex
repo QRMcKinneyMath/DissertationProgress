@@ -1,0 +1,19 @@
+\begin{thm}[Group Isomorphism Theorem]
+\label{thm:GroupIsomorphism}
+\rm
+Let $G_1$ and $G_2$ be \Groups.
+Let $T:G_1 \to G_2$ be a \MagmaHomomorphism.
+Let $K=Kernel(T):=T^{-1}(e_2)$. 
+Let $Q:G_1 \to G_1/K$ be the \QuotientMap.
+Define $\tilde{T}:G_1/Kernel(T) \to Range(T)$ by
+$\tilde{T}([x])=T(x)$. 
+Then $\tilde{T}$ is a group isomorphism, 
+$T = \tilde{T} \circ Q$, and $Q = \tilde{T}^{-1} \circ T$. 
+\begin{proof}
+This is a direct consequence of 
+\ref{prop:MagmaHomomorphism}, 
+\ref{prop:NormalSubgroup}, 
+and 
+\ref{rmk:NormalSubgroup}.
+\end{proof}
+\end{thm}

@@ -28,4 +28,85 @@
         If a \Filter $\scF$ in $X$ \FilterConverges, say $\scF \to x$, then 
         $x$ is that \Filter's only \FilterClusterPoint.
     \end{enumerate}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:Hausdorff} $\implies$ \ref{prop:HausdorffCharacterizations:ClosedNeighborhoodsConvergeToPoint}]
+Clearly, $\{ x \} \subset \bigcap\limits_{U \in \scU_{\scT}(x)} \overline{U}$.
+For the other direction, let $y \neq x$. 
+Then, since $X$ is \Hausdorff, there exist
+$U_y \in \scU_{\scT}(y)$ and $U_x \in \scU_{\scT}(x)$
+such that
+$U_y \cap U_x = \emptyset$. 
+Hence, $y \not \in \overline{U_x}$.
+Hence, $y \not \in \bigcap\limits_{U \in \scU_{\scT}(x)} \overline{U}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:ClosedNeighborhoodsConvergeToPoint} $\implies$ \ref{prop:HausdorffCharacterizations:ClosedBinaryDiagonal}]
+Let $(x,y) \in \pa{X \times X} \setminus \scSetDiagonal{X}$. 
+Then $y \neq x$, so $y \not \in \bigcap\limits_{U \in \scU_{\scT}(x)} \overline{U}$. 
+Hence, there exists $U_x \in \scU_{\scT}(x)$ such that 
+$y \not \in \overline{U_x}$. 
+Hence, there exists $U_y \in \scU_{\scT}(y)$ such that
+$U_y \cap U_x = \emptyset$. 
+Then $U_x \cap U_y$ is a \Neighborhood of $(x,y)$ in $X \times X$
+which is \Disjoint from $\scSetDiagonal{X}$.
+Thus $U_x \times U_y \subset \pa{X \times X} \setminus \scSetDiagonal{X}$, so
+that $\pa{X \times X} \setminus \scSetDiagonal{X}$ is \SetOpen,
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:ClosedBinaryDiagonal} $\implies$ \ref{prop:HausdorffCharacterizations:ClosedDiagonal}]
+Let $\{x_\alpha\}_{\alpha \in A} \in \pa{\prod\limits_{\alpha \in A} X} \setminus \scInfiniteSetDiagonal{A}{X}$. 
+Then there exists $\alpha,\beta \in A$ such that $x_\alpha \neq x_\beta$. 
+This implies $(x_\alpha,x_\beta ) \in \pa{X \times X} \setminus \scSetDiagonal{X}$. 
+Hence there is an $X \times X$-\Neighborhood $U$ of $(x,y)$ such that $U \cap \scSetDiagonal{X} = \emptyset$. 
+There exists $U_\alpha \in \scU_{\scT}(x_\alpha)$ and $U_{\beta} \in \scU_{\scT}(x_\beta)$ such that $(x_\alpha,x_\beta) \in U_{\alpha} \times U_{\beta} \subset \scSetDiagonal{X}$. 
+Then $\pi_{\alpha}^{-1}(U_\alpha) \cap \pi_{\beta}^{-1}\pa{U_{\beta}}$ 
+is a \Neighborhood of $\{x_\alpha\}_{\alpha \in A}$ which is disjoint from 
+$\scInfiniteSetDiagonal{A}{X}$.
+Since
+$\{x_\alpha\}_{\alpha \in A} \in \pa{\prod\limits_{\alpha \in A} X} \setminus \scInfiniteSetDiagonal{A}{X}$
+was arbitrary, 
+we conclude 
+i$\pa{\prod\limits_{\alpha \in A} X} \setminus \scInfiniteSetDiagonal{A}{X}$
+is \SetOpen.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:ClosedDiagonal} $\implies$ \ref{prop:HausdorffCharacterizations:ClosedBinaryDiagonal}]
+Trivial and obvious.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:ClosedBinaryDiagonal} $\implies$ \ref{prop:HausdorffCharacterizations:Hausdorff}]
+Let $x,y \in X$ with $x \neq y$. 
+Then $(x,y) \in X \times X \setminus \scSetDiagonal{X}$. 
+Since $\scSetDiagonal{X}$ is \SetClosed, there is an 
+open $U \in \scU_{\scT_{X\times X}}((x,y))$ such that 
+$U \cap \scSetDiagonal{X} = \emptyset$. 
+There exists $U_x \in \scU_{\scT}(x)$ and $U_y \in \scU_{\scT}(y)$
+such that $U_x \times U_y \subset U \subset \pa{X \times X} \setminus \scSetDiagonal{X}$. 
+Hence, $U_x \cap U_y = \emptyset$. 
+Since $x \neq y$ were arbitrary, $X$ is \Hausdorff.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:Hausdorff} $\implies$ \ref{prop:HausdorffCharacterizations:UniqueClusterPoint}]
+Let $X$ be \Hausdorff.
+Let $\scF$ be a \Filter in $X$. 
+Let $x_0$ be a \FilterLimit of $x_0$. 
+Let $y \in X$ with $y \neq x_0$. 
+Then there exists $U_y \in \scU_{\scT}(y)$ 
+and $U_x \in \scU_{\scT}(x)$ with $U_x \cap U_y = \emptyset$. 
+Since $x$ is a \FilterLimit of $\scF$, for some $F \in \scF$, 
+$F \subset U_x$. 
+Hence $F \cap U_y = \emptyset$. 
+By 
+\ref{prop:FilterClusterPoint:FundamentalSystem}, 
+$y$ is not a \FilterClusterPoint of $\scF$, 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:UniqueClusterPoint} $\implies$ \ref{prop:HausdorffCharacterizations:UniqueLimit}]
+This result is a direct application of 
+\ref{prop:FilterClusterPoint:LimitIsClusterPoint}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:HausdorffCharacterizations:UniqueLimit} $\implies$ \ref{prop:HausdorffCharacterizations:Hausdorff}]
+Let $x,y \in X$ with $x \neq y$ and suppose $x$ and $y$ 
+don't have any \Disjoint \Neighborhoods. 
+Then by 
+\ref{prop:FilterExistence}, 
+there exists a \Filter on $X$
+containing 
+$\scU_{\scT}(x) \cup \scU_{\scT}(y)$, 
+which would have both $x$ as a \FilterLimit
+and $y$ as a \FilterLimit.
+\end{proof}
 \end{prop}

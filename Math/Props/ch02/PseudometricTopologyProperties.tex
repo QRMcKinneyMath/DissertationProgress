@@ -1,60 +1,48 @@
+\begin{prop}[\PseudometricTopology]
 \label{prop:pseudometrictopology}
-\begin{prop}[Pseudometric Topology]
-    Let $(X,d)$ by  \PseudometricSpace and let $\scB$ be the set of \OpenBall's in $(X,d)$. 
+\rm
+    Let $(X,d)$ be a  \PseudometricSpace and let $\scB$ be the set of \OpenBall's in $(X,d)$, along with $\emptyset$. Let $\scT_d$ denote $\scGeneratedTopology{X}{\scB}$. 
     The following are true. 
-    \begin{enumerate}
-        \item There exists a unique topology $\T_d$ on X which $\scB$ is a basis of. That is, the \PseudometricTopology $\T_d$ is well defined. 
-        \item The \PseudometricInducedTopology is first countable. That is, each of its points permits a countable neighborhood basis. 
+    \begin{enumerate}[label=(\roman*), ref={\ref{prop:pseudometrictopology}~\roman*}]
+        \item 
+        \label{prop:PseudometricTopology:Basis}
+        $\scB$ is a \TopologyBasis for $\scT_d$. 
+        \item 
+        \label{prop:PseudometricTopology:FirstCountable}
+        The \PseudometricInducedTopology is \FirstCountable.
     \end{enumerate}
-    \begin{proof}[Proof of 1]
-        Uniqueness is guaranteed by closure under arbitrary unions of a topology. 
-        For existense, it is sufficient to show that the collection of arbitrary unions
-        of elements of $\scB$ is closed under finite intersections. 
-        Suppose that for $1\leq i \leq n$, we have $\{U_{\alpha_i} | \alpha_i \in A_i\} \subset \scB$
-        and consider the set
-        \begin{equation}
-            U=\bigcap_{i=1}^n \bigcup_{\alpha_i \in A_i} U_{\alpha_i}
-        \end{equation}
-        Let $x_0 \in U$. 
-        For each $i \in \{1, ..., n\}$, there exists $\alpha_i \in A_i$ such that 
-        \begin{equation}
-            x_0 \in U_{\alpha_i} = B_d(x_i; \epsilon_i)
-        \end{equation}
-        For each $i \in \{1, ..., n \}$, define $\delta_i = d(x_0, x_i)$. Then $0 < \delta_i < \epsilon_i$. 
-        Then, for each $i \in \{1, ..., n \}$, 
-        \begin{equation}
-            B_d(x_0; \epsilon_i-\delta_i) \subset U_{\alpha_i} \subset \bigcup_{\alpha_i \in A_i} U_{\alpha_i}
-        \end{equation}
-        Define 
-        \begin{equation}
-            \delta_{x_0} = \min\limits_{i=1}^n \pa{ \epsilon_i-\delta_i}
-        \end{equation}
-        Then $x_0 \in B(x_0; \delta_{x_0} ) \subset U$. 
-        If $U=\{x_{\alpha} | \alpha \in A\}$, then the arbitrary nature of $x_0$ above means 
-        we can repeat this construction, writing 
-        \begin{equation}
-            U \subset \bigcup_{\alpha \in A} B(x_{\alpha} ; \delta_{x_{\alpha}} )\subset \bigcup_{\alpha \in A} U = U
-        \end{equation}
-        Hence, $U \in B$ and the proof is complete. 
+    \begin{proof}[Proof of \ref{prop:PseudometricTopology:Basis}]
+       Let $U,V \in \scB$. 
+       Let $x \in U \cap V$.  
+       Then there exists $x_u,x_v \in X$ and $\epsilon_u,\epsilon_v > 0$ 
+       such that $U = B_d(x_u,\epsilon_u)$ and $V=B_d(x_v,\epsilon_v)$. 
+       Define $\delta = min\pa{\frac{\epsilon_u - d(x,x_u)}{2}, \frac{\epsilon_v-d(x,x_v)}{2}}$.
+       Let $y \in B(x;\delta)$. 
+       Then
+       \begin{equation*}
+       d(y,x_u) \leq d(y,x)+d(x,x_u) \leq \delta+ d(x,x_u) \leq \frac{\epsilon_u}{2} + \frac{d(x,x_u)}{2} < \epsilon_u
+       \end{equation*}
+       Similarly, $d(y,x_v) < \epsilon_v$, so $x \in B_d(x;\delta) \subset U \cap V$. 
+       By \ref{prop:BasisOfGeneratedTopology}, the result holds. 
     \end{proof}
-    \begin{proof}[Proof of 2]
+    \begin{proof}[Proof of \ref{prop:PseudometricTopology:FirstCountable}]
         Let $x_0 \in X$. 
         I claim that 
-        \begin{equation}
-            \scB_{x_0}:= \left\{ B_d\pa{x_0; \frac{1}{n}} | n \in \N\right\}
-        \end{equation}
-        is a neighborhood basis for $(X,\T_d)$ at $x_0$. 
-        Let $U \in \scU_{\T_d}(x)$ be open in $\T_d$. 
-        Since $\scB$ is a basis for $\T_d$, for some $y0 \in X$ and $\epsilon > 0$, 
+        \begin{equation*}
+            \scB_{x_0}:= \left\{ B_d\pa{x_0; \frac{1}{n}} : n \in \N\right\}
+        \end{equation*}
+        is a \NeighborhoodBasis for $(X,\T_d)$ at $x_0$. 
+        Let $U \in \scU_{\T_d}(x)$ be \SetOpen in $\T_d$. 
+        Since $\scB$ is a \TopologyBasis for $\T_d$, for some $y_0 \in X$ and $\epsilon > 0$, 
         $x_0 \in B_d(y_0; \epsilon) \subset U$. 
         Let $\delta = d(x_0, y_0)$. Then $\epsilon - \delta > 0$. 
         Define
-        \begin{equation}
+        \begin{equation*}
             n = \ceil{ \frac{1}{\epsilon - \delta}}
-        \end{equation}
+        \end{equation*}
         Then we have 
-        \begin{equation}
+        \begin{equation*}
             B_d\pa{x_0 ; \frac{1}{n}} \subset B_d(x_0 : \epsilon - \delta) \subset B(y_0 ; \epsilon) \subset U
-        \end{equation}
+        \end{equation*}
     \end{proof}
 \end{prop}

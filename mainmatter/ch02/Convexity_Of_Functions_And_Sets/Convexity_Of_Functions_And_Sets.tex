@@ -1,4 +1,5 @@
-
+\input{./Math/Definitions/ch02/ConvexityOfFunctions/ConvexFunction.tex}
+\input{./Math/Props/ch02/ConvexityOfFunctions/ConvexFunction.tex}
 \section{Convexity Of Functions And Sets}
 \begin{df}[Convex Functions]
     \label{df:convexfunction}
@@ -8,12 +9,7 @@
         \item We call $D(f):= f^{-1}\pa{\R}$ the \bf effective domain \rm of $f$. 
         \item If $D(f) \neq \emptyset$, then we call $f$ \bf proper.\rm
         \item We call $Epi\pa{f} :=\{ (x,t) \in X \times \R : f(x) \leq t \}$ the \bf Epigraph \rm of $f$. 
-        \item We denote $[x,y] = \{tx+(1-t)y: t \in [0,1]\}$.
-        \item We denote $(x,y)=\{tx+(1-t)y: t \in (0,1)\}$.
-        \item We say that $C\subset X$ is \bf convex \rm if $[x,y] \subset C$ for each $x,y \in C$. 
         \item We say that $C \subset X$ is \bf strictly convex \rm if for each $x,y \in C$, for each $z_0 \in (x,y)$, and for each $z_1 \in X$, there is a $t > 0$ such that $[z_0,z_0+tz_1] \subset C$. 
-        \item We say that $f$ is \bf convex \rm if for each $x,y \in X$, $f\pa{\frac{x+y}{2}} \leq \frac{f(x)+f(y)}{2}$. 
-        \item We say that $f$ is \bf strictly convex \rm if for each $x,y \in X$, $f\pa{\frac{x+y}{2}} < \frac{f(x)+f(y)}{2}$. 
         \item If g is a convex function, then then we define the \bf modulus of local uniform convexity \rm of g, $\tilde{\Delta}:\scU \times Y\to \R$ by
         \begin{equation}
             \tilde{\Delta} \pa{U, x} = \frac{1}{2} \inf\limits_{y \in Y \setminus (x+U)} \left\{ f(x)+f(y)-2f\pa{\frac{x+y}{2}}\right\}

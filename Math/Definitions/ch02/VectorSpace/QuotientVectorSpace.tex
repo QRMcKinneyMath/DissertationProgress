@@ -1,0 +1,16 @@
+\newcommand{\QuotientVectorSpace}[0]{ \textbf{\hyperref[def:QuotientVectorSpace]{Quotient Vector Space}}\xspace}
+\newcommand{\QuotientVectorSpaces}[0]{ \textbf{\hyperref[def:QuotientVectorSpace]{Quotient Vector Spaces}}\xspace}
+\begin{df}[\QuotientVectorSpace]
+\label{def:QuotientVectorSpace}
+\rm
+Let $(V,+,\cdot)$ be a \VectorSpace over a \Field $\scF$. 
+let $U\subset V$ be a \VectorSubspace. 
+Denote the corresponding \QuotientGroup with $(V/U, \oplus)$. 
+Define $\odot:\scF \times V/U \to V/U$ by setting, for $x \in U$ and $\alpha \in \scF$, 
+\begin{equation*}
+\alpha \odot [x] = [\alpha \cdot x]
+\end{equation*}
+By 
+\ref{prop:QuotientVectorSpace}, 
+$(V/U, \oplus, \odot)$ is a \VectorSpace over $\scF$. 
+\end{df}

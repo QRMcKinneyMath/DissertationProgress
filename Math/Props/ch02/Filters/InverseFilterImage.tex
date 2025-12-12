@@ -3,12 +3,12 @@
 \rm
 Suppose the following
 \begin{enumerate}
-\item $X$ and $Y$ be nonempty sets.
+\item $X$ and $Y$ are nonempty sets.
 \item $f:X \to Y$. 
 \item $\scB$ is a \FilterBase for a \Filter $\scF$ on $Y$. 
-\item $\scF_{f(X)}=\{U \cap f(X) : U \in \scF\}$
+\item $\scF_{f(X)}=\{U \cap f(X) : U \in \scF\}$.
 \item $\scG$ is a \Filter on $Y$. 
-\item $\scG_{f(X)}=\{U \cap f(X) : U \in \scG\}$
+\item $\scG_{f(X)}=\{U \cap f(X) : U \in \scG\}$.
 \end{enumerate}
 Then the following are true
 \begin{enumerate}[label=(\roman*), ref={\ref{prop:InverseFilterImage}.~\roman*}]
@@ -17,7 +17,7 @@ Then the following are true
     $\emptyset \not \in f^{-1}\pa{\scB}$. 
     \item \label{prop:InverseFilterImage:Finer} If $f^{-1}\pa{\scB}$ is a \FilterBase on $X$, 
     then $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase for a \Filter on $Y$ 
-    \FinerFilter
+    which is \FinerFilter
     than $\scF$. 
     \item \label{prop:InverseFilterImage:Subspace} 
     If $f\pa{f^{-1}\pa{\scB}}$ is a \FilterBase 

@@ -1,0 +1,142 @@
+\begin{prop}[\ConvexFunction function]
+\label{prop:ConvexFunction}
+\rm
+Let $\scF \in \{\bbC, \bbR\}$. 
+Let $X$ be a \VectorSpace over $\scF$. 
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:ConvexFunction}~\roman*}]
+\item 
+\label{prop:ConvexFunction:BinaryConvex}
+$T$ is \ConvexFunction
+and for each $x,y \in X$, $T\pa{[x,y]}$ is bounded from above. 
+\item
+\label{prop:ConvexFunction:Convex}
+For each $x,y \in X$ and for each $\lambda \in (0,1)$, 
+\begin{equation*}
+T\pa{\lambda x + \pa{1-\lambda}y} \leq \lambda T(x) + \pa{1-\lambda}T(y)
+\end{equation*}
+\item
+\label{prop:ConvexFunction:SumConvex}
+For every $\{\lambda_i\}_{i=1}^n \subset (0,1)$ such that $\sum\limits_{i=1}^n \lambda_i = 1$
+and for every $\{x_i\}_{i=1}^n \subset X$ where each $x_i$ is distinct, , 
+\begin{equation*}
+T\pa{\sum\limits_{i=1}^n \lambda_i x_i} \leq \sum\limits_{i=1}^n \lambda_i T\pa{x_i}
+\end{equation*}
+\item
+\label{prop:ConvexFunction:ConvexInequality}
+For each $x,y,z \in X$ with $x \neq z$ and $y = \lambda z + \pa{1-\lambda} x$ where $\lambda \in (0,1)$, we have 
+\begin{equation*}
+\frac{T(y)-T(x)}{\lambda} \leq T(z)-T(x) \leq \frac{T(z)-T(y)}{1-\lambda}
+\end{equation*}
+\item
+\label{prop:ConvexFunction:EpigraphConvex}
+$Epi(T)$ is \ConvexSet
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:BinaryConvex} implies  \ref{prop:ConvexFunction:Convex}]
+Let $x,y \in X$. 
+Let $M$ be the collection of all $n \in \bbZ^+$ such that 
+for all $\lambda \in (0,1)$
+there exists nonnegative integers $j_n$ and $k_n$ with $j+k = 2^n-1$, 
+$\frac{j_n}{2^n} \leq \lambda$ and $\frac{k_n}{2^n} \leq 1-\lambda$ 
+and there exists $\lambda_n \in (0,1)$ such that 
+\begin{equation*}
+T\pa{\lambda x + (1-\lambda)y} \leq \frac{j_n}{2^n}T(x) + \frac{k_n}{2^n}T(y) + \frac{1}{2^n}T\pa{\lambda_n x + (1-\lambda_n) y}
+\end{equation*}
+I first prove $1 \in M$. 
+Without loss of generality, suppose $\lambda \geq \frac{1}{2}$. 
+Define $\lambda_1 = 2\pa{\lambda - \frac{1}{2}}$. Then $\lambda_1 \in (0,1)$, $\lambda = \frac{\lambda_1}{2} + \frac{1}{2}$, and $2(1-\lambda) = 1-\lambda_1$
+\begin{align*}
+T\pa{\lambda x + (1-\lambda)y} & = T\pa{\frac{1}{2} x + \frac{1}{2} \lambda_1 x +\frac{2}{2}\pa{1-\lambda}y} \\
+& = T\pa{ \frac{1}{2} x + \frac{1}{2} \pa{\lambda_1 x + \pa{1-\lambda_1}y}} \\
+& \leq \frac{1}{2} T(x) + \frac{1}{2} T\pa{\lambda_1 x + (1-\lambda_1) y}
+\end{align*}
+Since $\frac{1}{2} \leq \lambda$ and $0 \leq 1-\lambda$, $1 \in M$. 
+Now suppose $k \in M$. 
+Then since $1 \in M$. There are integers $a$ and $b$ with either $a=0$ and $b=1$ 
+or with $a=1$ and $b=0$ and there is a $\lambda_{k+1} \in [0,1]$ such that
+\begin{equation*}
+T\pa{\lambda_k x +(1-\lambda_k)y} \leq  \frac{a}{2}T(x)+\frac{b}{2}T(y)+\frac{1}{2}T\pa{\lambda_{k+1} x+(1-\lambda_{k+1})y}
+\end{equation*}
+Hence 
+\begin{align*}
+T\pa{\lambda x + (1-\lambda) y } &\leq \frac{j_k}{2^k}T(x) + \frac{m_k}{2^k}T(y) + \frac{1}{2^k} T\pa{\lambda_k x + (1-\lambda_k)y}\\
+& \leq \frac{j_k}{2^k}T(x)+\frac{m_k}{2^k}T(y) + \frac{1}{2^k} \pa{\frac{a}{2}T(x)+\frac{b}{2}T(y)+\frac{1}{2}T\pa{\lambda_{k+1}x+(1-\lambda_{k+1}T(y)}}\\
+& = \frac{2j_k+a}{2^{k+1}}T(x) + \frac{2m_k+b}{2^{k+1}} + \frac{1}{2^{k+1}} T\pa{\lambda_{k+1}x+(1-\lambda_{k+1})y}
+\end{align*}
+where we have 
+\begin{equation*}
+2j_k+a+2m_k+b=2\pa{j_k+m_k}+a+b = 2\pa{2^k-1}+1=2^{k+1}-1
+\end{equation*}
+so that $k+1 \in M$.
+Hence, $M = \mathbb{Z}^+$. 
+Thus, for each $n \in \mathbb{N}$, if $\Gamma$ is an $\UpperBound$ for $T([x,y])$, 
+we have 
+\begin{equation*}
+T\pa{\lambda x + (1-\lambda)y} \leq \frac{j_n}{2^n}T(x) + \frac{m_n}{2^n} T(y) + \frac{\Gamma}{2^n}
+\end{equation*}
+Now since $\frac{j_n}{2^n} \leq \lambda$, $\frac{m_n}{2^n} \leq 1-\lambda$, and $\frac{j_n}{2^n}+\frac{m_n}{2^n} \to 1$, it is clear that $\frac{j_n}{2^n} \to \lambda$ and $\frac{m_n}{2^n} \to 1-\lambda$, so 
+clearly the result holds. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:Convex} implies  \ref{prop:ConvexFunction:SumConvex}]
+        I utilize induction on n. 
+        Since $f$ is \ConvexFunction, the proposition holds for $n=1$ and $n=2$. 
+        Let $k \in \N$.
+        Suppose that for any $(\psi_1,\cdots,\psi_k)\in (0,1)^k$ such that $\sum_{j=1}^k \psi_j=1$, and for each $(x_1,\cdots,x_k) \in X^k$, we have
+        \begin{equation*}
+            f\pa{\sum_{j=1}^k \lambda_j x_j} \leq \sum_{j=1}^k \lambda_j f(x_j)
+        \end{equation*}
+        Let $(\lambda_1,\cdots,\lambda_{k+1}) \in [0,1]^{k+1}$. 
+        Let $(x_1,\cdots,x_{k+1}) \in X^{k+1}$.
+        Then 
+        \begin{equation*}
+            \sum_{j=1}^k \frac{\lambda_j}{1-\lambda_{k+1}}=1 \tab[1cm] \pa{\frac{\lambda_1}{1-\lambda_{k+1}},\cdots,\frac{\lambda_k}{1-\lambda_{k+1}}} \in (0,1)^k
+        \end{equation*}
+        Since $f$ is \ConvexFunction, , 
+        \begin{equation*}
+            \begin{split}
+                f \pa{ \sum_{j=1}^{k+1} \lambda_j x_j} & = f\pa{ \lambda_{k+1}x_{k+1} + (1-\lambda_{k+1}) \sum_{j=1}^k \frac{\lambda_j}{1-\lambda_{k+1}} x_j}\\
+                & \leq \lambda_{k+1} f(x_{k+1}) + (1-\lambda_{k+1}) f\pa{\sum_{j=1}^k \frac{\lambda_j}{1-\lambda_{k+1}} x_j} \\
+                & \leq \sum_{j=1}^{k+1} \lambda_j f(x_j)
+            \end{split}
+        \end{equation*}
+
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:SumConvex} if and only if   \ref{prop:ConvexFunction:ConvexInequality}]
+For the first inequality, we have 
+\begin{equation*}
+T(y) = T\pa{\lambda_z + (1-\lambda)x } \leq \lambda T(z)+(1-\lambda)T(x)
+\end{equation*}
+which is equivalent to 
+\begin{equation*}
+T(y) -T(x) \leq \lambda \pa{T(z)-T(x)}
+\end{equation*}
+which is equivalent to
+\begin{equation*}
+\frac{T(y)-T(x)}{\lambda} \leq T(z) - T(x)
+\end{equation*}
+
+For the second inequality, 
+\begin{equation*}
+T(y) \leq \lambda T(z) + (1-\lambda)T(x)
+\end{equation*}
+which is equivalent to
+\begin{equation*}
+-\lambda T(z)+T(z)-\pa{1-\lambda}T(x) \leq T(z)-T(y)
+\end{equation*}
+which is equivalent to 
+\begin{equation*}
+\pa{1-\lambda}\pa{T(z)-T(x)} \leq T(z)-T(y)
+\end{equation*}
+which is equivalent to 
+\begin{equation*}
+T(z)-T(x) \leq \frac{T(z)-T(y)}{1-\lambda}
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:ConvexInequality} implies  \ref{prop:ConvexFunction:BinaryConvex}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:Convex} implies  \ref{prop:ConvexFunction:EpigraphConvex}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ConvexFunction:EpigraphConvex} implies  \ref{prop:ConvexFunction:Convex}]
+\end{proof}
+\end{prop}

@@ -1,14 +1,15 @@
-\label{def:pseudometricball}
 \newcommand{\OpenBall}[0]{\textbf{\hyperref[def:pseudometricball]{Open Ball}}\xspace}
 \newcommand{\OpenUnitBall}[0]{\textbf{\hyperref[def:pseudometricball]{Open Unit Ball}}\xspace} 
 \newcommand{\ClosedBall}[0]{\textbf{\hyperref[def:pseudometricball]{Closed Ball}}\xspace}
 \newcommand{\ClosedUnitBall}[0]{\textbf{\hyperref[def:pseudometricball]{Closed  Unit Ball}}\xspace}
 \begin{df}[Pseudometric Ball]
+\label{def:pseudometricball}
+\rm
     Let $(X,d)$ be a \PseudometricSpace. 
     For each $x_0  \in X$ and each $\epsilon > 0$, we define the following.
     \begin{enumerate}
-        \item  $B_d(x_0, \epsilon) := \{y \in X | d(x_0,y) < \epsilon\}$ denotes the \OpenBall about $x_0$ with radius $\epsilon$. 
-    \item $\overline{B_d}(x_0,\epsilon) := \{y \in X | d(x_0,y) \leq \epsilon \}$ denotes the \ClosedBall about $x_0$ with radius $\epsilon$. 
+        \item  $B_d(x_0, \epsilon) := \{y \in X : d(x_0,y) < \epsilon\}$ denotes the \OpenBall about $x_0$ with radius $\epsilon$. 
+    \item $\overline{B_d}(x_0,\epsilon) := \{y \in X : d(x_0,y) \leq \epsilon \}$ denotes the \ClosedBall about $x_0$ with radius $\epsilon$. 
     \item  We call the \OpenBall about $x_0$ with radius $1$ the \OpenUnitBall about $x_0$. 
     \item We call the \ClosedBall about $x_0$ with radius $1$ the \ClosedUnitBall about $x_0$. 
     \end{enumerate} 

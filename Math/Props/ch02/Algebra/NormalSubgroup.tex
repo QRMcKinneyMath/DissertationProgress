@@ -1,0 +1,84 @@
+\begin{prop}
+\label{prop:NormalSubgroup}
+\rm
+Let $G$ be a \Group and $K \subset G$. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:NormalSubgroup}~\roman*}]
+\item 
+\label{prop:NormalSubgroup:Normal}
+$K$ is a \NormalSubgroup of $G$. 
+\item 
+\label{prop:NormalSubgroup:CosetOfIdentity}
+There exists a \Congruence $\cong$ on $G$ such that $H = [e]$. 
+\item 
+\label{prop:NormalSubgroup:CosetOfIdentityUnique}
+There exists a unique \Congruence $\cong$ on $G$ such that $H = [e]$. 
+\item 
+\label{prop:NormalSubgroup:KernelOfHomomorphism}
+There exists a group $H$ and a \MagmaHomomorphism $T:G \to H$ such that 
+$K=T^{-1}(n)$ where $n$ is the \IdentityElement of $H$. . 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:NormalSubgroup:Normal} implies \ref{prop:NormalSubgroup:CosetOfIdentity}]
+Let $K$ be a \NormalSubgroup of $G$. 
+For $x,y \in G$, define $x \cong y$ if and only if $xy^{-1} \in K$. 
+Since $e \in K$, if $x \in K$, then $x^{-1} \in K^{-1} =K$, so 
+$e = xx^{-1} \in KK^{-1}=KK \subset K$, so $x \cong x$. 
+If $x \cong y$, then 
+$yx^{-1} = \pa{xy^{-1}}^{-1} \in K^{-1} = K$. 
+Hence $y \cong x$. 
+Finally, if $x \cong y$ and $y \cong z$ then 
+$xz^{-1} = \pa{xy^{-1}}\pa{yz^{-1} } \in KK \subset K$, so $x \cong z$. 
+Hence $\cong$ is an \EquivalenceRelation.
+Now let $x_0 \cong x_1$ and $y_0 \cong y_1$. 
+Then $x_0y_0\pa{x_1y_1}^{-1} = x_0y_0y_{1}^{-1}x_{1}^{-1} \subset xKx^{-1}  \subset K$, 
+so $x_0y_0 \cong x_1y_1$. 
+Hence $\cong$ is a \Congruence on $G$. 
+
+Now let $x \in [e]$. Then $x \cong e$, so $xe^{-1} = x \in K$.
+Hence $[e] \subset K$. 
+If instead $y \in K$, then $ye^{-1} = ye=y \in K$, so $y \cong e$, implying $y \in [e]$. 
+Hence $K=[e]$. 
+\end{proof}
+
+\begin{proof}[Proof of \ref{prop:NormalSubgroup:CosetOfIdentity} implies \ref{prop:NormalSubgroup:CosetOfIdentityUnique}]
+Let $\cong_1$ and $\cong_2$ be \Congruences on $G$ such that 
+$H=[e]_{1}=[e]_{2}$. 
+Let $x \cong_1 y$. 
+Then $[x]_1 = [xy^{-1}y]_1=[xy^{-1}]_1[y]_1=[xy^{-1}][x]_1$. 
+Hence $[xy^{-1}]_1 = [e]_1$, so $xy^{-1} \cong_1 e$. 
+Hence $xy^{-1} \cong_2 e$. 
+Thus, $[x]_2 = [xy^{-1}y]_2 = [xy^{-1}]_2[y]_2 = [e]_2[y]_2 = [y]_2$.
+Thus $x \cong_2 y$. 
+Hence $\cong_1 \subset \cong_2$. 
+By a similar argument, $\cong_2 \subset \cong_1$, 
+There is at most $1$ \Congruence on $G$ 
+such that $[e] = K$ for any subset $K$ of $G$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NormalSubgroup:CosetOfIdentityUnique} implies \ref{prop:NormalSubgroup:KernelOfHomomorphism}]
+Let $\cong$ be a \Congruence on $G$ for which $[e] = K$. 
+By 
+\ref{prop:QuotientMagma:Associative}, 
+\ref{prop:QuotientMagma:Identity},
+and 
+\ref{prop:QuotientMagma:Inverse}
+the \QuotientMagma $G/\cong$ is a \Group.
+By \ref{prop:QuotientMagma:Homomorphism}, 
+$T:G \to G/\cong$ defined by $T(x)=[x]$ is a 
+\MagmaHomomorphism.
+Furthermore, by \ref{prop:QuotientMagma:Identity}, 
+$[e]$ is the \IdentityElement of $G/\cong$. 
+Hence, because
+$K = [e] = \{x \in G : x \cong e\} = \{x \in G: [x] = [e]\} = \{x \in G : T(x)=[e]\} = T^{-1}\pa{[e]}$
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NormalSubgroup:KernelOfHomomorphism} implies \ref{prop:NormalSubgroup:Normal}]
+It suffices to show that $K=T^{-1}(e)$ is a \NormalSubgroup of $G$. 
+Let $x,y \in K$. 
+Then $T(xy) = T(x)T(y) = ee=e$, so $xy \in K$, so $KK \subset K$. 
+Furthermore, fi $x \in K$, then 
+$e=T(e)=T(xx^{-1})=T(x)T(x^{-1})=eT(x^{-1})=T(x^{-1})$, so $x^{-1} \in K$. 
+Hence $K$ is \SymmetricSubset. 
+Now, let $y \in K$ and let $x \in G$. 
+Then $T(xyx^{-1}) = T(x)T(y)T(x^{-1})=T(x)T(x^{-1})=T(xx^{-1})=T(e)=e$. 
+Hence $K$ is a \NormalSubgroup.
+\end{proof}
+\end{prop}

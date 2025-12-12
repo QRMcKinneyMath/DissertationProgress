@@ -1,9 +1,37 @@
-\newcommand{\VectorSpace}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Space}}\xspace}
+\newcommand{\VectorSpace}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Space}}\xspace} 
 \newcommand{\VectorSpaces}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Spaces}}\xspace}
-\newcommand{\Field}[0]{ \textbf{\hyperref[def:vectorspace]{Field}}\xspace}
-\newcommand{\Fields}[0]{ \textbf{\hyperref[def:vectorspace]{Fields}}\xspace}
-\newcommand{\VectorSubspace}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Subspace}}\xspace}
-\newcommand{\VectorSubspaces}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Subspaces}}\xspace}
-\newcommand{\StandardBasis}[0]{ \textbf{\hyperref[def:vectorspace]{Standard Basis}}\xspace}
-\newcommand{\StandardBases}[0]{ \textbf{\hyperref[def:vectorspace]{Standard Bases}}\xspace}
+\begin{df}[\VectorSpace]
 \label{def:vectorspace}
+\rm
+Let $(F,+_F,\cdot_F,0_F,1_F)$ be a \Field. 
+Let $(V,+,0)$ be a \CommutativeFunction \Group. 
+Let $\cdot:\scF \times V \to V$  satisfy, for each 
+$\alpha,\beta \in F$ and for each $x,y \in V$, 
+\begin{enumerate}[label=(\roman*), ref={\ref{def:vectorspace}~\roman*}]
+\item 
+\label{def:VectorSpace:Associativity}
+$\alpha \cdot \pa{\beta \cdot x} = \pa{\alpha \cdot_F \beta } \cdot x$.
+\item 
+\label{def:VectorSpace:Distributivity1}
+$\pa{\alpha +_F \beta}\cdot x = \pa{\alpha \cdot x}+ \pa{\beta \cdot x}$.
+\item 
+\label{def:VectorSpace:Distributivity2}
+$\alpha \cdot \pa{x+y} = \pa{\alpha \cdot x}+ \pa{\alpha \cdot y}$.
+\item 
+\label{def:VectorSpace:Identity}
+$1 \cdot x = x$
+\end{enumerate}
+Then we call $V$ a \VectorSpace over $F$. 
+Let $\alpha \in F$. Let $x \in V$. 
+Let $A \subset F$. Let $B \subset V$. 
+Then we define
+\begin{equation*}
+\alpha B = \{\alpha \cdot b : b \in B \}
+\end{equation*}
+\begin{equation*}
+A x =\{ a \cdot x : a \in A \}
+\end{equation*}
+\begin{equation*}
+A B = \bigcup\limits_{a \in A} aB
+\end{equation*}
+\end{df}

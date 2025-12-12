@@ -1,23 +1,24 @@
 \begin{prop}[Canonical Embedding]
 \label{prop:canonicalembedding}
+\rm
     Let $X$ be a \SeminormedSpace 
     and let $c$ denote its 
     \CanonicalEmbedding. 
     The following are true. 
     \begin{enumerate}
         \item c is well defined
-        \item c is Linear. 
-        \item c is an isometry. 
-        \item c is an injection if and only if X is a \NormedSpace. 
+        \item c is \Linear. 
+        \item c is an \Isometry. 
+        \item c is an \Injection if and only if X is a \NormedSpace. 
         \item If $q:X \to X/\Ker$ is the \QuotientMap, 
 		$c_{X/\Ker}$ is the \CanonicalEmbedding of $(X/\Ker)$ into $(X/\Ker)^{**}$ 
 		and $\Omega_2:X^{**} \to (X/\Ker)^{**}$ 
-		is the linear bijective isometry defined in 
+		is the linear bijective \Isometry defined in 
 		\ref{def:higherorderdualspaceisomorphism}, 
 		then $c = \Omega_2^{-1} \circ c_{X/\Ker} \circ q$. 
 		//TODO: COME BACK TO THIS AND PROVE IT ONCE THE ISOS ARE CLEARED UP
-        \item $c_X$ is surjective if and only if 
-        $c_{X/\Ker}$ is surjective. 
+        \item $c_X$ is \Surjective if and only if 
+        $c_{X/\Ker}$ is \Surjective. 
         \item X is \Reflexive if and only if $X/\Ker$ is \Reflexive.
     \end{enumerate}
     \begin{proof}[Proof of 1]
@@ -84,7 +85,7 @@
 	so that $\norm{c(x_0)} \geq \norm{x_0}$. 
 	Since the inequality goes both ways, 
 	$\norm{x_0} = \norm{c(x_0)}$, and 
-	c is therefore an isometry. 
+	c is therefore an \Isometry. 
     \begin{proof}[Proof of 4]
 	Let X be a \NormedSpace. 
 	Then $X^*$ separates points in X. 
@@ -95,9 +96,9 @@
 	there exists $x^* \in X^*$ with 
 	$\ip{x^*, c(x) } =\ip{x,x^*} \neq \ip{y,x^*}, \ip{x^*, c(y)}$
 	so that $c(x) \neq c(y)$.
-	Hence $c$ is injective. 
+	Hence $c$ is \Injective. 
 	
-	Now supose instead that $c$ is injective
+	Now supose instead that $c$ is \Injective
 	and let $x,y \in X$ with $\norm{x-y} = 0$.
 	We find that for any $x^* \in X^*$, 
 	\begin{align*}
@@ -108,7 +109,7 @@
 	\end{align*}
 	so that $\norm{c(x)-c(y)} = 0$.
 	Since $X^{**}$ is a normed space, 
-	this implies $c(x) = c(y)$, which through injectivity 
+	this implies $c(x) = c(y)$, which through \Injectivity
 	implies $x=y$. 
 	Hence we have the implication $\norm{x-y} = 0 \implies x=y$, so
 	that X is a $\NormedSpace$. 

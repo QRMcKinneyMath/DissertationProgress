@@ -1,0 +1,86 @@
+\begin{prop}[Gateaux]
+\label{prop:Gateaux}
+\rm
+Let $X$ be a \TVS.
+Let $Y$ be a \Hausdorff \TVS. 
+Let $C \subset X$. 
+Let $f:C \to Y$. 
+Let $x_0 \in C$. 
+Let $f$ be \GateauxDifferentiable at $x_0$. 
+Let $y_0 \in X$.
+Let $g(t)=f(x_0+ty_0)$. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Gateaux}~\roman*}]
+\item 
+\label{prop:Gateaux:TwoSided}
+$f_+'(x_0,y_0)=-f_+'(x_0,-y)=-f_-'(x_0,y_0).$
+\item 
+\label{prop:Gateaux:Classical}
+$\ip{y,f'(x_0)} = g'(0)$
+\item 
+\label{prop:Gateaux:SecondDerivative}
+If $f$ is \GateauxDifferentiable
+on $[x_0-\epsilon y_0, x_0+\epsilon y_0]$ for some $\epsilon > 0$
+and if $f':Domain(f') \to BL\pa{X, BL(X,Y)}$ is \GateauxDifferentiable at $x_0$, 
+then 
+\begin{equation*}
+\ip{y,f''(x)y}=g''(0)
+\end{equation*}
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:Gateaux:TwoSided}]
+Since $f$ is \GateauxDifferentiable
+at $x_0$ there exists $f'(x_0) \in BL(X,Y)$ such that 
+\begin{equation*}
+F_+'(x_0,y_0) = f'(x_0)y_0 = -f'(x_0)\pa{-y_0} = -f_+'(x_0,-y_0) = -f_-'(x_0,y_0)
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Gateaux:Classical}]
+We have 
+\begin{equation*}
+\ip{y,f'(x_0)} = f_+'(x_0,y_0) = \lim\limits_{t \searrow 0} \frac{f(x_0+ty_0)-f(x_0)}{t} = \lim\limits_{t \searrow 0} \frac{g(t)-g(0)}{t}
+\end{equation*}
+Also, letting $s=-t$, we have 
+\begin{align*}
+\ip{-y,f'(x_0)} & = f_+'(x_0,-y_0) = \lim\limits_{t \searrow 0 } \frac{f(x_0+t(-y_0))-f(x_0)}{t} \\
+& = \lim\limits_{s \nearrow 0} - \frac{f(x_0+sy_0)-f(x_0)}{s} \\
+& = - \lim\limits_{s \nearrow 0} \frac{f(x_0+sy_0) - f(x_0)}{s}
+\end{align*}
+Hence, by applying
+\ref{prop:Gateaux:TwoSided}, we have 
+\begin{equation*}
+ \lim\limits_{t \nearrow 0} \frac{f(x_0+ty_0) - f(x_0)}{t} = -f_+'(x_0,-y_0) = f_+'(x_0,y_0) = \lim\limits_{t \searrow 0} \frac{f(x_0+ty_0)-f(x_0)}{t}
+\end{equation*}
+so the two sided limit exists, and 
+\begin{equation*}
+\ip{y_0,f'(x_0)} = f_+'(x_0,y_0) = \lim\limits_{t \to 0} \frac{g(t)-g(0)}{t} = g'(0)
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Gateaux:SecondDerivative}]
+Since $f'$ is \GateauxDifferentiable at $x_0$, 
+there is a $T \in BL(X,BL(X,Y))$ such that 
+for each $y \in X$, 
+\begin{equation*}
+Ty=\lim\limits_{t \to 0} \frac{f'(x_0+ty)-f(x_0)}{t}
+\end{equation*}
+We denote $T=f''(x_0)$. 
+The convergence of this limit is at least pointwise. 
+That is, for $z \in X$, we have 
+\begin{equation*}
+\lim\limits_{t \to 0} \ip{z, \frac{f'(x_0+ty)-f'(x_0)}{t}} = \ip{z, f'(x_0)y}
+\end{equation*}
+Furthermore, if $f$ is \GateauxDifferentiable on $[x_0-\epsilon y_0, x_0+\epsilon y_0]$, then we, for $t_0 \in [-\epsilon, \epsilon]$,
+applying
+\ref{prop:Gateaux:Classical}, 
+\begin{equation*}
+\ip{y_, f'(x_0+t_0y_0)} = \frac{d}{dt} \pa{f(x_0+t_0y_0+ty_0}|_{t=0} = \frac{d}{dt} \pa{f(x_0+ty)}|_{t=t_0} = g'(t_0)
+\end{equation*}
+Hence, 
+\begin{align*}
+g''(0) & = \lim\limits_{t \to 0} \frac{g'(t)-g'(0)}{t}\\
+& = \lim\limits_{t \to 0} \frac{\ip{y_0,f'(x_0+t_0y_0)}-\ip{y_0, f'(x_0)}}{t} \\
+& = \lim\limits_{t \to 0} \ip{y_0, \frac{f'(x_0+ty_0)-f'(x_0)}{t}}\\
+& = \ip{y_0, \lim\limits_{t \to 0} \frac{f'(x_0+ty_0)-f'(x_0)}{t}}\\
+& = \ip{y_0, f''(x_0)y_0}
+\end{align*}
+\end{proof} 
+\end{prop}
+

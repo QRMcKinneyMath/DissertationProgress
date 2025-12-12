@@ -1,0 +1,50 @@
+
+\begin{prop}[\TopologyOfUniformConvergence is Compatible]
+\label{prop:TopologyOfUniformConvergenceCompatible}
+\rm
+    Let $X$ be a nonempty set. 
+    Let $(Y,\scT_Y)$ be a \CommutativeFunction \TopologicalGroup with 
+    \IdentityElement $e$.
+    Let $\scF$ be a 
+    \Subgroup of the set of 
+    functions  $T:X \to Y$. 
+    Let 
+    $\emptyset \neq \scG \subset 2^X$  such that 
+	$(\scG, \subset)$ is a \DirectedSet.
+    Let $\scT$ denote the \TopologyOfUniformConvergence 
+    on $\scF$ determined by $\scG$. 
+    Then $(\scF, \scT)$ is a \TopologicalGroup.
+\begin{proof}
+Let $f,g \in \scF$.
+Let $U \in \scU_{fg}$.
+Then there exists $U_1 \in \scG$ and $V \in \scT_Y$ such that 
+$fgM(U_1,V) \subset U$.
+By 
+\ref{prop:SymmetricContained}
+there exists \SetOpen $\tilde{V} \subset V$ such that 
+$e \in \tilde{V}$ and $\tilde{V}\tilde{V} \subset V$. 
+Then, since $\cdot$ is \CommutativeFunction, 
+\begin{align*}
+\pa{fM(U_1,\tilde{V})}\pa{gM(U_1,\tilde{V})} & = fgM(U_1,\tilde{V})M(U_1,\tilde{V})\\
+& \subset fgM(U_1, \tilde{V} \tilde{V}) \\
+& \subset fgM(U_1,V) \\
+& \subset U
+\end{align*}
+Hence the \Group \Operation of $\scF$ is \ContinuousAt $(f,g)$. 
+Since $f,g \in \scF$ were arbitrary, the \Group \Operation of $\scF$
+is \ContinuousFunction with respect to $\scT$. 
+I now show that $\scGroupInverseOperator_{\scF}$ is \ContinuousFunction
+with respect to $\scT$. 
+Let $f \in \scF$. Let $U \in \scU_{f^{-1}}$. 
+Then there exists $U_1 \in \scG$ and $V \in \scT_{Y}$ containing $e$ such that
+$f^{-1}M(U_1,V) \subset U$. 
+Let $g \in fM(U_1,V^{-1})$. 
+Then $g=fh$ for some $h \in M(U_1,V^{-1})$. Hence, if $x \in U$, then 
+\begin{equation*}
+g^{-1}(x) = \pa{g(x)}^{-1} = \pa{f(x)h(x)}^{-1} = h^{-1}(x)f^{-1}(x) \in \pa{V^{-1}}^{-1}f^{-1}(x) = f^{-1}(x) V
+\end{equation*}
+Hence $g^{-1} \in f^{-1}M(U_1,V) \subset U$. 
+Hence $\scGroupInverseOperator_{\scF}\pa{ fM(U_1,V^{-1})} \subset f^{-1}M(U_1,V)$.
+This concludes the proof. 
+\end{proof}
+\end{prop}

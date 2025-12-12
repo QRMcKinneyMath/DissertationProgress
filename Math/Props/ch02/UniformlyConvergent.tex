@@ -1,11 +1,11 @@
-\label{prop:uniformlycauchyplusconvergenceimpliesuniformconvergence}
 \begin{prop}[Uniform Cauchy and Pointwise Convergence implies Uniform Convergence]
-
-	Let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
-	for $\alpha \in A$ where A is some indexing set. 
-	For each $\alpha \in A$
-	, let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
-	be a sequence. 
+\label{prop:uniformlycauchyplusconvergenceimpliesuniformconvergence}
+\rm
+    Let $A$ be a nonempty set.
+    For each $\alpha \in A$, 
+	let $(X_\alpha, d_\alpha)$ be a \PseudometricSpace
+	and let $\phi_\alpha :=\{x_i^\alpha\}_{i \in \N} \subset X_{\alpha}$
+	be a \Sequence. 
     Suppose the collection $\{\phi_\alpha\}_{\alpha \in A}$ 
     is \UniformlyCauchy
     and that each $\phi_\alpha$ 
@@ -23,12 +23,15 @@
         such that 
         for $m, n>N$, we have
         $d_{\alpha}(x^{\alpha}_n,x^{\alpha}_m) < \frac{\epsilon}{2}$. 
-        Also, since each $\phi_\alpha$ converges to $x_\alpha$, 
+        Since each $\phi_\alpha$ 
+        \PseudometricConverges to
+        $x_\alpha$, 
         there are $N_{\alpha} \in \N$. 
         such that for any $n_\alpha > N_\alpha$, 
         we have
         $d_\alpha(x^{\alpha}_{n_\alpha}, x_\alpha) < \frac{\epsilon }{2}$. 
-        Define $M_{\alpha}=max(N+1, N_{\alpha}+1)$ for $\alpha \in A$. 
+        For each $\alpha \in A$, define 
+        $M_{\alpha}=max(N+1, N_{\alpha}+1)$.
         Let $n>N$. 
         Then, for any $\alpha \in A$, we have. 
         \begin{align*}

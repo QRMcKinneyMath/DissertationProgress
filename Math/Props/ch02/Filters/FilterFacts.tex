@@ -19,18 +19,18 @@
 		\Filters on $X$ is a \Filter on $X$. 
         \item 
 		\label{prop:FilterFacts:InducedFilterExistence}
-        $\scF_B$ defined by $\scF_B = \braces{U \cap B | U \in \scF}$ satisfies 
+        $\scF_B$ defined by $\scF_B = \braces{U \cap B : U \in \scF}$ satisfies 
         \ref{def:Filter:IsNonempty}, 
-        \ref{def:Filter:SubsetProperty}, 
+        \ref{def:Filter:SubsetProperty} with respect to $B$, 
         and 
-        \ref{def:Filter:FiniteIntersectionProperty}, 
-        and is therefore a 
+        \ref{def:Filter:FiniteIntersectionProperty}.
+        Therefore, $\scF_B$ is a 
         \Filter on $B$ if and only if $\emptyset \not \in \scF_B$. 
     \end{enumerate}
     \begin{proof}[Proof of \ref{prop:FilterFacts:ContainsX}]
         By \ref{def:Filter:IsNonempty}, 
-        $\scF$ contains a nonempty set $B$. 
-        Since $B \subset X \subset X$, by 
+        $\scF$ contains a nonempty set $A$. 
+        Since $A \subset X \subset X$, by 
         \ref{def:Filter:SubsetProperty}, 
         $X \in \scF$, so \ref{prop:FilterFacts:ContainsX} is proven. 
     \end{proof}

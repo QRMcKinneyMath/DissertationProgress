@@ -1,0 +1,22 @@
+\begin{prop}[\NormalSubgroup]
+\label{prop:TopGroup:NormalSubgroup}
+\rm
+Let $G$ be a \TopologicalGroup with \IdentityElement $e$. 
+Then $\overline{\{e\}}$ is a \NormalSubgroup of $G$. 
+\begin{proof}
+Let $x \in \overline{\{e\}}$ and $y \in \overline{\{e\}}$. 
+Then $y^{-1} \in \overline{\{e\}}$. 
+Hence 
+$xy^{-1} \in \overline{\{e\}} \cdot \overline{\{e\}} = \overline{\{e\}\{e\}} = \overline{\{e\}}$
+so $\overline{\{e\}}$ is a \Subgroup of $G$. 
+Let $h \in \overline{\{0\}}$ and let $x \in G$. 
+Let $V \in \scU_{\scT}(0)$. 
+Then there exists \SetOpen $U \in \scU_{\scT}(0)$ such that $xU \subset Vx$. 
+Since $h \in \overline{\{e\}}$, $e \in Uh$. 
+Hence, 
+$e=xx^{-1} =xex^{-1} \in xUhx^{-1} \subset Vxhx^{-1}$
+Hence $xhx^{-1} \in \overline{\{e\}}$, so $x\overline{\{e\}}x^{-1} \subset \overline{\{e\}} $.
+In otherwords, $\overline{\{e}\}$ is a 
+\NormalSubgroup of $G$. 
+\end{proof}
+\end{prop}

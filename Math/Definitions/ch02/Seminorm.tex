@@ -6,6 +6,7 @@
 \newcommand{\SeminormedSpaces}[0]{\textbf{\hyperref[def:seminorm]{Seminormed Spaces}}\xspace}
 \begin{df}[Seminorm]
 \label{def:seminorm}
+\rm
     Let 
 	$V$ be a 
 	\VectorSpace
@@ -29,22 +30,18 @@
 
 
 
+\newcommand{\Norm}[0]{\textbf{\hyperref[def:norm]{Norm}}\xspace}
+\newcommand{\Norms}[0]{\textbf{\hyperref[def:norm]{Norms}}\xspace}
+\newcommand{\NormedSpace}[0]{\textbf{\hyperref[def:norm]{Normed Space}}\xspace}
+\newcommand{\NormedSpaces}[0]{\textbf{\hyperref[def:norm]{Normed Spaces}}\xspace}
 
-
-\label{def:norm}
-\newcommand{\Norm}[0]{
-    \bf \hyperref[def:norm]{Norm} \rm
-}
-\label{def:normedspace}
-\newcommand{\NormedSpace}[0]{
-    \bf \hyperref[def:normedspace]{Normed Space} \rm
-}\newcommand{\NormedSpaces}[0]{
-    \bf \hyperref[def:normedspace]{Normed Spaces} \rm
-}
 \begin{df}[Norm]
+\label{def:norm}
+\rm
     Let $(V,\norm{\cdot})$ be a \SeminormedSpace.
-    If the following implication is true for $x \in V$, then we refer to $\norm{\cdot}$ as a \Norm on V, and we call $(V, \norm{\cdot})$ a \NormedSpace.
-    \begin{equation}
-    x \neq 0 \implies \norm{x} \neq 0
-    \end{equation}
+    such that 
+    for every $x \in V$,
+    $x \neq 0$ implies $\norm{x} \neq 0$.
+    Then we call $\norm{\cdot}$ as a \Norm on $V$
+    and we call $(V, \norm{\cdot})$ a \NormedSpace.
 \end{df}

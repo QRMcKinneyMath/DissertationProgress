@@ -1,41 +1,18 @@
-\label{def:equivalencemodseminormkernel}
 \newcommand{\EquivelanceModKernel}[0]{\textbf{\hyperref[def:equivalencemodseminormkernel]{Equivalence MOD-$\Ker$}}\xspace}
 \newcommand{\EquivalenceModKernel}[0]{\textbf{\hyperref[def:equivalencemodseminormkernel]{Equivalence MOD-$\Ker$}}\xspace}
 \newcommand{\EquivalentModKernel}[0]{\textbf{\hyperref[def:equivalencemodseminormkernel]{Equivalent MOD-$\Ker$}}\xspace}
 \newcommand{\SeminormKernelQuotientVectorSpace}[0]{\textbf{\hyperref[def:equivalencemodseminormkernel]{Seminorm Kernel Quotient Vector Space}}\xspace}
 
 \begin{df}[Quotient Space Mod Kernel]
-Let $(X,\norm{\cdot})$ be a \SeminormedSpace over a field $\F \in \{\R,\C\}$.
-with \SeminormKernel $\Ker$.
-By \ref{prop:seminormkernelisavectorsubspace}, part 1, 
-$\Ker$ is a vector subspace of $X's$ algebraic structure, and so if we define 
-$\cong_{\Ker} \subset X \times X$ by setting, for $x,y \in X$
-\begin{equation}
-x \cong_{\Ker} y \iff x-y \in \Ker
-\end{equation}
-Then one recognizes $\cong_{\Ker}$ as \EquivelanceModKernel as would be commonly spoken of in Module or Vector Space theory. 
-From this, alot of nice properties fall out. We list them here, without proof just to nail down notation. 
-For proof, see any undergraduate algebra text.
-\begin{enumerate}
-%\item We denote the \QuotientSpace $X/\cong$ with $X/\Ker$. 
-\item If $x \cong_{\Ker} y$, then we say that x and y are \EquivalentModKernel. 
-\item For $x \in X$
-    , we denote the \EquivalenceClass $[x]_{\cong_{\Ker}}$ with 
-    $[x]_{\Ker}$ or 
-    with $x+\Ker$, or 
-    when confusion is unlikely, simply $[x]$. 
-\item We denote $X/\cong_{\Ker}$ with $X/\Ker$. 
-\item If we define $\oplus:X/\Ker \times X/\Ker \to X/\Ker$ by setting
-    , for $x,y \in X$, $[x]_{\Ker}\oplus[y]_{\Ker}=[x+y]_{\Ker}$
-    , then $\oplus$ is well defined and endows $X/\Ker$ with a group structure. 
-\item If we further define $\odot:\F \times X/\Ker \to X/\Ker$ by 
-    $\alpha [x]_{\Ker}=[\alpha x]_{\Ker}$
-    , then $\pa{X/\Ker, \oplus, \odot, [0]_{\Ker}}$ is a Vector space over $\F$. 
-\item Unless otherwise specified
-    , when referring to the set $X/\Ker$
-    , we endow it with the above vector space structure
-    , and we call this space the \SeminormKernelQuotientVectorSpace 
-    of the seminormed space $(X, \norm{\cdot})$.
-\end{enumerate}
+\label{def:equivalencemodseminormkernel}
+\rm
+Let $\F \in \{\R,\C\}$. 
+Let $(X,\norm{\cdot})$ be a \SeminormedSpace over $\F$.
+Denote the \SeminormKernel of $(X,\norm{\cdot})$ with  $\Ker$.
+By \ref{prop:SeminormKernel:VectorSubspace} and \ref{prop:SeminormKernel:Closure0}, 
+$\Ker$ is a \SetClosed \VectorSubspace of $X$. 
+We endow $X/\Ker$ with the \QuotientVectorSpace structure, 
+which we call the 
+\SeminormKernelQuotientVectorSpace of the \SeminormedSpace $(X,\norm{\cdot})$.
 \end{df}
 
