@@ -134,9 +134,28 @@ T(z)-T(x) \leq \frac{T(z)-T(y)}{1-\lambda}
 \end{equation*}
 \end{proof}
 \begin{proof}[Proof of \ref{prop:ConvexFunction:ConvexInequality} implies  \ref{prop:ConvexFunction:BinaryConvex}]
+Since the arguments used in the above proof were all equivalences, this result is clear.
 \end{proof}
 \begin{proof}[Proof of \ref{prop:ConvexFunction:Convex} implies  \ref{prop:ConvexFunction:EpigraphConvex}]
+Let $T$ be \ConvexFunction. 
+Let $(x_0,t_0) \in Epi(T)$ and let $(x_1,t_1) \in Epi(T)$. 
+Then $t_0 \geq T(x_0)$ and $t_1 \geq T(x_1)$.
+Let $\lambda \in (0,1)$. 
+Then 
+\begin{equation*}
+\pa{T\pa{ \lambda x_0 + (1-\lambda) x_1}} \leq \lambda T(x_0) + (1-\lambda ) T(x_1) \leq \lambda t_0 + (1-\lambda)t_1
+\end{equation*}
+Hence, 
+\begin{equation*}
+\lambda (x_0, t_0) + (1-\lambda)(x_1, t_1) = \pa{\lambda x_0 + (1-\lambda) x_1, \lambda t_0 + (1-\lambda)t_1}  \in Epi(T)
+\end{equation*}
+which completes the proof. 
 \end{proof}
 \begin{proof}[Proof of \ref{prop:ConvexFunction:EpigraphConvex} implies  \ref{prop:ConvexFunction:Convex}]
+Now let $x_0, x_1 \in X$. 
+Then $(x_0, T(x_0)) \in Epi(T)$ and $(x_1, T(x_1)) \in Epi(T)$. 
+Hence, 
+\begin{equation*}
+ff\end{equation*}
 \end{proof}
 \end{prop}

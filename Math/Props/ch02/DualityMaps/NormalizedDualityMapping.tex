@@ -1,0 +1,62 @@
+\begin{prop}[\NormalizedDualityMap]
+\label{prop:NormalizedDualityMap}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $J:X \to 2^{X^*}$ be the \NormalizedDualityMap of $X$. 
+Let $x_0,y_0 \in X$. 
+The following are true. 
+\begin{enumerate}
+\item
+\label{prop:NormalizedDualityMap:Convex}
+$J(x_0)$ is \ConvexSet,  norm bounded and \weakstar \SetClosed, and is therefore \weakstar \SetCompact.
+\item 
+\label{prop:NormalizedDualityMap:Monotone}
+If $j_x \in J(x_0)$ and $j_y \in J(y_0)$, then 
+\begin{equation*}
+\ip{x_0-y_0, j_x-j_y} \geq 0
+\end{equation*}
+\item 
+\label{prop:NormalizedDualityMap:Negative}
+$J(-x_0)=-J(x_0)$.
+\item 
+\label{prop:NormalizedDualityMap:Homogeneous}
+If $t > 0$, then $J(tx) = tJ(x)$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:NormalizedDualityMap:Convex}]
+$J(x_0)$ is \ConvexSet by a direct application of 
+\ref{prop:Subdifferential:Convex}
+and
+\ref{thm:asplund}.
+$J(x_+0)$ is \weakstar \SetClosed by an application of 
+\ref{prop:Subdifferential:WeakstarClosed}
+and
+\ref{thm:asplund}.
+Each $j \in J(x_0)$ satisfies $\norm{j} = \norm{x_0}$, and so boundedness is obvious. 
+Finally, to see that it is \weakstar compact, 
+we leverage \ref{thm:BanachAlaogluMorales}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NormalizedDualityMap:Monotone}]
+We have 
+\begin{align*}
+0  & \leq \pa{\norm{x_0}-\norm{y_0}}^2 \\
+& = \norm{x_0}^2 +\norm{y_0}^2 - \norm{x_0}\norm{y_0} - \norm{y_0}\norm{x_0}\\
+& = \norm{x_0}\norm{j_x} + \norm{y_0}\norm{j_y} -\norm{x_0}\norm{j_y} - \norm{y_0}\norm{j_x} \\
+& = \ip{x_0, j_x} + \ip{y_0, j_y} - \norm{x_0}\norm{j_y} - \norm{y_0}\norm{j_x}\\
+& \leq \ip{x_0-y_0, j_x-j_y}
+\end{align*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NormalizedDualityMap:Negative}]
+Let $j \in J(-x_0)$. 
+Then $\norm{j} = \norm{-x_0} = \norm{x_0}$.
+Furthermore, 
+$\ip{x_0, -j} = \ip{-x_0, j} = \norm{-x_0}^2 = \norm{x_0}^2$, so $-j \in J(x_0)$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:NormalizedDualityMap:Homogeneous}]
+Let $\lambda > 0$. 
+Let $j \in J(x_0)$. 
+Then $\norm{\lambda j} = \abs{\lambda} \norm{j} = \abs{\lambda} \norm{x} = \norm{\lambda x}$. 
+Also, 
+$\ip{\lambda x_0, \lambda j} = \lambda^2 \norm{x_0, j} = \lambda^2 \norm{x_0}^2 = \norm{\lambda x_0}^2$. 
+Hence $\lambda j \in J(\lambda x)$. 
+\end{proof}
+\end{prop}

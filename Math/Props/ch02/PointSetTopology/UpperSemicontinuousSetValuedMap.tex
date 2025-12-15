@@ -1,0 +1,39 @@
+\begin{prop}[\UpperSemicontinuousSetValued]
+\label{prop:UpperSemiSetValued}
+Let $X$ be a \TopologicalSpace. 
+Let $Y$ be a \PseudoHausdorff \TopologicalSpace.
+Let $Q$ denote the \QuotientMap of $Y$.
+Let $T:X \to 2^Y$.
+Let $x_0 \in X$. 
+Suppose $T(x_0)$ is \SetCompact. 
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{def:UpperSemiSetValued}~\roman*}]
+\item
+\label{prop:UpperSemi:Top}
+$T$ is \UpperSemicontinuousSetValued at $x_0$.
+\item
+\label{prop:UpperSemi:Net}
+For each \Net $\{x_\alpha\}_{\alpha \in A} \subset Y$ with $x_\alpha \to x_0$.
+For each net $\{y_\alpha\}_{\alpha \in A} \subset Y$ with $y_\alpha \in T(x_\alpha)$, There exists a $y_0 \in T(x_0)$ such that $y_0$ is a cluster point of $\{y_\alpha\}_{\alpha \in A}$.
+\end{enumerate}
+\begin{proof}[\ref{prop:UpperSemi:Top} implies \ref{prop:UpperSemi:Net}]
+Let $\{x_\alpha\}_{\alpha \in A} \subset X$ such that $x_\alpha \to x_0$. 
+Let $\{y_\alpha\}_{\alpha \in A}$ such that for each $\alpha \in A$, $y_\alpha \in T(x_\alpha)$.
+Let $V \in $
+Then there exists open sets $U,V \in \scT_Y$ such that 
+$U \cap V = \emptyset$, $Q^{-1}QT(x_0) \subset U$ and $y_0 \in V$. 
+Since $T$ is \UpperSemicontinuousSetValued at $x_0$, 
+there is a neighborhood $U'$ of $x_0$ such that 
+$Tz \subset U$ for each $z \in U'$. 
+Since $x_\alpha \to x_0$, there exists $\beta \in A$ such that
+for every $\gamma \geq \beta$, $x_\gamma \in U'$. 
+Hence, for every $\gamma \geq \beta$, $T(x_\gamma) \cap V = \emptyset$. 
+Hence, for each $\gamma \geq \beta$, $y_\gamma \not \in V$.
+Since $V$ is a \Neighborhood of $y_0$, 
+$y_\gamma \not \to y_0$, finishing the contradictory step, and this
+direction is proven. 
+\end{proof}
+\begin{proof}[\ref{prop:UpperSemi:Net} implies \ref{prop:UpperSemi:Top}]
+Let
+\end{proof}
+\end{prop}

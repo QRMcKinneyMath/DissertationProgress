@@ -1,0 +1,79 @@
+\begin{thm}[Asplund] \cite{asplund67}
+\label{thm:asplund}
+\rm
+Let X be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$. 
+Let $x \in X$. 
+Then $Jx = \partial \frac{1}{2} \pa{\norm{x}^2}$.
+\begin{proof}
+Let $x_0 \in X$. 
+Let $j \in J(x_0)$. 
+Then $\norm{j} = \norm{x_0}$. 
+Hence, since $f(x)=\frac{1}{2}x^2$ is \ConvexFunction, by
+\ref{rmk:ConvexDifferentiable}, 
+if $\norm{z_0} < \norm{x_0} < \norm{y_0}$, then
+\begin{equation*}
+\norm{j} = \norm{x_0} = f'\pa{\norm{x_0}} \leq \frac{f\pa{\norm{y_0}}-f\pa{\norm{x_0}}}{\norm{y_0}-\norm{x_0}}
+\end{equation*}
+and 
+\begin{equation*}
+\frac{f\pa{\norm{x_0}}-f\pa{\norm{z_0}}}{\norm{x_0}-\norm{z_0}} \leq f'\pa{\norm{x_0}} = \norm{x_0} = \norm{j}
+\end{equation*}
+so that, multiplying by $\norm{y_0}-\norm{x_0}$ in the first case, 
+and multiplying by $-\pa{\norm{x_0}-\norm{z_0}}$ in the second, we have
+\begin{align*}
+\ip{y_0-x_0, j} &  \leq \norm{y_0} \norm{j} - \ip{x_0,j} \\
+& = \norm{j} \pa{ \norm{y}-\norm{x}}\\
+& = f\pa{\norm{y_0}}-f\pa{\norm{x_0}}
+\end{align*}
+and
+\begin{equation*}
+\ip{z_0-x_0,j} \leq \pa{\norm{z_0}- \norm{x_0}}\norm{j} \leq f\pa{\norm{z_0}}-f\pa{\norm{x_0}}
+\end{equation*}
+Now, if $\norm{\tilde{x}} =\norm{x_0}$, then $\ip{\tilde{x}, j} \leq \ip{x_0,j}$, so 
+\begin{equation*}
+\ip{\tilde{x}-x_0, j} \leq 0  =f \pa{\norm{\tilde{x}}} -f\pa{\norm{x_0}}
+\end{equation*}
+A direct application of 
+\ref{def:Subgradient} implies $j \in \partial f\circ \norm{\cdot} (x_0)$. 
+Since $j \in J(x_0)$ was arbitrary one direction of the inclusion holds. 
+
+Now let $x^* \in \partial \frac{1}{2} f \circ \norm{\cdot}(x_0)$. 
+Let $y_0 \in X$ with $\norm{y_0} = \norm{x_0}$. 
+Then 
+\begin{equation*}
+\ip{y_0-x_0, x^*} \leq f\pa{\norm{y_0}}-f\pa{\norm{x_0}} = 0
+\end{equation*}
+so that $\ip{x_0,x^*} \geq \ip{y_0,x^*}$. 
+Hence
+\begin{align*}
+\norm{x_0}\norm{x^*} & = \norm{x_0} \sup\limits_{\norm{y} = 1} \ip{y, x^*}\\
+& = \sup\limits_{\norm{y}=\norm{x_0}} \ip{y,x^*} \\
+& \leq \ip{x_0, x^*}\\
+& \leq \norm{x_0}\norm{x^*}
+\end{align*}
+which implies $\ip{x_0,x^*} = \norm{x_0}\norm{x^*}$. 
+What remains is to show $\norm{x_0}=\norm{x^*}$. 
+Define $\tilde{x} = \frac{x_0}{\norm{x_0}}$. Then we have, for $\lambda > 0$, 
+\begin{align*}
+\pa{\lambda-\norm{\tilde{x}}}\norm{x^*} & = \frac{\lambda-\norm{x_0}}{\norm{x_0}} \ip{x_0,x^*} \\
+& = \pa{\lambda-\norm{x_0}}  \ip{\tilde{x}, x^*}\\
+& = \ip{\lambda \tilde{x} - x_0, x^*}\\
+& \leq f\pa{\norm{\lambda \tilde{x}}} - f\pa{\norm{x_0}}\\
+& = f\pa{\lambda} - f\pa{\norm{x_0}}
+\end{align*}
+In particular, if $\lambda < \norm{x_0}$, we have 
+\begin{equation*}
+\frac{f\pa{\lambda} -f\pa{\norm{x_0}}}{\lambda - \norm{x_0}} \leq \norm{x^*}
+\end{equation*}
+and if $\lambda > \norm{x_0}$, we have 
+\begin{equation*}
+\norm{x^*} \leq \frac{f\pa{\lambda} - f\pa{\norm{x_0}}}{\lambda - \norm{x_0}}
+\end{equation*}
+Now taking the limit as $\lambda \to x_0$ gives 
+\begin{equation*} 
+\norm{x_0} = f'\pa{\norm{x_0}} = \norm{x^*}
+\end{equation*}
+
+\end{proof}
+\end{thm} 

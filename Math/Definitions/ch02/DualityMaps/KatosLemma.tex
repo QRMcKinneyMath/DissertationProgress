@@ -1,0 +1,67 @@
+The following result concerning the \NormalizedDualityMap,
+which is generally known as Kato's lemma, 
+will be very useful in studying various operators.
+Kato proved it in the case of a \BanachSpace in 
+\cite{Kato1967}, but 
+due to \ref{thm:BanachAlaogluMorales}, 
+we can generalize it to hold in any 
+\SeminormedSpace.
+\begin{prop}[Katos Lemma]
+\label{prop:KatosLemma}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$. 
+Let $x,y \in X$. The following are equivalent. 
+\begin{enumerate}
+\item
+\label{prop:KatosLemma:Norm}
+For every $\lambda > 0$, 
+$\norm{x} \leq \norm{x+\lambda y}$.
+\item
+\label{prop:KatosLemma:Operator}
+There exists $j \in Jx$ such that $0 \leq \ip{y,j}$.
+\end{enumerate}
+\begin{proof}[\ref{prop:KatosLemma:Norm} Implies \ref{Porp:KatosLemma:Operator}]
+$0 < n \in \mathbb{N}$
+Let $0 \neq k_n \in J\pa{x+\frac{1}{n}y}$. 
+Define $j_n  = \frac{k_n}{\norm{j_n}} \in \frac{1}{k_n} J(x+\frac{1}{n} y)$. 
+Therefore, using our assumption 
+\ref{prop:KatosLemma:Norm}, and since $\norm{j_n} = 1$, we have
+\begin{align*}
+\norm{x} & \leq \norm{x+\frac{1}{n} y} \\
+& = \ip{x+\frac{1}{n}  y, j_n} \\
+& = \ip{x, j_n} + \frac{1}{n} \ip{y, j_n}\\
+& \leq \norm{x} + \frac{1}{n} \ip{y, j_n}
+\end{align*}
+Now, by 
+\ref{thm:BanachAlaogluMorales}, 
+$\overline{B_{X^*}(0;1)}$ is \weakstar \SetCompact.
+Hence $\{j_n\}_{n \in \mathbb{N}}$ has a 
+subsequence which is 
+\weakstar convergent to $j \in \overline{B_{X^*}(0;1)}$. 
+Clearly $\norm{j} \leq 1$.
+Also, since $\norm{x} \leq \ip{x, j_n} + \frac{1}{n} \ip{y, j_n}$
+for each $n \in \mathbb{N}$, $\norm{x} \leq \ip{x, j}$.
+Also, since $\norm{x} \leq \norm{x} + \frac{1}{n} \ip{y, j_n}$ for each $n$, we conclude $\ip{y, j} \geq 0$. 
+However, since $\norm{j} \leq 1$, and since 
+\begin{equation*}
+\norm{x} \leq \ip{x, j} \leq \norm{x} \norm{j} = \norm{x}
+\end{equation*}
+we have 
+\begin{equation*}
+\norm{x} = \ip{x,j} \tab[1cm] \norm{j} = 1
+\end{equation*}
+Now if $k=j \norm{x}$, then it is clear that $k \in J(x)$ and $\ip{y, k} \geq 0$. 
+\end{proof}
+\begin{proof}[\ref{prop:KatosLemma:Operator} Implies \ref{Porp:KatosLemma:Norm}]
+This direction is simple computation. 
+Suppose there is $j \in J(x)$ such that $\ip{y,j} \geq 0$. Then, for any $\lambda > 0$, we have the following.
+\begin{align*}
+\norm{x}^2 & = \ip{x,j}\\
+& \leq \ip{x + \lambda y , j} \\
+& \leq \norm{j} \norm{x+\lambda y}\\
+& = \norm{x+\lambda y} \norm{x}
+\end{align*}
+which gives us our result when divided by $\norm{x}$.
+\end{proof}
+\end{prop}

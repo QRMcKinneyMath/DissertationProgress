@@ -1,22 +1,6 @@
-
 \section{Orthogonality}
-\begin{df}[Orthogonality]
-    \label{df:orthogonality}
-    Let X be a seminormed space and $x,y \in X$. We say that x is \bf orthogonal \rm to y and we write $x \perp y$ if for each scalar $\lambda$, we have
-    \begin{equation}
-        \norm{x} \leq \norm{x+\lambda y} 
-    \end{equation} 
-\end{df}
+\input{./Math/Definitions/ch02/Orthogonality/Orthogonality.tex}
+\input{./Math/Props/ch02/Orthogonality/Orthogonality.tex}
 
-\begin{prop}[Orthogonality]
-    \label{prop:orthogonality}
-    Let X be a seminormed space, $x,z \in  X$, and $x^* \in X^*$. 
-    \begin{enumerate} 
-        \item $\ip{x,x^*} = \norm{x} \norm{x^*}$ if and only if for each $y \in kern\pa{x^*}$, $x \perp y$. 
-        \item x is orthogonal to each element of some hyperplane in X. 
-        \item For some $\alpha \neq 0$ $x \perp \pa{\alpha x + z}$.
-        \item The mapping $T:\mathbb{F} \to \R$ defined by $T\alpha = \norm{\alpha x+z}$ achieves its minimum, and if $\lambda_0$ is a point at which it achieves this minimum, then $\pa{\lambda_0 x + y} \perp x$ for any $\lambda_0$ which minimizes T. Furthermore, since T as defined earlier is a convex function, the set of $\lambda$ for which $\pa{\lambda x+y} \perp x$ is a convex set. 
-    \end{enumerate} 
-\end{prop} 
 %Diestel p. 24 Definition, remarks theorem 3, corollary 2, corollary 3, observations
 %Lemma on Diestel p. 27

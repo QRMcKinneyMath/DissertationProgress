@@ -1,0 +1,53 @@
+\begin{prop}[Weak Quotients]
+\label{prop:weakquotients}
+\rm
+Let $X$ be  a \TVS. 
+Let $\{Y_\alpha\}_{\alpha \in A}$ be a collection of 
+\TopologicalSpaces.
+For each $\alpha \in A$, let 
+$\phi_{\alpha}:X \to Y_\alpha$ be \ContinuousFunction.
+Furthere, suppose that the collection $\{\phi_\alpha\}_{\alpha \in A}$
+has the property that for each $x,y \in X$, 
+If $y \in x+\overline{\{0\}}$, then
+for each $\alpha \in A$, $\phi_\alpha(x) = \phi_\alpha(y)$. 
+For each $\alpha \in A$, define $\tilde{\phi}_{\alpha}:X/\overline{\{0\}} \to Y_{\alpha}$ by 
+setting, for $x \in X$,
+$\tilde{\phi}_\alpha ([x]) = \phi_\alpha(x)$. 
+Let $\scT_w$ denote the \WeakTopology on $X$ induced by $\{\phi_\alpha\}_{\alpha \in A}$. 
+Let $\tilde{\scT}_w$ denote the \WeakTopology on $X/\overline{\{0\}}$ induced by 
+$\{\tilde{\phi}_\alpha\}_{\alpha \in A}$. 
+Suppose $\scT_w$ separates points in $X$ mod $\overline{\{0\}}$.
+Then, 
+\begin{equation}
+(X,\T_w)/\overline{\{0\}} = (X/\overline{\{0\}}, \T_{\tilde{w}})
+\end{equation}
+\begin{proof}
+Let $Q$ denote the \QuotientMap of $X$. 
+Each $\tilde{\phi}_\alpha:X/\overline{\{0\}} \to Y_\alpha$ is 
+\ContinuousFunction.
+To see this, let $U \in \scT_{\alpha}$. 
+Then since $\phi_\alpha$ is \ContinuousFunction, 
+since $Q$ is \OpenFunction, and since 
+$\phi_\alpha = \tilde{\phi}_\alpha \circ Q$, 
+$\tilde{\phi}_\alpha^{-1}(U) = Q\pa{ \phi_\alpha^{-1}(U)}$ is open in $X/\overline{\{0\}}$.
+
+A basis for $(X, \scT_w)/\overline{\{0\}}$ is given by 
+\begin{equation*}
+\braces{Q \pa{\bigcap\limits_{i=1}^n \phi_{\alpha_i}^{-1}\pa{W_i}} : (n \in \mathbb{N}) (W_i \in \scT_{\alpha_i})(\{\alpha_i\}_{i=1}^n \subset A)}
+\end{equation*}
+Let $n \in \mathbb{N}$. 
+Now let $\{\alpha_i\}_{i=1}^n \subset A$.
+For each $i$ with $1 \leq i \leq n$, let $W_i \in \scT_{\alpha_i}$. 
+Then, since each $\phi_{\alpha_i}^{-1}(W_{\alpha_i})$ is \SetOpen in $X$, 
+they are all \Fibers relative to $Q$. 
+Hence, we have 
+\begin{align*}
+Q \pa{ \bigcap\limits_{i=1}^n \phi_{\alpha_i}^{-1} \pa{W_{\alpha_i}}} & = \bigcap\limits_{i=1}^n Q  \pa{ \phi_{\alpha_i}^{-1} \pa{W_{\alpha_i}}} \\
+& = \bigcap\limits_{i=1}^n \tilde{\phi}_{\alpha_i}^{-1} \pa{W_{\alpha_i}}\\
+& \in \scT_{\tilde{w}}
+\end{align*}
+Hence the \Topology  on $(X, \scT_w)/\overline{0}$ is a subset of 
+$\scT_{\tilde{w}}$.
+The reverse construction works just the same, so that the two topologies are equal. 
+\end{proof} 
+\end{prop} 

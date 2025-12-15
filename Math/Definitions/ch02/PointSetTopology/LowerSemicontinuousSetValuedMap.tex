@@ -1,0 +1,13 @@
+\newcommand{\LowerSemicontinuousSetValued}[0]{\textbf{\hyperref[def:LowerSemicontinuousSetValued]{Lower Semicontinuous}}\xspace}
+\begin{df}[\LowerSemicontinuousSetValued]
+\label{def:LowerSemicontinuousSetValued}
+\rm
+Let $X$ be a \TopologicalSpace. 
+Let $Y$ be a \TopologicalSpace.
+Let $T:X \to 2^Y$. 
+Let $x_0 \in X$.
+We say that $T$ is 
+\LowerSemicontinuousSetValued at $x_0$ if for each $V \in \scT_Y$ 
+with $V \cap Tx_0 \neq \emptyset$, there exists $U \in \scU_X(x_0)$ 
+such that for every $y \in U$, $Ty \cap V \neq \emptyset$
+\end{df}

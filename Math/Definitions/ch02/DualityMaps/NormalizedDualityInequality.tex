@@ -1,0 +1,24 @@
+\begin{prop}[Normalized Duality Inequality]
+\label{prop:normalizeddualityinequality}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$.
+Let $x,y \in X$ such htat $\norm{x+\lambda y} \neq 0 \neq \norm{x}$. 
+Let $\lambda > 0$. 
+Let $j_x \in Jx$. 
+Let $j_{x+\lambda y} \in J(x+\lambda y)$. 
+Then
+\begin{equation*}
+\frac{\ip{y,j_x}}{\norm{x}} \leq \frac{\norm{x+\lambda y}-\norm{x}}{\lambda} \leq \frac{\ip{y,j_{x+\lambda y}}}{\norm{x+\lambda y}}
+\end{equation*}
+\begin{proof}
+\begin{align*}
+\frac{\ip{y,j_x}}{\norm{x}} &= \frac{\ip{x+\lambda y,j_x}-\norm{x}^2}{\lambda \norm{x}} \leq \frac{\abs{\ip{x+\lambda y,j_x}}-\norm{x}^2}{\lambda \norm{x}} \leq \frac{\norm{j_x} \norm{x+\lambda y} - \norm{x}^2}{\lambda \norm{x}}\\
+&= \frac{\norm{x+\lambda y}-\norm{x}}{\lambda}\\
+& = \frac{\norm{x+\lambda y}}{\norm{x+\lambda y}} \frac{\norm{x+\lambda y} - \norm{x}}{\lambda} \leq \frac{\norm{x+\lambda y}^2 - \abs{\ip{x,j_{x+\lambda y}}}}{\lambda \norm{x+\lambda y}}\\
+& = \frac{\lambda \ip{y,j_{x+\lambda y}} +\ip{x,j_{x+\lambda y}} - \abs{\ip{x,j_{x+\lambda y}}}}{\lambda \norm{x+\lambda y}}\\
+& \leq \frac{\lambda \ip{y,j_{x+\lambda y}}}{\lambda \norm{x+\lambda y}} = \frac{\ip{y,j_{x+\lambda y}}}{\norm{x+\lambda y}}
+\end{align*}
+\end{proof} 
+\end{prop} 
+

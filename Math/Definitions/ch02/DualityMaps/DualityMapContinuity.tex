@@ -1,0 +1,53 @@
+\begin{prop} 
+\label{prop:DualityMapUpperSemi}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $J$ be the \NormalizedDualityMap of $X$. 
+$J$ is seminorm to $\weakstar$ \UpperSemicontinuousSetValued.
+%Cioranescu 1.4.12
+\begin{proof}
+Suppose the contrary. 
+Then, for some $x_0 \in X$, 
+$J$ is not \UpperSemicontinuousSetValued at $x_0$. 
+That is, for some \weakstar \SetOpen $V \subset X^*$
+such that $J(x_0) \subset V$, 
+there exists a sequence $\{x_i\}_{i \in \mathbb{N}} \subset X$
+such that $J(x_i) \cap \pa{X^* \setminus V} \neq \emptyset$. 
+That is, for each $i \in \mathbb{N}$, there exists
+$j_i \in J(x_i)$ such that $j_i \not \in V$.
+For each $i \in \mathbb{N}$, let
+$K_i$ denote the 
+\weakstar closure of $\{j_k\}_{k \geq i}$.
+Since $\{x_i\}_{i \in \mathbb{N}}$ is convergent, it is bounded, 
+and so $\{j_i\}_{i \in \mathbb{N}}$ is bounded. 
+Hence, each $K_i$ is bounded. 
+Furthermore, each $K_i$ is \Disjoint from $V$. 
+Thus we have a decreasing sequence $\{K_i\}_{i \in \mathbb{N}}$ 
+of \weakstar \SetClosed sets contained within some \SetClosed ball in $X^*$. 
+By  \ref{thm:BanachAlaogluMorales}, 
+this ball is \weakstar compact.
+Hence, since $\{K_i\}_{i \in \mathbb{N}}$ has the finite intersection property,
+$\bigcap\limits_{i \in \mathbb{N}} K_i \neq \emptyset$. 
+Let $j \in \bigcap\limits_{i \in \mathbb{N}} K_i$. 
+Then $j \not \in V$ and $j \not \in J(x_0)$. 
+Let $M$ denote the upper bound of $\{\norm{x_i}_{i \in \mathbb{N}}\}$. 
+Take a subsequence $\{x_{n_k}\}_{k \in \mathbb{N}}$ such that for each $k \in \mathbb{N}$, $\norm{x_{n_k}-x_0} \leq \frac{1}{2kM}$. 
+Then for each $k \in \mathbb{N}$, 
+\begin{align*}
+\abs{\ip{x_0, j} - \ip{x_0, j_{n_k}}} & \leq \abs{\ip{x_0-x_{n_k}, j} - \ip{x_{n_k}-x_0, j_{n_k}}} \\
+& \leq \norm{j} \norm{x_0-x_{n_k}} + \norm{j_{n_k}} \norm{x_{n_k}-x_0}\\
+& \leq \frac{1}{k}
+\end{align*}
+Hence, for $k \in \mathbb{N}$, we have 
+\begin{align*}
+\abs{\ip{x_0, j} - \norm{x_n}^2} & = \abs{\ip{x_0, j} - \ip{x_{n_k}, j_{n_k}}} \\
+& \leq \abs{\ip{x_0, j-j_{n_k}}} + \ip{x_0-x_{n_k}, j_{n_k}}\\
+& \leq \frac{1}{k} + \norm{j_{n_k}}\norm{x_0-x_{n_k}} \\
+& = \frac{1}{k} + \frac{1}{2k}
+\end{align*}
+Hence $\ip{x_0,j} = \lim\limits_{k \to \infty} \norm{x_{n_k}}^2 = \norm{x_0}^2$, so $j \in J(x_0)$, 
+a contradiction.
+Thus $J$ is \UpperSemicontinuousSetValued at $x_0$, and since $x_0$ 
+was arbitrary, on all of $X$. 
+\end{proof}
+\end{prop} 

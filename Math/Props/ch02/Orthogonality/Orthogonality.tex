@@ -1,0 +1,57 @@
+\begin{prop}[\Orthogonal]
+\label{prop:Orthogonal}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $x_0,y_0,z_0 \in X$. 
+Let $j \in X^*$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Orthogonal}~\roman*}]
+\item 
+\label{prop:Orthogonal:Kernel}
+$\ip{x,j} = \norm{x} \norm{j}$ if and only if for each $y \in kern\pa{j}$, $x \perp y$. 
+\item 
+\label{prop:Orthogonal:Hyperplane}
+x is orthogonal to each element of some hyperplane in X. 
+\item 
+\label{prop:Orthogonal:Projection}
+For some $\alpha \neq 0$ $x \perp \pa{\alpha x + z}$.
+\item 
+\label{prop:Orthogonal:Minimizer}
+The mapping $T:\mathbb{F} \to \R$ defined by $T\alpha = \norm{\alpha x+z}$ achieves its minimum, 
+and if $\lambda_0$ is a point at which it achieves this minimum, then $\pa{\lambda_0 x + y} \perp x$ for any $\lambda_0$ which minimizes T. 
+Furthermore, since T as defined earlier is a convex function, the set of $\lambda$ for which $\pa{\lambda x+y} \perp x$ is a convex set. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:Orthogonal:Kernel}]
+$\pa{\implies}$. 
+Suppose $\ip{x_0,j} = \norm{x_0} \norm{j}$. 
+Let $y \in Ker(j)$. Then, if $\alpha \in \F$, we have 
+\begin{align*}
+\norm{j}\norm{x_0} & = \ip{x_0,j} = \ip{x+\alpha y, j} \leq \norm{x+\alpha y, j}
+\end{align*}
+Dividing by $\norm{j}$ gives us our desired inequality. 
+
+$(\impliedby)$. 
+I use contrapositive.
+Let $\ip{x_0,j} < \norm{x_0}\norm{j}$. 
+Then there exists $y$ with $\norm{y} = \norm{x_0}$ and 
+$\ip{y,j} > \ip{x_0,j}$. 
+Set $\gamma = \frac{\ip{x_0,j}}{\ip{y,j}} < 1$. 
+Then $\gamma y - x_0 \in Ker(j)$. 
+Furthermore, 
+$\norm{\gamma y -x_0} \geq \norm{x_0}-\gamma \norm{y} > 0$, and 
+\begin{equation*}
+\norm{x_0+1 \pa{\gamma y - x_0 }} = \norm{\gamma y} = \abs{\gamma} \norm{y} < \norm{y} = \norm{x_0}
+\end{equation*}
+Hence $\gamma y - x_0$ is not \Orthogonal to $x_0$, even though 
+$\gamma y - x_0 \in Ker(j)$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Orthogonal:Hyperplane}]
+Set $T: span(x_0) \to \F$ by $T(\alpha x ) = \alpha $. 
+Then $\norm{T} = 1$ and by $Hahn-Banach$, there is an extension $\tilde{T} \in X^*$ 
+with $\norm{\tilde{T}} = 1$ and 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Orthogonal:Projection}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Orthogonal:Minimizer}]
+\end{proof}
+\end{prop} 

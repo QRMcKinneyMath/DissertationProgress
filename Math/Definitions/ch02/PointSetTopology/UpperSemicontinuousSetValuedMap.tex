@@ -1,0 +1,15 @@
+\newcommand{\UpperSemicontinuousSetValued}[0]{\textbf{\hyperref[def:UpperSemicontinuousSetValued]{Upper Semicontinuous}}\xspace}
+\begin{df}[\UpperSemicontinuousSetValued]
+\label{def:UpperSemicontinuousSetValued}
+\rm
+Let $X$ be a \TopologicalSpace. 
+Let $Y$ be a \TopologicalSpace.
+Let $T:X \to 2^Y$. 
+Let $x_0 \in X$.
+We say that $T$ is 
+\UpperSemicontinuousSetValued at $x_0$ if for each $V \in \scT_Y$ 
+such that $T(x_0) \subset V$, 
+there exists $U \in \scU_X(x_0)$
+such that  for each $y \in U$, 
+$Ty \subset V$. 
+\end{df}

@@ -1,0 +1,55 @@
+\begin{prop}
+\label{prop:Subdifferential}
+\rm
+Let $X$ be a \TVS. 
+Let $T:X \to (-\infty,\infty]$. 
+Let $x_0 \in X$. 
+Let $T$ be \Subdifferentiable at $x_0$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Subdifferential}~\roman*}]
+\item
+\label{prop:Subdifferential:Convex}
+$\partial T(x_0)$ is \ConvexSet.
+\item
+\label{prop:Subdifferential:WeakstarClosed}
+$\partial T(x_0)$ is \weakstar \SetClosed.
+\item
+\label{prop:Subdifferential:Minimum}
+$x_0$ is a global minimum of $T$ if and only if $0 \in \partial T(x_0)$.
+It is unnecessary to assume \Subdifferentiability of $T$ at $x_0$ for this to be true. 
+\item
+\label{prop:Subdifferential:Proper}
+If $T$ is proper, then $x \in D(T)$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:Subdifferential:Convex} and \ref{prop:Subdifferential:WeakstarClosed}]
+Let $c:X \to X^{**}$ denote the canonical isomorphism. 
+Then it is clear that 
+\begin{equation*}
+\partial T(x_0) = \bigcap\limits_{y \in X} \pa{C(y-x_0)}^{-1} \pa{(-\infty, T(y)-T(x_0)}
+\end{equation*}
+which is an intersection of \ConvexSet, \weakstar \SetClosed sets. 
+Each of those properties are preserved under intersections, and so $\partial T(x_0)$ posesses them. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Subdifferential:Minimum}]
+Wihout assuming that $T$ is \Subdifferentiable at $x_0$, if $x_0$ is a global minimum for $T$, then for any $y \in X$, if $0$ denotes the $0$ operator, then
+\begin{equation*}
+\ip{y-x, 0} = 0 \leq T(y)-T(x)
+\end{equation*}
+so $0 \in \partial T(x_0)$. 
+
+Now if we instead assume $0 \in \partial T(x_0)$, for any other $y \in X$, we have 
+\begin{equation*}
+0 = \ip{y-x, 0} \leq T(y)-T(x)
+\end{equation*}
+so that $T(y) \geq T(x)$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Subdifferential:Proper}]
+Let $T$ be proper and suppose $y \in D(T)$. 
+Then 
+\begin{equation*}
+-\infty < \ip{y-x_0, x^*} \leq T(y)-T(x)  < \infty
+\end{equation*}
+so $x \in D(T)$. 
+\end{proof}
+\end{prop}
+
