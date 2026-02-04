@@ -1,0 +1,126 @@
+\begin{prop}[\VerySmooth dual implies \Reflexive]
+\label{prop:VerySmoothDualImpliesReflexive}
+\rm
+%(Diestel Theorem 1 p.32)
+Let $X$ be a \Complete \SeminormedSpace. 
+Let $X^*$ be \VerySmooth. 
+Then $X$ is \Reflexive.
+\begin{proof}
+Let $X^*$ be \VerySmooth.
+Let $J_{*}$ denote the \NormalizedDualityMap of $X^*$. 
+Then $J_{*}$ is \Norm to \weak \ContinuousFunction. 
+Let $j \in \partial B_{X^*}(0;1)$. 
+By \ref{thm:BishopPhelps}, there exists 
+$\{j_i\}_{i \in \N} \subset \partial B_{X^*}(0;1)$ 
+and $\{x_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$j_i \to j$ and $\ip{x_i, j_i} = 1$ for each $i \in \N$.
+Then for each $i \in \N$, if $c:X \to X^{**}$ is the \CanonicalEmbedding, 
+it is clear that $c(x_i) = J_*(j_i)$. 
+Since $j_i \to j$, we conclude $c(x_i) \wto J_*(j) \in X^{**}$. 
+Since $X$ is \Complete and $c$ is an \Isometry, we conclude $c(X)$ is \Complete
+and therefore \SetClosed in $X^{**}$. since $c(X)$ is \ConvexSet in $X^{**}$, 
+$c(X)$ is \weakly \SetClosed in $X^*$. 
+Hence $J_*(j) \in c(X)$. 
+Thus there exists $x \in X$ such that $c(x) = J_*(j)$. 
+It is clear that $j$ attains its \Norm at $x$.
+Since $j \in \partial B_X(0;1)$, 
+by \ref{thm:James}, we conclude that $X$ is \Reflexive.
+\end{proof}
+\end{prop} 
+
+\begin{prop}[\Reflexivity Conditions]
+\label{prop:ReflexivityConditions}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Any of the following conditions are sufficient to guarantee that $X$ is \Reflexive.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:ReflexivityConditions}~\roman*}]
+\item
+\label{prop:ReflexivityConditions:Zero}
+$X$ is \UniformlyConvex.
+\item 
+\label{prop:ReflexivityConditions:Single}
+$X^*$ is \LocallyUniformlySmoothSpace.
+\item 
+\label{prop:ReflexivityConditions:Double}
+$X^{**}$ is \LocallyWeaklyUniformlyConvex.
+\item 
+\label{prop:ReflexivityConditions:Triple}
+$X^{***}$ is \SmoothSpace.
+\item 
+\label{prop:ReflexivityConditions:Quadruple}
+$X^{****}$ is \StrictlyConvexSpace.
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:ReflexivityConditions:Zero}]
+This is a restatement of \ref{thm:MilmanPettis}.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexivityConditions:Single}]
+Let $X^*$ be 
+\LocallyUniformlySmoothSpace. 
+By \ref{prop:DegreesOfSmoothness:LocalImpliesVery}, 
+$X^*$ is \VerySmooth.
+By \ref{prop:VerySmoothDualImpliesReflexive}, $X$ is \Reflexive. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexivityConditions:Double}]
+Let $X^{**}$ be 
+\LocallyWeaklyUniformlyConvex. 
+By \ref{prop:VerySmoothWeakLocalConvexity}, 
+$X^*$ is \VerySmooth.
+By \ref{prop:VerySmoothDualImpliesReflexive}, $X$ is \Reflexive. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexivityConditions:Triple}]
+I prove by converse. 
+Suppose $X$ is not \Reflexive. 
+By \ref{thm:James}, 
+there exists $j \in \partial B_{X^*}(0;1)$ such that 
+for each $x \in \partial B_X(0;1)$, $abs{\ip{x, j}} < 1$. 
+By 
+\ref{thm:BishopPhelps}, there is a sequence $\{j_i\}_{i \in \N} \subset \partial B_{X^*}(0;1)$ 
+and a sequence $\{x_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$j_i \to j$ and $\ip{x_i,j_i} = 1 = \norm{j_i}\norm{x_i}$ for each $i \in \N$. 
+Note that $\{x_i\}$ is not \weakly convergent. If this were the case, say $x_i \to \tilde{x}$, then we would have $\norm{\tilde{x}} \leq 1$ and 
+\begin{align*}
+\abs{\ip{\tilde{x},j}-1} & = \abs{\ip{\tilde{x}, j} - \ip{x_i, j_i}} \\
+&= \abs{\ip{\tilde{x}, j} - \ip{x_i,j}+ \ip{x_i,j} - \ip{x_i,j_i}}\\
+& \leq  \abs{\ip{\tilde{x} - x, j}} + \norm{x_i} \norm{j-j_i} \to 0
+\end{align*}
+which violates the fact that $j$ does not attain its supremum.
+Let $c:X \to X^{**}$ denote the 
+\CanonicalEmbedding. 
+Since $X$ is \Complete and $c$ an \Isometry, 
+$c(X)$ is \Complete and therefore \SetClosed in $X^{**}$. 
+Since $c(X)$ is \ConvexSet, by 
+\ref{prop:ClosedAndConvexIsWeaklyClosed}, 
+$c(X)$ is \weakly \SetClosed in $X^{**}$. 
+Since the \weak \Topology on $c(X)$ is \TopologyFiner 
+than the \weak \Topology on $X$, 
+we conclude $\{c(x_i)\}_{i \in \N}$ is not \weakly convergent, 
+because if it were, this \weak limit would be an element of $c(X)$, say 
+$c(y)$ but we would have $x_i \wto y$, a contradiction.
+Let $J_{X^*}$ denote the \NormalizedDualityMap of $X^*$. 
+Let $\tilde{j} \in J_{X^*}j$. 
+Then since $\{c(x_i)\}_{i \in \N}$ has no \weak limit, 
+$c(x_i) \not \wto  \tilde{j}$. 
+Let $c_{X^{**}}:X^{**} \to X^{****}$ denote the \CanonicalEmbedding. 
+Then since the \weakstar \Topology on $c_{X^{**}}(X^{**}) \subset X^{****}$ is 
+equivalent to the \weak \Topology on $X^{**}$, we conclude 
+$c_{X^{**}}\circ c(x_i) \not \wsto c_{X^{**}} \tilde{j}$.
+Let $c_{X^*}:X^* \to X^{***}$ denote the \CanonicalEmbedding.
+Then since $c_{X^*}$ is an \Isometry and 
+$j_i \to j$, we conclude $c_{X^*}(j_i) \to c_{X^*}(j)$
+Let $J_{X^{***}}$ denote the \NormalizedDualityMap of $X^{***}$. 
+It is clear that $c_{X^{**}}(\tilde{j}) \in J_{X^{***}}c_{X^*}(j)$ and that
+for each $i \in \N$, $c_{X^{**}} \circ c (x_i) \in J_{X^{***}}C_{X^*} j_i$.
+Thus, since $c_{X^{**}} \circ c(x_i) \not \wsto c_{X^{**}}(\tilde{j})$, but 
+$c_{X^*}\pa{j_i} \to c_{X^*}(j)$, we conclude that $J_{X^{***}}$ has a selection which is not 
+\Norm to \weakstar continuous at $c_{X^*}(j)$. 
+Thus by 
+\ref{prop:Smooth:JContinuous}, $X^{***}$ is not \SmoothSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexivityConditions:Quadruple}]
+Let $X^{****}$ by \StrictlyConvexSpace. 
+By \ref{prop:StrictConvexDualImpliesSmooth}, $X^{***}$ is 
+\SmoothSpace. 
+By \ref{prop:ReflexivityConditions:Triple}, 
+$X$ is \Reflexive. 
+\end{proof}
+\end{prop} 

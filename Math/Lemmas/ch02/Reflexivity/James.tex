@@ -1,0 +1,189 @@
+\begin{lem}
+\label{lem:james}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let $\alpha \in (0,1)$.
+Let $\{x_i^*\}_{i \in \N} \subset X^*$.
+Let $\{\beta_i\}_{i \in \N} \subset (0,1)$ such that $\sum_{i \in \N} \beta_i=1$. 
+The following are true 
+\begin{enumerate}[label=(\roman*), ref={\ref{lem:james}~\roman*}]
+\item
+\label{lem:james:Boundary}
+If $\{x_i^*\}_{i \in \N} \subset \partial B_{X^*}(0;1)$ and $d\pa{ 0, \overline{co}\{x_i^*\}_{i \in \N}} \geq \alpha$ then there exists $\gamma \in [\alpha, 1]$ and 
+$\{y_i^*\}_{i \in \N} \subset X^*$ such that for every $n \in \N$, 
+\begin{equation*}
+y_i^* \in \overline{co}\{x_j\}_{j \geq n} \tab[.5cm] \norm{\sum\limits_{j \in \N} \beta_j y_j^*} = \gamma \tab[.5cm] \norm{\sum\limits_{j=1}^n \beta_j y_j^*} < \gamma \pa{ 1-\alpha \pa{\sum\limits_{j=n+1}^{\infty} \beta_j}}
+\end{equation*}
+\item
+\label{lem:james:ClosedBall}
+If $\{x_i^*\}_{i \in \N} \subset \overline{ B_{X^*}(0;1)}$ and $d\pa{ 0, \overline{co}\{x_i^*\}_{i \in \N}-CoLim\{x_i\}_{i \in \N}} \geq \alpha$ then there exists $\gamma \in [\alpha, 2]$, there exists
+$\{y_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$, and there exists
+$y^* \in CoLim\{y_i^*\}_{i \in \N}$ such that 
+\begin{equation*}
+\norm{\sum\limits_{j \in \N} \beta_j \pa{y_j^*-y^*}} = \gamma
+\end{equation*}
+and
+for every $n \in \N$, 
+\begin{equation*}
+\norm{\sum\limits_{j=1}^n \beta_j \pa{y_j^*-y^*}} < \gamma \pa{1-\alpha \pa{\sum\limits_{j=n+1}^{\infty} \beta_j}}
+\end{equation*}
+\end{enumerate}
+\begin{proof}[Proof of \ref{lem:james:Boundary}]
+There exists a sequence $\{\delta_i\}_{i \in \N} \subset (0,1)$ such that 
+\begin{equation*} 
+\sum_{i \in \N} \frac{\beta_i \delta_i}{\pa{ \sum\limits_{j=i+1}^{\infty} \beta_i} \pa{ \sum\limits_{j=i}^{\infty} \beta_i}} < 1-\alpha
+\end{equation*} 
+Define $\gamma_1 = d\pa{0,\overline{co}\{x_i^*\}_{i \in \N}}$.
+Let $y_1^* \in \overline{co}\{x_i^*\}_{i \in \N}$ such that 
+$\norm{y_1^*} \leq \gamma_1\pa{1+\delta_1}$.
+From here, for each $n \geq 1$, we define $\gamma_{n+1}\in \R$ by 
+\begin{equation*}
+\gamma_{n+1}=\inf\left\{ \norm{\pa{\sum_{i=1}^n \beta_i y_i^*}+ \pa{1-\sum_{i=1}^n \beta_i}y^*}: y^* \in \overline{co}\{x_i^*\}_{i \geq {n+1}}\right\}
+\end{equation*}
+and we choose $y_{n+1}^* \in \overline{co}\{x_i^*\}_{i \geq n+1}$ such that  
+\begin{equation*}\norm{\sum_{i=1}^n \beta_i y_i^* + \pa{ 1- \sum_{i=1}^n \beta_i } y_{n+1}^*} < \gamma_{n+1} \pa{1+\delta_{n+1}}
+\end{equation*}
+For each $n \in \N$, 
+\begin{equation*}
+\frac{\beta_n}{1-\sum\limits_{i=1}^{n-1}\beta_i} y_n^* + \frac{1-\sum\limits_{i=1}^n \beta_i}{1-\sum\limits_{i=1}^{n-1} \beta_i} \overline{co}\{x_i\}_{i \geq n+1} \subset \overline{co} \{x_i\}_{i \geq n}
+\end{equation*}
+Hence, 
+\begin{equation*}
+\sum\limits_{i=1}^n \beta_i y_i^* + \pa{1-\sum\limits_{i=1}^n \beta_i }\overline{co}\{x_i^*\}_{i \geq n+1}  \subset \sum\limits_{i=1}^{n-1} \beta_i y_i^* + \pa{1-\sum\limits_{i=1}^{n-1} \beta_i }\overline{co}\{x_i^*\}_{i \geq n}
+\end{equation*}
+Thus $\{\gamma_i\}_{i \in \N}$ is nondecreasing.
+Furthermore, since $\{x_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ and $\sum\limits_{i \in \N} \beta_i=1$, we have, for every i, 
+\begin{equation*}
+\alpha \leq \gamma_i \nearrow  \norm{\sum_{k \in \N} \beta_k y_k^*} \leq 1
+\end{equation*}
+Define $\gamma = \lim\limits_{i \to \infty} \gamma_i$.
+What is left to be shown is that for every $n \in \N$, 
+\begin{equation*}
+\norm{\sum_{j=1}^n \beta_j y_j^*} < \gamma \pa{1-\alpha \pa{ \sum_{j=n+1}^\infty \beta_j}}
+\end{equation*}
+Let $n \in \N$. Then, 
+\begin{align*}
+\norm{\sum_{j=1}^n \beta_j (y_j^*)} & = \norm{ \pa{\pa{ \frac{\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}} \pa{\sum_{j=1}^{n-1} \beta_j y_j^*}}+ \pa{\pa{ \frac{\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}}\pa{\beta_n y_n^*}}}\\
+& = \norm{ \pa{\pa{ \frac{\beta_n+\sum_{j=n+1}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}} \pa{\sum_{j=1}^{n-1} \beta_j y_j^*}}+ \pa{\pa{ \frac{\beta_n\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}}\pa{ y_n^*}}}\\
+& \leq \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \norm{ \sum_{j=1}^{n-1} \beta_j y_j^*+ \pa{ \sum_{j=n}^\infty \beta_j} y_n^*}+ \frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j y_j^*}\\
+& \leq \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \norm{ \sum_{j=1}^{n-1} \beta_j y_j^*+ \pa{ 1-\sum_{j=1}^{n-1} \beta_j} y_n^*}+ \frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j y_j^*}\\
+& < \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \pa{\gamma_n}\pa{1+\delta_n}+\frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j y_j^*}\\
+& = \pa{ \sum_{j=n+1}^{\infty} \beta_j} \pa{ \pa{ \frac{\beta_n \gamma_n \pa{1+\delta_n}}{\pa{\sum_{j=n}^\infty \beta_j}\pa{\sum_{j=n+1}^\infty \beta_j}}}+ \pa{\frac{1}{\sum_{j=n}^\infty \beta_j}} \norm{\sum_{j=1}^{n-1} \beta_j y_j^*}}
+\end{align*}
+Hence, for any $n \in \N$, 
+\begin{align*}
+\norm{\sum_{j=1}^n \beta_j y_j^*} & < \pa{\sum_{j=n+1}^\infty \beta_j} \pa{ \pa{ \frac{\beta_n\gamma_n\pa{1+\delta_n}}{\pa{\sum_{j=n}^\infty \beta_j}\pa{ \sum_{j=n+1}^\infty \beta_j}}} + \pa{\frac{1}{\sum_{j=n}^\infty \beta_j}} \norm{\sum_{j=1}^{n-1} \beta_j y_j^*}}\\
+& < \pa{\sum_{j=n+1}^{\infty} \beta_j} \sum_{j=1}^n \frac{\beta_j \gamma_j\pa{1+\delta_j}}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}\\
+& \leq \gamma \pa{\sum_{j=n+1}^{\infty} \beta_j} \sum_{j=1}^n \frac{\beta_j \pa{1+\delta_j}}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}\\
+&\leq \gamma \pa{ \sum_{j=n+1}^\infty \beta_j}\pa{ \pa{ \sum_{j=1}^n \frac{\beta_j}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}}+ \pa{1-\alpha}}\\
+& = \gamma \pa{ \sum_{j=n+1}^\infty \beta_j}\pa{ \pa{ \sum_{j=1}^n\pa{\frac{1}{\sum_{k=j}^\infty \beta_k}-\frac{1}{\sum_{k=j+1}^\infty \beta_k}}}+ \pa{1-\alpha}}\\
+& = \gamma\pa{\sum_{j=n+1}^\infty \beta_j} \pa{ \frac{1}{\sum_{j=n+1}^\infty \beta_j} - \frac{1}{\sum_{j=1}^{\infty} \beta_j}+1-\alpha}\\
+&=\gamma \pa{ \sum_{j=n+1}^\infty \beta_j} \pa{ \frac{1}{\sum_{j=n+1}^\infty \beta_j}- \alpha}\\
+& = \gamma \pa{ 1- \alpha \pa{\sum_{j=n+1}^\infty \beta_j}}
+\end{align*}
+completing the proof.
+\end{proof}
+\begin{proof}[Proof of \ref{lem:james:ClosedBall}]
+As before, let $\{\delta_i\}_{i \in \N} \subset (0,1)$ such that 
+\begin{equation*} 
+\sum_{i \in \N} \frac{\beta_i \delta_i}{\pa{ \sum\limits_{j=i+1}^{\infty} \beta_i} \pa{ \sum\limits_{j=i}^{\infty} \beta_i}} < 1-\alpha
+\end{equation*} 
+Define $\{x_i^0\}_{i \in \N} = \{x_i^*\}_{i \in \N}$.
+Define
+\begin{equation*}
+\gamma_1 = \inf\left\{ \sup\limits_{y^* \in CoLim\{\phi_i\}_{ i\in \N}} \left\{ \norm{x^*-y^*}\right\} : x^* \in \overline{co}\{x_i^0\}_{i \in \N}, \phi_k \in \overline{co}\{x_i^0\}_{i \geq k}, k \in \N \right\}
+\end{equation*}
+Choose $\{\phi_i^1\}_{i \in \N} \subset X^*$
+such that
+for every $k \in \N$, $\phi_k^1 \in \overline{co}\{x_i^*\}_{i \geq k}$ 
+and for all $y^* \in \overline{co}\{x_i^0\}_{i \in \N}$, 
+and for all $w \in CoLim \{\phi_i^1\}_{i \in \N}$, we have
+\begin{equation*}
+\norm{y^*-w} \leq \gamma_1 \pa{1+\frac{\delta}{2}}
+\end{equation*}
+Choose $y_1^* \in \overline{co}\{x_i^*\}_{i \in \N}$ such that
+there exists $w' \in CoLim \{\phi_i^1\}_{i \in \N}$
+such that 
+\begin{equation*} 
+\gamma_1 < \norm{y_1^*-w'} \leq \gamma_1 \pa{1+\frac{\delta_1}{2}} < \gamma_1(1+\delta_1)
+\end{equation*}
+Then there exists $\tilde{x} \in \overline{B_X(0;1)}$ 
+such that $\gamma_1 \pa{1-\delta_1} < \ip{\tilde{x},y_1^*-w'}$. 
+Since $w' \in CoLim\{\phi_i^1\}_{i \in \N}$, 
+we can extract a subsequence $\{x_i^1\}_{i \in \N}$ of $\{\phi_i^1\}_{i \in \N}$  
+such that 
+$\lim\limits_{i \to \infty} \ip{\tilde{x}, x_i^1}$ exists and
+equals $\liminf\limits_{i \to \infty} \ip{\tilde{x}, \phi_i^1}$.
+Thus, 
+for any $w \in CoLim\{x_i^1\}_{i \in \N}$, we have 
+\begin{equation*}
+\ip{\tilde{x},w} = \lim\limits_{i \to \infty} \ip{\tilde{x},x_i^1} = \liminf\limits_{i \to \infty} \ip{\tilde{x},\phi_i^1} \leq \ip{\tilde{x},w'}
+\end{equation*}
+And so, for any $w \in CoLim\{x_i^1\}_{i \in \N}$, we have
+\begin{equation*} 
+\gamma_1  \pa{1-\delta_1} < \ip{\tilde{x},y_1^*-w}
+\end{equation*}
+Continuing inductively, for $i \in \N$, set 
+\begin{equation*}
+\gamma_{i+1}= \inf \left\{ \sup \left\{ \norm{\pa{\sum_{j=1}^{i} \beta_j y_j^*} + \pa{\pa{\sum_{j=i+1}^{\infty}\beta_j }y^*}-w}: w \in CoLim\{\phi_i\}_{i \in\N}\right\}\right\}
+\end{equation*}
+Where the \Infimum is taken over all $y^* \in \overline{co}\{x_j^{i}\}_{j \geq i+1}$ and all $\{\phi_i\}_{i \in \N} \subset X^*$ such that $\phi_k \in \overline{co} \{x_j^i\}_{j \geq k}$. 
+Next, pick $\{\phi_j^{i+1}\}_{j \in \N} \subset X^*$ such that for every $k \in \N$,
+for every $\phi_k^{i+1} \in \overline{co} \{x_j^i\}_{j \geq k}$,
+for all $y^* \in \overline{co}\{x_j^{i}\}_{j \in \N}$, 
+and for all $w \in CoLim\{\phi_j^{i+1}\}_{j \in \N}$, we have 
+\begin{equation*}
+ \norm{ \sum_{j=1}^i \beta_j y_j^*+ \pa{ \sum_{j=i+1}^{\infty} \beta_j} y^*-w} < \gamma_{i+1}\pa{1+\delta_{i+1}}
+\end{equation*}
+Next, pick $y_{i+1}^* \in \overline{co}\{x_j^i\}_{j \geq i+1}$ 
+and pick $w' \in CoLim\{\phi_j^{i+1}\}_{j \in \N}$ such that
+\begin{equation*}
+\gamma_{i+1}< \norm{ \sum_{j=1}^i \beta_j y_j^*+ \pa{ \sum_{j=i+1}^{\infty} \beta_j} y_{i+1}^*-w'} < \gamma_{i+1}\pa{1+\delta_{i+1}}
+\end{equation*}
+Next, pick $\tilde{x} \in \overline{B_X(0;1)}$ satisfying
+\begin{equation*}
+\gamma_{i+1}(1-\delta_{i+1}) < \ip{\tilde{x}, \sum_{j=1}^i \beta_j y_j^*+ \pa{ \pa{ \sum_{j=i+1}^\infty \beta_j} y_j^*}-w'}
+\end{equation*}
+and apply the fact that since $\liminf\limits_{j \to \infty} \ip{\tilde{x},\phi_j^{i+1}} \leq \ip{\tilde{x},w}$, we can find a subsequence $\{x_j^{i+1}\}_{j \in \N}$ of $\{\phi_j^{i+1}\}_{j \in \N}$ such that for every $w \in CoLim\{x_j^{i+1}\}_{j \in \N}$ we have 
+\begin{equation*}
+\gamma_{i+1}(1-\delta_{i+1}) < \ip{\tilde{x}, \sum_{j=1}^i \beta_j y_j^*+ \pa{ \pa{ \sum_{j=i+1}^\infty \beta_j} y_j^*}-w}
+\end{equation*}
+completing our construction. 
+Clearly, $CoLim\{y_j^*\}_{j \in \N} \subset CoLim\{\phi_j^i\}_{j \in \N}$ for every $i \in \N$. Hence, for every $w \in CoLim\{y_j^*\}_{ j\in \N}$, for ever $i \in \N$, we have 
+\begin{equation*}
+\gamma_i(1-\delta_i) < \norm{\sum_{j=1}^{i-1} \beta_j y_j^*+ \pa{\pa{\sum_{j=i}^\infty \beta_j} y_i^*}-w} < \gamma_i(1+\delta_i)
+\end{equation*}
+Also, since $\{y_j^*\}_{j \in \N} \subset \overline{co}\{x_j\}_{j \in \N} \subset \overline{B_{X^*}(0;1)}$, $CoLim\{y_j^*\}_{j \in \N} \subset \overline{co}\{y_j^*\}_{j \in \N} \subset \overline{B_{X^*}(0;1)}$.
+By definition, $\gamma_1 \geq \alpha$, and
+$\{\gamma_i\}_{i \in \N}$ is a nondecreasing \Sequence since it is defined by taking the \Infimum over a set which never gains new elements as $i$ increases. Further, $\norm{w} \leq 1$ for $w \in CoLim\{y_j^*\}_{j \in \N}$ implies that for every $n$, $\gamma_n \leq 2$, so by monotone convergence, $\gamma_i \nearrow \gamma= \norm{\sum_{j \in \N}\beta_j \pa{y_j-w}}\leq 2$. 
+As for the final estimate, let $n \in \N$ and let $y^* \in CoLim\{y_j^*\}_{j \in \N}$.
+Then,
+
+\begin{align*}
+\norm{\sum\limits_{j=1}^n \beta_j (y_j^*-y^*)} 
+& = \norm{ \pa{\pa{ \frac{\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}}} \pa{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}}+ \pa{\pa{ \frac{\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}}\pa{\beta_n (y_n^*-y^*)}}\\
+& = \norm{ \pa{\pa{ \frac{\beta_n+\sum_{j=n+1}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}} \pa{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}} + \pa{\pa{ \frac{\beta_n\sum_{j=n}^\infty \beta_j}{\sum_{j=n}^\infty \beta_j}}\pa{ (y_n^*-y^*)}}}\\%%HOWDOIBRINGTHISNORMDOWN
+& \leq \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \norm{ \sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)+ \pa{ \sum_{j=n}^\infty \beta_j} (y_n^*-y^*)} 
++ \frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}\\
+& \leq \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \norm{ \sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)+ \pa{ 1-\sum_{j=1}^{n-1} \beta_j} (y_n^*-y^*)} \\
+& + \frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}\\
+& < \frac{\beta_n}{\sum_{j=n}^{\infty} \beta_j} \pa{\gamma_n}\pa{1+\delta_n}+\frac{\sum_{j=n+1}^{\infty} \beta_j}{\sum_{j=n}^{\infty} \beta_j} \norm{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}\\
+& = \pa{ \sum_{j=n+1}^{\infty} \beta_j} \pa{ \pa{ \frac{\beta_n \gamma_n \pa{1+\delta_n}}{\pa{\sum_{j=n}^\infty \beta_j}\pa{\sum_{j=n+1}^\infty \beta_j}}}+ \pa{\frac{1}{\sum_{j=n}^\infty \beta_j}}
+ *\norm{\sum_{j=1}^{n-1} \beta_j (y_j^*-y^*)}}
+\end{align*}
+Hence, for every $i \in \N$, we have 
+\begin{equation*}
+\begin{split}
+\norm{\sum_{j=1}^i \beta_j (y_j^*-y^*)} & < \pa{\sum_{j=i+1}^\infty \beta_j} \\
+& \tab[.5cm]*\pa{ \pa{ \frac{\beta_i\gamma_i\pa{1+\delta_i}}{\pa{\sum_{j=i}^\infty \beta_j}\pa{ \sum_{j=i+1}^\infty \beta_j}}} + \pa{\frac{1}{\sum_{j=i}^\infty \beta_j}} \norm{\sum_{j=1}^{i-1} \beta_j (y_j^*-y^*)}}\\
+& < \pa{\sum_{j=i+1}^{\infty} \beta_j} \sum_{j=1}^i \frac{\beta_j \gamma_j\pa{1+\delta_j}}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}\\
+& \leq \gamma \pa{\sum_{j=i+1}^{\infty} \beta_j} \sum_{j=1}^i \frac{\beta_j \pa{1+\delta_j}}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}\\
+&\leq \gamma \pa{ \sum_{j=i+1}^\infty \beta_j}\pa{ \pa{ \sum_{j=1}^i \frac{\beta_j}{\pa{\sum_{k=j}^\infty \beta_k}\pa{ \sum_{k=j+1}^\infty \beta_k}}}+ \pa{1-\alpha}}\\
+& = \gamma \pa{ \sum_{j=i+1}^\infty \beta_j}\pa{ \pa{ \sum_{j=1}^i\pa{\frac{1}{\sum_{k=j+1}^\infty \beta_k}-\frac{1}{\sum_{k=j}^\infty \beta_k}}}+ \pa{1-\alpha}}\\
+& = \gamma\pa{\sum_{j=i+1}^\infty \beta_j} \pa{ \frac{1}{\sum_{j=i+1}^\infty \beta_j} - \frac{1}{\sum_{j=1}^{\infty} \beta_j}+1-\alpha}\\
+&=\gamma \pa{ \sum_{j=i+1}^\infty \beta_j} \pa{ \frac{1}{\sum_{j=i+1}^\infty \beta_j}- \alpha}\\
+& = \gamma \pa{ 1- \alpha \pa{\sum_{j=i+1}^\infty \beta_j}}
+\end{split} 
+\end{equation*}
+\end{proof} 
+\end{lem}

@@ -1,45 +1,43 @@
 \begin{thm}[Goldstine]
-    \label{thm:GoldstinesTheorem}
-    \rm
-    Let $X$ be a \SeminormedSpace.
-    Let $c:X \to X^{**}$ be the \CanonicalEmbedding of $X$ into $X^{**}$.
-    Let $B$ denote the \ClosedUnitBall about $0$ in $X$. 
-    Let $B_1$ denote the \ClosedUnitBall about $0$ in $X^{**}$. 
-    Then $c(B)$ is  \weakstar \TopologyDense in $B_1$. 
-    \begin{proof}
-    Let $c^*:X^* \to X^{***}$ denote the \CanonicalEmbedding 
-    of $X^*$ into $X^{***}$. 
-    Let $\scK$ denote the collection of \Finite subsets of $X^*$. 
-    For each $x^{**} \in X^{**}$, 
-    $\epsilon > 0$
-    and $K \in \scK$. 
-    define 
-    \begin{align*}
-    U(x^{**}, \epsilon,  K) 
-    & := \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^{**}-y, c^*(x^*)}} < \epsilon \}  \\
-    & = \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^*, x^{**}-y}} < \epsilon \}
-    \end{align*}
-    Define 
-    \begin{align*}
-        \scB = \{U(x^{**}, \epsilon, K) : K \in \scK \tab[.5cm]  x^{**} \in X^{**} \tab[.5cm] \epsilon \in (0,\infty) \}
-    \end{align*}
-    Then by definition, the $\scB$ is a
-    \TopologyBasis for the \weakstar \Topology on $X^{**}$. 
-
-    Let $x^{**} \in B_1$, $\epsilon > 0$, and $\{x_i\}_{i=1}^n = K \in \scK$. 
-    Then by 
-    \ref{cor:HellysTheorem:ThreeImpliesTwo}
-    there exists an $x \in B$ satisfying
-    , for each $1 \leq i \leq n$, 
-    \begin{align*}
-    \abs{ \ip{x_i^*, x^{**} - c(x)}} 
-    & = \abs{\ip{x_i^*, x^{**}} - \ip{x, x_i^*}} \\
-    & < \epsilon
-    \end{align*}
-    Hence 
-    \begin{equation*}
-    c(x) \in \bigcap\limits_{x_i^* \in K} \{y \in X^{**} : \abs{\ip{x_i^*, x^{**} - y }}< \epsilon \} = U(x^{**}, \epsilon, K)
-    \end{equation*}
-    Hence $c(B)$ is \weakstar \TopologyDense in $B_1$. 
-    \end{proof}
+\label{thm:GoldstinesTheorem}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $c:X \to X^{**}$ be the \CanonicalEmbedding of $X$ into $X^{**}$.
+Let $B$ denote the \ClosedUnitBall about $0$ in $X$. 
+Let $B_1$ denote the \ClosedUnitBall about $0$ in $X^{**}$. 
+Then $c(B)$ is  \weakstar \TopologyDense in $B_1$. 
+\begin{proof}
+Let $c^*:X^* \to X^{***}$ denote the \CanonicalEmbedding 
+of $X^*$ into $X^{***}$. 
+Let $\scK$ denote the collection of \Finite subsets of $X^*$. 
+For each $x^{**} \in X^{**}$, 
+$\epsilon > 0$
+and $K \in \scK$. 
+define 
+\begin{align*}
+U(x^{**}, \epsilon,  K) 
+& := \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^{**}-y, c^*(x^*)}} < \epsilon \}  \\
+& = \bigcap\limits_{x^* \in K} \{y \in X^{**} : \abs{\ip{x^*, x^{**}-y}} < \epsilon \}
+\end{align*}
+Define 
+\begin{align*}
+\scB = \{U(x^{**}, \epsilon, K) : K \in \scK \tab[.5cm]  x^{**} \in X^{**} \tab[.5cm] \epsilon \in (0,\infty) \}
+\end{align*}
+Then by definition, the $\scB$ is a
+\TopologyBasis for the \weakstar \Topology on $X^{**}$. 
+Let $x^{**} \in B_1$, $\epsilon > 0$, and $\{x_i\}_{i=1}^n = K \in \scK$. 
+Then by 
+\ref{cor:HellysTheorem:ThreeImpliesTwo}
+there exists an $x \in B$ satisfying
+, for each $1 \leq i \leq n$, 
+\begin{align*}
+\abs{ \ip{x_i^*, x^{**} - c(x)}} 
+& = \abs{\ip{x_i^*, x^{**}} - \ip{x, x_i^*}}  < \epsilon
+\end{align*}
+Hence 
+\begin{equation*}
+c(x) \in \bigcap\limits_{x_i^* \in K} \{y \in X^{**} : \abs{\ip{x_i^*, x^{**} - y }}< \epsilon \} = U(x^{**}, \epsilon, K)
+\end{equation*}
+Hence $c(B)$ is \weakstar \TopologyDense in $B_1$. 
+\end{proof}
 \end{thm} 

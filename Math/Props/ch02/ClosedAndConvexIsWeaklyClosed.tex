@@ -1,0 +1,32 @@
+\begin{prop}[\SetClosed and \ConvexSet is \weak \SetClosed]
+\label{prop:ClosedAndConvexIsWeaklyClosed}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $K \subset X$ be 
+\ConvexSet and \SetClosed. 
+Then $K$ is \weak \SetClosed. 
+\begin{proof}
+Let $y_0 \in  X \setminus  K$. 
+Then since $\{y_0\}$ is \SetCompact and \ConvexSet and $K$ is \ConvexSet
+and \SetClosed, we can apply 
+\ref{thm:HahnBanach:ClosedConvex}
+to conclude the existence of $j_y \in X^*$ and $\gamma_y^1, \gamma_y^2 \in \mathbb{R} $ 
+such that 
+$\sup\limits_{k \in K}(\ip{k, j_y}) = \gamma_y^1 < \gamma_y^2 < \ip{y_0, j_y}$.
+Hence
+$y_0 \in j_y^{-1}(\gamma_y^2, \infty)$ and $K \cap j_y^{-1}(\gamma_y^2, \infty) = \emptyset$. 
+Hence, we can write 
+\begin{equation*}
+X \setminus K = \bigcup\limits_{y \in X \setminus K } j_y^{-1}(\gamma_y^2, \infty)
+\end{equation*}
+which is a union of \weak \SetOpen sets, and is therefore \weakly \SetOpen. 
+Hence $K$ is \weakly \SetClosed. 
+\end{proof}
+\end{prop}
+\begin{rmk}
+\label{rmk:ClosedAndConvexIsWeaklyClosed}
+\rm
+\ref{prop:ClosedAndConvexIsWeaklyClosed}
+can be shown to hold in an arbitrary \LocallyConvex \TVS, 
+using a more general form of the Hahn Banach theorem.
+\end{rmk}

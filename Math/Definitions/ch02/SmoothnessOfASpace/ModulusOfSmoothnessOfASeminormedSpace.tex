@@ -1,0 +1,18 @@
+\newcommand{\ModulusOfSmoothness}[0]{\textbf{\hyperref[def:ModulusOfSmoothness]{Modulus Of Smoothness}}\xspace}
+\begin{df}[\ModulusOfSmoothness at a point]
+\label{def:ModulusOfSmoothness}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Define $\overline{\rho}: [0,\infty) \times \partial B_X(0;1) \to \mathbb{R}$ by 
+\begin{equation*}
+\overline{\rho}\pa{\epsilon, x_0} = \frac{1}{2} \sup\limits_{\norm{x}=1} \{ \norm{x_0+\epsilon x} + \norm{x_0-\epsilon x} -2\}
+\end{equation*}
+If $x_0 \in X$,
+we call $\overline{\rho}(\cdot, x_0):[0,\infty) \to \mathbb{R}$ the 
+\ModulusOfSmoothness of $X$ at $x_0$.
+We define $\rho_X:[0,\infty) \to \mathbb{R}$ by 
+\begin{equation*}
+\rho_X(\epsilon ) = \sup\limits_{\norm{x} = 1} \overline{\rho} \pa{\epsilon, x}
+\end{equation*}
+We call $\rho_X$ the \ModulusOfSmoothness of $X$. 
+\end{df}

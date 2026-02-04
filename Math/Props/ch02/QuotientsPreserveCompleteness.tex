@@ -1,40 +1,35 @@
 \begin{prop}
 \label{prop:quotientspreservecompleteness}\rm
 Let $(X,\norm{\cdot})$ be a \SeminormedSpace with \QuotientNormedSpace $(X/\Ker, \norm{\cdot}_{\Ker})$. 
-
 Then X is \PseudometricComplete if and only if $X/\Ker$ is \Complete. 
-
 \begin{proof}
 Let X be \PseudometricComplete. 
 Let $\{[x_i]\}_{i \in \N} \subset X/\Ker$ be a \PseudometricCauchySequence. 
 Let $\epsilon > 0$. 
 Then there is an $N \in \N$ such that for $m,n > N$ we have 
-\begin{equation}
+\begin{equation*}
 \norm{[x_m-x_n]}_{\Ker} < \epsilon
-\end{equation}
-
+\end{equation*}
 For this N, we have 
-\begin{equation}
+\begin{equation*}
 \norm{x_m-x_n} = \norm{[x_m-x_n]}_{\Ker} < \epsilon
-\end{equation}
+\end{equation*}
 so that $\{x_i\}_{i \in \N}$ is a \PseudometricCauchySequence. 
 Since X is \PseudometricComplete, 
 there is a 
 $x \in X$ such that $\norm{x_i-x} \to 0$, 
 but since T is an \Isometry, 
-\begin{equation}
+\begin{equation*}
 \norm{[x]-[x_i]}=\norm{[x_i-x]}_{\Ker} \to 0
-\end{equation}
+\end{equation*}
 and so 
 $[x_i] \to [x]$.
 so that $X/\Ker$ is \Complete. 
-
 Now suppose instead that $X/\Ker$ is \Complete 
-and suppose $\{x_i\}_{i \in \N}$ is a \PseudometricCauchySequence in X. 
+and that $\{x_i\}_{i \in \N}$ is a \PseudometricCauchySequence in X. 
 Since $\norm{[x_i-x_j]}_{\Ker} = \norm{x_i-x_j}$, 
 $\{[x_i]\}_{i \in \N}$ is a \PseudometricCauchySequence in $X/\Ker$, which therefore has a 
 limit $y \in X/\Ker$. Since T is \Surjective, $y=[x]$ for some $x \in X$, and it is easy to see that
 $x_i \to x$ so that $X$ is \PseudometricComplete. 
-
 \end{proof}
 \end{prop}

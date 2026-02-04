@@ -1,0 +1,64 @@
+\begin{prop}[Degrees Of Convexity]
+\label{prop:DegreesOfConvexity}
+\rm
+Let $X$ be a \SeminormedSpace.
+The following are true.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:DegreesOfConvexity}~\roman*}]
+\item 
+\label{prop:DegreesOfConvexity:UniformImpliesLocal}
+If $X$ is \UniformlyConvex, then $X$ is \LocallyUniformlyConvex. 
+\item 
+\label{prop:DegreesOfConvexity:UniformImpliesWeak}
+If $X$ is \UniformlyConvex, then $X$ is \WeaklyUniformlyConvex. 
+\item 
+\label{prop:DegreesOfConvexity:LocalImpliesWeaklyLocal}
+If $X$ is \LocallyUniformlyConvex, then $X$ is \LocallyWeaklyUniformlyConvex. 
+\item 
+\label{prop:DegreesOfConvexity:WeakImpliesWeaklyLocal}
+If $X$ is \WeaklyUniformlyConvex, then $X$ is \LocallyWeaklyUniformlyConvex. 
+\item 
+\label{prop:DegreesOfConvexity:WeaklyLocalImpliesStrict}
+If $X$ is \LocallyWeaklyUniformlyConvex then X is \StrictlyConvexSpace. 
+\end{enumerate} 
+%Cioranescu 2.2.7, 2.2.2
+%Diestel Theorem 3 p.31
+\begin{proof}[Proof of \ref{prop:DegreesOfConvexity:UniformImpliesLocal}]
+It is clear that 
+\ref{prop:LocallyUniformlyConvex:Convergence}
+is a special case of 
+\ref{prop:UniformlyConvexSpace:Convergence}
+with $y_n=x$ for each  $n \in \N$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfConvexity:UniformImpliesWeak}]
+The truth of this statement is clear since strong convergence of a 
+\Sequence implies \weak convergence of that sequence.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfConvexity:LocalImpliesWeaklyLocal}]
+This is clear since strong convergence of a sequence implies \weak convergence.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfConvexity:WeakImpliesWeaklyLocal}]
+This is clear since 
+\ref{prop:LocalWeakUniformConvex:Convergence}
+is a special case of 
+\ref{prop:WeakUniformConvex:Convergence} with $x_n = x_0$ for each $n \in \N$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfConvexity:WeaklyLocalImpliesStrict}]
+I prove by converse. 
+Suppose $X$ is not \StrictlyConvexSpace.
+By \ref{prop:StrictlyConvexSpace:SphereContainsSegment}, 
+there exists $x_0,y_0 \in X$ such that $\norm{x-y} \neq 0$ 
+and for every $t \in (0,1)$, $\norm{tx+(1-t)y} = 1$. 
+For each $n \in \N$, define
+\begin{equation*}
+z_n = \frac{x_n}{n} + \frac{(n-1)y}{n}
+\end{equation*}
+Then $z_n \to y$.
+Also, for each $n \in \N$,  $\norm{\frac{x+z_n}{2}} = 1$. 
+so that $\norm{x+z_n} \to 2$.
+If $X$ were \LocallyWeaklyUniformlyConvex, then this would imply 
+that $z_n \wto x$, but since $z_n \to y$ and $\norm{x-y} > 0$, 
+this is impossible. 
+Hence $X$ is not 
+\LocallyWeaklyUniformlyConvex.
+\end{proof}
+\end{prop} 

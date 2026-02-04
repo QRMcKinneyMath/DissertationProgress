@@ -1,0 +1,58 @@
+The \Epigraph of a function provides us with a nice characterization of \LowerSemicontinuity
+in a \LocallyConvex \TVS. 
+\begin{prop}[\LowerSemicontinuity]
+\label{prop:LowerSemicontinuity}
+\rm
+Let $X$ be a \LocallyConvex \TVS. 
+Let $T:X \to \overline{\R}$. 
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LowerSemicontinuity}~\roman*}]
+\item 
+\label{prop:LSC:LSC}
+$T$ is \LowerSemicontinuous.
+\item 
+\label{prop:LSC:Open}
+For each $\alpha \in \mathbb{R}$, 
+$T^{-1}(\alpha, \infty]$
+is \SetOpen.
+\item
+\label{prop:LSC:Closed}
+For each $\alpha \in \R$, 
+$T^{-1}(-\infty, \alpha]$
+is \SetClosed.
+\item 
+\label{prop:LSC:Epigraph}
+$Epi(f)$ is \SetClosed in $X \times \R$. 
+\end{enumerate} 
+\begin{proof}[\ref{prop:LSC:LSC} $\implies$ \ref{prop:LSC:Open}]
+Let $\alpha \in \mathbb{R}$. 
+Let $x_0 \in T^{-1}(\alpha, \infty]$. 
+Then $T(x_0) > \alpha$. 
+Since $\liminf\limits_{x \to x_0} T(x) = T(x_0)$, 
+there exists $U \in \scU_X(x_0)$ such that 
+$T(U) \subset (\alpha, \infty]$. 
+Hence $T^{-1}(\alpha, \infty]$ is \SetOpen. 
+\end{proof}
+\begin{proof}[\ref{prop:LSC:Open} $\implies$ \ref{prop:LSC:Closed}]
+This direction is obvious since the complement of an \SetOpen set is \SetClosed. 
+\end{proof}
+\begin{proof}[\ref{prop:LSC:Closed} $\implies$ \ref{prop:LSC:LSC}]
+Let $x_0 \in X$. 
+Let $\epsilon > 0$. 
+By assumption, $T^{-1}(-\infty, T(x_0)-\epsilon]$ is \SetClosed so 
+$T^{-1}(T(x_0)-\epsilon, \infty]$ is \SetOpen.
+Since this set contains $x_0$, 
+there exists $U \in \scU_{X}(x_0)$ such that 
+$U \subset T^{-1}(T(x_0)-\epsilon, \infty]$. 
+Hence $\liminf\limits_{x \to x_0} T(x) \geq T(x_0) - \epsilon$. 
+since $\epsilon > 0$ was arbitrary, $T(x_0) = \liminf\limits_{x \to x_0} T(x)$ 
+and therefore $T$ is \LowerSemicontinuous at $x_0$. 
+\end{proof}
+\begin{proof}[\ref{prop:LSC:LSC} $\iff$ \ref{prop:LSC:Epigraph}]
+Define $S:X \times \R \to \tilde{\R}$ by $S(x,\alpha)=T(x)-\alpha$. 
+Then $Epi(T) = S^{-1} (-\infty, 0]$ which is \SetClosed by by \ref{prop:LSC:Closed}.
+It is clear that $T$ is \LowerSemicontinuous if and only if $S$ is.
+Hence, because $Epi(T) = S^{-1} (-\infty, 0]$, and by \ref{prop:LSC:LSC} iff $\ref{prop:LSC:Closed}$, 
+the result is proven. 
+\end{proof}
+\end{prop}

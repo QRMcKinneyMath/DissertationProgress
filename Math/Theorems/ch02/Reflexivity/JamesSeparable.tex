@@ -1,0 +1,113 @@
+\begin{thm}[James Separable]
+\label{thm:JamesSeparable}
+\rm
+Let $X$ be a \TopologySeparable
+\Complete \SeminormedSpace.
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{thm:JamesSeparable}~\roman*}]
+\item 
+\label{thm:JamesSeparable:NotReflexive}
+$X$ is not \Reflexive.
+\item 
+\label{thm:JamesSeparable:Colimit}
+For every $\alpha \in (0,1)$ there exists a \Sequence $\{x_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ satisfying $d\pa{0,\overline{co}\{x_i^*\}_{i \in \N}} \geq \alpha$ and $x_i^* \overset{w^*}{\to} 0$. 
+\item 
+\label{thm:JamesSeparable:Sequence}
+For every $\alpha \in (0,1)$ and $\{\beta_i\}_{i \in \N} \subset (0,1)$ satisfying $\sum_{i \in \N} \beta_i = 1$, there is a $\gamma \in [\alpha,1]$ and $\{y_i^*\}_{i \in \N} \subset X^*$ such that 
+$y_i^* \overset{w^*}{\to} 0$ and for each $i \in \N$, 
+\begin{equation*}
+\norm{\sum_{j \in \N} \beta_j y_j^*} = \gamma \tab[1cm] \norm{\sum_{j=1}^i \beta_j y_j^*} \leq \gamma \pa{ 1- \alpha \pa{ \sum_{j=i+1}^{\infty} \beta_j}}
+\end{equation*}
+\item 
+\label{thm:JamesSeparable:Norm}
+There exists $x^* \in X^*$ not attaining its \Norm. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{thm:JamesSeparable:NotReflexive} implies \ref{thm:JamesSeparable:Colimit}]
+Let $\alpha \in (0,1)$. 
+Since X is not \Reflexive and $c(X)$ is \Complete, 
+by Riesz's lemma \cite{kreyszig89},  
+there exists an $x^{**} \in B_{X^{**}}(0;1)$ such that $d(x^{**},c(X)) > \alpha$. 
+Since $X$ is \TopologySeparable it has a \Countable \TopologyDense set $\{x_i\}_{i \in \N}$. 
+Fix $i \in \N$, 
+let $\alpha_1=\alpha_2=\cdots=\alpha_{i-1}=0$, 
+$\alpha_i=\alpha$, 
+and let $\{\beta_j\}_{j=1}^i \subset \C$ where $\beta_i \neq 0$ without loss of generality. 
+Then, since $c(X)$ is a \VectorSubspace,  
+\begin{align*}
+\abs{\sum_{j=1}^i \beta_j \alpha_j}&= \abs{\beta_i \alpha_i} \\
+& = \abs{\beta_i} \alpha \\
+& \leq \frac{\abs{\beta_i} \alpha}{d\pa{x^{**},c(X)}} \norm{x^{**}+ \sum_{j=1}^{i-1} \frac{\beta_j}{\beta_i}c(x_j)}\\
+& = \frac{\alpha}{d\pa{x^{**},c(X)}} \norm{\beta_i x^{**} + \sum_{j=1}^{i-1} \beta_j c(x_j)}
+\end{align*}
+Since $\alpha < d\pa{x^{**}, c(X)}$, for some $\epsilon > 0$, $\epsilon + \frac{\alpha}{d\pa{x^{**},c(X)}}<1$, so by \ref{thm:HellysTheorem}, since $X^{**}=\pa{X^*}^*$, there exists an $x_i^* \in \overline{B_{X^*}(0;1)}$ such that for $1 \leq j \leq i-1$ we have $\ip{x_j,x_i^*}=\ip{x_i^*,c(x_j)} = 0$ and $\ip{x_i^*,c(x_i)} \geq \alpha$.
+Using this method we construct a sequence $\{x_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ such that for each $1 \leq j \leq i-1$, $\ip{x_j,x_i^*} = 0$ and $\ip{x_i,x^{**}} \geq \alpha$. Without loss of generality, we let $\norm{x_i^*} = 1$.  
+Since $\{x_j\}_{j \in \N}$ is \TopologyDense in $X$ and 
+$\{x_j^*\}_{j \in \N}$  is bounded, $x_j^* \overset{w^*}{\to} 0.$
+Furthermore, any convex combination of the $(x_i^*)'s$ satisfies 
+\begin{equation*}
+\alpha \leq \ip{\sum_{j=1}^n \lambda_j x_{k_j}^*, x^{**}}\leq \norm{x^{**}} \norm{\sum_{j=1}^n \lambda_j x_{k_j}^*} \leq \norm{\sum_{j=1}^n \lambda_j x_{k_j}^*}
+\end{equation*}
+so that $d\pa{0,\overline{co}\{x_i^*\}_{i \in \N}} \geq \alpha$, completing the proof. \end{proof}
+\begin{proof}[Proof of \ref{thm:JamesSeparable:Colimit} implies \ref{thm:JamesSeparable:Sequence}]
+Let $\alpha \in (0,1)$. 
+Let $\{\beta_i\}_{i \in \N} \subset (0,1)$ 
+such that $\sum\limits_{i \in \N} \beta_i = 1$. 
+Let $\{x_i\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ such that 
+$d\pa{0, \overline{co}\{x_i^*\}_{i \in \N}} \geq \alpha$
+and $x_i^* \wsto 0$ which is guaranteed to exist 
+by \ref{thm:JamesSeparable:Colimit}.
+By \ref{lem:james:Boundary}, 
+there exists $\gamma \in [\alpha , 1 ]$ 
+and $\{y_i^*\}_{i \in \N} \subset X^*$ such that for each $n \in \N$, 
+\begin{equation*}
+y_i^* \in \overline{co}\{x_j\}_{j \geq n} \tab[0.25cm] \norm{\sum\limits_{j \in \N} \beta_j y_j^*}= \gamma \tab[0.25cm] \norm{\sum\limits_{j=1}^n \beta_j y_j^*} < \gamma \pa{1-\alpha \pa{\sum\limits_{j={n+1}}^{\infty} \beta_j}}
+\end{equation*}
+Let $x \in X$
+Let $\epsilon > 0$. 
+Since $x_i^* \wsto 0$, there exists $N \in \N$ such that $n>N$ implies $\abs{\ip{x,x_n^*}} < \frac{\epsilon}{2}$. 
+Let $n>N$. Then there exists $K \in \N$ and  $\{\lambda_i\}_{i  =n}^K \subset [0,1]$ such that 
+$\norm{y_i-\sum\limits_{j=n}^K \lambda_j x_j^*} < \frac{\epsilon}{2\norm{x}}$ and $\sum\limits_{j=n}^K \lambda_j = 1$
+Hence, 
+\begin{align*}
+\abs{\ip{x, y} } & \leq \abs{\ip{x, y-\sum\limits_{j=n}^k\lambda_j x_j^*}} + \abs{\ip{x, \sum\limits_{j=n}^K \lambda_j x_j^*}}\\
+& \leq \norm{x} \norm{y-\sum\limits_{j=n}^K \lambda_j x_j^*} + \frac{\epsilon}{2}\\
+& < \epsilon
+\end{align*}
+Since $x \in X$ was arbitrary, we conclude $y_i^* \wsto 0$. 
+Thus, \ref{thm:JamesSeparable:Sequence} holds.
+\end{proof} 
+\begin{proof}[Proof of \ref{thm:JamesSeparable:Sequence} implies \ref{thm:JamesSeparable:Norm}]
+Let $\alpha \in (0,1)$.
+Let $\{\beta_i\}_{i \in \N} \subset (0,1)$ such that $\sum\limits_{i \in \N} \beta_i = 1$. 
+By \ref{thm:JamesSeparable:Sequence}, there exists 
+a $\gamma \in [\alpha, 1]$ and a 
+$\{y_i^*\}_{i \in \N} \subset X^*$ such that 
+$y_i^* \overset{w^*}{\to} 0$ and for each $i \in \N$, 
+\begin{equation*}
+\norm{\sum_{j \in \N} \beta_j y_j^*} = \gamma \tab[1cm] \norm{\sum_{j=1}^i \beta_j y_j^*} \leq \gamma \pa{ 1- \alpha \pa{ \sum_{j=i+1}^{\infty} \beta_j}}
+\end{equation*}
+Define $x^* = \sum_{j \in \N} \beta_j y_j^*$ and let $x \in \overline{B_X(0;1)}$. 
+Since $y_j^* \overset{w^*}{\to} 0$, 
+for some $N \in \N$, $\ip{x,y_j^*} < \gamma \alpha$ for every $j > \N$. Then
+\begin{equation*}
+\begin{split}
+\abs{\ip{x, x^*}} & \leq \abs{ \ip{x,\sum_{j=1}^N \beta_j y_j^*}} + \abs{\ip{x,\sum_{j=N+1}^{\infty} \beta_j y_j^*}}\\
+& < \abs{\ip{x,\sum_{j=1}^N \beta_j y_j^*}} + \alpha \gamma \sum_{j=N+1}^{\infty} \beta_j\\
+& \leq \norm{\sum_{j=1}^N \beta_j y_j^*} + \alpha \gamma \sum_{j=N+1}^\infty \beta_j \\
+& \leq \gamma \pa{1-\alpha \sum_{j=N+1}^\infty \beta_j}+ \gamma \alpha \sum_{j=N+1}^\infty \beta_j \\
+&= \gamma \\
+&= \norm{\sum_{j \in \N} \beta_j y_j^*} \\
+& = \norm{x^*}
+\end{split}
+\end{equation*}
+Since the inequality is strict and $x \in \overline{B_X(0;1)}$ was arbitrary, we are done. 
+\end{proof} 
+\begin{proof}[Proof of \ref{thm:JamesSeparable:Norm} implies \ref{thm:JamesSeparable:NotReflexive}]
+I prove via contrapositive. 
+Let $X$ be \Reflexive.
+Let $x^* \in X$, 
+Then there is a \Sequence $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ such that $\ip{x_n,x^*} \to \norm{x^*}$.  
+By  \ref{lem:ReflexiveSeparable}, $\{x_n\}_{n \in \N}$ has a \weakly convergent subsequence $x_{k_n} \overset{w}{\to} x \in \overline{B_X(0;1)}$. 
+This $x$ satisfies $\ip{x,x^*} = \norm{x^*}$. 
+\end{proof} 
+\end{thm} 

@@ -1,0 +1,259 @@
+\begin{prop}[Lindenstraus Duality Formula] %2.2.12 Cioranescu (Lindenstrauss Duality Formula)
+\label{prop:LindenstrausDualityFormula}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $\overline{\rho}$ denote the local \ModulusOfSmoothness of $X$. 
+Let $\overline{\rho}_{*}$ denote the local  \ModulusOfSmoothness of $X^*$. 
+Let $\rho$ denote the of \ModulusOfSmoothness of $X$. 
+Let $\rho_{*}$ denote the \ModulusOfSmoothness of $X^*$. 
+Let $\Delta$ denote the of \ModulusOfUniformConvexity $X$. 
+Let $\Delta^*$ denote the \ModulusOfUniformConvexity of $X^*$.
+Let $\Gamma$ denote the \ModulusOfWeakTwoUniformConvexity of $X$. 
+Let $\Gamma^*$ denote the \ModulusOfWeakTwoUniformConvexity of $X^*$. 
+%Let $\Delta_*$ denote the \ModulusOfWeakUniformConvexity of $X$. 
+%Let $\Delta^*_*$ denote the \ModulusOfWeakUniformConvexity of $X^*$. 
+Let $c:X \to X^{**}$ denote the \CanonicalEmbedding.
+Let $x \in \partial B_X(0;1)$. 
+Let $y \in \partial B_{X^*}(0;1)$. 
+Let $t > 0$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LindenstrausDualityFormula}~\roman*}]
+\item
+\label{prop:LDF:1}
+\begin{equation*}
+\overline{\rho}(t,x) = \sup\limits_{s\in (0,2]} \braces{\frac{ts}{2} - \Gamma^*(s,c(x))}
+\end{equation*}
+\item
+\label{prop:LDF:2}
+\begin{equation*}
+\rho(t) = \sup\limits_{s \in (0,2]} \braces{\frac{ts}{2} - \Delta^*(s)}
+\end{equation*}
+\item
+\label{prop:LDF:3}
+\begin{equation*}
+\overline{\rho_*}(t,y) = \sup\limits_{s \in (0,2]} \braces{\frac{ts}{2} - \Gamma(s,y)}
+\end{equation*}
+\item
+\label{prop:LDF:4}
+\begin{equation*}
+\rho_*(t) = \sup\limits_{s \in (0,2]} \braces{\frac{ts}{2}- \Delta(s)}
+\end{equation*}
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:LDF:1}]
+Let $t>0$. 
+Let $x_0 \in \partial B_X(0;1)$.
+Let $\epsilon \in (0,2]$.
+Let $j_1,j_2 \in \partial B_{X^*}(0;1)$
+such that $\norm{j_1-j_2} \geq \epsilon$. 
+Let $\gamma > 0$. 
+%Let $x_0 \in \partial B_X(0;1)$ such that $\norm{j_1+j_2} \leq \ip{x_0, j_1+j_2} + \gamma$. 
+Let $y_0 \in \partial B_X(0;1)$ such that $\norm{j_1-j_2} \leq \ip{y_0, j_1-j_2} + \gamma$. 
+Then 
+\begin{align*}
+2 \overline{\rho}(t,x_0) & = \sup\limits_{y \in \partial B_X(0;1)} \pa{ \norm{x_0+ty} + \norm{x_0-ty} -2} \\
+& \geq \norm{x_0+ty_0} + \norm{x_0-ty_0} - 2 \\
+& \geq \ip{x_0+ty_0, j_1} + \ip{x_0-ty_0, j_2} - 2 \\
+& = \ip{x_0, j_1+j_2} + t \ip{y_0, j_1-j_2} - 2 \\
+& = \ip{j_1+j_2, c(x_0)} + t \ip{y_0, j_1-j_2} - 2 \\
+& = -2 \pa{ 1- \ip{\frac{j_1+j_2}{2}, c(x_0)}} + t \ip{y_0, j_1-j_2}\\
+& \geq -2 \pa{ 1- \ip{\frac{j_1+j_2}{2}, c(x_0)}} + t \norm{j_1-j_2} - t\gamma\\
+& \geq -2 \pa{ 1- \ip{\frac{j_1+j_2}{2}, c(x_0)}} + t \epsilon - t\gamma
+\end{align*}
+Since $\gamma> 0$ was arbitrary, we conclude that 
+\begin{equation*}
+2 \overline{\rho}(t, x_0) \geq -2 \pa{ 1- \ip{\frac{j_1+j_2}{2}, c(x_0)}} + t \epsilon
+\end{equation*}
+Hence, $1-\ip{\frac{j_1+j_2}{2}, c(x_0)} \geq \frac{t \epsilon}{2} - \overline{\rho}(t,x_0)$.
+Since $j_1,j_2 \in \partial B_{X^*}(0;1)$ were arbitrary with the condition that 
+$\norm{j_1-j_2} \geq \epsilon$, we conclude 
+\begin{equation*}
+\frac{t\epsilon}{2} - \overline{\rho}(t,x_0) \leq \Gamma(\epsilon, c(x_0))
+\end{equation*}
+
+For the other direction, let $t>0$ and let $x_0,y_0 \in \partial B_X(0;1)$. 
+Let $\gamma > 0$.
+Let $j_1 \in \partial B_{X^*}(0;1)$ such that $\norm{x_0+ty_0} \leq \ip{x_0+ty_0, j_1}+\gamma$. 
+Let $j_2 \in  \partial B_{X^*}(0;1)$ such that $\norm{x_0-ty_0} \leq \ip{x_0-ty_0, j_2}+\gamma$.
+By perturbing $j_1$ or $j_2$ we can guarantee $0 < \delta := \norm{j_1-j_2} \leq 2$. 
+\begin{align*}
+\norm{x_0+ty_0} + \norm{x_0-ty_0} -2 & \leq  2\gamma+\ip{x_0+ty_0, j_1} + \ip{x_0+ty_0, j_2} -2\\
+& = 2\gamma+\ip{x_0, j_1+j_2} + t \ip{y_0, j_1-j_2} -2 \\
+& = 2\gamma+-2 \pa{1-\ip{\frac{j_1+j_2}{2}, c(x_0)}} + t \ip{y_0, j_1-j_2}\\
+& \leq 2\gamma+-2\Gamma^*(\delta, c(x_0)) + t \delta\\
+& \leq 2 \gamma + \sup\limits_{s \in (0,2]}\pa{ tx - 2 \Gamma^*(s, c(x_0)}
+\end{align*}
+Since $\gamma > 0$ was arbitrary, we conclude 
+\begin{equation*}
+\norm{x_0+ty_0} + \norm{x_0-ty_0} -2 \leq 2 \pa{\sup\limits_{s \in (0,2]} \pa{ ts- 2\Gamma^*(s,c(x_0))}}
+\end{equation*}
+Since $y_0 \in \partial B_X(0;1)$ was arbitrary, we conclude 
+\begin{equation*}
+\overline{\rho}(t,x_0) \leq \sup\limits_{s \in (0,2]} \pa{ \frac{ts}{2} - \Gamma^*(s,c(x_0))}
+\end{equation*}
+Since the inequality goes both ways, we are done.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LDF:2}]
+Let $t>0$. 
+Let $\epsilon \in (0,2]$. 
+Let $j_1,j_2 \in \partial B_{X^*}(0;1)$ such that $\norm{j_1-j_2} \geq \epsilon$. 
+Let $\gamma > 0$. 
+Let $x_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1+j_2} \leq \ip{x_0, j_1+j_2} + \gamma$. 
+Let $y_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1-j_2} \leq \ip{y_0, j_1-j_2} + \gamma$. 
+Hence 
+\begin{align*}
+2 \rho(t) &= \sup\limits_{x,y \in \partial B_X(0;1)} \norm{x+ty} + \norm{x-ty} -2\\
+& \geq \norm{x_0+ty_0}+ \norm{x_0-ty_0} -2\\
+& \geq \ip{x_0+ty_0, j_1} + \ip{x_0-ty_0, j_2} -2 \\
+& = \ip{x_0, j_1+j_2} + t \ip{y_0, j_1-j_2} - 2\\
+& \geq \norm{j_1+j_2} + t\norm{j_1-j_2}-\gamma - t \gamma -2\\
+& \geq \norm{j_1+j_2} + t \epsilon - 2 - \gamma - t \gamma 
+\end{align*}
+Since $\gamma > 0$ was arbitrary, 
+\begin{equation*}
+\rho(t) \geq \norm{\frac{j_1+j_2}{2}} + \frac{t \epsilon}{2} - 1
+\end{equation*}
+Hence
+\begin{equation*}
+\frac{t \epsilon}{2} - \rho(t) \leq 1- \norm{\frac{j_1+j_2}{2}}
+\end{equation*}
+Since $j_1,j_2 \in \partial B_{X^*}(0;1)$ with the property $\norm{j_1-j_2} \geq \epsilon$ 
+were arbitrary, we conclude 
+\begin{equation*}
+\frac{t \epsilon}{2} - \rho(t) \leq \Delta^*(\epsilon)
+\end{equation*}
+Hence $\frac{t \epsilon}{2} - \Delta^*(\epsilon) \leq \rho(t)$. 
+Since $\epsilon  \in (0,2]$ was arbitrary, we conclude 
+\begin{equation*}
+\sup\limits_{s \in (0,2]} \braces{ \frac{ts}{2} - \Delta^*(s)} \leq \rho(t)
+\end{equation*}
+
+For the other direction, let $t>0$. 
+Let $x_0,y_0 \in \partial B_X(0;1)$. 
+Let $j_1 \in \partial B_{X^*}(0;1)$ such that 
+$\norm{x_0+ty_0} = \ip{x_0+ty_0, j_1}$. 
+Let $j_2 \in \partial B_{X^*}(0;1)$ 
+such that $\norm{x_0-ty_0} = \ip{x_0-ty_0, j_2}$. 
+
+Define $0<\delta = \abs{\ip{y_0, j_1-j_2}} \leq \norm{j_1-j_2} \leq 2$. 
+Then, since $\delta \leq \norm{j_1-j_2}$, 
+\begin{align*}
+\norm{x_0+ty_0} + \norm{x_0-ty_0} -2 &  = \ip{x_0+ty_0, j_1} + \ip{x_0-ty_0, j_2} - 2\\
+& =\ip{x_0, j_1+j_2} + t \ip{y_0, j_1-j_2} - 2\\
+& \leq \norm{j_1+j_2} + t \delta - 2\\
+& =-2 \pa{1-\norm{\frac{j_1+j_2}{2}}} + t \delta\\
+& \leq -2 \Delta^*(\delta)+ t \delta\\
+& = 2 \pa{\frac{t \delta}{2} - \Delta^*(\delta)}\\
+& \leq 2\sup\limits_{\delta \in (0,2]}\pa{ \frac{t \delta}{2} - \Delta^*(\delta)}
+\end{align*}
+Since $x,y \in \partial B_X(0;1)$ were arbitrary, we conclude 
+\begin{equation*}
+\rho(t) \leq \sup\limits_{\delta \in (0,2]} \pa{ \frac{t \delta}{2} - \Delta^*(\delta)}
+\end{equation*}
+Since the inequality goes both ways, equality holds and this part is complete. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LDF:3}]
+Let $t > 0$. 
+Let $\epsilon \in (0,2]$. 
+Let $x_0,y_0 \in \partial B_X(0;1)$ such that $\norm{x_0-y_0} \geq \epsilon$. 
+Let $j_2 \in \partial B_{X^*}(0;1)$ such that $\norm{x_0-y_0} = \ip{x_0-y_0, j_2}$. 
+Then 
+\begin{align*}
+2\overline{\rho_*}(t, j_1) & \geq \norm{j_1+tj_2} - \norm{j_1-tj_2} -2\\
+& \geq \ip{x_0, j_1+tj_2} + \ip{y_0, j_1-tj_2} -2\\
+& = \ip{x_0+y_0, j_1} + t \ip{x_0-y_0, j_2} -2 \\
+& = -2 \pa{ 1- \ip{\frac{x_0+y_0}{2}, j_1}} + t \ip{x_0-y_0, j_2}\\
+& = -2 \pa{ 1- \ip{\frac{x_0+y_0}{2}, j_1}} + t \norm{x_0-y_0}\\
+& = -2 \pa{ 1- \ip{\frac{x_0+y_0}{2}, j_1}} + t\epsilon
+\end{align*}
+Hence, 
+\begin{equation*}
+\frac{t\epsilon}{2} - \overline{\rho_*}(t, j_1) \leq 1-\ip{\frac{x_0+y_0}{2}, j}
+\end{equation*}
+Since $x_0,y_0 \in \partial_X(0;1)$ were arbitrary witht he property that $\norm{x_0-y_0} \geq \epsilon$, 
+we conclude 
+\begin{equation*}
+\frac{t\epsilon}{2} - \overline{\rho_*}(t, j_1) \leq \Gamma(\epsilon, j_1)
+\end{equation*}
+Since $\epsilon \in (0,2]$ was arbitrary, we conclude $\overline{\rho_*}(t, j_1) \geq \sup\limits_{s \in (0,2]} \pa{ \frac{t s}{2} - \Gamma(s,j_1)}$.
+
+For the other direction, let $t > 0$. 
+Let $j_1 \in \partial B_{X^*}(0;1)$. 
+Let $j_2 \in \partial B_{X^*}(0;1)$ such that $j_1 \neq j_2$.
+Let $\epsilon > 0$. 
+By definition, there exists $x_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1+tj_2} \leq \ip{x_0, j_1+tj_2} + \epsilon$. 
+Similarly, there exists $y_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1-tj_2} \leq \ip{y_0, j_1-tj_2} + \epsilon$. 
+By a silight preturbation, we can also guarantee that $\norm{x_0-y_0} \neq 0$.
+Define $0<\delta := \norm{x_0-y_0} \leq 2$.
+Then, we have 
+\begin{align*}
+\norm{j_1+tj_2} + \norm{j_1-tj_2} -2 & \leq 2\epsilon \ip{x_0, j_1+tj_2} + \ip{y_0, j_1-tj_2} - 2\\
+& = 2 \epsilon + \ip{x_0+y_0, j_1} + t \ip{x_0-y_0, j_2} - 2 \\
+& = 2 \epsilon - 2 \pa{ 1 - \ip{\frac{x_0+y_0}{2}, j_1}} + t \delta\\
+& \leq 2 \epsilon - 2 \Gamma(\delta, j_1) + t \delta\\
+& \leq 2\epsilon + 2 \sup\limits_{\delta \in (0,2]} \pa{ \frac{t \delta}{2} - \Gamma(\delta, j_1)}
+\end{align*}
+Since $\epsilon > 0$ was arbitrary, 
+\begin{equation*}
+\norm{j_1+tj_2} + \norm{j_1-tj_2} -2 \leq 2 \sup\limits_{\delta \in (0,2]} \pa{ \frac{t \delta}{2} - \Gamma(\delta, j_1)}
+\end{equation*}
+Since $j_2$ was arbitrary, we conclude $\overline{\rho_*}(t, j_1) \leq \sup\limits_{s \in (0,2]} \pa{ \frac{ ts}{2} - \Gamma(s, j_1)}$.
+Since the inequality goes both ways, this proof is complete. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LDF:4}]
+Let $t>0$. 
+Let $\epsilon \in (0,2]$. 
+Let $x_0,y_0 \in \partial B_X(0;1)$
+such that $\norm{x_0-y_0} \geq \epsilon$.
+By Hahn-Banach, there exists $j_1 \in \partial B_{X^*}(0;1)$ 
+with $\ip{x_0+y_0, j_1} = \norm{x_0+y_0}$. 
+Similarly, there exists $j_2 \in \partial B_{X^*}(0;1)$
+with $\ip{x_0-y_0, j_2} = \norm{x_0-y_0}$. 
+Then we have 
+\begin{align*}
+2 \rho_*(t) & = \sup\limits_{x,y \in \partial B_{X^*}(0;1)} \norm{x+ty}+\norm{x-ty} -2\\
+& \geq \norm{j_1+tj_2} + \norm{j_1-tj_2} -2\\
+& \geq \ip{x_0, j_1+tj_2}+ t\ip{y, j_1-tj_2} -2\\
+& = \ip{x_0+y_0,j_1}+t\ip{x_0-y_0,j_2}-2\\
+& = \norm{x_0+y_0}+t\norm{x_0-y_0} - 2\\
+& \geq \norm{x_0+y_0} + t\epsilon - 2 
+\end{align*}
+Hence, $\frac{t \epsilon}{2} - \rho_*(t) \leq 1-\norm{\frac{x_0+y_0}{2}}$. 
+Since $x_0,y_0$ were arbitrary elements of $\partial B_X(0;1)$ satisfying $\norm{x_0-y_0} \geq \epsilon$, 
+we conclude $\frac{t \epsilon}{2} - \rho_*(t) \leq \Delta(\epsilon)$. 
+Hence $\rho_*(t) \geq \frac{t \epsilon}{2} - \Delta(\epsilon)$. 
+Since $\epsilon \in (0,2]$ was arbitrary, we conclude
+$\rho_*(t) \geq \sup\limits_{s \in (0,2]} \braces{ \frac{ts}{2} - \Delta(s)}$.
+
+For the other direction,
+let $t > 0$. 
+Let $j_1,j_2 \in \partial B_{X^*}(0;1)$.
+Let $\epsilon > 0$. 
+There exists $x_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1+tj_2} \leq \ip{x_0, j_1+tj_2} + \epsilon$.
+There exists $y_0 \in \partial B_X(0;1)$ such that 
+$\norm{j_1-tj_2} \leq \ip{y_0, j_1-tj_2} + \epsilon$. 
+Define $0 < \delta := \abs{\ip{x_0-y_0, j_2}} \leq \norm{x_0-y_0} \leq 2$. 
+Then 
+\begin{align*}
+\norm{j_1+tj_2} + \norm{j_1-tj_2} -2 & \leq 2 \epsilon + \ip{x_0, j_1+tj_2}+ \ip{y_0, j_1-tj_2} - 2\\
+& = 2 \epsilon + \ip{x_0+y_0, j_1} + t \ip{x_0-y_0, j_2} -2\\
+& \leq 2 \epsilon + \norm{x_0+y_0} + t \abs{\ip{x_0-y_0, j_2}} -2 \\
+& = 2 \epsilon - 2\pa{1-\norm{\frac{x_0+y_0}{2}}} + t \delta\\
+& \leq 2 \epsilon - 2 \Delta(\delta)+ t \delta \\
+& \leq 2\sup\limits_{\delta \in (0,2]} \pa{\frac{t \delta}{2} - \Delta(\delta)} + 2 \epsilon
+\end{align*}
+Since $\epsilon > 0$ was arbitrary, we conclude 
+\begin{equation*}
+\norm{j_1+tj_2} - \norm{j_1-tj_2} -2 \leq 2 \sup\limits_{\delta \in (0,2]} \pa{ \frac{t \delta}{2} - \Delta(\delta)} 
+\end{equation*}
+Since $j_1,j_2 \in \partial B_{X^*}(0;1)$ were arbitrary, we conclude 
+\begin{equation*}
+\rho_*(t) \leq \sup\limits_{s \in (0,2]} \pa{ \frac{t s}{2} - \Delta(s)}
+\end{equation*}
+which finishes the proof.
+\end{proof}
+\end{prop} 

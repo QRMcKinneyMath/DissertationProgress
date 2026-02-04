@@ -1,0 +1,28 @@
+\newcommand{\AsymptoticallyNonexpansive}[0]{\textbf{\hyperref[def:AsymptoticallyNonexpansive]{Asymptotically Nonexpansive}}\xspace}
+\newcommand{\PseudoAsymptoticallyNonexpansive}[0]{\textbf{\hyperref[def:AsymptoticallyNonexpansive]{Pseudo-Asymptotically Nonexpansive}}\xspace}
+\begin{df}[\AsymptoticallyNonexpansive]
+\label{def:AsymptoticallyNonexpansive}
+\rm
+Let $(X,d)$ be a \PseudometricSpace. 
+Let $T:X \to X$ and $S:X \to X$.
+Let $\{\gamma_n\}_{n \in \N} \subset [1,\infty)$ such that $\lim\limits_{n \to \infty} \gamma_n = 1$. 
+Suppose for each $n \in \N$ and for each $x,y \in X$, we have 
+\begin{equation*}
+d\pa{T^nx, T^ny} \leq \gamma_n d\pa{x,y}
+\end{equation*}
+Then we say that $T$ is 
+\AsymptoticallyNonexpansive 
+and we say that $T$ is 
+$\{\gamma_n\}_{n \in \N} $ 
+\AsymptoticallyNonexpansive. 
+Let $K \in \N$ such that for $n \in \N$ 
+satisfying $n\geq K$, for every $x,y \in X$, we have. 
+\begin{equation*}
+d\pa{S^nx, S^ny} \leq \gamma_n d\pa{x,y}
+\end{equation*}
+Then we say that $S$ is 
+\PseudoAsymptoticallyNonexpansive 
+and we say that $S$ is 
+$\{\gamma_n\}_{n =K}^{\infty} $ 
+\PseudoAsymptoticallyNonexpansive. 
+\end{df}

@@ -1,0 +1,169 @@
+\newcommand{\LocalModulusOfWeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Local Modulus Of Weak1 Uniform Convexity}}\xspace}
+\newcommand{\LocalModuliOfWeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Local Moduli Of Weak1 Uniform Convexity}}\xspace}
+\newcommand{\ModulusOfWeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Modulus Of Weak1 Uniform Convexity}}\xspace}
+\newcommand{\ModuliOfWeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Moduli Of Weak1 Uniform Convexity}}\xspace}
+\newcommand{\LocallyWeaklyUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Locally Weakly1 Uniformly Convex}}\xspace}
+\newcommand{\LocallyWeakstarUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Locally Weakstar-1 Uniformly Convex}}\xspace}
+\newcommand{\LocalWeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Local Weak1 Uniform Convexity}}\xspace}
+\newcommand{\WeaklyUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Weakly1 Uniformly Convex}}\xspace}
+\newcommand{\WeakUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Weak1 Uniform Convexity}}\xspace}
+\newcommand{\WeakstarUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Weakstar-1 Uniformly Convex}}\xspace}
+\newcommand{\WeakstarUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakConvexity]{Weakstar-1 Uniform Convexity}}\xspace}
+
+\begin{df}[\ModulusOfWeakUniformConvexity]
+\label{def:ModulusOfWeakConvexity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Define $\tilde{\Delta}^*:[0,2] \times \partial B_{X^*}(0;1) \times \partial B_X(0;1) \to [0,\infty)$ by 
+\begin{equation*}
+\tilde{\Delta}^*\pa{t,x^*,x} = \inf\limits_{y \in \partial B_X(0;1)} \pa{ 1-\norm{\frac{x+y}{2}} : \abs{\ip{x-y,x^*}} \geq \epsilon}
+\end{equation*}
+We call $\Delta^*$ the \LocalModulusOfWeakUniformConvexity of $X$.
+We say that $X$ is \LocallyWeaklyUniformlyConvex if $\Delta^*(t,x^*,x) > 0$ for each $t > 0$, for each $x \in \partial B_X(0;1)$,
+and for each $x^* \in \partial B_{X^*}(0;1)$. 
+Define 
+$\Delta^*:[0,2] \times \partial B_{X^*}(0;1) \to [0,\infty)$ by 
+\begin{equation*}
+\Delta^*(t,x^*) = \inf\limits_{x \in \partial B_X(0;1)} \tilde{\Delta}^*(t,x^*,x)
+\end{equation*}
+We say that $X$ is \WeaklyUniformlyConvex if $\Delta^*(t,x^*) > 0$ for each $x^* \in \partial B_{X^*}(0;1)$. 
+Suppose $Y$ is a \BanachSpace which is the dual space of some \SeminormedSpace $Z$. 
+Let $\tilde{\Delta}^*$ denote the \LocalModulusOfWeakUniformConvexity of $Y$. 
+Let $\Delta^*$ denote the  \ModulusOfWeakUniformConvexity of $Y$. 
+Let $\overline{\Delta}^*$ denote the  \LocalModulusOfWeakUniformConvexity of $Y$. 
+Let $c:Z \to Y^*$ denote the \CanonicalEmbedding. 
+We say that $Y$ is \LocallyWeakstarUniformlyConvex if $\tilde{\Delta}^*(t,c(x), y) > 0$ for each $x \in \partial B_{Z}(0;1)$, for each $t> 0$ and for each $y \in Y$. 
+We say that $Y$ is \WeakstarUniformlyConvex if $\Delta^*(t,c(x)) > 0$ for each $x \in \partial B_{Z}(0;1)$ and for each $t> 0$.
+\end{df}
+%\begin{df}[\WeakUniformConvexity]
+%\rm
+%Let $X$ be a \SeminormedSpace. 
+%%Let $x_0 \in \partial B_X(0;1)$. 
+%We say that $X$ is \LocallyWeaklyUniformlyConvex at $x_0$ if 
+%for every sequence $\{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ such that 
+%$\norm{x_0+y_n} \to 2$ we have $y_n \wto x_n$.  
+%We say that $X$ is \LocallyWeaklyUniformlyConvex if it is 
+%\LocallyWeaklyUniformlyConvex at each point in $\partial B_X(0;1)$. 
+%We say that $X$ is \WeaklyUniformlyConvex if 
+%for each $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$
+%and for every $\{y_n\}_{n \in \N}$ such that 
+%$\norm{x_n+y_n} \to 2$, we have 
+%$x_n-y_n \wto 0$. 
+%\end{df}
+\begin{prop}
+\label{prop:WeakUniformConvex}
+\rm
+Let $X$ be a \SeminormedSpace. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:WeakUniformConvex}~\roman*}]
+\item 
+\label{prop:WeakUniformConvex:Convex}
+$X$ is \WeaklyUniformlyConvex. 
+\item 
+\label{prop:WeakUniformConvex:Convergence}
+If $\{x_i\}_{i \in \N}$ and $\{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$
+and $\norm{x_n+y_n} \to 2$ then $x_n-y_n \wto 0$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:WeakUniformConvex:Convex} implies \ref{prop:WeakUniformConvex:Convergence}]
+Let $\{x_i\}_{i \in \N}, \{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ such that 
+$\norm{x_i+y_i} \to 2$. 
+Let $x^* \in \partial B_{X^*}(0;1)$. 
+Let $\epsilon > 0$. 
+Since 
+$X$ is \WeaklyUniformlyConvex, 
+$\Delta^*(\epsilon, x^*) = \alpha > 0$. 
+Let $N \in \N$ such that for $n>N$, 
+$\norm{\frac{x_n+y_n}{2}} \geq 1-\frac{\alpha}{2}$. 
+Then $1-\norm{\frac{x_n+y_n}{2}} \leq \frac{\alpha}{2} < \alpha = \Delta^*(\epsilon, x^*)$. 
+Hence, $\abs{\ip{x_n-y_n, x^*}} < \epsilon$. 
+Hence $x_n-y_n \wto 0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeakUniformConvex:Convergence} implies \ref{prop:WeakUniformConvex:Convex}]
+I prove by contrapositive. 
+Let $X$ be not \WeaklyUniformlyConvex. 
+Then there exists $\epsilon  \in [0,2]$ and  $x^* \in \partial B_{X^*}(0;1)$
+such that $\Delta(\epsilon, x^*) = 0$.
+This implies the existence of sequences $\{x_i\}_{i \in \N}, \{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$1-\norm{\frac{x_i+y_i}{2}} \to 0$ and $\abs{\ip{x_i-y_i, x^*}} \geq \epsilon$ for every $i$. 
+But this implies $x_i-y_i \not \wto 0$ and $\norm{x_i+y_i} \to 2$, so 
+\ref{prop:WeakUniformConvex:Convergence} does not hold. 
+\end{proof}
+\end{prop}
+
+\begin{prop}
+\label{prop:WeakstarUniformConvex}
+\rm
+Let $X$ be a \SeminormedSpace. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:WeakstarUniformConvex}~\roman*}]
+\item 
+\label{prop:WeakstarUniformConvex:Convex}
+$X^*$ is \WeakstarUniformlyConvex. 
+\item 
+\label{prop:WeakstarUniformConvex:Convergence}
+If $\{x_i\}_{i \in \N}$ and $\{y_i\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$
+and $\norm{x_n+y_n} \to 2$ then $x_n-y_n \wsto 0$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:WeakstarUniformConvex:Convex} implies \ref{prop:WeakstarUniformConvex:Convergence}]
+Let $\{x_i\}_{i \in \N}, \{y_i\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ such that 
+$\norm{x_i+y_i} \to 2$. 
+Let $x \in \partial B_{X}(0;1)$. 
+Let $\epsilon > 0$. 
+Since 
+$X^*$ is \WeakstarUniformlyConvex, 
+$\Delta^*(\epsilon, c(x)) = \alpha > 0$. 
+Let $N \in \N$ such that for $n>N$, 
+$\norm{\frac{x_n+y_n}{2}} \geq 1-\frac{\alpha}{2}$. 
+Then $1-\norm{\frac{x_n+y_n}{2}} \leq \frac{\alpha}{2} < \alpha = \Delta^*(\epsilon, c(x))$. 
+Hence, $\abs{\ip{x_n-y_n, c(x)}} < \epsilon$. 
+Hence $x_n-y_n \wsto 0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeakstarUniformConvex:Convergence} implies \ref{prop:WeakstarUniformConvex:Convex}]
+I prove by contrapositive. 
+Let $X^*$ be not \WeakstarUniformlyConvex. 
+Then there exists $\epsilon  \in [0,2]$ and  $x \in \partial B_{X}(0;1)$
+such that $\Delta^*(\epsilon, c(x)) = 0$.
+This implies the existence of sequences $\{x_i\}_{i \in \N}, \{y_i\}_{i \in \N} \subset \partial B_{X^*}(0;1)$
+and $x \in \partial B_X(0;1)$ such that 
+$1-\norm{\frac{x_i+y_i}{2}} \to 0$ and $\abs{\ip{x_i-y_i, c(x)}} \geq \epsilon$ for every $i$. 
+But this implies $x_i-y_i \not \wto 0$ and $\norm{x_i+y_i} \to 2$, so 
+\ref{prop:WeakstarUniformConvex:Convergence} does not hold. 
+\end{proof}
+\end{prop}
+\begin{prop}
+\label{prop:LocalWeakUniformConvex}
+\rm
+Let $X$ be a \SeminormedSpace. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LocalWeakUniformConvex}~\roman*}]
+\item
+\label{prop:LocalWeakUniformConvex:Convex}
+$X$ is \LocallyWeaklyUniformlyConvex.
+\item
+\label{prop:LocalWeakUniformConvex:Convergence}
+If $x_0 \in \partial B_X(0;1)$ and $\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$\norm{x_0+y_i} \to 2$ then $y_i \wto x_0$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:LocalWeakUniformConvex:Convex} implies \ref{prop:LocalWeakUniformConvex:Convergence}]
+Let $x_0 \in \partial B_X(0;1)$. 
+Let $\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that $\norm{y_i+x_i} \to 2$. 
+Let $x^* \in \partial B_{X^*}(0;1)$. 
+Let $\epsilon > 0$. 
+Since $X$ is \LocallyWeaklyUniformlyConvex, $\tilde{\Delta}^*(\epsilon, x^*, x) = \alpha > 0$. 
+Let 
+$N \in \N$ such that for $n>N$, $\norm{\frac{x_0+y_n}{2}} \geq 1-\frac{\alpha}{2}$. 
+then $1-\norm{\frac{x_0+y_n}{2}} \leq \frac{\alpha}{2} < \alpha = \tilde{\Delta}^*(\epsilon, x^*, x)$. 
+Hence, $\abs{\ip{x_0-y_i, x^*}} < \epsilon$. Since $x^* \in \partial B_X(0;1)$ was arbitrary, $x_0-y_i \wto 0$. This implies $y_i \wto x_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocalWeakUniformConvex:Convergence} implies \ref{prop:LocalWeakUniformConvex:Convex}]
+I prove via contrapositive. 
+Suppose $X$ is not \LocallyWeaklyUniformlyConvex. 
+Then there is $\epsilon \in [0,2]$, $x^* \in \partial B_{X^*}(0;1)$ and $x_0 \in \partial B_X(0;1)$
+such that $\tilde{\Delta}^*(\epsilon, x^*, x_0) = 0$. 
+This implies the existence of a \Sequence $\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$1 - \norm{\frac{x_0+y_i}{2}} \to 0$ and $\abs{\ip{x_0-y_i, x^*}} \geq \epsilon$ for every $i$. 
+But this then implies $x_0-y_i \not \wto 0$ and also $\norm{x_0+y_i} \to 2$. 
+hence 
+\ref{prop:LocalWeakUniformConvex:Convergence} does not hold. 
+\end{proof}
+\end{prop}

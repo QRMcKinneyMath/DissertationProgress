@@ -1,0 +1,65 @@
+\begin{prop}[\MinkowskiFunctional]
+\label{prop:MinkowskiFunctional}
+\rm
+Let $X$ be a \VectorSpace over $\F \in \{ \C, \R\}$. 
+Let $A \subset X$ be 
+\ConvexSet, 
+and \Absorbing.
+Let $\mu_A$ denote the 
+\MinkowskiFunctional
+of $A$. 
+Then $\mu_A$ is a \SublinearFunctional.
+If in addition we assume that $A$ is 
+\Balanced,
+then $\mu_A$ is a \Seminorm on $X$. 
+\begin{proof}
+It is clear that $\mu_A$ is well defined since $A$ is \AbsorbingSet.
+Now let $x_0,y_0 \in X$. 
+Let $\epsilon > 0$. 
+Then there exists $\lambda_x, \lambda_y > 0$ such that 
+$\frac{1}{\lambda_x} x_0 \in A$ and $\frac{1}{\lambda_y}  y_0 \in A$.
+and 
+\begin{equation*}
+\gamma_x < \mu_A(x_0) + \epsilon \tab[1cm] \gamma_y < \mu_A(y_0)+\epsilon
+\end{equation*}
+Since $A$ is \ConvexSet, 
+\begin{align*}
+\frac{x_0+y_0}{\lambda_x+\lambda_y} &= \frac{\lambda_x}{\lambda_x+\lambda_y} \frac{x_0}{\lambda_x} + \frac{\lambda_y}{\lambda_x+\lambda_y} \frac{y_0}{\lambda_y}\\
+& = \frac{\lambda_x}{\lambda_x-\lambda_y} \frac{x_0}{\lambda_x} + \pa{ 1- \frac{\lambda_x}{\lambda_x+\lambda_y}}\frac{y_0}{\lambda_y}  \\
+& \in A
+\end{align*}
+Hence $\mu_A(x_0+y_0) \leq \lambda_x+\lambda_y \leq \mu_A(x_0)+\mu_A(y_0) + 2 \epsilon$. 
+Since $\epsilon > 0$ was arbitrary, 
+$\mu_A$ is \Subadditive. 
+Now let $s > 0$. 
+Then 
+\begin{align*}
+\mu_A(sx_0) & = \inf\braces{ \lambda > 0 : \frac{1}{\lambda} sx_0 \in A}\\
+& = \inf \braces{\frac{s \lambda}{s} > 0 : \frac{s}{\lambda} x_0 \in A} \\
+& =  \inf \braces{s \tilde{\lambda} > 0 : \frac{1}{\tilde{\lambda}} x_0 \in A} \\
+& =s \inf \braces{\tilde{\lambda} > 0 : \frac{1}{\tilde{\lambda}} x_0 \in A } \\
+& = s \mu_A(x_0)
+\end{align*}
+
+Suppose now that $A$ is \Balanced.
+Since $A$ is \ConvexSet and \Absorbing, $0 \in A$. 
+Hence, $\mu_A(0)=0$. 
+Let $t \in \F$.
+If $t=0$, then by the above argument, 
+$\mu_A(0x) = 0=0\mu_A(x)$. 
+Let $x_0 \in X$ and let $t \in \F$ be nonzero. 
+Write $t=t_0t_1$ where $\abs{t_1} = 1$ and $t_0 \geq  0$. 
+Suppose now, that $t \neq 0$.
+Then, since $A$ is \Balanced, $\frac{1}{t_1}A = A$, so 
+\begin{align*}
+\mu_A(tx_0) & = \inf\braces{\lambda > 0 : \frac{1}{\lambda} tx_0 \in A}\\
+& = \inf \braces{\lambda > 0 : \frac{t_0}{\lambda} x \in \frac{A}{t_1}} \\
+& = \inf \braces{\lambda > 0 : \frac{t_0}{\lambda} x \in A}\\
+& = t_0 \mu_A(x)\\
+& = \abs{t} \mu_A(x)
+\end{align*}
+Hence $\mu_A$ is \AbsScalarHomogeneous
+and is therefore a 
+\Seminorm.
+\end{proof}
+\end{prop}

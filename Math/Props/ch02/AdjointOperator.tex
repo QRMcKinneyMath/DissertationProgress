@@ -1,122 +1,150 @@
 \begin{prop}[\AdjointOperator]
-    \label{prop:adjointoperator}
-    \rm
-    Let $X$, $Y$, and $Z$ be \SeminormedSpaces
-    over a \Field $\F \in \{\R, \C\}$. .
-    Let $T \in BL(X,Y)$. 
-    Let $\T=T^\times_Z$ denote the 
-    \AdjointOperator of T
-    relative to the space Z. 
-    Let $Q_y$ denote the \QuotientMap
-    The following are true. 
-    \begin{enumerate}[label=(\roman*), ref={\ref{prop:adjointoperator}~\roman*}]
-        \item 
-        \label{prop:Adjoint:Linear}
-        $\T$ is Linear. 
-        \item 
-        \label{prop:Adjoint:WellDefined}
-        If $S \in BL(Y,Z)$, then $\T S \in BL(X,Z)$. (That is, the \AdjointOperator is well defined as a concept).
-        \item 
-        \label{prop:Adjoint:Continuous}
-        $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$. 
-        \item 
-        \label{prop:Adjoint:Isometry}
-        $\norm{\T}=\norm{T}$
-        \item 
-        \label{prop:Adjoint:DenseRange}
-        If T is \Surjective, then $\inf\limits_{\norm{x}=1}\norm{Tx} \leq \inf\limits_{\norm{S}_{BL(Y,Z)} = 1} \norm{\T S} $. Also TODO: Weaken T surjectivity condition
-				To Range(T) dense in Y. 
-		\item 
-        \label{prop:Adjoint:NotDenseRange}
-        If Range(T) is not dense in Y, then $\inf\limits_{\norm{S}_{BL(Y,Z)}=1} \norm{\T S} =0$
-        \item 
-        \label{prop:Adjoint:Surjective}
-        $\T$ is \Surjective if and only if T is \Injective and has \SetClosed range in Y. 
-    \end{enumerate}
+\label{prop:adjointoperator}
+\rm
+Let $X$, $Y$, and $Z$ be \SeminormedSpaces
+over a \Field $\F \in \{\R, \C\}$.
+Let $T \in BL(X,Y)$. 
+Let $\T=T^\times_Z$ denote the 
+\AdjointOperator of T
+relative to the space $Z$. 
+Let $Q_Y:Y \to Y/\Ker_Y$ denote the \QuotientMap
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:adjointoperator}~\roman*}]
+\item 
+\label{prop:Adjoint:Linear}
+$\T$ is \Linear. 
+\item 
+\label{prop:Adjoint:WellDefined}
+If $S \in BL(Y,Z)$, then $\T S \in BL(X,Z)$. (That is, the \AdjointOperator is well defined as a concept).
+\item 
+\label{prop:Adjoint:Continuous}
+$\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$. 
+\item 
+\label{prop:Adjoint:Isometry}
+$\norm{\T}=\norm{T}$
+\item 
+\label{prop:Adjoint:DenseRange}
+If $Range(T)$ is dense in $Y$, then $\inf\limits_{\norm{x}=1}\norm{Tx} \leq \inf\limits_{\norm{S}_{BL(Y,Z)} = 1} \norm{\T S}$.
+%			To Range(T) dense in Y. 
+\item 
+\label{prop:Adjoint:NotDenseRange}
+If Range(T) is not dense in Y, then 
+There exists $S \in BL(Y,Z)$ with $\norm{S} = 1$ and $\norm{\T S} = 0$. 
+$\inf\limits_{\norm{S}_{BL(Y,Z)}=1} \norm{\T S} =0$
+\item 
+\label{prop:Adjoint:Surjective}
+$\T$ is \Surjective if and only if T is \Injective and has \SetClosed range in Y. 
+\end{enumerate}
 
 
-    \begin{proof}[Proof of \ref{prop:Adjoint:Linear}]
-        Let $S,R \in BL(Y,Z)$, 
-        $\alpha \in \F$, 
-        and $x \in X$. 
-        Then, 
-        \begin{align*}
-            \ip{x, \T(\alpha S+R)} & = \ip{Tx, \alpha S+R}\\
-            & = \alpha \ip{Tx, S}+ \ip{Tx, R} \\
-            & = \alpha \ip{x, \T S} + \ip{ x, \T R}
-            & = \ip{x, \alpha \T S} + \ip{x, \T R} \\
-            & = \ip{x, \alpha \T S + \T R}
-        \end{align*}
-        Since $x \in X$ was arbitrary, \Linearity is verified. 
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Adjoint:WellDefined}]
-        Let $S \in BL(Y,Z)$. 
-        Then, 
-        $\T S = S \circ T$. 
-        The composition of continuous operators is continuous, so $\T S$ is 
-        continuous.
-        The composition of linear operators is linear, so $\T S$ is linear.
-        This, paired with \Linearity, implies $\T S \in BL(X,Z)$.
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Adjoint:Continuous}]
-        Let $S \in BL(Y,Z)$. Then, 
-        if $x \in X$
-        \begin{equation*}
-        \norm{\ip{x, \T S}} = \norm{\ip{Tx, S}} \leq \norm{S} \norm{Tx} \leq \norm{S} \norm{T} \norm{x}
-        \end{equation*}
-        Hence $\norm{\T S} \leq \norm{S} \norm{T}$
-        Since T is linear, and since S was arbitrary, 
-        by part  12 of \ref{prop:BLO}, $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$.
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Adjoint:Isometry}]
-        For any $S \in BL(Y,Z)$, 
-        $\T S = S \circ T$, so
-        $\norm{\T S} \leq \norm{S} \norm{T}$. 
-        Hence $\norm{\T} \leq \norm{T}$. 
-        Now let $x_0 \in X$. 
-        Then, by part 4 of 
-        \ref{thm:hahnbanach}, 
-        there exists $S \in BL(Y,Z)$ with 
-        $\norm{S}=1$
-        and $\norm{STx_0} = \norm{Tx_0}$. 
-        Hence, 
-        \begin{align*}
-            \norm{T x_0} & = \norm{S Tx_0} \\
-            & = \norm{(S \circ T) x_0} \\
-            & = \norm{(\T S) x_0} \\
-            & \leq \norm{\T} \norm{S} \norm{x_0}\\
-            & = \norm{\T} \norm{x_0}
-        \end{align*}
-        Since $x_0 \in X$ is arbitrary, $\norm{T} \leq \norm{\T}$. 
-        Since the inequality goes both ways, $\norm{T}=\norm{\T}$.
-
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Adjoint:DenseRange}]
-        Let $\Gamma=\inf\limits_{\norm{x}=1} \norm{Tx}$, 
-        and let $S \in BL(Y,Z)$ with $\norm{S} = 1$. 
-        Then, 
-        \begin{equation*}
-            \{x | \norm{Tx} \leq \Gamma\} \subset B_X(0;1)
-        \end{equation*}
-        so 
-        \begin{equation*}
-            \sup\limits_{\norm{x}\leq 1} \abs{\ip{Tx, S}} \geq \sup\limits_{\norm{Tx} \leq \Gamma}\abs{\ip{Tx, S}}
-        \end{equation*}
-
-        Also, since T is \Surjective by assumption, 
-        \begin{equation*}
-            \sup\limits_{\norm{Tx} \leq \Gamma} \abs{\ip{Tx, S}} = \sup\limits_{\norm{y} \leq \Gamma} \abs{\ip{y, S}}
-        \end{equation*}
-        From these two we arrive at the inequality
-        \begin{align*}
-            \norm{\T S} & = \sup\limits_{\norm{x}  \leq 1} \abs{\ip{x, \T S}}\\
-            & = \sup\limits_{\norm{x} \leq 1} \abs{\ip{Tx, S}}\\
-            & \geq \sup\limits_{\norm{Tx} \leq \Gamma} \abs{\ip{Tx, S}}\\
-            & = \sup\limits_{\norm{y} \leq \Gamma} \abs{\ip{y, S}}\\
-            & = \Gamma\\
-            & = \inf\limits_{\norm{x} = 1} \norm{Tx}
-        \end{align*}
-        Since $S \in \partial B_{BL(Y,Z)}(0;1)$ was arbitrary, we conclude
-        $\inf\limits_{\norm{S} = 1} \norm{\T S} \geq \inf\limits_{\norm{x} = 1} \norm{Tx}$
-    \end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:Linear}]
+Let $S,R \in BL(Y,Z)$, 
+$\alpha \in \F$, 
+and $x \in X$. 
+Then, 
+\begin{align*}
+\ip{x, \T(\alpha S+R)} & = \ip{Tx, \alpha S+R}\\
+& = \alpha \ip{Tx, S}+ \ip{Tx, R} \\
+& = \alpha \ip{x, \T S} + \ip{ x, \T R}\\
+& = \ip{x, \alpha \T S} + \ip{x, \T R} \\
+& = \ip{x, \alpha \T S + \T R}
+\end{align*}
+Since $x \in X$ was arbitrary, \Linearity is verified. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:WellDefined}]
+Let $S \in BL(Y,Z)$. 
+Then, 
+$\T S = S \circ T$. 
+The composition of \ContinuousFunction operators is \ContinuousFunction, so $\T S$ is 
+\ContinuousFunction.
+The composition of \Linear operators is \Linear, so $\T S$ is \Linear.
+Hence, $\T S \in BL(X,Z)$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:Continuous}]
+Let $S \in BL(Y,Z)$. Then, 
+if $x \in X$
+\begin{equation*}
+\norm{\ip{x, \T S}} = \norm{\ip{Tx, S}} \leq \norm{S} \norm{Tx} \leq \norm{S} \norm{T} \norm{x}
+\end{equation*}
+Hence $\norm{\T S} \leq \norm{S} \norm{T}$
+Since T is \Linear, and since S was arbitrary, 
+by part  12 of \ref{prop:BLO}, $\T \in BL\pa{ BL(Y,Z), BL(X,Z)}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:Isometry}]
+For any $S \in BL(Y,Z)$, 
+$\T S = S \circ T$, so
+$\norm{\T S} \leq \norm{S} \norm{T}$. 
+Hence $\norm{\T} \leq \norm{T}$. 
+Now let $x_0 \in X$. 
+Then, by part 4 of 
+\ref{thm:hahnbanach}, 
+there exists $S \in BL(Y,Z)$ with 
+$\norm{S}=1$
+and $\norm{STx_0} = \norm{Tx_0}$. 
+Hence, 
+\begin{align*}
+\norm{T x_0} & = \norm{S Tx_0} \\
+& = \norm{(S \circ T) x_0} \\
+& = \norm{(\T S) x_0} \\
+& \leq \norm{\T} \norm{S} \norm{x_0}\\
+& = \norm{\T} \norm{x_0}
+\end{align*}
+Since $x_0 \in X$ is arbitrary, $\norm{T} \leq \norm{\T}$. 
+Since the inequality goes both ways, $\norm{T}=\norm{\T}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:DenseRange}]
+Let $\Gamma=\inf\limits_{\norm{x}=1} \norm{Tx}$, 
+and let $S \in BL(Y,Z)$ with $\norm{S} = 1$. 
+Then, 
+\begin{equation*}
+\{x | \norm{Tx} \leq \Gamma\} \subset B_X(0;1)
+\end{equation*}
+so 
+\begin{equation*}
+\sup\limits_{\norm{x}\leq 1} \abs{\ip{Tx, S}} \geq \sup\limits_{\norm{Tx} \leq \Gamma}\abs{\ip{Tx, S}}
+\end{equation*}
+Also, since $Range(T)$ is dense in $Y$ and $S$ is \ContinuousFunction,
+\begin{equation*}
+\sup\limits_{\norm{Tx} \leq \Gamma} \abs{\ip{Tx, S}} = \sup\limits_{\norm{y} \leq \Gamma} \abs{\ip{y, S}}
+\end{equation*}
+From these two we arrive at the inequality
+\begin{align*}
+\norm{\T S} & = \sup\limits_{\norm{x}  \leq 1} \abs{\ip{x, \T S}}\\
+& = \sup\limits_{\norm{x} \leq 1} \abs{\ip{Tx, S}}\\
+& \geq \sup\limits_{\norm{Tx} \leq \Gamma} \abs{\ip{Tx, S}}\\
+& = \sup\limits_{\norm{y} \leq \Gamma} \abs{\ip{y, S}}\\
+& = \Gamma\\
+& \inf\limits_{\norm{x} = 1} \norm{Tx}
+\end{align*}
+Since $S \in \partial B_{BL(Y,Z)}(0;1)$ was arbitrary, we conclude
+$\inf\limits_{\norm{S} = 1} \norm{\T S} \geq \inf\limits_{\norm{x} = 1} \norm{Tx}$
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:NotDenseRange}]
+Suppose $Range(T)$ is not dense in $Y$. 
+Then there exists $y_0 \in Y \setminus \overline{Range(T)}$. 
+By 
+\ref{thm:HahnBanach:NullspaceOperator}, 
+there exists $S_0 \in BL(Y,Z)$ with $S_0\pa{\overline{Range(T)}} = 0$ and 
+$\norm{S_0(y_0)} = 1$. 
+Set $S= \frac{S_0}{\norm{S_0}}$. 
+Then $\norm{S} = 1$. 
+Furthermore, 
+\begin{align*}
+\norm{\T S} & = \sup\limits_{\norm{x} \leq 1} \abs{\ip{x, \T S}}\\
+& \leq \sup\limits_{y \in Range(T)} \abs{\ip{y, S}}\\
+& = 0
+\end{align*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Adjoint:Surjective}]
+Let $\T$ be \Surjective and let $x_0 \in X$ with $Tx_0 = 0$. 
+Let $\tilde{S} \in BL(X,Z)$. 
+Then there exists $S \in BL(Y,Z)$ with $\tilde{S} = \T S$. 
+For this $S$, 
+\begin{equation*}
+\ip{x, \tilde{S}} = \ip{Tx, S} = 0
+\end{equation*}
+Hence $\tilde{S}x = 0$ for every \Linear \ContinuousFunction $\tilde{S}$. 
+This implies $x=0$, so $T$ is \Injective. 
+Now suppose 
+\end{proof}
 \end{prop}

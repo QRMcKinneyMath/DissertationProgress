@@ -1,0 +1,150 @@
+\begin{prop}[Smooth Characterization]
+\label{prop:Smooth}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $x_0 \in X \setminus \overline{0}$.
+Let $J$ be the \NormalizedDualityMap of $X$.
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Smooth}~\roman*}]
+\item 
+\label{prop:Smooth:Smooth}
+X is \SmoothSpace at $x_0$.
+\item 
+\label{prop:Smooth:JContinuous}
+Every selection of $J$ is \Norm to $\weakstar$ \ContinuousFunction at $x_0$.
+\item 
+\label{prop:Smooth:JContinuous2}
+There exists a selection of $J$ which is \Norm to $\weakstar$ \ContinuousFunction at $x_0$.
+\item
+\label{prop:Smooth:GateauxNorm}
+$\norm{\cdot}$ is \GateauxDifferentiable at $x_0$.
+\item 
+\label{prop:Smooth:RightUniqueOrthogonal}
+For every $y \in X$, there is a unique $\alpha \in \C$ such that $x_0 \perp (\alpha x_0 + y)$. 
+\item 
+\label{prop:Smooth:OrthogonalSubspace}
+For every $y,z \in X$, if $x_0 \perp y$ and $x_0 \perp z$, then  $x_0 \perp y + z$.
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:Smooth:Smooth} implies \ref{prop:Smooth:JContinuous}]
+I argue by contrapositive. 
+Let $T$ be a selection of $J$ and suppose
+$T$ is not \Seminorm to \weakstar \ContinuousAt $x_0$. 
+Then we can find a \Sequence $\{x_n\}_{n \in \N} \subset X$ 
+such that $x_n \to x_0$ but 
+$Tx_n \not \wsto Tx_0$. 
+Thus for some \weakstar \SetOpen 
+$U \subset X^*$ containing $T(x_0)$, for infinitely many 
+$k \in \N$, $Tx_k \not \in U$. 
+Since $x_k \to x_0$, $\{x_k\}_{k \in \N}$ is bounded.
+Hence, $\{Tx_k\}_{k \in \N}$ is bounded. 
+By 
+\ref{thm:BanachAlaoglu}, 
+there is a \weakstar convergent subsequence 
+$\{Tx_{n_k}\}_{k \in \N}$  such that for each $k \in \N$, 
+$Tx_{n_k} \not \in U$. 
+Let $\tilde{T}$ denote the \weakstar limit of 
+$\{Tx_{n_k}\}$. 
+Then 
+\begin{align*}
+\abs{\ip{x_0, \tilde{T}} - \norm{x_0}^2}  & \leq \abs{\ip{x_0, \tilde{T}} -\ip{x_0 , Tx_{n_k}}}+ \abs{\ip{x_0, Tx_{n_k}}- \ip{x_{n_k}, Tx_{n_k}}} + \abs{\norm{x_{n_k}}^2- \norm{x_0}^2}\\
+& \leq \abs{\ip{x_0, \tilde{T}-Tx_{n_k}}}+ \abs{\ip{x_0- x_{n_k}, Tx_{n_k}}} + \abs{\norm{x_{n_k}}^2- \norm{x_0}^2}\\
+& \to 0
+\end{align*}
+Thus $\ip{x_0, \tilde{T}} = \norm{x_0}^2$. 
+Furthermore, $\norm{\tilde{T}} \leq \norm{x_0}$ by 
+\ref{prop:WeakNorm:WeakLiminf}
+and clearly $\norm{x_0} \leq \norm{\tilde{T}}$. 
+Hence $\tilde{T} \in Jx_0$.
+Thus $\{Tx_0, \tilde{T}\} \subset Jx_0$, so $X$ is not 
+\SmoothSpace at $x_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:JContinuous} implies \ref{prop:Smooth:JContinuous2}]
+This claim is obvious. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:JContinuous2} implies \ref{prop:Smooth:GateauxNorm}]
+Let $T$ be a selection of $J$.
+By
+\ref{prop:normalizeddualityinequality}, for each $t>0$,
+\begin{equation*}
+\frac{\ip{y, Tx}}{\norm{x}} \leq \frac{\norm{x+ty}-\norm{x}}{t} \leq \frac{\ip{y, T\pa{x+ty}}}{\norm{x+ty}}
+\end{equation*}
+Since $T$ is \Seminorm to \weakstar continuous, if we take $t \searrow 0$, then 
+if $S(x)$ denote the \Seminorm of $X$, we have 
+we have 
+\begin{equation*}
+S_+'(x_0,y) = \frac{\ip{y,Tx}}{\norm{x}}
+\end{equation*}
+Similarly, 
+\begin{equation*}
+-S_-'(x_0,y)=-S_+'(x_0,-y) = - \frac{\ip{-y, Tx}}{\norm{x}} = \frac{\ip{y,Tx}}{\norm{x}} = S_+'(x_0,y)
+\end{equation*}
+Hence, by 
+\ref{prop:ConvexGateauxDifferentiable}, $\norm{\cdot}$ is \GateauxDifferentiable 
+at $x_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:GateauxNorm} implies \ref{prop:Smooth:Smooth}]
+Let $\norm{\cdot}$ be \GateauxDifferentiable at $x_0$. 
+Let $j \in J(x)$. 
+Then by 
+\ref{prop:normalizeddualityinequality}, 
+for $t > 0$ we have 
+\begin{equation*}
+\frac{\ip{y,j}}{\norm{x_0}} \leq \frac{\norm{x_0+ty} - \norm{x_0}}{t}
+\end{equation*}
+and for $t<0$ we have 
+\begin{equation*}
+\frac{\norm{x_0+ty}-\norm{x_0)}}{t} \leq  \frac{\ip{y,j}}{\norm{x}}
+\end{equation*}
+Hence if $S$ is the norm, then 
+\begin{equation*}
+\ip{y, j} = \norm{x_0} S_+'(x_0,y)
+\end{equation*}
+This is clearly true for all $j \in J(x)$, so $J(x)$ contains but a single point.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:Smooth} implies \ref{prop:Smooth:RightUniqueOrthogonal}]
+Let $X$ be \SmoothSpace.
+Existence of such an $\alpha$ is a direct consequence of 
+\ref{prop:Orthogonal:Projection}.
+I prove uniqueness. 
+Let $\alpha \in \F$ such that $x_0 \perp \alpha x_0 + y_0$.
+Then by \ref{prop:Orthogonal:Duality}, if $j \in J(x_0)$, we have 
+\begin{equation*}
+0 = \ip{\alpha x_0 + y_0, j} = \alpha \norm{x_0}^2 - \ip{y_0, j}
+\end{equation*}
+so that we must have $\alpha = \frac{\ip{y_0,j}}{\norm{x_0}^2}$. 
+Thus $\alpha$ is unique. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:RightUniqueOrthogonal} implies \ref{prop:Smooth:Smooth}]
+Let \Orthogonality in $X$ be right-unique.
+Let $y_0 \in X$ and
+let $j_1,j_2 \in J(x_0)$.
+Then
+\begin{equation*}
+0 = \ip{\frac{- \ip{y,j_1}}{\norm{x_0}^2}x_0 + y_0, j_1}  \tab[1cm] 0 = \ip{\frac{- \ip{y,j_2}}{\norm{x_0}^2}x_0 + y_0, j_2} 
+\end{equation*}
+so that by \ref{prop:Orthogonal:Kernel}, 
+\begin{equation*}
+x_0 \perp \frac{-\ip{y_0,j_1}}{\norm{x_0}^2}x_0+y_0 \tab[1cm] x_0 \perp \frac{-\ip{y_0,j_2}}{\norm{x_0}^2} x_0 + y_0
+\end{equation*}
+By the uniqueness of right orthogonality, we conclude that 
+$\ip{y_0, j_1} = \ip{y_0, j_2}$, 
+so that $j_1=j_2$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:Smooth} implies \ref{prop:Smooth:OrthogonalSubspace}]
+Let $X$ be \SmoothSpace.
+Let $x_0 \perp y_0$ and $x_0 \perp z_0$. 
+Then by 
+\ref{prop:Orthogonal:Duality}, 
+$\ip{y_0, J(x_0)} = \ip{z_0, J(x_0)} = 0$. 
+Hence $\ip{z_0+y_0, J(x_0)}= 0$, so by 
+\ref{prop:Orthogonal:Kernel}, $x_0 \perp y_0 + z_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Smooth:OrthogonalSubspace} implies \ref{prop:Smooth:RightUniqueOrthogonal}]
+Let $y_0 \in X$. 
+Let $\alpha, \beta \in \F$ such that 
+$x_0 \perp \alpha x_0 + y_0$ and $x_0 \perp \beta x_0 + y_0$. 
+Then $x_0 \perp - (alpha x_0 + y_0)$, so by additivity, 
+$x_0 \perp \pa{ \alpha x_0 + y_0 -\pa{\beta x_0 + y_0}} = \pa{\alpha - \beta} x_0$.
+This clearly implies $\alpha = \beta$, so we are done.
+\end{proof}
+\end{prop} 

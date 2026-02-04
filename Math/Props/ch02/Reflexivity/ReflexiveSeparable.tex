@@ -1,0 +1,110 @@
+\begin{lem}[Reflexive Separable]
+\label{lem:ReflexiveSeparable}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{lem:ReflexiveSeparable}~\roman*}]
+\item 
+\label{lem:James:Reflexive}
+X is \Reflexive.
+\item 
+\label{lem:James:WeaklyCompact}
+The \ClosedUnitBall of $X$ is \weakly \SetCompact. 
+\item 
+\label{lem:James:ReflexiveSubspace}
+Each \SetClosed \TopologySeparable subspace of $X$ is \Reflexive. 
+%\item 
+%\label{lem:James:FiniteIntersectionProperty}
+%All collections of \SetClosed, bounded, \ConvexSet sets in $X$ possessing the 
+%\FiniteIntersectionProperty have nonempty intersections.
+\item 
+\label{lem:James:WeaklySequentiallyCompact}
+The \ClosedUnitBall of $X$ is \weakly sequentially \SetCompact.
+\end{enumerate} 
+\begin{proof}[Proof of \ref{lem:James:Reflexive} implies \ref{lem:James:WeaklyCompact}]
+Let $X$ be \Reflexive. 
+By \ref{thm:eberleinsmulian} it is sufficient to show that any sequence $\{x_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ has a \weak cluster point $x \in \overline{B_X(0;1)}$. 
+Since $\overline{B_{X^{**}}(0;1)}$ is $\weakstar$ \SetCompact, 
+$\{c(x_i)\}_{i \in \N}$ has a subsequence $\{c(x_{n_i})\}_{i \in \N}$ such that $c(x_{n_i}) \overset{w^*}{\to} \tilde{x} \in \overline{B_{X^{**}}(0;1)}$. 
+Since $X$ is \Reflexive, for some $x \in \overline{B_X(0;1)}$, $c(x)= \tilde{x}$. 
+Let $x^* \in X^*$. Then,
+\begin{equation*}
+\lim\limits_{i \to \infty} \abs{\ip{x_{n_i}-x,x^*}} =\lim\limits_{i \to \infty} \abs{\ip{x^*,c(x_{n_i})-\tilde{x}}} =0
+\end{equation*}
+Hence, $x_{n_i} \overset{w}{\to} x$, completing the proof. 
+\end{proof}
+\begin{proof}[Proof of \ref{lem:James:WeaklyCompact} implies \ref{lem:James:Reflexive}]
+Suppose the \ClosedUnitBall of $X$ is \weakly \SetCompact, 
+and let $x^{**} \in \overline{B_{X^{**}}(0;1)}$. 
+By \ref{thm:GoldstinesTheorem}, 
+there is a sequence $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ 
+such that $c(x_n) \overset{w^*}{\to}  x^{**}$. 
+By assumption, there is a subsequence $\{x_{n_k}\}_{k \in \N}$ 
+such that $x_{n_k} \overset{w}{\to} x \in \overline{B_X(0;1)}$. 
+This implies $c(x_{n_k}) \overset{w^*}{\to} c(x)$, 
+and so since the $\weakstar$ \Topology is \Hausdorff,  $x^{**}=c(x) \in c\pa{\overline{B_X(0;1)}}$. 
+\end{proof}
+\begin{proof}[Proof of \ref{lem:James:WeaklyCompact} $\implies$ \ref{lem:James:ReflexiveSubspace}]
+Let $X$ be \Reflexive.
+Let $S \subset X$ be a \SetClosed \TopologySeparable \VectorSubspace. 
+Then $S$ is \weakly \SetClosed.
+Let $\{x_i\}_{i \in \N} \subset S \cap \overline{B_X(0;1)}$. 
+By  \ref{thm:eberleinsmulian}, $\overline{B_X(0;1)}$ is
+\weakly sequentially \SetCompact.
+Hence, there exists $x_0 \in S \cap \overline{B_X(0;1)}$ and 
+a subsequence $\{x_{n_k}\}_{k \in \mathbb{N}}$ such that 
+$x_0 \in  \lim\limits_{k \to \infty} x_{n_k}$, 
+where convergence is with respect to the \weak \Topology on $X$.
+By the Hahn-Banach extension theorem, 
+the\weak \Topology on $S$ is \TopologyCoarser than the 
+\SubspaceTopology on $S$ induced by the \weak \Topology on $X$.
+Hence $x_{n_k} \to x_0$ in the \weak \Topology on $S$.
+Thus $S \cap \overline{B_X(0;1)}$ is \weakly sequentially 
+\SetCompact with respect to $S^*$. 
+By \ref{thm:eberleinsmulian} and 
+$\ref{lem:James:WeaklyCompact} \implies \ref{lem:James:Reflexive}$, this direction is complete.
+\end{proof} 
+\begin{proof}[Proof of \ref{lem:James:ReflexiveSubspace} $\implies$ \ref{lem:James:WeaklyCompact}]
+Let $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$. 
+Then since $S:=\overline{span\{x_i\}_{i \in \N}}$ is a \SetClosed \TopologySeparable \VectorSubspace, 
+$\{x_n\}_{n \in \N}$ has an $S-\weakly$ convergent subsequence, $x_{n_k} \overset{S-w}{\to} x \in S$.  
+If $x^* \in X^*$, then $x^*|_{S} \in S^*$, so that 
+\begin{equation*}
+\abs{\ip{x-x_{n_k},x^*}} = \abs{\ip{x-x_{n_k}, x^*|_{S}}} \to 0
+\end{equation*}
+Hence $x_{n_k} \overset{w}{\to} x$.
+Since $\{x_i\}_{i \in \N} \subset S \cap \overline{B_X(0;1)}$ was arbitrary, 
+$\overline{B_X(0;1)}$ is \weakly sequentially \SetCompact.
+An application of \ref{thm:eberleinsmulian} finishes the proof. 
+\end{proof} 
+%\begin{proof}[Proof of \ref{lem:James:WeaklyCompact} $\implies$ \ref{lem:James:FiniteIntersectionProperty}] 
+%Let $\{X_\alpha\}_{\alpha \in A}$ be a collection of 
+%\Norm bounded
+%\ConvexSet
+%\SetClosed 
+%sets
+%possessing the 
+%\FiniteIntersectionProperty.
+%Then there exists $\gamma > 0$ and a $\beta \in A$ such that 
+%$\{X_\beta \cap X_\alpha\}_{\alpha \in A}$ is 
+%a collection of 
+%\ConvexSet 
+%\SetClosed
+%sets each contained in $\overline{B_X(0;\gamma)}$. 
+%Since each $X_{\beta} \cap X_{\alpha}$ is 
+%\ConvexSet and \SetClosed, each is \weakly \SetClosed. 
+%Since each is a \weakly \SetClosed subset of $\overline{B_X(0;\gamma)}$, 
+%which is \weakly \SetCompact by assumption, 
+%an application of 
+%$\ref{prop:Compact:FIP} \iff \ref{prop:CompactFilter:Compact}$
+%implies that 
+%\begin{equation*}
+%\bigcap\limits_{\alpha \in A} X_\alpha = \bigcap\limits_{\alpha \in A} \pa{X_\alpha \cap X_\beta} \neq \emptyset
+%\end{equation*}
+%\end{proof}
+%\begin{proof}[Proof of \ref{lem:James:FiniteIntersectionProperty} $\implies$ \ref{lem:James:WeaklyCompact}] 
+%\end{proof} 
+\begin{proof}[Proof of \ref{lem:James:WeaklyCompact} $\iff$ \ref{lem:James:WeaklySequentiallyCompact}]
+This result is a direct consequence of \ref{thm:eberleinsmulian}.
+\end{proof} 
+\end{lem} 

@@ -1,0 +1,18 @@
+\begin{prop}[\StrictlyConvexFunction finite]
+\label{prop:StrictlyConvexFinite}
+\rm
+Let $X$ be a \VectorSpace.
+Let $T:X \to (-\infty, \infty]$ be \StrictlyConvexFunction and \ProperFunction. 
+Then $D(T) = X$. That is, $Range(T) \subset \mathbb{R}$. 
+\begin{proof}
+We utilize contrapositive. 
+Let $T$ be \ConvexFunction and 
+let $x_0 \in X$ such that $T(x_0) = \infty$.
+Then 
+\begin{equation*}
+\infty = T(x) \leq \frac{T(0)+T(2x)}{2} \leq \infty
+\end{equation*}
+That is, $f(x) = \frac{f(0)+f(2x)}{2}$.
+Hence $f$ is not \StrictlyConvexFunction.
+\end{proof} 
+\end{prop} 

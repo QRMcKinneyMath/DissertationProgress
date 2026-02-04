@@ -1,0 +1,152 @@
+\begin{prop}[Uniformly Smooth]
+\label{prop:UniformlySmooth}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$.
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Smooth}~\roman*}]
+\item 
+\label{prop:UniformlySmooth:UniformlySmooth}
+$X$ is \UniformlySmoothSpace.
+\item 
+\label{prop:UniformlySmooth:Continuous}
+$J$ is \Seminorm to \Norm uniformly \ContinuousFunction on $\partial B_X(0;1)$.
+\item 
+\label{prop:UniformlySmooth:Frechet}
+$\norm{\cdot}$ is uniformly \FrechetDifferentiable on $\partial B_X(0;1)$.
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:UniformlySmooth:UniformlySmooth} implies \ref{prop:UniformlySmooth:Frechet}]
+Let $X$ be \UniformlySmoothSpace at $x_0$. 
+By 
+\ref{4.6.6.BLAH}, $X$ $\norm{\cdot}$ is \GateauxDifferentiable on $X$.
+Let $Sx = \norm{x}$ for $x \in X$. 
+Since $S$ is \ConvexFunction, 
+for each $y \in X$, 
+by \ref{4.2.6}, 
+\begin{equation*}
+\frac{S(x)-S(x_0-ty_0)}{t} \leq \ip{y, S'(x_0)} \leq \frac{S(x_0+ty_0)-S(x_0)}{t}
+\end{equation*}
+Hence, if $\norm{x} = \norm{y} = 1$, 
+\begin{equation*}
+0 \leq \frac{S(x_0+ty_0)-S(x)}{t} - \ip{y, S'(x_0)} \leq \frac{S(x+ty)+S(x-ty)-2S(x)}{t} \leq \frac{2}{t} \rho(t)
+\end{equation*}
+Let $\epsilon > 0$. 
+Since $X$ is \UniformlySmoothSpace, there exists a $\delta > 0$ such that 
+if $t \in (0,\delta)$, then $\frac{\rho(t)}{t} < \frac{\epsilon}{2}$. 
+Let $t_0 \in (0,\delta)$. 
+Then, 
+\begin{equation*}
+\ip{y, S'(x)} \leq \frac{S(x+t_0y)-S(x)}{t_0} \leq \frac{2}{t_0} \rho(t_0)+ \ip{y, S'(x)}  < \ip{y, S'(x)} + \epsilon
+\end{equation*}
+Since $x,y \in \partial B_X(0;1)$ are arbitrary, if $s <0$ with $\abs{s} < \delta$, then $-s > 0$, so 
+\begin{equation*}
+\ip{-y, S'(x)} \leq \frac{S(x-s(-y)-S(x)}{t_0} \leq \frac{2}{-t} \rho(-s) + \ip{-y, S'(x)} \leq \epsilon + \ip{-y, S'(x)}
+\end{equation*}
+So that 
+\begin{equation*}
+\ip{y, s'(x)} - \epsilon \leq \frac{S(x+sy)-S(x)}{s} \leq \ip{y, S'(x)}
+\end{equation*}
+Thus, if $t \in (-\delta, \delta)$ and if $x,y \in \partial B_X(0;1)$, we have 
+\begin{equation*}
+\frac{S(x+ty)-S(x)}{t} \in B(0;\epsilon) + \ip{y, S'(x)}
+\end{equation*}
+Thus $S$ is uniformly \FrechetDifferentiable on $\partial {B_X(0;1)}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformlySmooth:Frechet} implies \ref{prop:UniformlySmooth:UniformlySmooth}]
+Let $S(x) = \norm{x}$ for $x \in X$. 
+Suppose $S$ is uniformly \FrechetDifferentiable on $\partial B_X(0;1)$.
+By 
+\ref{4.2.6}, for each $y \in X$, for each $x \in \partial B_X(0;1)$, and for each $t>0$, we have 
+\begin{equation*}
+\frac{S(x)-S(x-ty)}{t} \leq \ip{y, S'(x)} \leq \frac{S(x+ty)-S(x)}{t}
+\end{equation*}
+If $\norm{x_0}=\norm{y_0} = 1$, we have 
+\begin{align*}
+0 & \leq \frac{\norm{x_0+ty_0} + \norm{x_0-ty_0} - 2 }{t} \\
+& = \pa{ \frac{\norm{x_0+ty_0}-\norm{x_0}}{t} - \ip{y_0, S'(x_0)}} + \pa{\frac{\norm{x_0-ty_0}-\norm{x_0}}{t} + \ip{y_0,S'(x_0)}}\\
+& = \pa{\frac{\norm{x_0+ty_0}-\norm{x_0}}{t}-\ip{y_0,S'(x_0)}} + \pa{\frac{\norm{x_0+t(-y_0)}-\norm{x_0}}{t}-\ip{-y_0,S'(x_0)}}\\
+& \leq 2\sup\limits_{x,y \in \partial B_X(0;1)} \pa{\frac{\norm{x+ty}-\norm{x}}{t} - \ip{y, S'(x)}}
+\end{align*}
+Since $x_0,y_0 \in \partial B_X(0;1)$ were arbitrary, we conclude 
+\begin{equation*}
+0 \leq \frac{\rho(t)}{t} \leq 2 \sup\limits_{x,y \in \partial B_X(0;1)} \pa{ \frac{\norm{x+ty}-\norm{x}}{t}-\ip{y,S'(x)}}
+\end{equation*}
+Since $S$ is uniformly \FrechetDifferentiable on $\partial B_X(0;1)$, we conclude 
+\begin{equation*}
+0 \leq \lim\limits_{t \to 0} \frac{\rho(t)}{t} \leq 2\lim\limits_{t \to 0}  \sup\limits_{x,y \in \partial B_X(0;1)} \pa{ \frac{\norm{x+ty}-\norm{x}}{t}-\ip{y,S'(x)}} = 0
+\end{equation*}
+Hence $X$ is \UniformlySmoothSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformlySmooth:Continuous} implies \ref{prop:UniformlySmooth:Frechet}]
+Let $J$ be uniformly \ContinuousFunction on $\partial B_X(0;1)$.
+Then $J$ is single valued by \ref{}.
+If $x \in \partial{B_X(0;1)}$, $y \in X$, and $\norm{x+y} \neq 0$ then
+by \ref{4.3.6}, 
+\begin{equation*}
+\ip{y, Jx} \leq \norm{x_0+y}-\norm{x} \leq \frac{\ip{y, J(x+y)}}{\norm{x+y}}
+\end{equation*}
+Hence, 
+\begin{align*}
+0 & \leq \norm{x+y} - \norm{x} - \ip{y, Jx}\\
+& \leq \frac{\ip{y, J(x+y)}}{\norm{x+y}} - \ip{y, Jx}\\
+& = \frac{1}{\norm{x+y}} \pa{  \ip{y, J(x+y)-J(x)}} + \ip{y, Jx} \pa{ 1- \frac{1}{\norm{x+y}}}\\
+& \leq \frac{\norm{y} \norm{J(x+y)-Jx}}{\norm{x+y}} + \norm{y} \norm{x} \pa{1-\frac{1}{\norm{x-y}}}
+\end{align*}
+Thus, if $y \in \partial B_X(0;1)$ and $0<t<1$ then $\norm{ty} = t$, so 
+\begin{align*}
+0 &\leq \frac{\norm{x+ty}-\norm{x}}{t}-\ip{y, Jx} \\
+& \leq \frac{\norm{J(x+ty)-J(x)}}{\norm{x+ty}} + \norm{x} \pa{ 1- \frac{1}{\norm{x-ty}}}\\
+\end{align*}
+It is clear that $1-\frac{1}{\norm{x-ty}} \to 0$ as $t \to 0$ uniformly for $x,y \in \partial B_X(0;1)$. 
+The uniform continuity of $J$ on $\overline{B_X(0;1)}$ also implies that 
+$\frac{\norm{J(x+ty)-J(x)}}{\norm{x+ty}} \to 0$ as $t \to 0$ uniformly for $x \in \partial B_X(0;1)$ and 
+$y \in \overline{B_X(0;1)}$.
+Hence, 
+\begin{equation*}
+0 =\lim\limits_{t \searrow 0} \frac{\norm{x+ty}-\norm{x}}{t} - \ip{y,Jx} 
+\end{equation*}
+where the limit is uniform for $x \in \partial B_X(0;1)$ and $y \in \overline{B_X(0;1)}$.
+The uniform convergence in the case $t<0$ is obtained through a similar argument, and thus 
+$\norm{\cdot}$ is uniformly \FrechetDifferentiable on $\partial{B_X(0;1)}$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformlySmooth:UniformlySmooth} implies \ref{prop:UniformlySmooth:Continuous}]
+Suppose 
+Let $x,y \in \partial B_X(0;1)$. 
+Then, 
+\begin{align*}
+\ip{x+y, Jx+Jy} & = 2+ \ip{x,Jy}+\ip{y,Jx}\\
+& = 4 +\ip{x-y, Jy} + \ip{y-x, Jx} \\
+& \geq 4 - 2 \norm{x-y}\\
+& = 2\pa{2-\norm{x-y}}\\
+& \geq \norm{x+y} \pa{2-\norm{x-y}}
+\end{align*}
+Hence, $\norm{Jx+Jy} \geq 2-\norm{x-y}$. 
+Let $\epsilon > 0$. 
+Then there exists $\epsilon > \delta > 0$ such that $t \in (0,\delta)$ implies 
+\begin{equation*}
+\frac{\rho(t)}{t} < \frac{\epsilon}{4}
+\end{equation*}
+Now suppose $x,y \in \partial B_X(0;1)$ such that 
+$\norm{Jx-Jy} \geq \epsilon$.
+Then
+there exists $z \in \partial B_X(0;1)$ such that $\ip{z, Jx-Jy} \geq \frac{\epsilon}{2}$. 
+This implies
+\begin{align*}
+2- \norm{x-y} & \leq \norm{Jx+Jy} \\
+& = \sup\limits_{x_0 \in \partial B_X(0;1)} \pa{\ip{x_0, Jx+Jy}}\\
+& = \sup\limits_{x_0 \in \partial B_X(0;1)} \pa{\ip{x_0+tz, Jx}+ \ip{x_0-tz, Jy}- t\ip{z, Jx-Jy}}\\
+& < \sup\limits_{x_0 \in \partial B_X(0;1)} \pa{ \ip{x_0+tz, Jx} + \ip{x_0-tz, Jy} - \frac{t\epsilon}{2}}\\
+& \leq \sup\limits_{x_0 \in \partial B_X(0;1)} \pa{\norm{x_0+tz}+ \norm{x_0-tz} - \frac{t \epsilon}{2}}\\
+& \leq \sup\limits_{x_0 \in \partial B_X(0;1)} \pa{\norm{x_0+tz}+ \norm{x_0-tz}} - \frac{t \epsilon}{2}\\
+& = 2+\rho(t)-\frac{t \epsilon}{2}\\
+& < 2+ \frac{t \epsilon}{4} - \frac{t \epsilon}{2}\\
+& = 2-\frac{t \epsilon}{4}
+\end{align*}
+Thus $\frac{t \epsilon}{4} \leq \norm{x-y}$.
+In particular, $\frac{\delta \epsilon}{8} \leq \norm{x-y}$. 
+Taking the contrapositive of the above inequality, we can then conclude that 
+$\norm{x-y} < \frac{\delta \epsilon}{8} $ implies $\norm{Jx-Jy} < \epsilon$, so 
+long as $x,y \in \partial B_X(0;1)$.
+Thus $J$, when restricted to $\partial B_X(0;1)$, is uniformly \ContinuousFunction. 
+\end{proof}
+\end{prop} 

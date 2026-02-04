@@ -1,0 +1,40 @@
+\begin{thm}[Banach Steinhauss]
+\label{thm:BanachSteinhauss}
+\rm
+Let $X$ be a \Complete \SeminormedSpace. 
+Let $Y$ be a \SeminormedSpace. 
+Let $\{T_\alpha\}_{\alpha \in A} \subset BL(X,Y)$. 
+Suppose that for each $x \in X$, 
+\begin{equation*}
+\sup\limits_{\alpha \in A} \norm{T_\alpha x} < \infty
+\end{equation*}
+Then 
+\begin{equation*}
+\sup\limits_{\alpha \in A} \norm{T_\alpha} < \infty
+\end{equation*}
+\begin{proof}
+For each $n \in \mathbb{N}$, let 
+\begin{equation*}
+G_n = \braces{x \in X :\sup\limits_{\alpha \in A} \norm{T_\alpha x } \leq n}
+\end{equation*}
+By assumption, $\bigcup\limits_{n \in \mathbb{N}} G_n = X$. 
+Furthermore, since each $T_\alpha$ is \ContinuousFunction, 
+each $G_n$ is \SetClosed. 
+Since $X$ is a 
+\Complete \PseudometricSpace, 
+we can apply
+\ref{cor:BaireCategoryTheorem}
+to conclude that for some $n_0 \in \mathbb{N}$, 
+$\emptyset \neq \InteriorMark{G_{n_0}}$. 
+That is, there exists $\delta > 0$ such that 
+for every $\alpha \in A$ and for every $x \in B_X(0;\delta)$, 
+\begin{equation*}
+\norm{T_\alpha x} \leq n_0
+\end{equation*}
+Since each $T_\alpha$ is linear, for every $x \in \overline{B_X(0;1)}$, 
+\begin{equation*}
+\norm{T_\alpha x} \leq \frac{n_0}{\delta}
+\end{equation*}
+Hence $\norm{T_\alpha} \leq \frac{n_0}{\delta}$ for every $\alpha \in A$. 
+\end{proof}
+\end{thm}

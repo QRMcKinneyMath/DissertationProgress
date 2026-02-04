@@ -1,0 +1,49 @@
+\begin{prop}[Degrees Of Smoothness]
+\label{prop:DegreesOfSmoothnessTwo}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $x_0 \in X$
+The following are true.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:DegreesOfSmoothnessTwo}~\roman*}]
+\item 
+\label{prop:DegreesOfSmoothness:LocalImpliesVeryAtPoint}
+If $X$ is \LocallyUniformlySmoothSpace at $x_0$, then it is \VerySmooth at $x_0$.
+\item 
+\label{prop:DegreesOfSmoothness:VeryImpliesSmoothAtPoint}
+If $X$ is \VerySmooth at $x_0$, then it is \SmoothSpace at $x_0$. 
+\item 
+\label{prop:DegreesOfSmoothness:LocalImpliesVery}
+If $X$ is \LocallyUniformlySmoothSpace, then it is \VerySmooth.
+\item 
+\label{prop:DegreesOfSmoothness:VeryImpliesSmooth}
+If $X$ is \VerySmooth, then it is \SmoothSpace. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:DegreesOfSmoothness:LocalImpliesVeryAtPoint}]
+Let $X$ be \LocallyUniformlySmoothSpace at $x_0$. 
+Let $J$ denote the \NormalizedDualityMap of $X$.
+By 
+\ref{prop:LocallyUniformlySmoothAt}, 
+$J$ is \Seminorm to \Norm \ContinuousFunction at $x_0$. 
+Since the \Norm \Topology on $X^*$ is \TopologyFiner 
+than the \weak \Topology on $X^*$, 
+$J$ is \Seminorm to \weak \ContinuousFunction at $x_0$. 
+Hence $X$ is by definition, \VerySmooth at $x_0$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfSmoothness:VeryImpliesSmoothAtPoint}]
+Let $X$ be \VerySmooth at $x_0$. 
+Then $J$ is \Seminorm to \weak \ContinuousFunction at $x_0$. 
+Since the \weak \Topology on $x^*$ is \TopologyFiner than the 
+\weakstar \Topology on $X^*$, $J$ is 
+\Seminorm to \weakstar  \ContinuousFunction at $x_0$. 
+By 
+\ref{prop:Smooth}, $X$ is \SmoothSpace at $x_0$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfSmoothness:LocalImpliesVery}]
+This claim is a direct consequence of 
+\ref{prop:DegreesOfSmoothness:LocalImpliesVeryAtPoint}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:DegreesOfSmoothness:VeryImpliesSmooth}]
+This claim is a direct consequence of 
+\ref{prop:DegreesOfSmoothness:VeryImpliesSmoothAtPoint}
+\end{proof}
+\end{prop} 

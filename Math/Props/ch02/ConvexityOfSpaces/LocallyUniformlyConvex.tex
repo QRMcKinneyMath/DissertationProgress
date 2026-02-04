@@ -1,0 +1,51 @@
+\begin{prop}[Locally Uniformly Convex Spaces]
+\label{prop:LocallyUniformlyConvex}
+\rm
+Let $X$ be a \SeminormedSpace. 
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LocallyUniformlyConvex}~\roman*}]
+\item 
+\label{prop:LocallyUniformlyConvex:Convex}
+$X$ is \LocallyUniformlyConvex.
+\item 
+\label{prop:LocallyUniformlyConvex:EpsilonDelta}
+For each $\epsilon > 0$ and for each  $x\in \partial B_X(0;1)$, there is a $\delta > 0$ such that if $y \in \partial B_X(0;1)$ and $\norm{x-y} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+\item 
+\label{prop:LocallyUniformlyConvex:Convergence}
+If $x \in \partial B_X(0;1)$, $\{x_n\}_{n \in \N} \subset \partial B_X(0;1)$, and $\norm{x+x_n} \to 2$, then $x_n \to x$. 
+\end{enumerate} 
+%Cioranescu 2.2.3, 2.2.6, 2.2.4, Cioranescu 2.2.11
+\begin{proof}[Proof of \ref{prop:LocallyUniformlyConvex:Convex} implies \ref{prop:LocallyUniformlyConvex:EpsilonDelta}]
+Let $X$ be 
+\LocallyUniformlyConvex.
+Let $\epsilon \in (0,2)$.
+Let $x_0 \in X$ with $\norm{x_0} = 1$. 
+Then $\tilde{\Delta}(\epsilon, x_0) > 0$. 
+Set $\delta = \tilde{\Delta}(\epsilon, x_0)$.
+Let $y \in \partial B_X(0;1)$ and 
+$\norm{x-y} \geq \epsilon$.
+Then $y \in X \setminus B_X(x;\epsilon)$. 
+Hence, 
+\begin{equation*}
+\tilde{\Delta}(\epsilon, x_0) \leq 1 - \norm{\frac{x+y}{2}}
+\end{equation*}
+Letting $\delta = \tilde{\Delta}(\epsilon, x_0)$ and multiplying 
+by two, we have 
+\begin{equation*}
+\norm{x+y} \leq 2\pa{1-\delta}
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocallyUniformlyConvex:EpsilonDelta} implies \ref{prop:LocallyUniformlyConvex:Convergence}]
+For each $n \in \N$ there exists $\delta_n > 0$ such that 
+if $y \in \partial B_X(0;1)$ then
+$\norm{x+y}  > 2(1-\delta_n)$ implies $\norm{x-y} < \frac{1}{n}$. 
+Thus if $\norm{x+x_n} \to 2$ then we have $\norm{x-x_n} \to 0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocallyUniformlyConvex:Convergence} implies \ref{prop:LocallyUniformlyConvex:Convex}]
+Suppose otherwise. 
+Then we could find $x_0 \in X$, $\epsilon > 0$, and 
+$\{x_i\}_{i \in \N} \subset \pa{X \setminus B_X(x;\epsilon)} \cap \partial B_X(0;1)$
+such that $\norm{\frac{x+x_n}{2}} \to 2$.
+This is clearly a contradiction. 
+\end{proof}
+\end{prop}

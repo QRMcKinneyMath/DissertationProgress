@@ -1,7 +1,7 @@
 \newcommand{\SpaceOfBoundedLinearOperators}[0]{\textbf{\hyperref[def:BLO]{Space of Bounded Linear Operators}}\xspace}
 \newcommand{\OperatorSeminorm}[0]{\textbf{\hyperref[def:BLO]{Operator Seminorm}}\xspace}
 \newcommand{\OperatorNorm}[0]{\textbf{\hyperref[def:BLO]{Operator Norm}}\xspace}
-\begin{df}[Space of Continuous Linear Operators From a Seminormed Space into a Normed Space]
+\begin{df}[Space of Continuous Linear Operators]
 \label{def:BLO} 
 \rm
 Let $(X,\norm{\cdot}_X)$ be a \NonDegenerate \SeminormedSpace.
@@ -18,10 +18,9 @@ We refer to $BL\pa{X,Y}$ as the \SpaceOfBoundedLinearOperators
 from $(X, \norm{\cdot}_X)$ to $(Y, \norm{\cdot}_Y)$ 
 , or when $\norm{\cdot}_X$ and $\norm{\cdot}_Y$ are understood, 
 from X to Y. 
-
 We endow $BL\pa{X,Y}$ with the algebraic operations
-of pointwise scalar multiplication
-and pointwise addition, making $BL\pa{X,Y}$ a vector space. 
+of pointwise \ScalarMultiplication
+and pointwise \VectorAddition, making $BL\pa{X,Y}$ a \VectorSpace. 
 
 We define $\norm{\cdot}:BL(X,Y) \to [0,\infty)$ by defining, 
 for $T \in BL(X,Y)$
@@ -31,7 +30,7 @@ for $T \in BL(X,Y)$
 As will be proven in \ref{prop:BLO}, $\norm{\cdot}$ is a \Seminorm on $BL(X,Y)$, which 
 we refer to as the \OperatorSeminorm on $BL(X,Y)$. induced by the
 \Seminorm $\norm{\cdot}_X$ on X and the \Seminorm $\norm{\cdot}_Y$ on Y. 
-
-In the case that $\norm{\cdot}_{Y}$ is a \Norm, rather than just a \Seminorm, by \ref{prop:BLO}
-, $\norm{\cdot}$ is a \Norm on $BL(X,Y)$, which we instead call the \OperatorNorm. 
+In the case that $\norm{\cdot}_{Y}$ is a \Norm, rather than just a \Seminorm, 
+by \ref{prop:BLO}, 
+$\norm{\cdot}$ is a \Norm on $BL(X,Y)$, which we instead call the \OperatorNorm. 
 \end{df}

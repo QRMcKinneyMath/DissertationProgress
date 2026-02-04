@@ -5,12 +5,14 @@
 \rm
 Let $\scF \in \{\bbR, \bbC\}$. 
 Let $V$ be a \VectorSpace over $\scF$. 
+Let $E$ be a \VectorSubspace of $\scF$. 
 Let $T:V \to (-\infty,\infty]$
 We say that $T$ is \ConvexFunction if for each $x,y \in V$, 
 \begin{equation*}
 T\pa{\frac{x+y}{2}} \leq \frac{T(x)+T(y)}{2}
 \end{equation*}
-We say that $T$ is \StrictlyConvexFunction if for each $x,y \in V$, 
+We say that $T$ is \StrictlyConvexFunction mod $E$ if, for each $x,y \in V$
+such that $x-y \not \in E$, we have the following.
 \begin{equation*}
 T\pa{\frac{x+y}{2}} < \frac{T(x)+T(y)}{2}
 \end{equation*}

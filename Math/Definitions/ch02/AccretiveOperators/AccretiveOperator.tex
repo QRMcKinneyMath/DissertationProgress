@@ -1,15 +1,37 @@
 \newcommand{\Accretive}[0]{\textbf{\hyperref[def:AccretiveOperator]{Accretive}}\xspace}
+\newcommand{\StrictlyAccretive}[0]{\textbf{\hyperref[def:AccretiveOperator]{Strictly Accretive}}\xspace}
+\newcommand{\StronglyAccretive}[0]{\textbf{\hyperref[def:AccretiveOperator]{Strongly Accretive}}\xspace}
 \begin{df}[\Accretive Operator]
 \label{def:AccretiveOperator}
 \rm
 Let $X$ be a \SeminormedSpace. 
 Let $J$ denote the \NormalizedDualityMap of $X$. 
 Let $D \subset X$. 
-Let $A:D \to 2^X$ such that for each $x,y \in D$, 
+Let $A:D \to 2^X$.
+We make the following definitions.
+\begin{enumerate}
+\item 
+If for each $x,y \in D$ with $\norm{x-y} \neq 0$,
 for each $\tilde{x} \in Ax$,  
-and for each $\tilde{y} \in Ay$. 
-There exists $j \in J(x-y)$ such that 
-\begin{equation*}
-\ip{\tilde{x}-\tilde{y}, j} \geq 0
-\end{equation*}
+and for each $\tilde{y} \in Ay$,
+there exists $j \in J(x-y)$ such that 
+$\ip{\tilde{x}-\tilde{y}, j} \geq 0$,
+then we say that $A$ is \Accretive.
+\item 
+If for each $x,y \in D$ with $\norm{x-y} \neq 0$,
+for each $\tilde{x} \in Ax$,  
+and for each $\tilde{y} \in Ay$,
+there exists $j \in J(x-y)$ such that 
+$\ip{\tilde{x}-\tilde{y}, j} > 0$,
+then we say that $A$ is \StrictlyAccretive.
+\item 
+If there exists $c>0$ such that 
+for each $x,y \in D$ with $\norm{x-y} \neq 0$,
+for each $\tilde{x} \in Ax$,  
+and for each $\tilde{y} \in Ay$,
+there exists $j \in J(x-y)$ such that 
+$\ip{\tilde{x}-\tilde{y}, j} \geq c \norm{x-y}^2$,
+then we say that $A$ is \StronglyAccretive.
+\end{enumerate}
+
 \end{df}

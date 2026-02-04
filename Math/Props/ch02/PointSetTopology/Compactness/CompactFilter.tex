@@ -7,8 +7,16 @@ The following are equivalent
 \item
 \label{prop:CompactFilter:Compact}
 $X$ is \SetCompact.
-\item Each \Ultrafilter in $X$ has a \FilterLimit.
+\item 
 \label{prop:CompactFilter:Converge}
+Each \Ultrafilter in $X$ has a \FilterLimit.
+\item
+\label{prop:Compact:FIP}
+For every $\{X_\alpha\}_{\alpha \in A} \subset 2^X$ of
+\SetClosed sets with the \FiniteIntersectionProperty, 
+\begin{equation*}
+\bigcap\limits_{\alpha \in A} X_\alpha \neq \emptyset
+\end{equation*}
 \end{enumerate}
 \begin{proof}[Proof of \ref{prop:CompactFilter:Converge} implies \ref{prop:CompactFilter:Compact}]
 I prove the converse.
@@ -57,5 +65,27 @@ by
 \ref{prop:UltrafilterFacts:BinaryUnion}, 
 for some $i$, $1 \leq i \leq n$, $V_{x_i} \in G$, a contradiction. 
 Hence $G$ has a \FilterLimit. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:CompactFilter:Compact} implies \ref{prop:Compact:FIP}]
+Let $X$ be \SetCompact. 
+Let $\{X_\alpha\}_{\alpha \in A}$ be a collection
+of \SetClosed sets such that
+$\bigcap\limits_{\alpha \in A} X_\alpha = \emptyset$. 
+Then $\{X \setminus X_\alpha\}_{\alpha \in A}$ is an 
+\SetOpen \Cover for $X$. 
+Since $X$ is \SetCompact, it possesses a \Finite \Subcover
+$\{X \setminus X_i\}_{i=1}^n$.
+Since $X = \bigcup\limits_{i=1}^n X \setminus X_i$, $\bigcap\limits_{i=1}^n X_i = \emptyset$.
+Hence $\{X_\alpha\}_{\alpha \in A}$ does not possess the \FiniteIntersectionProperty.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Compact:FIP} implies \ref{prop:CompactFilter:Compact}]
+Let $\{X_\alpha\}_{\alpha \in A}$ be an \SetOpen \Cover for $X$. 
+Then $\bigcap\limits_{\alpha \in A} \pa{X \setminus X_\alpha} = \emptyset$.
+Furthermore, for each $\alpha$, $X \setminus X_\alpha$ is \SetClosed.
+This implies by \ref{prop:Compact:FIP} that $\{X_\alpha\}_{\alpha \in A}$ 
+does not posess the \FiniteIntersectionProperty.
+That is, 
+for some finite $\{\alpha_i\}_{i=1}^n \subset A$, $\bigcap\limits_{i=1}^n X \setminus X_{\alpha_i} = \emptyset$. 
+This implies $\bigcup\limits_{i=1}^n X_{\alpha_i} = X$. 
 \end{proof}
 \end{prop}

@@ -19,10 +19,10 @@ $x_0$ is a global minimum of $T$ if and only if $0 \in \partial T(x_0)$.
 It is unnecessary to assume \Subdifferentiability of $T$ at $x_0$ for this to be true. 
 \item
 \label{prop:Subdifferential:Proper}
-If $T$ is proper, then $x \in D(T)$. 
+If $T$ is \ProperFunction, then $x_0 \in D(T)$. 
 \end{enumerate}
 \begin{proof}[Proof of \ref{prop:Subdifferential:Convex} and \ref{prop:Subdifferential:WeakstarClosed}]
-Let $c:X \to X^{**}$ denote the canonical isomorphism. 
+Let $c:X \to X^{**}$ denote the \CanonicalEmbedding. 
 Then it is clear that 
 \begin{equation*}
 \partial T(x_0) = \bigcap\limits_{y \in X} \pa{C(y-x_0)}^{-1} \pa{(-\infty, T(y)-T(x_0)}

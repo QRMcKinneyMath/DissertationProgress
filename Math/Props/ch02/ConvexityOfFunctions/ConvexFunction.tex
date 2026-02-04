@@ -18,7 +18,7 @@ T\pa{\lambda x + \pa{1-\lambda}y} \leq \lambda T(x) + \pa{1-\lambda}T(y)
 \item
 \label{prop:ConvexFunction:SumConvex}
 For every $\{\lambda_i\}_{i=1}^n \subset (0,1)$ such that $\sum\limits_{i=1}^n \lambda_i = 1$
-and for every $\{x_i\}_{i=1}^n \subset X$ where each $x_i$ is distinct, , 
+and for every $\{x_i\}_{i=1}^n \subset X$ where each $x_i$ is distinct, 
 \begin{equation*}
 T\pa{\sum\limits_{i=1}^n \lambda_i x_i} \leq \sum\limits_{i=1}^n \lambda_i T\pa{x_i}
 \end{equation*}
@@ -30,7 +30,7 @@ For each $x,y,z \in X$ with $x \neq z$ and $y = \lambda z + \pa{1-\lambda} x$ wh
 \end{equation*}
 \item
 \label{prop:ConvexFunction:EpigraphConvex}
-$Epi(T)$ is \ConvexSet
+$Epi(T)$ is \ConvexSet.
 \end{enumerate}
 \begin{proof}[Proof of \ref{prop:ConvexFunction:BinaryConvex} implies  \ref{prop:ConvexFunction:Convex}]
 Let $x,y \in X$. 
@@ -156,6 +156,11 @@ Now let $x_0, x_1 \in X$.
 Then $(x_0, T(x_0)) \in Epi(T)$ and $(x_1, T(x_1)) \in Epi(T)$. 
 Hence, 
 \begin{equation*}
-ff\end{equation*}
+\pa{ \lambda x_0 + (1-\lambda)x_1, \lambda T(x_0)+(1-\lambda) T(x_1)} \in Epi(T)
+\end{equation*}
+Hence, 
+\begin{equation*}
+T\pa{\lambda x_0 + (1-\lambda)x_1} \leq \lambda T(x_0) +(1-\lambda)T(x_1)
+\end{equation*}
 \end{proof}
 \end{prop}

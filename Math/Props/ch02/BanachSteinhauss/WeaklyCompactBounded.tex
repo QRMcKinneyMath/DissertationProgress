@@ -1,0 +1,21 @@
+\begin{prop}[\weakly \SetCompact \Norm bounded]
+\label{prop:WeaklyCompactIsNormBounded}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $A \subset X$ be \weakly \SetCompact.
+Then $A$ is \Norm bounded. 
+\begin{proof}
+Let $c:X \to X^{**}$ denote the \CanonicalEmbedding.
+Let $x^* \in X^*$. 
+Then since $A$ is \weakly \SetCompact, 
+$x^*(A)$ is \SetCompact in $\F$. 
+In particular, $x^*(A)$ is bounded. 
+Thus 
+\begin{equation*}
+\sup\limits_{x \in A} \ip{x^*, c(x)} = \sup\limits_{x \in A} \ip{x, x^*} = \sup x^*(A) < \infty
+\end{equation*}
+By \ref{thm:BanachSteinhauss}, we then conclude
+$\sup\limits_{x \in A} \norm{c(x)} < \infty$. 
+Since $c$ is an \Isometry, $\sup\limits_{x \in A} \norm{x} < \infty$. 
+\end{proof}
+\end{prop}

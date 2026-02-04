@@ -1,0 +1,21 @@
+\begin{prop}[\ConvexFunction \weak]
+\label{prop:WeakContinuity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $T:X \to \overline{\R}$ be \ConvexFunction.
+Then $T$ is \Seminorm \LowerSemicontinuous if and only if 
+$T$ \weak \LowerSemicontinuous.
+\begin{proof}
+By \ref{prop:LowerSemicontinuity}, 
+it is sufficient to show that 
+$Epi(T)$ is \weakly \SetClosed if and only if it is 
+\SetClosed in the \Seminorm \Topology.
+Since $T$ is \ConvexFunction, 
+by 
+\ref{prop:ConvexFunction},
+$Epi(T)$ is \ConvexSet.
+Hence, by
+\ref{prop:ClosedAndConvexIsWeaklyClosed},
+$Epi(T)$ is \weak \SetClosed if and only if it is \SetClosed.
+\end{proof}
+\end{prop}

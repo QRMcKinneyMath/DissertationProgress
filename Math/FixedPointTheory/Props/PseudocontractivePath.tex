@@ -1,0 +1,89 @@
+\begin{rmk}[Introduction]
+\rm
+In this section, we utilize a different technique. 
+If $X$ is a \SeminormedSpace and $T:X \to X$ is \ContinuousFunction, 
+the continuity of $T$ allows us to 
+induce a quotient operator $\tilde{T}:X/\overline{0} \to X/\overline{0}$ in a well defined sense. 
+From this we can directly leverage \FixedPoint theorems for operators defined on normed spaces
+do conclude the existence of a \FixedPoint for $\tilde{T}$ which then 
+implies the existence of a \PseudoFixedPoint for $T$.
+Thus the primary work is to ensure that the induced quotient operator still possesses the requisite properties to apply a given fixed point theorem. 
+After this, we will apply
+\ref{prop:FixedPointApproximation} to guarantee a \FixedPoint in the \GSpace case. 
+\end{rmk}
+\begin{prop}[Weakly Inward Pseudocontractive Path, \cite{morales2000}]
+\label{prop:WeaklyInwardPathSeminorm}
+\rm
+Let $X$ be a \Complete \SeminormedSpace. 
+Let $K \subset X$ be \SetClosed and \ConvexSet. 
+Let $T:K \to X$ be a \ContinuousFunction \Pseudocontraction satisfying the 
+\WeaklyInwardCondition. 
+Let $x_0 \in K$. 
+Then there exists a \ContinuousFunction $\gamma:[0,1) \to K$ such that 
+for each $t \in [0,1]$, 
+\begin{equation}
+\label{eq:WeaklyInwardPath}
+\gamma(t)  \in  \pa{tT \gamma(t)+(1-t)x_0} + \overline{0}
+\end{equation}
+Furthermore, if $\tilde{\gamma}:[0,1) \to K$ satisfies
+\ref{eq:WeaklyInwardPath}, then
+for each $t \in [0,1)$
+$\norm{\gamma(t)-\tilde{\gamma}(t)} = 0$.
+\begin{proof}
+Let $Q:X \to X / \overline{0}$ denote the \QuotientMap. 
+Since $T$ is \ContinuousFunction, there is a unique $\tilde{T}:Q(K) \to X/\overline{0}$ 
+satisfying $\tilde{T} \circ Q = Q \circ T$.
+We have $\tilde{T}[x] = [Tx]$. 
+Since $T$ is \Pseudocontractive, 
+if $x,y \in X$ and $\lambda > 0$, then
+\begin{align*}
+\norm{[x]-[y]} & = \norm{x-y}\\
+& \leq \norm{x-y+\lambda\pa{(I-T)x-(I-T)y}}\\
+& = \norm{[x-y+\lambda\pa{(I-T)x-(I-T)y}]}\\
+& = \norm{[x]-[y]+ \lambda \pa{(I-\tilde{T})[x]-(I-\tilde{T})[y]}}
+\end{align*}
+Hence $\tilde{T}$ is \Pseudocontractive. 
+It is clear that $Q\pa{I_K(x)} = I_{Q(K)}([x])$ for each $x \in K$, so 
+we also see that $\tilde{T}$ satisfies the \WeaklyInwardCondition.
+Thus By Proposition 1 of \cite{morales2000}, 
+there is a unique function $\alpha:[0,1) \to Q(K)$ such that 
+for each $t \in [0,1)$ $\alpha(t) = t \tilde{T} \alpha(t) + (1-t)[x_0]$
+and $\alpha$ is \ContinuousFunction.
+Fix $t_0 \in [0,1)$. 
+Then there exists an $x_{t_0} \in K$ such that 
+$\alpha(t_0) = [x_{t_0}]=Q(x_{t_0})$. 
+Then, 
+\begin{align*}
+Q(x_{t_0}) & = [x_{t_0}] \\
+& = \alpha(t) \\
+& = t_0 \tilde{T}\alpha(t_0) + (1-t_0)[x_0]\\
+& = t_0 \tilde{T} Q x_{t_0} + [(1-t_0)x_0]\\
+& = t_0 Q T x_{t_0} + [(1-t_0)x_0]\\
+& = [t_0Tx_{t_0}+(1-t_0)x_0]
+\end{align*}
+Hence, $x_{t_0} \in t_0Tx_{t_0}+(1-t)_0+\overline{0}$.
+Define $\gamma:[0,1) \to K$ by $\gamma(t) = x_t$. 
+Then, since $\alpha$ is continuous and 
+\begin{equation*}
+\norm{\gamma(t)-\gamma(s)} = \norm{x_t-x_s} = \norm{[x_t]-[x_s]} = \norm{\alpha(t)-\alpha(s)} 
+\end{equation*}
+Hence, we conclude that $\gamma$ is \ContinuousFunction. 
+Also, by construction, $Q \circ \gamma = \alpha$.
+Let $\tilde{\gamma}:[0,1) \to K$ be another 
+function satisfying, for each $t \in [0,1)$, 
+\ref{eq:WeaklyInwardPath}.
+Then, for each $t \in [0,1)$, 
+\begin{align*}
+Q\circ \tilde{\gamma}(t) & = Q\pa{ tT \tilde{\gamma}(t) + (1-t)x_0}\\
+& = tQ\circ T\tilde{\gamma}(t) +(1-t)[x_0]\\
+& = t \tilde{T} \pa{Q \circ \tilde{\gamma}}(t) + (1-t)x_0
+\end{align*}
+The unique nature of $\alpha$ implies $Q \circ \tilde{\gamma} = \alpha$. 
+But since $Q \circ \gamma = \alpha$, we conclude then that, 
+for any $t \in [0,1)$, 
+\begin{equation*}
+\norm{\gamma(t)-\tilde{\gamma}(t) } = \norm{Q \circ \gamma (t) - Q \circ \tilde{\gamma}(t)} = \norm{\alpha(t)-\alpha(t)} = 0
+\end{equation*}
+Hence $\tilde{\gamma}(t) \in \gamma(t) + \overline{0}$.
+\end{proof}
+\end{prop}

@@ -1,0 +1,22 @@
+\begin{prop}[Very Smooth and Weak Local convexity]
+\label{prop:VerySmoothWeakLocalConvexity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+If $X^*$ is \LocallyWeaklyUniformlyConvex then $X$ is \VerySmooth.
+\begin{proof}
+Let $X^*$ be \LocallyWeaklyUniformlyConvex.
+By \ref{prop:DegreesOfConvexity:WeaklyLocalImpliesStrict}, 
+$X^*$ is \StrictlyConvexSpace. 
+By \ref{prop:SmoothVsStrictConvex}, $X$ is \SmoothSpace. 
+Let $x_0 \in \partial B_X(0;1)$. 
+Let $J$ denote
+\NormalizedDualityMap of $X$.
+Let $\{x_i\}_{i \in \N} \subset X$ such that 
+$x_i \to x_0$. 
+Since $X$ is \SmoothSpace, 
+$Jx_i \wsto Jx_0$. 
+By \ref{prop:LocalWeakstarToWeak}, $Jx_i \wto Jx_0$. 
+Hence $J$ is \Seminorm to \weak \ContinuousFunction at $x_0$. 
+Thus $X$ is \VerySmooth.
+\end{proof}
+\end{prop} 

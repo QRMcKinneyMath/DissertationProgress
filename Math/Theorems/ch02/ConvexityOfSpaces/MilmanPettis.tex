@@ -1,0 +1,55 @@
+\begin{thm}[Milman Pettis]
+\label{thm:MilmanPettis}
+\rm
+Let $X$ be a \Complete
+\UniformlyConvex
+\SeminormedSpace. 
+Then $X$ is \Reflexive.
+\begin{proof}
+Let $X$ be a \Complete
+\UniformlyConvex 
+\SeminormedSpace. 
+Let $x_0 \in \partial B_{X^{**}}(0;1)$. 
+Let 
+$c:X \to X^{**}$
+denote the 
+\CanonicalEmbedding.
+By 
+\ref{thm:GoldstinesTheorem}
+$c\pa{B_X(0;1)}$ is 
+\weakstar \TopologyDense in $\overline{B_{X^{**}}(0;1)}$.
+ Thus there exists a 
+ \Net
+ $\{x_\alpha\}_{\alpha \in A} \subset B_X(0;1)$
+ such that 
+ $c\pa{x_\alpha} \wsto x_0$. 
+ By 
+ \ref{prop:WeakNorm:WeakStarLiminf}, 
+ $\limsup\limits_{\alpha} \norm{c\pa{x_\alpha}} = 1 = \norm{x_0} \leq \liminf\limits_{\alpha} \norm{c \pa{x_\alpha}}$, 
+ so $\lim\limits_{\alpha} \norm{x\pa{x_\alpha}} = 1$.
+ Let $\epsilon > 0$. 
+ Since $X$ is \UniformlyConvex, 
+ by 
+\ref{prop:UniformlyConvexSpace}
+ there exists a $\delta > 0$ 
+ such that if $x,y \in \overline{B_X(0;1)}$ and $\norm{x-y} \geq \frac{\epsilon}{2}$
+ then $\norm{x+y} \leq 2(1-\delta)$. 
+By definition of $\norm{x_0}$, there exists $\tilde{x} \in \partial B_{X^*}(0;1)$ 
+such that $\ip{\tilde{x}, x_0} > 1-\delta$. 
+Since $c(x_\alpha) \wsto x_0$, there exists $\gamma > 0$ such that 
+for all $\alpha > \gamma$, $\ip{\tilde{x}, c(x_\alpha)} > 1-\delta$. 
+This then implies, for $\alpha > \gamma$, 
+\begin{equation*}
+1-\delta < \ip{\tilde{x} , \frac{c(x_\alpha) + x_0}{2}} \leq \norm{\frac{c(x_\alpha)+x_0}{2}}
+\end{equation*}
+Hence, $\norm{c(x_\alpha) -x_0} < \frac{\epsilon}{2}$.
+Thus 
+\begin{equation*}
+\norm{x_\alpha - x_\beta} = \norm{c(x_\alpha)-c(x_\beta)}   \leq \epsilon
+\end{equation*}
+Since $X$ is \Complete, there exists $x \in X$ such that 
+$x_\alpha \to x$. 
+Since $c$ is \ContinuousFunction, $c(x) = \lim\limits_{\alpha} c(x_\alpha) = x_0$
+Thus $c$ is \Surjective.
+\end{proof}
+\end{thm} 

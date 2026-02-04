@@ -1,11 +1,13 @@
 \newcommand{\VectorSpace}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Space}}\xspace} 
 \newcommand{\VectorSpaces}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Spaces}}\xspace}
+\newcommand{\ScalarMultiplication}[0]{ \textbf{\hyperref[def:vectorspace]{Scalar Multiplication}}\xspace}
+\newcommand{\VectorAddition}[0]{ \textbf{\hyperref[def:vectorspace]{Vector Addition}}\xspace}
 \begin{df}[\VectorSpace]
 \label{def:vectorspace}
 \rm
 Let $(F,+_F,\cdot_F,0_F,1_F)$ be a \Field. 
 Let $(V,+,0)$ be a \CommutativeFunction \Group. 
-Let $\cdot:\scF \times V \to V$  satisfy, for each 
+Let $\cdot:F \times V \to V$  satisfy, for each 
 $\alpha,\beta \in F$ and for each $x,y \in V$, 
 \begin{enumerate}[label=(\roman*), ref={\ref{def:vectorspace}~\roman*}]
 \item 
@@ -21,7 +23,11 @@ $\alpha \cdot \pa{x+y} = \pa{\alpha \cdot x}+ \pa{\alpha \cdot y}$.
 \label{def:VectorSpace:Identity}
 $1 \cdot x = x$
 \end{enumerate}
-Then we call $V$ a \VectorSpace over $F$. 
+Then we call $V$ a \VectorSpace over $F$,
+we call the operation $\cdot$ 
+\ScalarMultiplication,
+and we call the operation $+$
+\VectorAddition.
 Let $\alpha \in F$. Let $x \in V$. 
 Let $A \subset F$. Let $B \subset V$. 
 Then we define

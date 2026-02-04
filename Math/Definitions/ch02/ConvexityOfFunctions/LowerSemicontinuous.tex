@@ -1,0 +1,24 @@
+\newcommand{\LowerSemicontinuous}[0]{\textbf{\hyperref[def:Semicontinuity]{Lower Semicontinuous}}\xspace}
+\newcommand{\UpperSemicontinuous}[0]{\textbf{\hyperref[def:Semicontinuity]{Upper Semicontinuous}}\xspace}
+\newcommand{\LowerSemicontinuity}[0]{\textbf{\hyperref[def:Semicontinuity]{Lower Semicontinuity}}\xspace}
+\newcommand{\UpperSemicontinuity}[0]{\textbf{\hyperref[def:Semicontinuity]{Upper Semicontinuity}}\xspace}
+\begin{df}[\UpperSemicontinuity, \LowerSemicontinuity]
+\label{def:Semicontinuity}
+\rm
+Let $X$ be a \TopologicalSpace. 
+We define $\overline{\R} = (-\infty, \infty]$.
+Let $T:X \to \overline{\R}$. 
+Let $x_0 \in X$. 
+We say that $T$ is \LowerSemicontinuous at $x_0$ if 
+\begin{equation*}
+\liminf\limits_{x \to x_0} T(x) = T(x_0)
+\end{equation*}
+If $T$ is \LowerSemicontinuous at each point in $X$ 
+then we call $T$ \LowerSemicontinuous.
+We say that $T$ is \UpperSemicontinuous at $x_0$ if 
+\begin{equation*}
+\limsup\limits_{x \to x_0} T(x) = T(x_0)
+\end{equation*}
+If $T$ is \UpperSemicontinuous at each point in $X$ 
+then we call $T$ \UpperSemicontinuous.
+\end{df}

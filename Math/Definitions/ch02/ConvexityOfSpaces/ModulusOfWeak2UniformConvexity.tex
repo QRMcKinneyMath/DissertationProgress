@@ -1,0 +1,72 @@
+
+\newcommand{\ModulusOfWeakTwoUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Modulus Of Weak-2 Uniform Convexity}}\xspace}
+\newcommand{\ModuliOfWeakTwoUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Moduli Of Weak-2 Uniform Convexity}}\xspace}
+\newcommand{\WeaklyTwoUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Weakly2 Uniformly Convex}}\xspace}
+\newcommand{\WeakTwoUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Weak-2 Uniform Convexity}}\xspace}
+\newcommand{\WeakstarTwoUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Weakstar-2 Uniformly Convex}}\xspace}
+\newcommand{\WeakstarTwoUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfWeakTwoConvexity]{Weakstar-2 Uniform Convexity}}\xspace}
+
+\begin{df}[\ModulusOfWeakTwoUniformConvexity]
+\label{def:ModulusOfWeakTwoConvexity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Define $\Gamma^*:[0,2] \times \partial B_{X^*}(0;1) \times \partial B_X(0;1) \to [0,\infty)$ by 
+\begin{equation*}
+\Gamma\pa{t,x^*} = \inf\limits_{x,y \in \partial B_X(0;1)} \pa{ 1-\ip{\frac{x+y}{2}, x^*} : \norm{x-y} \geq t}
+\end{equation*}
+We call $\Gamma$ the \ModulusOfWeakTwoUniformConvexity of $X$. 
+We say that $X$ is \WeaklyTwoUniformlyConvex at $x^*$ if 
+$\Gamma(t,x^*) > 0$ for each $t > 0$. 
+We say that $X$ is \WeaklyTwoUniformlyConvex if $X$ is 
+\WeaklyTwoUniformlyConvex at each $x^* \in \partial B_{X^*}(0;1)$.
+Suppose $Y$ is a \BanachSpace which is the dual space of some \SeminormedSpace $Z$. 
+Let $\Gamma^*$ denote the  \ModulusOfWeakTwoUniformConvexity of $Y$. 
+Let $c:Z \to Y^*$ denote the \CanonicalEmbedding. 
+We say that $Y$ is \WeakstarTwoUniformlyConvex if $\Gamma^*(t,c(x)) > 0$ for each $x \in \partial B_{Z}(0;1)$ and for each $t> 0$.
+\end{df}
+\begin{prop}
+\label{prop:Weak2UniformConvex}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $j \in \partial B_{X^*}(0;1)$. 
+The following are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:Weak2UniformConvex}~\roman*}]
+\item 
+\label{prop:Weak2UniformConvex:Convex}
+$X$ is \WeaklyTwoUniformlyConvex at $j$.
+\item 
+\label{prop:Weak2UniformConvex:Convergence}
+If $\{x_i\}_{i \in \N}$ and $\{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$
+such that $\ip{x_0+y_0,j} \to 2$ then $x_n-y_n \to 0$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:Weak2UniformConvex:Convex} implies \ref{prop:Weak2UniformConvex:Convergence}]
+Let $X$ be \WeaklyTwoUniformlyConvex at $j$.
+Let $\{x_i\}_{i \in \N}$, $\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$\ip{x_0+y_0, j} \to 2$. 
+Let $\epsilon > 0$. 
+By assumption $\Gamma(\epsilon,j) = \delta > 0$. 
+Let $N \in \N$ such that for $n>N$, we have 
+\begin{equation*}
+\ip{x+y, j} > 2-2 \delta
+\end{equation*}
+Let $n>N$. Then, 
+\begin{equation*}
+1-\ip{\frac{x+y}{2}, j} < 1- \pa{1-\delta}  = \delta
+\end{equation*}
+Hence, we conclude $\norm{x_n-y_n} < \epsilon$ 
+by definition of $\Gamma$. 
+Since $\epsilon>0$  was arbitrary, we conclude $x_n-y_n \to 0$. 
+Hence $X$ is \WeaklyTwoUniformlyConvex at $j$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Weak2UniformConvex:Convergence} implies \ref{prop:Weak2UniformConvex:Convex}]
+I prove using contrapositive. 
+Suppose $X$ is not \WeaklyTwoUniformlyConvex at $j$. 
+Then for some $\epsilon > 0$, $\Gamma(\epsilon, j) = \delta > 0$. 
+Thus, for each $n \in \N$, there exists a pair $x_n,y_n \in \partial B_X(0;1)$ such that 
+$\norm{x_n-y_n} \geq \epsilon$. 
+\begin{equation*}
+1-\ip{\frac{x_n+y_n}{2}, j} \leq \frac{1}{n}
+\end{equation*}
+This implies that $x_n-y_n \not \to 0$ and also that $\ip{x_n+y_n, j} \to 2$. 
+\end{proof}
+\end{prop}

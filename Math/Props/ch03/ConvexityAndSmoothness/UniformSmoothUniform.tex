@@ -1,0 +1,129 @@
+\begin{prop}[Uniform Smoothness and Convexity]
+\label{prop:UniformSmoothVsUniformConvex}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ denote the \NormalizedDualityMap of $X$.
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:UniformSmoothVsUniformConvex}~\roman*}]
+\item 
+\label{prop:UniformSmoothVsUniformConvex:ConvexToSmooth}
+X is \UniformlyConvex if and only if $X^*$ is \UniformlySmoothSpace. 
+\item 
+\label{prop:UniformSmoothVsUniformConvex:SmoothToConvex}
+X is \UniformlySmoothSpace if and only if $X^*$ is \UniformlyConvex. 
+\item 
+\label{prop:UniformSmoothVsUniformConvex:DualityMap}
+$X^*$ is \UniformlyConvex if and only if J is single valued and uniformly continuous on $\partial B_X(0;1)$.
+\item 
+\label{prop:UniformSmoothVsUniformConvex:FrechetDifferentiable}
+$X^*$ is \UniformlyConvex if and only if $\norm{\cdot}$ is uniformly \FrechetDifferentiable on $\partial B_X(0;1)$.
+\end{enumerate} 
+%Cioranescu 2.2.13, 2.2.14,2.2.16)
+\begin{proof}[Proof of \ref{prop:UniformSmoothVsUniformConvex:ConvexToSmooth}]
+Suppose $X^*$ is not \UniformlySmoothSpace.
+Let $\rho_{*}$ denote the 
+\ModulusOfSmoothness of $X^*$. 
+Then there exists $\epsilon > 0$
+and a \Sequence $\{t_i\}_{i \in \N} \subset (0,1)$ such that $t_i \searrow 0$ 
+and for each $i \in \N$, $\frac{\rho_*(t_i)}{t_i} \geq \epsilon$. 
+By
+\ref{prop:LDF:4}, 
+for each $i \in \N$, 
+\begin{equation*}
+0 < \epsilon \leq \frac{\rho_*(t_i)}{t_i} = \frac{1}{t_i}\sup\limits_{\gamma \in (0,2]} \pa{\frac{t_i \gamma}{2} - \Delta(\gamma)}
+\end{equation*}
+In particular, for each $i \in \N$, there exists $\gamma_i \in (0,2]$ such that 
+\begin{equation*}
+\frac{\epsilon}{2} \leq \frac{1}{t_i} \pa{\frac{t_i \gamma_i}{2} - \Delta(\gamma_i)}
+\end{equation*}
+Thus
+\begin{equation*}
+0 \leq \Delta(\gamma_i)  \leq \frac{t_i}{2} \pa{ \gamma_i - \epsilon}
+\end{equation*}
+Since $t_i \to 0$ and $\gamma_i$ is bounded, $\Delta(\gamma_i) \to 0$. 
+If $\Delta(\gamma_i) = 0$, then $X$ is not \UniformlyConvex and we are done with this direction.
+Otherwise, $\Delta(\gamma_i) > 0$ for every $i$ and therefore 
+$\gamma_i \geq  \epsilon $ for each $i \in \N$. 
+Since $\Delta$ is nondecreasing, 
+we conclude $\Delta(\epsilon) \leq \Delta(\gamma_i)$ for each $i \in \N$.
+Since $\Delta(\gamma_i) \to 0$, we conclude $\Delta(\epsilon) = 0$. 
+Hence $X$ is not \UniformlyConvex.
+
+Suppose $X$ is not \UniformlyConvex.
+Then there exists $\epsilon > 0$ such that $\Delta(\gamma) = 0$.
+This implies, for every $t$, by \ref{prop:LDF:4} that
+\begin{equation*}
+\rho_*(t) \geq \frac{t \gamma}{2} - \Delta(\gamma) = \frac{t \gamma}{2}
+\end{equation*}
+hence $\frac{\rho_*(t)}{t} \geq \frac{\gamma}{2}$ for each $t$ and so $X*$ is not 
+\UniformlySmoothSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformSmoothVsUniformConvex:SmoothToConvex}]
+Suppose $X^*$ is not \UniformlyConvex. 
+Let $\Delta_*$ denote the 
+\ModulusOfUniformConvexity of $X^*$. 
+Then there exists $\gamma_0 > 0$ such that $\Delta_*(\gamma_0) = 0$. 
+By 
+\ref{prop:LDF:2}, 
+for each $t > 0$, 
+\begin{equation*}
+\rho(t) = \sup\limits_{\gamma \in (0,2]} \pa{\frac{t\gamma}{2} - \Delta_*(\gamma) } \geq \frac{t \gamma_0}{2} - \Delta_*(\gamma_0) = \frac{t\gamma_0}{2}
+\end{equation*}
+Clearly, this implies $\limsup\limits_{t \searrow 0} \frac{\rho(t)}{t} \geq \frac{\gamma}{2} > 0$. 
+Hence
+$X$ is not \UniformlySmoothSpace.
+
+Suppose $X$ is not \UniformlySmoothSpace. 
+then there exists an $\epsilon > 0$ and a \Sequence 
+$\{t_i\}_{i \in \N} \subset (0,1)$ such that $t_i \searrow 0$ and for each $i \in \N$, 
+$\frac{\rho(t_i)}{t_i} \geq \epsilon$. 
+By 
+\ref{prop:LDF:2}, 
+for each $n \in \N$, 
+\begin{equation*}
+0 < \epsilon \leq \frac{\rho(t_i) }{t_i} = \frac{1}{t_i} \sup\limits_{\gamma \in (0,2]} \pa{\frac{t\gamma}{2} - \Delta_*(\gamma)}
+\end{equation*}
+In particular, for each $i \in \N$, there exists $\gamma_i \in \N$ such that 
+\begin{equation*}
+\frac{\epsilon}{2} \leq \frac{1}{t_i} \pa{ \frac{t_i\gamma_i}{2} - \Delta_*(\gamma_i)}
+\end{equation*}
+Which implies 
+\begin{equation*}
+0 \leq \Delta_*(\gamma_i) \leq \frac{t_i}{2} \pa{\gamma_i-\epsilon}
+\end{equation*}
+Since $t_i \searrow 0$ and is bounded, this implies $\Delta_*(\gamma_i) \to 0$.
+If $\Delta_*(\gamma_i) = 0$ for any $\gamma$, then $X^*$ is not 
+\UniformlyConvex, and we are done. 
+Otherwise, $\Delta_*(\gamma_i) > 0$ for each $i$, which implies 
+$\gamma_i  \geq \epsilon $ for each $i \in \N$. 
+Since $\Delta_*$ is nondecreasing, $\Delta_*(\epsilon) \leq \Delta_*(\gamma_i)$ for each 
+$i \in \N$. Since $\Delta_*(\gamma_i) \to 0$, we conclude $\Delta_*(\epsilon) = 0$.
+Hence, $X^*$ is not \UniformlyConvex.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformSmoothVsUniformConvex:DualityMap}]
+This result is a direct consequence of 
+\ref{prop:UniformSmoothVsUniformConvex:SmoothToConvex}
+paired with 
+\ref{prop:UniformlySmooth}.
+\end{proof}
+\end{prop}
+
+\begin{cor} 
+\label{prop:UniformSmoothImpliesReflexive}
+\rm
+Let $X$ be a \Complete \UniformlySmoothSpace \SeminormedSpace.
+Then $X$ is \Reflexive.
+%(Cioranescu 2.2.15) 
+\begin{proof}
+By  
+\ref{prop:UniformSmoothVsUniformConvex:SmoothToConvex}, 
+$X^*$ is 
+\UniformlyConvex.
+By 
+\ref{thm:MilmanPettis}, 
+$X^*$ is \Reflexive. 
+By 
+\ref{prop:ReflexiveDual}, 
+$X$ is \Reflexive.
+\end{proof}
+\end{cor}

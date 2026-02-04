@@ -1,0 +1,59 @@
+\newcommand{\LocalModulusOfUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Local Modulus Of Uniform Convexity}}\xspace}
+\newcommand{\LocalModuliOfUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Local Moduli Of Uniform Convexity}}\xspace}
+\newcommand{\ModulusOfUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Modulus Of Uniform Convexity}}\xspace}
+\newcommand{\ModuliOfUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Moduli Of Uniform Convexity}}\xspace}
+\newcommand{\LocallyUniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Locally Uniformly Convex}}\xspace}
+\newcommand{\LocalUniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Local Uniform Convexity}}\xspace}
+\newcommand{\UniformlyConvex}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Uniformly Convex}}\xspace}
+\newcommand{\UniformConvexity}[0]{\textbf{\hyperref[def:ModulusOfConvexity]{Uniform Convexity}}\xspace}
+
+\begin{df}[\UniformConvexity]
+\label{def:ModulusOfConvexity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $x_0 \in \partial B_X(0;1)$.
+Define $\tilde{\Delta}:(0,2) \times X \to \mathbb{R}$ by 
+\begin{equation*}
+\tilde{\Delta}\pa{t, x} =  \inf\limits_{y \in \pa{{X \setminus B_X(x;t)} \cap  \partial B_X(0;1)}} \braces{1-\norm{\frac{x+y}{2}}}=  \inf\limits_{y \in \pa{{X \setminus B_X(x;t)} \cap  \overline{B_X(0;1)}}} \braces{1-\norm{\frac{x+y}{2}}}
+\end{equation*}
+We call $\tilde{\Delta}$ the 
+\LocalModulusOfUniformConvexity of $X$.
+Define  $\Delta:(0,2) \to \mathbb{R}$ by
+\begin{equation*}
+\Delta(t) = \inf\limits_{x \in \partial B_X(0;1)} \tilde{\Delta}(t,x)
+\end{equation*}
+We call $\Delta$ the 
+\ModulusOfUniformConvexity of $X$. 
+We say that $X$ is \LocallyUniformlyConvex
+at $x_0$ if for each $t   \in (0,2)$, we have $\tilde{\Delta}(t, x_0) > 0$. 
+We say that $X$ is \LocallyUniformlyConvex if it is 
+\LocallyUniformlyConvex at each of its points.
+We say that $X$ is \UniformlyConvex if for each $t  \in (0,2)$, 
+$\Delta(t) > 0$.
+\end{df}
+
+\begin{prop}[\ModulusOfUniformConvexity]
+\label{prop:ModulusOfConvexity}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $d>0$.
+Let $\epsilon > 0$.
+Let $x_0 \in X$, $y_0 \in X$ with $\norm{y_0} \leq \norm{x_0}\leq d$ and $\norm{x_0-y_0} \geq \epsilon$. 
+Then 
+\begin{equation*}
+ \tilde{\Delta}\pa{\frac{\epsilon}{d}, \frac{x_0}{d}}\leq\tilde{\Delta}\pa{\frac{\epsilon}{\norm{x_0}}, \frac{x_0}{\norm{x_0}}} \leq 1-\frac{1}{\norm{x_0}} \norm{\frac{x_0+y_0}{2}} \leq  1-\frac{1}{d} \norm{\frac{x_0+y_0}{2}}
+\end{equation*}
+\begin{proof}
+Define $\tilde{x_0} = \frac{x_0}{\norm{x_0}}$ $\tilde{y_0} = \frac{y_0}{\norm{y_0}}$, 
+and $\tilde{\epsilon} = \frac{\epsilon}{\norm{x_0}}$. 
+Then $\norm{\tilde{x_0}-\tilde{y_0}} \geq \tilde{\epsilon}$, 
+and $\norm{x_0}  = 1$, and 
+$\norm{\tilde{y_0}} \leq 1$, so by definition
+\begin{align*}
+\tilde{\Delta} \pa{ \frac{\epsilon}{d}, \frac{x_0}{\norm{x_0}}} & \leq \tilde{\Delta}\pa{\frac{\epsilon}{\norm{x_0}}, \frac{x_0}{\norm{x_0}}} \\
+& \leq \tilde{\Delta}\pa{\tilde{\epsilon}, \tilde{x_0}} \\
+& \leq 1-\norm{\frac{\tilde{x_0}+\tilde{y_0}}{2}} = 1-\frac{1}{\norm{x_0}} \norm{\frac{x_0+y_0}{2}} \\
+& \leq 1- \frac{1}{d} \norm{\frac{x_0+y_0}{2}}
+\end{align*}
+\end{proof}
+\end{prop}

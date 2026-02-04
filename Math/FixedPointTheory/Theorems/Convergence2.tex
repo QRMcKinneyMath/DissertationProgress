@@ -1,0 +1,37 @@
+\begin{thm}
+\label{prop:FixedPointApproximation}
+\rm
+Let $(X, \{\norm{\cdot}_i\}_{i \in \N}$ be a 
+\Complete \GSpace. 
+Let $K \subset X$ be \SetClosed. 
+Let $T:K \to X$. 
+Let $\{x_k\}_{k \in \N}$.
+Suppose $\{i_j\}_{j \in \N} \subset \N$ is an increasing sequence
+such that for each $j \in \N$, 
+$\{x_k\}_{k \in \N} \subset (X, \norm{\cdot}_{i_j})$ 
+converges to a $\PseudoFixedPoint$ of $T$ in $(X, \norm{\cdot}_{i_j})$. 
+Then $T$ has a \FixedPoint $\tilde{x}$ and 
+\begin{equation*}
+\tilde{x} = \lim\limits_{i \to \infty} x_i
+\end{equation*}
+\begin{proof}
+For each $j \in \N$, let $y_j$ denote a
+\PseudoFixedPoint of $T:K \subset (X, \norm{\cdot}_{i_j}) \to X$ 
+such that $x_i \to y_j$ in $(X, \norm{\cdot}_{i_j})$. 
+Let $m<n \in \N$. 
+Then since $x_i \to y_n$ in $(X, \norm{\cdot}_{i_n})$ and $\norm{\cdot}_{i_m} < \norm{\cdot}_{i_n}$, 
+we conclude $x_i \to y_n$ in $(X,\norm{\cdot}_{i_m})$. 
+Hence, $y_n \in y_m+ \overline{0}_{i_m}$
+for every $n>m$. 
+This then implies that $\{y_i\}_{i \in \N}$ is Cauchy and therefore has a limit $\tilde{y}$. 
+Furthermore, $\tilde{y} \in K \cap \pa{y_i+\overline{0}_{i_j}}$ for each $j \in \N$. 
+Hence $T \tilde{y} \in y_0 + \overline{0}_{i_j}= \tilde{y}+ \overline{0}_{i_j}$ for each $j \in \N$. 
+That is, for every $j \in \N$, $\norm{T\tilde{y} - \tilde{y}}_{i_j} = 0$. 
+Since $i_j \nearrow \infty$, we conclude $d\pa{T\tilde{y}, \tilde{y}} = 0$, so $\tilde{y}$ is a \FixedPoint of $T$. 
+Furthermore, since 
+\begin{equation*}
+\norm{x_i-\tilde{y}}_{j} \leq \norm{x_i-y_j}_j + \norm{y_j-\tilde{y}}_j = \norm{x_i-y_j}_j \to 0
+\end{equation*}
+we conclude $x_j \to \tilde{y}$ in $X$. 
+\end{proof}
+\end{thm}

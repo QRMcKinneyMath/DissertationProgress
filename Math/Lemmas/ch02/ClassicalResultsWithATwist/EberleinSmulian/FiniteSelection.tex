@@ -1,0 +1,35 @@
+\begin{lem}
+\label{lem:finiteselection}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $Y \subset X^{**}$ be a \Finite dimensional \VectorSubspace. 
+Then there exists a \Finite set 
+$Z \subset \partial B_{X^*}(0;1)$ such that for each $y^{**} \in Y$, 
+\begin{equation*}
+\norm{y^{**}} \leq 2 \max\limits_{z^* \in Z} \abs{\ip{z^*,y^{**}}}
+\end{equation*}
+\begin{proof}
+Let $S=\partial B_{X^{**}}(0;1) \cap Y$. 
+Then, since Y is \Finite dimensional, S is \SetCompact, and therefore permits a \Finite 
+$\frac{1}{4}-net$ $\{s_i\}_{i=1}^n$. 
+There exists $\{z_i^*\}_{i=1}^n  \subset \partial B_{X^*}(0;1)$ such that for each i, $\ip{z_i^*,s_i} > \frac{3}{4}$.
+Set $Z = \{z_i\}_{i=1}^n$.
+Let $s \in S$. 
+Then there is a $k \in \mathbb{N} \cap [1,n]$ such that $\norm{s-s_k}< \frac{1}{4}$. 
+For this $k$, we have
+\begin{equation*}
+\ip{z_k^*,s} = \ip{z_k^*,s_k} + \ip{z_k^*,s-s_k} \geq \frac{3}{4}-\frac{1}{4} = \frac{1}{2}
+\end{equation*}
+That is, 
+\begin{equation*}
+\norm{s}  = 1 \leq 2 \ip{z_k^*, s} \leq \max\limits_{z \in Z} \ip{z, s}
+\end{equation*}
+Now let $y \in Y$. 
+Then $\frac{y}{\norm{y}} \in S$. 
+Hence 
+\begin{equation*}
+\norm{y} = \norm{y} \norm{\frac{y}{\norm{y}}} \leq \norm{y} \max\limits_{z \in Z} \ip{z,\frac{y}{\norm{y}}} = \max\limits_{z \in Z} \ip{z, y}
+\end{equation*}
+concluding this proof. 
+\end{proof} 
+\end{lem}

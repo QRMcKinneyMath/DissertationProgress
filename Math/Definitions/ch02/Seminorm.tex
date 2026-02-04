@@ -1,5 +1,6 @@
 \newcommand{\Seminorm}[0]{\textbf{\hyperref[def:seminorm]{Seminorm}}\xspace}
 \newcommand{\Seminorms}[0]{\textbf{\hyperref[def:seminorm]{Seminorms}}\xspace}
+\newcommand{\SublinearFunctional}[0]{\textbf{\hyperref[def:seminorm]{Sublinear Functional}}\xspace}
 \newcommand{\NonDegenerate}[0]{\textbf{\hyperref[def:seminorm]{Non-Degenerate}}\xspace}
 \newcommand{\Degenerate}[0]{\textbf{\hyperref[def:seminorm]{Degenerate}}\xspace}
 \newcommand{\SeminormedSpace}[0]{\textbf{\hyperref[def:seminorm]{Seminormed Space}}\xspace}
@@ -7,25 +8,31 @@
 \begin{df}[Seminorm]
 \label{def:seminorm}
 \rm
-    Let 
-	$V$ be a 
-	\VectorSpace
-	over a 
-	\Field 
-	$\F \in \{ \R, \C\}$.  
-    We say that a map 
-	$\norm{\cdot}:V \to [0,\infty)$ 
-	is a 
-	\Seminorm on 
-	$V$ 
-	if it is both \Subadditive and \AbsScalarHomogeneous. 
-	In this case, we refer to $(V, \norm{\cdot})$ as a \SeminormedSpace. 
-	We say that $\norm{\cdot}$ is \NonDegenerate if there is at least one $v \in V$ with $\norm{v}>0$. 
-	We say that $\norm{\cdot}$ is \Degenerate if it is not \NonDegenerate.  
-	We may also refer to the \SeminormedSpace $(V, \norm{\cdot})$ as being
-	\Degenerate
-	or
-	\NonDegenerate. 
+Let 
+$V$ be a 
+\VectorSpace
+over a 
+\Field 
+$\F \in \{ \R, \C\}$.  
+We say that a map 
+$\norm{\cdot}:V \to [0,\infty)$ 
+is a 
+\Seminorm on 
+$V$ 
+if it is both \Subadditive and \AbsScalarHomogeneous. 
+In this case, we refer to $(V, \norm{\cdot})$ as a \SeminormedSpace. 
+We say that $\norm{\cdot}$ is \NonDegenerate if there is at least one $v \in V$ with $\norm{v}>0$. 
+We say that $\norm{\cdot}$ is \Degenerate if it is not \NonDegenerate.  
+We may also refer to the \SeminormedSpace $(V, \norm{\cdot})$ as being
+\Degenerate
+or
+\NonDegenerate. 
+If we replace the assumption that $\norm{\cdot}$ is 
+\AbsScalarHomogeneous with the weaker condition that
+for each $\alpha > 0$ and for each $x_0 \in X$, that 
+$\norm{\alpha x_0} = \alpha \norm{x_0}$ holds, 
+then we call $\norm{\cdot}$ a 
+\SublinearFunctional on $X$.
 \end{df} 
 
 
@@ -38,10 +45,10 @@
 \begin{df}[Norm]
 \label{def:norm}
 \rm
-    Let $(V,\norm{\cdot})$ be a \SeminormedSpace.
-    such that 
-    for every $x \in V$,
-    $x \neq 0$ implies $\norm{x} \neq 0$.
-    Then we call $\norm{\cdot}$ as a \Norm on $V$
-    and we call $(V, \norm{\cdot})$ a \NormedSpace.
+Let $(V,\norm{\cdot})$ be a \SeminormedSpace.
+such that 
+for every $x \in V$,
+$x \neq 0$ implies $\norm{x} \neq 0$.
+Then we call $\norm{\cdot}$ as a \Norm on $V$
+and we call $(V, \norm{\cdot})$ a \NormedSpace.
 \end{df}

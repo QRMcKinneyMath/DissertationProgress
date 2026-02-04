@@ -1,0 +1,35 @@
+\begin{prop}
+\label{prop:WeakstarSeparable}
+\rm
+Let $X$ be a \Separable \SeminormedSpace.
+Let $B_{X^*}$ denote the \ClosedUnitBall of $X^*$. 
+Then $B_{X^*}$ is \Separable.
+\begin{proof}
+Let $\{x_i\}_{i \in \mathbb{N}}$ be \DenseSet in $X$. 
+Define the space 
+\begin{equation*}
+K = \prod\limits_{i \in \mathbb{N}} [-\norm{x_i}, \norm{x_i}]
+\end{equation*}
+Endow $K$ with the \ProductTopology.
+By tychonoff, $K$ is \SetCompact.
+By taking the sup metric, we also see that $K$ is \Metrizable. 
+Since a \SetCompact metric space is \Separable, $K$ is \Separable.
+so $K$ is \Separable.
+Define $T:B_{X^*} \to K$ by 
+\begin{equation*}
+\pa{Tj}_i =  \ip{j, c(x_i)}
+\end{equation*}
+Since each $j \in X^*$ is \ContinuousFunction, it is defined on a 
+\DenseSet and therefore $T$ is \Injective. 
+$T$ is also clearly \weakstar \ContinuousFunction. 
+Since $B_{X^*}$ is \CompactSet, 
+and since $T$ is \ContinuousFunction, 
+$T$ maps 
+\SetClosed sets into $\CompactSet$ sets, 
+which are \SetClosed in $K$ because $K$ is \Hausdorff.
+Thus $T^{-1}:Range(T) \to B_{X^*}$ is \ContinuousFunction. 
+Since a subspace of a separable metric space is separable, we conclude $Range(T)$ is 
+\Separable. 
+Since $T:B_{X^*} \to Range(T)$ is a \Homeomorphism, $B_{X^*}$ is \Separable.
+\end{proof}
+\end{prop}

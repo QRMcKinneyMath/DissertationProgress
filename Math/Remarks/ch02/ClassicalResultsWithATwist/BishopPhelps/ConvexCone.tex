@@ -1,0 +1,45 @@
+\begin{rmk}\rm
+\label{rmk:ClosedConvexCone}
+Let $X$ be a \SeminormedSpace.
+Let $x_0^* \in \partial B_{x_0^*}(0;1)$. 
+Let $\alpha > 0$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{rmk:ClosedConvexCone}~\roman*}]
+\item 
+\label{rmk:ClosedConvexCone:Iscone}
+$K(x_0^*,\alpha)$ is a \SetClosed \ConvexCone. 
+\item 
+\label{rmk:ClosedConvexCone:NonemptyInterior}
+If $\alpha > 1$, $\InteriorMark{K(x_0^*,\alpha)} \neq \emptyset$. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{rmk:ClosedConvexCone:Iscone}]
+Define $\scK = K(x_0^*, \alpha)$. 
+We first prove that $\scK$ is \SetClosed. 
+Let $\{x_n\}_{n \in \mathbb{N}} \subset \scK$. 
+Suppose $x_n \to x_0 \in X$. 
+Since $x_0^*$ is \ContinuousFunction, $\ip{x_n,x_0^*} \to \ip{x_0,x_0^*}$. 
+Hence, given $\epsilon > 0$, there exists $N>0$ such that for $n>N$ we have $max\pa{\abs{||x_0||-||x_n||},\abs{\ip{x_0-x_n,x_0^*}}} < \epsilon$.
+Let $n>N$. Then, 
+\begin{equation*}
+\norm{x_0}\leq \norm{x_n} +\epsilon < \alpha \ip{x_n,x_0^*} + \epsilon < \alpha \ip{x_0,x_0^*}+ (\alpha+1)\epsilon
+\end{equation*}
+Since $\epsilon > 0$ was arbitrary, $\norm{x_0} \leq \ip{x_0, x_0^*}$, and so $x_0 \in \scK$.
+Thus $\scK$ is \SetClosed.
+It is obvious that $\scK$ is closed under positive scalar multiples.
+To see that $\scK$ is \ConvexSet, let $x,y \in \scK$ and let $t \in [0,1]$.
+then, 
+\begin{equation*}
+\norm{tx+(1-t)y} \leq t\norm{x}+(1-t)\norm{y} \leq t \alpha \ip{x,x_0^*}+(1-t) \alpha \ip{y,x_0^*} = \alpha \ip{tx+(1-t)y,x_0^*}
+\end{equation*}
+\end{proof} 
+\begin{proof}[Proof of \ref{rmk:ClosedConvexCone:NonemptyInterior}]
+Let $\alpha > 1$. 
+Then $\frac{2}{\alpha \pa{1+\frac{1}{\alpha}}} < 1$. 
+Thus there exists $x \in \overline{B_X(0;1)}$ such that $2/\pa{\alpha \pa{1+\frac{1}{\alpha}}}< \ip{x,x_0^*}$.
+This implies $1/\alpha < \ip{\frac{1+(1/\alpha)}{2}x,x_0^*}$. 
+Since $x_0^*$ is \ContinuousFunction, we find a \Neighborhood $U$ of $\frac{\pa{1+\frac{1}{\alpha}}}{2}x$ contained in $B_X(0;1)$ 
+such that for each $y \in U$, $1/\alpha < \ip{y,x_0^*}$. 
+If $y \in U$, then 
+$||y|| \leq 1 < \alpha \ip{y,x_0^*}$, so $U \subset K(x_0^*,\alpha)$.
+\end{proof} 
+\end{rmk}

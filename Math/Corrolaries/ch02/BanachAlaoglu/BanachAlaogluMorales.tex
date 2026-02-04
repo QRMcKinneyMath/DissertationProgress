@@ -1,14 +1,37 @@
 \begin{cor}[Banach-Alaoglu-Morales]
-    \label{thm:BanachAlaogluMorales}
-    Let X be a seminormed space and $C \subset X^*$ 
-    \begin{enumerate}
-        \item If X is complete and $C$ $weak^*$ compact, then $C$ is $weak^*$ closed and bounded. 
-        \item If $C$ is $weak^*$ closed and bounded, then $C$ is $weak^*$ compact. 
-    \end{enumerate}
-    \begin{proof}(1)
-        Since $C$ is $weak^*$ compact, it is $weak^*$ closed since the $weak^*$ topology is Hausdorff. Since $c(x):(X,\mathcal{T}_{w^*}) \to \mathbb{C}$ is continuous for each $x \in X$, for each $x \in X$, $c(x)(C)=$ is compact and therefore bounded. Hence, for every $x \in X$, $\{\abs{\ip{x,c}} : c \in C\}$ is bounded, so by the Banach Steinhaus, C is bounded. 
-    \end{proof}
-    \begin{proof}(2)
-        Since $C$ is bounded, it is contained in some closed ball B which we know to be $weak^*$ compact by \ref{thm:banachalaoglu}. Since the $weak^*$ topology on B is compact and  Hausdorff and $C$ is closed in this topology, it is compact in this topology. Since the subspace topology on C induced by the $weak^*$ topology on $X^*$ equals this topology, we are done.  
-    \end{proof} 
+\label{thm:BanachAlaogluMorales}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $C \subset X^*$.
+The following are true. 
+\begin{enumerate}
+\item 
+\label{cor:BanachAlaoglu:CompleteCompactImpliesClosedAndBounded}
+If $X$ is \Complete and $C$ is 
+\weakstar \SetCompact, then $C$ is \weakstar \SetClosed and 
+\Norm bounded.
+\item 
+\label{cor:BanachAlaoglu:ClosedAndBoundedImpliesCompact}
+If $C$ is \weakstar \SetClosed and 
+\Norm bounded, then $C$ is \weakstar \SetCompact.
+\end{enumerate}
+\begin{proof}[Proof of \ref{cor:BanachAlaoglu:CompleteCompactImpliesClosedAndBounded}]
+Since $C$ is \weakstar \SetCompact
+and the \weakstar \Topology is \Hausdorff, 
+$C$ is \weakstar \SetClosed.
+Let $x \in X$.
+Then $c(x):(X,\mathcal{T}_{w^*}) \to \F$ is \ContinuousFunction, so
+$c(x)(C)=$ is \SetCompact and therefore bounded in $\F$.
+Since $x \in X$ was arbitrary, by the Banach-Steinhauss theorem, 
+$C$ is \Norm bounded in $X$.
+\end{proof}
+\begin{proof}[Proof of \ref{cor:BanachAlaoglu:ClosedAndBoundedImpliesCompact}]
+Since $C$ is \Norm bounded, for some $0 \neq \alpha \in \F$, $\alpha C \subset B_{X^*}(0;1)$.
+Since scaling by $\alpha$ is a \Homeomorphism, $\alpha C$ is \weakstar \SetClosed.
+By
+\ref{cor:BanachAlaogluSeminorm}, 
+$\alpha C$ is a \weakstar \SetClosed subset of a \weakstar \SetCompact 
+set and is therefore itself \weakstar \SetCompact. 
+Hence $C$ is \weakstar \SetCompact.
+\end{proof} 
 \end{cor} 

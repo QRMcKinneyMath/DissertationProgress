@@ -1,0 +1,271 @@
+\begin{thm}[\AsymptoticallyNonexpansive \Seminorm fixed point]
+\label{thm:AsymptoticallyNonexpansiveSeminormFixedPoint}
+\rm
+Let $X$ be a \UniformlyConvex \Complete \SeminormedSpace.
+Let $K \subset X$ be \SetClosed, bounded, and \ConvexSet.
+Let $T:K \to K$ be \AsymptoticallyNonexpansive. 
+Then $Pfix(T) \neq \emptyset$. 
+\begin{proof}
+If $Diameter(K) = 0$, then $Pfix(T) = K$ so the result holds. 
+Suppose otherwise. 
+Let $x_0 \in K$. 
+Define 
+\begin{equation*}
+R_{x_0} = \braces{\gamma \in [0,\infty) : \pa{\exists k \in \N}\pa{K \cap \bigcap\limits_{i=k}^{\infty} \overline{ B(T^ix_0, \gamma)} \neq \emptyset}}
+\end{equation*}
+Since $K$ is bounded,  $diam(K) \in R_{x_0}$. 
+Define $\gamma_0 = \inf \pa{R_{x_0}}$. 
+For each $\epsilon > 0$, define 
+\begin{equation*}
+C_\epsilon = \bigcup\limits_{k \in \N} \bigcap\limits_{i=k}^{\infty} \overline{B(T^ix_0, \gamma_0+\epsilon)}
+\end{equation*}
+Then each $C_\epsilon$ is the union of an increasing sequence of \ConvexSet sets, 
+and is therefore itself
+\ConvexSet.
+Furthermore, each $C_\epsilon$ is clearly nonempty by definition of $\gamma_0$ and $R_{x_0}$. 
+Hence, for each $ \epsilon > 0$, $\overline{C_\epsilon} \cap K$ is \SetClosed and \ConvexSet
+and is therefore \weakly \SetClosed
+by 
+\ref{prop:ClosedAndConvexIsWeaklyClosed}. 
+Since this set is bounded and $X$ is \Reflexive, 
+$\overline{C_\epsilon} \cap K$ is \weakly \SetCompact 
+by 
+\ref{lem:ReflexiveSeparable}.
+Thus, since $\{\overline{C_\epsilon} \cap K \}_{\epsilon > 0}$ possesses the 
+\FiniteIntersectionProperty, we conclude
+\begin{equation*}
+\emptyset \neq \bigcap\limits_{\epsilon > 0} \pa{\overline{C_\epsilon} \cap K }
+\end{equation*}
+Denote the above intersection with $C$. 
+Then if $x \in C$ and $\tau > 0$, then there exists $M \in \N$ such that if $m \geq M$, then 
+\begin{equation*}
+\norm{x-T^mx_0} \leq \gamma_0 + \tau
+\end{equation*}
+For sake of contradiction, let $y_0 \in C$ and suppose 
+that both $T^n y_0 \not \to y_0$ and $\gamma_0 > 0$.
+Then since $X$ is
+\UniformlyConvex, 
+there exists $\epsilon > 0$ and subsequence $\{n_k\}_{k \in \N} \subset \N$ such that 
+for each $k \in \N$, 
+\begin{equation*}
+\norm{T^{n_k}y_0-y_0} \geq \epsilon
+\end{equation*}
+and for some $\xi > 0$, 
+\begin{equation*}
+1-\Delta \pa{\frac{\epsilon}{\gamma_0 + \xi}} < \frac{\gamma_0}{\gamma_0 + \xi}
+\end{equation*}
+Let $\{k_n\}_{n = N}^{\infty} \subset (1,\infty)$ such that $k_n \searrow 1$ and 
+fo $n\geq N$, for each $x,y \in K$, 
+\begin{equation*}
+\norm{T^nx-T^ny} \leq k_n \norm{x-y}
+\end{equation*}
+Let $p \in \N$ such that 
+\begin{equation*}
+k_{n_p} \leq \frac{\gamma_0 + \xi}{\gamma_0 + \frac{\xi}{2}}
+\end{equation*}
+Since $y_0 \in C$, there exists $M \in \N$ such that if 
+$m \geq M$, then 
+\begin{equation*}
+\norm{y_0-T^m x_0} \leq \gamma_0 + \frac{\xi}{2}
+\end{equation*}
+Define $\tilde{M}=n_p+M$.
+If $m>\tilde{M}$, then $m>m-n_p > M$, so 
+\begin{align*}
+\norm{T^{n_p}y_0-T^mx_0} & = \norm{T^{n_p}y_0-T^{n_p}T^{m-n_p}x_0}\\
+& \leq k_{n_p} \norm{y_0-T^{m-n_p}x_0}\\
+& \leq \pa{\frac{\gamma_0+\xi}{\gamma_0+\frac{\xi}{2}}}\pa{\gamma_0+\frac{\xi}{2}} \\
+& = \gamma_0+\xi
+\end{align*}
+and
+\begin{equation*}
+\norm{y_0-T^mx_0} \leq \gamma_0 + \xi
+\end{equation*}
+Furthermore, 
+\begin{equation*}
+\norm{\pa{T^{n_p}y_0-T^mx_0} - \pa{y_0-T^mx_0}} = \norm{T^{n_p}y_0-y_0} \geq \epsilon
+\end{equation*}
+Hence, by \ref{}, 
+If $d = \max\pa{ \norm{y_0-T^mx_0}, \norm{T^{n_p}y_0-T^mx_0}} \leq \gamma_0+\xi$, then 
+\begin{align*}
+\norm{\pa{\frac{y_0+T^{n_p}y_0}{2}} - T^mx_0}& = \norm{\frac{\pa{T^{n_p}y_0-T^mx_0}+\pa{y_0-T^mx_0}}{2}} \\
+& \leq d \pa{1-\Delta\pa{\frac{\epsilon}{d}}}\\
+& \leq \pa{\gamma_0+\xi} \pa{ 1- \Delta \pa{\frac{\epsilon}{\gamma_0+\xi}}}\\
+\end{align*}
+Since $m > \tilde{m}$ is arbitrary, this implies that 
+\begin{equation*}
+\frac{y_0+T^{n_p}y_0}{2} \in \bigcap\limits_{k \geq \tilde{M}} \overline{B_X\pa{T^mx_0, \pa{\gamma_0+\xi}\pa{1-\Delta\pa{\frac{\epsilon}{\gamma_0+\xi}}}}}
+\end{equation*}
+so that $(\gamma_0+\xi)\pa{1-\Delta\pa{\frac{\epsilon}{\gamma_0+\xi}}}$.
+This, however, is a contradiction because 
+\begin{equation*}
+(\gamma_0+\xi)\pa{1-\Delta\pa{\frac{\epsilon}{\gamma_0+\xi}}} < \gamma
+\end{equation*}
+Thus we conclude that either 
+$\gamma_0 = 0$ or $y_0 \in \lim\limits_{n \to \infty} T^ny_0$.
+In the latter case, since $T$ is \ContinuousFunction, 
+\begin{equation*}
+\norm{Ty_0-y_0} = d\pa{Ty_0,T\lim\limits_{n \to \infty} T^ny_0} \leq k_1 d\pa{y_0 ,  \lim\limits_{n \to \infty}T^ny_0} = 0
+\end{equation*}
+so that $Ty_0 \in y_0 + \overline{0}$.
+\end{proof}
+Again, since $T$ is \ContinuousFunction, $T\pa{y_0+\overline{0}} \subset y_0+\overline{0}$ and therefore 
+$y_0 \in pFix(T)$. 
+In the former case, $\{T^nx_0\}_{n \in \N}$ is a \PseudometricCauchySequence.
+Since $K$ is \Complete, there exists $\tilde{x} \in K$ such that 
+$\lim\limits_{n \to \infty} T^nx_0 = \tilde{x}+\overline{0}$. 
+This then implies 
+\begin{equation*}
+\norm{T\tilde{x}-\tilde{x}} = d\pa{T\tilde{x}, T\lim\limits_{n \to \infty} T^n x_0} \leq k_1 d\pa{\tilde{x}, \lim\limits_{n \to \infty} T^nx_0} = 0
+\end{equation*}
+So that $T\tilde{x} \in \tilde{x}+\overline{0}$. 
+Since $T$ is \ContinuousFunction, $T\pa{\tilde{x}+\overline{0}} \subset \pa{\tilde{x}+\overline{0}} \cap K$
+\end{thm}
+
+\begin{thm}
+\label{thm:Asymptotic:Closed}
+\rm
+Let $X$ be a \Complete\SeminormedSpace.
+Let $K \subset X$ be \SetClosed.
+Let $T:K \to K$ be \ContinuousFunction.
+Then $Pfix(T)$ is \SetClosed.
+\begin{proof}
+$Pfix(T)=\pa{T-I}^{-1}\{\overline{0}\}$ which is \SetClosed since $T-I$ is \ContinuousFunction.
+\end{proof}
+\end{thm}
+
+\begin{thm}
+\label{thm:Asymptotic:Convex}
+\rm
+Let $X$ be a \UniformlyConvex \SeminormedSpace.
+Let $K \subset X$ be \ConvexSet.
+Let $T:K \to K$ be \AsymptoticallyNonexpansive. 
+Then $Pfix(T)$ is \ConvexSet.
+\begin{proof}
+Let $x_0,y_0 \in Pfix(T)$. 
+Then, 
+\begin{equation*}
+\norm{T^n\pa{\frac{x_0+y_0}{2}} - x_0}  = \norm{T^n\pa{\frac{x_0+y_0}{2}} - T^nx_0}  \leq k_n \norm{\pa{x_0+y_0}{2}-x_0} = \frac{k_n}{2} \norm{x_0-y_0}
+\end{equation*}
+\begin{equation*}
+\norm{T^n\pa{\frac{x_0+y_0}{2}} - y_0}  = \norm{T^n\pa{\frac{x_0+y_0}{2}} - T^ny_0}  \leq k_n \norm{\pa{x_0+y_0}{2}-y_0} = \frac{k_n}{2} \norm{x_0-y_0}
+\end{equation*}
+and
+\begin{equation*}
+\norm{\pa{T^n\pa{\frac{x_0+y_0}{2}} - x_0}-\pa{T^n\pa{\frac{x_0+y_0}{2}} - y_0}} = \norm{y_0-x_0}
+\end{equation*}
+Then, by \ref{}
+with 
+$\epsilon = \norm{x_0-y_0}$
+and
+$d = \frac{k_n}{2} \norm{x_0-y_0}$
+we have 
+\begin{align*}
+\norm{T^n\pa{\frac{x_0+y_0}{2}}-\frac{x_0+y_0}{2}} & = \norm{\frac{\pa{T^n\pa{\frac{x_0+y_0}{2}} - x_0}+\pa{T^n\pa{\frac{x_0+y_0}{2}} - y_0}}{2}} \\
+& \leq \frac{k_n}{2} \norm{x_0-y_0}\pa{1-\Delta\pa{\frac{2}{k_n}}}
+\end{align*}
+Since $k_n \to 1$ and since $\lim\limits_{\delta \nearrow 2} \Delta(\delta) =  1$, we conclude 
+$\frac{x_0+y_0}{2} \in \lim\limits_{n \to \infty} T^n \pa{\frac{x_0+y_0}{2}}$.
+Thus, by continuity
+\begin{align*}
+d\pa{T\pa{\frac{x_0+y_0}{2}}, \pa{\frac{x_0+y_0}{2}}} & = d \pa{T\pa{\frac{x_0+y_0}{2}},  \lim\limits_{n \to \infty} T^n \pa{\frac{x_0+y_0}{2}}}\\
+&  \leq k_1 d \pa{\frac{x_0+y_0}{2},  \lim\limits_{n \to \infty} T^n \pa{\frac{x_0+y_0}{2}}}\\
+& = 0
+\end{align*}
+By the standard continuity arguments, $T\pa{\frac{x_0+y_0}{2}+\overline{0}} \subset \frac{x_0+y_0}{2} + \overline{0} $
+so that $\frac{x_0+y_0}{2} \in Pfix(T)$. 
+\end{proof}
+\end{thm}
+
+\begin{thm}
+\label{thm:PseudoAsymptoticNonexpansive}
+\rm
+Let $X$ be a \UniformlyConvex \Complete \SeminormedSpace.
+Let $K \subset X$ be \SetClosed, bounded, and \ConvexSet.
+Let $T:K \to K$ be \PseudoAsymptoticallyNonexpansive. 
+Then $Pfix(T)$ is \SetClosed, \ConvexSet, and nonempty. 
+\begin{proof}
+Since $T$ is \PseudoAsymptoticallyNonexpansive, there exists $n \in \N$ such that 
+$T^n$ is \AsymptoticallyNonexpansive. 
+By 
+\ref{thm:Asymptotic:Closed},
+and \ref{thm:Asymptotic:Convex}, 
+$Pfix(T^n)$ is \SetClosed and \ConvexSet. 
+Since $K$ is bounded, $Pfix(T^n)$ is also bounded.
+Furthermore, if $x_0 \in Pfix(T^n)$, then 
+\begin{equation*}
+Tx=TT^{n}x=T^nTx
+\end{equation*}
+Hence $T\pa{Pfix(T^n)} \subset Pfix(T^n)$. 
+Also, if $x,y \in Pfix(T^n)$ and $k \in \N$, , then 
+\begin{equation*}
+\norm{Tx-Ty} = \norm{TT^{kn}x-TT^{kn}y} \leq k_{kn+1} \norm{x-y}
+\end{equation*}
+Hence, $T:Pfix(T^n) \to Pfix(T^n)$ is an \AsymptoticallyNonexpansive operator defined on a \SetClosed, 
+\ConvexSet, bounded subset of a \Complete \UniformlyConvex \SeminormedSpace. 
+By \ref{thm:AsymptoticallyNonexpansiveSeminormFixedPoint}, 
+$Pfix(T) \neq \emptyset$. 
+It is clear that $Pfix(T) \subset Pfix(T^n)$, and so 
+we can also apply 
+\ref{thm:Asymptotic:Closed}
+and 
+\ref{thm:Asymptotic:Convex}
+to conclude that $Pfix(T)$ is \SetClosed and \ConvexSet.
+\end{proof}
+\end{thm}
+
+\begin{thm}
+\rm
+Let $(X, \{\norm{\cdot}_i\_{i \in \N})$ be a \UniformlyConvex\GSpace such that for each $i \in \N$
+$(X,\norm{\cdot}_i)$ is \UniformlyConvex.
+Let $K \subset X$ be \SetClosed, bounded, and \ConvexSet such that for some $j\in \N$, 
+for every $i \geq j$, 
+$K + \overline{0}_i$ is \SetClosed in $(X, \norm{\cdot}_i)$. 
+Let $T:K \to K$ be \Coherently \PseudoAsymptoticallyNonexpansive.
+Then $fix(T) \neq \emptyset$. 
+\begin{proof}
+Let $\{i_k\}_{k \in \N}$ be an increasing \Sequence such that for each $k \in \N$, 
+$T:K \subset (X, \norm{\cdot}_{i_k}) \to K \subset (X, \norm{\cdot}_{i_k})$ is \PseudoAsymptoticallyNonexpansive. 
+Furthermore, by assumption, $K+\overline{0}_{i_k}$, for each $k \in \N$ is 
+\SetClosed, bounded, and \ConvexSet in $\pa{X, \norm{\cdot}_{i_k}}$. 
+Define $\tilde{T}_1:K+ \overline{0}_{i_1} \to K+\overline{0}_{i_1}$ by 
+Let $Q:(X, \norm{\cdot}_{i_1}) \to (X, \norm{\cdot}_{i_1}) /\norm{\cdot}_{i_1}$ denote the 
+\QuotientMap. 
+By axiom choice let $\Gamma_i$ be a set containing 1 element of $K$ from each set in $Q^{-1}Q\pa{K}$. 
+\begin{equation*}
+\tilde{T}_1(x) = \begin{dcases}
+Tx & x \in K \\
+Ty & (x \not \in K)(\norm{y-\gamma} = 0)(\gamma \in \Gamma)
+\end{dcases}
+\end{equation*}
+Then $\tilde{T}_1:K+\overline{0}_{i_1}  \subset (X, \norm{\cdot}_{i_1}) \to K+\overline{0}_{i_1}$ is 
+\PseudoAsymptoticallyNonexpansive
+and defined on a set which is \SetClosed, bounded and \ConvexSet on 
+a \Complete, \UniformlyConvex \SeminormedSpace. 
+Hence, by 
+\ref{thm:PseudoAsymptoticNonexpansive}, 
+$\tilde{T}_1$ possesses a \PseudoFixedPoint $x_1 \in K+\overline{0}_{i_1}$. 
+Without loss of generality, $x_1 \in K$.
+It is clear that $x_1$ is a \PseudoFixedPoint of $T$ with respect to the \Seminorm 
+$\norm{\cdot}_{i_1}$. 
+Thus, if we define $K_1 = K \cap \pa{x_0+ \overline{0}_{i_1}}$.
+we can consider $T: K_1 \to K_1$ as a well defined \Coherently \PseudoAsymptoticallyNonexpansive map. 
+It is clear that $K_1$ is \ConvexSet, as well as $\SetClosed$ in $X$. 
+Furthermore, if $k \geq i_1$, 
+then $\norm{\cdot}_k \geq \norm{\cdot}_{i_1}$, which implies
+$\overline{0}_{i_1}+x_1$ is \SetClosed 
+in $(X, \norm{\cdot}_{k})$ for each $k \geq i_1$. 
+Hence, 
+\begin{equation*}
+K_1+ \overline{0}_k = K \cap (x_1+ \overline{0}_{i_1}) + \overline{0}_k = \pa{K+\overline{0}_k} \cap \pa{x_1 + \overline{0}_{i_1}}
+\end{equation*}
+is \SetClosed in $(X,\norm{\cdot}_k)$ for each $k \in \N$. 
+Thus, we can apply the above arguement to claim that $T$ has a \PseudoFixedPoint $x_2$ with respect to $(X,\norm{\cdot}_{i_1})$ which is contained in $K_1$. 
+Then defining $K_2 = K_1 \cap{x_2+\overline{0}_{i_2}}$ we can produce a sequence $\{x_i\}_{i \in \N}$ such that for each $i \in \N$, if $j>i$, then
+\begin{equation*}
+x_j \in x_i + \overline{0}_{i}
+\end{equation*}
+Hence, we can apply
+\ref{thm:FixedPointConvergence}
+to claim the existence of a \FixedPoint $\tilde{T}$ of $T$. 
+\end{proof}
+\end{thm}

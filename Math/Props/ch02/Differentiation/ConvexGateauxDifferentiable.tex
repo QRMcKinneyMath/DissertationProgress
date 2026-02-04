@@ -1,0 +1,62 @@
+\begin{prop}[Convex Continuous Derivative]%Cioranescu 1.19
+\label{prop:ConvexContinuousDerivative}
+\rm
+Let $X$ be a locally convex \TVS. 
+Let $f:X \to \overline{\R}$ be \ConvexFunction.
+Let $x_0 \in \InteriorMark{D(T)}$.
+Define $T:X \to \overline{\R}$ by 
+$Ty = f_+'(x_0,y)$.
+Then $T$ is 
+\ConvexFunction and 
+$T\alpha y = \alpha Ty$ for any $\alpha > 0$.
+If $f$ is \ContinuousFunction at $x_0$, then 
+$T$ is \ContinuousFunction on $X$.
+\begin{proof}
+Fix 
+$x_ \in \InteriorMark{D(T)}$.
+Let $y \in X$. Let $\alpha > 0$. 
+Then 
+\begin{equation*}
+T\alpha y = f_+'(x_0, \alpha y ) = \lim\limits_{t_0 \searrow 0} \frac{f(x_0+t\alpha y_0) -f(x_0)}{t_0} = \alpha \lim\limits_{t_0 \searrow 0} \frac{f(x_0+t_0 \alpha y)-f(x_0)}{\alpha t_0} = \alpha f_+'(x_0, y)
+\end{equation*}
+so the positive scalar homogeniety holds. 
+For convexity, let $y_1,y_2 \in X$. 
+Then 
+\begin{align*}
+T\pa{\frac{y_1+y_2}{2}} &f_+'\pa{x_0, \frac{y_1+y_2}{2}} \\
+& = \lim\limits_{t \searrow 0} \frac{f\pa{x_0+ t \frac{y_1+y_2}{2}}-f(x_0)}{t}\\
+& = \lim\limits_{t \searrow 0}\frac{f\pa{ \frac{1}{2} \pa{x_0+ty_1}+\frac{1}{2}\pa{x_0+ty_2}}-f(x)}{t}\\
+& \leq  \frac{1}{2} \lim\limits_{t \searrow 0} \frac{f(x_0+ty_1)-f(x)}{t} + \frac{f(x_0+ty_2)-f(x_0)}{t}\\
+& \leq \frac{f_+'(x_0,y_1)+f_+'(x_0,y_2)}{2}\\
+& = \frac{Ty_1 +Ty_2}{2}
+\end{align*}
+Thus $T$ is \ConvexFunction.
+
+Finally, let $f$ be \ContinuousFunction at $x_0$. 
+By 
+\ref{thm:pointcontinuous}
+there exists $K \in \N$ 
+and 
+convex
+$U \in \scU_{0}$ such that $x_0+\overline{U} \subset \InteriorMark{D(f)}$
+and $\abs{f} \leq K$ on $x_0+\overline{U}$. 
+Let $\rho$ denote the \MinkowskiFunctional 
+of $U$. 
+Then $\rho$ is \ContinuousFunction and
+by 
+\ref{prop:ConvexDifferentiable}, 
+for any $y \in X$, 
+\begin{align*}
+f_+'(x_0,y) & \leq \frac{f(x_0+\frac{1}{\rho(y)}y) -f(x_0)}{\frac{1}{\rho(y)}}  \leq 2 K \rho\pa{y}
+\end{align*}
+and 
+\begin{equation*}
+f_+'(x_0,y)  \geq f_-'(x_0,y) 
+ \geq \frac{f(x_0)-f\pa{x_0-\frac{1}{\rho(y) }y)}}{\frac{1}{\rho(y)}} 
+ \geq -2 K \rho(y)
+\end{equation*}
+Hence $\abs{Ty}=\abs{f_+'(x_0,y)} \leq 2K \rho(y)$ for every $y \in X$.
+Thus another application of 
+\ref{thm:pointcontinuous} implies $T$ is \ContinuousFunction.
+\end{proof}
+\end{prop}

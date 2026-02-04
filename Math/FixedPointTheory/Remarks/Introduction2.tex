@@ -1,0 +1,40 @@
+\begin{rmk}
+\rm
+The goal of this section is to prove that if $X $ is a 
+suitably chosen \GSpace
+and $K \subset X$ is suitably chosen, 
+then any 
+\Coherently
+\PseudoAsymptoticallyNonexpansive
+$T:K \to K$  has a \FixedPoint.
+This is not a case covered by standard metric fixed point theory 
+because a \Coherently \AsymptoticallyNonexpansive operator defined on a \GSpace 
+is not necessarily \AsymptoticallyNonexpansive with respect to the 
+metric on $X$.
+To see this, consider the \PseudometricSpace 
+$L^p_{loc}$ of measurable functions defined on $[0,\infty)$ 
+whose absolute value integral over any \SetCompact set is finite,
+where convergence is defined in $L^p$ on any \SetCompact set. 
+Consider the sequence of \Seminorms $\{\norm{\cdot}_i\}_{i \in \N}$ 
+on $L^p_{loc}$ defined by 
+\begin{equation*}
+\norm{f}_i = \pa{\int\limits_0^i |f|^p}^{1/p}
+\end{equation*}
+Now, define $T:L^p_{loc} \to L^p_{loc}$ by 
+\begin{equation*}
+Tf(x)=\begin{dcases}
+0 & x \in [0,1)\\
+k^2f(x-1) & x \in [k-1,k) 
+\end{dcases}
+\end{equation*}
+Then, for each $i \in \N$, and for each $x,y \in L^p_{loc}$, 
+we have 
+\begin{equation*}
+\norm{T^ix-T^iy}_i^i = 0
+\end{equation*}
+Hence, $T$ is \AsymptoticallyNonexpansive in the 
+\GSpace sense, but
+$T$ is not \AsymptoticallyNonexpansive, 
+or even asymptotically Lipschitz in 
+the \Pseudometric sense. 
+\end{rmk}

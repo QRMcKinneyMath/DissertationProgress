@@ -1,0 +1,32 @@
+\begin{cor}[Convex Continuity]
+\label{cor:ConvexContinuity}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let $f:X \to (-\infty, \infty]$.
+Let $f$ be \LowerSemicontinuous.
+Suppose $\InteriorMark{D(f)} \neq \emptyset$.
+The following are true
+\begin{enumerate}
+\item 
+\label{cor:ConvexContinuity:Base}
+If $f$ is \ConvexFunction, then it is \ContinuousFunction on $\InteriorMark{D(f)}$. 
+\item 
+\label{cor:ConvexContinuity:Strict}
+If $f$ is \StrictlyConvexFunction, then it is \ContinuousFunction on $X$. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{cor:ConvexContinuity:Base}]
+Since $f$ is \LowerSemicontinuous, for each $n \in \N$, $\{f \leq n\}$ is \SetClosed. 
+Also, $D(f) = \bigcup\limits_{n \in \N} \{f \leq n \}$. 
+Since this set has nonempty \Interior, 
+by \ref{cor:BaireCategoryTheorem}, for some $m \in \N$, 
+$\{f \leq m\}$ has nonempty \Interior. 
+An application of 
+\ref{thm:pointcontinuous}
+finishes this result. 
+\end{proof}
+\begin{proof}[Proof of \ref{cor:ConvexContinuity:Strict}]
+This follows from an application of 
+\ref{cor:ConvexContinuity:Base} paired with 
+\ref{prop:StrictlyConvexFinite}.
+\end{proof}
+\end{cor}

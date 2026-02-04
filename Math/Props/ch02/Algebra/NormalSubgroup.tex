@@ -9,13 +9,13 @@ The following are equivalent.
 $K$ is a \NormalSubgroup of $G$. 
 \item 
 \label{prop:NormalSubgroup:CosetOfIdentity}
-There exists a \Congruence $\cong$ on $G$ such that $H = [e]$. 
+There exists a \Congruence $\cong$ on $G$ such that $K = [e]$. 
 \item 
 \label{prop:NormalSubgroup:CosetOfIdentityUnique}
-There exists a unique \Congruence $\cong$ on $G$ such that $H = [e]$. 
+There exists a unique \Congruence $\cong$ on $G$ such that $K = [e]$. 
 \item 
 \label{prop:NormalSubgroup:KernelOfHomomorphism}
-There exists a group $H$ and a \MagmaHomomorphism $T:G \to H$ such that 
+There exists a \Group $H$ and a \MagmaHomomorphism $T:G \to H$ such that 
 $K=T^{-1}(n)$ where $n$ is the \IdentityElement of $H$. . 
 \end{enumerate}
 \begin{proof}[Proof of \ref{prop:NormalSubgroup:Normal} implies \ref{prop:NormalSubgroup:CosetOfIdentity}]
@@ -42,7 +42,7 @@ Hence $K=[e]$.
 
 \begin{proof}[Proof of \ref{prop:NormalSubgroup:CosetOfIdentity} implies \ref{prop:NormalSubgroup:CosetOfIdentityUnique}]
 Let $\cong_1$ and $\cong_2$ be \Congruences on $G$ such that 
-$H=[e]_{1}=[e]_{2}$. 
+$K=[e]_{1}=[e]_{2}$. 
 Let $x \cong_1 y$. 
 Then $[x]_1 = [xy^{-1}y]_1=[xy^{-1}]_1[y]_1=[xy^{-1}][x]_1$. 
 Hence $[xy^{-1}]_1 = [e]_1$, so $xy^{-1} \cong_1 e$. 
@@ -50,9 +50,10 @@ Hence $xy^{-1} \cong_2 e$.
 Thus, $[x]_2 = [xy^{-1}y]_2 = [xy^{-1}]_2[y]_2 = [e]_2[y]_2 = [y]_2$.
 Thus $x \cong_2 y$. 
 Hence $\cong_1 \subset \cong_2$. 
-By a similar argument, $\cong_2 \subset \cong_1$, 
-There is at most $1$ \Congruence on $G$ 
-such that $[e] = K$ for any subset $K$ of $G$. 
+By a similar argument, $\cong_2 \subset \cong_1$.
+Thus, $\cong_1=\cong_2$ so there is 
+at most $1$ \Congruence on $G$ 
+such that $[e] = K$.
 \end{proof}
 \begin{proof}[Proof of \ref{prop:NormalSubgroup:CosetOfIdentityUnique} implies \ref{prop:NormalSubgroup:KernelOfHomomorphism}]
 Let $\cong$ be a \Congruence on $G$ for which $[e] = K$. 
@@ -67,8 +68,15 @@ $T:G \to G/\cong$ defined by $T(x)=[x]$ is a
 \MagmaHomomorphism.
 Furthermore, by \ref{prop:QuotientMagma:Identity}, 
 $[e]$ is the \IdentityElement of $G/\cong$. 
-Hence, because
-$K = [e] = \{x \in G : x \cong e\} = \{x \in G: [x] = [e]\} = \{x \in G : T(x)=[e]\} = T^{-1}\pa{[e]}$
+Thus, we conclude
+\begin{align*}
+K & = [e] \\
+& = \{x \in G : x \cong e\} \\
+& = \{x \in G: [x] \\
+& = [e]\} \\
+& = \{x \in G : T(x)=[e]\} \\
+& = T^{-1}\pa{[e]}
+\end{align*}
 \end{proof}
 \begin{proof}[Proof of \ref{prop:NormalSubgroup:KernelOfHomomorphism} implies \ref{prop:NormalSubgroup:Normal}]
 It suffices to show that $K=T^{-1}(e)$ is a \NormalSubgroup of $G$. 

@@ -1,0 +1,29 @@
+\begin{thm}[Bishop-Phelps Theorem]
+\label{thm:BishopPhelps}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let  $C \subset X$ be \SetClosed, bounded, and \ConvexSet.
+Define 
+\begin{equation*}
+M_C:=\{f \in X^*| (\exists x_0 \in C)(\ip{x_0,f}=\sup\limits_{x \in C}\ip{x,f})\}
+\end{equation*}
+Then $\overline{M_C}=X^*$
+\begin{proof}
+If $x_0 \in X$, then it is clear that $M_C=M_{C+x_0}$. 
+Hence, without loss of generality, we assume $0 \in C$.
+Furthermore, since $M_C$ is a \VectorSubspace of $X$, 
+it is sufficient to show that $M_C$ is \TopologyDense in $\partial B_{X^*}(0;1)$. 
+Let $x^* \in \partial B_{X^*}(0;1)$.
+Let $\epsilon \in (0,1)$ and let $1+\frac{2}{\epsilon} < k$. 
+By \ref{rmk:ClosedConvexCone}, $K(x^*,k)$ is a 
+\SetClosed \ConvexCone with nonempty interior. 
+Applying \ref{lem:BishopPhelps:Existence}, there exists an $x_0 \in C$ with $x_0 \in K(x^*,k)$ and $\pa{K(x^*,k)+x_0} \cap C = \{x_0\}$. 
+By the Hahn Banach theorem, there exists $y^* \in \partial B_{X^*}(0;1)$ satisfying
+\begin{equation*}
+\sup\limits_{x \in C} \ip{x,y^*} = \ip{x_0,y^*} = \inf\limits_{x \in K(x^*,k)+x_0} \ip{x,y^*} = \inf\limits_{\tilde{x} \in K(x^*,k)} \ip{\tilde{x},y^*}+ \ip{x_0,y^*}
+\end{equation*}
+Hence $y^*$ is positive on $K(x^*,k)$, 
+so by \ref{lem:BishopPhelps:Bound}, $||x^*-y^*||< \epsilon$.
+Since $y^* \in M$ and $x^* \in X$ was arbitrary, we are done.
+\end{proof} 
+\end{thm}

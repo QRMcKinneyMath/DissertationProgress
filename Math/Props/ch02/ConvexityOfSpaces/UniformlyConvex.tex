@@ -1,0 +1,49 @@
+\begin{prop}[Uniformly Convex Spaces]
+\label{prop:UniformlyConvexSpace}
+\rm
+Let $X$ be a \SeminormedSpace.
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:UniformlyConvexSpace}~\roman*}]
+\item 
+\label{prop:UniformlyConvexSpace:Convex}
+X is \UniformlyConvex.
+\item 
+\label{prop:UniformlyConvexSpace:EpsilonDelta}
+For each $\epsilon > 0$, there is a $\delta > 0$ such that if $x,y \in \overline{B_X(0;1)}$ and $\norm{x-y} \geq \epsilon$, then $\norm{x+y} \leq 2(1-\delta)$. 
+\item 
+\label{prop:UniformlyConvexSpace:Convergence}
+If $\{x_i\}_{i \in \N} , \{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ and $\norm{x_n+y_n} \to 2$, then $x_n-y_n \to 0$. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:UniformlyConvexSpace:Convex} implies \ref{prop:UniformlyConvexSpace:EpsilonDelta}]
+Let $X$ be \UniformlyConvex. 
+Let $\epsilon > 0$. 
+Define $\delta = \Delta(\epsilon)$. 
+Let $x \in \overline{B_X(0;1)}$
+Let $y \in \overline{B_X(0;1)}$
+such that $\norm{x-y} \geq \epsilon$.
+Then $0 < \delta = \Delta(\epsilon) \leq \tilde{\Delta}(\epsilon, x)  \leq 1- \norm{\frac{x+y}{2}}$. 
+Hence, $\norm{x+y} \leq 2\pa{1-\delta}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformlyConvexSpace:EpsilonDelta} implies \ref{prop:UniformlyConvexSpace:Convergence}]
+Let $\{x_i\}_{i \in \N},\{y_i\}_{i \in \N} \subset \overline{B_X(0;1)}$ 
+such that $\norm{x_n+y_n} \to 2$. 
+Let $\epsilon > 0$. 
+Then there exists a $\delta > 0$ such that 
+if $x,y  \in \overline{B_X(0;1)}$ and $\norm{x-y} \geq \epsilon$
+then $\norm{x+y} \leq 2(1-\delta)=2-2\delta$. 
+Since $\norm{x_n+y_n} \to 2$, there exists $K \in \N$ such that 
+for $k > K$, 
+$\norm{x_k+y_k} > 2\pa{1-\delta}$.
+This then implies $\norm{x_k-y_k}  < \epsilon$, so $x_k-y_k \to 0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:UniformlyConvexSpace:Convergence} implies \ref{prop:UniformlyConvexSpace:Convex}]
+Suppose $X$ is not \UniformlyConvex.
+Then there exists an $\epsilon > 0$ 
+and a sequence $\{x_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that 
+$\tilde{\Delta}(\epsilon, x_i) \searrow 0$. 
+hence, there exists a corresponding sequence $\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ 
+such that $\norm{x_i-y_i} \geq \epsilon $ for every $i$
+and $1-\norm{\frac{x_i+y_i}{2}} \to 0$. 
+That is, $\norm{x_i+y_i} \to 2$, but $x_i-y_i \not \to 0$. 
+\end{proof}
+\end{prop} 

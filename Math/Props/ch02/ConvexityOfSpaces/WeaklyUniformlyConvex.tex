@@ -1,0 +1,66 @@
+\begin{prop}[Weakly Uniformly Convex Spaces]
+\label{prop:WeaklyUniformlyConvex}
+\rm
+Let $X$ be a \SeminormedSpace.
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:WeaklyUniformlyConvex}~\roman*}]
+\item 
+\label{prop:WeaklyUniformlyConvex:Convex}
+$X$ is \WeaklyUniformlyConvex.
+\item 
+\label{prop:WeaklyUniformlyConvex:EpsilonDelta}
+For each $\epsilon > 0$ and $x^* \in \overline{ B_{X^*}(0;1)}$, there is a $\delta > 0$ such that if $x,y \in \partial B_X(0;1)$ 
+such that $\norm{x-y} > \epsilon$ then $\ip{x+y,x^*} \leq 2(1-\delta)$.
+\item 
+\label{prop:WeaklyUniformlyConvex:Convergence}
+If $\{x_n\}_{n \in \N} , \{y_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ and $\norm{x_n+y_n} \to 2$, then $x_n-y_n \overset{w}{\to} 0$. 
+This One really is an open question... Gotta look into it. 
+\item
+\label{prop:WeaklyUniformlyConvex:WeakConvergence}
+For every $x^* \in \partial B_{X^*}(0;1)$, if 
+If $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ and 
+$\{y_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ such that 
+$\ip{x_k+y_k, x^*} \to 2$, then $x_n -y_n \to 0$. 
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:WeaklyUniformlyConvex:Convex} implies \ref{prop:WeaklyUniformlyConvex:EpsilonDelta}]
+Let $X$ be \WeaklyUniformlyConvex.
+Let $\epsilon > 0$. 
+Let $x^* \in \overline{B_{X^*}(0;1)}$. 
+Define $\delta = \Delta_w(\epsilon, x^*)>0$. 
+Let $x \in \partial B_X(0;1)$. 
+Let $y \in \partial B_X(0;1)$ such that $\norm{x-y} > \epsilon$. 
+Then $y \in X \setminus B_X(x;\epsilon)$. 
+Hence  
+\begin{equation*}
+1-\ip{\frac{x+y}{2}, x^*} \geq \tilde{\Delta}_w(\epsilon,x,x^*)  \geq \Delta_w(\epsilon,x^*) = \delta
+\end{equation*}
+Solving, we have 
+\begin{equation*}
+2(1-\delta) \geq \ip{x+y, x^*}
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeaklyUniformlyConvex:EpsilonDelta} implies \ref{prop:WeaklyUniformlyConvex:WeakConvergence}]
+Let $x^* \in \partial B_{X^*}(0;1)$. 
+Let $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ 
+and let $\{y_n\}_{n \in \N} \subset \overline{B_X(0;1)}$
+such that $\ip{x_k+y_k,x^*} \to 2$. 
+Let $\epsilon > 0$. 
+Then there exists $\delta > 0$ such that 
+if $x,y \in \overline{B_X(0;1)}$ and $\norm{x+y} > 2-2\delta$ 
+Then $\norm{x-y} < \epsilon$. 
+Hence $\norm{x_k-y_k} \to 0$ as $k \to \infty$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeaklyUniformlyConvex:WeakConvergence} implies \ref{prop:WeaklyUniformlyConvex:Convex}]
+I prove by converse. 
+Suppose $X$ is not \WeaklyUniformlyConvex.
+Then for some $x^* \in  \partial B_{X^*}(0;1)($, 
+$X$ is not \WeaklyUniformlyConvex at $x^*$. 
+For this $x^*$ there exists an $\epsilon > 0$
+and a sequence $\{x_i\}_{i \in \N} \subsety \partial B_X(0;1)$
+such that $\tilde{\Delta}(\epsilon, x_i, x^*) \searrow 0$ 
+Hence, there is a corresponding sequence 
+$\{y_i\}_{i \in \N} \subset \partial B_X(0;1)$ such that $\norm{x_i-y_i} \geq \epsilon$ 
+for every $i$ and $1-\ip{\frac{x_i+y_i}{2}, x^*} \to 0$. 
+That is, $\ip{\frac{x_i+y_i}{2}, x^*} \to 2$, but $x_i-y_i \not \to 0$. 
+\end{proof}
+\end{prop} 

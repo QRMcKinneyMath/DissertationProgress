@@ -1,0 +1,23 @@
+\newcommand{\ConvexCone}[0]{\textbf{\hyperref[def:ConvexCone]{Convex Cone}}\xspace}
+\newcommand{\ConvexCones}[0]{\textbf{\hyperref[def:ConvexCone]{Convex Cones}}\xspace}
+\newcommand{\Supports}[0]{\textbf{\hyperref[def:ConvexCone]{Supports}}\xspace}
+\newcommand{\Support}[0]{\textbf{\hyperref[def:ConvexCone]{Support}}\xspace}
+\begin{df}[Convex Cone]
+\label{def:ConvexCone}
+\rm
+Let $X$ be a \SeminormedSpace over $\R$.
+Let $K \subset X$ be \ConvexSet and closed under positive scalar multiples.
+Then we call $K$ a \ConvexCone in $X$.
+Let $J$ be a \ConvexCone in $X$
+Let $C \subset X$. 
+Let $x_0 \in C$. 
+Suppose $\pa{J+x_0} \cap C = \{x_0\}$. 
+Then we say that $J$ \Supports $C$ at $x_0$. 
+Let $x^* \in \partial B_{X^*}(0;1)$.
+Let $\alpha > 0$.
+Then we define 
+
+\begin{equation*}
+K(x^*,\alpha):=\{x \in X: ||x|| \leq \alpha \ip{x,x^*}\}
+\end{equation*}
+\end{df} 

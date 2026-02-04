@@ -1,0 +1,49 @@
+\begin{lem}[Metrizable Weak]
+\label{lem:metrizableweak}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Suppose $X^*$ contains a \Countable subset 
+which separates points mod $\Ker_X$.
+Let $A \subset X$ be \weakly \SetCompact.
+Then the \SubspaceTopology on $A$ induced by the \weak \Topology on  $X$ 
+is \Pseudometrizable. 
+\begin{proof}
+By \ref{prop:pseudometrizableprequotient} and \ref{prop:weakquotients}, 
+we can without loss of generality assume that 
+$X$ is a \NormedSpace 
+and that 
+$\{x_i^*\}_{i \in \N}$ separate points in $X$.
+Since $A$ is \weakly \SetCompact, by 
+\ref{prop:WeaklyCompactIsNormBounded}, $A$ is \Norm bounded.
+Let $M=2\sup\limits_{x \in A} ||x||$.
+Define $d:A \times A \to [0,\infty)$ by setting, for $x,y \in A$.
+\begin{equation*}
+d(x,y) = \sum_{k \in \N} \frac{\abs{\ip{x-y,x_k^*}}}{\norm{x_k^*} 2^k}
+\end{equation*}
+Since $A$ is \Norm bounded, the sum involved in the definition of $d$ 
+is always absolute convergent, so $d$ is well defined. 
+It is obvious that $d$ is a \Metric on $A$. 
+Let $x \in A$, $\epsilon > 0$ be arbitrary, and define 
+\begin{equation*}
+n=\ceil{2+log_2\pa{\frac{M}{\epsilon}}} \tab[1cm] U=A \cap \bigcap_{k=1}^n
+\left\{y \in X : \abs{\ip{x-y,x_k^*}} < \frac{\norm{x_k^*}2^{k-1}\epsilon}{n}\right\}
+\end{equation*}
+The $U$ is 
+\SetOpen in the \SubspaceTopology on $A$ induced by the \weak \Topology on $X$. 
+Furthermore, if $y \in U$, then 
+\begin{equation*}
+\begin{split}
+d(x,y) &= \sum_{k \in \N} \frac{\abs{\ip{x-y,x_k^*}}}{\norm{x_k^*}2^k} \\
+& \leq \sum_{k=1}^n \frac{\abs{\ip{x-y,x_k^*}}}{\norm{x_k^*}2^k} + \sum_{k=n+1}^\infty \frac{2M}{2^k}\\
+& < \sum_{k=1}^n \frac{\epsilon}{2n}+ \frac{M}{2^{n-1}}< \epsilon
+\end{split} 
+\end{equation*}
+So that $U \subset B_d(x;\epsilon)$. 
+This implies $Id:(A,\mathcal{T}_w) \to (A,\mathcal{T}_d)$ is 
+\ContinuousFunction. 
+Since a \ContinuousFunction \Injection from a \SetCompact space into a 
+\Hausdorff space is a \Homeomorphism, the \SubspaceTopology on A 
+induced by the \weak \Topology equals the \Topology on $A$ induced by $d$, and so 
+the \weak \Topology on $A$ is \Metrizable.
+\end{proof} 
+\end{lem}

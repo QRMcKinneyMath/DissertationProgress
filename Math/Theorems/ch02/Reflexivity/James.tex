@@ -1,0 +1,120 @@
+\begin{thm}[James]
+\label{thm:James}
+\rm
+Let $X$ be a 
+\Complete \SeminormedSpace.
+The following conditions are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{thm:James}~\roman*}]
+\item 
+\label{thm:James:NotReflexive}
+$X$ is not \Reflexive.
+\item 
+\label{thm:James:1}
+For each $\alpha \in (0,1)$, there exists an $\{x_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ and a \VectorSubspace $Y \subset X$ 
+such that $d\pa{ \overline{co}\{x_i^*\}_{i \in \N}-Y^{\perp},0} \geq \alpha$ and that $\ip{y,x_i^*} \to 0$ for each $y \in Y$, 
+where $Y^{\perp} = \{y \in X^* : Y \subset Kernel(y)\}$. 
+\item 
+\label{thm:James:2}
+For every $\alpha \in (0,1)$ and $\{\beta_i\}_{i \in \N} \subset [0,\infty)$ such that $\sum_{i \in \N} \beta_i = 1$, there is a $\gamma \in [0,2]$ and  $\{y_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$ such that for each $y^* \in CoLim\{y_i^*\}_{i \in \N}$, each $i \in \N$, 
+\begin{equation*} 
+\norm{\sum_{j \in \N} \beta_j \pa{ y_j^*-y^*}} = \gamma \tab[1cm] \norm{\sum_{j=1}^i \beta_j \pa{ y_j^*-y_j}} < \gamma \pa{1-\alpha \pa{ \sum_{j=i+1}^{\infty} \beta_j}}
+\end{equation*}
+\item 
+\label{thm:James:Norm}
+There exists $x^* \in X^*$ which doesn't achieve its \Norm.  
+\end{enumerate}
+\begin{proof}[Proof of \ref{thm:James:NotReflexive} implies \ref{thm:James:1}]
+Let $X$ be not-\Reflexive.
+By \ref{lem:ReflexiveSeparable}, $X$ contains a \SetClosed \TopologySeparable
+\VectorSubspace $S$.
+An application of \ref{thm:JamesSeparable} implies the existence of a \Sequence $\{x_i\}_{i \in \N} \subset \overline{B_{S^*}(0;1)}$ such that 
+\begin{equation*}
+d_s\pa{0,\overline{co}\{x_i\}_{i \in \N}} \geq \alpha \tab[1cm] x_i \overset{S-w^*}{\to} 0
+\end{equation*}
+Let $y^{\perp} \in S^{\perp}$. 
+For each $i \in \N$, let $x_i^*$ be a Hahn-Banach extension of $x_i$ living in $\overline{B_{X^*}(0;1)}$.
+Let $x^* \in \overline{co}\{x_i^*\}_{i \in \N}$. 
+Then $x:=x^*|_{S} \in \overline{co}\{x_i\}_{i \in \N}$. 
+If $y^{\perp} \in S^{\perp}$, then 
+\begin{equation*}
+\norm{x^*-y^{\perp}} \geq \norm{x-\pa{y^{\perp}|_S}}_S = \norm{x} \geq \alpha
+\end{equation*}
+so $d\pa{ \overline{co}\{x_i^*\}_{i \in \N}-S^{\perp},0} \geq \alpha$.
+Also, 
+If $y \in S$, then since $x_i=x_i^*|_S$, 
+$\ip{y,x_i^*}=\ip{y,x_i} \to 0$.
+Hence, $x_i \overset{S-w^{*}}{\to} 0$.
+Thus \ref{thm:James:1} holds with $Y=S$. 
+\end{proof}
+\begin{proof}[Proof of \ref{thm:James:1} implies \ref{thm:James:2}]
+Let $\alpha  \in (0,1)$. 
+Let $\{\beta_i\}_{i \in \N} \subset [0,\infty)$ such that $\sum\limits_{i \in \N} \beta_i =1$. 
+By 
+\ref{thm:James:1}, 
+there exists 
+$\{x_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$
+and a \VectorSubspace $Y \subset X$
+such that 
+$\ip{y, x_i^*} \to 0$ for each $y \in Y$ 
+and 
+$d\pa{\overline{co}\{x_i^*\}_{i \in \N}-Y^{\perp}, 0} \geq \alpha$. 
+Since $\ip{y, x_i^*} \to 0$ for each $y \in Y$, we conclude $CoLim\{x_i^*\}_{i \in \N} \subset Y^{\perp}$. 
+Hence $d\pa{\overline{co}\{x_i^*\}_{i \in \N} - CoLim\{x_i^*\}_{i \in \N}, 0} \geq \alpha$. 
+Thus we can apply 
+\ref{lem:james:ClosedBall}
+to claim the existence of $\gamma \in [\alpha, 2]$, 
+the existence of $\{y_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$, 
+and the existence of $y^* \in CoLim\{y_i^*\}_{i \in \N}$ such that 
+\begin{equation*}
+\norm{\sum\limits_{j \in \N} \beta_j \pa{y_j^*-y^*}} = \gamma
+\end{equation*}
+and
+for every $n \in \N$, 
+\begin{equation*}
+\norm{\sum\limits_{j=1}^n \beta_j \pa{y_j^*-y^*}} < \gamma \pa{1-\alpha \pa{\sum\limits_{j=n+1}^{\infty} \beta_j}}
+\end{equation*}
+so that \ref{thm:James:2} holds.
+\end{proof}
+\begin{proof}[Proof of \ref{thm:James:2} implies \ref{thm:James:Norm}]
+Let $\alpha \in (0,1)$. 
+Define $\eta=\frac{\alpha^2}{4}$.
+Let $\{\beta\}_{i \in \N} \subset (0,\infty)$ such that 
+For each $n \in \N$, 
+$\beta{n+1} <\eta \beta$ and $\sum_{k \in \N} \beta = 1$.
+By 
+\ref{thm:James:2}, there exists 
+$\{y_i^*\}_{i \in \N} \subset \overline{B_{X^*}(0;1)}$
+such that for each $y^* \in CoLim\{y_i^*\}_{i \in \N}$ and for each $i \in \N$, 
+\begin{equation*} 
+\norm{\sum_{j \in \N} \beta_j \pa{ y_j^*-y^*}} = \gamma \tab[1cm] \norm{\sum_{j=1}^i \beta_j \pa{ y_j^*-y_j}} < \gamma \pa{1-\alpha \pa{ \sum_{j=i+1}^{\infty} \beta_j}}
+\end{equation*}
+By 
+\ref{rmk:colimnonempty}, there exists $y^* \in CoLim\{y_i^*\}_{i \in \N}$. 
+Let $x \in \overline{B_X(0;1)}$. 
+Since $\alpha \leq \gamma$, there exists $i \in \N$ such that 
+\begin{equation*}
+\ip{x,y_{i+1}^*-y^*} < \alpha^2 - 2\eta \leq \alpha \gamma - 2 \eta
+\end{equation*}
+For this x, we have 
+\begin{equation*}
+\begin{split}
+\ip{x, \sum_{j \in \N} \beta_j (y_j^*-y^*)}& < \sum_{j=1}^i \beta_j \ip{x,y_j^*-y^*}+ \beta_{i+1} \pa{\alpha \gamma - 2 \eta} + \sum_{j=i+2}^{\infty} \beta_j \ip{x,y_j^*-y^*}\\
+& \leq \norm{\sum_{j=1}^i \beta_j(y_j^*-y^*)}+ \beta_{i+1} \pa{\alpha \gamma -2\eta}+ 2 \sum_{j=i+2}^{\infty} \beta_j\\
+& \leq \gamma \pa{1-\alpha \pa{\sum_{j=i+1}^{\infty} \beta_j}}+ \beta_{i+1}(\alpha \gamma -2\eta)+ 2 \sum_{j=i+2}^{\infty} \beta_j\\
+& = \gamma -\gamma \alpha \sum_{j=i+2}^{\infty} \beta_j-2 \eta \beta_{i+1} + 2 \sum_{j=i+1}^{\infty} \eta \beta_j\\
+& \leq \gamma - \pa{\gamma \alpha - 2 \eta} \sum_{j=i+1}^{\infty} \beta_j < \gamma = \norm{\sum_{j \in \N} \beta_j \pa{y_j^*-y^*}}
+\end{split}
+\end{equation*}
+Since $x \in \overline{B_X(0;1)}$ was arbitrary, we are done. 
+\end{proof}
+\begin{proof}[Proof of \ref{thm:James:Norm} implies \ref{thm:James:NotReflexive}]
+I prove via contrapositive.
+Let $X$ be \Reflexive. 
+Let $x^* \in X$.
+Then there is a sequence $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ such that $\ip{x_n,x^*} \to \norm{x^*}$.  
+By  
+\ref{lem:ReflexiveSeparable}, 
+$\{x_n\}_{n \in \N}$ has \weakly convergent a subsequence $x_{k_n} \wto x \in \overline{B_X(0;1)}$. 
+This x satisfies $\ip{x,x^*} = \norm{x^*} = \norm{x^*}\norm{x}$.
+\end{proof} 
+\end{thm} 

@@ -8,26 +8,39 @@ The following are true.
 \begin{enumerate}[label=(\roman*), ref={\ref{prop:Orthogonal}~\roman*}]
 \item 
 \label{prop:Orthogonal:Kernel}
-$\ip{x,j} = \norm{x} \norm{j}$ if and only if for each $y \in kern\pa{j}$, $x \perp y$. 
+$\ip{x_0,j} = \norm{x_0} \norm{j}$ if and only if for each $y \in kern\pa{j}$, $x_0 \perp y$. 
+In other words, if $J$ is the 
+\NormalizedDualityMap of $X$, then
+there exists nonzero $\alpha \in \F$ such that 
+$\alpha j \in J(x)$ if and only if 
+for each $y \in kern(j)$, $x_0 \perp y$. 
 \item 
 \label{prop:Orthogonal:Hyperplane}
-x is orthogonal to each element of some hyperplane in X. 
+$x_0$ is \Orthogonal to each element of some hyperplane in X. 
 \item 
 \label{prop:Orthogonal:Projection}
-For some $\alpha \neq 0$ $x \perp \pa{\alpha x + z}$.
+If $x_0$ is not \Orthogonal to 
+$z_0$, then  for some $\alpha \neq 0$ $x_0 \perp \pa{\alpha x_0 + z_0}$.
+\item
+\label{prop:Orthogonal:Norm}
+If $\norm{x_0} \neq 0$ and  $x_0 \perp \alpha x_0 + y_0$, then 
+$\abs{\alpha} \leq \frac{\norm{y_0}}{\norm{x_0}}$.
 \item 
 \label{prop:Orthogonal:Minimizer}
-The mapping $T:\mathbb{F} \to \R$ defined by $T\alpha = \norm{\alpha x+z}$ achieves its minimum, 
-and if $\lambda_0$ is a point at which it achieves this minimum, then $\pa{\lambda_0 x + y} \perp x$ for any $\lambda_0$ which minimizes T. 
-Furthermore, since T as defined earlier is a convex function, the set of $\lambda$ for which $\pa{\lambda x+y} \perp x$ is a convex set. 
+Define $T:\mathbb{F} \to \R$ by $T\alpha = \norm{\alpha x+z}$.
+$T$ achieves its global minimum.
+Furthermore, $\lambda_0$ is a point at which $T$ achieves its minimum, 
+if and only if  $\pa{\lambda_0 x + y} \perp x$.
+The set of $\lambda_0$ for which $T$ is minimized is \ConvexSet.
+\item
+\label{prop:Orthogonal:Duality}
+$x_0 \perp \alpha x_0 + y_0$ if and only if there exists $j \in J(x_0)$ such that $\alpha = \frac{- \ip{y_0,j}}{\norm{x_0}^2}$.
 \end{enumerate} 
 \begin{proof}[Proof of \ref{prop:Orthogonal:Kernel}]
 $\pa{\implies}$. 
 Suppose $\ip{x_0,j} = \norm{x_0} \norm{j}$. 
 Let $y \in Ker(j)$. Then, if $\alpha \in \F$, we have 
-\begin{align*}
-\norm{j}\norm{x_0} & = \ip{x_0,j} = \ip{x+\alpha y, j} \leq \norm{x+\alpha y, j}
-\end{align*}
+$\norm{j}\norm{x_0}  = \ip{x_0,j} = \ip{x+\alpha y, j} \leq \norm{x+\alpha y}\norm{ j}$.
 Dividing by $\norm{j}$ gives us our desired inequality. 
 
 $(\impliedby)$. 
@@ -38,7 +51,7 @@ $\ip{y,j} > \ip{x_0,j}$.
 Set $\gamma = \frac{\ip{x_0,j}}{\ip{y,j}} < 1$. 
 Then $\gamma y - x_0 \in Ker(j)$. 
 Furthermore, 
-$\norm{\gamma y -x_0} \geq \norm{x_0}-\gamma \norm{y} > 0$, and 
+$\norm{\gamma y -x_0} \geq \norm{x_0}-\gamma \norm{y}  =(1-\gamma) >0$, and 
 \begin{equation*}
 \norm{x_0+1 \pa{\gamma y - x_0 }} = \norm{\gamma y} = \abs{\gamma} \norm{y} < \norm{y} = \norm{x_0}
 \end{equation*}
@@ -46,12 +59,69 @@ Hence $\gamma y - x_0$ is not \Orthogonal to $x_0$, even though
 $\gamma y - x_0 \in Ker(j)$. 
 \end{proof}
 \begin{proof}[Proof of \ref{prop:Orthogonal:Hyperplane}]
-Set $T: span(x_0) \to \F$ by $T(\alpha x ) = \alpha $. 
-Then $\norm{T} = 1$ and by $Hahn-Banach$, there is an extension $\tilde{T} \in X^*$ 
-with $\norm{\tilde{T}} = 1$ and 
+Set $T: span(x_0) \to \F$ by $T(\alpha x_0 ) = \alpha \norm{x_0}$. 
+Then $\norm{T} = \norm{x_0}$ and $\ip{x_0, T} = \norm{x_0}^2$.
+By $Hahn-Banach$, there is an extension $\tilde{T} \in X^*$
+satisfying $\norm{\tilde{T}} = \norm{x_0}$. 
+Hence, by \ref{prop:Orthogonal:Kernel}, 
+$x_0 \perp y$ for each $y \in Kernel(T)$. 
 \end{proof}
 \begin{proof}[Proof of \ref{prop:Orthogonal:Projection}]
+Let $j \in J(x_0)$. 
+Then if $\alpha = \frac{-\ip{z_0,j}}{\ip{x_0,j}}$, we have 
+\begin{equation*}
+\ip{z_0+\alpha x_0, j} = \ip{z_0, j} = \frac{\ip{z_0,j} \ip{x_0,j}}{\ip{x_0,j}} = 0
+\end{equation*}
+An application of \ref{prop:Orthogonal:Kernel} 
+implies $x_0 \perp z_0+\alpha x_0$. 
+\end{proof}
+\begin{proof}[Proof of  \ref{prop:Orthogonal:Norm}]
+If $\alpha = 0$, then this is trivially true. 
+Suppose $\alpha \neq 0$. 
+Then, using $\lambda = \frac{-1}{\alpha}$, we have 
+\begin{equation*}
+\norm{x_0} \leq \norm{x_0 + \lambda \pa{\alpha x_0 + y_0}} = \norm{\pa{1+\lambda \alpha}x_0 + \lambda y_0} = \abs{\lambda} \norm{y_0} = \frac{1}{\abs{\alpha}} \norm{y_0}
+\end{equation*}
+Multiply both sides by $\abs{\alpha}$ to see the result.
 \end{proof}
 \begin{proof}[Proof of \ref{prop:Orthogonal:Minimizer}]
+If $\norm{x} = 0$, then $T$ is constant and the result clearly holds.
+Otherwise, $\lim\limits_{t \to \infty}T(t) = \infty$ and $\lim\limits_{t \to \infty}(T(t) = \infty$. 
+Also, $T(0) = \norm{z} \in \R$ and $T$ is \ContinuousFunction
+and \ConvexFunction.
+Hence $K=\{T \leq \norm{z}\}$ is \SetClosed and bounded and therefore \SetCompact.
+Thus $T$ has a global minimum on $K$.
+Let $A= \{x \in \F: T(x) = \inf\limits_{t \in \F} T(t)\}$. 
+Since $T$ is \ConvexFunction, $A$ is 
+\ConvexSet.
+Let $\lambda_0 \in A$ 
+and let $\alpha \in \F$. 
+Then 
+\begin{equation*}
+\norm{\lambda_0 x_0 + z}  = T(\lambda_0) \leq T(\lambda_0 + \alpha) = \norm{\pa{\lambda x_0+z}+ \alpha x}
+\end{equation*}
+Since $\alpha \in \F$ was arbitrary, $\pa{\lambda_0 x + z } \perp x$.
+
+\end{proof}
+\begin{proof}[Proof of  \ref{prop:Orthogonal:Duality}]
+Suppose there exists $j \in J(x_0)$ such that $\alpha x_0 + y_0 \in Kern(j)$.
+Then by 
+\ref{prop:Orthogonal:Kernel}, 
+$x_0 \perp \alpha x_0 + y_0$.
+
+Now suppose $x_0 \perp \alpha x_0 + y_0$. 
+Define $T:span\{x_0,\alpha x_0 + y_0\} \to \F$ by 
+\begin{equation*}
+T\pa{tx_0+s \pa{ \alpha x_0 + y_0}} =t\norm{x_0}
+\end{equation*}
+Then $T$ is \Linear and
+\begin{equation*}
+\norm{T(tx_0+s\pa{\alpha x_0+y_0}} = t \norm{x_0} \leq \abs{t} \norm{x_0+\frac{s}{t} \pa{\alpha x_0 + y_0}} = \norm{tx_0+ s \pa{\alpha x_0 + y_0}}
+\end{equation*}
+so that $\norm{T} \leq 1$. 
+Define $\tilde{T} = \norm{x_0} T$. 
+Then $\norm{\tilde{T}} = \norm{x_0}$ and $\ip{x_0, \tilde{T}} = \norm{x_0}^2$. 
+By Hahn-Banach, $\tilde{T}$ has a norm preserving extension $\overline{T} \in J(x_0)$. 
+Direct computation shows $\alpha = \frac{-\ip{y_0, \overline{T}}}{\norm{x_0}^2}$
 \end{proof}
 \end{prop} 

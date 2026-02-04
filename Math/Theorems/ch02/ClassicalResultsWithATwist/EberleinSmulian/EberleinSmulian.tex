@@ -1,0 +1,100 @@
+\begin{thm}[Eberlein-Smulian]
+\label{thm:eberleinsmulian}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $A \subset X$.
+The following are equivalent.
+\begin{enumerate}
+\item A is \weakly \SetCompact.
+\item A is \weakly sequentially \SetCompact.
+\end{enumerate}
+\begin{proof} $(1 \implies 2)$
+Let $A \subset X$ be \weakly \SetCompact.
+Let $\{x_i\}_{i \in \N} \subset A$. 
+Define $S=\overline{span\{x_i: i \in \N\}}$. 
+Since $S$ 
+is \SetClosed and \ConvexSet, it is 
+\weakly \SetClosed, 
+and so $A \cap S$ is \weakly \SetCompact.
+By construction, $S$ is \TopologySeparable, 
+and so contains a \Countable \TopologyDense set $\{y_i\}_{i \in \N}$. 
+By Hahn-Banach, for each $i \in \N$, there exists $y_i^* \in S^*$ such that $\ip{y_i,y_i^*}=\norm{y_i}$, 
+and since each $y_i^*$ is \ContinuousFunction, $\{y_i^*\}_{i \in \N}$  separates points in $S$ mod $\overline{0}$.
+We can therefore apply \ref{lem:metrizableweak} 
+to claim that the \SubspaceTopology on $A \cap S$ induced by 
+the \weak \Topology of $S$ is \Metrizable, 
+and therefore $\{x_i\}_{i \in \N}$ has a sub-sequence $\{x_{n_i}\}_{i \in \N}$ which is 
+\weakly $S-convergent$ (Convergent in the \WeakTopology topology induced by $S^*$).
+Since the \SubspaceTopology is no less fine that te \Topology that induces it, 
+$\{x_{n_i}\}_{i \in \mathbb{N}}$ is 
+\weakly $X-convergent$ (convergent in  the \WeakTopology induced by $X^*$).
+Since $A \subset X$ is \weakly \SetCompact, $A+\overline{0}$ is 
+\weakly \SetClosed, and so this sequence has a limit $x_0 \in A+\overline{A}$. 
+Hence, there exists $\tilde{x} \in \pa{x_0 + \overline{0}} \cap A$, and 
+the sub sequence converges to $\tilde{x}$.
+Since $\{x_i\}_{i \in \mathbb{N}}$ is an arbitrary sequence in $A$, $A$ is \weakly sequentially
+\SetCompact.
+\end{proof}
+\begin{proof} $(2 \implies 1)$. 
+Let $A \subset X$ be \weakly sequentially \SetCompact.
+Let $c$ denote the \CanonicalEmbedding of $X$ into $X^{**}$.
+Let $x^{**}$ be an element of the \weakstar \Closure of $c(A)$. 
+Let $x_1^1 \in X^*$ such that $\norm{x_1^1} = 1$. 
+By assumption, there exists $a_1^{**} \in c(A)$ such that $\abs{\ip{x_1^*,x^{**}-a_1^{**}}} < 1$. 
+By \ref{lem:finiteselection}, there exists $\{x_1^2,\cdots,x_{n_2}^2\} \subset \partial B_{X^*}(0;1)$ such that for each $y^{**} \in span\left\{x^{**},x^{**}-a_1^{**}\right\}$, 
+\begin{equation*}
+\norm{y^{**}} \leq 2 \max\limits_{1 \leq k \leq n_2} \abs{\ip{x_k^2,y^{**}}}
+\end{equation*}
+Also, since $x^{**}$ is in the $\weakstar$ \Closure of $c(A)$, there exists $a_2^{**} \in c(A) \cap U_2$ where
+\begin{equation*}
+U_2=\braces{y^{**} \in X^{**} : \pa{\forall 1 \leq j \leq 2}\pa{\forall 1 \leq k \leq n_j}\pa{\abs{\ip{x_k^j,x^{**}-y^{**}}} < \frac{1}{2}}}
+\end{equation*}
+Continuing inductively, we construct a sequence $\{a_n^{**}\}_{n \in \N} \subset c(A)$ such that for each $j \in \N$,  
+$\{x_k^{j}\}_{k=1}^{n_j} \subset \partial B_{X^*}(0;1)$ and for every 
+$y^{**} \in span\left\{x^{**},x^{**}-a_1^{**}, \cdots, x^{**}-a_{j-1}^{**}\right\}$, we have 
+\begin{equation*}
+\norm{y^{**}} \leq 2  \max\limits_{1 \leq k \leq n_j} \abs{\ip{x_k^j,y^{**}}}
+\end{equation*}
+and  $a_j^{**}\in c(A) \cap U_j$ where $U_j$ is the $\{x_k^{m}\}_{1 \leq m \leq j,1 \leq k \leq n_m}$ 
+$\weakstar$ \Neighborhood about $x^{**}$ of radius $\frac{1}{j}$.
+For each $k \in \N$, let $a_k \in c^{-1}(a^{**}_k)$. 
+Since $A$ is \weakly sequentially \SetCompact, 
+$\{a_k\}_{k \in \N}$ has a \weak cluster point $x \in A$. 
+Also, since $\overline{span\{a_i\}_{i \in \mathbb{N}}}$ is \weakly \SetClosed, 
+$x \in \overline{span\{a_i\}_{i \in \mathbb{N}}}$.
+Thus, 
+$c(x) \in \overline{span\{a_i^{**}\}_{i \in \N}}$, which then implies 
+$c(x) \in \overline{span\{x^{**},x^{**}-a_1^{**},x^{**}-a_2^{**},\cdots\}}$. 
+Since $\norm{\cdot}$ is \ContinuousFunction,
+and since each $x_i^k$ is \ContinuousFunction,
+we conclude that for each
+\begin{equation*}
+y^{**} \in \overline{\{x^{**},x^{**}-a_1^{**},x^{**}-a_2^{**},\cdots\}}
+\end{equation*}
+we have
+\begin{equation*}
+\norm{y^{**}} \leq 2 \sup\limits_{k \in \N, 1 \leq i \leq n_k} \abs{\ip{x_i^k,y^{**}}} 
+\end{equation*}
+This is useful, because for each $k \in \N$, $1 \leq i \leq n_k$, we have, for large enough j,
+\begin{equation*}
+\begin{split}
+\abs{\ip{x_i^k, x^{**}-c(x)}} & \leq \abs{\ip{x_i^k,x^{**}-a_j^{**}}} + \abs{\ip{x_i^k, a_j^{**}-c(x)}}\\
+& \leq \frac{1}{j}+ \abs{ \ip{ a_j-x, x_i^k}}
+\end{split}
+\end{equation*}
+Since $x$ is a \weak cluster point of $\{a_j\}_{j \in \N}$, this can be made
+arbitrarily small.
+Hence, $\abs{\ip{x_i^k,x^{**}-c(x)}}=0$, implying that 
+\begin{equation*}
+\norm{x^{**}-c(x)} \leq 2 \sup\limits_{k \in \N, 1 \leq i \leq n_k} \abs{\ip{x_i^k,x^{**}-c(x)}}=0
+\end{equation*}
+So $x^{**}=c(x)$, and therefore $c(A)$ is $\weakstar$ \SetClosed. 
+Since $A$ is \weakly-sequentially \SetCompact, 
+$c(A)$ is $\weakstar$ sequentially \SetCompact and therefore bounded by the Banach Steinhaus theorem. 
+By \ref{thm:BanachAlaogluMorales}, since $X^*$ is \Complete, 
+bounded $\weakstar$ \SetClosed sets are \SetCompact, and so $c(A)$ is $\weakstar$ \SetCompact. 
+Since the \weak \Topology on $A$ is the 
+preimage of the \weakstar \Topology on $c(A)$ under the map 
+$c$, $A$ is \weakly \SetCompact.
+\end{proof} 
+\end{thm} 

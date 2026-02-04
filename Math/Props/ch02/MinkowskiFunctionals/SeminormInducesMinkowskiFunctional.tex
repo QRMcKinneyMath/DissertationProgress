@@ -1,0 +1,26 @@
+\begin{prop}[\Seminorm Induces \MinkowskiFunctional]
+\label{prop:SeminormInducesMinkowski}
+\rm
+Let $(X, \norm{\cdot})$ be a \SeminormedSpace. 
+Let $B$ denote the \ClosedUnitBall of $X$. 
+Then $B$  is \Absorbing, \BalancedSet, and \ConvexSet and 
+therefore induces a \MinkowskiFunctional $\mu_B$. 
+Furthermore $\mu_B=\norm{\cdot}$. 
+\begin{proof}
+For each $x_0 \in X$, we have $x_0 \in \norm{x_0} B$, so $B$ is \Absorbing. 
+That $B$ is \Balanced is a direct consequence of the 
+\AbsScalarHomogeneity
+of $\norm{\cdot}$. 
+Finally, by the \TriangleInequality, if $x_0 ,y_0 \in B$, and 
+if $\lambda \in (0,1)$, we have 
+\begin{equation*}
+\norm{\lambda x_0 + (1-\lambda) y_0} \leq \lambda \norm{x_0} + (1-\lambda) \norm{y_0} = 1
+\end{equation*}
+so $B$ is \ConvexSet. 
+Now for every $\lambda > \norm{x_0}$, $\norm{\frac{x_0}{\lambda}} < 1$, so $\frac{1}{\lambda} x_0 \in B$. 
+Hence $\mu_B(x_0) \leq \norm{x_0}$. 
+If $\lambda < \norm{x_0}$, then $\norm{\frac{x_0}{\lambda}} > 1$, so $\frac{x_0}{\lambda} \not \in B$. 
+Hence $\norm{x_0} \leq \mu_B(x_0)$. 
+hence equality holds. 
+\end{proof}
+\end{prop}

@@ -1,0 +1,191 @@
+\begin{prop}[Local Uniformly Smooth At A Point]
+\label{prop:LocallyUniformlySmoothAt}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $x_0 \in X \setminus \overline{0}$. 
+Let $J$ be the \NormalizedDualityMap of $X$.
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LocallyUniformlySmoothAt}~\roman*}]
+\item 
+\label{prop:LocallyUniformlySmoothAt:SmoothAt}
+$X$ is \LocallyUniformlySmoothSpace at $x_0$.
+\item 
+\label{prop:LocallyUniformlySmoothAt:ContinuousAt}
+$J$ is \Seminorm to \Norm \ContinuousFunction at $x_0$.
+\item 
+\label{prop:LocallyUniformlySmoothAt:FrechetAt}
+$\norm{\cdot}$ is \FrechetDifferentiable at $x_0$. 
+\end{enumerate} 
+%Cioranescu 1.3.11
+\begin{proof}[Proof of \ref{prop:LocallyUniformlySmoothAt:SmoothAt} implies \ref{prop:LocallyUniformlySmoothAt:FrechetAt}]
+Let $X$ be \LocallyUniformlySmoothSpace at $x_0$. 
+By \ref{prop:DegreesOfSmoothness:LocalImpliesSmooth}, 
+$X$ is \SmoothSpace at $x_0$. 
+By \ref{prop:Smooth}, 
+$\norm{\cdot}$ is 
+\GateauxDifferentiable at $x_0$. 
+Let $Sx = \norm{x}$ for $x \in X$. 
+Then since $S$ is \ConvexFunction, for each 
+$y \in X$, 
+by \ref{prop:ConvexDifferentiable}, 
+\begin{equation*}
+\frac{S(x_0)-S(x_0-ty_0)}{t} \leq \ip{y_0, S'(x_0)} \leq \frac{S(x_0+ty_0)-S(x_0)}{t}
+\end{equation*}
+Hence, 
+\begin{equation*}
+0 \leq \frac{S(x_0+ty_0)-S(x)}{t} - \ip{y_, S'(x_0)} \leq \frac{S(x+ty)+S(x-ty)-2S(x)}{t} \leq \frac{2}{t} \overline{\rho(t, x_0)}
+\end{equation*}
+Let $\epsilon > 0$. 
+Since $X$ is \LocallyUniformlySmoothSpace at $x_0$, 
+there exists a $\delta > 0$ such that if $t \in (0, \delta)$ then 
+$\frac{\overline{\rho(t,x_0)}}{t} < \frac{\epsilon}{2}$. 
+Then if $t \in (0,\delta)$ and $y \in B_X(0;1)$, we have 
+\begin{equation*}
+\ip{y, S'(x_0)}  \leq \frac{S(x_0+ty_0)-S(x_0)}{t}  \leq \frac{2}{t} \overline{\rho(t,x_0)} + \ip{y, S'(x_0)} < \ip{y, S'(x_0)} + \epsilon
+\end{equation*}
+Since $y$ is arbitrary at $S'(x_0)$ is linear, if $t<0$ with $\abs{t}< \delta$, then $-t  > 0$, so
+\begin{equation*}
+\ip{-y, S'(x_0)} \leq \frac{S(x_0-t\pa{-y_0})-S(x_0)}{-t} \leq \frac{2}{-t} \overline{\rho(-t,x_0)}+ \ip{-y_0, S'(x_0)} \leq \epsilon + \ip{-y_0, S'(x_0)}
+\end{equation*}
+so that 
+\begin{equation*}
+\ip{y_0, S'(x_0)} - \epsilon \leq \frac{S\pa{x_0+ty_0}-S(x_0)}{t} \leq \ip{y, S'(x_0)}
+\end{equation*}
+So in general, if $\abs{t} < \delta$ and $y \in B_X(0;1)$ we have 
+\begin{equation*}
+\frac{S(x_0+ty_0)-S(x_0)}{t} \in B(0;\epsilon) + \ip{y_0, S'(x_0)}
+\end{equation*}
+Thus $S$ is \FrechetDifferentiable at $x_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocallyUniformlySmoothAt:FrechetAt} implies \ref{prop:LocallyUniformlySmoothAt:SmoothAt}]
+As above, denote $S(x) = \norm{x}$ for $x \in X$. 
+Suppose $S$ is \FrechetDifferentiable at $x_0$. 
+By \ref{prop:ConvexDifferentiable}, 
+for each $y_0 \in X$ and for each $t>0$. we have 
+\begin{equation*}
+\frac{\norm{x}-\norm{x_0-ty_0} }{t} \leq \ip{y_0, S'x_0} \leq \frac{\norm{x_0+t y_0}-\norm{x_0}}{t}
+\end{equation*}
+In particular, if $\norm{y_0} = 1$, then 
+\begin{align*}
+0 & \leq \frac{\norm{x_0+ty_0} + \norm{x_0-ty_0} -2\norm{x_0}}{t}\\
+& = \pa{ \frac{\norm{x_0+ty_0}-\norm{x_0}}{t} - \ip{y_0,S'x_0}}+ \pa{\frac{\norm{x_0-ty_0} -\norm{x_0}}{t}+\ip{y_0, S'x_0}}\\
+& = \pa{ \frac{\norm{x_0+ty_0}-\norm{x_0}}{t} - \ip{y_0,S'x_0}}+ \pa{\frac{\norm{x_0+t\pa{-y_0}} -\norm{x_0}}{t}-\ip{-y_0, S'x_0}}\\
+& \leq \sup\limits_{\norm{y} = 1} \pa{ \frac{\norm{x_0+ty_0}-\norm{x_0}}{t} - \ip{y_0,S'x_0}}+ \sup\limits_{\norm{y} = 1} \pa{\frac{\norm{x_0+t\pa{-y_0}} -\norm{x_0}}{t}-\ip{-y_0, S'x_0}}
+\end{align*}
+Hence, since $S$ is \FrechetDifferentiable at $x_0$, 
+\begin{align*}
+0 & \leq \frac{\overline{\rho}(t,x_0)}{t} \\
+& = \sup\limits_{\norm{y} = 1}\pa{ \frac{\norm{x_0+ty} + \norm{x_0-ty} -2\norm{x_0}}{t}} \\
+& \leq \sup\limits_{\norm{y} = 1} \pa{ \frac{\norm{x_0+ty_0}-\norm{x_0}}{t} - \ip{y_0,S'x_0}}+ \sup\limits_{\norm{y} = 1} \pa{\frac{\norm{x_0+t\pa{-y_0}} -\norm{x_0}}{t}-\ip{-y_0, S'x_0}}\\
+& \to 0
+\end{align*}
+Thus $X$ is \LocallyUniformlySmoothSpace at $x_0$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocallyUniformlySmoothAt:FrechetAt} implies \ref{prop:LocallyUniformlySmoothAt:ContinuousAt}]
+Let $S(x) = \norm{x}$, for $x \in X$. 
+Since $S$. 
+Since $S$ is \FrechetDifferentiable at $x_0$, it is \GateauxDifferentiable at $x_0$. Hence by 
+\ref{prop:Smooth:JContinuous}, $J$ is \Seminorm to \weakstar 
+\ContinuousFunction at $x_0$. 
+Thus, if $x_k \to x_0$ then $Jx_k \wsto Jx_0$. 
+Hence, it is sufficient to show that if $y_k \wsto Jx_0$, 
+and if $\norm{y_k} \to \norm{Jx_0}$, then 
+$y_k \to  Jx_0$. 
+
+Let $\{y_k\}_{k \in \N} \subset X^*$ such that $y_k \wsto Jx_0$
+and $\norm{y_k} \to \norm{Jx_0}$ for each $k$. 
+Without loss of generality, we assume that 
+$\norm{y_k} \leq \norm{Jx_0} = \norm{x_0}$ for each $k$. 
+Suppose for sake of contradiction that 
+$y_k \not \to Jx_0$. 
+Then for some $\epsilon > 0$, for some $\{x_k\}_{k \in \N} \subset B_X(0;1)$, 
+for each $k \in \N$, 
+\begin{equation*}
+\ip{x_k, y_k-Jx_0} \geq 2\epsilon > 0
+\end{equation*}
+Then for each $n \in \N$, 
+\begin{equation*}
+1 \leq \pa{\frac{1}{\epsilon} \ip{x_k, y_k-Jx_0} }-1
+\end{equation*}
+
+\begin{align*}
+\ip{x_0, Jx_0-y_k} & \leq \ip{x_0, Jx_0-y_k}\pa{\pa{\frac{1}{\epsilon} \ip{x_k, y_k-Jx_0} }-1} \\
+& = \ip{x_0, y_k-Jx_0} + \frac{1}{\epsilon} \ip{x_0, Jx_0-y_k} \ip{x_k, y_k-Jx_0}\\
+& = \ip{\pa{\frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}}x_k+ x_0, y_k-Jx_0}\\
+& \leq \abs{\ip{\pa{\frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}}x_k+ x_0, y_k}} - \ip{\pa{\frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}}x_k+ x_0, Jx_0}\\
+& = \abs{\ip{\pa{\frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}}x_k+ x_0, y_k}} - \norm{x_0}^2 -\ip{\pa{\frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}}x_k, Jx_0}\\
+& \leq \norm{x_0} \norm{x_0 + \frac{1}{\epsilon} \ip{x_0, Jx_0-y_k}x_k}-\norm{x_0}^2 - \ip{\frac{1}{\epsilon}\ip{x_0, Jx_0-y_k} x_k, Jx_0}
+\end{align*}
+For each $k \in \N$, define 
+\begin{equation*}
+z_k = \frac{1}{\epsilon} \ip{x_0, Jx_0-y_k} x_k
+\end{equation*}
+
+Then the above inequality becomes 
+\begin{equation*}
+\ip{x_0, Jx_0-y_k} \leq \norm{x_0} \norm{x_0+ z_k} - \norm{x_0}^2 - \ip{z_k, Jx_0}
+\end{equation*}
+Furthermore, since $\{x_k\}$ is bounded and $y_k \wsto Jx_0$, 
+$z_k \to 0$.
+Hence,  
+\begin{align*}
+0 & < \epsilon \\
+& = \frac{\ip{x_0, Jx_0-y_k}}{\norm{z_k}} \norm{x_k}  \\
+& \leq \frac{\norm{x_k}}{\norm{z_k}} \pa{ \norm{y_k}\norm{x_0+z_k}-\norm{x_0}^2-\ip{z_k, Jx_0}} \\
+& = \norm{x_k}\norm{x_0} \pa{ \frac{\norm{x_0+z_k}-\norm{x_0}- \ip{z_k, \frac{1}{\norm{x_0}}Jx_0}}{\norm{z_k}}}
+\end{align*}
+But by \ref{cor:Asplund}, 
+$\partial \norm{x_0} = \frac{1}{\norm{x_0}} Jx_0$, and since 
+$\norm{\cdot}$ is \FrechetDifferentiable at $x_0$, 
+\begin{equation*}
+0 < \epsilon \leq \lim\limits_{k \to \infty} \frac{\norm{x_0+z_k} -\norm{x_0} - \ip{z_k, \frac{1}{\norm{x_0}} Jx_0}}{\norm{z_k}} = 0
+\end{equation*}
+This is a contradiction. 
+Hence, if $y_k \wsto Jx_0$ and $\norm{y_k} \to \norm{Jx_0}$, then we have 
+$y_k \to Jx_0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocallyUniformlySmoothAt:ContinuousAt} implies \ref{prop:LocallyUniformlySmoothAt:FrechetAt}]
+Let $J$ be \ContinuousFunction at $x_0$. 
+Without loss of generality, let $\norm{x_0} = 1$. 
+Let $y \in X$. Then, 
+by 
+\ref{prop:normalizeddualityinequality}, 
+\begin{equation*}
+\ip{y, Jx_0} \leq \norm{x_0+y}-\norm{x_0}  \leq \frac{\ip{y, J\pa{x_0+y}}}{\norm{x_0+y}}
+\end{equation*}
+Hence, 
+\begin{align*}
+0 &\leq \norm{x_0+y} - \norm{x_0}- \ip{y, Jx_0} \\
+& \leq \frac{\ip{y, J\pa{x+y}}}{\norm{x+y}} - \ip{y, Jx_0}\\
+& = \frac{1}{\norm{x+y}} \pa{ \ip{y, J(x_0+y)-Jx_0}}+ \ip{y, Jx_0}\pa{ 1- \frac{1}{\norm{x+y}}}\\
+& \leq \frac{\norm{y} \norm{J(x_0+y)-Jx_0}}{\norm{x+y}} + \norm{y}\norm{x_0}\pa{1-\frac{1}{\norm{x+y}}}
+\end{align*}
+Hence, since $J$ is \Seminorm to \Norm \ContinuousFunction at $x_0$, 
+\begin{equation*}
+\lim\limits_{y \to 0} \frac{\norm{x_0+y}-\norm{x_0}-\ip{y, Jx_0}}{\norm{y}} = 0
+\end{equation*}
+so that $\norm{\cdot}$ is \FrechetDifferentiable at $x_0$. 
+\end{proof}
+\end{prop} 
+
+\begin{cor}[Local Uniformly Smooth]
+\label{cor:LocallyUniformlySmooth}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$.
+The following are equivalent
+\begin{enumerate}[label=(\roman*), ref={\ref{cor:LocallyUniformlySmooth}~\roman*}]
+\item 
+\label{cor:LocallyUniformlySmooth:Smooth}
+$X$ is \LocallyUniformlySmoothSpace.
+\item 
+\label{cor:LocallyUniformlySmooth:Continuous}
+$J$ is \Seminorm to \Norm \ContinuousFunction.
+\item 
+\label{cor:LocallyUniformlySmooth:Frechet}
+$\norm{\cdot}$ is \FrechetDifferentiable. 
+\end{enumerate} 
+\begin{proof}
+This result is a direct consequence of \ref{prop:LocallyUniformlySmoothAt}.
+\end{proof}
+\end{cor} 

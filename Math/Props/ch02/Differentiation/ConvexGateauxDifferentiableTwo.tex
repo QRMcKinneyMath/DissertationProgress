@@ -1,0 +1,52 @@
+\begin{prop}[Convex \GateauxDifferentiable]
+\label{prop:ConvexGateauxDifferentiable}
+\rm
+Let $X$ be a \LocallyConvex \TVS over $\R$.
+Let $T:X \to \overline{\R}$ be \ContinuousFunction and \ConvexFunction.
+Let $x_0 \in \InteriorMark{D(T)}$. 
+The following are equivalent. 
+\begin{enumerate}
+\item $T$ is \GateauxDifferentiable at $X_0$. 
+\item $T_+'(x_0,y)=-T_-'(x_0,y)$ for each $y \in X$. 
+\end{enumerate}
+\begin{proof}[$\implies$]
+Let $T$ be \GateauxDifferentiable at $x_0$.
+Then we have 
+\begin{equation*}
+T_+'(x,y)=T'(x)y = -T'(x)-y=-T_+'(x,-y)=-T_-(x,y)
+\end{equation*}
+\end{proof}
+\begin{proof}[$\impliedby$]
+Suppose $T_+'(x_0,y) = -T_-'(x_0,y)$ for each $y \in X$. 
+Then $T_+'(x_0,-y)=-T_-'(x_0,-y)=-T_+'(x_0,y)$. 
+By
+\ref{prop:ConvexContinuousDerivative}, 
+\begin{equation*}
+T_+(x_0,\alpha y ) = \alpha T_+(x_0,y)
+\end{equation*}
+for every $\alpha \in \R$. 
+Now, if $y_1,y_2 \in X$, then 
+\begin{equation*}
+T_+'(x_0,y_1+y_2) \leq T_+'(x_0,y_1) +T_+'(x_0,y_2) \tab[1cm] T_+'(x_0, y_1) \leq T_+'(x_0, y_1+y_2) - T_+'(x_0, y_2)
+\end{equation*}
+so that $y \to T_+'(x_0,y)$ is \Linear, so $T'(x_0)$ exists.
+What remains is to show that $T'(x_0)$ is \ContinuousFunction.
+By 
+Hence there is a \SetOpen \ConvexSet \Neighborhood $U$ of $0$ such that 
+$T$ is bounded, say by $K$ on $U+x_0$. 
+Let $\rho$ denote the \MinkowskiFunctional of $U$. 
+Since $U$ is \SetOpen, $\rho$ is \ContinuousFunction.
+Then by 
+\ref{thm:pointcontinuous}
+we have 
+\begin{equation*}
+T'(x_0)y \leq \frac{T(x_0+\frac{1}{\rho(y)}y ) - T(x_0)}{\frac{1}{\rho(y)}} \leq 2 K \rho(y)
+\end{equation*}
+and 
+\begin{equation*}
+T'(x_0)y \geq \frac{T(x_0) - T\pa{x_0-\frac{1}{\rho(y)}y}}{\frac{1}{\rho(y)}} \geq -2 K \rho(y)
+\end{equation*}
+Hence $\abs{T'(x_0)y} \leq 2 K \rho(y)$ so that $T'(x_0)$ is \ContinuousFunction
+and $T$ is therefore \GateauxDifferentiable at $X_0$.
+\end{proof}
+\end{prop}

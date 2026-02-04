@@ -1,0 +1,77 @@
+\newcommand{\NowhereDense}[0]{\textbf{\hyperref[def:NowhereDense]{Nowhere Dense}}\xspace}
+\begin{df}[\NowhereDense]
+\label{def:NowhereDense}
+\rm
+Let $X$ be a \TopologicalSpace. 
+Let $A \subset X$ such that 
+$\InteriorMark{\ClosureMark{A}} = \emptyset$.
+Then we say that $A$ is \NowhereDense
+\end{df}
+\newcommand{\FirstCategory}[0]{\textbf{\hyperref[def:Category]{First Category}}\xspace}
+\newcommand{\SecondCategory}[0]{\textbf{\hyperref[def:Category]{Second Category}}\xspace}
+\begin{df}[\FirstCategory, \SecondCategory]
+\label{def:Category}
+\rm
+Let $X$ be a \TopologicalSpace. 
+Let $A \subset X$ be a \Countable union of 
+\NowhereDense sets in $X$.
+Then we say that $A$ is of the \FirstCategory. 
+If $B \subset X$ is not of the \FirstCategory, 
+then we say that $B$ is of the \SecondCategory. 
+\end{df}
+
+\begin{prop}[Baire Category]
+\label{prop:BaireCategoryTheorem}
+\rm
+Let $(X, \T)$ be a \Complete \PseudometricSpace. 
+Let $\{U_i\}_{i \in \mathbb{N}} \subset \scT$.
+Suppose for each $i \in \mathbb{N}$, $U_i$ is 
+\TopologyDense in $X$.
+Define $U = \bigcap\limits_{i \in \mathbb{N}} U_i$.
+Then $U$ is \TopologyDense in $X$. 
+\begin{proof}
+Let  $\emptyset \neq V_0 \in \T$.
+We must show $V_0 \cap U \neq \emptyset$. 
+Since $U_1$ is \TopologyDense, 
+there exists $0 , \epsilon_1 < \frac{1}{1}$ and $x_1 \in X$ such that 
+\begin{equation*}
+\overline{B(x_1,\epsilon_1)} \subset B(x_1, 2 \epsilon_1) \subset U_1 \cap V_0
+\end{equation*}
+Set $V_1 = B(x_1;\epsilon_1)$. 
+Continuing recursively, for each $n \in \mathbb{N}$
+we get and $0 < \epsilon_n < \frac{1}{n}$ 
+and an $x_n \in X$ such that 
+for every $n \in \mathbb{N}$. 
+\begin{equation*}
+V_{n} = B(x_n, \epsilon_n) \subset \overline{B(x_n, \epsilon_n)} \subset B(x_n, 2\epsilon_n) \subset U_n \cap V_{n-1}
+\end{equation*}
+The sequence $\{x_k\}_{k \in \mathbb{N}}$ is clearly 
+Cauchy, and so since $X$ is \Complete it posesses 
+a limit $x_0$. 
+Observe that if $n > k$, then $x_n \in \overline{B(x_k, \epsilon_k)}$. 
+Hence, for every $n \in \mathbb{N}$, $x_0 \in \overline{B(x_k, \epsilon_k)}$, so 
+\begin{equation*}
+x_0 \in \bigcap\limits_{n \in \mathbb{N}} \overline{B(x_n, \epsilon_n)} \subset \bigcap\limits_{n \in \mathbb{N}} U_n \cap V_0 = V_0 \cap \bigcap\limits_{n \in \mathbb{N}} U_n
+\end{equation*}
+\end{proof}
+\end{prop}
+
+\begin{cor}
+\label{cor:BaireCategoryTheorem}
+\rm
+Let $X$ be an \Infinite  \Complete \PseudometricSpace. 
+Then $X$ is of \SecondCategory in itself.
+That is to say, $X$ is not the \Countable
+union of \NowhereDense sets.
+%\begin{proof}
+%Let $\{A_i\}_{i \in \mathbb{N}}$ be a collection of 
+%\NowhereDense subsets of $X$. 
+%Then for each $i \in \mathbb{N}$, $X \setminus \overline{A_i}$ is an
+%\SetOpen \TopologyDense subset of  $X$. 
+%By \ref{prop:BaireCategoryTheorem}
+%$\bigcap\limits_{i \in \mathbb{N}} \pa{X \setminus \overline{A_i}}$ 
+%is \TopologyDense in $X$.
+%Hence  if $V$ is \SetOpen, then $V \cap \bigcap\limits_{i \in \mathbb{N}} X \setminus \overline{A_i} \neq \emptyset$. 
+%When then implies $x \neq \bigcup\limits_{i \in \mathbb{N}} A_i$.
+%\end{proof}
+\end{cor}

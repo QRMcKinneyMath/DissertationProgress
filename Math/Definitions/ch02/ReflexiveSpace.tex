@@ -1,0 +1,23 @@
+\newcommand{\Reflexive}[0]{\textbf{\hyperref[def:Reflexive]{Reflexive}}\xspace}
+\newcommand{\Reflexivity}[0]{\textbf{\hyperref[def:Reflexive]{Reflexivity}}\xspace}
+
+\begin{df}[\Reflexive space]
+\label{def:Reflexive}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Let $X^*$ denote the \TvsDual of $X$. 
+We denote with $X^{**}$ the \TvsDual of $X^*$, when 
+$X^*$ is endowed with the \Norm \Topology. 
+Let $c:X \to X''$ denote the \CanonicalEmbedding of $X$ into 
+$X''$, the second \AlgebraicDual of $X$.
+If $x_0 \in X$ $j_1,j_2 \in X^*$, then 
+\begin{equation*}
+\abs{\ip{j_1-j_2, c(x_0)}} = \abs{\ip{x_0, j_1-j_2}} \leq \norm{x_0} \norm{j_1-j_2}
+\end{equation*}
+so that $c(x_0) \in X^{**}$. 
+Thus, when $X$ is a \SeminormedSpace, we view $c$
+as a function from $X$ into the second \TvsDual
+instead of into the second \AlgebraicDual. 
+Furthermore, when $c$ is \Surjective, 
+we say that $X$ is \Reflexive. 
+\end{df}

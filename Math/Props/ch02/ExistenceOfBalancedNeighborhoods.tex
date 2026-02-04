@@ -1,96 +1,96 @@
 \begin{prop}[Existence of \Balanced \NeighborhoodBasis of 0 in a \TVS]
-    \label{prop:ExistenceOfBalancedNeighborhoods}
-    \rm
-    Let $(X,\T)$ be a 
-    \TVS
-    over a 
-    \Field
-    $\F$.
-    The following are true. 
-    \begin{enumerate}[label=(\roman*), ref={\ref{prop:ExistenceOfBalancedNeighborhoods}~\roman*}]
-        \item 
-        \label{prop:Bal1}
-        If 
-            $U \in \scU_{\T}(0)$,
-            then there is a 
-            \Balanced, \SetOpen
-            $V \subset U$
-            such that 
-            $V \in \scU_{\T}(0)$.
-        \item 
-        \label{prop:Bal2}
-        There exists a 
-            \NeighborhoodBasis
-            about $0 \in X$ 
-            for $\T$ 
-            consisting entirely 
-            of \Balanced sets. 
-        \item 
-        \label{prop:Bal3}
-        If 
-            $U \in \scU_{\T}(0)$ is \ConvexSet,
-            then there is a 
-            \ConvexSet
-            \Balanced, 
-            \SetOpen
-            $V \subset U$
-            such that 
-            $V \in \scU_{\T}(0)$.
-        \item 
-        \label{prop:Bal4}
-        If $(X,\T)$ is 
-            \LocallyConvex, 
-            then there exists a 
-            \NeighborhoodBasis
-            about $0 \in X$ 
-            for $\T$ 
-            consisting entirely 
-            of 
-            \Balanced
-            \ConvexSet 
-            sets.
-    \end{enumerate}
+\label{prop:ExistenceOfBalancedNeighborhoods}
+\rm
+Let $(X,\T)$ be a 
+\TVS
+over a 
+\Field
+$\F$.
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:ExistenceOfBalancedNeighborhoods}~\roman*}]
+\item 
+\label{prop:Bal1}
+If 
+$U \in \scU_{\T}(0)$,
+then there is a 
+\Balanced, \SetOpen
+$V \subset U$
+such that 
+$V \in \scU_{\T}(0)$.
+\item 
+\label{prop:Bal2}
+There exists a 
+\NeighborhoodBasis
+about $0 \in X$ 
+for $\T$ 
+consisting entirely 
+of \BalancedSets. 
+\item 
+\label{prop:Bal3}
+If 
+$U \in \scU_{\T}(0)$ is \ConvexSet,
+then there is a 
+\ConvexSet
+\Balanced, 
+\SetOpen
+$V \subset U$
+such that 
+$V \in \scU_{\T}(0)$.
+\item 
+\label{prop:Bal4}
+If $(X,\T)$ is 
+\LocallyConvex, 
+then there exists a 
+\NeighborhoodBasis
+about $0 \in X$ 
+for $\T$ 
+consisting entirely 
+of 
+\Balanced
+\ConvexSet 
+sets.
+\end{enumerate}
 
-    \begin{proof}[Proof of \ref{prop:Bal1}] 
-    Since scalar multiplication is \ContinuousAt $0$, 
-    there is an \SetOpen disk $V \subset \mathbb{F}$
-    and an \SetOpen $W \subset X$ with $0 \in W$ such that
-    $VW \subset U$. 
-    $VW$ is clearly balanced. 
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Bal2}] 
-    Let $\{U_{\alpha}\}_{\alpha \in A}$ be a 
-    \LocalBasis for $\scT$. 
-    Then, by \ref{prop:Bal1}, for each $\alpha \in A$, 
-    there is a $W_\alpha \subset U_\alpha$ such that
-    $W_\alpha$ is \BalancedSet and $0 \in W_\alpha$. 
-    Clearly $\{W_\alpha\}_{\alpha \in A}$ forms a 
-    \LocalBasis for $X$. 
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Bal3}] 
-    By \ref{prop:Bal1}, there is a 
-    \BalancedSet \SetOpen $W \subset U$. 
-    Let $\alpha \in \mathbb{C}$ with $\abs{\alpha} = 1$. 
-    Then $\alpha^{-1}W = \subset W  \subset U$. 
-    Hence $W \subset \alpha U$, so 
-    if we define $A = \bigcap\limits_{\abs{\alpha} = 1 } \alpha U$, 
-    then $0 \in W \subset A$.
-    Thus $0 \InteriorMark{A}$. 
-    For this reason, it suffices to show $\InteriorMark{A}$ is 
-    \BalancedSet.
-    It then suffices to show $A$ is \BalancedSet.
-    Let $\alpha \in \mathbb{Z}$ with $\abs{\alpha} \leq 1$. 
-    Then $\alpha = r \beta$ for some $\beta \in \mathbb{C}$ with $\abs{\beta} = 1$ 
-    and $r \in [0,1]$. 
-    Since $\alpha U$ is \ConvexSet and contains $0$, 
-    $r\alpha U \subset \alpha U$. 
-    Hence, 
-    \begin{equation*}
-    r \beta A = r \beta \bigcap\limits_{\abs{\alpha} = 1} \alpha U = \bigcap\limits_{\abs{\alpha} = 1 } r \alpha U \subset \bigcap\limits_{\abs{\alpha} = 1} \alpha U = A
-    \end{equation*}
-    Thus $A$ is \BalancedSet.
-    \end{proof}
-    \begin{proof}[Proof of \ref{prop:Bal4}] 
-    This is a similar arguement to that of \ref{prop:Bal2}.
-    \end{proof}
+\begin{proof}[Proof of \ref{prop:Bal1}] 
+Since scalar multiplication is \ContinuousAt $0$, 
+there is an \SetOpen disk $V \subset \mathbb{F}$
+and an \SetOpen $W \subset X$ with $0 \in W$ such that
+$VW \subset U$. 
+$VW$ is clearly balanced. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Bal2}] 
+Let $\{U_{\alpha}\}_{\alpha \in A}$ be a 
+\LocalBasis for $\scT$. 
+Then, by \ref{prop:Bal1}, for each $\alpha \in A$, 
+there is a $W_\alpha \subset U_\alpha$ such that
+$W_\alpha$ is \Balanced and $0 \in W_\alpha$. 
+Clearly $\{W_\alpha\}_{\alpha \in A}$ forms a 
+\LocalBasis for $X$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Bal3}] 
+By \ref{prop:Bal1}, there is a 
+\Balanced \SetOpen $W \subset U$. 
+Let $\alpha \in \mathbb{C}$ with $\abs{\alpha} = 1$. 
+Then $\alpha^{-1}W = \subset W  \subset U$. 
+Hence $W \subset \alpha U$, so 
+if we define $A = \bigcap\limits_{\abs{\alpha} = 1 } \alpha U$, 
+then $0 \in W \subset A$.
+Thus $0 \InteriorMark{A}$. 
+For this reason, it suffices to show $\InteriorMark{A}$ is 
+\Balanced.
+It then suffices to show $A$ is \Balanced.
+Let $\alpha \in \mathbb{Z}$ with $\abs{\alpha} \leq 1$. 
+Then $\alpha = r \beta$ for some $\beta \in \mathbb{C}$ with $\abs{\beta} = 1$ 
+and $r \in [0,1]$. 
+Since $\alpha U$ is \ConvexSet and contains $0$, 
+$r\alpha U \subset \alpha U$. 
+Hence, 
+\begin{equation*}
+r \beta A = r \beta \bigcap\limits_{\abs{\alpha} = 1} \alpha U = \bigcap\limits_{\abs{\alpha} = 1 } r \alpha U \subset \bigcap\limits_{\abs{\alpha} = 1} \alpha U = A
+\end{equation*}
+Thus $A$ is \Balanced.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:Bal4}] 
+This is a similar arguement to that of \ref{prop:Bal2}.
+\end{proof}
 \end{prop}

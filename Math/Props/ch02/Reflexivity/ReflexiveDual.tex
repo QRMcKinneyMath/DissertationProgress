@@ -1,0 +1,48 @@
+\begin{prop}[\Reflexive Dual]
+\label{prop:ReflexiveDual}
+\rm
+Let $X$ be a \Complete \SeminormedSpace over $\F$.
+Then $X$ is \Reflexive if and only if $X^*$ is \Reflexive. 
+\begin{proof}
+%Let $X$ be \Reflexive. 
+%By \ref{}, 
+%$\overline{B_X(0;1)}$ is \weakly \SetCompact.
+
+Let $X$ be \Reflexive. 
+Let $c_*$ denote the \CanonicalEmbedding of $X^*$. 
+Let $c$ denote the \CanonicalEmbedding of $X$. 
+Let $\tilde{j} \in X^{***}$. 
+Define $j:X \to \F$ by 
+$\ip{x,j} = \ip{c(x), \tilde{j}}$. 
+Let $\alpha \in \F$ and $x,y \in X$. 
+Then 
+\begin{equation*}
+\ip{\alpha x + y, j} = \ip{c\pa{\alpha x + y}, \tilde{j}} = \alpha \ip{c(x), \tilde{j}} + \ip{c(y), \tilde{j}} = \alpha \ip{x, j} + \ip{y, j}
+\end{equation*}
+so that $j$ is \Linear. 
+$j$ is also \ContinuousFunction, as 
+\begin{equation*}
+\abs{\ip{x, j}} = \abs{\ip{c(x), \tilde{j}} }\leq \norm{c(x)} \norm{\tilde{j}} = \norm{x} \norm{\tilde{j}}
+\end{equation*}
+Furthermore, if $g^{*} \in X^{**}$, then 
+there exists $g \in X$ such that $c(g)=g^*$ so that 
+\begin{equation*}
+\ip{g^*, \tilde{j}} = \ip{c(g), \tilde{j}} = \ip{g, j} = \ip{j, c(g)} = \ip{j, g^*} = \ip{g^*, c_*\pa{j}}
+\end{equation*}
+Since $g^* \in X^*$ was arbitrary, $\tilde{j}=c_*\pa{j}$.
+Since $\tilde{j} \in X^{***}$ was arbitrary, $c_*$ is \Surjective and
+$X^*$ is therefore \Reflexive. 
+
+Suppose now that $X^*$ is \Reflexive. 
+Then by the above implication, $X^{**}$ is \Reflexive. 
+By 
+\ref{lem:ReflexiveSeparable}, 
+each \SetClosed \TopologySeparable subspace of $X^{**}$ is \Reflexive. 
+Let $K \subset X$ be a \SetClosed \TopologySeparable subspace of $X$. 
+Then $c(K)$ is a \SetClosed \TopologySeparable subspace of $X^*$. 
+This implies $c(K)$ is \Reflexive, which implies 
+$K$ is \Reflexive.
+Hence, by \ref{lem:ReflexiveSeparable}, 
+$X$ is \Reflexive.
+\end{proof}
+\end{prop}

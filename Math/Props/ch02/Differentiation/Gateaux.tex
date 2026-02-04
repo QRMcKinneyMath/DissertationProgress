@@ -83,4 +83,41 @@ g''(0) & = \lim\limits_{t \to 0} \frac{g'(t)-g'(0)}{t}\\
 \end{align*}
 \end{proof} 
 \end{prop}
-
+\begin{rmk}
+\rm
+By \ref{prop:Gateaux}
+it is clear that if $T:C \to Y$ is \GateauxDifferentiable at $x_0$, then for each $y \in X$,
+for each 
+\Neighborhood $V$ of $0$ in $X$, there exists $\delta > 0$ such that if $\abs{t} < \delta$
+then 
+\begin{equation*}
+\frac{f(x_0+ty)-f(x_0)}{t} \in V+f'(x_0)y
+\end{equation*}
+Thus what we gain from
+\FrechetDifferentiability is not requiring convergence to occur from both directions, a condition
+which \GateauxDifferentiability is sufficient to guarantee, but instead uniform convergence
+for $y$ in some \Neighborhood $0$ of $X$. 
+Generalizing to instead require uniform convergence for $x$ is a subset of $X$ is obtained below. 
+\end{rmk}
+\newcommand{\UniformlyGateauxDifferentiable}[0]{\textbf{\hyperref[def:UniformlyGateauxDifferentiable]{Uniformly Gateaux Differentiable}}\xspace}
+\newcommand{\UniformGateauxDifferentiability}[0]{\textbf{\hyperref[def:UniformlyGateauxDifferentiable]{Uniform Gateaux Differentiability}}\xspace}
+\begin{df}[\UniformlyGateauxDifferentiable] 
+\label{def:UniformlyGateauxDifferentiable}
+\rm
+Let $X$ be a \TVS over $\F$. 
+Let $Y$ be a \Hausdorff \TVS over $\F$. 
+Let $C \subset X$. 
+Let $K \subset C$. 
+Let $f:C \to Y$
+be \GateauxDifferentiable on $K$.
+Suppose that for each $y \in X$, for each 
+\Neighborhood $V$ of $0$ in $Y$, 
+there exists $\delta > 0$ such that for each $x \in K$ 
+and for each $t \in \F$ with $\abs{t} < \delta$
+we have 
+\begin{equation*}
+\frac{f(x+ty)-f(x)}{t} \in V+f'(x)y
+\end{equation*}
+Then we say that $f$ is 
+\UniformlyGateauxDifferentiable on $K$.
+\end{df}

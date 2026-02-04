@@ -1,137 +1,229 @@
+The following result, which is well known, serves to provide an example of how 
+the results relating the dual space of a \SeminormedSpace 
+with that  of its quotient \NormedSpace can be used.  
 \begin{thm}[Hahn Banach Theorem For Seminormed Spaces]
 \label{thm:hahnbanach}
 \rm
-Let $(X,\norm{\cdot})$ be a \SeminormedSpace,
+Let $(X,\norm{\cdot})$ be a \SeminormedSpace.
 let $x_i \in X$ for $i \in \{0,1\}$ such that 
-$\norm{x_0-x_1}_X \neq 0$, and
-let $X^*$ denote $X's$
-\TopDualSpace. 
+$x_0 \not \in x_1 + \overline{0}$.
+Let $X^*$ denote the
+\TopDualSpace of $X$. 
 The following are true. 
 \begin{enumerate}[label=(\roman*), ref={\ref{thm:hahnbanach}~\roman*}]
-    \item 
-	\label{thm:HahnBanach:Extension1}
-	If $Z \subset X$ is a subspace
-        and $z^* \in Z^*$, then there 
-        is an extension $x^*$ of $z^*$, 
-        $x^* \in X^*$ such that 
-        \begin{equation*}
-        \norm{z^*}_{Z^*} = \norm{x^*}_{X^*}
-        \end{equation*}
-     \item 
-	 \label{thm:HahnBanach:Point1}
-	 If $x \in X$, 
-        with $\norm{x} \neq 0$, 
-        then there exists an
-        $x^* \in X$ with 
-        $\norm{x^*}=1$ and 
-        $\ip{x,x^*} = \norm{x}_X$. 
-    \item 
-	\label{thm:HahnBanach:Norm}
-	If $x \in X$, then 
-    \begin{equation*}
-        \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}}
-    \end{equation*}
-	
-    \item 
-	\label{thm:HahnBanach:Operator1}
-	If $Y$ is a 
-        \NonDegenerate
-        \SeminormedSpace, and if 
-        $x_0 \in X$, with 
-        $\norm{x_0} \neq 0$, 
-        then there exists
-        an $S \in BL(X,Y)$ with 
-        $\norm{S} = 1$ and 
-        \begin{equation*}
-            \norm{Sx_0} = \norm{x_0}
-        \end{equation*}
+\item 
+\label{thm:HahnBanach:Extension1}
+If $Z \subset X$ is a \VectorSubspace of $X$
+and $z^* \in Z^*$, then there 
+is an \Extension. $x^*$ of $z^*$, 
+$x^* \in X^*$ such that 
+$\norm{z^*}_{Z^*} = \norm{x^*}_{X^*}$
+\item 
+\label{thm:HahnBanach:Point1}
+If $x \in X$, 
+with $\norm{x} \neq 0$, 
+then there exists an
+$x^* \in X$ with 
+$\norm{x^*}=1$ and 
+$\ip{x,x^*} = \norm{x}_X$. 
+\item 
+\label{thm:HahnBanach:Norm}
+If $x \in X$, then 
+\begin{equation*}
+\norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}}
+\end{equation*}
+
+\item 
+\label{thm:HahnBanach:Operator1}
+If $Y$ is a 
+\NonDegenerate
+\SeminormedSpace, and if 
+$x_0 \in X$, with 
+$\norm{x_0} \neq 0$, 
+then there exists
+an $S \in BL(X,Y)$ with 
+$\norm{S} = 1$ and 
+\begin{equation*}
+\norm{Sx_0} = \norm{x_0}
+\end{equation*}
+\item 
+\label{thm:HahnBanach:Open}
+If $U \subset X$ is \SetOpen  and \ConvexSet, 
+$C$ is \ConvexSet, and $U \cap C = \emptyset$, 
+then there exists $j \in X^*$ and $\alpha \in \R$ such that 
+for each $x_0 \in A$ and $y_0 \in C$, we have 
+\begin{equation*}
+Re \ip{x_0, j} < \alpha \leq \ip{y_0, j}
+\end{equation*}
+\item
+\label{thm:HahnBanach:ClosedConvex}
+If $C \subset X$ is \SetClosed and \ConvexSet, 
+$K \subset X$ is \SetCompact and \ConvexSet, 
+and $C \cap K = \emptyset$,
+then there exists $j \in X^*$ and $\alpha_1 , \alpha_2 \in \mathbb{R}$ such that 
+\begin{equation*}
+\sup\limits_{x \in C} Re \ip{x, j} \leq \alpha_1 < \alpha_2 \leq \inf\limits_{x \in K} Re \ip{x, j}
+\end{equation*}
+\item 
+\label{thm:HahnBanach:Nullspace}
+If $C \subset X$ is a \SetClosed \VectorSubspace
+and $x_0 \in X \setminus C$, then there exists
+$j \in X^*$ such that $\ip{C,j} = 0$ and $\ip{x_0,j} = 1$. 
+\item
+\label{thm:HahnBanach:NullspaceOperator}
+If $Y$ is a \NonDegenerate \SeminormedSpace,
+$C \subset X$ is a \SetClosed \VectorSubspace of $X$, 
+and $x_0 \in X \setminus C$, then there 
+exists 
+$S \in BL(X,Y)$ with $\norm{Sx_0} = 1$ and $S(C)=0$.
 \end{enumerate}
 
 
 \begin{proof}[Proof of \ref{thm:HahnBanach:Extension1}]
-    For $\alpha \in \{Z,X\}$, let 
-    $\Omega_\alpha:\alpha^* \to (\alpha/\Ker_\alpha)^*$ denote the isomorphism
-    defined in 
-    \ref{thm:dualspaceisomorphism}.
-    Let $q$ denote the quotient operator $q:X \to X/\Ker$. 
-    Define $T:Z/\Ker_Z \to q(Z)$ bv $T([z]_{\cong_Z} ) = [z]_{\cong_X}$. %Make a separate Result
-    Since Z is endowed with the subspace Topology,                       %Make a separate Result
-    T is obviously a \Linear \Isometric \Homeomorphism.          %Make a separate Result
-    
-    %Then $\Omega_Zz^* \in (Z/\Ker_Z)^*$ satisfies
-    %$\norm{\Omega_Zz^*}_{Z/\Ker_Z}=\norm{z^*}_{Z^*}$ an 
-    Define $\Gamma_Z:(Z/\Ker_Z)^* \to q(Z)^*$ by setting, 
-    for $\phi^* \in (Z/\Ker_Z)^*$, 
-    for $[z]_Z \in Z/\Ker_Z$, 
-    \begin{equation*}
-        \ip{T[z]_Z, \Gamma_Z \phi^*} = \ip{[z]_Z, \phi^*}
-    \end{equation*}
-    Then $\Gamma_Z$ is a \Linear Bijective \Isometry. 
-    Hence $\Gamma_Z \circ \Omega_Z z^* \in q(Z)^*$ with 
-    $\norm{\Gamma_Z \circ \Omega_Z z^*}_{q(Z)^*} = \norm{z^*}_{Z^*}$. 
+For $\alpha \in \{Z,X\}$, let 
+$\Omega_\alpha:\alpha^* \to (\alpha/\Ker_\alpha)^*$ denote the isomorphism
+defined in 
+\ref{thm:dualspaceisomorphism}.
+Let $q:X \to X/\Ker$ denote the 
+\QuotientMap.
+Define $T:Z/\Ker_Z \to q(Z)$ bv $T([z]_{\cong_Z} ) = [z]_{\cong_X}$. %Make a separate Result
+T is clearly a \Linear \Isometric \Homeomorphism.          %Make a separate Result
 
-    Thus we can apply the Hahn Banach theorem for \NormedSpaces to claim 
-    the existence of $x_q^* \in (X/\Ker_X)^*$ where
-    $x_q^*$ is an extension of $\Gamma_Z \circ \Omega_Z z^*$ and
-    \begin{equation*}
-        \norm{x_q^*}_{(X/\Ker_X)^*} = \norm{\Gamma_Z \circ \Omega_Z z^*}_{(q(Z))^*} = \norm{z^*}_{Z^*}
-    \end{equation*}
-    Finally, letting $x^* = \Omega_X^{-1} x_q^*$, we have 
-    $x^* \in X^*$, 
-    $\norm{x^*}_{X^*} = \norm{x_q^*}_{(X/\Ker_X)^*} =\norm{z^*}_{Z^*}$, 
-    and 
-    if $z \in Z$, then 
-    \begin{align*}
-        \ip{z, x^*} & = \ip{[z]_X, x_q^*} \\
-        & = \ip{[z]_X, \Gamma_Z \circ \Omega_Zz^*}\\
-        & = \ip{[z]_Z, \Omega_Z z^*}\\
-        & = \ip{z, z^*}
-    \end{align*}
+Define $\Gamma_Z:(Z/\Ker_Z)^* \to q(Z)^*$ by setting, 
+for $\phi^* \in (Z/\Ker_Z)^*$, 
+for $[z]_Z \in Z/\Ker_Z$, 
+\begin{equation*}
+\ip{T[z]_Z, \Gamma_Z \phi^*} = \ip{[z]_Z, \phi^*}
+\end{equation*}
+Then $\Gamma_Z$ is a \Linear Bijective \Isometry. 
+Hence $\Gamma_Z \circ \Omega_Z z^* \in q(Z)^*$ with 
+$\norm{\Gamma_Z \circ \Omega_Z z^*}_{q(Z)^*} = \norm{z^*}_{Z^*}$. 
+Thus we can apply the Hahn Banach theorem for \NormedSpaces to claim 
+the existence of $x_q^* \in (X/\Ker_X)^*$ where
+$x_q^*$ is an extension of $\Gamma_Z \circ \Omega_Z z^*$ and
+\begin{equation*}
+\norm{x_q^*}_{(X/\Ker_X)^*} = \norm{\Gamma_Z \circ \Omega_Z z^*}_{(q(Z))^*} = \norm{z^*}_{Z^*}
+\end{equation*}
+Finally, letting $x^* = \Omega_X^{-1} x_q^*$, we have 
+$x^* \in X^*$, 
+$\norm{x^*}_{X^*} = \norm{x_q^*}_{(X/\Ker_X)^*} =\norm{z^*}_{Z^*}$, 
+and 
+if $z \in Z$, then 
+\begin{align*}
+\ip{z, x^*} & = \ip{[z]_X, x_q^*} \\
+& = \ip{[z]_X, \Gamma_Z \circ \Omega_Zz^*}\\
+& = \ip{[z]_Z, \Omega_Z z^*}\\
+& = \ip{z, z^*}
+\end{align*}
 \end{proof}
-
-\begin{proof}[Proof of 2]
-    Let $Z=span(x)$. 
-    Define $z^* \in Z^*$ by 
-    $\ip{\alpha x, z^*} = \alpha \norm{x}$. 
-    Then $\norm{z^*} = 1$. 
-    Also, by part 1 of this result, 
-    it has an extension $x^* \in X^*$ with 
-    $\norm{x^*} = \norm{z^*} =1$ 
-    and $\ip{x,x^*} = \norm{x}$. 
+\begin{proof}[Proof of \ref{thm:HahnBanach:Point1}]
+Let $Z=span(x)$. 
+Define $z^* \in Z^*$ by 
+$\ip{\alpha x, z^*} = \alpha \norm{x}$. 
+Then $\norm{z^*} = 1$. 
+Also, by \ref{thm:HahnBanach:Extension1},
+it has an extension $x^* \in X^*$ with 
+$\norm{x^*} = \norm{z^*} =1$ 
+and $\ip{x,x^*} = \norm{x}$. 
 \end{proof}
-\begin{proof}[Proof of 3]
-    If $\norm{x} = 0$, then
-    for every $x^* \in X$, $\ip{x,x^*} = 0$.
-    Hence 
-    \begin{equation*} 
-    \norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} = \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}}=0
-    \end{equation*}
-
-    Otherwise, let  $x^* \in X^*$ guaranteed to 
-    exist by part 2 which satisfies $\norm{x^*}=1$, 
-    $\ip{x,x^*} = \norm{x}$. 
-    Then 
-    \begin{align*}
-    \norm{x} & = \frac{\ip{x,x^*}}{\norm{x^*}} \\
-    & \leq \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}} \\
-    & \leq    \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} 
-    \end{align*}
-    The other direction of the inequality
-    falls directly from the definition of 
-    the norm on $X^*$, and is trivial, so 
-    we are done. 
+\begin{proof}[Proof of \ref{thm:HahnBanach:Norm}]
+If $\norm{x} = 0$, then
+for every $x^* \in X$, $\ip{x,x^*} = 0$.
+Hence 
+\begin{equation*} 
+\norm{x}_X = \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} = \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}}=0
+\end{equation*}
+by \ref{thm:HahnBanach:Point1}, there exists 
+$x^* \in X^*$ such that $\norm{x^*} = 1$ and $\ip{x,x^*} = \norm{x}$.
+Then 
+\begin{align*}
+\norm{x} & = \frac{\ip{x,x^*}}{\norm{x^*}} \\
+& \leq \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \frac{\ip{x,x^*}}{\norm{x^*}} \\
+& \leq    \sup\limits_{0 \neq x^* \in X^*} \frac{\ip{x,x^*}}{\norm{x^*}} 
+\end{align*}
+The other direction of the inequality is trivial.
 \end{proof}
-\begin{proof}[Proof of 4]
-    By part 2 of this result, there exists $x_0^* \in X^*$ with 
-    $\norm{x_0^*} = 1$ and $\ip{x_0, x_0^*}=\norm{x_0}$. 
-    Since Y is \NonDegenerate, there
-    exists $y_0 \in Y$ with $\norm{y_0} = 1$. 
-    Define $T: \F \to Y$ by $T \alpha = \alpha y$.
-    Then $\norm{T} = \norm{y} = 1$. 
-    Define $S: X \to Y$ by $S=T \circ x_0^*$. 
-    Then $\norm{S} \leq \norm{T} \norm{x_0^*} = 1$, and
-    $\norm{S x_0} = \norm{\ip{x_0, x_0^*} y} = \ip{x_0, x_0^*} = \norm{x_0}$. 
-    Hence $\norm{S} \geq 1$ and therefore $\norm{S} = 1$. 
+\begin{proof}[Proof of \ref{thm:HahnBanach:Operator1}]
+By \ref{thm:HahnBanach:Point1},
+there exists $x_0^* \in X^*$ with 
+$\norm{x_0^*} = 1$ and $\ip{x_0, x_0^*}=\norm{x_0}$. 
+Since Y is \NonDegenerate, there
+exists $y_0 \in Y$ with $\norm{y_0} = 1$. 
+Define $T: \F \to Y$ by $T \alpha = \alpha y$.
+Then $\norm{T} = \norm{y} = 1$. 
+Define $S: X \to Y$ by $S=T \circ x_0^*$. 
+Then $\norm{S} \leq \norm{T} \norm{x_0^*} = 1$, and
+$\norm{S x_0} = \norm{\ip{x_0, x_0^*} y} = \ip{x_0, x_0^*} = \norm{x_0}$. 
+Hence $\norm{S} \geq 1$ and therefore $\norm{S} = 1$. 
+\end{proof}
+\begin{proof}[Proof of \ref{thm:HahnBanach:Open}]
+We consider the case where $\F = \R$.
+Let $u_0 \in U$ and $c_0 \in C$. 
+Define $D = (U-u_0)-(C-c_0)$. 
+Then $D$ is \SetOpen, \ConvexSet, and $0 \in D$. 
+Let $\mu_D$ denote the \MinkowskiFunctional of $D$. 
+By 
+\ref{prop:MinkowskiFunctional}, $D$ is a \SublinearFunctional. 
+Also, since $U \cap C = \emptyset$, $c_0-u_0 \not \in D$. 
+Hance, $\mu_D(c_0-u_0) \geq 1$
+Define $T:span(c_0-u_0) \to \F$ by $T(\alpha (c_0-u_0)) = \alpha$.
+Then $T$ is \Linear and 
+$Tx \leq \mu_D(x)$ for $x \in spn(c_0-u_0)$. 
+Hence, by the Hahn Banach theorem for vector spaces, 
+$T$ permits a \Linear \Extension to $X$, denoted
+$\tilde{T}$, which is still dominated by $\mu_D$. 
+Also, $\abs{\tilde{T}x} \leq \mu_D(x) \leq 1$ for $x \in D \cap (-D)$, 
+so $\tilde{T}$ is \ContinuousFunction.
+Let $u \in U$. 
+Let $c \in C$. 
+Then, since $\tilde{T}\pa{c_0-u_0}$, we have 
+\begin{equation*}
+\tilde{T}u-\tilde{T}c+1=\tilde{T}\pa{u-c+c_0-u_0} \leq \mu_D \pa{u-c+c_0-u_0} < 1
+\end{equation*}
+Hence, $\tilde{T} u < \tilde{T} c$ for every $c \in C$. 
+Since $u$ and $c$ are arbitrary elements of $U$ and $C$ respectively, 
+$\tilde{T}U \cap \tilde{T}C = \emptyset$
+and $\sup\limits_{u \in U} \tilde{T}u \leq \inf\limits_{c \in C} \tilde{T} c$. 
+Since $\tilde{T}U$ is \SetOpen, for each $u \in U$, 
+$\tilde{T} u < \sup\limits_{u \in U} \tilde{T} u \leq \inf\limits_{c \in C} \tilde{T}c$.
+\end{proof}
+\begin{proof}[Proof of \ref{thm:HahnBanach:ClosedConvex}]
+By 
+\ref{prop:GroupSeparation} and 
+\ref{prop:Bal3}, 
+there exists a \ConvexSet \SetOpen $U$ 
+such that 
+$\pa{C+U} \cap {K+U} = \emptyset$.
+In particular $C \cap \pa{K+U} = \emptyset$, 
+and $K + U $ is \SetOpen and \ConvexSet.
+Hence, by 
+\ref{thm:HahnBanach:Open}, 
+there is a $\tilde{T} \in X^*$ such that 
+for each $x \in K+U$, 
+\begin{equation*}
+\tilde{T}x < \sup\limits_{x \in U+K} \tilde{T}x \leq \inf\limits_{c \in C}\tilde{T}c
+\end{equation*}
+Now, since $\tilde{T}$ is continuous, $\tilde{T}K$ is a \SetCompact 
+subset of $\tilde{T}(K+U)$. 
+Hence, the claimed result holds. 
+\end{proof}
+\begin{proof}[Proof of \ref{thm:HahnBanach:Nullspace}]
+By \ref{thm:HahnBanach:ClosedConvex}, 
+there exists $j_0 \in X^*$ such that 
+$\sup\limits_{x \in C} \ip{x,j_0} < j_0(x_0)$.
+Since $C$ is a \VectorSubspace of $X$, $j_0(C)$ is a 
+\VectorSubspace of $\R$. Hence, $j_0(C) = 0$.
+Hence $j=\frac{j_0}{\ip{x_0, j_0}}$ is our functional. 
+\end{proof}
+\begin{proof}[Proof of \ref{thm:HahnBanach:NullspaceOperator}]
+By \ref{thm:HahnBanach:Nullspace}, there exists 
+$j_0 \in X^*$ with $j(C) = 0$ and $\ip{x_0,j_0} = 1$. 
+Since $Y$ is \NonDegenerate, there exists
+$y_0 \in Y$ with $\norm{y_0} = 1$.
+Define $T:\F \to Y$ by $T\alpha = \alpha y_0$. 
+Define $S:X \to Y$ by $S = T \circ j_0$. 
+Then $S \in BL(X,Y)$ 
+and $\norm{Sx_0} = \norm{\ip{x_0,j_0}y} = \ip{x_0,j_0} = 1$.
 \end{proof}
 \end{thm}
 

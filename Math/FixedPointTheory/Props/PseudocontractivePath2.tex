@@ -1,0 +1,41 @@
+\begin{prop}[Pseudo Contractive Path]
+\label{prop:PseudoContractivePath}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let $K \subset X$ be \SetClosed and \ConvexSet.
+Let $T:K \to X$ be a \ContinuousFunction \Pseudocontraction. 
+Let $x_0, x_1 \in K$.  %This may be insufficient. Prop 2 in morales2000 says this has to hold for every $x_0$. 
+For $i \in \{0,1\}$, let  $\gamma_i:(0,1) \to K$ such that for each $t \in (0,1)$, 
+$\gamma_i(t) \in tT\gamma_i(t)+ (1-t)x_i + \overline{0}$.
+Let $J$ denote the \NormalizedDualityMap of $X$.
+The following statements are true. 
+\begin{enumerate}
+\item 
+\label{prop:PseudocontractivePath:MonotoneDecreasing}
+Define $h:[0,1) \to [0,\infty)$ by $h(t) = \norm{\gamma_i(t)-T\gamma_i(t)}$.
+Then $h$ is monotone decreasing. 
+\item
+\label{prop:PseudocontractivePath:contraction}
+For each $t \in (0,1)$, $\norm{\gamma_0(t)-\gamma_1(t)} \leq \norm{x_0-x_1}$.
+\item
+\label{prop:PseudocontractivePath:Bounded}
+If $\gamma_0$ is bounded, then $\gamma_1$ is bounded.
+\item
+\label{prop:PseudocontractivePath:FixedPoint}
+If $T$ has a \PseudoFixedPoint, then $\gamma_0$ is bounded.
+\item
+\label{prop:PseudocontractivePath:Duality}
+If $\tilde{x}$ is a \PseudoFixedPoint of $T$, then 
+for each $t \in (0,1)$, there exists $j \in J(\gamma_0(t)-\tilde{x})$ such that 
+$\ip{\gamma(t)-x_0, j} \leq 0$.
+\end{enumerate}
+\begin{proof}
+Since $T$ is \ContinuousFunction and \Pseudocontractive, if we define $\tilde{T}:Q(K) \to X/\overline{0}$ by $\tilde{T} \circ Q = Q \circ T$ $\tilde{T}$ is \Pseudocontractive and defined on a \BanachSpace. Furthermore, if we define $\tilde{\gamma_i} = Q \circ \gamma_i$, then 
+\begin{equation*}
+\tilde{\gamma}_i(t) = t \tilde{T} \tilde{\gamma_i}(t) + (1-t)[x_i]
+\end{equation*}
+Furthermore, $\tilde{x}$ is a \PseudoFixedPoint of $T$ if and only if 
+$[\tilde{x}]$ is a \FixedPoint of $\tilde{T}$, 
+so this result is a consequence of proposition 2 of \cite{morales2000}.
+\end{proof}
+\end{prop}

@@ -1,0 +1,40 @@
+\begin{prop}[\weak]
+\label{prop:WeakNorm}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $x_0 \in X$
+Let $x_0^* \in X^*$. 
+Let $\{x_\alpha\}_{\alpha \in A}  \subset X$
+such that $x_\alpha \wto x_0$. 
+Let $\{x_\alpha^*\}_{\alpha \in A} \subset X^*$ such
+that $x_\alpha^* \wsto x_0^*$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:WeakNorm}~\roman*}]
+\item 
+\label{prop:WeakNorm:WeakLiminf}
+$\norm{x_0} \leq \liminf\limits \norm{x_\alpha}$.
+\item 
+\label{prop:WeakNorm:WeakStarLiminf}
+$\norm{x_0^*} \leq \liminf\limits \norm{x_\alpha^*}$.
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:WeakNorm:WeakLiminf}]
+By 
+\ref{thm:HahnBanach:Norm}, 
+we have 
+\begin{align*}
+\norm{x_0} & = \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \ip{x_0, x^*} \\
+& =  \sup\limits_{x^* \in \partial B_{X^*}(0;1)} \liminf\limits \ip{x_\alpha, x^*} \\
+& \leq \sup\limits_{x^* \in B_{X^*}(0;1)} \liminf\limits \norm{x_\alpha} \norm{x^*}\\
+& \leq \liminf\limits \norm{x_\alpha}
+\end{align*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeakNorm:WeakStarLiminf}]
+We have 
+\begin{align*}
+\norm{x_0^*} & = \sup\limits_{x \in \partial B_{X}(0;1)} \ip{x, x_0^*} \\
+& =  \sup\limits_{x \in \partial B_{X}(0;1)} \liminf\limits \ip{x, x_\alpha^*} \\
+& \leq \sup\limits_{x \in B_{X}(0;1)} \liminf\limits \norm{x_\alpha^*} \norm{x}\\
+& \leq \liminf\limits \norm{x_\alpha^*}
+\end{align*}
+\end{proof}
+\end{prop}

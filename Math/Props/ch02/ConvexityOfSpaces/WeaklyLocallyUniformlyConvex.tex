@@ -1,0 +1,38 @@
+\begin{prop}[\LocallyWeaklyUniformlyConvex]
+\label{prop:WeaklyLocallyUniformlyConvexSpace}
+\rm
+Let $X$ be a \SeminormedSpace.
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:WeaklyLocallyUniformlyConvexSpace}~\roman*}]
+\item 
+\label{prop:WeaklyLocallyUniformlyConvexSpace:Convex}
+$X$ is \LocallyWeaklyUniformlyConvex.
+\item 
+\label{prop:WeaklyLocallyUniformlyConvexSpace:EpsilonDelta}
+For each $\epsilon > 0$,
+and for each  $x \in \overline{B_X(0;1)}$, 
+there exists a $\delta > 0$ 
+such that if $x^* \in \partial B_{X^*}(0;1)$ and 
+$y \in \overline{B_X(0;1)}$ such that 
+$\ip{x-y, x^*} > \epsilon$, 
+then $\norm{x+y} \leq 2(1-\delta)$. 
+\item 
+\label{prop:WeaklyLocallyUniformlyConvexSpace:Convergence}
+If $x \in \overline{ B_X(0;1)}$ and $\{x_n\}_{n \in \N} \subset \overline{B_X(0;1)}$ such that $\norm{x+x_n} \to 2$, then $x_n \overset{w}{\to} x$. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:WeaklyLocallyUniformlyConvexSpace:Convex} implies \ref{prop:WeaklyLocallyUniformlyConvexSpace:EpsilonDelta}]
+Let $X$ be \LocallyWeaklyUniformlyConvex. 
+Let $\epsilon > 0$. 
+Let $x_0 \in \overline{B_X(0;1)}$. 
+Define $\delta = \tilde{\Delta}_w(\epsilon, x_0) > 0$. 
+Let $x^* \in \partial B_{X^*}(0;1)$. 
+Let $y \in \overline{B_X(0;1)}$ such that $\ip{x-y, x^*} \geq \epsilon$. 
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeaklyLocallyUniformlyConvexSpace:EpsilonDelta} implies \ref{prop:WeaklyLocallyUniformlyConvexSpace:Convergence}]
+\end{proof}
+\begin{proof}[Proof of \ref{prop:WeaklyLocallyUniformlyConvexSpace:Convergence} implies \ref{prop:WeaklyLocallyUniformlyConvexSpace:Convex}]
+Suppose $X$ is not \LocallyWeaklyUniformlyConvex.
+Then there exists an   
+\end{proof}
+\end{prop}

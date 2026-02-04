@@ -6,7 +6,7 @@
     \begin{enumerate}[label=(\roman*), ref={\ref{prop:FilterOrderFacts}.~\roman*}]
     \item \label{prop:FilterOrderFacts:ContainingFilter} Let $\scF$ be a \Filter on $X$ and let $A \subset X$. Then there is a \Filter containing $A$ on $X$ which is $\FinerFilter$ than $\scF$ if and only if $A \cap U \neq \emptyset$ for each $U \in \scF$. 
     \item \label{prop:FilterOrderFacts:FinestFilterExistence}
-    Let $\sc{K}=\{\scF_\alpha\}_{\alpha \in A}$ be a collection of $\Filters$ on $X$. 
+    Let $\scK=\{\scF_\alpha\}_{\alpha \in A}$ be a collection of $\Filters$ on $X$. 
     There exists a \Filter on $X$ which is \FinerFilter than each $\scF_\alpha$ if and only if, for every \Finite subset $\{\scF_{\alpha_i}\}_{i=1}^n \subset \scK$, 
     for each $\{U_i\}_{i=1}^n \in \prod\limits_{i=1}^n \scF_{\alpha_i}$
     , $\bigcap\limits_{i=1}^n U_i \neq \emptyset$.
@@ -97,13 +97,13 @@
         \CoarserFilter than every $\scF_\alpha$. 
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FilterFinenessIsInductive}]
-        Direct application of  
+        This is proven by a direct application of  
         \ref{prop:FilterOrderFacts:UnionOfChainOfFiltersIsAFilter}
         to the collection of all \Chains 
         of \Filters in $X$. 
     \end{proof}
     \begin{proof}[Proof of \ref{prop:FilterOrderFacts:FilterCoarsenessIsInductive}]
-        Direct application of 
+        This is proven by a direct application of 
         \ref{prop:FilterOrderFacts:IntersectionOfChainOfFiltersIsAFilter}
         to the collection of all \Chains
         of \Filters on $X$. 

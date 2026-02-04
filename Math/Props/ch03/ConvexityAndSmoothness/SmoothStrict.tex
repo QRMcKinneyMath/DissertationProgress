@@ -1,0 +1,78 @@
+\begin{prop}[Smoothness and Strict Convexity]
+\label{prop:SmoothVsStrictConvex}
+\rm
+Let $X$ be a \SeminormedSpace.
+Let $J$ be the \NormalizedDualityMap of $X$.
+The following are true.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:SmoothVsStrictConvex}~\roman*}]
+\item 
+\label{prop:SmoothDualImpliesStrictConvex}
+If $X^*$ is \SmoothSpace, then $X$ is \StrictlyConvexSpace.
+\item 
+\label{prop:StrictConvexDualImpliesSmooth}
+If $X^*$ is \StrictlyConvexSpace, then $X$ is \SmoothSpace. 
+\item 
+\label{prop:ReflexiveImpliesStrictConvexIffSmoothDual}
+If $X$ is \Reflexive, then $X$ is \StrictlyConvexSpace if and only if $X^*$ is \SmoothSpace. 
+\item 
+\label{prop:ReflexiveImpliesSmoothIffStrictConvexDual}
+If $X$ is \Reflexive, then $X$ is \SmoothSpace if and only if $X^*$ is \StrictlyConvexSpace. 
+\item 
+\label{prop:StrictlyConvexDualImpliesSingleValuedContinuousDualityMap}
+If $X^*$ is \StrictlyConvexSpace, then $J$ is single valued and \Norm to $\weakstar$ \ContinuousFunction. 
+\item 
+\label{prop:SmoothAndStrictConvexIffSingleValuedStrictlyMonotoneDualityMap}
+X is \SmoothSpace and \StrictlyConvexSpace if and only if $J$ is single valued and strictly monotone. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:SmoothDualImpliesStrictConvex}]
+Let $X^*$ be \SmoothSpace. 
+Let $x^* \in X^*$. 
+Let $x,y \in X$ such that $\ip{x,x^*} = \ip{y,x^*} = \norm{x^*}^2$ and $\norm{x}=\norm{y} = \norm{x^*}$. 
+Let $c:X \to X^{**}$ denote the \CanonicalEmbedding.
+Then $\{c(x),c(y)\} \subset J(x^*)$. 
+Since $X^*$ is \SmoothSpace, $c(x)=c(y)$. 
+Hence, $\norm{x-y} = 0$. 
+By 
+\ref{prop:StrictlyConvexSpace:Nonoverlapping} implies \ref{prop:StrictlyConvexSpace:StrictlyConvex}, 
+$X$ is \StrictlyConvexSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictConvexDualImpliesSmooth}]
+I prove by converse.
+Suppose $X$ is not \SmoothSpace.
+Then there exists $x_0 \in \partial B_X(0;1)$ and
+$j_1 \neq j_2 \in X^*$ such that 
+$\{j_1,j_2\} \subset Jx_0$. 
+This implies $1=\ip{x_0, \frac{j_1+j_2}{2}}$, so $\norm{\frac{j_1+j_2}{2}}=1$. Thus $X^*$ is not \StrictlyConvexSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexiveImpliesStrictConvexIffSmoothDual}]
+Suppose $X$ is \Reflexive. 
+If $X$ is \StrictlyConvexSpace,
+then $X^{**}$ is \StrictlyConvexSpace, so by 
+\ref{prop:StrictConvexDualImpliesSmooth}, $X^*$ is \SmoothSpace.
+\ref{prop:SmoothDualImpliesStrictConvex} provides the other direction.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:ReflexiveImpliesSmoothIffStrictConvexDual}]
+Suppose $X$ is \Reflexive. 
+If $X$ is \SmoothSpace, 
+then $X^{**}$ is \SmoothSpace, so by
+\ref{prop:SmoothDualImpliesStrictConvex}, $X^{**}$ is \StrictlyConvexSpace.
+\ref{prop:StrictConvexDualImpliesSmooth} provides the other direction.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexDualImpliesSingleValuedContinuousDualityMap}]
+If $X^*$ is \StrictlyConvexSpace, then by 
+\ref{prop:StrictConvexDualImpliesSmooth}, $X$ is \SmoothSpace.
+By definition, this means $J$ is single valued. 
+Furthermore, by 
+$\ref{prop:Smooth:Smooth} \implies \ref{prop:Smooth:JContinuous}$, 
+$J$ is \Norm to \weakstar \ContinuousFunction.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:SmoothAndStrictConvexIffSingleValuedStrictlyMonotoneDualityMap}]
+By 
+$\ref{prop:Smooth:Smooth} \iff \ref{prop:Smooth:JContinuous}$, 
+By definition, $X$ is \SmoothSpace if and only if $J$ is single valued.
+By 
+\ref{prop:StrictlyConvexSpace:StrictlyMonotone} $\iff$ \ref{prop:StrictlyConvexSpace:StrictlyConvex},
+$X$ is \StrictlyConvexSpace if and only if $J$ is strictly monotone. 
+\end{proof}
+%Cioranescu 2.1.3, 2.1.4, 2.1.5, 2.1.10, 2.1.11, 2.1.12 (As corollary of 2.1.12), 
+\end{prop} 

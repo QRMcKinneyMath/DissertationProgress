@@ -1,0 +1,124 @@
+\begin{prop}[Local Weak To Strong]
+\label{prop:LocalUniformConvexWeakToStrong}
+\rm
+Let $X$ be a 
+\LocallyUniformlyConvex \SeminormedSpace. 
+Let $\{x_n\}_{n \in \mathbb{N}} \subset X$. 
+Let $x_0 \in X$. 
+Suppose $x_n \wto x_0$
+and $\norm{x_n} \to \norm{x_0}$. 
+Then $x_n \to x_0$. 
+%Cioranescu 2.2.8
+\begin{proof}
+If $\norm{x_n} \to 0$ then clearly $x_n \to y$ for every $y \in \overline{0}$.
+Thus we can without loss of generality assume
+$\norm{x_0} \neq 0$. 
+Thus there exists $\eta > 0$ such that for some $K \in \N$, 
+for each $k>K$, $\norm{x_k} \geq \eta$, 
+and also $\{\norm{x_n}\}_{n \in \N}$ is bounded, say by M. 
+Define $\tilde{x_0} = \frac{x_0}{\norm{x_0}}$. 
+For $n \geq K$, define
+$\tilde{x_n}= \frac{x_n}{\norm{x_n}}$. 
+If $f \in X^*$, then 
+\begin{align*}
+\abs{\ip{\tilde{x_n}-\tilde{x_0}, j} }& =  \abs{\ip{\frac{x_n}{\norm{x_n}}-\frac{x_0}{\norm{x_0}}, f}}\\
+& = \frac{1}{\norm{x_n}\norm{x_0}} \pa{\abs{\ip{\norm{x_0}\pa{x_n-x_0}, f}}+ \abs{\norm{x_n}-\norm{x_0}}\abs{\ip{x_0,f}}}\\
+& \leq \frac{M}{\eta^2} \pa{  \abs{\ip{x_n-x_0, f}} + \norm{f}\abs{\norm{x_n}-\norm{x_0}}} \to 0
+\end{align*}
+Hence $\tilde{x_n} \wto \tilde{x_0}$.
+Hence $\tilde{x_n}+\tilde{x_0} \wto 2\tilde{x_0}$.
+Thus by 
+\ref{prop:WeakNorm:WeakStarLiminf}, 
+\begin{align*}
+2 & = 2 \norm{\tilde{x_0}} \\
+& \leq \liminf\limits_{n \to \infty} \norm{\tilde{x_n}+\tilde{x_0}}\\
+& \leq \limsup\limits_{n \to \infty}  \norm{\tilde{x_n}+ \tilde{x_0}}\\
+& \leq \limsup\limits_{n \to \infty} \norm{\tilde{x_n}} + \norm{\tilde{x_0}}\\
+& = 2
+\end{align*}
+Thus $\norm{\tilde{x_n}+\tilde{x_0}} \to 2$. 
+An application of 
+\ref{prop:LocallyUniformlyConvex}
+implies that $\tilde{x_n} \to \tilde{x_0}$. 
+Since $\norm{x_n} \to \norm{x_0}$, 
+it is then clear that $x_n \to x_0$. 
+\end{proof} 
+\begin{prop}[\weak to Strong]
+\label{prop:LocalWeakWeakToStrong}
+\rm
+Let $X$ be a \WeaklyTwoUniformlyConvex \SeminormedSpace. 
+Let $\{x_n\}_{n \in \N} \subset X$ 
+Let $x_0 \in X$. 
+Let $\{x_n\}_{n \in \N} \subset X$. 
+Suppose $x_n \wto x_0$. 
+and $\norm{x_n} \to \norm{x_0}$. 
+Then $x_n \to x_0$. 
+\begin{proof}
+If $\norm{x_n} \to 0$, then clearly $x_n \to y$ for every $y \in \overline{0}$. 
+Thus we can without loss of generality assume $\norm{x_0} \neq 0$. 
+Thus there exists $\eta > 0$ such that for some $K \in \N$, for each $k > K$, 
+$\norm{x_k} \geq \eta$. 
+Also, since $\{\norm{x_k}\}_{k \in \N}$ is convergent, it is bounded, say by M. 
+Define $\tilde{x_0} = \frac{x_0}{\norm{x_0}}$. 
+For $n \geq K$, define $\tilde{x_n} = \frac{x_n}{\norm{x_n}}$. 
+Let $J$ denote the \NormalizedDualityMap of $X$. 
+If $j \in J\tilde{x}_0$, then $\ip{\tilde{x_n}, j} \to \ip{\tilde{x_0}, j} = 1$. 
+Hence, by 
+\ref{prop:Weak2UniformConvex:Convergence}, we conclude $\tilde{x_n}-\tilde{x_0} \to 0$. 
+That is, $\tilde{x_n} \to \tilde{x_0}$. 
+This implies
+\begin{equation*}
+x_n = \norm{x_n} \tilde{x_n} \to \norm{x_0} \tilde{x_0} = x_0
+\end{equation*}
+\end{proof}
+\end{prop}
+\begin{prop}[Local \weakstar to \weak]
+\label{prop:LocalWeakstarToWeak}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Suppose $X^*$ is \LocallyWeaklyUniformlyConvex. 
+Let $x_0 \in X^*$.
+Suppose $\{x_i\}_{i \in \N} \subset X^*$ such that 
+$\norm{x_i} \to \norm{x_0}$ and $x_i \wsto x_0$. 
+Then $x_i \wto x_0$. 
+\begin{proof}
+If $\norm{x_i} \to 0$ then $x_i \to 0$ which implies $x_i \wto x_0$. 
+Thus I assume without loss of generality that $\norm{x_0} \neq 0$. 
+Then there exists $\eta > 0$ such that for some $K \in \N$, for every $k>K$, 
+$\norm{x_k} \geq \eta$, and $\{\norm{x_k}\}_{k \in \N}$ is bounded. 
+Let $N \in \N$ such that $\norm{x_k} \leq N$ for every k. 
+Suppose $x_k \wto x_0$. 
+Define $\tilde{x_0} = \frac{x_0}{\norm{x_0}}$ 
+and for $k \in \N$, define $\tilde{x_k} = \frac{x_k}{\norm{x_k}}$. 
+Then for each $k \in \N$, $\norm{\tilde{x_k}} = 1$ and $\norm{\tilde{x_0}} = 1$. 
+Furthermore, it is clear that $\tilde{x_k} \wsto \tilde{x_0}$.
+Hence $\frac{\tilde{x_k}+\tilde{x_0}}{2} \wsto \tilde{x_0}$.
+By 
+\ref{prop:WeakNorm:WeakStarLiminf}, 
+\begin{equation*}
+1=\norm{x_0} \leq \liminf\limits_{k \to \infty} \norm{\frac{\tilde{x_0}+\tilde{x_k}}{2}} = \lim\limits_{k \to \infty} \norm{\frac{\tilde{x_0}+\tilde{x_k}}{2}}
+\end{equation*}
+Thus, by 
+\LocalWeakUniformConvexity, we conclude
+that $\tilde{x_k} \wto \tilde{x_0}$.
+This implies that $x_k \wto  x_0$. 
+\end{proof}
+\end{prop}
+\begin{prop}[Local \weakstar to strong]
+\label{prop:LocalWeakstarToStrong}
+\rm
+Let $X$ be a \SeminormedSpace. 
+Suppose $X^*$ is \LocallyUniformlyConvex. 
+Let $x_0 \in X^*$ 
+Suppose $\{x_k\}_{k \in \N} \subset X^*$ such that 
+$x_k \wsto x_0$ and $\norm{x_k} \to \norm{x_0}$. 
+Then $x_k \to x_0$. 
+\begin{proof}
+By \ref{prop:DegreesOfConvexity:LocalImpliesWeaklyLocal}, 
+$X^*$ is \LocallyWeaklyUniformlyConvex.
+Hence, by \ref{prop:LocalWeakstarToWeak}, 
+$x_k \wto x_0$. 
+Hence by \ref{prop:LocalUniformConvexWeakToStrong}, 
+$x_k \to x_0$.
+\end{proof}
+\end{prop}

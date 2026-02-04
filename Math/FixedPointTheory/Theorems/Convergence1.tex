@@ -1,0 +1,47 @@
+\begin{thm}
+\label{thm:FixedPointConvergence}
+\rm
+Let $(X, \{\norm{\cdot}_i\}_{i \in \N})$ be a 
+\Complete \GSpace. 
+Let $K_1 \subset X$ be \SetClosed. 
+Let $T_1:K \to X$. 
+Suppose that there exists a strictly increasing sequence $\{i_j\}_{ \in \N} \subset \N$
+such that 
+$T:K_1 \subset (X, \norm{\cdot}_{i_1}) \to (X, \norm{\cdot}_{i_1})$ permits a \PseudoFixedPoint
+$x_1$. 
+Further suppose that, for each $j \geq 2$, if we define
+$K_{j} = K_{j-1} \cap \pa{x_{j-1}+\overline{0}_{i_{j-1}}}$
+and suppose that 
+\begin{equation*}
+T:K_j \subset (X, \norm{\cdot}_{i_j}) \to (X, \norm{\cdot}_{i_j}) 
+\end{equation*}
+permits a \PseudoFixedPoint which we will call $x_j$.
+Then $T$ has a \FixedPoint $\tilde{x}$ and
+\begin{equation*}
+\lim\limits_{i \to \infty} x_i = \tilde{x}
+\end{equation*}
+\begin{proof}
+First, since $x + \overline{0}_i$ is \SetClosed 
+in $(X, \norm{\cdot}_i)$for each $x \in X$ and $i \in \N$, 
+we have, for each $i \in \N$, since $\{\norm{\cdot}_i\}_{i \in \N}$ is 
+a pointwise increasing sequence, 
+$K_i$ is \SetClosed and therefore \Complete. 
+I now show that $\{x_i\}_{i \in \N}$ is Cauchy.
+Let $k \in \N$. 
+Then for some $J \in \N$, $i_{J-1} > k$. 
+Since $K_{i+1} \subset K_{i}$ for each $i$, we conclude that if $j \geq J$, then 
+\begin{equation*}
+x_j \in K_j \subset K_{J}  = K_{J-1}+\pa{ x_{j-1} \cap \overline{0}_{i_{J-1}}}
+\end{equation*}
+Hence, if $m,n>J$, then $\norm{x_m-x_n}_k \leq \norm{x_m-x_n}_{J} = 0$.
+Thus for these $j$, since $\{\norm{\cdot}\}_{i \in \N}$ is an increasing sequence, 
+\begin{equation*}
+d(x_m,x_n) = \sum\limits_{s \in \N} \frac{1}{2^s} \frac{\norm{x_m-x_n}_s}{1+\norm{x_m-x_n}_s} \leq \sum\limits_{s=J+1}^{\infty} \frac{1}{2^s} \leq \sum\limits_{s=k}^{\infty} \frac{1}{2^s}
+\end{equation*}
+Since $k$ is arbitrary, $\{x_i\}_{i \in \N}$ is Cauchy. 
+Since $X$ is \Complete, there exists $\tilde{x} \in X$ such that $x_i \to \tilde{x}$. 
+Since each $K_i$ is \Complete, for each $i \in \N$, $\tilde{x} \in K_i$. 
+Hence, $\norm{T\tilde{x}-\tilde{x}}_{i_j} = 0$ for each $j \in \N$. 
+Thus we conclude $d(T\tilde{x}, \tilde{x}) = 0$, so $\tilde{x}=T\tilde{x}$. 
+\end{proof}
+\end{thm}

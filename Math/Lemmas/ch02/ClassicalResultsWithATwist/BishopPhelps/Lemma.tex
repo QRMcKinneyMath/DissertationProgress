@@ -1,0 +1,77 @@
+\begin{lem}[Bishop-Phelps Lemma]
+\label{lem:BishopPhelps}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let $x^*,y^* \in \partial B_{X^*}(0;1)$.
+Let $C \subset X$ \SetClosed and \ConvexSet.
+Let $1>\epsilon >0$.
+Let $k>1+\frac{2}{\epsilon}$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{lem:BishopPhelps}~\roman*}]
+\item 
+\label{lem:BishopPhelps:Existence}
+If $x^*$ is bounded on $C$, then for each $z \in C$, there is an $x_0 \in X$ such that $K(x^*,\epsilon)$ \Supports $C$ at $x_0$ and $x_0 \in K(x^*,\epsilon)+z$. 
+\item 
+\label{lem:BishopPhelps:Kernel}
+If $\abs{\ip{x,y^*}}\leq \frac{\epsilon}{2}$ for each $x \in Kern(x^*) \cap \overline{B_X(0;1)}$, then 
+$min\pa{\norm{x^*+y^*},\norm{x^*-y^*}} \leq \epsilon$
+\item 
+\label{lem:BishopPhelps:Bound}
+If $y^*$ is nonnegative on $K(x^*,k)$, then $\norm{x^*-y^*}\leq \epsilon$.
+\end{enumerate}
+\begin{proof}[Proof of \ref{lem:BishopPhelps:Existence}]
+Let $x^* \in X^*$ be bounded on $C$.
+Define, for $x,y \in X$, $y \lesssim x$ if and only if $x-y \in K(x^*,\epsilon)$. 
+Then $(X, \lesssim)$ is a \Poset.
+Fix $z \in C$. 
+Define $Z=C \cap \pa{ K(x^*,\epsilon)+z}$. 
+Since $C$ and $K(x^*,\epsilon)$ are \SetClosed, so is $Z$. 
+Let $\mathcal{C}=\{x_\alpha\}_{\alpha \in A}$ be a \Chain in $X$  where $(A,\leq)$ is any
+\Toset and $x_\alpha \lesssim x_\beta \iff \alpha \leq \beta$.  
+If $(x_\alpha,x_\beta) \in \mathcal{C}$, where $x_\beta \lesssim x_\alpha$, then $x_\alpha-x_\beta \in K(x^*,\epsilon)$, so $0 \leq ||x_\alpha-x_\beta|| \leq \epsilon \ip{x_\alpha-x_\beta,x^*}$, implying $\ip{x_\beta,x^*} \leq \ip{x_\alpha,x^*}$. Thus we conclude $\{\ip{x_\alpha,x^*}\}_{\alpha \in A}$ is a monotone bounded net in $\R$ that is therefore Cauchy, which by the following inequality 
+\begin{equation*}
+||x_\beta-x_\alpha|| \leq \epsilon \ip{x_\alpha-x_\beta,x^*} = \epsilon \pa{ \ip{x_\alpha,x^*}-\ip{x_\beta,x^*}} \to 0
+\end{equation*}
+implies $\mathcal{C}$ is a Cauchy net and therefore converges, say $x_\alpha \to y_0 \in Z$. 
+Since $\norm{\cdot}$ and $x^*$ are \ContinuousFunction, $y_0$ is an \UpperBound for $\mathcal{C}$.  
+Since $\mathcal{C}$ was an arbitrary \Chain in Z, by Zorn's lemma, $Z$ has a \MaximalElement $x_0$.
+By definition, $x_0 \in Z:=K(x^*,\epsilon)+z$.
+Since $x_0 \in Z \subset C$, $x_0 \in C$. 
+Further, since $0 \in K(x^*,\epsilon)$, $x_0 \in K(x^*,\epsilon) \cap C$. 
+Let $y \in (K(x^*,\epsilon)+x_0) \cap C$. 
+Then $y-x_0 \in K(x^*,\epsilon)$ so that $z \lesssim x_0 \lesssim y$, meaning $y \in Z$ and therefore $y=x_0$ since $x_0$ is maximal. 
+Hence $(K(x^*,\epsilon)+x_0 ) \cap C=\{x_0\}$, so we are done. 
+\end{proof}
+\begin{proof}[Proof of \ref{lem:BishopPhelps:Kernel}]
+By assumption, 
+$\norm{y^*|_{Kern(x^*)}} \leq \frac{\epsilon}{2}$.
+Hence, by the Hahn-Banach theorem, there exists
+$\tilde{y^*} \in X^*$ extending $y^*|_{Kern(x^*)}$ such that $ \norm{\tilde{y^*}}\leq \frac{\epsilon}{2}$. 
+Since $Codim(kernel(x^*)) = 1$ and $kernel(x^*) \subset kernel(y^*-\tilde{y}^*)$, 
+for some $\alpha \in \R$, $\alpha x^*  = y^*-\tilde{y}^*$. 
+This implies
+\begin{equation*}
+\abs{1-|\alpha|} = \abs{\norm{y^*}-\norm{\tilde{y^*}-y^*}} \leq \norm{\tilde{y^*}} \leq \frac{\epsilon}{2}
+\end{equation*}
+If $\alpha \geq 0$, 
+\begin{equation*} 
+\norm{x^*-y^*} =\norm{x^*-\pa{\alpha x^*+\tilde{y^*}}}=\norm{\pa{1-\alpha}x^*-\tilde{y^*}} \leq |1-\alpha|+\norm{\tilde{y^*}} \leq \epsilon
+\end{equation*}
+If $\alpha \leq 0$, then 
+\begin{equation*} 
+\norm{x^*+y^*} = \norm{x^*+\pa{\alpha x^*+\tilde{y^*}}} = \norm{(1+\alpha)x^*+\tilde{y^*}} \leq |1+\alpha| + \norm{\tilde{y^*}} \leq \epsilon
+\end{equation*}
+\end{proof}
+\begin{proof}[Proof of \ref{lem:BishopPhelps:Bound}]
+Since $||x^*||=1$, there exists $x \in \partial B_X(0;1)$ such that $\ip{x,x^*} > \frac{1}{k} \pa{1+\frac{2}{\epsilon}}$. 
+If $y \in Kern(x^*) \cap \overline{B_X(0;1)}$, then \begin{equation*}
+\norm{x \pm \frac{2}{\epsilon}y} \leq 1+\frac{2}{\epsilon} < k \ip{x,x^*}=k \ip{x \pm \frac{2}{\epsilon}y,x^*}
+\end{equation*}
+so $x \pm \frac{2}{\epsilon}y \in K(x^*,k)$, so by assumption $\ip{x \pm \frac{2}{\epsilon}y,y^*} \geq 0$. 
+Since this occurs for both positive and negative, $\abs{\ip{y,y^*}}=\frac{\epsilon}{2}\abs{\ip{\frac{2}{\epsilon}y,y^*}} \leq \frac{\epsilon}{2}\ip{y^*,x} \leq \frac{\epsilon}{2}||x||=\frac{\epsilon}{2}$. 
+Hence by 
+\ref{lem:BishopPhelps:Bound}, either $||x^*-y^*|| \leq \epsilon$, or $||x^*+y^*|| \leq \epsilon$. 
+Since $||x^*||=1$, there exists $x \in \partial B_X(0;1)$ such that $\frac{||x||}{k} \leq max \pa{\epsilon, \frac{1}{k}} < \ip{x,x^*}$, so that $x \in K(x^*,k)$, implying $\ip{x,y^*} \geq 0$, and therefore $\epsilon < \ip{x_0,x^*+y^*} \leq \norm{x^*+y^*}$. Hence we conclude $\norm{x^*-y^*} \leq \epsilon$. 
+
+\end{proof} 
+\end{lem}

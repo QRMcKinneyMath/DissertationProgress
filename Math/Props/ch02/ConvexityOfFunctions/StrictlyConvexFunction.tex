@@ -1,0 +1,50 @@
+\begin{rmk}[\StrictlyConvexFunction]
+\label{rmk:StrictlyConvexFunction}
+\rm
+It is clear by an inspection of the proofs of 
+\ref{prop:ConvexFunction}
+that if each instance of 
+\ConvexFunction is replaced by 
+\StrictlyConvexFunction,
+if each instance of $\leq$ is replaced with $<$, 
+and if we add to 
+\ref{prop:ConvexFunction:EpigraphConvex}
+the requirement that $graph(T)$ only contains the 
+endpoints of any given segment on it, then the result remains true and the proof remains valid. 
+Thus, we have the following 
+\end{rmk}
+\begin{prop}[\StrictlyConvexFunction]
+\label{prop:StrictlyConvexFunction}
+\rm
+Let $\scF \in \{\bbC, \bbR\}$. 
+Let $X$ be a \VectorSpace over $\scF$. 
+The following are equivalent.
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:StrictlyConvexFunction}~\roman*}]
+\item 
+\label{prop:StrictlyConvexFunction:BinaryConvex}
+$T$ is \StrictlyConvexFunction
+and for each $x,y \in X$, $T\pa{[x,y]}$ is bounded from above. 
+\item
+\label{prop:StrictlyConvexFunction:Convex}
+For each $x,y \in X$ and for each $\lambda \in (0,1)$, 
+\begin{equation*}
+T\pa{\lambda x + \pa{1-\lambda}y} < \lambda T(x) + \pa{1-\lambda}T(y)
+\end{equation*}
+\item
+\label{prop:StrictlyConvexFunction:SumConvex}
+For every $\{\lambda_i\}_{i=1}^n \subset (0,1)$ such that $\sum\limits_{i=1}^n \lambda_i = 1$
+and for every $\{x_i\}_{i=1}^n \subset X$ where each $x_i$ is distinct, 
+\begin{equation*}
+T\pa{\sum\limits_{i=1}^n \lambda_i x_i} < \sum\limits_{i=1}^n \lambda_i T\pa{x_i}
+\end{equation*}
+\item
+\label{prop:StrictlyConvexFunction:ConvexInequality}
+For each $x,y,z \in X$ with $x \neq z$ and $y = \lambda z + \pa{1-\lambda} x$ where $\lambda \in (0,1)$, we have 
+\begin{equation*}
+\frac{T(y)-T(x)}{\lambda} < T(z)-T(x) \leq \frac{T(z)-T(y)}{1-\lambda}
+\end{equation*}
+\item
+\label{prop:StrictlyConvexFunction:EpigraphConvex}
+$Epi(T)$ is \ConvexSet and for each $x,y \in Graph(T)$, $[x,y] \cap Graph(T) = \{x,y\}$.
+\end{enumerate}
+\end{prop}

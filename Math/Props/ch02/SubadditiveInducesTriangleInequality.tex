@@ -1,23 +1,23 @@
-\begin{prop}[Subadditive Operator On a Group Induces a Metric]
-    \label{prop:subadditiveinducestriangleinequality}
-    \rm
-    Let $(G,+, e)$ be a 
-	\Group and let $(H,+,\leq)$ be a 
-	\TotallyOrderedMagma.
-    Let $p:G \to H$ be \Subadditive. 
-    Define $d:G \times G \to H$ by setting, for each $x,y \in G$, 
-        $d(x,y) =  p(xy^{-1})$.
-    Then d satisfies the \TriangleInequality. 
+\begin{prop}
+\label{prop:subadditiveinducestriangleinequality}
+\rm
+Let $(G,+, e)$ be a 
+\Group and let $(H,+,\leq)$ be a 
+\TotallyOrderedMagma.
+Let $p:G \to H$ be \Subadditive. 
+Define $d:G \times G \to H$ by setting, for each $x,y \in G$, 
+$d(x,y) =  p(xy^{-1})$.
+Then d satisfies the \TriangleInequality. 
 
-    \begin{proof}
-    let $x,y, z \in G$. Then
-    \begin{align*}
-        d(x,z) &= p(xz^{-1})\\
-        & = p(xez^{-1})\\
-        & = p(xy^{-1}yz^{-1})\\
-        & \leq p(xy^{-1})p(yz^{-1})\\
-        & = d(x,y)d(y,z)
-    \end{align*}
-    completing the proof. 
-    \end{proof} 
+\begin{proof}
+let $x,y, z \in G$. Then
+\begin{align*}
+d(x,z) &= p(xz^{-1})\\
+& = p(xez^{-1})\\
+& = p(xy^{-1}yz^{-1})\\
+& \leq p(xy^{-1})p(yz^{-1})\\
+& = d(x,y)d(y,z)
+\end{align*}
+completing the proof. 
+\end{proof} 
 \end{prop}

@@ -1,0 +1,317 @@
+\begin{prop}[\StrictlyConvexSpace]
+\label{prop:StrictlyConvexSpace}
+\rm  %Cioranescu 1.1.2 and Cioranescu 2.1.6, and Cioranescu 2.1.8 (Petryshyn ), 2.1.11, Then 2.1.13 (Using 2.1.11) Diestel THeorem 5 p.27
+Let $X$ be a \SeminormedSpace. 
+Let $J$ be the \NormalizedDualityMap on $X$. 
+The following conditions are equivalent. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:StrictlyConvexSpace}~\roman*}]
+\item 
+\label{prop:StrictlyConvexSpace:StrictlyConvex}
+X is \StrictlyConvexSpace.
+\item 
+\label{prop:StrictlyConvexSpace:Orthogonal}
+If $x,y \in X$ and $\norm{x+y} = \norm{x}+\norm{y}$, then for some $\alpha \geq 0$,  $\norm{x-\alpha y} = 0$. 
+\item 
+\label{prop:StrictlyConvexSpace:Sphere}
+If $\norm{x}=\norm{y}=1$ where $0 \neq \norm{x-y}$, then $\norm{x+y} < 2$. 
+\item 
+\label{prop:StrictlyConvexSpace:Segment}
+If $x,y,z \in X$ and $\norm{x-y}= \norm{x-z}+\norm{z-y}$, then $\norm{z-z_0}=0$ for some $z_0 \in [x,y]$. 
+\item
+\label{prop:StrictlyConvexSpace:Nonoverlapping}
+If $J(x_0) \cap J(y_0) \neq \emptyset$, then $x_0 \in y_0  + \overline{0}$. 
+In other words, 
+If $x^* \in X^*$ and $\norm{x}=\norm{y}=1$ such that $\ip{x,x^*}=\ip{y,y^*} = \sup\limits_{\norm{z}=1}\ip{z,x^*}$, then $\norm{x-y}=0$. 
+\item 
+\label{prop:StrictlyConvexSpace:StrictlyConvexNorm}
+$\norm{\cdot}^2$ is \StrictlyConvexFunction modulo $\overline{0}$.
+\item
+\label{prop:StrictlyConvexSpace:SphereContainsSegment}
+There does not exist a pair $x,y \in \partial B_X(0;1)$ with 
+$\norm{x-y} \neq 0$ and, for every $\alpha \in (0,1)$, 
+\begin{equation*}
+\norm{\alpha x + (1-\alpha)y } = 1
+\end{equation*}
+\item 
+\label{prop:StrictlyConvexSpace:StrictlyMonotone}
+J is strictly monotone. That is, if $x,y \in X$, $\norm{x-y} \neq 0$, $x^* \in Jx$, and $y^* \in Jy$, then     
+\begin{equation*}
+\ip{x-y,x^*-y^*} > 0
+\end{equation*}
+\item 
+\label{prop:StrictlyConvexSpace:OrthogonalUnique}
+%Diestel Page 27, Theroem 5
+\Orthogonality in X is left-unique. That is, for $x,y \in X$ with $\norm{x} \neq 0$, there is a unique $\alpha \in \mathbb{F}$ such that $\pa{\alpha x + y} \perp x$. 
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:Orthogonal}]
+Let $x_0,y_0 \in X$ with $\norm{x+y} = \norm{x}+\norm{y}$. 
+If $\norm{x}+\norm{y}=0$, $\alpha = 0$ is our desired value. 
+Let $\tilde{y} = \frac{y_0}{\norm{y_0}}$ and let $\tilde{x} = \frac{x_0}{\norm{x_0}}$.
+Then $\norm{\tilde{y}}=\norm{\tilde{x}} = 1$. 
+Furthermore, if  $\lambda = \frac{\norm{x_0}}{\norm{x_0}+\norm{y_0}}$ then we have 
+\begin{align*}
+\norm{\lambda \tilde{x} + (1-\lambda) \tilde{y}} = \norm{\frac{\norm{x_0}}{\norm{x_0}+\norm{y_0}} \tilde{x} + \frac{\norm{y_0}}{\norm{x_0}+\norm{y_0}} \tilde{y}} = \frac{\norm{x_0}+\norm{y_0}}{\norm{x_0+y_0}} = 1
+\end{align*}
+Since $X$ is \StrictlyConvexSpace, $\tilde{y} \in \tilde{x}+\{0\}$
+Hence $y_0 \in \frac{\norm{y_0}}{\norm{x_0}} x_0 + \overline{0}$
+That is $0 = \norm{\frac{\norm{y_0}}{\norm{x_0}}-y_0}$ which implies
+$0 = \norm{x_0-\frac{\norm{x_0}}{\norm{y_0}}y_0}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:Orthogonal} Implies \ref{prop:StrictlyConvexSpace:Sphere}]
+Let $\norm{x_0} = \norm{y_0} = 1$ and suppose $0 \neq \norm{x_0-y_0}. $
+If $\alpha > 1$, then $\norm{\alpha y_0} = \alpha > \norm{x_0}$, so $\alpha y_0 \not \in x_0+ \overline{0}$. 
+Similarly, if $\alpha < 1$, then $\norm{\alpha y_0} = \alpha < 1 = \norm{x_0}$, so $\alpha y_0 \not \in x_0+\overline{0}$. 
+Hence $\norm{x_0-\alpha y_0} \neq 0$ for all $\alpha \geq 0$, so 
+by \ref{prop:StrictlyConvexSpace:Orthogonal}, $\norm{x_0+y_0} < \norm{x_0} + \norm{y_0}=1+1=2$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:Sphere} Implies \ref{prop:StrictlyConvexSpace:StrictlyConvex}]
+We argue by converse.
+Let $x_0,y_0 \in X$ such that 
+$\norm{x_0}=1=\norm{y_0}$.
+Let $\lambda_0 \in (0,1)$ and suppose 
+$\norm{\lambda_0 x_0+(1-\lambda_0) y_0} = 1$. 
+Let $\lambda \in (\lambda_0, 1)$.
+Then, since 
+\begin{equation*}
+1-\lambda_0 = 1-\frac{\lambda_0}{\lambda}+ \frac{\lambda_0}{\lambda} - \lambda_0 = \pa{1-\frac{\lambda_0}{\lambda}}+ \frac{\lambda_0}{\lambda}\pa{1-\lambda}
+\end{equation*}
+we have 
+\begin{equation*}
+\lambda_0 x_0 + \pa{1-\lambda_0}y_0 = \frac{\lambda_0}{\lambda} \pa{\lambda x_0 + (1-\lambda) y_0} + \pa{1-\frac{\lambda_0}{\lambda}} y_0
+\end{equation*}
+so that
+\begin{align*}
+1 & = \norm{\lambda_0 x_0 + (1-\lambda_0) y_0}  \\
+& \leq \frac{\lambda_0}{\lambda} \norm{\lambda x_0 + (1-\lambda)y_0} + \norm{\pa{1-\frac{\lambda_0}{\lambda} }y_0} \\
+& = \frac{\lambda_0}{\lambda} \norm{\lambda x_0 + (1-\lambda)y_0}+ 1-\frac{\lambda_0}{\lambda} 
+\end{align*}
+which implies $1 = \norm{\lambda x_0 + (1-\lambda) y_0}$. 
+Since $\lambda \in (\lambda_0,1)$ was arbitrary, we conclude that 
+$[\lambda_0 x_0+ (1-\lambda_0) y_0, x_0] \subset \partial B_X(0;1)$. 
+In particular, 
+\begin{equation*}
+\norm{\lambda_0 x_0 + (1-\lambda_0)y_0 + x_0} = 2 \norm{ \frac{\lambda_0 x_0 + (1-\lambda_0)y_0}{2} + \frac{x_0}{2}} = 2
+\end{equation*}
+which implies $\lambda_0 x_0+(1-\lambda_0)y_0 \in x_0 + \overline{0}$.
+Thus, $\pa{1-\lambda_0}\pa{y_0-x_0} \in \overline{0}$, so $y_0 \in x_0+ \overline{0}$.
+
+
+\begin{align*}
+\norm{\lambda x_0 + (1-\lambda)y_0} & = \norm{\frac{1}{2}x_0 + \pa{\lambda-\frac{1}{2}}x_0 + (1-\lambda)y_0}\\
+& = \frac{1}{2} \norm{x_0 + 2\pa{\pa{\lambda - \frac{1}{2}}x_0+(1-\lambda)y_0}}
+\end{align*}
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:Segment}]
+Let $x_0,y_0,z_0 \in X$ with 
+\begin{equation*}
+\norm{x_0-y_0} = \norm{x_0-z_0} + \norm{z_0-y_0}
+\end{equation*}
+Without loss of generality we suppose 
+\begin{equation*}
+\norm{x_0-z_0} \neq 0 \neq \norm{z_0-y_0} \tab[1cm] \norm{x_0-z_0} \leq \norm{z_0-y_0}
+\end{equation*}
+Then, we have 
+\begin{align*}
+1 & =  \frac{ \norm{x_0-z_0}}{\norm{x_0-z_0}}\\
+& = \pa{ \frac{\norm{x_0-z_0}+\norm{z_0-y_0} - \norm{z_0-y_0} + \norm{x_0-z_0}}{2\norm{x_0-z_0}}}\\
+& = \frac{\norm{x_0-y_0}}{2\norm{x_0-z_0}}- \frac{\norm{z_0-y_0}-\norm{x_0-z_0}}{2 \norm{x_0-z_0}}\\
+& \leq \frac{\norm{x_0-y_0}}{2\norm{x_0-z_0}}\\
+& =  \norm{\frac{1}{2}\frac{x_0-z_0}{\norm{x_0-z_0}}+ \frac{1}{2}\frac{z_0-y_0}{\norm{z_0-y_0}}}
+\end{align*}
+Thus we conclude 
+\begin{equation*}
+\norm{ \frac{x_0-z_0}{\norm{x_0-z_0}} - \frac{z_0-y_0}{\norm{z_0-y_0}}} = 0
+\end{equation*}
+So that 
+\begin{equation*}
+z_0 \in \frac{\norm{z_0-y_0}}{\norm{x_0-z_0}+\norm{z_0-y_0}} x_0 + \frac{\norm{x_0-z_0}}{\norm{x_0-z_0}+\norm{z_0-y_0}} y_0 + \overline{0}
+\end{equation*}
+completing our proof.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:Segment} Implies \ref{prop:StrictlyConvexSpace:Sphere}]
+If $\norm{x+y} = 2$ with $\norm{x}=1=\norm{y}$, then $\norm{x+y}=\norm{x-0}+\norm{0-y}$. 
+Hence there is $t \in (0,1)$ with 
+$0 \in tx + (1-t)y + \overline{0}$. Hence $\frac{1-t}{t} y \in x+\overline{0}$.
+But $\norm{x}=\norm{y}=1$, so $\frac{1-t}{t} = 1$, implying $t=\frac{1}{2}$, so $\norm{x-y} = 0$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:Nonoverlapping}]
+Let $X$ be \StrictlyConvexSpace and 
+suppose $j \in J(x) \cap J(y)$. 
+Then $\norm{x}=\norm{y}$. Without loss of generality, we 
+can assume $\norm{x}=\norm{y}=1$. 
+Then if $\lambda \in (0,1)$,
+\begin{align*}
+1 & = \ip{\lambda x_0 + (1-\lambda)y_0, j} \\
+&  \leq \norm{\lambda x_0 + (1-\lambda)y_0}
+\end{align*}
+Hence, $x_0 \in y_0 + \overline{0}$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:Nonoverlapping} Implies \ref{prop:StrictlyConvexSpace:Sphere}]
+Suppose 
+\ref{prop:StrictlyConvexSpace:Nonoverlapping} holds and
+that $x,y \in X$ $\norm{x}=\norm{y}=1$, and $\norm{x+y}=2$. 
+By Hahn-Banach, there is $j \in X^*$ such that $\norm{j}=1$ and 
+\begin{equation*}
+1=\norm{\frac{x_0+y_0}{2}}= \ip{\frac{x_0+y_0}{2}, j}
+\end{equation*}
+This implies then that $2=\ip{x_0,j}+\ip{y_0,j}$.
+Also, $\ip{x_0, j} \leq \norm{j} \norm{x_0} = 1$, which implies $1=\ip{x_0,j}=\ip{y_0,j}$ so that 
+$j \in J(x_0) \cap J(y_0)$. 
+Hence $\norm{x_0-y_0} = 0$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:StrictlyConvexNorm}]
+Let $X$ be \StrictlyConvexSpace. 
+Let $x_0,y_0 \in X$ with $\norm{x_0-y_0} > 0$  and let $\lambda \in (0,1)$. 
+By 
+$\ref{prop:StrictlyConvexFunction:BinaryConvex} \implies \ref{prop:StrictlyConvexFunction:Convex}$, 
+Since $\norm{\cdot}^2$ is a \ContinuousFunction, 
+\ConvexFunction function, it is bounded on the \SetCompact $[x_0, y_0]$.
+Thus, it is sufficient to show that 
+\begin{equation*}
+\norm{\frac{x_0}{2}+\frac{y_0}{2}}^2 <  \frac{\norm{x_0}^2}{2} + \frac{\norm{y_0}^2}{2}
+\end{equation*}
+This is clear, as since
+\begin{equation*}
+0 \leq \norm{x_0+y_0}^2  = \norm{x_0}^2+\norm{y_0}^2 + 2 \norm{x_0}\norm{y_0}
+\end{equation*}
+we have 
+\begin{align*}
+\norm{\frac{x_0}{2}+\frac{y_0}{2}}^2 & < \pa{ \frac{\norm{x_0}}{2} + \frac{\norm{y_0}}{2}}^2\\
+& = \frac{\norm{x_0}^2}{4} + \frac{\norm{y_0}^2}{4} + \frac{\norm{x_0}\norm{y_0}}{2}\\
+& \leq \frac{\norm{x_0}^2}{2} + \frac{\norm{y_0}^2}{2}
+\end{align*}
+
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvexNorm} Implies \ref{prop:StrictlyConvexSpace:Sphere}]
+Let $\norm{\cdot}^2$ be 
+\StrictlyConvexFunction. 
+Let $\norm{x}=\norm{y}=1$ then
+\begin{equation*}
+\norm{\frac{x+y}{2}}^2 < \frac{\norm{x}^2}{2}+ \frac{\norm{y}^2}{2} = 1
+\end{equation*}
+Hence $\norm{\frac{x+y}{2}} < 1$ and therefore $\norm{x+y}<2$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:StrictlyMonotone}] %This result is called petryshyn's thoerem. 
+Let $X$ be \StrictlyConvexSpace.
+We prove the converse of \ref{prop:StrictlyConvexSpace:StrictlyMonotone}
+Let $x_0,y_0 \in X$.
+Let $j_x \in J(x_0)$ and let $j_y \in J(y_0)$. 
+Suppose $0 = \ip{x_0-y_0, j_x-j_y}$. 
+Then, since 
+\begin{align*}
+0 & \leq \pa{\norm{x_0}-\norm{y_0}}^2 \\
+& = \norm{x_0}^2-\norm{x_0}\norm{y_0}+\norm{y_0}^2-\norm{y_0 }\norm{x_0}\\
+& \leq \ip{x_0, j_x} -\ip{y_0, j_x}- \pa{ \ip{x_0,j_y}-\ip{y_0,j_y}}\\
+& = \ip{x_0-y_0, j_x-j_y}
+\end{align*}
+we conclude $\norm{x_0}=\norm{y_0}$
+and $\ip{x_0, j_y}+ \ip{y_0,j_x} = 2 \norm{x_0}\norm{y_0}$.
+Since $\ip{x_0,j_y} \leq \norm{x_0}\norm{y_0} \geq \ip{y_0,j_x}$, we conclude 
+$\norm{x_0}\norm{y_0} = \ip{x_0,j_y} = \ip{y_0,j_x}$. 
+Define $\tilde{y} = \frac{y_0}{\norm{y_0}}$ and $\tilde{x} = \frac{x_0}{\norm{y_0}}$. 
+Then $1=\norm{\tilde{y}}=\norm{\tilde{x}}$.
+Then $\ip{\frac{\tilde{y}+\tilde{x}}{2}, j_x} = \norm{x_0} = \norm{j_x}$, so
+$\norm{\frac{\tilde{y}+\tilde{x}}{2}} \geq 1$. 
+Since $X$ is \StrictlyConvexSpace, 
+we conclude $\norm{\tilde{x}-\tilde{y}} = 0$.
+Hence $\norm{x_0-y_0} = 0$.
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyMonotone} Implies \ref{prop:StrictlyConvexSpace:Sphere}]
+We prove the converse. 
+Suppose $x_0,y_0 \in X$ with $\norm{x_0}=\norm{y_0}=\norm{\frac{x_0+y_0}{2}}=1$ and $\norm{x_0-y_0} \neq 0$. 
+Let $j \in J\pa{\frac{x_0+y_0}{2}}$. Then $\norm{j}=1$. 
+Hence,
+\begin{equation*}
+1=\ip{\frac{x_0+y_0}{2},j} \geq \frac{\frac{x_0}{2}, j} -\frac{1}{2}
+\end{equation*}
+so $\ip{x_0,j} = 1$. Similarly, $\ip{y_0,j} = 1$. 
+Thus $j \in Jx_0$ and $j \in Jy_0$. Then 
+\begin{equation*}
+0 = \ip{x_0-y_0,0 } = \ip{x_0-y_0,j-j} 
+\end{equation*}
+so that $j$ is not strictly monotone. 
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:SphereContainsSegment} implies \ref{prop:StrictlyConvexSpace:Sphere}]
+We argue by converse. 
+Suppose $x,y \in \partial B_X(0;1)$ with $\norm{\frac{x+y}{2}} = 1$. 
+I claim $\norm{\alpha x + (1-\alpha) y } = 1$ for every $\alpha \in (0,1)$. 
+Suppose otherwise. 
+Then there exists $\lambda \in (0,1)$ such that $\norm{\lambda x + (1-\lambda ) y } = \gamma < 1$. 
+Without loss of generality, I assume $\lambda > \frac{1}{2}$. 
+Then 
+$\norm{\frac{\lambda}{\gamma} x + \frac{1-\lambda}{\gamma} y } = 1$. 
+Furthermore, it is clear that there exists $\alpha > 1$ and $t_0 \in (0,1)$ such that
+\begin{equation*}
+\alpha \frac{x+y}{2} = t_0 \pa{ \frac{\lambda}{\gamma} x+ \frac{1-\lambda}{\gamma} y } + (1-t_0) y
+\end{equation*}
+A contradiction since the triangle inequality implies
+\begin{equation*}
+\norm{t_0 \pa{ \frac{\lambda}{\gamma} x+ \frac{1-\lambda}{\gamma} y } + (1-t_0) y} \leq 1
+\end{equation*}
+bu $\norm{\alpha \frac{x+y}{2}} = \alpha > 1$.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} implies \ref{prop:StrictlyConvexSpace:SphereContainsSegment}]
+This direction is obvious
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:StrictlyConvex} Implies \ref{prop:StrictlyConvexSpace:OrthogonalUnique}]
+The existence of such an $\alpha$ falls from 
+\ref{prop:Orthogonal:Minimizer}.
+What remains to be shown is that, 
+if $X$ is \StrictlyConvexSpace, then 
+$\alpha$ is unique. 
+Let $X$ be \StrictlyConvexSpace.
+Let $\alpha, \beta \in \F$ such that
+$\alpha x + y \perp x$ and $\beta x + y \perp x$. 
+Then 
+\begin{equation*}
+\norm{\alpha x + y} \leq \norm{\alpha x + y + \pa{\beta - \alpha} x } = \norm{\beta x + y} \leq \norm{\beta x + y+ \pa{\alpha - \beta } x} \leq \norm{\alpha x + y}
+\end{equation*}
+That is, $\norm{\alpha x + y} = \norm{\beta x + y}$. 
+Define $\tilde{x} = \frac{x}{\norm{\alpha x + y}}$ and $\tilde{y} = \frac{y}{\norm{\alpha x + y}}$. 
+Then 
+\begin{equation*}
+1=\norm{\alpha \tilde{x} + \tilde{y} } = \norm{\beta \tilde{x} + \tilde{y}}
+\end{equation*}
+Since $X$ is \StrictlyConvexSpace, if $\alpha \neq \beta$, then 
+\begin{equation*}
+\norm{\frac{\alpha+\beta}{2}\tilde{x} + \tilde{y} } = \norm{\frac{\alpha \tilde{x} + \tilde{y}}{2} + \frac{\beta \tilde{x}+ \tilde{y}}{2}} < 1= \norm{\alpha \tilde{x} + \tilde{y}}
+\end{equation*}
+Multiplying  by $\norm{\alpha x + y}= \norm{\beta x + y}$ then gives
+\begin{equation*}
+T\pa{\frac{\alpha + \beta}{2}}=\norm{\pa{\frac{\alpha + \beta}{2}} x + y} < \norm{\alpha x + y}
+\end{equation*}
+which contradicts the minimality of $\alpha$. 
+Hence $\alpha = \beta$ and so \Orthogonality is unique.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:StrictlyConvexSpace:OrthogonalUnique} Implies \ref{prop:StrictlyConvexSpace:SphereContainsSegment}]
+For this direction, I utilize the converse. 
+Suppose 
+\ref{prop:StrictlyConvexSpace:SphereContainsSegment} does not hold. 
+Then there exists $x,y \in \partial B_X(0;1)$ with $\norm{x-y} \neq 0$ 
+and for every $\lambda \in [0,1]$, $\norm{\lambda x + (1-\lambda) y} = 1$. 
+Now, if $t \in (-1,1)$, then $\frac{1+t}{2}  \in (0,1)$ and $\frac{1-t}{2} \in (0,1)$.
+Thus, 
+\begin{align*}
+\norm{\pa{x+y} + t\pa{x-y}} & = \norm{(1+t)x + (1-t)y} \\
+& = 2 \norm{\frac{1+t}{2} x + \frac{1-t}{2} y } = 2\\
+& = \norm{x+y}
+\end{align*}
+Now, if $\abs{t}>1$, then $1-\frac{1}{t} > 0$, so $\norm{\pa{1-\frac{1}{t}} y } = 1-\frac{1}{t}$. 
+Hence, 
+\begin{align*}
+\norm{\pa{x+y}+t(x-y)} & = \norm{(1+t)x+ (1-t)y} \\
+& = t \norm{\pa{\frac{1}{t}+1} x + \pa{1-\frac{1}{t}}y} \\
+&  \geq t \pa{ \norm{\pa{1+\frac{1}{t}}x} - \norm{\pa{1-\frac{1}{t}}y}}\\
+& = 2\\
+& = \norm{x+y}
+\end{align*}
+Hence, for all $\alpha \in (-\infty,\infty)$, $\norm{x+y} \leq \norm{x+y + \alpha \pa{x-y}}$. 
+But, since for $t \in (-1,1)$, $\norm{x+y} = \norm{x+y+ t(x-y)}$, we have 
+$x+y+t(x-y) \perp x-y$ for every $t \in (-1,1)$, violating uniqueness.
+\end{proof}
+    
+    
+\end{prop}

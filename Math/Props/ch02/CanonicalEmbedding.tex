@@ -1,143 +1,154 @@
 \begin{prop}[Canonical Embedding]
 \label{prop:canonicalembedding}
 \rm
-    Let $X$ be a \SeminormedSpace 
-    and let $c$ denote its 
-    \CanonicalEmbedding. 
-    The following are true. 
-    \begin{enumerate}
-        \item c is well defined
-        \item c is \Linear. 
-        \item c is an \Isometry. 
-        \item c is an \Injection if and only if X is a \NormedSpace. 
-        \item If $q:X \to X/\Ker$ is the \QuotientMap, 
-		$c_{X/\Ker}$ is the \CanonicalEmbedding of $(X/\Ker)$ into $(X/\Ker)^{**}$ 
-		and $\Omega_2:X^{**} \to (X/\Ker)^{**}$ 
-		is the linear bijective \Isometry defined in 
-		\ref{def:higherorderdualspaceisomorphism}, 
-		then $c = \Omega_2^{-1} \circ c_{X/\Ker} \circ q$. 
-		//TODO: COME BACK TO THIS AND PROVE IT ONCE THE ISOS ARE CLEARED UP
-        \item $c_X$ is \Surjective if and only if 
-        $c_{X/\Ker}$ is \Surjective. 
-        \item X is \Reflexive if and only if $X/\Ker$ is \Reflexive.
-    \end{enumerate}
-    \begin{proof}[Proof of 1]
-		For any $x \in X$, 
-		$c(x)$ as a function is obviously well defined. 
-        Hence, I just need to show that, 
-		for any
-        $x \in X$, 
-		$c(x) \in X^{**}$.
-		That is
-		, I must show that
-		$c(x)$ is
-        continuous and
-        linear. 
-        
-		For linearity, if 
-		$x^*, y^* \in X^*$ and 
-		$\alpha \in \F$, 
-		we have 
-		\begin{align*}
-		\ip{\alpha x^*+ y^* , c(x) } & = \ip{x, \alpha x^*+\alpha y^* }\\
-		& = \alpha \ip{x, x^*}, \ip{y, y^*}\\
-		& = \alpha \ip{x^*, c(x)} + \ip{y^*, c(x)}
-		\end{align*}
-		Thus linearity holds.
-		
-		For continuity, let $x \in X$
-		and let $x^* \in X^*$. 
-		\begin{align*}
-		\abs{\ip{x^*, c(x)}} &= \abs{\ip{x, x^*}}\\
-		& \leq \norm{x}\norm{x^*}
-		\end{align*}
-		so that $c(x)$ is bounded with 
-		$\norm{c(x)} \leq \norm{x}$. 
-    \end{proof}
-    \begin{proof}[Proof of 2]
-        Let $\alpha \in \F$ and $x,y \in X$.
-        Let $x^* \in X$. 
-		Then, 
-		\begin{align*}
-		\ip{x^*, c(\alpha x + y)} & = \ip{\alpha x + y , x^*}\\
-		& = \alpha \ip{x,x^*} + \ip{y,x^*} \\
-		& = \alpha \ip{x^*, c(x)} + \ip{x^*, c(y)} 
-		\end{align*}
-		, finishing the proof. 
-    \end{proof}
-    \begin{proof}[Proof of 3]
-	Let $x_0 \in X$ and $x^* \in X^*$. 
-	Then, 
-		\begin{align*}
-		\abs{\ip{x^*, c(x_0)}} &= \abs{\ip{x_0, x^*}}\\
-		& \leq \norm{x_0}\norm{x^*}
-		\end{align*}
-	so that $\norm{c(x_0)} \leq \norm(x_0)$. 
-	For the other direciton, by
-	\ref{thm:hahnbanach}
-	part 2, there exists an 
-	$x_0^* \in X^*$ satisfying
-	$\norm{x_0^*} = 1$ 
-	and $\ip{x_0, x_0^*} = \norm{x}$
-    \end{proof}
-	We see that 
-	$ \ip{x_0^*, c(x_0) } = \ip{x_0, x_0^*} = \norm{x} = \norm{x_0} \norm{x_0^*}$
-	so that $\norm{c(x_0)} \geq \norm{x_0}$. 
-	Since the inequality goes both ways, 
-	$\norm{x_0} = \norm{c(x_0)}$, and 
-	c is therefore an \Isometry. 
-    \begin{proof}[Proof of 4]
-	Let X be a \NormedSpace. 
-	Then $X^*$ separates points in X. 
-	Let $x \in X$ 
-	and $y \in X$ 
-	with $x \neq y$. 
-	Since $X^*$ separates points in X, 
-	there exists $x^* \in X^*$ with 
-	$\ip{x^*, c(x) } =\ip{x,x^*} \neq \ip{y,x^*}, \ip{x^*, c(y)}$
-	so that $c(x) \neq c(y)$.
-	Hence $c$ is \Injective. 
-	
-	Now supose instead that $c$ is \Injective
-	and let $x,y \in X$ with $\norm{x-y} = 0$.
-	We find that for any $x^* \in X^*$, 
-	\begin{align*}
-	\abs{\ip{x^*, c(x)-c(y)}} & = \abs{\ip{x^*, c(x-y)}} \\
-	& = \abs{\ip{x-y, x^*}}\\
-	& =	\leq \norm{x^*} \norm{x-y} \\
-	= 0
-	\end{align*}
-	so that $\norm{c(x)-c(y)} = 0$.
-	Since $X^{**}$ is a normed space, 
-	this implies $c(x) = c(y)$, which through \Injectivity
-	implies $x=y$. 
-	Hence we have the implication $\norm{x-y} = 0 \implies x=y$, so
-	that X is a $\NormedSpace$. 
-    \end{proof}
-    \begin{proof}[Proof of 5]
-	Proceeding directly from the definition, we have 
-	\begin{align*}
-	\ip{x^*, \Omega_2^{-1} \circ c_{X/\Ker} \circ q (x) } & = \ip{x^*, \Omega^{\times} \circ c_{X/\Ker} \circ q(x)}\\
-	& = \ip{\Omega x^*, c_{X/\Ker} \circ q(x) } \\
-	& = \ip{q(x), \Omega x^*} \\
-	& = \ip{x, x^* }\\
-	& = \ip{x^*, c(x)}
-	\end{align*}
-	So we are done.
-    \end{proof}
-	\begin{proof}[Proof of 6]
-	Since $\Omega_2$ is a Bijection, 
-	by the prior part of this result, 
-	c is a surjection if and only if
-	$c_{X/\Ker} \circ q$ is a surjection
-	where $q:X \to X/\Ker$ is the \QuotientMap. 
-	Since q is a surjection, 
-	c is a surjection 
-	if and only if$c_{X/\Ker}$ 
-	is a surjection. 
-	\end{proof} 
-	\begin{proof}[Proof of 7]
-	This is a direct restatement of Part 06 of this result. 
-	\end{proof} 
+Let $X$ be a \SeminormedSpace 
+and let $c$ denote its 
+\CanonicalEmbedding. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:canonicalembedding}~\roman*}]
+\item 
+\label{prop:canonicalembedding:WellDefined}
+c is well defined
+\item 
+\label{prop:canonicalembedding:Linear}
+c is \Linear. 
+\item 
+\label{prop:canonicalembedding:Isometry}
+c is an \Isometry. 
+\item 
+\label{prop:canonicalembedding:Injection}
+c is an \Injection if and only if X is a \NormedSpace. 
+\item 
+\label{prop:canonicalembedding:Quotient}
+If $q:X \to X/\Ker$ is the \QuotientMap, 
+$c_{X/\Ker}$ is the \CanonicalEmbedding of $(X/\Ker)$ into $(X/\Ker)^{**}$ 
+and $\Omega_2:X^{**} \to (X/\Ker)^{**}$ 
+is the \Linear \Bijective \Isometry defined in 
+\ref{def:higherorderdualspaceisomorphism}, 
+then $c = \Omega_2^{-1} \circ c_{X/\Ker} \circ q$. 
+\item 
+\label{prop:canonicalembedding:Surjection}
+$c_X$ is \Surjective if and only if 
+$c_{X/\Ker}$ is \Surjective. 
+\item 
+\label{prop:canonicalembedding:Reflexive}
+X is \Reflexive if and only if $X/\Ker$ is \Reflexive.
+\end{enumerate}
+\begin{proof}[Proof of \ref{prop:canonicalembedding:WellDefined}]
+For any $x \in X$, 
+$c(x)$ as a function is obviously well defined. 
+Hence, I just need to show that, 
+for any
+$x \in X$, 
+$c(x) \in X^{**}$.
+That is
+, I must show that
+$c(x)$ is
+continuous and
+linear. 
+
+For linearity, if 
+$x^*, y^* \in X^*$ and 
+$\alpha \in \F$, 
+we have 
+\begin{align*}
+\ip{\alpha x^*+ y^* , c(x) } & = \ip{x, \alpha x^*+\alpha y^* }\\
+& = \alpha \ip{x, x^*}, \ip{y, y^*}\\
+& = \alpha \ip{x^*, c(x)} + \ip{y^*, c(x)}
+\end{align*}
+Thus linearity holds.
+
+For continuity, let $x \in X$
+and let $x^* \in X^*$. 
+\begin{align*}
+\abs{\ip{x^*, c(x)}} &= \abs{\ip{x, x^*}}\\
+& \leq \norm{x}\norm{x^*}
+\end{align*}
+so that $c(x)$ is bounded with 
+$\norm{c(x)} \leq \norm{x}$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Linear}]
+Let $\alpha \in \F$ and $x,y \in X$.
+Let $x^* \in X$. 
+Then, 
+\begin{align*}
+\ip{x^*, c(\alpha x + y)} & = \ip{\alpha x + y , x^*}\\
+& = \alpha \ip{x,x^*} + \ip{y,x^*} \\
+& = \alpha \ip{x^*, c(x)} + \ip{x^*, c(y)} 
+\end{align*}
+, finishing the proof. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Isometry}]
+Let $x_0 \in X$ and $x^* \in X^*$. 
+Then, 
+\begin{align*}
+\abs{\ip{x^*, c(x_0)}} &= \abs{\ip{x_0, x^*}}\\
+& \leq \norm{x_0}\norm{x^*}
+\end{align*}
+so that $\norm{c(x_0)} \leq \norm(x_0)$. 
+For the other direciton, by
+\ref{thm:hahnbanach}
+part 2, there exists an 
+$x_0^* \in X^*$ satisfying
+$\norm{x_0^*} = 1$ 
+and $\ip{x_0, x_0^*} = \norm{x}$
+\end{proof}
+We see that 
+$ \ip{x_0^*, c(x_0) } = \ip{x_0, x_0^*} = \norm{x} = \norm{x_0} \norm{x_0^*}$
+so that $\norm{c(x_0)} \geq \norm{x_0}$. 
+Since the inequality goes both ways, 
+$\norm{x_0} = \norm{c(x_0)}$, and 
+c is therefore an \Isometry. 
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Injection}]
+Let X be a \NormedSpace. 
+Then $X^*$ separates points in X. 
+Let $x \in X$ 
+and $y \in X$ 
+with $x \neq y$. 
+Since $X^*$ separates points in X, 
+there exists $x^* \in X^*$ with 
+$\ip{x^*, c(x) } =\ip{x,x^*} \neq \ip{y,x^*}, \ip{x^*, c(y)}$
+so that $c(x) \neq c(y)$.
+Hence $c$ is \Injective. 
+
+Now supose instead that $c$ is \Injective
+and let $x,y \in X$ with $\norm{x-y} = 0$.
+We find that for any $x^* \in X^*$, 
+\begin{align*}
+\abs{\ip{x^*, c(x)-c(y)}} & = \abs{\ip{x^*, c(x-y)}} \\
+& = \abs{\ip{x-y, x^*}}\\
+& =	\leq \norm{x^*} \norm{x-y} \\
+= 0
+\end{align*}
+so that $\norm{c(x)-c(y)} = 0$.
+Since $X^{**}$ is a normed space, 
+this implies $c(x) = c(y)$, which through \Injectivity
+implies $x=y$. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Quotient}]
+Proceeding directly from the definition, we have 
+\begin{align*}
+\ip{x^*, \Omega_2^{-1} \circ c_{X/\Ker} \circ q (x) } & = \ip{x^*, \Omega^{\times} \circ c_{X/\Ker} \circ q(x)}\\
+& = \ip{\Omega x^*, c_{X/\Ker} \circ q(x) } \\
+& = \ip{q(x), \Omega x^*} \\
+& = \ip{x, x^* }\\
+& = \ip{x^*, c(x)}
+\end{align*}
+So we are done.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Surjection}]
+Since $\Omega_2$ is a Bijection, 
+by the prior part of this result, 
+c is a surjection if and only if
+$c_{X/\Ker} \circ q$ is a surjection
+where $q:X \to X/\Ker$ is the \QuotientMap. 
+Since q is a surjection, 
+c is a surjection 
+if and only if$c_{X/\Ker}$ 
+is a surjection. 
+\end{proof} 
+\begin{proof}[Proof of \ref{prop:canonicalembedding:Reflexive}]
+This is a direct restatement of \ref{prop:canonicalembedding:Surjection}.
+\end{proof} 
 \end{prop}
 

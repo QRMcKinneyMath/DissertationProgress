@@ -1,0 +1,53 @@
+\begin{thm}[Point Continuous]
+\label{thm:pointcontinuous}
+\rm
+Let $X$ be a \LocallyConvex \TVS. 
+Let $f:X \to \overline{\R}$ be \ConvexFunction and \ProperFunction.
+Then the following are equivalent.
+\begin{enumerate}
+\item $f$ is bounded on some \SetOpen set.
+\item $f$ is \ContinuousFunction on $\InteriorMark{D(f)}$.
+\end{enumerate}
+\begin{proof} $(\implies)$
+By translating in the \FunctionDomain and \FunctionCodomain,
+without loss of generality, we assume that 
+$f$ is bounded from above on a \SymmetricSubset
+\Neighborhood $U$ of $0$ and that $f(0) = 0$. 
+For each $\epsilon \in (0,1)$ and each $x \in \epsilon \scU$, we have 
+\begin{equation*}
+f(x) = f\pa{ \epsilon \frac{x}{\epsilon} + (1-\epsilon)0}  \leq \epsilon f\pa{ \frac{x}{\epsilon}} \leq \epsilon M
+\end{equation*} 
+and
+since $0=\frac{x}{1+\epsilon}+\pa{1-\frac{1}{1+\epsilon}} \pa{\frac{-x}{\epsilon}}$, 
+\begin{equation*}
+0=f(0)=f\pa{ \frac{x}{1+\epsilon} + \pa{1-\frac{1}{1+\epsilon}} \pa{\frac{-x}{\epsilon}}} \leq \frac{f(x)}{1+\epsilon}+\frac{\epsilon f\pa{-\frac{x}{\epsilon}}}{1+\epsilon}
+\end{equation*} 
+so, since $\frac{-x}{\epsilon} \in \scU$, 
+\begin{equation*} 
+-\epsilon M \leq -\epsilon f\pa{ \frac{x}{\epsilon}} \leq f(x)
+\end{equation*}
+Hence, $|f(x)| \leq \epsilon M$ for $x \in \epsilon \scU$.
+Since $\epsilon \in (0,1)$ was arbitrary, we conclude that 
+$f$ is \ContinuousFunction at $0$.
+Hence, it is sufficient to show that for any $x_0 \in \InteriorMark{D(f)}$, 
+There exists $U_{x_0} \in \scU_{X}(x_0)$ and $M_{x_0}$ such that $f\pa{U_{x_0}} \subset (-\infty, M_{x_0}]$.
+To see this, let $x_0 \in \InteriorMark{D(f)}$.
+Since scalar multiplication is continuous, there exists  $\gamma >1$ such that $\gamma x_0 \in D(f)$. 
+Define $\scU_{x_0}=x_0+\pa{1-\frac{1}{\gamma}}\scU$, then if $x \in \scU_{x_0}$,
+there exist $z_0 \in \scU$ such that
+\begin{equation*}
+x=x_0+\pa{1-\frac{1}{\gamma}}z_0=\frac{1}{\gamma}(\gamma x_0) + \pa{1-\frac{1}{\gamma}}z_0
+\end{equation*}
+Since f is \ConvexFunction, 
+$D(f)$ is \ConvexFunction, and so $x \in D(f)$, 
+implying $\scU_{x_0} \subset D(f)$. 
+Since f is \ConvexFunction, we also have that 
+\begin{equation*}
+f(x) \leq \frac{1}{\gamma} f(\gamma x_0)+ \pa{1-\frac{1}{\gamma}}f(x) \leq \frac{1}{\gamma} f(\gamma x_0) + \pa{ 1-\frac{1}{\rho}} M
+\end{equation*}
+so that f is bounded on $\scU_{x_0}$ and is therefore \ContinuousFunction at $x_0$.
+\end{proof}
+\begin{proof}$(\impliedby)$
+This is obvious. 
+\end{proof} 
+\end{thm} 

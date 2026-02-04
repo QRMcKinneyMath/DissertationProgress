@@ -2,6 +2,8 @@
 \newcommand{\FrechetDerivatives}[0]{\textbf{\hyperref[def:FrechetDerivative]{Frechet Derivatives}}\xspace}
 \newcommand{\FrechetDifferentiable}[0]{\textbf{\hyperref[def:FrechetDerivative]{Frechet Differentiable}}\xspace}
 \newcommand{\FrechetDifferentiability}[0]{\textbf{\hyperref[def:FrechetDerivative]{Frechet Differentiability}}\xspace}
+\newcommand{\UniformlyFrechetDifferentiable}[0]{\textbf{\hyperref[def:FrechetDerivative]{Uniformly Frechet Differentiable}}\xspace}
+\newcommand{\UniformFrechetDifferentiability}[0]{\textbf{\hyperref[def:FrechetDerivative]{Uniform Frechet Differentiability}}\xspace}
 \begin{df}[\FrechetDerivative]
 \label{def:FrechetDerivative}
 \rm
@@ -9,18 +11,28 @@ Let $X$ be a \TVS.
 Let $Y$ be a \Hausdorff \TVS. 
 Let $C \subset X$. 
 Let $x_0 \in C$. 
-Let $f:C \to X$. 
+Let $f:C \to Y$. 
 Let $f$ be \GateauxDifferentiable at $x_0$.
 Let $U$ be a \Neighborhood of $0$ in $X$. 
 Futhermore, 
 suppose that for each \Neighborhood  $V$ of $0$ in $Y$,
-there exists a $\delta > 0$ such that 
+there exists a $\delta > 0$ 
+such that 
 whenever $\abs{t} < \delta$ and $y \in U$, 
 \begin{equation*}
-\frac{f(x_0+ty)-f(x_0)}{t} \in U+f'(x_0)y
+\frac{f(x_0+ty)-f(x_0)}{t} \in V+f'(x_0)y
 \end{equation*}
 Then we say that $f$ is 
 \FrechetDifferentiable at $x_0$ 
 and that $f'(x_0)$ is the 
 \FrechetDerivative of $f$ at $x_0$. 
+Let $K \subset X$. 
+Let $f$ e \GateauxDifferentiable on $K$. 
+If for each \Neighborhood $V$ of $0$ in $Y$, 
+there exists a $\delta > 0$ such that whenever
+$\abs{t} < \delta$, $x \in K$, and $y \in U$, we have 
+\begin{equation*}
+\frac{f(x+ty)-f(x)}{t} \in V+f'(x)y
+\end{equation*}
+then we say that $f$ is \UniformlyFrechetDifferentiable on $K$. 
 \end{df}

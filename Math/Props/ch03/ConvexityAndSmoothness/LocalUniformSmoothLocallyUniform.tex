@@ -1,0 +1,138 @@
+\begin{prop}[Local Uniform Smoothnes and Local Uniform Convexity]
+\label{prop:LocalUniformSmoothVsUniformConvex}
+\rm
+Let $X$ be a \Complete \SeminormedSpace.
+Let $J$ denote the \NormalizedDualityMap of $X$. 
+The following are true. 
+\begin{enumerate}[label=(\roman*), ref={\ref{prop:LocalUniformSmoothVsUniformConvex}~\roman*}]
+\item 
+\label{prop:LocalUniformSmoothVsUniformConvex:SmoothToConvex}
+%Cioranescu 2.2.13
+$X^*$ is \LocallyUniformlySmoothSpace if and only if $X$ is \WeaklyTwoUniformlyConvex.
+\item 
+\label{prop:LocalUniformSmoothvsUniformConvex:Equiv}
+$X^*$ is \WeakstarTwoUniformlyConvex if and only if $X$ is \LocallyUniformlySmoothSpace.
+\item 
+\label{prop:LocalUniformSmoothVsUniformConvex:ConvexToSmooth}
+If $X^*$ is \LocallyUniformlyConvex then $X$ is \LocallyUniformlySmoothSpace.
+\item
+\label{prop:LocalUniformSmoothVsUniformConvex:LocalToWeak}
+If $X^*$ is \LocallyUniformlyConvex then $X^*$ is \WeakstarTwoUniformlyConvex.
+\item
+\label{prop:LocalUniformSmoothVsUniformConvex:WeakUniformConvexDualContinuity}
+$X^*$ is \WeakstarTwoUniformlyConvex if and only if $J$
+is single valued and \Seminorm to \Norm \ContinuousFunction.
+\item
+\label{prop:LocalUniformSmoothVsUniformConvex:WeakUniformConvexFrechet}
+$X^*$ is \WeakstarTwoUniformlyConvex if and only if $\norm{\cdot}$
+is \FrechetDifferentiable on $X$.
+\end{enumerate} 
+\begin{proof}[Proof of \ref{prop:LocalUniformSmoothVsUniformConvex:SmoothToConvex}]
+Suppose $X^*$ is not \LocallyUniformlySmoothSpace. 
+Let $\overline{\rho}_*$ denote the local \ModulusOfSmoothness of $X^*$. 
+Then there exists $x^* \in X^*$ and 
+$\epsilon > 0$ such that for some \Sequence, 
+$\{t_i\}_{i \in \N} \subset (0,1)$ with $t_i \searrow 0$, 
+for each $i \in \N$, 
+\begin{equation*}
+\frac{\overline{\rho}_*(t_i, x^*)}{t_i} \geq \epsilon
+\end{equation*}
+By \ref{prop:LDF:3}, for each $i \in \N$, 
+\begin{equation*}
+0 < \epsilon \leq \frac{\overline{\rho_*}(t_i,x^*)}{t_i} = \frac{1}{t_i} \sup\limits_{\gamma \in (0,2]} \pa{ \frac{t_i \gamma}{2} - \Gamma(\gamma_i, x^*O}
+\end{equation*}
+In particular, for each $i \in \N$, there exists $\gamma_i \in (0,2]$ such that 
+\begin{equation*}
+\frac{\epsilon}{2} \leq \frac{1}{t_i} \pa{ \frac{t_i\gamma_i}{2} - \Gamma(\gamma_i, x^*)}
+\end{equation*}
+This implies 
+\begin{equation*}
+0 \leq \Gamma(\gamma_i, x^*) \leq \frac{t_i}{2} \pa{\gamma_i - \epsilon}
+\end{equation*}
+Since $t_i \to 0$ and $\gamma_i$ is bounded, $\Gamma(\gamma_i, x^*) \to 0$. 
+If $\Gamma(\gamma_i,x^*) = 0$ for any $i$, then $X$ is not \WeaklyTwoUniformlyConvex and we are done. 
+Otherwise, $\Gamma(\gamma_i, x^*) > 0$ for every $i$ and therefore $\gamma_i \geq \epsilon$ for each $i \in \N$. 
+Since $\Gamma(\gamma_i, x^*) \to 0$, we conclude $\Gamma(\epsilon, x^*) = 0$. 
+Hence $X$ is not \WeaklyTwoUniformlyConvex.
+Now suppose $X$ is not \WeaklyTwoUniformlyConvex.
+Then there exists an $x^* \in \partial B_{X^*}(0;1)$ and an $\epsilon > 0$ such that 
+$\Gamma(\epsilon, x^*) = 0$. 
+By \ref{prop:LDF:3}, for each $t>0$, 
+\begin{equation*}
+\overline{\rho_*}(t) \geq \frac{t \gamma}{2} - \Gamma(\gamma, x^*) = \frac{t \gamma}{2}
+\end{equation*}
+Hence, for each $t>0$, 
+\begin{equation*}
+\frac{\overline{\rho_*}(t, x^*)}{t} \geq \frac{ \gamma}{2}
+\end{equation*}
+thus $X^*$ is not \LocallyUniformlySmoothSpace. 
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocalUniformSmoothvsUniformConvex:Equiv}]
+Suppose $X^*$ is not \WeakstarTwoUniformlyConvex. 
+Let $\Gamma^*$ denote the 
+\ModulusOfWeakTwoUniformConvexity of $X^*$. 
+Then there exists $\gamma_0 > 0$ and $x \in \partial B_{X}(0;1)$ such that $\Gamma^*(\gamma_0, c(x))$
+Then by 
+\ref{prop:LDF:1}, for each $t > 0$, 
+\begin{equation*}
+\overline{\rho}(t, x) = \sup\limits_{\gamma \in (0,1]} \pa{ \frac{t \gamma_0}{2} - \Gamma^*(\gamma, c(x)} \geq \frac{t \gamma_0}{2} - \Gamma^*(\gamma_0, c(x)) = \frac{t \gamma_0}{2}
+\end{equation*}
+Thus $\liminf\limits_{t \to 0} \frac{\overline{\rho}(t, x)}{t} \geq \frac{\gamma_0}{2}$, so $X$
+is not \LocallyUniformlySmoothSpace.
+
+Suppose now that $X$ is not \LocallyUniformlySmoothSpace. 
+Then there exists an $\epsilon > 0$, $x \in \partial B_X(0;1)$, and a \Sequence
+$\{t_i\}_{i \in \N} \subset (0,1)$ such that $t_i \searrow 0$ and 
+for each $i \in \N$, $\frac{\overline{\rho}(t_i, x)}{t_i} \geq \epsilon$. 
+By \ref{prop:LDF:1}, for each $n \in \N$
+\begin{equation*}
+0 < \epsilon \leq \frac{\overline{\rho}(t_i, x)}{t_i} = \frac{1}{t_i} \sup\limits_{\gamma \in (0,2]} \pa{ \frac{t \gamma}{2} - \Gamma^*(\gamma, c(x))}
+\end{equation*}
+Thus, for each $i \in \N$, there exists $\gamma_i \in \N$ such that 
+\begin{equation*}
+\frac{\epsilon}{2} \leq \frac{1}{t_i} \pa{ \frac{t_i \gamma_i}{2} - \Gamma^*(\gamma_i, c(x))}
+\end{equation*}
+which directly implies 
+\begin{equation*}
+0 \leq \Gamma^*(\gamma_i, c(x)) \leq \frac{t_i}{2} \pa{ \gamma_i - \epsilon}
+\end{equation*}
+Since $t_i \searrow 0$ and $\gamma_i$ is bounded, we conclude $\lim\limits_{i \to \infty} \Gamma^*(\gamma_i, c(x)) = 0$.
+If $\Gamma^*(\gamma_i, c(x))= 0$ for any $i$, then $X^*$ is not \WeaklyTwoUniformlyConvex and 
+the proof is done. 
+Otherwise, $\Gamma^*(\gamma_i, c(x)) > 0$ for each $i \in \N$ which implies
+$\gamma_i \geq \epsilon$ for each $i \in \N$. 
+Since $\Gamma^*(\cdot, c(x))$ is nondecreasing, $\Gamma^*(\epsilon, c(x)) \leq \Gamma^*(\gamma_i, c(x))$ for each $i \in \N$, so $\Gamma^*(\epsilon, c(x)) = 0$. 
+Thus $X^*$ is not \WeaklyTwoUniformlyConvex. 
+
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocalUniformSmoothVsUniformConvex:ConvexToSmooth}]
+Let $X^*$ be \LocallyUniformlyConvex.
+By \ref{prop:DegreesOfConvexity:LocalImpliesWeaklyLocal}
+and \ref{prop:DegreesOfConvexity:WeaklyLocalImpliesStrict}, 
+$X^*$ is \StrictlyConvexSpace. 
+By \ref{prop:SmoothVsStrictConvex}, $X$ is \SmoothSpace.
+Let $x_0 \in \partial B_X(0;1)$. 
+Let $J$ denote the \NormalizedDualityMap of $X$. 
+Let $\{x_i\}_{i \in \N} \subset X$ such that $x_i \to x_0$. 
+By \ref{prop:Smooth}, $Jx_i \wsto Jx_0$. 
+By \ref{prop:LocalWeakstarToStrong}, $Jx_i \to Jx_0$. 
+By \ref{prop:LocallyUniformlySmoothAt}, $X$ is \LocallyUniformlySmoothSpace at $x_0$. 
+Since $x_0$ was arbitrary, $X$ is \LocallyUniformlySmoothSpace.
+\end{proof}
+\begin{proof}[Proof of \ref{prop:LocalUniformSmoothVsUniformConvex:LocalToWeak}]
+This claim is a direct consequence of 
+\ref{prop:LocalUniformSmoothVsUniformConvex:ConvexToSmooth} 
+combined with 
+\ref{prop:LocalUniformSmoothvsUniformConvex:Equiv}.
+\end{proof}
+\begin{proof}[Proof of  \ref{prop:LocalUniformSmoothVsUniformConvex:WeakUniformConvexDualContinuity}]
+This claim is a direct consequence of \ref{prop:LocalUniformSmoothvsUniformConvex:Equiv}
+paired with 
+\ref{cor:LocallyUniformlySmooth:Continuous}.
+\end{proof}
+\begin{proof}[Proof of  \ref{prop:LocalUniformSmoothVsUniformConvex:WeakUniformConvexFrechet}]
+This claim is a direct consequence of \ref{prop:LocalUniformSmoothvsUniformConvex:Equiv}
+paired with 
+\ref{cor:LocallyUniformlySmooth:Frechet}.
+\end{proof}
+\end{prop} 
